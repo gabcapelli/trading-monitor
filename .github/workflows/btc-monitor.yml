@@ -3,7 +3,7 @@ name: BTC Monitor (gratuito, sem API do Claude)
 on:
   schedule:
     # Roda aos 2 minutos de cada hora (UTC) -- mesmo timing da automacao original
-    - cron: "2 * * * *"
+    - cron: "7 * * * *"
   workflow_dispatch: {}   # permite rodar manualmente pela aba "Actions" no GitHub
 
 permissions:
