@@ -1,14 +1,5 @@
 {
-  "status": "zona_mapeada_setup_A",
-  "zone": {
-    "setup": "A",
-    "direction": "compra",
-    "level": 79722.6,
-    "zone_low": 79679.75357142858,
-    "zone_high": 79765.44642857143,
-    "candles_since_creation": 2,
-    "touches": 2,
-    "created_at": 1788631200000
-  },
+  "status": "zona_expirada_setup_A",
+  "zone": null,
   "last_1h_ts": null
 }
