@@ -5,3 +5,4 @@
 | Data/Hora (BRT) | Close 1h | Close 4h | Funding | Status checklist |
 |---|---|---|---|---|
 | 2026-09-05 16:51 | 79965.3 | 79759.9 | 0.0016% | zona_mapeada_setup_A |
+| 2026-09-05 17:12 | 79708.7 | 79708.7 | 0.0018% | zona_mapeada_setup_A |

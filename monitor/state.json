@@ -6,8 +6,8 @@
     "level": 79722.6,
     "zone_low": 79679.75357142858,
     "zone_high": 79765.44642857143,
-    "candles_since_creation": 0,
-    "touches": 0,
+    "candles_since_creation": 1,
+    "touches": 1,
     "created_at": 1788631200000
   },
   "last_1h_ts": null
