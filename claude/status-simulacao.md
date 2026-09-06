@@ -1,4 +1,4 @@
-# Situacao atual (script gratuito, sem LLM) -- atualizado 2026-09-06 20:06 BRT
+# Situacao atual (script gratuito, sem LLM) -- atualizado 2026-09-06 20:46 BRT
 
 > Gerado por `monitor/fetch_and_check.py` via GitHub Actions, sem chamar a API do Claude. Registra fatos objetivos; a interpretacao qualitativa fica a seu criterio (ou cole este arquivo + o log numa conversa do Claude).
 
@@ -8,7 +8,7 @@
 
 **Ultimo close 1h:** 80008.7 | **Ultimo close 4h:** 79794.4
 
-**Funding rate atual:** 0.0007%
+**Funding rate atual:** 0.0002%
 
 **Zona / setup candidato:** Nenhuma zona candidata mapeada no momento.
 
