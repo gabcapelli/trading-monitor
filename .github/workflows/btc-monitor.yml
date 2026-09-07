@@ -27,6 +27,6 @@ jobs:
         run: |
           git config user.name "btc-monitor-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add claude/log-monitoramento-btc-auto.md claude/status-simulacao.md monitor/state.json
+          git add claude/log-monitoramento-btc-auto.md claude/status-simulacao.md monitor/state.json claude/trade_journal.db
           git diff --cached --quiet || git commit -m "Atualiza monitoramento BTC ($(date -u +'%Y-%m-%d %H:%M UTC'))"
           git push
