@@ -203,6 +203,13 @@ TRADE_DB_PATH = os.path.join("claude", "trade_journal.db")
 # janela de historico comparavel (~2 dias com 10 pares horarios).
 LOG_MAX_LINES = 480
 
+# Buffer de stop sobre o extremo da varredura, em multiplos de ATR 1h --
+# convencao adotada nesta sessao ao calcular stop/alvo manualmente para os
+# candidatos de ETH/XRP; formalizada aqui para o script calcular sozinho.
+STOP_BUFFER_ATR_MULT = 0.1
+
+CANDIDATOS_PATH = os.path.join("claude", "candidatos-pendentes.md")
+
 NTFY_TOPIC = os.environ.get("NTFY_TOPIC", "").strip()  # definido via GitHub secret
 
 
@@ -399,15 +406,33 @@ def ensure_trade_db():
         """
     )
     conn.commit()
+
+    # Migracao aditiva (07/09/2026, item do feedback de fluxo): novas colunas
+    # de sugestao mecanica automatica de stop/alvo/R:R. ALTER TABLE ADD COLUMN
+    # e seguro em bancos ja existentes -- so falha (silenciosamente ignorado)
+    # se a coluna ja existir, nao apaga nem move nenhum dado.
+    for col, coltype in [
+        ("extremo_varredura", "REAL"),
+        ("stop_sugerido", "REAL"),
+        ("alvo_sugerido", "REAL"),
+        ("rr_sugerido", "REAL"),
+    ]:
+        try:
+            conn.execute(f"ALTER TABLE trades ADD COLUMN {col} {coltype}")
+        except sqlite3.OperationalError:
+            pass  # coluna ja existe -- migracao ja rodou antes
+    conn.commit()
     conn.close()
 
 
-def insert_candidate_trade(inst_id, zone, trend):
+def insert_candidate_trade(inst_id, zone, trend, extremo=None, stop_sug=None, alvo_sug=None, rr_sug=None):
     """
     Insere uma linha 'candidato' quando uma zona e CONFIRMADA (rejeicao
-    valida no candle 1h). So os campos mecanicos vem preenchidos -- stop,
-    alvo, R:R e alavancagem exigem julgamento (ex.: "proxima zona relevante"
-    nao e mecanico) e ficam em branco ate a decisao real.
+    valida no candle 1h). Os campos mecanicos vem preenchidos; stop/alvo/R:R
+    FINAIS (colunas 'stop', 'alvo', 'rr_planejado') continuam em branco ate
+    voce decidir -- extremo_varredura/stop_sugerido/alvo_sugerido/rr_sugerido
+    sao a SUGESTAO mecanica automatica (feedback de fluxo, 07/09/2026),
+    guardada em colunas separadas para nunca ser confundida com a decisao real.
     """
     ensure_trade_db()
     now_brt = datetime.now(BRT).strftime("%Y-%m-%d %H:%M")
@@ -416,8 +441,9 @@ def insert_candidate_trade(inst_id, zone, trend):
         """
         INSERT INTO trades
             (status, data, par, setup, direcao, nivel_referencia, zona_entrada,
-             confirmacao, tendencia_4h, criado_em)
-        VALUES ('candidato', ?, ?, ?, ?, ?, ?, ?, ?, ?)
+             confirmacao, tendencia_4h, criado_em,
+             extremo_varredura, stop_sugerido, alvo_sugerido, rr_sugerido)
+        VALUES ('candidato', ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
         """,
         (
             now_brt,
@@ -430,6 +456,10 @@ def insert_candidate_trade(inst_id, zone, trend):
             f"(nivel de referencia {zone['level']:.1f})",
             trend,
             now_brt,
+            extremo,
+            stop_sug,
+            alvo_sug,
+            rr_sug,
         ),
     )
     conn.commit()
@@ -594,6 +624,52 @@ def check_zone_confirmation(zone, candles_1h):
     return "tocou"
 
 
+def sweep_extreme(zone, last_candle):
+    """Ponto mais distante tocado antes da rejeicao -- referencia de stop (secao 2 do plano)."""
+    return last_candle["high"] if zone["direction"] == "venda" else last_candle["low"]
+
+
+def suggest_stop(extremo, atr_1h, direction):
+    """Stop sugerido = extremo da varredura + pequena folga (0.1x ATR 1h)."""
+    if atr_1h is None:
+        return None
+    buffer = STOP_BUFFER_ATR_MULT * atr_1h
+    return extremo + buffer if direction == "venda" else extremo - buffer
+
+
+def nearest_target_candidate(direction, candles_1h, price_ref):
+    """
+    Alvo CANDIDATO (nao autoritativo): o pivo 1h confirmado mais recente do
+    lado oposto, ainda nao rompido pelo preco atual. E uma aproximacao
+    mecanica simples -- "proxima zona de oferta/demanda relevante" (secao 2)
+    continua exigindo julgamento no grafico antes de usar.
+    """
+    highs_1h, lows_1h, _ = find_confirmed_pivots(candles_1h)
+    if direction == "venda":
+        candidatos = [p for _, p in lows_1h if p < price_ref]
+    else:
+        candidatos = [p for _, p in highs_1h if p > price_ref]
+    return candidatos[-1] if candidatos else None
+
+
+def compute_suggestion(zone, candles_1h, atr_1h):
+    """
+    Retorna (extremo, stop_sugerido, alvo_candidato, rr_sugerido) para uma
+    zona recem-confirmada. Qualquer valor pode vir None se faltar dado
+    suficiente (ex.: ATR ainda nao calculavel, ou nenhum pivo oposto na janela).
+    """
+    last = last_closed(candles_1h)
+    extremo = sweep_extreme(zone, last)
+    stop_sug = suggest_stop(extremo, atr_1h, zone["direction"])
+    alvo_sug = nearest_target_candidate(zone["direction"], candles_1h, last["close"])
+    rr_sug = None
+    if stop_sug is not None and alvo_sug is not None:
+        risco = abs(stop_sug - last["close"])
+        retorno = abs(last["close"] - alvo_sug)
+        rr_sug = (retorno / risco) if risco else None
+    return extremo, stop_sug, alvo_sug, rr_sug
+
+
 # ---------------------------------------------------------------------------
 # Logica por par (extraida do antigo main() single-pair para ser reutilizada
 # em loop, uma vez por par -- ver CHANGELOG v2)
@@ -633,18 +709,25 @@ def process_single_pair(inst_id, pair_state, candles_1h, candles_4h, trend, atr_
         result = check_zone_confirmation(zone, candles_1h)
         if result == "confirmado":
             new_status = f"CONFIRMADO_setup_{zone['setup']}"
-            insert_candidate_trade(inst_id, zone, trend)
+            extremo, stop_sug, alvo_sug, rr_sug = compute_suggestion(zone, candles_1h, atr_1h)
+            insert_candidate_trade(inst_id, zone, trend, extremo, stop_sug, alvo_sug, rr_sug)
             abertas = count_open_positions()
+
+            def fmt(v):
+                return f"{v:.6g}" if v is not None else "—"
+
+            rr_flag = "✅" if (rr_sug and rr_sug >= 2) else "⚠️ abaixo de 1:2" if rr_sug else "—"
             evento = {
                 "titulo": f"{pair_label(inst_id)} -- CONFIRMACAO -- Setup {zone['setup']} ({zone['direction']})",
                 "mensagem": (
                     f"Nivel: {zone['level']:.1f} | Zona: {zone['zone_low']:.1f}-{zone['zone_high']:.1f}\n"
-                    f"Candidato salvo em claude/trade_journal.db (status='candidato').\n"
-                    f"Posicoes abertas no diario agora: {abertas}/{MAX_POSICOES_SIMULTANEAS} "
-                    f"-- confira o limite da secao 3.3 antes de decidir entrar.\n"
-                    f"Verifique o checklist completo (secao 4 do plano), calcule stop/alvo/R:R "
-                    f"e atualize o status para 'entrado' ou 'descartado' antes de contar como "
-                    f"trade da validacao -- este script so checa a parte mecanica."
+                    f"Stop sugerido: {fmt(stop_sug)} | Alvo candidato: {fmt(alvo_sug)} | "
+                    f"R:R sugerido: {fmt(rr_sug)} {rr_flag}\n"
+                    f"(Sugestao mecanica simples -- extremo da varredura + buffer de ATR; "
+                    f"pivo 1h oposto mais recente. Valide no grafico, nao substitui a secao 4.)\n"
+                    f"Posicoes abertas no diario agora: {abertas}/{MAX_POSICOES_SIMULTANEAS}\n"
+                    f"Candidato salvo em claude/trade_journal.db -- tambem em "
+                    f"claude/candidatos-pendentes.md (leitura rapida, sem abrir o .db)."
                 ),
             }
             pair_state["zone"] = None
@@ -817,6 +900,65 @@ def archive_log_if_needed(max_lines=LOG_MAX_LINES):
             f.writelines(data_lines[-max_lines:])
 
 
+def write_candidatos_pendentes():
+    """
+    Espelho legivel (markdown) dos candidatos com status='candidato' no
+    trade_journal.db -- feedback de fluxo, 07/09/2026: ler o .db exigia
+    baixar o arquivo e abrir em outra ferramenta so pra conferir. Este
+    arquivo resolve a LEITURA (direto no GitHub, sem tooling extra); marcar
+    'entrado'/'descartado' e preencher stop/alvo REAIS continua exigindo o
+    .db (DB Browser for SQLite ou extensao do VS Code) -- o .db segue sendo
+    a fonte de verdade, isto e so uma vista gerada a cada execucao.
+    """
+    if not os.path.exists(TRADE_DB_PATH):
+        rows = []
+    else:
+        conn = sqlite3.connect(TRADE_DB_PATH)
+        try:
+            cur = conn.execute(
+                "SELECT id, par, setup, direcao, nivel_referencia, zona_entrada, "
+                "extremo_varredura, stop_sugerido, alvo_sugerido, rr_sugerido, "
+                "tendencia_4h, criado_em "
+                "FROM trades WHERE status='candidato' ORDER BY id DESC"
+            )
+            rows = cur.fetchall()
+        finally:
+            conn.close()
+
+    now_brt = datetime.now(BRT).strftime("%Y-%m-%d %H:%M")
+
+    def fmt(v):
+        return f"{v:.6g}" if v is not None else "—"
+
+    if not rows:
+        body = "Nenhum candidato pendente (status='candidato') no momento.\n"
+    else:
+        header = (
+            "| ID | Par | Setup | Direcao | Nivel ref. | Zona | Extremo varredura | "
+            "Stop sugerido | Alvo candidato | R:R sugerido | Tend. 4h | Criado em |\n"
+            "|---|---|---|---|---|---|---|---|---|---|---|---|\n"
+        )
+        linhas = [
+            f"| {id_} | {par} | {setup} | {direcao} | {fmt(nivel)} | {zona} | "
+            f"{fmt(extremo)} | {fmt(stop_s)} | {fmt(alvo_s)} | {fmt(rr_s)} | {tend} | {criado} |"
+            for (id_, par, setup, direcao, nivel, zona, extremo, stop_s, alvo_s, rr_s, tend, criado) in rows
+        ]
+        body = header + "\n".join(linhas) + "\n"
+
+    content = (
+        f"# Candidatos pendentes (diario) -- atualizado {now_brt} BRT\n\n"
+        f"> Espelho legivel de `claude/trade_journal.db` (tabela trades, status='candidato'), "
+        f"gerado a cada execucao. SO PARA LEITURA -- editar status/resultado ainda exige abrir "
+        f"o .db. Stop/alvo/R:R aqui sao SUGESTOES MECANICAS SIMPLES (extremo da varredura + "
+        f"buffer de ATR; pivo 1h oposto mais recente) -- validar no grafico antes de usar, nao "
+        f"substituem o checklist da secao 4 do plano.\n\n"
+        + body
+    )
+    os.makedirs(os.path.dirname(CANDIDATOS_PATH), exist_ok=True)
+    with open(CANDIDATOS_PATH, "w", encoding="utf-8") as f:
+        f.write(content)
+
+
 def write_status(state, per_pair_data):
     """
     per_pair_data: dict inst_id -> {"trend", "last_1h", "last_4h", "funding", "atr_1h"}
@@ -922,6 +1064,7 @@ def main():
     archive_log_if_needed()
     save_state(state)
     write_status(state, per_pair_data)
+    write_candidatos_pendentes()
     send_batched_notifications(eventos)
 
     if eventos:
