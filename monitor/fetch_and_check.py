@@ -26,6 +26,33 @@ O QUE ESTE SCRIPT NAO FAZ (limitacao deliberada, leia antes de confiar cegamente
 
 Dependencias: NENHUMA alem da biblioteca padrao do Python (urllib, json, etc.)
 -- roda em qualquer runner do GitHub Actions sem "pip install".
+
+--------------------------------------------------------------------------------
+CHANGELOG (correcoes desta versao, 07/09/2026):
+
+1. BUG CORRIGIDO -- Setup A nunca disparava mesmo com rompimento claro:
+   `try_map_new_zone` checava `lows_1h` (fundos) como condicao de entrada para
+   detectar rompimento de RESISTENCIA em tendencia de alta -- lista errada.
+   Se nao havia um fundo fractal confirmado recente (comum numa alta sustentada,
+   onde pullbacks podem nao formar pivo de 3 candles de cada lado), o codigo caia
+   direto em `broke = False`, mesmo com o preco ja tendo rompido a resistencia
+   (`highs_1h`) ha varias horas. Corrigido para checar `highs_1h` (alta) /
+   `lows_1h` (baixa) -- a lista que de fato define o nivel de rompimento.
+
+2. BUG CORRIGIDO -- Setup B so olhava o swing 4h mais recente:
+   o `break` do loop de swings maduros estava no mesmo nivel do `if` de
+   maturidade (`STALE_4H_CANDLES`), entao o loop sempre parava depois do
+   primeiro swing (mesmo que ainda "jovem demais"), nunca chegando a considerar
+   o proximo swing mais antigo, que poderia ja estar maduro e perto do preco.
+   Corrigido com `continue` explicito para pular swings imaturos.
+
+3. LOG ENRIQUECIDO (sem custo de LLM, so campos objetivos a mais):
+   - High/Low do candle 1h mais recente fechado (antes so tinha o close).
+   - Ultimo swing 1h confirmado usado como referencia (nivel + ha quantos
+     candles foi confirmado), para dar visibilidade ao que o script esta
+     vigiando mesmo quando o status e "sem_zona".
+   - ATR 1h atual (calculado internamente, mas antes nunca aparecia no log).
+--------------------------------------------------------------------------------
 """
 
 import json
@@ -191,64 +218,69 @@ def try_map_new_zone(trend, candles_1h, candles_4h, atr_1h):
     last = closed_1h[-1]
 
     if trend in ("alta", "baixa") and atr_1h:
-        # Setup A: procura o ultimo swing 1h confirmado na direcao da tendencia
-        # e verifica se o preco ja rompeu esse nivel (condicao para come\u00e7ar a
-        # vigiar um retest).
+        # Setup A: procura o ultimo swing 1h confirmado NA DIRECAO DO ROMPIMENTO
+        # (resistencia para alta, suporte para baixa) e verifica se o preco ja
+        # rompeu esse nivel (condicao para comecar a vigiar um retest).
+        # CORRIGIDO: antes checava a lista errada (lows_1h para tendencia de alta),
+        # o que fazia o rompimento nunca ser detectado quando nao havia um fundo
+        # fractal confirmado recente -- mesmo com o preco ja tendo rompido a
+        # resistencia (highs_1h) ha varias horas.
         ref_swing = None
-        if trend == "alta" and lows_1h:
-            ref_swing = lows_1h[-1][1]
-            broke = last["close"] > (highs_1h[-1][1] if highs_1h else ref_swing)
-        elif trend == "baixa" and highs_1h:
+        broke = False
+        if trend == "alta" and highs_1h:
             ref_swing = highs_1h[-1][1]
-            broke = last["close"] < (lows_1h[-1][1] if lows_1h else ref_swing)
-        else:
-            broke = False
+            broke = last["close"] > ref_swing
+        elif trend == "baixa" and lows_1h:
+            ref_swing = lows_1h[-1][1]
+            broke = last["close"] < ref_swing
 
         if ref_swing is not None and broke:
-            level = highs_1h[-1][1] if trend == "alta" and highs_1h else (
-                lows_1h[-1][1] if trend == "baixa" and lows_1h else ref_swing
-            )
             return {
                 "setup": "A",
                 "direction": "compra" if trend == "alta" else "venda",
-                "level": level,
-                "zone_low": level - ZONE_ATR_MULT * atr_1h,
-                "zone_high": level + ZONE_ATR_MULT * atr_1h,
+                "level": ref_swing,
+                "zone_low": ref_swing - ZONE_ATR_MULT * atr_1h,
+                "zone_high": ref_swing + ZONE_ATR_MULT * atr_1h,
                 "candles_since_creation": 0,
                 "touches": 0,
                 "created_at": last["ts"],
             }
 
-    # Setup B: swing 4h maduro (>= STALE_4H_CANDLES desde a confirmacao) como zona
+    # Setup B: swing 4h maduro (>= STALE_4H_CANDLES desde a confirmacao) como zona.
+    # CORRIGIDO: o `break` estava fora do `if` de maturidade, entao o loop sempre
+    # parava no primeiro swing (mesmo imaturo) em vez de continuar procurando um
+    # swing mais antigo que ja estivesse maduro e perto do preco.
     highs_4h, lows_4h, closed_4h = find_confirmed_pivots(candles_4h)
     for idx, price in reversed(highs_4h):
-        if len(closed_4h) - 1 - idx >= STALE_4H_CANDLES:
-            if atr_1h and abs(last["close"] - price) <= 3 * ZONE_ATR_MULT * atr_1h:
-                return {
-                    "setup": "B",
-                    "direction": "venda",
-                    "level": price,
-                    "zone_low": price - ZONE_ATR_MULT * atr_1h,
-                    "zone_high": price + ZONE_ATR_MULT * atr_1h,
-                    "candles_since_creation": 0,
-                    "touches": 0,
-                    "created_at": last["ts"],
-                }
-            break
+        if len(closed_4h) - 1 - idx < STALE_4H_CANDLES:
+            continue  # ainda recente demais -- tenta o proximo swing mais antigo
+        if atr_1h and abs(last["close"] - price) <= 3 * ZONE_ATR_MULT * atr_1h:
+            return {
+                "setup": "B",
+                "direction": "venda",
+                "level": price,
+                "zone_low": price - ZONE_ATR_MULT * atr_1h,
+                "zone_high": price + ZONE_ATR_MULT * atr_1h,
+                "candles_since_creation": 0,
+                "touches": 0,
+                "created_at": last["ts"],
+            }
+        break  # achou o swing maduro mais recente e nao esta perto -- para aqui
     for idx, price in reversed(lows_4h):
-        if len(closed_4h) - 1 - idx >= STALE_4H_CANDLES:
-            if atr_1h and abs(last["close"] - price) <= 3 * ZONE_ATR_MULT * atr_1h:
-                return {
-                    "setup": "B",
-                    "direction": "compra",
-                    "level": price,
-                    "zone_low": price - ZONE_ATR_MULT * atr_1h,
-                    "zone_high": price + ZONE_ATR_MULT * atr_1h,
-                    "candles_since_creation": 0,
-                    "touches": 0,
-                    "created_at": last["ts"],
-                }
-            break
+        if len(closed_4h) - 1 - idx < STALE_4H_CANDLES:
+            continue
+        if atr_1h and abs(last["close"] - price) <= 3 * ZONE_ATR_MULT * atr_1h:
+            return {
+                "setup": "B",
+                "direction": "compra",
+                "level": price,
+                "zone_low": price - ZONE_ATR_MULT * atr_1h,
+                "zone_high": price + ZONE_ATR_MULT * atr_1h,
+                "candles_since_creation": 0,
+                "touches": 0,
+                "created_at": last["ts"],
+            }
+        break
 
     return None
 
@@ -315,10 +347,29 @@ def fmt_brt(ts_ms):
     return datetime.fromtimestamp(ts_ms / 1000, tz=BRT).strftime("%Y-%m-%d %H:%M")
 
 
-def append_log_line(candles_1h, candles_4h, funding, status_text):
+def last_swing_ref_text(trend, candles_1h):
+    """
+    Texto curto descrevendo o ultimo swing 1h confirmado relevante para a
+    tendencia atual (resistencia em alta, suporte em baixa) -- so para dar
+    visibilidade no log ao que o script esta vigiando, mesmo em sem_zona.
+    """
+    highs_1h, lows_1h, closed_1h = find_confirmed_pivots(candles_1h)
+    n = len(closed_1h)
+    if trend == "alta" and highs_1h:
+        idx, price = highs_1h[-1]
+        return f"res {price:.1f} (ha {n - 1 - idx} candles)"
+    if trend == "baixa" and lows_1h:
+        idx, price = lows_1h[-1]
+        return f"sup {price:.1f} (ha {n - 1 - idx} candles)"
+    return "—"
+
+
+def append_log_line(candles_1h, candles_4h, funding, status_text, trend, atr_1h):
     last_1h = last_closed(candles_1h)
     last_4h = last_closed(candles_4h)
     now_brt = datetime.now(BRT).strftime("%Y-%m-%d %H:%M")
+    swing_ref = last_swing_ref_text(trend, candles_1h)
+    atr_txt = f"{atr_1h:.1f}" if atr_1h else "—"
 
     header = (
         "# Log de Monitoramento Automatico -- BTC/USD (script gratuito, GitHub Actions)\n\n"
@@ -326,8 +377,8 @@ def append_log_line(candles_1h, candles_4h, funding, status_text):
         "(BTC-USDT-SWAP). Leitura e MECANICA (regras objetivas da secao 4 do plano), sem "
         "a prosa qualitativa que o Claude gerava -- cole este log numa conversa do Claude "
         "se quiser a leitura interpretativa.\n\n"
-        "| Data/Hora (BRT) | Close 1h | Close 4h | Funding | Status checklist |\n"
-        "|---|---|---|---|---|\n"
+        "| Data/Hora (BRT) | Close 1h | High/Low 1h | Close 4h | Swing 1h ref | ATR 1h | Funding | Status checklist |\n"
+        "|---|---|---|---|---|---|---|---|\n"
     )
 
     if not os.path.exists(LOG_PATH):
@@ -336,8 +387,8 @@ def append_log_line(candles_1h, candles_4h, funding, status_text):
             f.write(header)
 
     line = (
-        f"| {now_brt} | {last_1h['close']:.1f} | {last_4h['close']:.1f} | "
-        f"{funding*100:.4f}% | {status_text} |\n"
+        f"| {now_brt} | {last_1h['close']:.1f} | {last_1h['high']:.1f}/{last_1h['low']:.1f} | "
+        f"{last_4h['close']:.1f} | {swing_ref} | {atr_txt} | {funding*100:.4f}% | {status_text} |\n"
     )
     with open(LOG_PATH, "a", encoding="utf-8") as f:
         f.write(line)
@@ -353,11 +404,13 @@ def append_log_line(candles_1h, candles_4h, funding, status_text):
             f.writelines(data_lines[-200:])
 
 
-def write_status(state, trend, candles_1h, candles_4h, funding):
+def write_status(state, trend, candles_1h, candles_4h, funding, atr_1h):
     last_1h = last_closed(candles_1h)
     last_4h = last_closed(candles_4h)
     now_brt = datetime.now(BRT).strftime("%Y-%m-%d %H:%M")
     zone = state.get("zone")
+    swing_ref = last_swing_ref_text(trend, candles_1h)
+    atr_txt = f"{atr_1h:.1f}" if atr_1h else "—"
 
     zone_txt = "Nenhuma zona candidata mapeada no momento."
     if zone:
@@ -375,7 +428,10 @@ def write_status(state, trend, candles_1h, candles_4h, funding):
         f"criterio (ou cole este arquivo + o log numa conversa do Claude).\n\n"
         f"**Par:** BTC-USDT-SWAP (OKX, proxy do BTC/USDT Perpetual da Binance).\n\n"
         f"**Tendencia 4h (geometrica, pivos fractais):** {trend}.\n\n"
-        f"**Ultimo close 1h:** {last_1h['close']:.1f} | **Ultimo close 4h:** {last_4h['close']:.1f}\n\n"
+        f"**Ultimo close 1h:** {last_1h['close']:.1f} (high {last_1h['high']:.1f} / low {last_1h['low']:.1f}) "
+        f"| **Ultimo close 4h:** {last_4h['close']:.1f}\n\n"
+        f"**Ultimo swing 1h confirmado (referencia de rompimento):** {swing_ref}\n\n"
+        f"**ATR 1h:** {atr_txt}\n\n"
         f"**Funding rate atual:** {funding*100:.4f}%\n\n"
         f"**Zona / setup candidato:** {zone_txt}\n\n"
         f"**Status do checklist mecanico:** {state.get('status')}\n"
@@ -451,8 +507,8 @@ def main():
     state["status"] = new_status
     save_state(state)
 
-    append_log_line(candles_1h, candles_4h, funding, new_status)
-    write_status(state, trend, candles_1h, candles_4h, funding)
+    append_log_line(candles_1h, candles_4h, funding, new_status, trend, atr_1h)
+    write_status(state, trend, candles_1h, candles_4h, funding, atr_1h)
 
     if new_status != prev_status and notify_title:
         send_ntfy(notify_title, notify_msg, priority="high")
