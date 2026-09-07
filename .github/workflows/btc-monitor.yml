@@ -1,10 +1,7 @@
-name: BTC Monitor (gratuito, sem API do Claude)
+name: BTC Monitor
 
 on:
-  schedule:
-    # Roda aos 2 minutos de cada hora (UTC) -- mesmo timing da automacao original
-    - cron: "7 * * * *"
-  workflow_dispatch: {}   # permite rodar manualmente pela aba "Actions" no GitHub
+  workflow_dispatch: {}   # disparado pelo Cloudflare (cron externo) + permite rodar manual pela aba "Actions"
 
 permissions:
   contents: write   # necessario para o job commitar o log/status atualizados
