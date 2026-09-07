@@ -2,28 +2,73 @@
   "posicoes_abertas": [],
   "pares": {
     "BTC-USDT-SWAP": {
-      "status": "zona_expirada_setup_B",
-      "zone": null,
+      "status": "zona_mapeada_setup_B",
+      "zone": {
+        "setup": "B",
+        "direction": "venda",
+        "level": 79238.9,
+        "zone_low": 79175.25357142856,
+        "zone_high": 79302.54642857143,
+        "candles_since_creation": 0,
+        "touches": 0,
+        "created_at": 1788814800000
+      },
       "last_1h_ts": null
     },
     "ETH-USDT-SWAP": {
-      "status": "CONFIRMADO_setup_B",
-      "zone": null,
+      "status": "zona_mapeada_setup_B",
+      "zone": {
+        "setup": "B",
+        "direction": "venda",
+        "level": 2489.76,
+        "zone_low": 2486.4203571428575,
+        "zone_high": 2493.099642857143,
+        "candles_since_creation": 0,
+        "touches": 0,
+        "created_at": 1788814800000
+      },
       "last_1h_ts": null
     },
     "SOL-USDT-SWAP": {
-      "status": "invalidado_setup_B",
-      "zone": null,
+      "status": "zona_mapeada_setup_B",
+      "zone": {
+        "setup": "B",
+        "direction": "venda",
+        "level": 103.55,
+        "zone_low": 103.37035714285715,
+        "zone_high": 103.72964285714285,
+        "candles_since_creation": 0,
+        "touches": 0,
+        "created_at": 1788814800000
+      },
       "last_1h_ts": null
     },
     "XRP-USDT-SWAP": {
-      "status": "CONFIRMADO_setup_B",
-      "zone": null,
+      "status": "zona_mapeada_setup_B",
+      "zone": {
+        "setup": "B",
+        "direction": "venda",
+        "level": 1.3972,
+        "zone_low": 1.394555357142857,
+        "zone_high": 1.399844642857143,
+        "candles_since_creation": 0,
+        "touches": 0,
+        "created_at": 1788814800000
+      },
       "last_1h_ts": null
     },
     "DOGE-USDT-SWAP": {
-      "status": "invalidado_setup_B",
-      "zone": null,
+      "status": "zona_mapeada_setup_B",
+      "zone": {
+        "setup": "B",
+        "direction": "venda",
+        "level": 0.08995,
+        "zone_low": 0.08969928571428572,
+        "zone_high": 0.09020071428571429,
+        "candles_since_creation": 0,
+        "touches": 0,
+        "created_at": 1788814800000
+      },
       "last_1h_ts": null
     },
     "ARB-USDT-SWAP": {
@@ -44,7 +89,7 @@
         "level": 0.8131,
         "zone_low": 0.8090982142857144,
         "zone_high": 0.8171017857142857,
-        "candles_since_creation": 0,
+        "candles_since_creation": 1,
         "touches": 0,
         "created_at": 1788814800000
       },
