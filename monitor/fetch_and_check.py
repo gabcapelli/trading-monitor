@@ -52,11 +52,42 @@ CHANGELOG (correcoes desta versao, 07/09/2026):
      candles foi confirmado), para dar visibilidade ao que o script esta
      vigiando mesmo quando o status e "sem_zona".
    - ATR 1h atual (calculado internamente, mas antes nunca aparecia no log).
+
+4. DIARIO DE TRADE EM SQLITE (claude/trade_journal.db), substituindo a
+   transcricao manual dos campos mecanicos na tabela markdown da secao 5 do
+   plano:
+   - Quando uma zona e CONFIRMADA (resultado "confirmado" em
+     check_zone_confirmation), o script insere uma linha com status
+     'candidato' e os campos mecanicos ja calculados (setup, direcao, zona,
+     nivel de referencia, tendencia 4h). Stop/alvo/R:R/alavancagem NAO sao
+     calculados automaticamente -- isso continua exigindo julgamento (o alvo,
+     por exemplo, e "proxima zona relevante", que nao e mecanico) e fica em
+     branco ate voce (ou uma sessao do Claude) decidir e preencher.
+   - status muda para 'entrado' ou 'descartado' manualmente, depois do
+     checklist completo da secao 4 (que inclui itens nao automatizaveis,
+     como estado emocional). So trades com status='entrado' E
+     conta_para_validacao=1 entram na estatistica da secao 3.5.
+   - O banco e versionado no mesmo repo (commit a cada execucao que
+     insere linha nova), mesmo padrao do monitor/state.json.
+
+NOTA sobre a biblioteca smartmoneyconcepts (avaliada e descartada para a
+deteccao de pivo/zona nesta versao): testada contra dado sintetico e
+encontrada uma divergencia real (fora de casos de borda) na definicao de
+swing high/low em relacao a regra estrita ja usada aqui (maximo/minimo dentro
+de uma janela de +-3 candles) -- a lib parece usar um algoritmo sequencial
+tipo zigue-zague, nao reavaliacao estrita por janela. Trocar a deteccao de
+pivo por essa lib mudaria quais zonas de Setup A/B sao geradas, invalidando
+a aplicabilidade do backtest ja rodado (claude/backtest-setup-ab.md) sem
+re-rodar tudo. Os dois bugs reais (#1 e #2 abaixo) nao tinham relacao com a
+qualidade da deteccao de pivo em si -- eram erro de indice/lista, corrigido
+sem trocar a definicao de zona. Ver tests/test_zone_logic.py para testes que
+travam essa classe de bug daqui pra frente.
 --------------------------------------------------------------------------------
 """
 
 import json
 import os
+import sqlite3
 import urllib.request
 import urllib.error
 from datetime import datetime, timezone, timedelta
@@ -82,6 +113,7 @@ BRT = timezone(timedelta(hours=-3))
 STATE_PATH = os.path.join("monitor", "state.json")
 LOG_PATH = os.path.join("claude", "log-monitoramento-btc-auto.md")
 STATUS_PATH = os.path.join("claude", "status-simulacao.md")
+TRADE_DB_PATH = os.path.join("claude", "trade_journal.db")
 
 NTFY_TOPIC = os.environ.get("NTFY_TOPIC", "").strip()  # definido via GitHub secret
 
@@ -200,6 +232,86 @@ def save_state(state):
 
 
 # ---------------------------------------------------------------------------
+# Diario de trade em SQLite (claude/trade_journal.db)
+#
+# Substitui a transcricao manual dos campos mecanicos na tabela markdown da
+# secao 5 do plano. Colunas de decisao (checklist_ok, conta_para_validacao,
+# stop/alvo/alavancagem finais, resultado) ficam em branco ate voce (ou uma
+# sessao do Claude) revisar o candidato e preencher -- o script nunca marca
+# um trade como 'entrado' sozinho.
+# ---------------------------------------------------------------------------
+
+def ensure_trade_db():
+    os.makedirs(os.path.dirname(TRADE_DB_PATH), exist_ok=True)
+    conn = sqlite3.connect(TRADE_DB_PATH)
+    conn.execute(
+        """
+        CREATE TABLE IF NOT EXISTS trades (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            status TEXT NOT NULL DEFAULT 'candidato'
+                CHECK(status IN ('candidato', 'entrado', 'descartado')),
+            data TEXT NOT NULL,
+            par TEXT NOT NULL DEFAULT 'BTC/USDT Perpetual (Binance)',
+            setup TEXT NOT NULL CHECK(setup IN ('A', 'B')),
+            direcao TEXT,
+            nivel_referencia REAL,
+            zona_entrada TEXT,
+            confirmacao TEXT,
+            tendencia_4h TEXT,
+            stop REAL,
+            alvo REAL,
+            rr_planejado REAL,
+            alavancagem REAL,
+            checklist_ok INTEGER,
+            conta_para_validacao INTEGER NOT NULL DEFAULT 0,
+            resultado_r REAL,
+            mae_r REAL,
+            mfe_r REAL,
+            rr_realizado REAL,
+            motivo_resultado TEXT,
+            observacoes TEXT,
+            criado_em TEXT NOT NULL
+        )
+        """
+    )
+    conn.commit()
+    conn.close()
+
+
+def insert_candidate_trade(zone, trend):
+    """
+    Insere uma linha 'candidato' quando uma zona e CONFIRMADA (rejeicao
+    valida no candle 1h). So os campos mecanicos vem preenchidos -- stop,
+    alvo, R:R e alavancagem exigem julgamento (ex.: "proxima zona relevante"
+    nao e mecanico) e ficam em branco ate a decisao real.
+    """
+    ensure_trade_db()
+    now_brt = datetime.now(BRT).strftime("%Y-%m-%d %H:%M")
+    conn = sqlite3.connect(TRADE_DB_PATH)
+    conn.execute(
+        """
+        INSERT INTO trades
+            (status, data, setup, direcao, nivel_referencia, zona_entrada,
+             confirmacao, tendencia_4h, criado_em)
+        VALUES ('candidato', ?, ?, ?, ?, ?, ?, ?, ?)
+        """,
+        (
+            now_brt,
+            zone["setup"],
+            zone["direction"],
+            zone["level"],
+            f"{zone['zone_low']:.1f}-{zone['zone_high']:.1f}",
+            "Rejeicao confirmada no candle 1h mais recente "
+            f"(nivel de referencia {zone['level']:.1f})",
+            trend,
+            now_brt,
+        ),
+    )
+    conn.commit()
+    conn.close()
+
+
+# ---------------------------------------------------------------------------
 # Logica de checklist mecanico (Setup A / Setup B), secao 2 e 4 do plano
 # ---------------------------------------------------------------------------
 
@@ -247,9 +359,16 @@ def try_map_new_zone(trend, candles_1h, candles_4h, atr_1h):
             }
 
     # Setup B: swing 4h maduro (>= STALE_4H_CANDLES desde a confirmacao) como zona.
-    # CORRIGIDO: o `break` estava fora do `if` de maturidade, entao o loop sempre
-    # parava no primeiro swing (mesmo imaturo) em vez de continuar procurando um
-    # swing mais antigo que ja estivesse maduro e perto do preco.
+    # CORRIGIDO (07/09, 1a rodada): o `break` estava fora do `if` de maturidade,
+    # entao o loop sempre parava no primeiro swing (mesmo imaturo).
+    # CORRIGIDO (07/09, 2a rodada -- pego pelo teste automatizado, nao por
+    # inspecao manual): mesmo depois do primeiro fix, um `break` sobrava apos
+    # o `if` de distancia -- entao o loop ainda desistia no primeiro swing
+    # MADURO que encontrasse, mesmo se ele estivesse longe do preco, sem
+    # chegar a um swing mais antigo que pudesse estar maduro E perto. Ambos
+    # os `break` foram removidos: agora o loop percorre todos os swings
+    # maduros (do mais recente ao mais antigo) ate achar um dentro da
+    # distancia, ou esgotar a lista.
     highs_4h, lows_4h, closed_4h = find_confirmed_pivots(candles_4h)
     for idx, price in reversed(highs_4h):
         if len(closed_4h) - 1 - idx < STALE_4H_CANDLES:
@@ -265,7 +384,7 @@ def try_map_new_zone(trend, candles_1h, candles_4h, atr_1h):
                 "touches": 0,
                 "created_at": last["ts"],
             }
-        break  # achou o swing maduro mais recente e nao esta perto -- para aqui
+        # maduro mas longe -- nao retorna nem para; tenta o proximo mais antigo
     for idx, price in reversed(lows_4h):
         if len(closed_4h) - 1 - idx < STALE_4H_CANDLES:
             continue
@@ -280,7 +399,6 @@ def try_map_new_zone(trend, candles_1h, candles_4h, atr_1h):
                 "touches": 0,
                 "created_at": last["ts"],
             }
-        break
 
     return None
 
@@ -479,11 +597,14 @@ def main():
         result = check_zone_confirmation(zone, candles_1h)
         if result == "confirmado":
             new_status = f"CONFIRMADO_setup_{zone['setup']}"
+            insert_candidate_trade(zone, trend)
             notify_title = f"CONFIRMACAO -- Setup {zone['setup']} ({zone['direction']})"
             notify_msg = (
                 f"Nivel: {zone['level']:.1f} | Zona: {zone['zone_low']:.1f}-{zone['zone_high']:.1f}\n"
-                f"Verifique o checklist completo (secao 4 do plano) antes de contar como "
-                f"trade #{'?'} da validacao -- este script so checa a parte mecanica."
+                f"Candidato salvo em claude/trade_journal.db (status='candidato').\n"
+                f"Verifique o checklist completo (secao 4 do plano), calcule stop/alvo/R:R "
+                f"e atualize o status para 'entrado' ou 'descartado' antes de contar como "
+                f"trade da validacao -- este script so checa a parte mecanica."
             )
             state["zone"] = None  # zona consumida, exige nova leitura de contexto
         elif result == "invalidado":
