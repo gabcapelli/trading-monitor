@@ -28,7 +28,70 @@ Dependencias: NENHUMA alem da biblioteca padrao do Python (urllib, json, etc.)
 -- roda em qualquer runner do GitHub Actions sem "pip install".
 
 --------------------------------------------------------------------------------
-CHANGELOG (correcoes desta versao, 07/09/2026):
+CHANGELOG v2 (07/09/2026 -- generalizacao multi-par):
+
+Decisao de escopo (07/09/2026): expandir de BTC-USDT-SWAP unico para os 10
+pares definidos em PAIRS abaixo. Os 30 trades de validacao (secao 3.4 do
+plano) continuam contados de forma AGREGADA entre todos os pares (nao
+separado por par). Limite de posicoes simultaneas (secao 3.3) revisado para
+ATE 2 (era 1), ainda GLOBAL entre os 10 pares (nao por par).
+
+1. LOGICA DE ZONA (try_map_new_zone, check_zone_confirmation, find_confirmed_
+   pivots, classify_trend_4h) NAO MUDOU -- essas funcoes ja eram agnosticas
+   ao par (recebem candles como parametro, nunca leem INST_ID global), entao
+   os testes de regressao em tests/test_zone_logic.py continuam validos sem
+   nenhuma alteracao. So as funcoes de fetch/estado/log precisaram mudar.
+
+2. FETCH (okx_get, fetch_candles, fetch_funding_rate): fetch_candles e
+   fetch_funding_rate passam a receber `inst_id` como parametro em vez de
+   usar o global INST_ID (removido). O loop principal chama essas funcoes
+   uma vez por par a cada execucao (10 pares x 3 chamadas = 30 requests/
+   execucao -- folgado dentro do rate limit publico da OKX).
+
+3. ESTADO (monitor/state.json): schema mudou de single-object
+   ({status, zone, last_1h_ts}) para {"posicoes_abertas": [...],
+   "pares": {inst_id: {status, zone, last_1h_ts}}}. MIGRACAO AUTOMATICA e
+   TRANSPARENTE do schema antigo na primeira execucao desta versao (ver
+   load_state()) -- a zona ja mapeada para BTC (Setup B, ativa no momento
+   desta mudanca) e preservada, so realocada para dentro de
+   pares["BTC-USDT-SWAP"].
+
+4. LOG (claude/log-monitoramento-btc-auto.md): ganhou a coluna "Par" (logo
+   apos a data). Linhas do formato antigo (sem essa coluna) sao migradas
+   automaticamente no primeiro run desta versao (ver
+   migrate_log_header_if_needed()), preenchendo "BTC-USDT-SWAP" retroativamente
+   -- unico par que existia antes desta mudanca. O limite de retencao subiu
+   de ~200 para LOG_MAX_LINES linhas, ja que cada execucao agora grava ate 10
+   linhas (1 por par) em vez de 1.
+
+5. STATUS (claude/status-simulacao.md): passou de "estado de 1 par" para uma
+   tabela resumida dos 10 pares por execucao (write_status reescrita).
+
+6. LIMITE DE POSICOES SIMULTANEAS -- DECISAO DE DESIGN IMPORTANTE: o script
+   NAO bloqueia mapeamento nem confirmacao de zona em nenhum par por causa do
+   limite de 2 posicoes simultaneas. Isso e deliberado, na mesma linha da
+   separacao ja documentada no topo deste arquivo ("automacao so cuida do
+   mecanico; risco/execucao ficam manuais"): o script nunca abre uma posicao
+   sozinho, so registra candidatos em claude/trade_journal.db com
+   status='candidato'. Em vez de travar a deteccao, o script CALCULA quantas
+   posicoes estao com status='entrado' e ainda sem resultado_r preenchido
+   (count_open_positions()) e expoe esse numero no status e na notificacao de
+   confirmacao -- para voce decidir, com essa informacao na mao, se abre ou
+   nao mais uma posicao. Se preferir um bloqueio automatico de verdade (o
+   script se recusar a mapear zona nova quando ja houver 2 'entrado' sem
+   resultado), isso e uma mudanca pequena e localizada em process_single_pair()
+   -- fica registrado aqui como opcao nao implementada por padrao.
+
+7. NOTIFICACAO: passou a ser enviada em UMA UNICA chamada por execucao
+   (send_batched_notifications), mesmo se varios pares mudarem de status no
+   mesmo ciclo -- evita ate 10 pushes separados no mesmo horario.
+
+8. ROBUSTEZ: o loop principal agora captura erro de fetch por par
+   individualmente (um par com falha de API nao derruba a execucao inteira
+   nem impede os outros 9 de serem processados neste ciclo).
+
+--------------------------------------------------------------------------------
+CHANGELOG v1 (correcoes desta versao, 07/09/2026):
 
 1. BUG CORRIGIDO -- Setup A nunca disparava mesmo com rompimento claro:
    `try_map_new_zone` checava `lows_1h` (fundos) como condicao de entrada para
@@ -97,7 +160,27 @@ from datetime import datetime, timezone, timedelta
 # ---------------------------------------------------------------------------
 
 OKX_BASE = "https://www.okx.com"
-INST_ID = "BTC-USDT-SWAP"
+
+# Pares decididos na expansao de 07/09/2026 (liquidez OKX + precedente nos 56
+# prints catalogados + historico de preco longo o suficiente para leitura
+# estrutural). BTC-USDT-SWAP e o par original, mantido primeiro na lista.
+PAIRS = [
+    "BTC-USDT-SWAP",
+    "ETH-USDT-SWAP",
+    "SOL-USDT-SWAP",
+    "XRP-USDT-SWAP",
+    "DOGE-USDT-SWAP",
+    "ARB-USDT-SWAP",
+    "WLD-USDT-SWAP",
+    "SUI-USDT-SWAP",
+    "UNI-USDT-SWAP",
+    "LINK-USDT-SWAP",
+]
+
+# Limite de posicoes simultaneas (secao 3.3 do plano, revisado em 07/09/2026
+# de 1 para 2) -- GLOBAL entre os 10 pares, nao por par. Ver CHANGELOG v2,
+# item 6, para como esse numero e usado (informativo, nao bloqueia deteccao).
+MAX_POSICOES_SIMULTANEAS = 2
 
 # Regras de zona (secao 2 do plano) -- pontos de partida, recalibrar com dados reais.
 ZONE_MAX_CANDLES_1H = 8      # zona expira se nao for tocada em 8 candles de 1h
@@ -115,7 +198,17 @@ LOG_PATH = os.path.join("claude", "log-monitoramento-btc-auto.md")
 STATUS_PATH = os.path.join("claude", "status-simulacao.md")
 TRADE_DB_PATH = os.path.join("claude", "trade_journal.db")
 
+# Retencao do log: cada execucao agora grava ate len(PAIRS) linhas (1 por
+# par), contra 1 antes -- subiu proporcionalmente de ~200 para manter uma
+# janela de historico comparavel (~2 dias com 10 pares horarios).
+LOG_MAX_LINES = 480
+
 NTFY_TOPIC = os.environ.get("NTFY_TOPIC", "").strip()  # definido via GitHub secret
+
+
+def pair_label(inst_id):
+    """'ETH-USDT-SWAP' -> 'ETH/USDT' -- rotulo curto para log/status/diario."""
+    return inst_id.replace("-USDT-SWAP", "/USDT")
 
 
 # ---------------------------------------------------------------------------
@@ -133,13 +226,13 @@ def okx_get(path, params):
     return data["data"]
 
 
-def fetch_candles(bar, limit=150):
+def fetch_candles(inst_id, bar, limit=150):
     """
     Retorna lista de candles mais RECENTE -> MAIS ANTIGO (como a OKX devolve),
     cada um: [ts_ms, open, high, low, close, vol, volCcyQuote, confirm]
     Reordena para MAIS ANTIGO -> MAIS RECENTE (mais facil de processar em sequencia).
     """
-    raw = okx_get("/api/v5/market/candles", {"instId": INST_ID, "bar": bar, "limit": limit})
+    raw = okx_get("/api/v5/market/candles", {"instId": inst_id, "bar": bar, "limit": limit})
     raw = list(reversed(raw))  # antigo -> recente
     candles = []
     for row in raw:
@@ -156,8 +249,8 @@ def fetch_candles(bar, limit=150):
     return candles
 
 
-def fetch_funding_rate():
-    data = okx_get("/api/v5/public/funding-rate", {"instId": INST_ID})
+def fetch_funding_rate(inst_id):
+    data = okx_get("/api/v5/public/funding-rate", {"instId": inst_id})
     return float(data[0]["fundingRate"])
 
 
@@ -218,11 +311,42 @@ def classify_trend_4h(candles_4h):
 # Estado persistente (zonas candidatas, status atual)
 # ---------------------------------------------------------------------------
 
-def load_state():
-    if os.path.exists(STATE_PATH):
-        with open(STATE_PATH, "r", encoding="utf-8") as f:
-            return json.load(f)
+def default_pair_state():
     return {"status": "sem_zona", "zone": None, "last_1h_ts": None}
+
+
+def load_state():
+    """
+    Schema atual: {"posicoes_abertas": [...], "pares": {inst_id: {status, zone,
+    last_1h_ts}}}. Migra automaticamente e sem perda de dado o schema antigo
+    (single-pair, sempre BTC): {"status", "zone", "last_1h_ts"} direto na raiz
+    -- ver CHANGELOG v2, item 3.
+    """
+    if not os.path.exists(STATE_PATH):
+        return {"posicoes_abertas": [], "pares": {p: default_pair_state() for p in PAIRS}}
+
+    with open(STATE_PATH, "r", encoding="utf-8") as f:
+        raw = json.load(f)
+
+    if "pares" not in raw:
+        raw = {
+            "posicoes_abertas": [],
+            "pares": {
+                "BTC-USDT-SWAP": {
+                    "status": raw.get("status", "sem_zona"),
+                    "zone": raw.get("zone"),
+                    "last_1h_ts": raw.get("last_1h_ts"),
+                }
+            },
+        }
+        print("[migracao] state.json antigo (single-pair) migrado para o schema multi-par "
+              "-- zona em andamento, se houver, foi preservada em pares['BTC-USDT-SWAP'].")
+
+    # garante entrada para todo par da lista atual (cobre par novo adicionado depois)
+    for p in PAIRS:
+        raw["pares"].setdefault(p, default_pair_state())
+    raw.setdefault("posicoes_abertas", [])
+    return raw
 
 
 def save_state(state):
@@ -278,7 +402,7 @@ def ensure_trade_db():
     conn.close()
 
 
-def insert_candidate_trade(zone, trend):
+def insert_candidate_trade(inst_id, zone, trend):
     """
     Insere uma linha 'candidato' quando uma zona e CONFIRMADA (rejeicao
     valida no candle 1h). So os campos mecanicos vem preenchidos -- stop,
@@ -291,12 +415,13 @@ def insert_candidate_trade(zone, trend):
     conn.execute(
         """
         INSERT INTO trades
-            (status, data, setup, direcao, nivel_referencia, zona_entrada,
+            (status, data, par, setup, direcao, nivel_referencia, zona_entrada,
              confirmacao, tendencia_4h, criado_em)
-        VALUES ('candidato', ?, ?, ?, ?, ?, ?, ?, ?)
+        VALUES ('candidato', ?, ?, ?, ?, ?, ?, ?, ?, ?)
         """,
         (
             now_brt,
+            pair_label(inst_id),
             zone["setup"],
             zone["direction"],
             zone["level"],
@@ -309,6 +434,39 @@ def insert_candidate_trade(zone, trend):
     )
     conn.commit()
     conn.close()
+
+
+def count_open_positions():
+    """
+    Numero de trades com status='entrado' e ainda sem resultado_r preenchido
+    -- proxy de "posicao aberta agora" a partir do proprio diario (nao exige
+    campo extra no state.json). Ver CHANGELOG v2, item 6: usado so para
+    informar, nunca para bloquear a deteccao de zona.
+    """
+    if not os.path.exists(TRADE_DB_PATH):
+        return 0
+    conn = sqlite3.connect(TRADE_DB_PATH)
+    try:
+        cur = conn.execute(
+            "SELECT COUNT(*) FROM trades WHERE status='entrado' AND resultado_r IS NULL"
+        )
+        return cur.fetchone()[0]
+    finally:
+        conn.close()
+
+
+def open_positions_detail():
+    """Lista os pares (rotulo) com posicao 'entrado' e ainda sem resultado registrado."""
+    if not os.path.exists(TRADE_DB_PATH):
+        return []
+    conn = sqlite3.connect(TRADE_DB_PATH)
+    try:
+        cur = conn.execute(
+            "SELECT par FROM trades WHERE status='entrado' AND resultado_r IS NULL"
+        )
+        return [row[0] for row in cur.fetchall()]
+    finally:
+        conn.close()
 
 
 # ---------------------------------------------------------------------------
@@ -437,6 +595,85 @@ def check_zone_confirmation(zone, candles_1h):
 
 
 # ---------------------------------------------------------------------------
+# Logica por par (extraida do antigo main() single-pair para ser reutilizada
+# em loop, uma vez por par -- ver CHANGELOG v2)
+# ---------------------------------------------------------------------------
+
+def process_single_pair(inst_id, pair_state, candles_1h, candles_4h, trend, atr_1h):
+    """
+    Roda a logica mecanica (mapear zona nova, ou checar confirmacao/invalidacao/
+    expiracao de uma zona existente) para UM par, a partir do estado anterior
+    desse par. Muta e retorna pair_state; retorna tambem um dict de evento
+    (titulo + mensagem) se o status mudou neste ciclo, ou None se nao mudou
+    (== sem notificacao para este par).
+    """
+    zone = pair_state.get("zone")
+    prev_status = pair_state.get("status")
+    new_status = prev_status
+    evento = None
+
+    if zone is None:
+        candidate = try_map_new_zone(trend, candles_1h, candles_4h, atr_1h)
+        if candidate:
+            pair_state["zone"] = candidate
+            new_status = f"zona_mapeada_setup_{candidate['setup']}"
+            evento = {
+                "titulo": f"{pair_label(inst_id)} -- Nova zona candidata -- Setup {candidate['setup']}",
+                "mensagem": (
+                    f"Direcao: {candidate['direction']}\n"
+                    f"Nivel: {candidate['level']:.1f}\n"
+                    f"Zona: {candidate['zone_low']:.1f} - {candidate['zone_high']:.1f}\n"
+                    f"Tendencia 4h: {trend}\n"
+                    f"Cole este alerta + o log no Claude para leitura qualitativa."
+                ),
+            }
+        else:
+            new_status = "sem_zona"
+    else:
+        result = check_zone_confirmation(zone, candles_1h)
+        if result == "confirmado":
+            new_status = f"CONFIRMADO_setup_{zone['setup']}"
+            insert_candidate_trade(inst_id, zone, trend)
+            abertas = count_open_positions()
+            evento = {
+                "titulo": f"{pair_label(inst_id)} -- CONFIRMACAO -- Setup {zone['setup']} ({zone['direction']})",
+                "mensagem": (
+                    f"Nivel: {zone['level']:.1f} | Zona: {zone['zone_low']:.1f}-{zone['zone_high']:.1f}\n"
+                    f"Candidato salvo em claude/trade_journal.db (status='candidato').\n"
+                    f"Posicoes abertas no diario agora: {abertas}/{MAX_POSICOES_SIMULTANEAS} "
+                    f"-- confira o limite da secao 3.3 antes de decidir entrar.\n"
+                    f"Verifique o checklist completo (secao 4 do plano), calcule stop/alvo/R:R "
+                    f"e atualize o status para 'entrado' ou 'descartado' antes de contar como "
+                    f"trade da validacao -- este script so checa a parte mecanica."
+                ),
+            }
+            pair_state["zone"] = None
+        elif result == "invalidado":
+            new_status = f"invalidado_setup_{zone['setup']}"
+            evento = {
+                "titulo": f"{pair_label(inst_id)} -- Setup {zone['setup']} invalidado",
+                "mensagem": f"Fechamento contra a zona {zone['zone_low']:.1f}-{zone['zone_high']:.1f}.",
+            }
+            pair_state["zone"] = None
+        else:
+            if result == "tocou":
+                zone["touches"] += 1
+            zone["candles_since_creation"] += 1
+            if zone["touches"] >= ZONE_MAX_TOUCHES or zone["candles_since_creation"] >= ZONE_MAX_CANDLES_1H:
+                new_status = f"zona_expirada_setup_{zone['setup']}"
+                evento = {
+                    "titulo": f"{pair_label(inst_id)} -- Zona do Setup {zone['setup']} expirou",
+                    "mensagem": "Expirou por limite de toques ou de candles sem confirmacao -- releitura de contexto necessaria.",
+                }
+                pair_state["zone"] = None
+            else:
+                new_status = prev_status  # sem mudanca -> sem notificacao
+
+    pair_state["status"] = new_status
+    return pair_state, (evento if new_status != prev_status else None)
+
+
+# ---------------------------------------------------------------------------
 # Notificacao gratuita via ntfy.sh (sem custo, sem API key -- so um "topic" secreto)
 # ---------------------------------------------------------------------------
 
@@ -455,6 +692,21 @@ def send_ntfy(title, message, priority="default"):
         urllib.request.urlopen(req, timeout=10)
     except urllib.error.URLError as e:
         print(f"[erro] Falha ao enviar notificacao ntfy: {e}")
+
+
+def send_batched_notifications(eventos):
+    """
+    Envia UMA chamada ao ntfy por execucao, mesmo com varios pares mudando de
+    status no mesmo ciclo -- evita ate len(PAIRS) pushes separados na mesma hora.
+    """
+    if not eventos:
+        return
+    if len(eventos) == 1:
+        send_ntfy(eventos[0]["titulo"], eventos[0]["mensagem"], priority="high")
+        return
+    titulo = f"{len(eventos)} mudancas de status neste ciclo"
+    corpo = "\n\n".join(f"### {ev['titulo']}\n{ev['mensagem']}" for ev in eventos)
+    send_ntfy(titulo, corpo, priority="high")
 
 
 # ---------------------------------------------------------------------------
@@ -482,77 +734,135 @@ def last_swing_ref_text(trend, candles_1h):
     return "—"
 
 
-def append_log_line(candles_1h, candles_4h, funding, status_text, trend, atr_1h):
+LOG_HEADER = (
+    "# Log de Monitoramento Automatico -- Multi-Par (script gratuito, GitHub Actions)\n\n"
+    "> Gerado por script Python sem LLM (ver monitor/fetch_and_check.py). Fonte: OKX. "
+    "Cobre os pares em PAIRS (configuracao no topo do script) -- BTC-USDT-SWAP e os demais "
+    "adicionados na expansao de 07/09/2026. Leitura e MECANICA (regras objetivas da secao 4 "
+    "do plano), sem a prosa qualitativa que o Claude gerava -- cole este log numa conversa "
+    "do Claude se quiser a leitura interpretativa.\n\n"
+    "| Data/Hora (BRT) | Par | Close 1h | High/Low 1h | Close 4h | Swing 1h ref | ATR 1h | Funding | Status checklist |\n"
+    "|---|---|---|---|---|---|---|---|---|\n"
+)
+
+
+def migrate_log_header_if_needed():
+    """
+    Se o log existir no formato antigo (sem a coluna 'Par', de antes da
+    expansao multi-par de 07/09/2026), reescreve o header e insere
+    'BTC-USDT-SWAP' como Par em cada linha de dado ja existente -- unico par
+    que existia antes desta versao. Preserva o historico em vez de descarta-lo.
+    Idempotente: nao faz nada se o log ja estiver no formato novo.
+    """
+    if not os.path.exists(LOG_PATH):
+        return
+    with open(LOG_PATH, "r", encoding="utf-8") as f:
+        lines = f.readlines()
+
+    already_migrated = any(l.startswith("| Data/Hora (BRT) | Par |") for l in lines)
+    if already_migrated:
+        return
+
+    data_lines = [l for l in lines if l.startswith("| 2")]
+    migrated = []
+    for l in data_lines:
+        parts = l.split("|")
+        if len(parts) < 3:
+            migrated.append(l)  # linha inesperada -- preserva como esta em vez de arriscar corromper
+            continue
+        new_parts = parts[:2] + [" BTC-USDT-SWAP "] + parts[2:]
+        migrated.append("|".join(new_parts))
+
+    with open(LOG_PATH, "w", encoding="utf-8") as f:
+        f.write(LOG_HEADER)
+        f.writelines(migrated)
+    print(f"[migracao] {len(migrated)} linha(s) do log migrada(s) para o formato com coluna 'Par'.")
+
+
+def append_log_line(inst_id, candles_1h, candles_4h, funding, status_text, trend, atr_1h):
     last_1h = last_closed(candles_1h)
     last_4h = last_closed(candles_4h)
     now_brt = datetime.now(BRT).strftime("%Y-%m-%d %H:%M")
     swing_ref = last_swing_ref_text(trend, candles_1h)
     atr_txt = f"{atr_1h:.1f}" if atr_1h else "—"
 
-    header = (
-        "# Log de Monitoramento Automatico -- BTC/USD (script gratuito, GitHub Actions)\n\n"
-        "> Gerado por script Python sem LLM (ver monitor/fetch_and_check.py). Fonte: OKX "
-        "(BTC-USDT-SWAP). Leitura e MECANICA (regras objetivas da secao 4 do plano), sem "
-        "a prosa qualitativa que o Claude gerava -- cole este log numa conversa do Claude "
-        "se quiser a leitura interpretativa.\n\n"
-        "| Data/Hora (BRT) | Close 1h | High/Low 1h | Close 4h | Swing 1h ref | ATR 1h | Funding | Status checklist |\n"
-        "|---|---|---|---|---|---|---|---|\n"
-    )
-
     if not os.path.exists(LOG_PATH):
         os.makedirs(os.path.dirname(LOG_PATH), exist_ok=True)
         with open(LOG_PATH, "w", encoding="utf-8") as f:
-            f.write(header)
+            f.write(LOG_HEADER)
 
     line = (
-        f"| {now_brt} | {last_1h['close']:.1f} | {last_1h['high']:.1f}/{last_1h['low']:.1f} | "
+        f"| {now_brt} | {inst_id} | {last_1h['close']:.1f} | {last_1h['high']:.1f}/{last_1h['low']:.1f} | "
         f"{last_4h['close']:.1f} | {swing_ref} | {atr_txt} | {funding*100:.4f}% | {status_text} |\n"
     )
     with open(LOG_PATH, "a", encoding="utf-8") as f:
         f.write(line)
 
-    # arquivamento simples: mantem so as ultimas ~200 linhas de dados
+
+def archive_log_if_needed(max_lines=LOG_MAX_LINES):
+    """
+    Arquivamento simples: mantem so as ultimas `max_lines` linhas de dados.
+    Chamada UMA VEZ por execucao (nao por par) -- ver CHANGELOG v2, evita
+    reler/reescrever o arquivo len(PAIRS) vezes no mesmo ciclo.
+    """
+    if not os.path.exists(LOG_PATH):
+        return
     with open(LOG_PATH, "r", encoding="utf-8") as f:
         lines = f.readlines()
     data_lines = [l for l in lines if l.startswith("| 2")]
-    if len(data_lines) > 200:
+    if len(data_lines) > max_lines:
         head = [l for l in lines if not l.startswith("| 2")]
         with open(LOG_PATH, "w", encoding="utf-8") as f:
             f.writelines(head)
-            f.writelines(data_lines[-200:])
+            f.writelines(data_lines[-max_lines:])
 
 
-def write_status(state, trend, candles_1h, candles_4h, funding, atr_1h):
-    last_1h = last_closed(candles_1h)
-    last_4h = last_closed(candles_4h)
+def write_status(state, per_pair_data):
+    """
+    per_pair_data: dict inst_id -> {"trend", "last_1h", "last_4h", "funding", "atr_1h"}
+    para os pares processados com sucesso neste ciclo (pares que falharam no
+    fetch nao aparecem -- ver comentario no loop principal).
+    """
     now_brt = datetime.now(BRT).strftime("%Y-%m-%d %H:%M")
-    zone = state.get("zone")
-    swing_ref = last_swing_ref_text(trend, candles_1h)
-    atr_txt = f"{atr_1h:.1f}" if atr_1h else "—"
+    abertas = count_open_positions()
+    detalhe_abertas = open_positions_detail()
 
-    zone_txt = "Nenhuma zona candidata mapeada no momento."
-    if zone:
-        zone_txt = (
-            f"Setup {zone['setup']} ({zone['direction']}) -- nivel de referencia "
-            f"{zone['level']:.1f}, zona {zone['zone_low']:.1f}-{zone['zone_high']:.1f}. "
-            f"Toques: {zone['touches']}/{ZONE_MAX_TOUCHES}. "
-            f"Candles desde criacao: {zone['candles_since_creation']}/{ZONE_MAX_CANDLES_1H}."
+    linhas = []
+    for inst_id in PAIRS:
+        d = per_pair_data.get(inst_id)
+        pair_state = state["pares"][inst_id]
+        if d is None:
+            linhas.append(f"| {pair_label(inst_id)} | — | — | — | — | falha_fetch_neste_ciclo |")
+            continue
+
+        zone = pair_state.get("zone")
+        if zone:
+            zona_txt = (
+                f"Setup {zone['setup']} ({zone['direction']}) "
+                f"{zone['zone_low']:.1f}-{zone['zone_high']:.1f} "
+                f"({zone['touches']}/{ZONE_MAX_TOUCHES} toques, "
+                f"{zone['candles_since_creation']}/{ZONE_MAX_CANDLES_1H} candles)"
+            )
+        else:
+            zona_txt = "—"
+
+        linhas.append(
+            f"| {pair_label(inst_id)} | {d['trend']} | {d['last_1h']['close']:.1f} | "
+            f"{d['funding']*100:.4f}% | {zona_txt} | {pair_state['status']} |"
         )
 
+    detalhe_txt = f" -- {', '.join(detalhe_abertas)}" if detalhe_abertas else ""
+
     content = (
-        f"# Situacao atual (script gratuito, sem LLM) -- atualizado {now_brt} BRT\n\n"
+        f"# Situacao atual -- Multi-Par (script gratuito, sem LLM) -- atualizado {now_brt} BRT\n\n"
         f"> Gerado por `monitor/fetch_and_check.py` via GitHub Actions, sem chamar a API "
         f"do Claude. Registra fatos objetivos; a interpretacao qualitativa fica a seu "
         f"criterio (ou cole este arquivo + o log numa conversa do Claude).\n\n"
-        f"**Par:** BTC-USDT-SWAP (OKX, proxy do BTC/USDT Perpetual da Binance).\n\n"
-        f"**Tendencia 4h (geometrica, pivos fractais):** {trend}.\n\n"
-        f"**Ultimo close 1h:** {last_1h['close']:.1f} (high {last_1h['high']:.1f} / low {last_1h['low']:.1f}) "
-        f"| **Ultimo close 4h:** {last_4h['close']:.1f}\n\n"
-        f"**Ultimo swing 1h confirmado (referencia de rompimento):** {swing_ref}\n\n"
-        f"**ATR 1h:** {atr_txt}\n\n"
-        f"**Funding rate atual:** {funding*100:.4f}%\n\n"
-        f"**Zona / setup candidato:** {zone_txt}\n\n"
-        f"**Status do checklist mecanico:** {state.get('status')}\n"
+        f"**Posicoes abertas (diario, status='entrado' sem resultado ainda):** "
+        f"{abertas}/{MAX_POSICOES_SIMULTANEAS}{detalhe_txt}\n\n"
+        f"| Par | Tendencia 4h | Close 1h | Funding | Zona / setup candidato | Status |\n"
+        f"|---|---|---|---|---|---|\n"
+        + "\n".join(linhas) + "\n"
     )
     os.makedirs(os.path.dirname(STATUS_PATH), exist_ok=True)
     with open(STATUS_PATH, "w", encoding="utf-8") as f:
@@ -566,84 +876,58 @@ def write_status(state, trend, candles_1h, candles_4h, funding, atr_1h):
 def main():
     # Garante que claude/trade_journal.db exista desde a PRIMEIRA execucao,
     # mesmo sem nenhuma zona confirmada ainda -- senao o `git add` do workflow
-    # falha com "pathspec did not match any files" toda vez que o status nao
-    # for CONFIRMADO (a maioria das execucoes). O arquivo criado aqui e so o
+    # falha com "pathspec did not match any files" toda vez que nenhum par
+    # confirmar (a maioria das execucoes). O arquivo criado aqui e so o
     # schema vazio; insert_candidate_trade() so roda quando ha de fato uma
-    # confirmacao.
+    # confirmacao, em qualquer par.
     ensure_trade_db()
-
-    candles_1h = fetch_candles("1H", limit=150)
-    candles_4h = fetch_candles("4H", limit=100)
-    funding = fetch_funding_rate()
-
-    trend, _ = classify_trend_4h(candles_4h)
-    atr_1h = atr(candles_1h)
+    migrate_log_header_if_needed()
 
     state = load_state()
-    zone = state.get("zone")
-    prev_status = state.get("status")
-    new_status = prev_status
-    notify_title = None
-    notify_msg = None
+    eventos = []
+    per_pair_data = {}
 
-    if zone is None:
-        candidate = try_map_new_zone(trend, candles_1h, candles_4h, atr_1h)
-        if candidate:
-            state["zone"] = candidate
-            new_status = f"zona_mapeada_setup_{candidate['setup']}"
-            notify_title = f"Nova zona candidata -- Setup {candidate['setup']}"
-            notify_msg = (
-                f"Direcao: {candidate['direction']}\n"
-                f"Nivel: {candidate['level']:.1f}\n"
-                f"Zona: {candidate['zone_low']:.1f} - {candidate['zone_high']:.1f}\n"
-                f"Tendencia 4h: {trend}\n"
-                f"Cole este alerta + o log no Claude para leitura qualitativa."
-            )
-        else:
-            new_status = "sem_zona"
-    else:
-        result = check_zone_confirmation(zone, candles_1h)
-        if result == "confirmado":
-            new_status = f"CONFIRMADO_setup_{zone['setup']}"
-            insert_candidate_trade(zone, trend)
-            notify_title = f"CONFIRMACAO -- Setup {zone['setup']} ({zone['direction']})"
-            notify_msg = (
-                f"Nivel: {zone['level']:.1f} | Zona: {zone['zone_low']:.1f}-{zone['zone_high']:.1f}\n"
-                f"Candidato salvo em claude/trade_journal.db (status='candidato').\n"
-                f"Verifique o checklist completo (secao 4 do plano), calcule stop/alvo/R:R "
-                f"e atualize o status para 'entrado' ou 'descartado' antes de contar como "
-                f"trade da validacao -- este script so checa a parte mecanica."
-            )
-            state["zone"] = None  # zona consumida, exige nova leitura de contexto
-        elif result == "invalidado":
-            new_status = f"invalidado_setup_{zone['setup']}"
-            notify_title = f"Setup {zone['setup']} invalidado"
-            notify_msg = f"Fechamento contra a zona {zone['zone_low']:.1f}-{zone['zone_high']:.1f}."
-            state["zone"] = None
-        else:
-            if result == "tocou":
-                zone["touches"] += 1
-            zone["candles_since_creation"] += 1
-            if zone["touches"] >= ZONE_MAX_TOUCHES or zone["candles_since_creation"] >= ZONE_MAX_CANDLES_1H:
-                new_status = f"zona_expirada_setup_{zone['setup']}"
-                notify_title = f"Zona do Setup {zone['setup']} expirou"
-                notify_msg = "Expirou por limite de toques ou de candles sem confirmacao -- releitura de contexto necessaria."
-                state["zone"] = None
-            else:
-                new_status = prev_status  # sem mudanca -> sem notificacao
-            state["zone"] = zone if state.get("zone") else None
+    for inst_id in PAIRS:
+        try:
+            candles_1h = fetch_candles(inst_id, "1H", limit=150)
+            candles_4h = fetch_candles(inst_id, "4H", limit=100)
+            funding = fetch_funding_rate(inst_id)
+        except (RuntimeError, urllib.error.URLError, TimeoutError) as e:
+            # um par com falha de API nao derruba a execucao inteira nem
+            # impede os outros 9 de serem processados neste ciclo -- so fica
+            # sem atualizacao (log/status) ate o proximo run.
+            print(f"[erro] Falha ao buscar dados de {inst_id}: {e} -- pulando este par neste ciclo.")
+            continue
 
-    state["status"] = new_status
+        trend, _ = classify_trend_4h(candles_4h)
+        atr_1h = atr(candles_1h)
+
+        pair_state, evento = process_single_pair(
+            inst_id, state["pares"][inst_id], candles_1h, candles_4h, trend, atr_1h
+        )
+        state["pares"][inst_id] = pair_state
+        if evento:
+            eventos.append(evento)
+
+        append_log_line(inst_id, candles_1h, candles_4h, funding, pair_state["status"], trend, atr_1h)
+        per_pair_data[inst_id] = {
+            "trend": trend,
+            "last_1h": last_closed(candles_1h),
+            "last_4h": last_closed(candles_4h),
+            "funding": funding,
+            "atr_1h": atr_1h,
+        }
+        print(f"[{inst_id}] status = {pair_state['status']}" + (" (MUDOU)" if evento else ""))
+
+    archive_log_if_needed()
     save_state(state)
+    write_status(state, per_pair_data)
+    send_batched_notifications(eventos)
 
-    append_log_line(candles_1h, candles_4h, funding, new_status, trend, atr_1h)
-    write_status(state, trend, candles_1h, candles_4h, funding, atr_1h)
-
-    if new_status != prev_status and notify_title:
-        send_ntfy(notify_title, notify_msg, priority="high")
-        print(f"[status mudou] {prev_status} -> {new_status} -- notificacao enviada.")
+    if eventos:
+        print(f"[resumo] {len(eventos)} mudanca(s) de status neste ciclo -- notificacao enviada.")
     else:
-        print(f"[sem mudanca] status = {new_status}")
+        print("[resumo] nenhuma mudanca de status neste ciclo.")
 
 
 if __name__ == "__main__":
