@@ -564,6 +564,14 @@ def write_status(state, trend, candles_1h, candles_4h, funding, atr_1h):
 # ---------------------------------------------------------------------------
 
 def main():
+    # Garante que claude/trade_journal.db exista desde a PRIMEIRA execucao,
+    # mesmo sem nenhuma zona confirmada ainda -- senao o `git add` do workflow
+    # falha com "pathspec did not match any files" toda vez que o status nao
+    # for CONFIRMADO (a maioria das execucoes). O arquivo criado aqui e so o
+    # schema vazio; insert_candidate_trade() so roda quando ha de fato uma
+    # confirmacao.
+    ensure_trade_db()
+
     candles_1h = fetch_candles("1H", limit=150)
     candles_4h = fetch_candles("4H", limit=100)
     funding = fetch_funding_rate()
