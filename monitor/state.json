@@ -2,22 +2,22 @@
   "posicoes_abertas": [],
   "pares": {
     "BTC-USDT-SWAP": {
-      "status": "zona_mapeada_setup_B",
-      "zone": {
-        "setup": "B",
-        "direction": "venda",
-        "level": 78299.0,
-        "zone_low": 78211.36964285714,
-        "zone_high": 78386.63035714286,
-        "candles_since_creation": 0,
-        "touches": 0,
-        "created_at": 1788868800000
-      },
+      "status": "CONFIRMADO_setup_B",
+      "zone": null,
       "last_1h_ts": null
     },
     "ETH-USDT-SWAP": {
-      "status": "sem_zona",
-      "zone": null,
+      "status": "zona_mapeada_setup_B",
+      "zone": {
+        "setup": "B",
+        "direction": "compra",
+        "level": 2457.38,
+        "zone_low": 2453.425357142857,
+        "zone_high": 2461.334642857143,
+        "candles_since_creation": 0,
+        "touches": 0,
+        "created_at": 1788872400000
+      },
       "last_1h_ts": null
     },
     "SOL-USDT-SWAP": {
@@ -28,24 +28,15 @@
         "level": 102.2,
         "zone_low": 102.03732142857143,
         "zone_high": 102.36267857142857,
-        "candles_since_creation": 6,
-        "touches": 0,
+        "candles_since_creation": 7,
+        "touches": 1,
         "created_at": 1788847200000
       },
       "last_1h_ts": null
     },
     "XRP-USDT-SWAP": {
-      "status": "zona_mapeada_setup_B",
-      "zone": {
-        "setup": "B",
-        "direction": "venda",
-        "level": 1.3972,
-        "zone_low": 1.3946839285714285,
-        "zone_high": 1.3997160714285715,
-        "candles_since_creation": 1,
-        "touches": 1,
-        "created_at": 1788865200000
-      },
+      "status": "invalidado_setup_B",
+      "zone": null,
       "last_1h_ts": null
     },
     "DOGE-USDT-SWAP": {
@@ -56,7 +47,7 @@
         "level": 0.08995,
         "zone_low": 0.08969589285714286,
         "zone_high": 0.09020410714285715,
-        "candles_since_creation": 0,
+        "candles_since_creation": 1,
         "touches": 0,
         "created_at": 1788868800000
       },
@@ -80,8 +71,8 @@
         "level": 0.8131,
         "zone_low": 0.8096142857142857,
         "zone_high": 0.8165857142857144,
-        "candles_since_creation": 0,
-        "touches": 0,
+        "candles_since_creation": 1,
+        "touches": 1,
         "created_at": 1788868800000
       },
       "last_1h_ts": null
@@ -94,8 +85,8 @@
         "level": 6.852,
         "zone_low": 6.817660714285714,
         "zone_high": 6.886339285714286,
-        "candles_since_creation": 0,
-        "touches": 0,
+        "candles_since_creation": 1,
+        "touches": 1,
         "created_at": 1788868800000
       },
       "last_1h_ts": null
@@ -108,8 +99,8 @@
         "level": 12.51,
         "zone_low": 12.479089285714286,
         "zone_high": 12.540910714285713,
-        "candles_since_creation": 1,
-        "touches": 1,
+        "candles_since_creation": 2,
+        "touches": 2,
         "created_at": 1788865200000
       },
       "last_1h_ts": null
