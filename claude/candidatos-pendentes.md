@@ -1,4 +1,4 @@
-# Candidatos pendentes (diario) -- atualizado 2026-09-07 23:05 BRT
+# Candidatos pendentes (diario) -- atualizado 2026-09-08 00:05 BRT
 
 > Espelho legivel de `claude/trade_journal.db` (tabela trades, status='candidato'), gerado a cada execucao. SO PARA LEITURA -- editar status/resultado ainda exige abrir o .db. Stop/alvo/R:R aqui sao SUGESTOES MECANICAS SIMPLES (extremo da varredura + buffer de ATR; pivo 1h oposto mais recente) -- validar no grafico antes de usar, nao substituem o checklist da secao 4 do plano.
 
