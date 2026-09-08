@@ -1,9 +1,11 @@
-# Candidatos pendentes (diario) -- atualizado 2026-09-08 07:05 BRT
+# Candidatos pendentes (diario) -- atualizado 2026-09-08 08:05 BRT
 
 > Espelho legivel de `claude/trade_journal.db` (tabela trades, status='candidato'), gerado a cada execucao. SO PARA LEITURA -- editar status/resultado ainda exige abrir o .db. Stop/alvo/R:R aqui sao SUGESTOES MECANICAS SIMPLES (extremo da varredura + buffer de ATR; pivo 1h oposto mais recente) -- validar no grafico antes de usar, nao substituem o checklist da secao 4 do plano.
 
 | ID | Par | Setup | Direcao | Nivel ref. | Zona | Extremo varredura | Stop sugerido | Alvo candidato | R:R sugerido | Tend. 4h | Criado em |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 10 | XRP/USDT | B | venda | 1.3972 | 1.4-1.4 | 1.4032 | 1.40419 | 1.3804 | 2.35709 | lateral | 2026-09-08 08:05 |
+| 9 | ETH/USDT | B | venda | 2489.76 | 2486.1-2493.4 | 2499.36 | 2500.82 | 2461.46 | 0.905121 | alta | 2026-09-08 08:05 |
 | 8 | XRP/USDT | B | compra | 1.3907 | 1.4-1.4 | 1.383 | 1.38204 | 1.4067 | 2.3494 | lateral | 2026-09-08 06:05 |
 | 7 | DOGE/USDT | B | venda | 0.08995 | 0.1-0.1 | 0.08999 | 0.0900889 | 0.08854 | 2.16801 | lateral | 2026-09-08 02:05 |
 | 6 | SOL/USDT | B | venda | 103.55 | 103.4-103.7 | 103.4 | 103.472 | 102.85 | 0.147582 | alta | 2026-09-08 02:05 |
