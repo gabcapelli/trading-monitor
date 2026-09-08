@@ -9,24 +9,15 @@
         "level": 78299.0,
         "zone_low": 78192.1625,
         "zone_high": 78405.8375,
-        "candles_since_creation": 1,
+        "candles_since_creation": 2,
         "touches": 0,
         "created_at": 1788876000000
       },
       "last_1h_ts": null
     },
     "ETH-USDT-SWAP": {
-      "status": "zona_mapeada_setup_B",
-      "zone": {
-        "setup": "B",
-        "direction": "venda",
-        "level": 2489.76,
-        "zone_low": 2485.34625,
-        "zone_high": 2494.1737500000004,
-        "candles_since_creation": 0,
-        "touches": 0,
-        "created_at": 1788879600000
-      },
+      "status": "invalidado_setup_B",
+      "zone": null,
       "last_1h_ts": null
     },
     "SOL-USDT-SWAP": {
@@ -37,29 +28,29 @@
         "level": 104.06,
         "zone_low": 103.8375,
         "zone_high": 104.2825,
-        "candles_since_creation": 0,
-        "touches": 0,
+        "candles_since_creation": 1,
+        "touches": 1,
         "created_at": 1788879600000
       },
       "last_1h_ts": null
     },
     "XRP-USDT-SWAP": {
+      "status": "invalidado_setup_B",
+      "zone": null,
+      "last_1h_ts": null
+    },
+    "DOGE-USDT-SWAP": {
       "status": "zona_mapeada_setup_B",
       "zone": {
         "setup": "B",
         "direction": "venda",
-        "level": 1.4319,
-        "zone_low": 1.4287089285714285,
-        "zone_high": 1.4350910714285714,
+        "level": 0.08995,
+        "zone_low": 0.08969142857142857,
+        "zone_high": 0.09020857142857143,
         "candles_since_creation": 0,
         "touches": 0,
-        "created_at": 1788879600000
+        "created_at": 1788883200000
       },
-      "last_1h_ts": null
-    },
-    "DOGE-USDT-SWAP": {
-      "status": "invalidado_setup_B",
-      "zone": null,
       "last_1h_ts": null
     },
     "ARB-USDT-SWAP": {
@@ -78,8 +69,17 @@
       "last_1h_ts": null
     },
     "UNI-USDT-SWAP": {
-      "status": "CONFIRMADO_setup_B",
-      "zone": null,
+      "status": "zona_mapeada_setup_B",
+      "zone": {
+        "setup": "B",
+        "direction": "compra",
+        "level": 6.852,
+        "zone_low": 6.819982142857143,
+        "zone_high": 6.884017857142857,
+        "candles_since_creation": 0,
+        "touches": 0,
+        "created_at": 1788883200000
+      },
       "last_1h_ts": null
     },
     "LINK-USDT-SWAP": {
