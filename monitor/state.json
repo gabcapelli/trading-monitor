@@ -2,8 +2,17 @@
   "posicoes_abertas": [],
   "pares": {
     "BTC-USDT-SWAP": {
-      "status": "sem_zona",
-      "zone": null,
+      "status": "zona_mapeada_setup_B",
+      "zone": {
+        "setup": "B",
+        "direction": "venda",
+        "level": 79238.9,
+        "zone_low": 79169.30892857142,
+        "zone_high": 79308.49107142857,
+        "candles_since_creation": 0,
+        "touches": 0,
+        "created_at": 1788822000000
+      },
       "last_1h_ts": null
     },
     "ETH-USDT-SWAP": {
@@ -14,8 +23,8 @@
         "level": 2489.76,
         "zone_low": 2486.202321428572,
         "zone_high": 2493.3176785714286,
-        "candles_since_creation": 0,
-        "touches": 0,
+        "candles_since_creation": 1,
+        "touches": 1,
         "created_at": 1788818400000
       },
       "last_1h_ts": null
@@ -28,8 +37,8 @@
         "level": 103.55,
         "zone_low": 103.36178571428572,
         "zone_high": 103.73821428571428,
-        "candles_since_creation": 0,
-        "touches": 0,
+        "candles_since_creation": 1,
+        "touches": 1,
         "created_at": 1788818400000
       },
       "last_1h_ts": null
@@ -42,24 +51,15 @@
         "level": 1.3826,
         "zone_low": 1.3798607142857144,
         "zone_high": 1.3853392857142857,
-        "candles_since_creation": 0,
+        "candles_since_creation": 1,
         "touches": 0,
         "created_at": 1788818400000
       },
       "last_1h_ts": null
     },
     "DOGE-USDT-SWAP": {
-      "status": "zona_mapeada_setup_B",
-      "zone": {
-        "setup": "B",
-        "direction": "venda",
-        "level": 0.08995,
-        "zone_low": 0.08969928571428572,
-        "zone_high": 0.09020071428571429,
-        "candles_since_creation": 2,
-        "touches": 1,
-        "created_at": 1788814800000
-      },
+      "status": "invalidado_setup_B",
+      "zone": null,
       "last_1h_ts": null
     },
     "ARB-USDT-SWAP": {
@@ -73,17 +73,8 @@
       "last_1h_ts": null
     },
     "SUI-USDT-SWAP": {
-      "status": "zona_mapeada_setup_B",
-      "zone": {
-        "setup": "B",
-        "direction": "venda",
-        "level": 0.8131,
-        "zone_low": 0.8090982142857144,
-        "zone_high": 0.8171017857142857,
-        "candles_since_creation": 3,
-        "touches": 1,
-        "created_at": 1788814800000
-      },
+      "status": "invalidado_setup_B",
+      "zone": null,
       "last_1h_ts": null
     },
     "UNI-USDT-SWAP": {
