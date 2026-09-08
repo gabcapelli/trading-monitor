@@ -1,9 +1,10 @@
-# Candidatos pendentes (diario) -- atualizado 2026-09-08 11:06 BRT
+# Candidatos pendentes (diario) -- atualizado 2026-09-08 12:05 BRT
 
 > Espelho legivel de `claude/trade_journal.db` (tabela trades, status='candidato'), gerado a cada execucao. SO PARA LEITURA -- editar status/resultado ainda exige abrir o .db. Stop/alvo/R:R aqui sao SUGESTOES MECANICAS SIMPLES (extremo da varredura + buffer de ATR; pivo 1h oposto mais recente) -- validar no grafico antes de usar, nao substituem o checklist da secao 4 do plano.
 
 | ID | Par | Setup | Direcao | Nivel ref. | Zona | Extremo varredura | Stop sugerido | Alvo candidato | R:R sugerido | Tend. 4h | Criado em |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 14 | ETH/USDT | B | compra | 2457.38 | 2453.4-2461.3 | 2455.88 | 2454.18 | 2499.36 | 0.486156 | alta | 2026-09-08 12:05 |
 | 13 | BTC/USDT | B | venda | 78299 | 78211.4-78386.6 | 78514.6 | 78554.3 | 77436.2 | 0.825727 | lateral | 2026-09-08 11:06 |
 | 12 | SUI/USDT | B | venda | 0.8131 | 0.8-0.8 | 0.8224 | 0.823849 | 0.8088 | 0.0788611 | alta | 2026-09-08 09:05 |
 | 11 | DOGE/USDT | B | venda | 0.08995 | 0.1-0.1 | 0.09018 | 0.0902814 | 0.08876 | 0.972312 | lateral | 2026-09-08 09:05 |
