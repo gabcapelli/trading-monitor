@@ -2,12 +2,21 @@
   "posicoes_abertas": [],
   "pares": {
     "BTC-USDT-SWAP": {
-      "status": "descartado_rr_baixo_setup_B",
-      "zone": null,
+      "status": "zona_mapeada_setup_B",
+      "zone": {
+        "setup": "B",
+        "direction": "venda",
+        "level": 79238.9,
+        "zone_low": 79159.04285714285,
+        "zone_high": 79318.75714285714,
+        "candles_since_creation": 0,
+        "touches": 0,
+        "created_at": 1788937200000
+      },
       "last_1h_ts": null
     },
     "ETH-USDT-SWAP": {
-      "status": "invalidado_setup_B",
+      "status": "sem_zona",
       "zone": null,
       "last_1h_ts": null
     },
@@ -24,15 +33,24 @@
         "level": 1.4247,
         "zone_low": 1.4211535714285715,
         "zone_high": 1.4282464285714287,
-        "candles_since_creation": 2,
+        "candles_since_creation": 3,
         "touches": 2,
         "created_at": 1788926400000
       },
       "last_1h_ts": null
     },
     "DOGE-USDT-SWAP": {
-      "status": "invalidado_setup_B",
-      "zone": null,
+      "status": "zona_mapeada_setup_B",
+      "zone": {
+        "setup": "B",
+        "direction": "venda",
+        "level": 0.09029,
+        "zone_low": 0.09008232142857142,
+        "zone_high": 0.09049767857142857,
+        "candles_since_creation": 0,
+        "touches": 0,
+        "created_at": 1788937200000
+      },
       "last_1h_ts": null
     },
     "ARB-USDT-SWAP": {
@@ -56,8 +74,17 @@
       "last_1h_ts": null
     },
     "LINK-USDT-SWAP": {
-      "status": "sem_zona",
-      "zone": null,
+      "status": "zona_mapeada_setup_B",
+      "zone": {
+        "setup": "B",
+        "direction": "venda",
+        "level": 12.51,
+        "zone_low": 12.479982142857143,
+        "zone_high": 12.540017857142857,
+        "candles_since_creation": 0,
+        "touches": 0,
+        "created_at": 1788937200000
+      },
       "last_1h_ts": null
     }
   }
