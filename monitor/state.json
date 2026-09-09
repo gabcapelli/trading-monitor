@@ -2,13 +2,31 @@
   "posicoes_abertas": [],
   "pares": {
     "BTC-USDT-SWAP": {
-      "status": "descartado_rr_baixo_setup_B",
-      "zone": null,
+      "status": "zona_mapeada_setup_B",
+      "zone": {
+        "setup": "B",
+        "direction": "compra",
+        "level": 79119.6,
+        "zone_low": 79037.7642857143,
+        "zone_high": 79201.43571428572,
+        "candles_since_creation": 0,
+        "touches": 0,
+        "created_at": 1788930000000
+      },
       "last_1h_ts": null
     },
     "ETH-USDT-SWAP": {
-      "status": "invalidado_setup_B",
-      "zone": null,
+      "status": "zona_mapeada_setup_B",
+      "zone": {
+        "setup": "B",
+        "direction": "venda",
+        "level": 2489.76,
+        "zone_low": 2486.090892857143,
+        "zone_high": 2493.4291071428574,
+        "candles_since_creation": 0,
+        "touches": 0,
+        "created_at": 1788930000000
+      },
       "last_1h_ts": null
     },
     "SOL-USDT-SWAP": {
@@ -24,15 +42,24 @@
         "level": 1.4247,
         "zone_low": 1.4211535714285715,
         "zone_high": 1.4282464285714287,
-        "candles_since_creation": 0,
-        "touches": 0,
+        "candles_since_creation": 1,
+        "touches": 1,
         "created_at": 1788926400000
       },
       "last_1h_ts": null
     },
     "DOGE-USDT-SWAP": {
-      "status": "invalidado_setup_B",
-      "zone": null,
+      "status": "zona_mapeada_setup_B",
+      "zone": {
+        "setup": "B",
+        "direction": "venda",
+        "level": 0.08995,
+        "zone_low": 0.08972839285714286,
+        "zone_high": 0.09017160714285714,
+        "candles_since_creation": 0,
+        "touches": 0,
+        "created_at": 1788930000000
+      },
       "last_1h_ts": null
     },
     "ARB-USDT-SWAP": {
