@@ -2,18 +2,45 @@
   "posicoes_abertas": [],
   "pares": {
     "BTC-USDT-SWAP": {
-      "status": "CONFIRMADO_setup_B",
-      "zone": null,
+      "status": "zona_mapeada_setup_B",
+      "zone": {
+        "setup": "B",
+        "direction": "venda",
+        "level": 78299.0,
+        "zone_low": 78187.01785714286,
+        "zone_high": 78410.98214285714,
+        "candles_since_creation": 0,
+        "touches": 0,
+        "created_at": 1789012800000
+      },
       "last_1h_ts": null
     },
     "ETH-USDT-SWAP": {
-      "status": "sem_zona",
-      "zone": null,
+      "status": "zona_mapeada_setup_B",
+      "zone": {
+        "setup": "B",
+        "direction": "venda",
+        "level": 2489.76,
+        "zone_low": 2485.3689285714286,
+        "zone_high": 2494.151071428572,
+        "candles_since_creation": 0,
+        "touches": 0,
+        "created_at": 1789012800000
+      },
       "last_1h_ts": null
     },
     "SOL-USDT-SWAP": {
-      "status": "invalidado_setup_B",
-      "zone": null,
+      "status": "zona_mapeada_setup_B",
+      "zone": {
+        "setup": "B",
+        "direction": "compra",
+        "level": 102.2,
+        "zone_low": 101.95,
+        "zone_high": 102.45,
+        "candles_since_creation": 0,
+        "touches": 0,
+        "created_at": 1789012800000
+      },
       "last_1h_ts": null
     },
     "XRP-USDT-SWAP": {
@@ -24,7 +51,7 @@
         "level": 1.3972,
         "zone_low": 1.3938375,
         "zone_high": 1.4005625,
-        "candles_since_creation": 0,
+        "candles_since_creation": 1,
         "touches": 0,
         "created_at": 1789009200000
       },
@@ -38,7 +65,7 @@
         "level": 0.08808,
         "zone_low": 0.08780410714285715,
         "zone_high": 0.08835589285714286,
-        "candles_since_creation": 6,
+        "candles_since_creation": 7,
         "touches": 0,
         "created_at": 1788987600000
       },
@@ -62,29 +89,29 @@
         "level": 0.7858,
         "zone_low": 0.7825321428571429,
         "zone_high": 0.7890678571428572,
-        "candles_since_creation": 6,
+        "candles_since_creation": 7,
         "touches": 0,
         "created_at": 1788987600000
       },
       "last_1h_ts": null
     },
     "UNI-USDT-SWAP": {
-      "status": "zona_mapeada_setup_A",
-      "zone": {
-        "setup": "A",
-        "direction": "venda",
-        "level": 6.475,
-        "zone_low": 6.445696428571428,
-        "zone_high": 6.504303571428571,
-        "candles_since_creation": 7,
-        "touches": 0,
-        "created_at": 1788984000000
-      },
+      "status": "zona_expirada_setup_A",
+      "zone": null,
       "last_1h_ts": null
     },
     "LINK-USDT-SWAP": {
-      "status": "CONFIRMADO_setup_B",
-      "zone": null,
+      "status": "zona_mapeada_setup_B",
+      "zone": {
+        "setup": "B",
+        "direction": "venda",
+        "level": 11.833,
+        "zone_low": 11.798589285714286,
+        "zone_high": 11.867410714285715,
+        "candles_since_creation": 0,
+        "touches": 0,
+        "created_at": 1789012800000
+      },
       "last_1h_ts": null
     }
   }
