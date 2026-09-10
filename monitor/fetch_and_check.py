@@ -27,6 +27,62 @@ Dependencias: NENHUMA alem da biblioteca padrao do Python (urllib, json, etc.)
 -- roda em qualquer runner do GitHub Actions sem "pip install".
 
 --------------------------------------------------------------------------------
+CHANGELOG v6 (10/09/2026 -- decisao do Gabriel sobre as 3 pendencias que a
+auditoria v5 deixou em aberto, na ordem que ele pediu: trocar a regra de
+alvo, rodar o replay de novo, reavaliar MIN_RR, testar breakeven so na
+simulacao):
+
+1. REGRA DE ALVO AUTORITATIVA TROCADA DE "recente" PARA "proximo": a v5
+   identificou o bug (nearest_target_candidate pegava o pivo oposto mais
+   RECENTE, nao o mais PROXIMO, inflando R:R quando o preco ia contra a
+   tese) mas manteve a regra antiga por compatibilidade com o gate de 30.
+   Decisao: trocar agora (ALVO_REGRA_ATUAL = "proximo"). compute_suggestion
+   passou a devolver um dict (era uma tupla posicional de 7 campos, fragil
+   pra crescer) com alvo_sugerido/rr_sugerido AUTORITATIVOS + regra_alvo
+   (qual decidiu) + alvo_recente/rr_recente + alvo_proximo/rr_proximo
+   (sempre calculados os dois, pra comparacao continua). Linhas anteriores a
+   esta mudanca foram marcadas com regra_alvo='recente' (migracao automatica
+   em ensure_trade_db) -- alvo_sugerido/rr_sugerido HISTORICOS nao foram
+   reescritos, permanecem o valor que de fato decidiu aquele trade na hora.
+
+2. REPLAY RE-RODADO COM A REGRA NOVA: o numero de sinais que passam no
+   MIN_RR>=2 caiu de 168 para 59 (alvos mais proximos sao mais dificeis de
+   render R:R alto) e a expectancia foi de -0.167R para -0.136R -- melhora
+   pequena, ainda estatisticamente indistinguivel de zero (IC 95% bootstrap
+   [-0.533, +0.296], n=59). Sem filtro de R:R (n=414): -0.066R, IC
+   [-0.152, +0.027]. Segue sem edge demonstravel em nenhuma direcao.
+
+3. O PARADOXO DE MIN_RR PERSISTIU DEPOIS DO FIX -- achado mais forte do que
+   se pensava: com a regra "recente" (bugada), suspeitava-se que exigir R:R
+   alto degradar a expectancia fosse so sintoma do bug (R:R alto = alvo
+   distante e velho). Com a regra corrigida ("proximo"), a degradacao
+   monotonica CONTINUA (MIN_RR 1.0 -> -0.017R; 1.5 -> -0.110R; 2.0 -> -0.136R;
+   2.5 -> -0.352R; 3.0 -> -0.485R; 4.0 -> -0.596R). Ou seja, nao era so o
+   bug -- e um padrao mais geral do checklist mecanico atual. MIN_RR=2.0
+   NAO foi alterado: e regra do plano de risco (secao 3.3), nao parametro de
+   calibracao, e o efeito ainda cabe dentro do ruido estatistico (n pequeno
+   por faixa). Fica registrado como o achado mais concreto desta rodada,
+   para o Gabriel decidir com calma -- nao e correcao, e metodologia.
+
+4. STOP NO BREAKEVEN TESTADO SO NA SIMULACAO, NAO IMPLEMENTADO: a v5
+   observou que 37% dos erros chegavam a 1R a favor antes de reverter --
+   material pra uma regra de mover o stop pra entrada depois de X de R a
+   favor. Adicionado breakeven_apos_r (opcional, default None, SO usado por
+   monitor/replay.py) em desfecho_mecanico(): uma vez que o preco atinja
+   esse limiar, o stop simulado vira a propria entrada A PARTIR DO CANDLE
+   SEGUINTE. Varredura (python monitor/replay.py --varrer breakeven): o
+   unico resultado positivo de toda a auditoria apareceu aqui (breakeven em
+   0.5R: +0.045R, contra -0.136R sem breakeven) -- mas o IC 95% bootstrap
+   ([-0.310, +0.444]) inclui zero E inclui valores negativos, n=59.
+   NAO E SINAL, e ruido com a mesma amostra pequena de sempre. NADA foi
+   implementado em producao -- fetch_and_check.py nunca passa
+   breakeven_apos_r, e track_open_trade_outcomes/track_mechanical_outcomes
+   continuam com o comportamento de sempre.
+
+Relatorio completo desta rodada: claude/auditoria-v6.md (continuacao de
+claude/auditoria-v5.md, nao repete o que ja foi coberto la).
+
+--------------------------------------------------------------------------------
 CHANGELOG v5 (10/09/2026 -- auditoria de continuacao da v4, feita com o Claude
 Code sobre o codigo + os 30 sinais ja no banco + 33 dias de historico da OKX):
 
@@ -804,11 +860,20 @@ def ensure_trade_db():
         ("rr_sugerido", "REAL"),
         ("preco_entrada", "REAL"),
         ("criado_em_ts", "INTEGER"),  # ts (ms) do candle 1h de confirmacao -- CHANGELOG v4, item 4
-        # v5, item 5: alvo alternativo ("pivo oposto mais PROXIMO", em vez do
-        # "mais RECENTE" que a v1 escolheu). Gravado em paralelo, NAO
-        # autoritativo -- serve pra medir a diferenca antes de trocar a regra.
+        # v5, item 5: alvo pela regra "mais PROXIMO" -- sempre calculado, pra
+        # comparar com a regra "mais RECENTE" independente de qual e a
+        # autoritativa no momento (ver ALVO_REGRA_ATUAL).
         ("alvo_proximo", "REAL"),
         ("rr_proximo", "REAL"),
+        # v6: alvo pela regra "mais RECENTE" (era a autoritativa antes da v6;
+        # agora e a secundaria). Simetrico ao par acima.
+        ("alvo_recente", "REAL"),
+        ("rr_recente", "REAL"),
+        # v6: qual regra decidiu alvo_sugerido/rr_sugerido desta linha --
+        # 'recente' pra trades anteriores a v6, 'proximo' dai em diante. Sem
+        # isso nao da pra saber, olhando uma linha antiga, qual regra gerou o
+        # numero que passou (ou nao) no filtro de MIN_RR.
+        ("regra_alvo", "TEXT"),
     ]:
         try:
             conn.execute(f"ALTER TABLE trades ADD COLUMN {col} {coltype}")
@@ -847,10 +912,13 @@ def ensure_trade_db():
             preco_entrada REAL,
             extremo_varredura REAL,
             stop_sugerido REAL,
-            alvo_sugerido REAL,          -- pivo oposto mais RECENTE (regra atual)
+            alvo_sugerido REAL,          -- AUTORITATIVO -- ver regra_alvo
             rr_sugerido REAL,
-            alvo_proximo REAL,           -- pivo oposto mais PROXIMO (regra alternativa)
+            regra_alvo TEXT,             -- 'recente' ou 'proximo' -- qual decidiu alvo_sugerido
+            alvo_proximo REAL,           -- sempre calculado, regra "pivo oposto mais PROXIMO"
             rr_proximo REAL,
+            alvo_recente REAL,           -- sempre calculado, regra "pivo oposto mais RECENTE"
+            rr_recente REAL,
             aceito INTEGER NOT NULL,     -- 1 = virou linha em `trades`; 0 = descartado por R:R
             motivo_descarte TEXT,
             candles_ate_confirmar INTEGER,
@@ -868,21 +936,49 @@ def ensure_trade_db():
         """
     )
     conn.commit()
+
+    # v6, migracao aditiva: sinais_mecanicos ja existia (criada na v5) em
+    # bancos que passaram por ela antes desta mudanca -- o CREATE TABLE IF
+    # NOT EXISTS acima nao adiciona coluna em tabela ja existente.
+    for col, coltype in [("regra_alvo", "TEXT"), ("alvo_recente", "REAL"),
+                          ("rr_recente", "REAL")]:
+        try:
+            conn.execute(f"ALTER TABLE sinais_mecanicos ADD COLUMN {col} {coltype}")
+        except sqlite3.OperationalError:
+            pass
+    conn.commit()
+
+    # v6, migracao unica: rotula os sinais gravados ANTES da troca de regra do
+    # alvo (recente -> proximo). alvo_sugerido/rr_sugerido dessas linhas foram
+    # calculados pela regra "recente" (a unica que existia); alvo_recente/
+    # rr_recente ficariam NULL pra sempre sem isso, e regra_alvo tambem --
+    # tornando impossivel saber, olhando uma linha antiga, qual regra decidiu
+    # o numero que passou (ou nao) no filtro de MIN_RR. So toca linhas com
+    # regra_alvo ainda NULL, entao rodar de novo nao faz nada (idempotente,
+    # mesmo padrao das migracoes acima).
+    conn.execute(
+        "UPDATE trades SET regra_alvo='recente', alvo_recente=alvo_sugerido, "
+        "rr_recente=rr_sugerido WHERE regra_alvo IS NULL AND alvo_sugerido IS NOT NULL"
+    )
+    conn.execute(
+        "UPDATE sinais_mecanicos SET regra_alvo='recente', alvo_recente=alvo_sugerido, "
+        "rr_recente=rr_sugerido WHERE regra_alvo IS NULL AND alvo_sugerido IS NOT NULL"
+    )
+    conn.commit()
     conn.close()
 
 
-def insert_candidate_trade(inst_id, zone, trend, extremo=None, stop_sug=None,
-                            alvo_sug=None, rr_sug=None, preco_entrada=None,
-                            confirm_ts=None, alvo_prox=None, rr_prox=None):
+def insert_candidate_trade(inst_id, zone, trend, sug, confirm_ts=None):
     """
     Insere uma linha 'candidato' quando uma zona e CONFIRMADA (rejeicao
     valida no candle 1h) E o R:R sugerido atende ao minimo do plano (ver
     CHANGELOG v3, item 2 -- o caller ja filtra isso antes de chamar esta
-    funcao). Os campos mecanicos vem preenchidos; stop/alvo/R:R FINAIS
-    (colunas 'stop', 'alvo', 'rr_planejado') continuam em branco ate voce
-    decidir -- extremo_varredura/stop_sugerido/alvo_sugerido/rr_sugerido/
-    preco_entrada sao a SUGESTAO mecanica automatica, guardada em colunas
-    separadas para nunca ser confundida com a decisao real.
+    funcao). `sug` e o dict de compute_suggestion(). Os campos mecanicos vem
+    preenchidos; stop/alvo/R:R FINAIS (colunas 'stop', 'alvo', 'rr_planejado')
+    continuam em branco ate voce decidir -- extremo_varredura/stop_sugerido/
+    alvo_sugerido/rr_sugerido/preco_entrada sao a SUGESTAO mecanica
+    automatica, guardada em colunas separadas para nunca ser confundida com a
+    decisao real.
 
     conta_para_validacao ja nasce em 1 (conta por padrao) -- edite a coluna
     "Conta 30?" em sinais.md pra "nao" se este trade nao devesse contar (ex.:
@@ -908,8 +1004,9 @@ def insert_candidate_trade(inst_id, zone, trend, extremo=None, stop_sug=None,
             (status, data, par, setup, direcao, nivel_referencia, zona_entrada,
              confirmacao, tendencia_4h, criado_em, conta_para_validacao,
              extremo_varredura, stop_sugerido, alvo_sugerido, rr_sugerido,
-             preco_entrada, criado_em_ts, alvo_proximo, rr_proximo)
-        VALUES ('candidato', ?, ?, ?, ?, ?, ?, ?, ?, ?, 1, ?, ?, ?, ?, ?, ?, ?, ?)
+             preco_entrada, criado_em_ts, alvo_proximo, rr_proximo,
+             alvo_recente, rr_recente, regra_alvo)
+        VALUES ('candidato', ?, ?, ?, ?, ?, ?, ?, ?, ?, 1, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
         """,
         (
             now_brt,
@@ -922,14 +1019,17 @@ def insert_candidate_trade(inst_id, zone, trend, extremo=None, stop_sug=None,
             f"(nivel de referencia {fmt_price(zone['level'])})",
             trend,
             now_brt,
-            extremo,
-            stop_sug,
-            alvo_sug,
-            rr_sug,
-            preco_entrada,
+            sug["extremo"],
+            sug["stop_sugerido"],
+            sug["alvo_sugerido"],
+            sug["rr_sugerido"],
+            sug["preco_entrada"],
             confirm_ts,
-            alvo_prox,
-            rr_prox,
+            sug["alvo_proximo"],
+            sug["rr_proximo"],
+            sug["alvo_recente"],
+            sug["rr_recente"],
+            sug["regra_alvo"],
         ),
     )
     trade_id = cur.lastrowid
@@ -947,11 +1047,10 @@ def registrar_sinal_mecanico(inst_id, zone, trend, atr_1h, sug, aceito,
     existe justamente pra que os descartes, que antes so incrementavam um
     contador inteiro no state.json e sumiam, virem dado analisavel.
 
-    `sug` e a tupla de compute_suggestion(). Idempotente por (par, direcao,
+    `sug` e o dict de compute_suggestion(). Idempotente por (par, direcao,
     criado_em_ts): se o mesmo candle for processado de novo, o INSERT OR IGNORE
     nao duplica a linha.
     """
-    extremo, stop_sug, alvo_sug, rr_sug, preco_entrada, alvo_prox, rr_prox = sug
     ensure_trade_db()
     conn = sqlite3.connect(TRADE_DB_PATH)
     try:
@@ -960,16 +1059,19 @@ def registrar_sinal_mecanico(inst_id, zone, trend, atr_1h, sug, aceito,
             INSERT OR IGNORE INTO sinais_mecanicos
                 (trade_id, par, setup, direcao, tendencia_4h, nivel_referencia,
                  zona_low, zona_high, atr_1h, preco_entrada, extremo_varredura,
-                 stop_sugerido, alvo_sugerido, rr_sugerido, alvo_proximo,
-                 rr_proximo, aceito, motivo_descarte, candles_ate_confirmar,
-                 toques_ate_confirmar, criado_em, criado_em_ts)
-            VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+                 stop_sugerido, alvo_sugerido, rr_sugerido, regra_alvo,
+                 alvo_proximo, rr_proximo, alvo_recente, rr_recente, aceito,
+                 motivo_descarte, candles_ate_confirmar, toques_ate_confirmar,
+                 criado_em, criado_em_ts)
+            VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
             """,
             (
                 trade_id, pair_label(inst_id), zone["setup"], zone["direction"],
                 trend, zone["level"], zone["zone_low"], zone["zone_high"],
-                atr_1h, preco_entrada, extremo, stop_sug, alvo_sug, rr_sug,
-                alvo_prox, rr_prox, 1 if aceito else 0, motivo_descarte,
+                atr_1h, sug["preco_entrada"], sug["extremo"], sug["stop_sugerido"],
+                sug["alvo_sugerido"], sug["rr_sugerido"], sug["regra_alvo"],
+                sug["alvo_proximo"], sug["rr_proximo"], sug["alvo_recente"],
+                sug["rr_recente"], 1 if aceito else 0, motivo_descarte,
                 zone.get("candles_since_creation"), zone.get("touches"),
                 datetime.now(BRT).strftime("%Y-%m-%d %H:%M"), confirm_ts,
             ),
@@ -1037,7 +1139,7 @@ def pair_has_open_position(par_label_value):
 
 
 def desfecho_mecanico(direcao, preco_entrada, stop_sug, alvo_sug, rr_sug,
-                      criado_ts, closed_1h):
+                      criado_ts, closed_1h, breakeven_apos_r=None):
     """
     Geometria pura de preco: percorre as candles de 1h FECHADAS depois de
     criado_ts e devolve (resultado_r, motivo, mae_r, mfe_r, candles_ate_
@@ -1051,6 +1153,14 @@ def desfecho_mecanico(direcao, preco_entrada, stop_sug, alvo_sug, rr_sug,
 
     Se stop e alvo foram tocados no MESMO candle nao ha dado intra-candle pra
     saber a ordem real -- convencao conservadora, considera o stop primeiro.
+
+    `breakeven_apos_r` (opcional, None em producao -- SO usado pelo replay pra
+    testar a ideia antes de qualquer implementacao real): se preenchido, uma
+    vez que o preco atinja esse tanto de R a favor, o "stop" simulado passa a
+    ser a propria entrada (0R) em vez de stop_sug. Isso NAO muda nenhum
+    comportamento hoje -- fetch_and_check.py nunca passa esse argumento; existe
+    so pra `python monitor/replay.py --varrer breakeven` poder medir o efeito
+    antes de qualquer trade real usar isso.
 
     Extraida de track_open_trade_outcomes na v5 pra ser compartilhada com
     track_mechanical_outcomes e com o backfill (monitor/backfill_mecanico.py),
@@ -1066,17 +1176,25 @@ def desfecho_mecanico(direcao, preco_entrada, stop_sug, alvo_sug, rr_sug,
     risco = abs(preco_entrada - stop_sug)
     mae = 0.0
     mfe = 0.0
+    stop_efetivo = stop_sug
+    moveu_breakeven = False
 
     for n, c in enumerate(posteriores, start=1):
+        # o stop comparado neste candle e stop_efetivo, que so passa a ser a
+        # entrada (breakeven) a PARTIR do candle seguinte aquele que atingiu
+        # breakeven_apos_r -- nao da pra mover o stop antes de saber, dentro
+        # do proprio candle, que o preco chegou la. Quando breakeven_apos_r e
+        # None, stop_efetivo == stop_sug o tempo todo (comportamento identico
+        # ao de antes desta mudanca).
         if direcao == "compra":
             excursao_contra = preco_entrada - c["low"]
             excursao_favor = c["high"] - preco_entrada
-            stop_tocado = c["low"] <= stop_sug
+            stop_tocado = c["low"] <= stop_efetivo
             alvo_tocado = alvo_sug is not None and c["high"] >= alvo_sug
         else:
             excursao_contra = c["high"] - preco_entrada
             excursao_favor = preco_entrada - c["low"]
-            stop_tocado = c["high"] >= stop_sug
+            stop_tocado = c["high"] >= stop_efetivo
             alvo_tocado = alvo_sug is not None and c["low"] <= alvo_sug
 
         if risco:
@@ -1084,9 +1202,16 @@ def desfecho_mecanico(direcao, preco_entrada, stop_sug, alvo_sug, rr_sug,
             mfe = max(mfe, excursao_favor / risco)
 
         if stop_tocado:
-            return -1.0, "stop_automatico", round(mae, 3), round(mfe, 3), n
+            resultado = 0.0 if (moveu_breakeven and stop_efetivo != stop_sug) else -1.0
+            motivo = "breakeven_automatico" if resultado == 0.0 else "stop_automatico"
+            return resultado, motivo, round(mae, 3), round(mfe, 3), n
         if alvo_tocado:
             return rr_sug, "alvo_automatico", round(mae, 3), round(mfe, 3), n
+
+        if (breakeven_apos_r is not None and not moveu_breakeven
+                and risco and excursao_favor / risco >= breakeven_apos_r):
+            stop_efetivo = preco_entrada
+            moveu_breakeven = True
 
     return None, None, round(mae, 3), round(mfe, 3), None
 
@@ -1547,15 +1672,31 @@ def _rr(preco_entrada, stop_sug, alvo):
     return (abs(preco_entrada - alvo) / risco) if risco else None
 
 
+# v6 (10/09/2026, continuacao da auditoria v5): regra de alvo AUTORITATIVA
+# trocada de "recente" para "proximo" -- ver nearest_target_candidate para o
+# porque. Decisao tomada com o Gabriel depois de ver o replay sobre 33 dias:
+# a troca sozinha nao prova edge (ambas as regras dao expectancia negativa em
+# amostra pequena), mas "recente" e um bug em relacao a intencao documentada
+# (secao 2 do plano: "proxima zona de oferta/demanda relevante") e e a causa
+# mais provavel do achado de que exigir mais R:R piorava o resultado -- exigir
+# R:R alto com a regra antiga equivalia a exigir um alvo distante e antigo,
+# nao uma tese melhor. Trades anteriores a esta mudanca sao marcados com
+# regra_alvo='recente' (coluna nova) para nao perder a rastreabilidade.
+ALVO_REGRA_ATUAL = "proximo"
+
+
 def compute_suggestion(zone, candles_1h, atr_1h):
     """
-    Retorna (extremo, stop_sugerido, alvo_sugerido, rr_sugerido, preco_entrada,
-    alvo_proximo, rr_proximo) para uma zona recem-confirmada. `preco_entrada` e
-    o fechamento do candle 1h de confirmacao (v3, CHANGELOG item 4).
+    Retorna um dict com a sugestao mecanica completa para uma zona recem-
+    confirmada. `preco_entrada` e o fechamento do candle 1h de confirmacao
+    (v3, CHANGELOG item 4).
 
-    alvo_sugerido/rr_sugerido continuam sendo os AUTORITATIVOS (regra "pivo
-    oposto mais recente"); alvo_proximo/rr_proximo sao a regra alternativa
-    gravada em paralelo pra calibracao -- ver nearest_target_candidate.
+    alvo_sugerido/rr_sugerido sao os AUTORITATIVOS -- a regra em vigor agora e
+    ALVO_REGRA_ATUAL ("proximo" desde a v6; "recente" antes disso). regra_alvo
+    registra qual foi usada, pra nunca depender de saber a data do trade pra
+    saber qual regra decidiu ele. alvo_recente/rr_recente e alvo_proximo/
+    rr_proximo sao SEMPRE calculados os dois, independente de qual e
+    autoritativo -- servem pra comparar as duas regras com o mesmo sinal.
 
     Qualquer valor pode vir None se faltar dado (ATR ainda nao calculavel, ou
     nenhum pivo oposto na janela).
@@ -1564,12 +1705,24 @@ def compute_suggestion(zone, candles_1h, atr_1h):
     preco_entrada = last["close"]
     extremo = sweep_extreme(zone, last)
     stop_sug = suggest_stop(extremo, atr_1h, zone["direction"])
-    alvo_sug = nearest_target_candidate(zone["direction"], candles_1h, preco_entrada)
-    alvo_prox = nearest_target_candidate(
-        zone["direction"], candles_1h, preco_entrada, modo="proximo"
-    )
-    return (extremo, stop_sug, alvo_sug, _rr(preco_entrada, stop_sug, alvo_sug),
-            preco_entrada, alvo_prox, _rr(preco_entrada, stop_sug, alvo_prox))
+    alvo_recente = nearest_target_candidate(zone["direction"], candles_1h, preco_entrada, modo="recente")
+    alvo_proximo = nearest_target_candidate(zone["direction"], candles_1h, preco_entrada, modo="proximo")
+    rr_recente = _rr(preco_entrada, stop_sug, alvo_recente)
+    rr_proximo = _rr(preco_entrada, stop_sug, alvo_proximo)
+    autoritativo = {"recente": (alvo_recente, rr_recente),
+                    "proximo": (alvo_proximo, rr_proximo)}[ALVO_REGRA_ATUAL]
+    return {
+        "extremo": extremo,
+        "stop_sugerido": stop_sug,
+        "preco_entrada": preco_entrada,
+        "alvo_sugerido": autoritativo[0],
+        "rr_sugerido": autoritativo[1],
+        "regra_alvo": ALVO_REGRA_ATUAL,
+        "alvo_recente": alvo_recente,
+        "rr_recente": rr_recente,
+        "alvo_proximo": alvo_proximo,
+        "rr_proximo": rr_proximo,
+    }
 
 
 # ---------------------------------------------------------------------------
@@ -1672,7 +1825,7 @@ def process_single_pair(inst_id, pair_state, candles_1h, candles_4h, trend, atr_
             pair_state["zone"] = None
         elif result == "confirmado":
             sug = compute_suggestion(zone, candles_1h, atr_1h)
-            extremo, stop_sug, alvo_sug, rr_sug, preco_entrada, alvo_prox, rr_prox = sug
+            rr_sug = sug["rr_sugerido"]
 
             # FILTRO DE R:R MINIMO (v3, CHANGELOG item 2): so vira candidato
             # de verdade (insercao no diario + notificacao) se o R:R sugerido
@@ -1695,9 +1848,7 @@ def process_single_pair(inst_id, pair_state, candles_1h, candles_4h, trend, atr_
             else:
                 new_status = f"CONFIRMADO_setup_{zone['setup']}"
                 trade_id = insert_candidate_trade(
-                    inst_id, zone, trend, extremo, stop_sug, alvo_sug, rr_sug,
-                    preco_entrada, confirm_ts=last_ts,
-                    alvo_prox=alvo_prox, rr_prox=rr_prox,
+                    inst_id, zone, trend, sug, confirm_ts=last_ts,
                 )
                 registrar_sinal_mecanico(
                     inst_id, zone, trend, atr_1h, sug, aceito=True,
@@ -1712,12 +1863,12 @@ def process_single_pair(inst_id, pair_state, candles_1h, candles_4h, trend, atr_
                     "par": par_lbl,
                     "titulo": f"{par_lbl} -- CONFIRMACAO -- Setup {zone['setup']} ({zone['direction']})",
                     "mensagem": (
-                        f"Preco de entrada: {fmt_price(preco_entrada)}\n"
-                        f"Stop sugerido: {fmt_price(stop_sug)} | "
-                        f"Alvo candidato: {fmt_price(alvo_sug)} | "
+                        f"Preco de entrada: {fmt_price(sug['preco_entrada'])}\n"
+                        f"Stop sugerido: {fmt_price(sug['stop_sugerido'])} | "
+                        f"Alvo candidato: {fmt_price(sug['alvo_sugerido'])} | "
                         f"R:R sugerido: {fmt_ratio(rr_sug)} \u2705\n"
                         f"(Sugestao mecanica simples -- extremo da varredura + buffer de ATR; "
-                        f"pivo 1h oposto mais recente. Valide no grafico, nao substitui a secao 4.)\n"
+                        f"pivo 1h oposto {sug['regra_alvo']}. Valide no grafico, nao substitui a secao 4.)\n"
                         f"Posicoes abertas no diario agora: {abertas}/{MAX_POSICOES_SIMULTANEAS}\n"
                         f"Candidato salvo em claude/sinais.md -- edite Status/Resultado (R) direto la."
                     ),
@@ -2057,7 +2208,7 @@ def write_calibracao():
     conn = sqlite3.connect(TRADE_DB_PATH)
     try:
         linhas = list(conn.execute(
-            "SELECT par, setup, direcao, aceito, rr_sugerido, rr_proximo, "
+            "SELECT par, setup, direcao, aceito, regra_alvo, rr_recente, rr_proximo, "
             "resultado_mecanico_r, mae_r, mfe_r, candles_ate_desfecho, criado_em "
             "FROM sinais_mecanicos ORDER BY criado_em_ts DESC"
         ))
@@ -2065,11 +2216,11 @@ def write_calibracao():
         conn.close()
 
     def _bloco(rotulo, rs):
-        resolvidos = [r for r in rs if r[6] is not None]
+        resolvidos = [r for r in rs if r[7] is not None]
         if not resolvidos:
             return f"| {rotulo} | {len(rs)} | — | — | — |\n"
-        wins = [r for r in resolvidos if r[6] > 0]
-        soma = sum(r[6] for r in resolvidos)
+        wins = [r for r in resolvidos if r[7] > 0]
+        soma = sum(r[7] for r in resolvidos)
         return (f"| {rotulo} | {len(rs)} | {len(resolvidos)} | "
                 f"{len(wins)} ({100*len(wins)/len(resolvidos):.0f}%) | "
                 f"{soma:+.2f}R ({soma/len(resolvidos):+.3f}R/sinal) |\n")
@@ -2078,6 +2229,8 @@ def write_calibracao():
     descartados = [r for r in linhas if r[3] == 0]
 
     corpo = (
+        f"Regra de alvo em vigor agora: **{ALVO_REGRA_ATUAL}** (coluna `Regra` "
+        f"abaixo mostra qual decidiu cada sinal -- ver CHANGELOG v6).\n\n"
         "| Grupo | Sinais | Resolvidos | Acertos | Soma (expectancia) |\n"
         "|---|---|---|---|---|\n"
         + _bloco(f"Aceitos (R:R >= {MIN_RR:.0f})", aceitos)
@@ -2086,11 +2239,11 @@ def write_calibracao():
     )
 
     # distribuicoes que respondem as perguntas de calibracao
-    venc = [r for r in linhas if r[6] is not None and r[6] > 0 and r[7] is not None]
-    perd = [r for r in linhas if r[6] is not None and r[6] < 0 and r[8] is not None]
+    venc = [r for r in linhas if r[7] is not None and r[7] > 0 and r[8] is not None]
+    perd = [r for r in linhas if r[7] is not None and r[7] < 0 and r[9] is not None]
     extra = ""
     if venc:
-        maes = sorted(r[7] for r in venc)
+        maes = sorted(r[8] for r in venc)
         acima = sum(1 for x in maes if x > 0.8)
         extra += (
             f"\n**MAE dos acertos** (quanto o preco foi CONTRA antes de dar certo) "
@@ -2101,7 +2254,7 @@ def write_calibracao():
             f"apertar o stop.\n"
         )
     if perd:
-        mfes = sorted(r[8] for r in perd)
+        mfes = sorted(r[9] for r in perd)
         um_r = sum(1 for x in mfes if x >= 1.0)
         extra += (
             f"\n**MFE dos erros** (quanto o preco foi A FAVOR antes de bater stop) "
@@ -2115,14 +2268,14 @@ def write_calibracao():
     ultimas = linhas[:25]
     tabela = (
         "\n## Ultimos 25 sinais mecanicos\n\n"
-        "| Par | Setup | Direcao | Aceito | R:R (recente) | R:R (proximo) | "
+        "| Par | Setup | Direcao | Aceito | Regra | R:R (recente) | R:R (proximo) | "
         "Resultado | MAE | MFE | Candles | Quando |\n"
-        "|---|---|---|---|---|---|---|---|---|---|---|\n"
+        "|---|---|---|---|---|---|---|---|---|---|---|---|\n"
     )
-    for (par, setup, dir_, aceito, rr, rrp, res, mae, mfe, nc, quando) in ultimas:
+    for (par, setup, dir_, aceito, regra, rr_rec, rrp, res, mae, mfe, nc, quando) in ultimas:
         tabela += (
             f"| {par} | {setup} | {dir_} | {'sim' if aceito else 'nao'} | "
-            f"{fmt_ratio(rr)} | {fmt_ratio(rrp)} | "
+            f"{regra or '—'} | {fmt_ratio(rr_rec)} | {fmt_ratio(rrp)} | "
             f"{f'{res:+.2f}' if res is not None else 'aberto'} | "
             f"{mae if mae is not None else '—'} | {mfe if mfe is not None else '—'} | "
             f"{nc if nc is not None else '—'} | {quando} |\n"

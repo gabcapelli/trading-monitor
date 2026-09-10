@@ -35,6 +35,11 @@ Uso:
     python monitor/replay.py --pares BTC,ETH          # subconjunto
     python monitor/replay.py --varrer stop_buffer     # varredura de um parametro
     python monitor/replay.py --varrer alvo            # regra de alvo: recente vs proximo
+    python monitor/replay.py --varrer min_rr          # varredura de MIN_RR
+    python monitor/replay.py --varrer breakeven       # stop no zero a zero apos X de R
+                                                        # a favor -- SO TESTE (v6); nada
+                                                        # disso esta implementado em
+                                                        # producao ate ter dado que sustente.
 """
 
 import sys
@@ -81,8 +86,8 @@ def fetch_historico(inst_id, bar, paginas=8, por_pagina=100):
 # Replay
 # ---------------------------------------------------------------------------
 
-def replay_par(inst_id, c1h, c4h, modo_alvo="recente", min_rr=None,
-               stop_buffer=None):
+def replay_par(inst_id, c1h, c4h, modo_alvo=None, min_rr=None,
+               stop_buffer=None, breakeven_apos_r=None):
     """
     Reproduz ciclo a ciclo o que o monitor faria, um candle de 1h por vez, e
     devolve a lista de sinais confirmados com o desfecho mecanico de cada um.
@@ -91,6 +96,10 @@ def replay_par(inst_id, c1h, c4h, modo_alvo="recente", min_rr=None,
     muda junto, que e o ponto.
     """
     min_rr = m.MIN_RR if min_rr is None else min_rr
+    # v6: sem modo_alvo explicito, testa a regra AUTORITATIVA de producao
+    # (m.ALVO_REGRA_ATUAL), nao mais um default fixo -- se a regra em vigor
+    # mudar de novo, o replay padrao acompanha sem precisar editar aqui.
+    modo_alvo = m.ALVO_REGRA_ATUAL if modo_alvo is None else modo_alvo
     buffer_orig = m.STOP_BUFFER_ATR_MULT
     if stop_buffer is not None:
         m.STOP_BUFFER_ATR_MULT = stop_buffer
@@ -135,14 +144,20 @@ def replay_par(inst_id, c1h, c4h, modo_alvo="recente", min_rr=None,
 
             if res == "confirmado" and not contra:
                 sug = m.compute_suggestion(zone, janela_1h, atr_1h)
-                (extremo, stop_s, alvo_rec, rr_rec, entrada,
-                 alvo_prox, rr_prox) = sug
-                alvo = alvo_prox if modo_alvo == "proximo" else alvo_rec
-                rr = rr_prox if modo_alvo == "proximo" else rr_rec
+                stop_s, entrada = sug["stop_sugerido"], sug["preco_entrada"]
+                # modo_alvo escolhe explicitamente qual regra testar, INDEPENDENTE
+                # de qual e a autoritativa em producao (m.ALVO_REGRA_ATUAL) -- e
+                # assim que o --varrer alvo compara as duas sem precisar trocar
+                # a configuracao global.
+                if modo_alvo == "proximo":
+                    alvo, rr = sug["alvo_proximo"], sug["rr_proximo"]
+                else:
+                    alvo, rr = sug["alvo_recente"], sug["rr_recente"]
 
                 aceito = rr is not None and rr >= min_rr
                 r, motivo, mae, mfe, n = m.desfecho_mecanico(
-                    zone["direction"], entrada, stop_s, alvo, rr, agora, c1h
+                    zone["direction"], entrada, stop_s, alvo, rr, agora, c1h,
+                    breakeven_apos_r=breakeven_apos_r,
                 )
                 sinais.append({
                     "par": m.pair_label(inst_id), "setup": zone["setup"],
@@ -226,14 +241,15 @@ def main(argv):
                 todos += replay_par(p, c1, c4, stop_buffer=buf)
             resumir(todos, f"buffer = {buf:.2f} x ATR")
     elif varrer == "alvo":
-        print("Regra de alvo: pivo oposto mais RECENTE (atual) vs mais PROXIMO:\n")
+        print(f"Regra de alvo: mais RECENTE vs mais PROXIMO (autoritativa hoje: "
+              f"{m.ALVO_REGRA_ATUAL}):\n")
         for modo in ("recente", "proximo"):
             todos = []
             for p, (c1, c4) in dados.items():
                 todos += replay_par(p, c1, c4, modo_alvo=modo)
             resumir(todos, f"alvo = {modo}")
     elif varrer == "min_rr":
-        print(f"Varredura de MIN_RR (atual: {m.MIN_RR}):\n")
+        print(f"Varredura de MIN_RR (atual: {m.MIN_RR}, alvo: {m.ALVO_REGRA_ATUAL}):\n")
         base = []
         for p, (c1, c4) in dados.items():
             base += replay_par(p, c1, c4)
@@ -241,6 +257,16 @@ def main(argv):
             filtrados = [dict(s, aceito=(s["rr"] is not None and s["rr"] >= rr))
                          for s in base]
             resumir(filtrados, f"MIN_RR = {rr:.1f}")
+    elif varrer == "breakeven":
+        print(f"Stop movido pra entrada (breakeven) apos X de R a favor "
+              f"(alvo: {m.ALVO_REGRA_ATUAL}) -- SO TESTE, nada disso esta em "
+              f"producao:\n")
+        for be in (None, 0.5, 0.75, 1.0, 1.5, 2.0):
+            todos = []
+            for p, (c1, c4) in dados.items():
+                todos += replay_par(p, c1, c4, breakeven_apos_r=be)
+            rotulo = "sem breakeven (atual)" if be is None else f"breakeven em {be:.2f}R"
+            resumir(todos, rotulo)
     else:
         todos = []
         por_par = defaultdict(list)

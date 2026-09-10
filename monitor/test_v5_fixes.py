@@ -247,9 +247,34 @@ def test_v5_item5_compute_suggestion_devolve_os_dois_alvos():
     candles = candles_alta_com_rompimento()
     zone = m._nova_zona("A", "venda", 107.0, 1.0, candles[-1]["ts"])
     sug = m.compute_suggestion(zone, candles, 1.0)
-    assert len(sug) == 7, (
-        f"compute_suggestion deve devolver 7 campos (…, alvo_proximo, "
-        f"rr_proximo) -- devolveu {len(sug)}"
+    for campo in ("alvo_sugerido", "rr_sugerido", "regra_alvo", "alvo_recente",
+                  "rr_recente", "alvo_proximo", "rr_proximo"):
+        assert campo in sug, f"compute_suggestion nao devolveu o campo '{campo}'"
+
+
+def test_v6_alvo_autoritativo_e_proximo():
+    """
+    A regra autoritativa foi trocada de 'recente' para 'proximo' na v6, depois
+    do replay mostrar que exigir mais R:R piorava monotonicamente o resultado
+    -- sintoma de que 'recente' selecionava alvos distantes e velhos, nao
+    teses melhores. alvo_sugerido/rr_sugerido devem refletir isso agora.
+    """
+    seq = [100, 101, 102, 103, 104, 106, 104, 103, 102, 101,
+           100, 99, 98, 112, 97, 96, 95, 94, 93, 92, 91]
+    candles = []
+    for i, c in enumerate(seq):
+        o = seq[i - 1] if i > 0 else c
+        candles.append(make_candle(T0 + i * H, o, max(o, c) + 0.05,
+                                   min(o, c) - 0.05, c))
+    zone = m._nova_zona("A", "compra", 90.0, 1.0, candles[-1]["ts"])
+    sug = m.compute_suggestion(zone, candles, 1.0)
+    assert sug["regra_alvo"] == "proximo", (
+        f"regra_alvo deveria ser 'proximo' (autoritativa na v6), veio "
+        f"'{sug['regra_alvo']}'"
+    )
+    assert sug["alvo_sugerido"] == sug["alvo_proximo"] != sug["alvo_recente"], (
+        "alvo_sugerido deveria ser igual ao alvo_proximo (autoritativo) e "
+        "diferente do alvo_recente (secundario) neste cenario"
     )
 
 
@@ -313,6 +338,48 @@ def test_desfecho_mecanico_ignora_candles_anteriores_a_confirmacao():
                                             T0, [antes, depois])
     assert r is None, "o candle anterior a confirmacao nao pode resolver o trade"
     assert mae <= 0.21 and mfe <= 0.21, f"MAE/MFE contaminados: {mae}/{mfe}"
+
+
+def test_desfecho_mecanico_sem_breakeven_apos_r_e_identico_a_antes():
+    """breakeven_apos_r=None (o default, o que producao sempre usa) nao pode
+    mudar nenhum resultado -- essa opcao existe so pro replay testar a ideia."""
+    candles = [make_candle(T0 + H, 100, 101.5, 98.9, 99.0)]  # vai a favor, volta e estoura o stop
+    r1 = m.desfecho_mecanico("compra", 100.0, 99.0, 110.0, 10.0, T0, candles)
+    r2 = m.desfecho_mecanico("compra", 100.0, 99.0, 110.0, 10.0, T0, candles,
+                             breakeven_apos_r=None)
+    assert r1 == r2 == (-1.0, "stop_automatico", 1.1, 1.5, 1)
+
+
+def test_desfecho_mecanico_breakeven_zera_perda_depois_de_1r_a_favor():
+    """
+    Candle 1 leva o preco a +1R (favor); candle 2 volta e bate no stop
+    original. Com breakeven_apos_r=1.0, o stop efetivo no candle 2 ja e a
+    entrada -- resultado deve ser 0R (breakeven), nao -1R.
+    """
+    c1 = make_candle(T0 + H, 100, 101, 99.5, 100.8)       # chega a +1R (high=101)
+    c2 = make_candle(T0 + 2 * H, 100.8, 100.9, 98.0, 98.5)  # despenca, passa por 100 e por 99
+    r, motivo, mae, mfe, n = m.desfecho_mecanico(
+        "compra", 100.0, 99.0, 110.0, 10.0, T0, [c1, c2], breakeven_apos_r=1.0
+    )
+    assert (r, motivo) == (0.0, "breakeven_automatico"), (
+        f"esperava breakeven (0.0), veio ({r}, {motivo})"
+    )
+    assert n == 2
+
+
+def test_desfecho_mecanico_breakeven_nao_afeta_stop_no_mesmo_candle_que_ativa():
+    """
+    O candle que primeiro atinge +1R nao pode usar o stop novo NELE MESMO --
+    so a partir do candle seguinte. Aqui o candle unico vai a +1R e tambem
+    bate no stop original, tudo no mesmo candle: deve continuar valendo -1R.
+    """
+    c1 = make_candle(T0 + H, 100, 101, 98.5, 99.0)  # toca 101 (+1R) e 98.5 (stop -1R)
+    r, motivo, _, _, _ = m.desfecho_mecanico(
+        "compra", 100.0, 99.0, 110.0, 10.0, T0, [c1], breakeven_apos_r=1.0
+    )
+    assert (r, motivo) == (-1.0, "stop_automatico"), (
+        f"stop do candle de ativacao nao deveria virar breakeven -- veio ({r}, {motivo})"
+    )
 
 
 def _run_all():
