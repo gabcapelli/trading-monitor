@@ -47,6 +47,16 @@ Sistema pessoal de trading de futuros de criptomoedas (perpétuos USDT), centrad
 - Frameworks genéricos (Freqtrade, Jesse, Lumibot) foram revisados e descartados por não corresponderem à abordagem do Gabriel.
 - Repositório é público: `https://github.com/gabcapelli/trading-monitor`.
 
+## Auditoria v5 (10/09/2026) — o que mudou na arquitetura
+
+Relatório completo em `claude/auditoria-v5.md`. O que uma sessão nova precisa saber antes de mexer em parâmetro:
+
+- **Dois registros, propósitos diferentes.** `trades` é o diário humano (gate dos 30, editado em `claude/sinais.md`, coluna `resultado_r`). `sinais_mecanicos` é a tabela de **calibração**: toda confirmação mecânica detectada, inclusive as descartadas por R:R baixo, com desfecho medido por geometria de preço (`resultado_mecanico_r`, `mae_r`, `mfe_r`). As duas colunas de resultado são separadas de propósito — só `resultado_r` conta para os 30. Espelho legível: `claude/calibracao.md` (só leitura; `sinais.md` continua sendo o único arquivo editável).
+- **`monitor/replay.py`** roda a lógica de detecção inteira sobre histórico paginado da OKX e varre parâmetros (`--varrer stop_buffer|alvo|min_rr`). Use isso em vez de calibrar com a amostra do diário.
+- **Não existe edge demonstrável no dado atual.** Sobre 437 sinais em 33 dias: expectância -0.167R com `MIN_RR=2`, e o IC 95% por bootstrap inclui zero mesmo com n=416. Nenhum valor de `STOP_BUFFER_ATR_MULT`, nenhuma regra de alvo e nenhum `MIN_RR` torna a expectância positiva. Não proponha recalibrar parâmetro "para melhorar o win rate" — o dado não sustenta.
+- **Achado aberto, decisão do Gabriel:** exigir mais R:R *piora* a expectância monotonicamente (39.7% de acerto sem filtro → 11.7% com R:R ≥ 4). A causa provável é que a regra de alvo pega o pivô oposto mais *recente*, não o mais *próximo*, então exigir R:R alto equivale a exigir alvo distante. Os dois alvos já são gravados lado a lado (`alvo_sugerido`/`alvo_proximo`) para permitir decidir com dado; a regra autoritativa **não** foi trocada, para não quebrar a comparabilidade da amostra no meio do gate.
+- **Parâmetros desacoplados:** `ZONE_PROXIMITY_ATR_MULT` e `COOLDOWN_LEVEL_TOL_ATR_MULT` saíram de dentro de `ZONE_ATR_MULT` (que governava três comportamentos ao mesmo tempo), com os mesmos valores efetivos.
+
 ## Achado em investigação (não é regra ainda)
 
 Em 09/09/2026, um lote de confirmações mecânicas de Setup B (compra) disparou simultaneamente em ETH, SOL, XRP e SUI, coincidindo com queda correlacionada de todo o mercado. SUI e XRP bateram stop nas horas seguintes (ambos -1R). Hipótese a investigar: sinais de Setup B em múltiplos pares de altcoin ao mesmo tempo podem estar refletindo beta de mercado (correlação com BTC/ETH), não confirmações tecnicamente independentes por par. Nenhum critério atual do Setup B filtra por correlação entre pares — candidato a virar um novo dado contextual (no espírito de volume/funding), ainda não decidido se vira filtro de invalidação.
