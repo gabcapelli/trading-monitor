@@ -27,6 +27,90 @@ Dependencias: NENHUMA alem da biblioteca padrao do Python (urllib, json, etc.)
 -- roda em qualquer runner do GitHub Actions sem "pip install".
 
 --------------------------------------------------------------------------------
+CHANGELOG v4 (10/09/2026 -- fechamento de gaps encontrados numa sessao de
+analise retroativa dos primeiros ~30 sinais com o Claude Code):
+
+1. CONTA_PARA_VALIDACAO NUNCA ERA PREENCHIDO: a coluna existia no banco desde
+   a v1 (default 0), mas nenhum caminho do codigo -- nem insert_candidate_
+   trade, nem sync_edits_from_sinais_md -- jamais escrevia nela. Na pratica,
+   a contagem "oficial" dos 30 trades de validacao nunca existiu de verdade;
+   vinha sendo reconstruida de memoria em conversa. Corrigido: novo candidato
+   ja nasce com conta_para_validacao=1 (assume-se que conta, por padrao);
+   nova coluna editavel "Conta 30?" (sim/nao) em sinais.md, seguindo o mesmo
+   padrao de Status/Resultado (SINAIS_COL_CONTA30, lido em
+   sync_edits_from_sinais_md). Use "nao" pra excluir um trade que nao deveria
+   contar (ex.: duplicata de um lote correlacionado).
+
+2. GUARD DE TENDENCIA SO VALIA NO MAPEAMENTO DA ZONA, NUNCA NA CONFIRMACAO:
+   uma zona de Setup B pode levar ate ZONE_MAX_CANDLES_1H candles pra
+   confirmar. Se a tendencia 4h virasse nesse meio-tempo, o trade saia
+   registrado sem nunca ter sido checado contra a regra que motivou o fix da
+   v3 (item 1 abaixo). Corrigido: process_single_pair agora revalida trend
+   no momento em que check_zone_confirmation retorna "confirmado" -- se a
+   tendencia virou contra a direcao da zona, o resultado vira invalidacao
+   (status "invalidado_tendencia_virou_setup_X") em vez de confirmacao.
+
+3. MESMO NIVEL PODIA SER REMAPEADO NO CICLO SEGUINTE, SEM COOLDOWN: quando
+   uma zona invalidava ou expirava, nada impedia o mesmo swing 4h de virar
+   zona nova de novo no proximo ciclo -- achado real: LINK #25/#27 (mesmo
+   nivel de referencia, ~4h de diferenca, dois stops seguidos antes do nivel
+   finalmente resolver). Corrigido: toda vez que uma zona e limpa (invalidada,
+   expirada, virada por tendencia, ou descartada por R:R baixo), o par entra
+   em cooldown para aquele nivel+direcao por ZONE_COOLDOWN_CANDLES_1H candles
+   de 1h (level_blocked_by_cooldown, checado dentro de try_map_new_zone).
+
+4. RESULTADO DE TRADE 'ENTRADO' CONTINUAVA 100% MANUAL: o script ja busca as
+   candles de 1h de cada par a cada execucao, mas nada comparava isso contra
+   stop_sugerido/alvo_sugerido de um trade em andamento -- Resultado (R) so
+   era preenchido por voce editando sinais.md (fonte de erro: ambiguidade de
+   arredondamento de preco, ja vivida com LINK #25/#27). Corrigido: nova
+   funcao track_open_trade_outcomes() roda por par a cada ciclo, ANTES de
+   process_single_pair, e compara as candles de 1h fechadas desde a
+   confirmacao (novo campo criado_em_ts) contra stop_sugerido/alvo_sugerido
+   com precisao total -- se algum foi tocado, preenche resultado_r sozinho
+   (convencao conservadora se os dois forem tocados no mesmo candle: considera
+   o stop primeiro). De brinde, popula mae_r/mfe_r (excursao maxima contra/a
+   favor em R) a cada ciclo, mesmo antes do trade fechar -- essas colunas
+   existiam no banco desde a v1 e nunca tinham sido usadas. Como sempre,
+   edicao manual em sinais.md tem prioridade (sync_edits_from_sinais_md roda
+   antes) -- use isso se voce ajustou stop/alvo por julgamento no grafico, em
+   vez de operar exatamente na sugestao mecanica. So funciona para trades
+   criados a partir desta versao (precisam de criado_em_ts, que trades
+   antigos nao tem).
+
+5. NOTIFICACAO PUSH RESTRITA A SINAL DE VERDADE: antes, qualquer mudanca de
+   status (zona mapeada, invalidada, expirada) virava push -- feedback do
+   Gabriel foi que isso e ruido, ele so quer saber quando ha um candidato de
+   verdade. Zona mapeada/invalidada/expirada continuam sendo gravadas no log
+   e no status-simulacao.md (nada muda na auditoria), mas so eventos do tipo
+   "sinal" (CONFIRMADO de Setup A/B, ou o aviso de posicao aberta ha muito
+   tempo, item 6) chegam ao ntfy.
+
+6. AVISO DE CONFIRMACOES CORRELACIONADAS NO MESMO CICLO: se 2+ pares
+   confirmarem o mesmo setup+direcao no mesmo ciclo (o padrao do achado de
+   09/09/2026, ETH/SOL/XRP/SUI simultaneos), a notificacao agora destaca isso
+   explicitamente em vez de mandar os eventos separados com o mesmo tom de
+   confianca de sempre.
+
+7. AVISO DE POSICAO ABERTA HA MUITO TEMPO SEM RESULTADO: novo
+   LONG_OPEN_CANDLES_1H -- se um trade 'entrado' ficar aberto (sem
+   resultado_r, com criado_em_ts disponivel) alem desse limite, entra um
+   aviso na notificacao (uma vez por trade, via flag no state.json, resetado
+   quando o trade fecha).
+
+8. VISIBILIDADE AGREGADA DE DESCARTES POR R:R BAIXO: contador cumulativo em
+   state.json (nunca resetado), incrementado toda vez que um par cai em
+   "descartado_rr_baixo_setup_X", exibido em status-simulacao.md -- antes
+   essa informacao so existia espalhada no log linha a linha.
+
+NAO IMPLEMENTADO (decisao pendente, nao e so bug fix): reconsiderar a regra
+de classify_trend_4h (exige os 2 ultimos topos E os 2 ultimos fundos ambos
+crescentes/decrescentes) -- na pratica isso faz "lateral" ser ~60% dos casos
+(18/30 na amostra revisada), e o guard do item 2 so atua fora de "lateral".
+Mudar isso e uma decisao de metodologia, nao uma correcao -- fica para o
+Gabriel decidir com calma, nao foi alterado aqui.
+
+--------------------------------------------------------------------------------
 CHANGELOG v3 (08/09/2026 -- ajustes de fluxo, feedback do Gabriel):
 
 1. FILTRO DE REGIME NO SETUP B (try_map_new_zone): antes, o bloco de Setup B
@@ -281,17 +365,29 @@ LOG_MAX_LINES = 480
 # candidatos de ETH/XRP; formalizada aqui para o script calcular sozinho.
 STOP_BUFFER_ATR_MULT = 0.1
 
+# Cooldown apos uma zona falhar (invalidada, expirada, virada por mudanca de
+# tendencia, ou descartada por R:R baixo) -- evita remapear o MESMO nivel
+# imediatamente no ciclo seguinte (ver CHANGELOG v4, item 3). Ponto de
+# partida, como os outros parametros de zona acima -- recalibrar com dados
+# reais.
+ZONE_COOLDOWN_CANDLES_1H = 8
+
+# Se um trade 'entrado' ficar aberto (sem resultado_r) por mais que isso,
+# entra um aviso na notificacao (CHANGELOG v4, item 7). Ponto de partida.
+LONG_OPEN_CANDLES_1H = 48
+
 # Layout das colunas de claude/sinais.md -- usado TANTO para escrever quanto
 # para ler o arquivo (sync_edits_from_sinais_md). Nao mude a ordem aqui sem
 # atualizar os dois lugares -- ver aviso no CHANGELOG v3, item 5.
 SINAIS_COLUMNS = [
     "ID", "Par", "Setup", "Direcao", "Preco entrada", "Stop sugerido",
     "Alvo sugerido", "R:R sugerido", "Tend. 4h", "Status", "Resultado (R)",
-    "Criado em",
+    "Conta 30?", "Criado em",
 ]
 SINAIS_COL_ID = 0
 SINAIS_COL_STATUS = 9
 SINAIS_COL_RESULTADO = 10
+SINAIS_COL_CONTA30 = 11
 
 NTFY_TOPIC = os.environ.get("NTFY_TOPIC", "").strip()  # definido via GitHub secret
 
@@ -428,7 +524,13 @@ def classify_trend_4h(candles_4h):
 # ---------------------------------------------------------------------------
 
 def default_pair_state():
-    return {"status": "sem_zona", "zone": None, "last_1h_ts": None}
+    return {
+        "status": "sem_zona",
+        "zone": None,
+        "last_1h_ts": None,
+        "cooldown": None,  # ver CHANGELOG v4, item 3
+        "avisado_aberto_longo": False,  # ver CHANGELOG v4, item 7
+    }
 
 
 def load_state():
@@ -439,7 +541,11 @@ def load_state():
     -- ver CHANGELOG v2, item 3.
     """
     if not os.path.exists(STATE_PATH):
-        return {"posicoes_abertas": [], "pares": {p: default_pair_state() for p in PAIRS}}
+        return {
+            "posicoes_abertas": [],
+            "pares": {p: default_pair_state() for p in PAIRS},
+            "contadores": {"descartes_rr_baixo_total": 0},
+        }
 
     with open(STATE_PATH, "r", encoding="utf-8") as f:
         raw = json.load(f)
@@ -461,7 +567,13 @@ def load_state():
     # garante entrada para todo par da lista atual (cobre par novo adicionado depois)
     for p in PAIRS:
         raw["pares"].setdefault(p, default_pair_state())
+        # migracao aditiva v4 -- pares ja existentes no state.json antigo nao
+        # tem essas chaves ainda (ver CHANGELOG v4, itens 3 e 7).
+        raw["pares"][p].setdefault("cooldown", None)
+        raw["pares"][p].setdefault("avisado_aberto_longo", False)
     raw.setdefault("posicoes_abertas", [])
+    raw.setdefault("contadores", {})
+    raw["contadores"].setdefault("descartes_rr_baixo_total", 0)
     return raw
 
 
@@ -529,6 +641,7 @@ def ensure_trade_db():
         ("alvo_sugerido", "REAL"),
         ("rr_sugerido", "REAL"),
         ("preco_entrada", "REAL"),
+        ("criado_em_ts", "INTEGER"),  # ts (ms) do candle 1h de confirmacao -- CHANGELOG v4, item 4
     ]:
         try:
             conn.execute(f"ALTER TABLE trades ADD COLUMN {col} {coltype}")
@@ -539,7 +652,8 @@ def ensure_trade_db():
 
 
 def insert_candidate_trade(inst_id, zone, trend, extremo=None, stop_sug=None,
-                            alvo_sug=None, rr_sug=None, preco_entrada=None):
+                            alvo_sug=None, rr_sug=None, preco_entrada=None,
+                            confirm_ts=None):
     """
     Insere uma linha 'candidato' quando uma zona e CONFIRMADA (rejeicao
     valida no candle 1h) E o R:R sugerido atende ao minimo do plano (ver
@@ -549,6 +663,14 @@ def insert_candidate_trade(inst_id, zone, trend, extremo=None, stop_sug=None,
     decidir -- extremo_varredura/stop_sugerido/alvo_sugerido/rr_sugerido/
     preco_entrada sao a SUGESTAO mecanica automatica, guardada em colunas
     separadas para nunca ser confundida com a decisao real.
+
+    conta_para_validacao ja nasce em 1 (conta por padrao) -- edite a coluna
+    "Conta 30?" em sinais.md pra "nao" se este trade nao devesse contar (ex.:
+    duplicata de lote correlacionado). Ver CHANGELOG v4, item 1.
+
+    confirm_ts (ts em ms do candle 1h que confirmou a zona) e gravado em
+    criado_em_ts -- usado por track_open_trade_outcomes() pra saber a partir
+    de qual candle acompanhar o desfecho (CHANGELOG v4, item 4).
     """
     ensure_trade_db()
     now_brt = datetime.now(BRT).strftime("%Y-%m-%d %H:%M")
@@ -557,10 +679,10 @@ def insert_candidate_trade(inst_id, zone, trend, extremo=None, stop_sug=None,
         """
         INSERT INTO trades
             (status, data, par, setup, direcao, nivel_referencia, zona_entrada,
-             confirmacao, tendencia_4h, criado_em,
+             confirmacao, tendencia_4h, criado_em, conta_para_validacao,
              extremo_varredura, stop_sugerido, alvo_sugerido, rr_sugerido,
-             preco_entrada)
-        VALUES ('candidato', ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+             preco_entrada, criado_em_ts)
+        VALUES ('candidato', ?, ?, ?, ?, ?, ?, ?, ?, ?, 1, ?, ?, ?, ?, ?, ?)
         """,
         (
             now_brt,
@@ -578,6 +700,7 @@ def insert_candidate_trade(inst_id, zone, trend, extremo=None, stop_sug=None,
             alvo_sug,
             rr_sug,
             preco_entrada,
+            confirm_ts,
         ),
     )
     conn.commit()
@@ -641,13 +764,141 @@ def pair_has_open_position(par_label_value):
         conn.close()
 
 
+def track_open_trade_outcomes(par_lbl, candles_1h):
+    """
+    Para trades 'entrado' deste par ainda sem resultado_r, compara as candles
+    de 1h fechadas DEPOIS da confirmacao (criado_em_ts) contra stop_sugerido/
+    alvo_sugerido -- pura geometria de preco (OHLC), sem nenhum julgamento
+    qualitativo (mesma limitacao deliberada do topo do arquivo). Se um dos
+    dois foi tocado, preenche resultado_r sozinho; se os dois foram tocados
+    no mesmo candle, assume o stop primeiro (convencao conservadora, mesma
+    logica de backtest). De brinde, atualiza mae_r/mfe_r (excursao maxima
+    contra/a favor, em R) a cada ciclo -- CHANGELOG v4, item 4.
+
+    So considera trades com criado_em_ts preenchido -- trades de antes desta
+    versao nao tem esse campo e continuam exigindo Resultado (R) manual em
+    sinais.md. Edicao manual sempre tem prioridade: sync_edits_from_sinais_md
+    roda antes desta funcao a cada execucao, entao um valor ja preenchido a
+    mao nunca e sobrescrito (a query abaixo so pega resultado_r IS NULL).
+    """
+    if not os.path.exists(TRADE_DB_PATH):
+        return
+    conn = sqlite3.connect(TRADE_DB_PATH)
+    try:
+        cur = conn.execute(
+            "SELECT id, direcao, preco_entrada, stop_sugerido, alvo_sugerido, "
+            "rr_sugerido, criado_em_ts FROM trades "
+            "WHERE status='entrado' AND resultado_r IS NULL AND par=?",
+            (par_lbl,),
+        )
+        rows = cur.fetchall()
+        if not rows:
+            return
+
+        closed = [c for c in candles_1h if c["confirm"] == "1"]
+
+        for (tid, direcao, preco_entrada, stop_sug, alvo_sug, rr_sug, criado_ts) in rows:
+            if criado_ts is None or stop_sug is None or preco_entrada is None:
+                continue  # trade antigo (pre-v4) ou sem sugestao mecanica -- so manual
+            posteriores = [c for c in closed if c["ts"] > criado_ts]
+            if not posteriores:
+                continue
+
+            risco = abs(preco_entrada - stop_sug)
+            mae = 0.0
+            mfe = 0.0
+            resultado = None
+
+            for c in posteriores:
+                if direcao == "compra":
+                    excursao_contra = preco_entrada - c["low"]
+                    excursao_favor = c["high"] - preco_entrada
+                    stop_tocado = c["low"] <= stop_sug
+                    alvo_tocado = alvo_sug is not None and c["high"] >= alvo_sug
+                else:
+                    excursao_contra = c["high"] - preco_entrada
+                    excursao_favor = preco_entrada - c["low"]
+                    stop_tocado = c["high"] >= stop_sug
+                    alvo_tocado = alvo_sug is not None and c["low"] <= alvo_sug
+
+                if risco:
+                    mae = max(mae, excursao_contra / risco)
+                    mfe = max(mfe, excursao_favor / risco)
+
+                if stop_tocado:
+                    # se os dois foram tocados no mesmo candle, nao ha dado
+                    # intra-candle pra saber a ordem real -- convencao
+                    # conservadora, considera o stop primeiro.
+                    resultado = -1.0
+                    break
+                if alvo_tocado:
+                    resultado = rr_sug
+                    break
+
+            conn.execute(
+                "UPDATE trades SET mae_r=?, mfe_r=? WHERE id=?",
+                (round(mae, 3), round(mfe, 3), tid),
+            )
+            if resultado is not None:
+                conn.execute(
+                    "UPDATE trades SET resultado_r=?, motivo_resultado=? WHERE id=?",
+                    (
+                        resultado,
+                        "stop_automatico" if resultado == -1.0 else "alvo_automatico",
+                        tid,
+                    ),
+                )
+        conn.commit()
+    finally:
+        conn.close()
+
+
+def check_long_open_alert(par_lbl, pair_state, now_ts):
+    """
+    Se este par tem um trade 'entrado' sem resultado, aberto ha mais de
+    LONG_OPEN_CANDLES_1H candles de 1h (a partir de criado_em_ts), devolve um
+    evento de aviso -- uma unica vez por trade (pair_state["avisado_aberto_
+    longo"] evita repetir o aviso todo ciclo; reseta sozinho quando o trade
+    fecha ou nenhum trade antigo aberto e mais encontrado). Ver CHANGELOG v4,
+    item 7. So considera trades com criado_em_ts preenchido (pos-v4).
+    """
+    if not os.path.exists(TRADE_DB_PATH) or now_ts is None:
+        return None
+    conn = sqlite3.connect(TRADE_DB_PATH)
+    try:
+        cur = conn.execute(
+            "SELECT id, criado_em FROM trades WHERE status='entrado' "
+            "AND resultado_r IS NULL AND par=? AND criado_em_ts IS NOT NULL "
+            "AND ? - criado_em_ts >= ?",
+            (par_lbl, now_ts, LONG_OPEN_CANDLES_1H * 3600_000),
+        )
+        antigos = cur.fetchall()
+    finally:
+        conn.close()
+
+    if not antigos:
+        pair_state["avisado_aberto_longo"] = False
+        return None
+    if pair_state.get("avisado_aberto_longo"):
+        return None
+
+    pair_state["avisado_aberto_longo"] = True
+    ids_txt = ", ".join(f"#{tid} ({criado})" for tid, criado in antigos)
+    return {
+        "tipo": "sinal",
+        "titulo": f"{par_lbl} -- posicao aberta ha mais de {LONG_OPEN_CANDLES_1H} candles sem resultado",
+        "mensagem": f"Trade(s) {ids_txt} -- confira se ainda faz sentido continuar aberto.",
+    }
+
+
 def sync_edits_from_sinais_md():
     """
     Le claude/sinais.md (se existir) e aplica ao banco qualquer mudanca
-    manual nas colunas Status e Resultado (R) -- essas sao as unicas duas
-    colunas que voce deve editar no arquivo. Roda SEMPRE no inicio de main(),
-    ANTES de qualquer insercao nova ou reescrita do arquivo, para suas
-    edicoes nunca serem perdidas. Ver CHANGELOG v3, item 5.
+    manual nas colunas Status, Resultado (R) e Conta 30? -- essas sao as
+    unicas tres colunas que voce deve editar no arquivo (a terceira desde
+    CHANGELOG v4, item 1). Roda SEMPRE no inicio de main(), ANTES de
+    qualquer insercao nova ou reescrita do arquivo, para suas edicoes nunca
+    serem perdidas. Ver CHANGELOG v3, item 5.
 
     Parsing deliberadamente simples e defensivo: ignora silenciosamente
     qualquer linha que nao comece com um ID numerico (cabecalho, separador
@@ -666,7 +917,8 @@ def sync_edits_from_sinais_md():
         if not linha.strip().startswith("|"):
             continue
         cols = [c.strip() for c in linha.strip().strip("|").split("|")]
-        if len(cols) <= max(SINAIS_COL_ID, SINAIS_COL_STATUS, SINAIS_COL_RESULTADO):
+        if len(cols) <= max(SINAIS_COL_ID, SINAIS_COL_STATUS, SINAIS_COL_RESULTADO,
+                             SINAIS_COL_CONTA30):
             continue
         id_txt = cols[SINAIS_COL_ID]
         if not id_txt.isdigit():
@@ -675,6 +927,7 @@ def sync_edits_from_sinais_md():
         id_ = int(id_txt)
         status_txt = cols[SINAIS_COL_STATUS]
         resultado_txt = cols[SINAIS_COL_RESULTADO]
+        conta30_txt = cols[SINAIS_COL_CONTA30].strip().lower()
 
         if status_txt not in ("candidato", "entrado", "descartado"):
             print(f"[aviso] sinais.md linha ID {id_}: status '{status_txt}' invalido "
@@ -691,12 +944,26 @@ def sync_edits_from_sinais_md():
                       f"nao e um numero valido -- ignorando este campo (status ainda e aplicado).")
                 resultado_val = "__skip__"
 
+        if conta30_txt in ("sim", "1", "s"):
+            conta30_val = 1
+        elif conta30_txt in ("nao", "n\u00e3o", "0", "n"):
+            conta30_val = 0
+        else:
+            print(f"[aviso] sinais.md linha ID {id_}: 'Conta 30?' = '{conta30_txt}' "
+                  f"invalido (esperado sim/nao) -- mantendo valor atual no banco.")
+            conta30_val = "__skip__"
+
         if resultado_val == "__skip__":
             conn.execute("UPDATE trades SET status=? WHERE id=?", (status_txt, id_))
         else:
             conn.execute(
                 "UPDATE trades SET status=?, resultado_r=? WHERE id=?",
                 (status_txt, resultado_val, id_),
+            )
+        if conta30_val != "__skip__":
+            conn.execute(
+                "UPDATE trades SET conta_para_validacao=? WHERE id=?",
+                (conta30_val, id_),
             )
         atualizados += 1
 
@@ -715,12 +982,30 @@ def last_closed(candles):
     return closed[-1] if closed else None
 
 
-def try_map_new_zone(trend, candles_1h, candles_4h, atr_1h):
+def level_blocked_by_cooldown(cooldown, direction, level, atr_1h, now_ts):
+    """
+    True se este nivel+direcao acabou de falhar recentemente neste par e
+    ainda esta em cooldown (CHANGELOG v4, item 3) -- mesma tolerancia de
+    distancia usada pra mapear a zona (ZONE_ATR_MULT * ATR).
+    """
+    if not cooldown or atr_1h is None:
+        return False
+    if cooldown.get("direction") != direction:
+        return False
+    if now_ts >= cooldown.get("until_ts", 0):
+        return False
+    return abs(level - cooldown.get("level", 0)) <= ZONE_ATR_MULT * atr_1h
+
+
+def try_map_new_zone(trend, candles_1h, candles_4h, atr_1h, cooldown=None):
     """
     Tenta mapear uma nova zona candidata (Setup A se ha tendencia 4h definida,
     Setup B se preco esta perto de um swing 4h "maduro" E alinhado com a
     tendencia -- ver CHANGELOG v3, item 1). Retorna dict da zona ou None se
     nada relevante for encontrado agora.
+
+    `cooldown` (opcional): nivel+direcao que acabaram de falhar neste par e
+    ainda nao podem ser remapeados -- ver CHANGELOG v4, item 3.
     """
     highs_1h, lows_1h, closed_1h = find_confirmed_pivots(candles_1h)
     last = closed_1h[-1]
@@ -779,6 +1064,8 @@ def try_map_new_zone(trend, candles_1h, candles_4h, atr_1h):
         for idx, price in reversed(highs_4h):
             if len(closed_4h) - 1 - idx < STALE_4H_CANDLES:
                 continue  # ainda recente demais -- tenta o proximo swing mais antigo
+            if level_blocked_by_cooldown(cooldown, "venda", price, atr_1h, last["ts"]):
+                continue  # nivel falhou recentemente -- CHANGELOG v4, item 3
             if atr_1h and abs(last["close"] - price) <= 3 * ZONE_ATR_MULT * atr_1h:
                 return {
                     "setup": "B",
@@ -796,6 +1083,8 @@ def try_map_new_zone(trend, candles_1h, candles_4h, atr_1h):
         for idx, price in reversed(lows_4h):
             if len(closed_4h) - 1 - idx < STALE_4H_CANDLES:
                 continue
+            if level_blocked_by_cooldown(cooldown, "compra", price, atr_1h, last["ts"]):
+                continue  # nivel falhou recentemente -- CHANGELOG v4, item 3
             if atr_1h and abs(last["close"] - price) <= 3 * ZONE_ATR_MULT * atr_1h:
                 return {
                     "setup": "B",
@@ -912,6 +1201,18 @@ def process_single_pair(inst_id, pair_state, candles_1h, candles_4h, trend, atr_
     new_status = prev_status
     evento = None
     par_lbl = pair_label(inst_id)
+    last_candle = last_closed(candles_1h)
+    last_ts = last_candle["ts"] if last_candle else None
+
+    def _set_cooldown(zona):
+        # CHANGELOG v4, item 3: nivel que acabou de falhar nao pode ser
+        # remapeado imediatamente no proximo ciclo.
+        if last_ts is not None:
+            pair_state["cooldown"] = {
+                "level": zona["level"],
+                "direction": zona["direction"],
+                "until_ts": last_ts + ZONE_COOLDOWN_CANDLES_1H * 3600_000,
+            }
 
     if zone is None:
         # DEDUPE POR PAR (v3, CHANGELOG item 3): nao mapear zona nova para um
@@ -920,11 +1221,14 @@ def process_single_pair(inst_id, pair_state, candles_1h, candles_4h, trend, atr_
         if pair_has_open_position(par_lbl):
             new_status = "sem_zona_posicao_aberta"
         else:
-            candidate = try_map_new_zone(trend, candles_1h, candles_4h, atr_1h)
+            candidate = try_map_new_zone(
+                trend, candles_1h, candles_4h, atr_1h, pair_state.get("cooldown")
+            )
             if candidate:
                 pair_state["zone"] = candidate
                 new_status = f"zona_mapeada_setup_{candidate['setup']}"
                 evento = {
+                    "tipo": "info",
                     "titulo": f"{par_lbl} -- Nova zona candidata -- Setup {candidate['setup']}",
                     "mensagem": (
                         f"Direcao: {candidate['direction']}\n"
@@ -937,7 +1241,34 @@ def process_single_pair(inst_id, pair_state, candles_1h, candles_4h, trend, atr_
                 new_status = "sem_zona"
     else:
         result = check_zone_confirmation(zone, candles_1h)
-        if result == "confirmado":
+
+        # REVALIDACAO DE TENDENCIA NA CONFIRMACAO (CHANGELOG v4, item 2): o
+        # guard de tendencia do Setup B (v3, item 1) so era checado no
+        # mapeamento da zona. Se a tendencia 4h virou contra a direcao da
+        # zona enquanto ela esperava confirmar, trata como invalidacao em vez
+        # de aceitar o trade.
+        contra_tendencia_agora = (
+            zone["setup"] == "B"
+            and (
+                (zone["direction"] == "venda" and trend == "alta")
+                or (zone["direction"] == "compra" and trend == "baixa")
+            )
+        )
+
+        if result == "confirmado" and contra_tendencia_agora:
+            new_status = f"invalidado_tendencia_virou_setup_{zone['setup']}"
+            evento = {
+                "tipo": "info",
+                "titulo": f"{par_lbl} -- Setup {zone['setup']} invalidado (tendencia virou)",
+                "mensagem": (
+                    f"Zona confirmaria, mas a tendencia 4h agora e '{trend}', contra a "
+                    f"direcao da zona ({zone['direction']}) -- descartado sem entrar no "
+                    f"diario. Ver CHANGELOG v4, item 2."
+                ),
+            }
+            _set_cooldown(zone)
+            pair_state["zone"] = None
+        elif result == "confirmado":
             extremo, stop_sug, alvo_sug, rr_sug, preco_entrada = compute_suggestion(
                 zone, candles_1h, atr_1h
             )
@@ -948,15 +1279,21 @@ def process_single_pair(inst_id, pair_state, candles_1h, candles_4h, trend, atr_
             # sem ruido -- fica visivel no log/status, sem push.
             if rr_sug is None or rr_sug < MIN_RR:
                 new_status = f"descartado_rr_baixo_setup_{zone['setup']}"
+                _set_cooldown(zone)
                 pair_state["zone"] = None
             else:
                 new_status = f"CONFIRMADO_setup_{zone['setup']}"
                 insert_candidate_trade(
-                    inst_id, zone, trend, extremo, stop_sug, alvo_sug, rr_sug, preco_entrada
+                    inst_id, zone, trend, extremo, stop_sug, alvo_sug, rr_sug,
+                    preco_entrada, confirm_ts=last_ts,
                 )
                 abertas = count_open_positions()
 
                 evento = {
+                    "tipo": "sinal",
+                    "setup": zone["setup"],
+                    "direcao": zone["direction"],
+                    "par": par_lbl,
                     "titulo": f"{par_lbl} -- CONFIRMACAO -- Setup {zone['setup']} ({zone['direction']})",
                     "mensagem": (
                         f"Preco de entrada: {fmt_price(preco_entrada)}\n"
@@ -973,12 +1310,14 @@ def process_single_pair(inst_id, pair_state, candles_1h, candles_4h, trend, atr_
         elif result == "invalidado":
             new_status = f"invalidado_setup_{zone['setup']}"
             evento = {
+                "tipo": "info",
                 "titulo": f"{par_lbl} -- Setup {zone['setup']} invalidado",
                 "mensagem": (
                     f"Fechamento contra a zona "
                     f"{fmt_price(zone['zone_low'])}-{fmt_price(zone['zone_high'])}."
                 ),
             }
+            _set_cooldown(zone)
             pair_state["zone"] = None
         else:
             if result == "tocou":
@@ -987,9 +1326,11 @@ def process_single_pair(inst_id, pair_state, candles_1h, candles_4h, trend, atr_
             if zone["touches"] >= ZONE_MAX_TOUCHES or zone["candles_since_creation"] >= ZONE_MAX_CANDLES_1H:
                 new_status = f"zona_expirada_setup_{zone['setup']}"
                 evento = {
+                    "tipo": "info",
                     "titulo": f"{par_lbl} -- Zona do Setup {zone['setup']} expirou",
                     "mensagem": "Expirou por limite de toques ou de candles sem confirmacao -- releitura de contexto necessaria.",
                 }
+                _set_cooldown(zone)
                 pair_state["zone"] = None
             else:
                 new_status = prev_status  # sem mudanca -> sem notificacao
@@ -1163,7 +1504,8 @@ def write_sinais():
         try:
             cur = conn.execute(
                 "SELECT id, par, setup, direcao, preco_entrada, stop_sugerido, "
-                "alvo_sugerido, rr_sugerido, tendencia_4h, status, resultado_r, criado_em "
+                "alvo_sugerido, rr_sugerido, tendencia_4h, status, resultado_r, "
+                "conta_para_validacao, criado_em "
                 "FROM trades ORDER BY id DESC"
             )
             rows = cur.fetchall()
@@ -1179,22 +1521,29 @@ def write_sinais():
         header += "|" + "---|" * len(SINAIS_COLUMNS) + "\n"
         linhas = []
         for (id_, par, setup, direcao, preco_entrada, stop_s, alvo_s, rr_s,
-             tend, status, resultado, criado) in rows:
+             tend, status, resultado, conta30, criado) in rows:
             resultado_txt = f"{resultado:.2f}" if resultado is not None else "\u2014"
+            conta30_txt = "sim" if conta30 else "nao"
             linhas.append(
                 f"| {id_} | {par} | {setup} | {direcao} | {fmt_price(preco_entrada)} | "
                 f"{fmt_price(stop_s)} | {fmt_price(alvo_s)} | {fmt_ratio(rr_s)} | {tend} | "
-                f"{status} | {resultado_txt} | {criado} |"
+                f"{status} | {resultado_txt} | {conta30_txt} | {criado} |"
             )
         body = header + "\n".join(linhas) + "\n"
 
     content = (
         f"# Sinais -- atualizado {now_brt} BRT\n\n"
         f"> Gerado a partir de `claude/trade_journal.db` a cada execucao. "
-        f"**Edite as colunas Status (candidato/entrado/descartado) e Resultado (R) "
-        f"direto neste arquivo** -- a proxima execucao le suas mudancas e aplica ao "
-        f"banco antes de reescrever o arquivo, entao suas edicoes nunca se perdem. "
-        f"NAO edite a ordem ou os nomes das colunas, so os valores dessas duas. "
+        f"**Edite as colunas Status (candidato/entrado/descartado), Resultado (R) e "
+        f"Conta 30? (sim/nao) direto neste arquivo** -- a proxima execucao le suas "
+        f"mudancas e aplica ao banco antes de reescrever o arquivo, entao suas "
+        f"edicoes nunca se perdem. NAO edite a ordem ou os nomes das colunas, so os "
+        f"valores dessas tres. Resultado (R) de um trade 'entrado' pode ser "
+        f"preenchido automaticamente pelo script quando o stop ou o alvo sugerido "
+        f"forem tocados numa candle de 1h -- edite manualmente so se voce operou com "
+        f"stop/alvo diferentes dos sugeridos (sua edicao sempre tem prioridade). "
+        f"Conta 30? nasce 'sim' -- mude para 'nao' se este trade nao deve contar para "
+        f"o gate de validacao (ex.: duplicata de um lote correlacionado). "
         f"Preco de entrada / Stop / Alvo / R:R aqui sao SUGESTOES MECANICAS SIMPLES "
         f"(preco de entrada = fechamento do candle 1h de confirmacao; stop = extremo "
         f"da varredura + buffer de ATR; alvo = pivo 1h oposto mais recente) -- "
@@ -1217,6 +1566,7 @@ def write_status(state, per_pair_data):
     now_brt = datetime.now(BRT).strftime("%Y-%m-%d %H:%M")
     abertas = count_open_positions()
     detalhe_abertas = open_positions_detail()
+    descartes_rr = state.get("contadores", {}).get("descartes_rr_baixo_total", 0)
 
     linhas = []
     for inst_id in PAIRS:
@@ -1251,6 +1601,8 @@ def write_status(state, per_pair_data):
         f"criterio (ou cole este arquivo + o log numa conversa do Claude).\n\n"
         f"**Posicoes abertas (diario, status='entrado' sem resultado ainda):** "
         f"{abertas}/{MAX_POSICOES_SIMULTANEAS}{detalhe_txt}\n\n"
+        f"**Confirmacoes descartadas por R:R < {MIN_RR:.0f} (total acumulado, "
+        f"CHANGELOG v4 item 8):** {descartes_rr}\n\n"
         f"| Par | Tendencia 4h | Close 1h | Funding | Zona / setup candidato | Status |\n"
         f"|---|---|---|---|---|---|\n"
         + "\n".join(linhas) + "\n"
@@ -1298,6 +1650,13 @@ def main():
 
         trend, _ = classify_trend_4h(candles_4h)
         atr_1h = atr(candles_1h)
+        par_lbl = pair_label(inst_id)
+
+        # CHANGELOG v4, item 4: acompanha trades 'entrado' deste par contra as
+        # candles novas ANTES da logica de zona -- se resolver aqui, o par ja
+        # fica livre pra mapear zona nova no mesmo ciclo (pair_has_open_
+        # position consulta o banco, ja teria enxergado o resultado novo).
+        track_open_trade_outcomes(par_lbl, candles_1h)
 
         pair_state, evento = process_single_pair(
             inst_id, state["pares"][inst_id], candles_1h, candles_4h, trend, atr_1h
@@ -1305,6 +1664,16 @@ def main():
         state["pares"][inst_id] = pair_state
         if evento:
             eventos.append(evento)
+        if pair_state["status"].startswith("descartado_rr_baixo"):
+            # CHANGELOG v4, item 8: contador cumulativo, nunca resetado.
+            state["contadores"]["descartes_rr_baixo_total"] += 1
+
+        ultima_1h = last_closed(candles_1h)
+        aviso_aberto = check_long_open_alert(
+            par_lbl, pair_state, ultima_1h["ts"] if ultima_1h else None
+        )
+        if aviso_aberto:
+            eventos.append(aviso_aberto)
 
         append_log_line(inst_id, candles_1h, candles_4h, funding, pair_state["status"], trend, atr_1h)
         per_pair_data[inst_id] = {
@@ -1316,14 +1685,42 @@ def main():
         }
         print(f"[{inst_id}] status = {pair_state['status']}" + (" (MUDOU)" if evento else ""))
 
+    # AVISO DE CONFIRMACOES CORRELACIONADAS (CHANGELOG v4, item 6): se 2+
+    # pares confirmaram o mesmo setup+direcao neste ciclo, isso vira um
+    # evento extra destacando a correlacao -- em vez de mandar os eventos
+    # individuais com o mesmo tom de confianca de sempre (achado de
+    # 09/09/2026: ETH/SOL/XRP/SUI simultaneos, todos -1R).
+    grupos_confirmados = {}
+    for ev in eventos:
+        if ev.get("tipo") == "sinal" and "setup" in ev:
+            grupos_confirmados.setdefault((ev["setup"], ev["direcao"]), []).append(ev["par"])
+    for (setup, direcao), pares in grupos_confirmados.items():
+        if len(pares) >= 2:
+            eventos.insert(0, {
+                "tipo": "sinal",
+                "titulo": f"⚠️ {len(pares)} confirmacoes simultaneas -- Setup {setup} ({direcao})",
+                "mensagem": (
+                    f"Pares: {', '.join(pares)}. Mesma janela de execucao -- ver achado de "
+                    f"09/09/2026 (CLAUDE.md): sinais correlacionados podem refletir beta de "
+                    f"mercado, nao confirmacoes tecnicamente independentes por par."
+                ),
+            })
+
     archive_log_if_needed()
     save_state(state)
     write_status(state, per_pair_data)
     write_sinais()
-    send_batched_notifications(eventos)
+
+    # NOTIFICACAO PUSH SO PRA SINAL DE VERDADE (CHANGELOG v4, item 5):
+    # zona_mapeada/invalidado/expirado continuam gravados no log e no
+    # status-simulacao.md (eventos, acima, e usado so pra decidir o push --
+    # nada muda na auditoria em arquivo).
+    eventos_push = [ev for ev in eventos if ev.get("tipo") == "sinal"]
+    send_batched_notifications(eventos_push)
 
     if eventos:
-        print(f"[resumo] {len(eventos)} mudanca(s) de status neste ciclo -- notificacao enviada.")
+        print(f"[resumo] {len(eventos)} mudanca(s) de status neste ciclo "
+              f"({len(eventos_push)} notificacao(oes) push enviada(s)).")
     else:
         print("[resumo] nenhuma mudanca de status neste ciclo.")
 
