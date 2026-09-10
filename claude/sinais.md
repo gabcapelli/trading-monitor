@@ -1,9 +1,10 @@
-# Sinais -- atualizado 2026-09-10 14:05 BRT
+# Sinais -- atualizado 2026-09-10 15:05 BRT
 
 > Gerado a partir de `claude/trade_journal.db` a cada execucao. **Edite as colunas Status (candidato/entrado/descartado) e Resultado (R) direto neste arquivo** -- a proxima execucao le suas mudancas e aplica ao banco antes de reescrever o arquivo, entao suas edicoes nunca se perdem. NAO edite a ordem ou os nomes das colunas, so os valores dessas duas. Preco de entrada / Stop / Alvo / R:R aqui sao SUGESTOES MECANICAS SIMPLES (preco de entrada = fechamento do candle 1h de confirmacao; stop = extremo da varredura + buffer de ATR; alvo = pivo 1h oposto mais recente) -- validar no grafico antes de usar, nao substituem o checklist da secao 4 do plano. So aparecem aqui sinais que ja passaram no filtro de R:R minimo (2) do plano.
 
 | ID | Par | Setup | Direcao | Preco entrada | Stop sugerido | Alvo sugerido | R:R sugerido | Tend. 4h | Status | Resultado (R) | Criado em |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 30 | XRP/USDT | B | compra | 1.3597 | 1.3503 | 1.4388 | 8.40 | lateral | candidato | — | 2026-09-10 15:05 |
 | 29 | ETH/USDT | B | compra | 2442.4 | 2423.6 | 2483.7 | 2.20 | lateral | candidato | — | 2026-09-10 12:05 |
 | 28 | XRP/USDT | B | compra | 1.3635 | 1.3467 | 1.4388 | 4.48 | lateral | candidato | — | 2026-09-10 11:06 |
 | 27 | LINK/USDT | B | venda | 11.78 | 11.87 | 11.58 | 2.11 | lateral | candidato | — | 2026-09-10 05:06 |
