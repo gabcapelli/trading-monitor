@@ -575,15 +575,19 @@ LONG_OPEN_CANDLES_1H = 48
 # Layout das colunas de claude/sinais.md -- usado TANTO para escrever quanto
 # para ler o arquivo (sync_edits_from_sinais_md). Nao mude a ordem aqui sem
 # atualizar os dois lugares -- ver aviso no CHANGELOG v3, item 5.
+# 11/09/2026: "Criado em" movida pra logo apos "ID" -- era a ultima de 13
+# colunas e o GitHub (visualizacao web/celular) corta ela da area visivel
+# sem indicar rolagem horizontal, tornando a data do sinal invisivel na
+# pratica (reportado pelo Gabriel).
 SINAIS_COLUMNS = [
-    "ID", "Par", "Setup", "Direcao", "Preco entrada", "Stop sugerido",
-    "Alvo sugerido", "R:R sugerido", "Tend. 4h", "Status", "Resultado (R)",
-    "Conta 30?", "Criado em",
+    "ID", "Criado em", "Par", "Setup", "Direcao", "Preco entrada",
+    "Stop sugerido", "Alvo sugerido", "R:R sugerido", "Tend. 4h", "Status",
+    "Resultado (R)", "Conta 30?",
 ]
 SINAIS_COL_ID = 0
-SINAIS_COL_STATUS = 9
-SINAIS_COL_RESULTADO = 10
-SINAIS_COL_CONTA30 = 11
+SINAIS_COL_STATUS = 10
+SINAIS_COL_RESULTADO = 11
+SINAIS_COL_CONTA30 = 12
 
 NTFY_TOPIC = os.environ.get("NTFY_TOPIC", "").strip()  # definido via GitHub secret
 
@@ -2162,9 +2166,9 @@ def write_sinais():
             resultado_txt = f"{resultado:.2f}" if resultado is not None else "\u2014"
             conta30_txt = "sim" if conta30 else "nao"
             linhas.append(
-                f"| {id_} | {par} | {setup} | {direcao} | {fmt_price(preco_entrada)} | "
-                f"{fmt_price(stop_s)} | {fmt_price(alvo_s)} | {fmt_ratio(rr_s)} | {tend} | "
-                f"{status} | {resultado_txt} | {conta30_txt} | {criado} |"
+                f"| {id_} | {criado} | {par} | {setup} | {direcao} | "
+                f"{fmt_price(preco_entrada)} | {fmt_price(stop_s)} | {fmt_price(alvo_s)} | "
+                f"{fmt_ratio(rr_s)} | {tend} | {status} | {resultado_txt} | {conta30_txt} |"
             )
         body = header + "\n".join(linhas) + "\n"
 
