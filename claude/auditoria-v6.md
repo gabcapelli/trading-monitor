@@ -90,3 +90,30 @@ Isso nunca acontece ao vivo: a produção busca sempre `candles_1h = fetch_candl
 - Total de sinais mudou de 437 para 314 sobre o mesmo dado — o fix não afeta só o alvo, afeta toda a detecção de zona/tendência (as mesmas funções recebem a mesma janela limitada, replicando fielmente o que a produção vê a cada ciclo).
 
 **Conclusão**: o bug era real e o fix é correto, mas não muda nenhuma decisão de produção já tomada — o risco pra v5/v6 era baixo porque a janela usada (33 dias, no máximo ~5x o limite de produção) nunca chegou perto de algo tão extremo quanto o pavio de 11 meses que apareceu no teste de 400 dias do Setup C (lá a janela chegava a ~64x o limite de produção). O item pendente acima ("exigir mais R:R piora o resultado") deixa de ser um achado a acompanhar — era um artefato de janela sem limite combinado com amostra pequena, não um padrão real do checklist mecânico.
+
+## Janela estendida (300 dias) e um resultado que muda de categoria (11/09/2026)
+
+Pergunta do Gabriel: "se diminuirmos o R:R mínimo, o resultado melhora?" Com o bug de escopo corrigido, `replay.py` ganhou o mesmo argumento `--dias` do `replay_setup_c.py` (default 33, preserva o comportamento original) — dá pra responder com muito mais amostra do que os 33 dias de sempre.
+
+Rodei `--varrer min_rr --dias 300` (10 pares, ~7.200 candles de 1h por par) e recalculei o IC 95% bootstrap pra cada faixa (o `resumir()` padrão do script não imprime IC, só soma/expectância):
+
+| MIN_RR | n | Expectância | IC 95% bootstrap |
+|---|---|---|---|
+| 0,0 (sem filtro) | 3190 | -0,076R | **[-0,110, -0,042]** |
+| 1,0 | 1209 | -0,125R | **[-0,205, -0,043]** |
+| 1,5 | 794 | -0,145R | **[-0,252, -0,033]** |
+| 2,0 (produção atual) | 539 | -0,147R | **[-0,289, -0,001]** |
+| 2,5 | 361 | -0,147R | [-0,333, +0,053] |
+| 3,0 | 256 | -0,095R | [-0,331, +0,156] |
+| 4,0 | 122 | -0,111R | [-0,454, +0,283] |
+
+**Isso muda de categoria em relação a tudo que já foi reportado nas auditorias v5/v6**: de "amostra pequena demais pra concluir" (IC sempre cruzando zero) para **expectância negativa estatisticamente significativa em MIN_RR de 0,0 até 2,0** — o IC bootstrap fica inteiramente abaixo de zero nessas quatro faixas, coisa que nunca tinha acontecido antes neste projeto (nem nos 437 sinais da v6 original, nem nos 314 pós-fix a 33 dias).
+
+**Resposta direta à pergunta**: baixar `MIN_RR` para 1,5 ou 1,0 **não ajuda** — o ponto central fica igual ou um pouco pior (-0,125R a -0,147R) do que o `MIN_RR=2,0` atual (-0,147R), não melhor. Não existe, nesta amostra, uma faixa de R:R baixo que vire positiva. Acima de 2,5 o IC volta a cruzar zero, mas por causa de n menor (256-361), não porque o resultado melhorou de verdade.
+
+**Ressalvas, pra não overclaim**:
+1. Isto é só o checklist mecânico puro (`sinais_mecanicos`/replay), sem o filtro de julgamento humano que o plano pressupõe (seção 4) — o Gabriel já foi alertado antes que está operando o sistema mecânico sem essa camada.
+2. Não inclui custo de execução (taxa, spread, slippage, funding) — incluir só pioraria o número, nunca melhora.
+3. **Os 10 pares não são observações independentes.** O `CLAUDE.md` já registra um achado de 09/09/2026 sobre confirmações correlacionadas entre pares de altcoin (beta de mercado, não sinal técnico independente). O bootstrap acima trata os 3190/539/etc. sinais como i.i.d., o que infla artificialmente a confiança quando vários deles vêm do mesmo movimento de mercado batendo em múltiplos pares ao mesmo tempo. A direção do achado (negativo) não muda, mas o IC real é provavelmente mais largo do que o mostrado aqui. Não tenho, hoje, uma forma calibrada de corrigir por essa correlação (exigiria block bootstrap por janela de tempo, não por sinal) — registrar como limitação conhecida, não decidido.
+
+**O que isso significa pra decisão de produção**: `MIN_RR=2.0` é regra do plano de risco (seção 3.3), não parâmetro de calibração — não mudei e não proponho mudar por causa disto. Mas agora há uma base mais sólida pra dizer que o checklist mecânico puro, do jeito que está, tem edge negativo — o que reforça (com dado bem mais forte que antes) a recomendação já feita de que a camada de julgamento humano na seção 4 precisa estar sendo genuinamente exercida, não só carimbada.

@@ -236,11 +236,15 @@ def main(argv):
 
     varrer = argv[argv.index("--varrer") + 1] if "--varrer" in argv else None
 
-    print(f"Baixando historico de {len(pares)} par(es)...")
+    dias = int(argv[argv.index("--dias") + 1]) if "--dias" in argv else 33
+    paginas_1h = max(8, -(-(dias * 24) // 100))   # ceil(candles / 100); default (33d) = 8, igual antes
+    paginas_4h = max(4, -(-(dias * 6) // 100))
+
+    print(f"Baixando historico de {len(pares)} par(es) (~{dias} dias)...")
     dados = {}
     for p in pares:
-        c1 = fetch_historico(p, "1H", paginas=8)
-        c4 = fetch_historico(p, "4H", paginas=4)
+        c1 = fetch_historico(p, "1H", paginas=paginas_1h)
+        c4 = fetch_historico(p, "4H", paginas=paginas_4h)
         if len(c1) < 60 or len(c4) < 30:
             print(f"  [pula] {p}: historico insuficiente ({len(c1)}x1h, {len(c4)}x4h)")
             continue
