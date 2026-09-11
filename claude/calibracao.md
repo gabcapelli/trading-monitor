@@ -1,4 +1,4 @@
-# Calibracao — registro mecanico de sinais (atualizado 2026-09-10 21:05 BRT)
+# Calibracao — registro mecanico de sinais (atualizado 2026-09-10 22:05 BRT)
 
 > **Nao edite este arquivo** — ele e reescrito a cada execucao a partir da tabela `sinais_mecanicos`. Diferente de `sinais.md`, aqui nao ha nenhuma decisao sua: e TODA confirmacao mecanica detectada, inclusive as descartadas por R:R baixo, com desfecho medido por geometria de preco (OHLC de 1h contra stop/alvo sugeridos).
 >
@@ -10,9 +10,9 @@ Regra de alvo em vigor agora: **proximo** (coluna `Regra` abaixo mostra qual dec
 
 | Grupo | Sinais | Resolvidos | Acertos | Soma (expectancia) |
 |---|---|---|---|---|
-| Aceitos (R:R >= 2) | 23 | 21 | 2 (10%) | -14.48R (-0.689R/sinal) |
+| Aceitos (R:R >= 2) | 24 | 21 | 2 (10%) | -14.48R (-0.689R/sinal) |
 | Descartados por R:R baixo | 8 | 7 | 6 (86%) | +2.29R (+0.327R/sinal) |
-| TODOS | 31 | 28 | 8 (29%) | -12.19R (-0.435R/sinal) |
+| TODOS | 32 | 28 | 8 (29%) | -12.19R (-0.435R/sinal) |
 
 **MAE dos acertos** (quanto o preco foi CONTRA antes de dar certo) — n=8, mediana 0.43R, maximo 0.98R, 38% acima de 0.8R.
 
@@ -26,7 +26,8 @@ Regra de alvo em vigor agora: **proximo** (coluna `Regra` abaixo mostra qual dec
 
 | Par | Setup | Direcao | Aceito | Regra | R:R (recente) | R:R (proximo) | Resultado | MAE | MFE | Candles | Quando |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| LINK/USDT | B | venda | nao | proximo | — | — | aberto | — | — | — | 2026-09-10 21:05 |
+| SUI/USDT | B | compra | sim | proximo | 5.71 | 5.37 | aberto | — | — | — | 2026-09-10 22:05 |
+| LINK/USDT | B | venda | nao | proximo | — | — | aberto | 0.744 | 0.155 | — | 2026-09-10 21:05 |
 | UNI/USDT | B | venda | nao | proximo | 3.29 | 0.70 | +0.70 | 0.244 | 0.831 | 1 | 2026-09-10 20:05 |
 | DOGE/USDT | B | venda | sim | recente | 4.95 | 4.95 | aberto | 0.674 | 4.243 | — | 2026-09-10 19:05 |
 | XRP/USDT | B | compra | sim | recente | 8.40 | 4.46 | -1.00 | 1.38 | 0.042 | 1 | 2026-09-10 15:05 |
@@ -50,4 +51,3 @@ Regra de alvo em vigor agora: **proximo** (coluna `Regra` abaixo mostra qual dec
 | DOGE/USDT | B | venda | nao | recente | 0.97 | 0.45 | +0.97 | 0.026 | 1.439 | 1 | 2026-09-08 09:05 |
 | SUI/USDT | B | venda | nao | recente | 0.08 | 0.08 | +0.08 | 0.43 | 0.401 | 1 | 2026-09-08 09:05 |
 | ETH/USDT | B | venda | nao | recente | 0.91 | 0.32 | +0.91 | 0.068 | 1.923 | 3 | 2026-09-08 08:05 |
-| XRP/USDT | B | venda | sim | recente | 2.36 | 0.56 | -1.00 | 1.538 | 1.99 | 3 | 2026-09-08 08:05 |
