@@ -1,13 +1,13 @@
-# Sinais -- atualizado 2026-09-11 13:06 BRT
+# Sinais -- atualizado 2026-09-11 13:43 BRT
 
 > Gerado a partir de `claude/trade_journal.db` a cada execucao. **Edite as colunas Status (candidato/entrado/descartado), Resultado (R) e Conta 30? (sim/nao) direto neste arquivo** -- a proxima execucao le suas mudancas e aplica ao banco antes de reescrever o arquivo, entao suas edicoes nunca se perdem. NAO edite a ordem ou os nomes das colunas, so os valores dessas tres. Resultado (R) de um trade 'entrado' pode ser preenchido automaticamente pelo script quando o stop ou o alvo sugerido forem tocados numa candle de 1h -- edite manualmente so se voce operou com stop/alvo diferentes dos sugeridos (sua edicao sempre tem prioridade). Conta 30? nasce 'sim' -- mude para 'nao' se este trade nao deve contar para o gate de validacao (ex.: duplicata de um lote correlacionado). Preco de entrada / Stop / Alvo / R:R aqui sao SUGESTOES MECANICAS SIMPLES (preco de entrada = fechamento do candle 1h de confirmacao; stop = extremo da varredura + buffer de ATR; alvo = pivo 1h oposto mais recente) -- validar no grafico antes de usar, nao substituem o checklist da secao 4 do plano. So aparecem aqui sinais que ja passaram no filtro de R:R minimo (2) do plano.
 
 | ID | Par | Setup | Direcao | Preco entrada | Stop sugerido | Alvo sugerido | R:R sugerido | Tend. 4h | Status | Resultado (R) | Conta 30? | Criado em |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 34 | DOGE/USDT | B | venda | 0.08377 | 0.08420 | 0.08277 | 2.30 | baixa | candidato | — | sim | 2026-09-11 05:06 |
-| 33 | SUI/USDT | B | compra | 0.73610 | 0.73013 | 0.77280 | 6.15 | lateral | candidato | — | sim | 2026-09-11 01:05 |
-| 32 | SUI/USDT | B | compra | 0.73260 | 0.72556 | 0.77040 | 5.37 | lateral | candidato | — | sim | 2026-09-10 22:05 |
-| 31 | DOGE/USDT | B | venda | 0.08403 | 0.08433 | 0.08256 | 4.95 | baixa | candidato | — | sim | 2026-09-10 19:05 |
+| 34 | DOGE/USDT | B | venda | 0.08377 | 0.08420 | 0.08277 | 2.30 | baixa | entrado | 2.30 | sim | 2026-09-11 05:06 |
+| 33 | SUI/USDT | B | compra | 0.73610 | 0.73013 | 0.77280 | 6.15 | lateral | descartado | — | nao | 2026-09-11 01:05 |
+| 32 | SUI/USDT | B | compra | 0.73260 | 0.72556 | 0.77040 | 5.37 | lateral | descartado | — | sim | 2026-09-10 22:05 |
+| 31 | DOGE/USDT | B | venda | 0.08403 | 0.08433 | 0.08256 | 4.95 | baixa | entrado | 4.95 | sim | 2026-09-10 19:05 |
 | 30 | XRP/USDT | B | compra | 1.3597 | 1.3503 | 1.4388 | 8.40 | lateral | candidato | — | sim | 2026-09-10 15:05 |
 | 29 | ETH/USDT | B | compra | 2442.4 | 2423.6 | 2483.7 | 2.20 | lateral | entrado | 2.20 | sim | 2026-09-10 12:05 |
 | 28 | XRP/USDT | B | compra | 1.3635 | 1.3467 | 1.4388 | 4.48 | lateral | entrado | -1.00 | sim | 2026-09-10 11:06 |
