@@ -86,6 +86,27 @@ def fetch_historico(inst_id, bar, paginas=8, por_pagina=100):
 # Replay
 # ---------------------------------------------------------------------------
 
+# Producao busca SEMPRE candles_1h = fetch_candles(..., limit=150) e
+# candles_4h = fetch_candles(..., limit=100) uma vez por ciclo (ver
+# fetch_and_check.py, main loop, ~linha 2388) e passa esse mesmo par bounded
+# pra process_single_pair -> try_map_new_zone/check_zone_confirmation/
+# compute_suggestion. Ela NUNCA ve mais historico que isso.
+#
+# 11/09/2026: achado real no replay do Setup C (claude/setup-c-testes.md) --
+# alimentar essas funcoes com uma janela que cresce sem limite (como este
+# replay fazia ate esta correcao) deixa nearest_target_candidate() alcancar
+# candles arbitrariamente antigos, inclusive pavios de flash-crash de um
+# candle so, tratados como "pivo confirmado" so por estarem mais proximos em
+# preco. Rodadas de replay ja publicadas aqui (v5/v6) usaram janela curta
+# (paginas=8 ~= 33 dias, no maximo ~5x o limite de producao) -- risco baixo
+# de ter alcancado algo tao extremo quanto o caso do Setup C (janela de 400
+# dias, ~64x o limite de producao), mas o mecanismo do bug e o mesmo. Corrigido
+# aqui limitando janela_1h/janela_4h aos mesmos limites de producao a cada
+# passo, em vez de acumular o historico inteiro.
+PROD_1H_LIMIT = 150
+PROD_4H_LIMIT = 100
+
+
 def replay_par(inst_id, c1h, c4h, modo_alvo=None, min_rr=None,
                stop_buffer=None, breakeven_apos_r=None):
     """
@@ -111,9 +132,9 @@ def replay_par(inst_id, c1h, c4h, modo_alvo=None, min_rr=None,
         minimo = m.ATR_PERIOD + m.PIVOT_WINDOW * 2 + 2
 
         for i in range(minimo, len(c1h)):
-            janela_1h = c1h[:i + 1]
+            janela_1h = c1h[max(0, i + 1 - PROD_1H_LIMIT):i + 1]
             agora = janela_1h[-1]["ts"]
-            janela_4h = [c for c in c4h if c["ts"] <= agora]
+            janela_4h = [c for c in c4h if c["ts"] <= agora][-PROD_4H_LIMIT:]
             if len(janela_4h) < m.PIVOT_WINDOW * 2 + 3:
                 continue
 

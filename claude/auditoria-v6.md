@@ -63,3 +63,30 @@ Verifiquei estatisticamente antes de dar qualquer peso a esse número positivo: 
 Nada das 3 pendências virou "regra nova" na automação — como pedido, troquei o alvo (item 1, decisão já tomada e aplicada), rodei a simulação (item 2), e testei o breakeven só na simulação (item 4, sem implementar). O único item que continua em aberto, porque é decisão sua e não teria como eu decidir sozinho, é:
 
 - **O que fazer com o achado do item 3** (exigir mais R:R piora o resultado, mesmo com o alvo corrigido). Não é evidência estatisticamente forte (amostras pequenas por faixa), mas é um padrão consistente que já sobreviveu a uma correção de bug. Vale a pena ficar de olho conforme mais trades reais forem se acumulando.
+
+  **Atualização 11/09/2026 — ver seção abaixo: esse achado não sobreviveu a uma segunda correção de bug.** A instabilidade sempre esteve lá (IC muito largo nas faixas de R:R alto); o bug de escopo do replay só mascarava isso com um padrão que parecia mais liso do que a amostra realmente sustenta.
+
+---
+
+## Correção de escopo no replay (11/09/2026)
+
+Pesquisando o Setup C (`claude/setup-c-testes.md`) sobre um histórico bem mais longo (400 dias), achei um trade com R:R de 40 — investigando, o alvo vinha de um candle de flash-crash de 1h de **11 meses antes**, tratado como "pivô confirmado" válido. Causa raiz: `nearest_target_candidate` (chamada por dentro de `compute_suggestion`) roda sobre o array de candles inteiro que recebe — e `monitor/replay.py` monta `janela_1h = c1h[:i + 1]`, que cresce sem limite a cada passo do walk-forward. Quanto mais longa a janela de replay, maior o risco de a busca por "pivô mais próximo em preço" alcançar algo estruturalmente irrelevante.
+
+Isso nunca acontece ao vivo: a produção busca sempre `candles_1h = fetch_candles(..., limit=150)` e `candles_4h = fetch_candles(..., limit=100)` — nunca vê mais que isso. `replay.py` foi corrigido pra replicar exatamente esse limite (`janela_1h`/`janela_4h` agora truncadas aos últimos 150/100 candles a cada passo, em vez de acumular o histórico inteiro).
+
+**Validação — os achados desta auditoria (v6) continuam de pé?** Rodei o replay ANTES e DEPOIS do fix sobre o mesmo dado (mesmos 800 candles de 1h, 33 dias, para não confundir o efeito do fix com a janela ter avançado no tempo):
+
+| | Antes do fix | Depois do fix |
+|---|---|---|
+| MIN_RR=1.0 | n=117, exp -0,022R | n=108, exp -0,084R |
+| MIN_RR=1.5 | n=86, exp -0,097R | n=75, exp -0,109R |
+| MIN_RR=2.0 (produção) | n=63, exp -0,072R, IC95% [-0,446, +0,350] | n=56, exp -0,095R, IC95% [-0,538, +0,396] |
+| MIN_RR=2.5 | n=40, exp -0,278R | n=37, exp -0,078R |
+| MIN_RR=3.0 | n=29, exp -0,520R | n=28, exp -0,175R |
+| MIN_RR=4.0 | n=15, exp -0,623R, IC95% [-1,000, +0,131] | n=17, exp +0,111R, IC95% [-1,000, +1,306] |
+
+- **O achado central da v6 não muda**: em MIN_RR=2.0 (o filtro real de produção), IC cruza zero antes e depois, com magnitude parecida (-0,072R vs -0,095R) — continua sem edge demonstrável, com ou sem o bug.
+- **O "paradoxo de MIN_RR" (item 3, degradação monotônica com R:R mais alto) não sobrevive.** Depois do fix, a curva deixa de ser monotônica e chega a inverter em MIN_RR=4.0 (+0,111R). Mas o IC em MIN_RR=4.0 é enorme dos dois lados (antes: [-1,000, +0,131]; depois: [-1,000, +1,306], n=15-17) — a mudança de sinal está inteiramente dentro do ruído. Conclusão: o padrão "mais liso" que a v6 reportou não era mais confiável que isso, o bug só mascarava a instabilidade real da amostra em faixas de R:R alto.
+- Total de sinais mudou de 437 para 314 sobre o mesmo dado — o fix não afeta só o alvo, afeta toda a detecção de zona/tendência (as mesmas funções recebem a mesma janela limitada, replicando fielmente o que a produção vê a cada ciclo).
+
+**Conclusão**: o bug era real e o fix é correto, mas não muda nenhuma decisão de produção já tomada — o risco pra v5/v6 era baixo porque a janela usada (33 dias, no máximo ~5x o limite de produção) nunca chegou perto de algo tão extremo quanto o pavio de 11 meses que apareceu no teste de 400 dias do Setup C (lá a janela chegava a ~64x o limite de produção). O item pendente acima ("exigir mais R:R piora o resultado") deixa de ser um achado a acompanhar — era um artefato de janela sem limite combinado com amostra pequena, não um padrão real do checklist mecânico.
