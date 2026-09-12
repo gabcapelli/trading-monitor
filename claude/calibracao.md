@@ -1,4 +1,4 @@
-# Calibracao — registro mecanico de sinais (atualizado 2026-09-12 02:05 BRT)
+# Calibracao — registro mecanico de sinais (atualizado 2026-09-12 03:05 BRT)
 
 > **Nao edite este arquivo** — ele e reescrito a cada execucao a partir da tabela `sinais_mecanicos`. Diferente de `sinais.md`, aqui nao ha nenhuma decisao sua: e TODA confirmacao mecanica detectada, inclusive as descartadas por R:R baixo, com desfecho medido por geometria de preco (OHLC de 1h contra stop/alvo sugeridos).
 >
@@ -11,8 +11,8 @@ Regra de alvo em vigor agora: **proximo** (coluna `Regra` abaixo mostra qual dec
 | Grupo | Sinais | Resolvidos | Acertos | Soma (expectancia) |
 |---|---|---|---|---|
 | Aceitos (R:R >= 2) | 26 | 26 | 3 (12%) | -16.28R (-0.626R/sinal) |
-| Descartados por R:R baixo | 25 | 22 | 20 (91%) | +6.17R (+0.280R/sinal) |
-| TODOS | 51 | 48 | 23 (48%) | -10.11R (-0.211R/sinal) |
+| Descartados por R:R baixo | 26 | 22 | 20 (91%) | +6.17R (+0.280R/sinal) |
+| TODOS | 52 | 48 | 23 (48%) | -10.11R (-0.211R/sinal) |
 
 **MAE dos acertos** (quanto o preco foi CONTRA antes de dar certo) — n=23, mediana 0.38R, maximo 0.98R, 13% acima de 0.8R.
 
@@ -26,6 +26,7 @@ Regra de alvo em vigor agora: **proximo** (coluna `Regra` abaixo mostra qual dec
 
 | Par | Setup | Direcao | Aceito | Regra | R:R (recente) | R:R (proximo) | Resultado | MAE | MFE | Candles | Quando |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| SOL/USDT | B | compra | nao | proximo | 4.25 | 1.84 | aberto | — | — | — | 2026-09-12 03:05 |
 | ETH/USDT | B | venda | nao | proximo | 4.43 | 1.96 | aberto | 0.463 | 1.154 | — | 2026-09-11 18:06 |
 | ETH/USDT | B | venda | nao | proximo | 2.96 | 1.42 | aberto | 0.318 | 0.915 | — | 2026-09-11 16:06 |
 | DOGE/USDT | B | venda | nao | proximo | 2.52 | 0.28 | +0.28 | 0.063 | 1.327 | 1 | 2026-09-11 15:06 |
@@ -50,4 +51,3 @@ Regra de alvo em vigor agora: **proximo** (coluna `Regra` abaixo mostra qual dec
 | UNI/USDT | B | venda | nao | proximo | 3.29 | 0.70 | +0.70 | 0.244 | 0.831 | 1 | 2026-09-10 20:05 |
 | DOGE/USDT | B | venda | sim | recente | 4.95 | 4.95 | -1.00 | 4.85 | 6.399 | 15 | 2026-09-10 19:05 |
 | XRP/USDT | B | compra | sim | recente | 8.40 | 4.46 | -1.00 | 1.38 | 0.042 | 1 | 2026-09-10 15:05 |
-| ETH/USDT | B | compra | sim | recente | 2.20 | 1.04 | +2.20 | 0.607 | 2.206 | 18 | 2026-09-10 12:05 |
