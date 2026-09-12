@@ -4,14 +4,14 @@
 
 | ID | Criado em | Par | Setup | Direcao | Preco entrada | Stop sugerido | Alvo sugerido | R:R sugerido | Tend. 4h | Status | Resultado (R) | Conta 30? |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 37 | 2026-09-12 17:05 | XRP/USDT | A | venda | 1.3621 | 1.3646 | 1.3453 | 6.82 | baixa | candidato | — | sim |
-| 36 | 2026-09-12 16:05 | UNI/USDT | B | venda | 6.3020 | 6.3619 | 5.9410 | 6.03 | lateral | candidato | — | sim |
-| 35 | 2026-09-12 14:05 | UNI/USDT | B | venda | 6.3750 | 6.5686 | 5.9410 | 2.24 | lateral | candidato | — | sim |
+| 37 | 2026-09-12 17:05 | XRP/USDT | A | venda | 1.3621 | 1.3646 | 1.3453 | 6.82 | baixa | entrado | -1.00 | sim |
+| 36 | 2026-09-12 16:05 | UNI/USDT | B | venda | 6.3020 | 6.3619 | 5.9410 | 6.03 | lateral | descartado | — | nao |
+| 35 | 2026-09-12 14:05 | UNI/USDT | B | venda | 6.3750 | 6.5686 | 5.9410 | 2.24 | lateral | entrado | — | sim |
 | 34 | 2026-09-11 05:06 | DOGE/USDT | B | venda | 0.08377 | 0.08420 | 0.08277 | 2.30 | baixa | entrado | 2.30 | sim |
 | 33 | 2026-09-11 01:05 | SUI/USDT | B | compra | 0.73610 | 0.73013 | 0.77280 | 6.15 | lateral | descartado | — | nao |
 | 32 | 2026-09-10 22:05 | SUI/USDT | B | compra | 0.73260 | 0.72556 | 0.77040 | 5.37 | lateral | descartado | — | sim |
 | 31 | 2026-09-10 19:05 | DOGE/USDT | B | venda | 0.08403 | 0.08433 | 0.08256 | 4.95 | baixa | entrado | 4.95 | sim |
-| 30 | 2026-09-10 15:05 | XRP/USDT | B | compra | 1.3597 | 1.3503 | 1.4388 | 8.40 | lateral | candidato | — | sim |
+| 30 | 2026-09-10 15:05 | XRP/USDT | B | compra | 1.3597 | 1.3503 | 1.4388 | 8.40 | lateral | descartado | — | sim |
 | 29 | 2026-09-10 12:05 | ETH/USDT | B | compra | 2442.4 | 2423.6 | 2483.7 | 2.20 | lateral | entrado | 2.20 | sim |
 | 28 | 2026-09-10 11:06 | XRP/USDT | B | compra | 1.3635 | 1.3467 | 1.4388 | 4.48 | lateral | entrado | -1.00 | sim |
 | 27 | 2026-09-10 05:06 | LINK/USDT | B | venda | 11.78 | 11.87 | 11.58 | 2.11 | lateral | entrado | -1.00 | sim |
