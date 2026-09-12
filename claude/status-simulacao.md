@@ -1,4 +1,4 @@
-# Situacao atual -- Multi-Par (script gratuito, sem LLM) -- atualizado 2026-09-12 04:05 BRT
+# Situacao atual -- Multi-Par (script gratuito, sem LLM) -- atualizado 2026-09-12 05:05 BRT
 
 > Gerado por `monitor/fetch_and_check.py` via GitHub Actions, sem chamar a API do Claude. Registra fatos objetivos; a interpretacao qualitativa fica a seu criterio (ou cole este arquivo + o log numa conversa do Claude).
 
@@ -8,13 +8,13 @@
 
 | Par | Tendencia 4h | Close 1h | Funding | Zona / setup candidato | Status |
 |---|---|---|---|---|---|
-| BTC/USDT | lateral | 77267.1 | 0.0093% | Setup B (compra) 77454.1-77694.5 (0/3 toques, 3/8 candles) | zona_mapeada_setup_B |
-| ETH/USDT | alta | 2518.2 | 0.0067% | — | sem_zona |
-| SOL/USDT | lateral | 101.64 | 0.0078% | Setup B (compra) 102.01-102.39 (0/3 toques, 0/8 candles) | zona_mapeada_setup_B |
-| XRP/USDT | baixa | 1.3623 | 0.0015% | — | sem_zona |
-| DOGE/USDT | lateral | 0.08438 | 0.0100% | Setup B (venda) 0.08370-0.08418 (0/3 toques, 3/8 candles) | zona_mapeada_setup_B |
-| ARB/USDT | baixa | 0.14297 | 0.0014% | — | sem_zona |
-| WLD/USDT | lateral | 0.40020 | 0.0027% | Setup B (venda) 0.40623-0.40997 (0/3 toques, 3/8 candles) | zona_mapeada_setup_B |
-| SUI/USDT | baixa | 0.72310 | 0.0065% | Setup B (compra) 0.72950-0.73590 (0/3 toques, 4/8 candles) | zona_mapeada_setup_B |
-| UNI/USDT | lateral | 6.2820 | -0.0012% | — | sem_zona |
-| LINK/USDT | baixa | 11.51 | -0.0004% | — | zona_expirada_setup_B |
+| BTC/USDT | lateral | 77236.9 | 0.0084% | Setup B (compra) 77454.1-77694.5 (0/3 toques, 4/8 candles) | zona_mapeada_setup_B |
+| ETH/USDT | alta | 2522.7 | 0.0045% | — | sem_zona |
+| SOL/USDT | lateral | 101.62 | 0.0087% | Setup B (compra) 102.01-102.39 (0/3 toques, 1/8 candles) | zona_mapeada_setup_B |
+| XRP/USDT | baixa | 1.3684 | 0.0014% | — | sem_zona |
+| DOGE/USDT | lateral | 0.08473 | 0.0100% | Setup B (venda) 0.08370-0.08418 (0/3 toques, 4/8 candles) | zona_mapeada_setup_B |
+| ARB/USDT | baixa | 0.14439 | 0.0014% | — | sem_zona |
+| WLD/USDT | lateral | 0.40380 | 0.0024% | Setup B (venda) 0.40623-0.40997 (0/3 toques, 4/8 candles) | zona_mapeada_setup_B |
+| SUI/USDT | baixa | 0.72780 | 0.0047% | Setup B (compra) 0.72950-0.73590 (0/3 toques, 5/8 candles) | zona_mapeada_setup_B |
+| UNI/USDT | lateral | 6.3500 | -0.0039% | Setup B (venda) 6.3551-6.4009 (0/3 toques, 0/8 candles) | zona_mapeada_setup_B |
+| LINK/USDT | baixa | 11.56 | 0.0017% | — | sem_zona |
