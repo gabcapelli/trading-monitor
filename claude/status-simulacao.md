@@ -1,4 +1,4 @@
-# Situacao atual -- Multi-Par (script gratuito, sem LLM) -- atualizado 2026-09-12 22:05 BRT
+# Situacao atual -- Multi-Par (script gratuito, sem LLM) -- atualizado 2026-09-12 23:05 BRT
 
 > Gerado por `monitor/fetch_and_check.py` via GitHub Actions, sem chamar a API do Claude. Registra fatos objetivos; a interpretacao qualitativa fica a seu criterio (ou cole este arquivo + o log numa conversa do Claude).
 
@@ -8,13 +8,13 @@
 
 | Par | Tendencia 4h | Close 1h | Funding | Zona / setup candidato | Status |
 |---|---|---|---|---|---|
-| BTC/USDT | lateral | 77244.3 | 0.0048% | — | sem_zona |
-| ETH/USDT | alta | 2524.2 | 0.0100% | — | sem_zona |
-| SOL/USDT | lateral | 101.68 | 0.0019% | — | sem_zona |
-| XRP/USDT | baixa | 1.3665 | 0.0052% | — | sem_zona |
-| DOGE/USDT | lateral | 0.08482 | 0.0097% | — | sem_zona |
-| ARB/USDT | baixa | 0.14033 | 0.0001% | Setup A (venda) 0.14149-0.14253 (0/3 toques, 7/8 candles) | zona_mapeada_setup_A |
-| WLD/USDT | lateral | 0.39910 | 0.0064% | — | zona_expirada_setup_B |
-| SUI/USDT | baixa | 0.72780 | 0.0026% | — | sem_zona |
-| UNI/USDT | lateral | 6.4200 | 0.0080% | — | sem_zona_posicao_aberta |
-| LINK/USDT | baixa | 11.49 | 0.0012% | Setup B (venda) 11.50-11.53 (0/3 toques, 1/8 candles) | zona_mapeada_setup_B |
+| BTC/USDT | lateral | 77283.3 | 0.0050% | — | sem_zona |
+| ETH/USDT | alta | 2525.0 | 0.0100% | — | sem_zona |
+| SOL/USDT | lateral | 102.23 | 0.0035% | Setup B (compra) 102.11-102.29 (0/3 toques, 0/8 candles) | zona_mapeada_setup_B |
+| XRP/USDT | baixa | 1.3671 | 0.0054% | — | sem_zona |
+| DOGE/USDT | lateral | 0.08494 | 0.0100% | — | sem_zona |
+| ARB/USDT | baixa | 0.14040 | -0.0021% | Setup A (venda) 0.14149-0.14253 (1/3 toques, 0/8 candles) | zona_mapeada_setup_A |
+| WLD/USDT | lateral | 0.39750 | 0.0077% | — | sem_zona |
+| SUI/USDT | baixa | 0.72780 | 0.0049% | — | sem_zona |
+| UNI/USDT | lateral | 6.3790 | 0.0054% | — | sem_zona_posicao_aberta |
+| LINK/USDT | baixa | 11.51 | 0.0016% | Setup B (venda) 11.50-11.53 (1/3 toques, 0/8 candles) | zona_mapeada_setup_B |
