@@ -1,4 +1,4 @@
-# Calibracao — registro mecanico de sinais (atualizado 2026-09-13 00:05 BRT)
+# Calibracao — registro mecanico de sinais (atualizado 2026-09-13 01:05 BRT)
 
 > **Nao edite este arquivo** — ele e reescrito a cada execucao a partir da tabela `sinais_mecanicos`. Diferente de `sinais.md`, aqui nao ha nenhuma decisao sua: e TODA confirmacao mecanica detectada, inclusive as descartadas por R:R baixo, com desfecho medido por geometria de preco (OHLC de 1h contra stop/alvo sugeridos).
 >
@@ -11,10 +11,10 @@ Regra de alvo em vigor agora: **proximo** (coluna `Regra` abaixo mostra qual dec
 | Grupo | Sinais | Resolvidos | Acertos | Soma (expectancia) |
 |---|---|---|---|---|
 | Aceitos (R:R >= 2) | 29 | 28 | 3 (11%) | -18.28R (-0.653R/sinal) |
-| Descartados por R:R baixo | 31 | 27 | 21 (78%) | +4.01R (+0.149R/sinal) |
-| TODOS | 60 | 55 | 24 (44%) | -14.27R (-0.259R/sinal) |
+| Descartados por R:R baixo | 31 | 28 | 22 (79%) | +4.49R (+0.160R/sinal) |
+| TODOS | 60 | 56 | 25 (45%) | -13.79R (-0.246R/sinal) |
 
-**MAE dos acertos** (quanto o preco foi CONTRA antes de dar certo) — n=24, mediana 0.38R, maximo 0.98R, 12% acima de 0.8R.
+**MAE dos acertos** (quanto o preco foi CONTRA antes de dar certo) — n=25, mediana 0.38R, maximo 0.98R, 12% acima de 0.8R.
 
 > Le-se assim: apertar `STOP_BUFFER_ATR_MULT` mata os acertos cujo MAE ja esta perto de 1R. Se essa cauda for gorda, nao ha folga pra apertar o stop.
 
@@ -26,7 +26,7 @@ Regra de alvo em vigor agora: **proximo** (coluna `Regra` abaixo mostra qual dec
 
 | Par | Setup | Direcao | Aceito | Regra | R:R (recente) | R:R (proximo) | Resultado | MAE | MFE | Candles | Quando |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| LINK/USDT | B | venda | nao | proximo | 1.51 | 0.48 | aberto | — | — | — | 2026-09-13 00:05 |
+| LINK/USDT | B | venda | nao | proximo | 1.51 | 0.48 | +0.48 | 0.695 | 1.299 | 1 | 2026-09-13 00:05 |
 | LINK/USDT | B | venda | nao | proximo | 0.47 | 0.21 | -1.00 | 1.051 | 0.097 | 4 | 2026-09-12 20:05 |
 | SUI/USDT | A | venda | nao | proximo | 0.29 | 0.29 | -1.00 | 1.221 | 0.212 | 1 | 2026-09-12 19:05 |
 | XRP/USDT | A | venda | sim | proximo | 6.82 | 6.82 | -1.00 | 1.584 | 0.041 | 1 | 2026-09-12 17:05 |
