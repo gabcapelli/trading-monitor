@@ -1,4 +1,4 @@
-# Calibracao — registro mecanico de sinais (atualizado 2026-09-13 13:05 BRT)
+# Calibracao — registro mecanico de sinais (atualizado 2026-09-13 14:05 BRT)
 
 > **Nao edite este arquivo** — ele e reescrito a cada execucao a partir da tabela `sinais_mecanicos`. Diferente de `sinais.md`, aqui nao ha nenhuma decisao sua: e TODA confirmacao mecanica detectada, inclusive as descartadas por R:R baixo, com desfecho medido por geometria de preco (OHLC de 1h contra stop/alvo sugeridos).
 >
@@ -26,7 +26,7 @@ Regra de alvo em vigor agora: **proximo** (coluna `Regra` abaixo mostra qual dec
 
 | Par | Setup | Direcao | Aceito | Regra | R:R (recente) | R:R (proximo) | Resultado | MAE | MFE | Candles | Quando |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| SUI/USDT | A | venda | nao | proximo | 1.09 | 0.72 | aberto | — | — | — | 2026-09-13 13:05 |
+| SUI/USDT | A | venda | nao | proximo | 1.09 | 0.72 | aberto | 0.829 | 0.0 | — | 2026-09-13 13:05 |
 | SOL/USDT | B | compra | nao | proximo | 3.23 | 0.07 | +0.07 | 0.0 | 1.061 | 1 | 2026-09-13 11:05 |
 | WLD/USDT | B | venda | nao | proximo | 0.70 | 0.70 | -1.00 | 1.366 | 0.445 | 3 | 2026-09-13 08:05 |
 | XRP/USDT | A | venda | sim | proximo | 2.35 | 2.35 | +2.35 | 0.336 | 2.61 | 1 | 2026-09-13 05:05 |
