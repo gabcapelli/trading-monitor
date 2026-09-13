@@ -1,4 +1,4 @@
-# Calibracao — registro mecanico de sinais (atualizado 2026-09-13 11:05 BRT)
+# Calibracao — registro mecanico de sinais (atualizado 2026-09-13 12:05 BRT)
 
 > **Nao edite este arquivo** — ele e reescrito a cada execucao a partir da tabela `sinais_mecanicos`. Diferente de `sinais.md`, aqui nao ha nenhuma decisao sua: e TODA confirmacao mecanica detectada, inclusive as descartadas por R:R baixo, com desfecho medido por geometria de preco (OHLC de 1h contra stop/alvo sugeridos).
 >
@@ -11,10 +11,10 @@ Regra de alvo em vigor agora: **proximo** (coluna `Regra` abaixo mostra qual dec
 | Grupo | Sinais | Resolvidos | Acertos | Soma (expectancia) |
 |---|---|---|---|---|
 | Aceitos (R:R >= 2) | 30 | 29 | 4 (14%) | -15.93R (-0.549R/sinal) |
-| Descartados por R:R baixo | 36 | 35 | 26 (74%) | +6.65R (+0.190R/sinal) |
-| TODOS | 66 | 64 | 30 (47%) | -9.28R (-0.145R/sinal) |
+| Descartados por R:R baixo | 36 | 36 | 27 (75%) | +6.72R (+0.187R/sinal) |
+| TODOS | 66 | 65 | 31 (48%) | -9.21R (-0.142R/sinal) |
 
-**MAE dos acertos** (quanto o preco foi CONTRA antes de dar certo) — n=30, mediana 0.38R, maximo 0.98R, 10% acima de 0.8R.
+**MAE dos acertos** (quanto o preco foi CONTRA antes de dar certo) — n=31, mediana 0.38R, maximo 0.98R, 10% acima de 0.8R.
 
 > Le-se assim: apertar `STOP_BUFFER_ATR_MULT` mata os acertos cujo MAE ja esta perto de 1R. Se essa cauda for gorda, nao ha folga pra apertar o stop.
 
@@ -26,7 +26,7 @@ Regra de alvo em vigor agora: **proximo** (coluna `Regra` abaixo mostra qual dec
 
 | Par | Setup | Direcao | Aceito | Regra | R:R (recente) | R:R (proximo) | Resultado | MAE | MFE | Candles | Quando |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| SOL/USDT | B | compra | nao | proximo | 3.23 | 0.07 | aberto | — | — | — | 2026-09-13 11:05 |
+| SOL/USDT | B | compra | nao | proximo | 3.23 | 0.07 | +0.07 | 0.0 | 1.061 | 1 | 2026-09-13 11:05 |
 | WLD/USDT | B | venda | nao | proximo | 0.70 | 0.70 | -1.00 | 1.366 | 0.445 | 3 | 2026-09-13 08:05 |
 | XRP/USDT | A | venda | sim | proximo | 2.35 | 2.35 | +2.35 | 0.336 | 2.61 | 1 | 2026-09-13 05:05 |
 | LINK/USDT | A | venda | nao | proximo | 4.63 | 0.82 | +0.82 | 0.55 | 3.527 | 1 | 2026-09-13 05:05 |
