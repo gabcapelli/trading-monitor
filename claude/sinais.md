@@ -1,4 +1,4 @@
-# Sinais -- atualizado 2026-09-14 15:05 BRT
+# Sinais -- atualizado 2026-09-14 16:05 BRT
 
 > Gerado a partir de `claude/trade_journal.db` a cada execucao. **Edite as colunas Status (candidato/entrado/descartado), Resultado (R), Conta 30? (sim/nao) e Checks manuais direto neste arquivo** -- a proxima execucao le suas mudancas e aplica ao banco antes de reescrever o arquivo, entao suas edicoes nunca se perdem. NAO edite a ordem ou os nomes das colunas, so os valores dessas quatro. Resultado (R) de um trade 'entrado' pode ser preenchido automaticamente pelo script quando o stop ou o alvo sugerido forem tocados numa candle de 1h -- edite manualmente so se voce operou com stop/alvo diferentes dos sugeridos (sua edicao sempre tem prioridade). Conta 30? nasce 'sim' -- mude para 'nao' se este trade nao deve contar para o gate de validacao (ex.: duplicata de um lote correlacionado). Checks manuais nasce 'correlacao=? ; regime=? ; qualidade=?' -- ao revisar o candidato, troque cada '?' por sim/nao/um motivo curto (correlacao com BTC/mercado, regime no timeframe maior, qualidade da vela de confirmacao); nao use '|' dentro do valor. Preco de entrada / Stop / Alvo / R:R aqui sao SUGESTOES MECANICAS SIMPLES (preco de entrada = fechamento do candle 1h de confirmacao; stop = extremo da varredura + buffer de ATR; alvo = pivo 1h oposto mais recente) -- validar no grafico antes de usar, nao substituem o checklist da secao 4 do plano. So aparecem aqui sinais que ja passaram no filtro de R:R minimo (2) do plano.
 
@@ -9,7 +9,7 @@
 | 38 | 2026-09-13 05:05 | XRP/USDT | A | venda | 1.3572 | 1.3623 | 1.3453 | 2.35 | baixa | entrado | 2.35 | sim | correlacao=? ; regime=? ; qualidade=? |
 | 37 | 2026-09-12 17:05 | XRP/USDT | A | venda | 1.3621 | 1.3646 | 1.3453 | 6.82 | baixa | entrado | -1.00 | sim | correlacao=? ; regime=? ; qualidade=? |
 | 36 | 2026-09-12 16:05 | UNI/USDT | B | venda | 6.3020 | 6.3619 | 5.9410 | 6.03 | lateral | descartado | — | nao | correlacao=? ; regime=? ; qualidade=? |
-| 35 | 2026-09-12 14:05 | UNI/USDT | B | venda | 6.3750 | 6.5686 | 5.9410 | 2.24 | lateral | entrado | — | sim | correlacao=? ; regime=? ; qualidade=? |
+| 35 | 2026-09-12 14:05 | UNI/USDT | B | venda | 6.3750 | 6.5686 | 5.9410 | 2.24 | lateral | entrado | -1.00 | sim | correlacao=? ; regime=? ; qualidade=? |
 | 34 | 2026-09-11 05:06 | DOGE/USDT | B | venda | 0.08377 | 0.08420 | 0.08277 | 2.30 | baixa | entrado | 2.30 | sim | correlacao=? ; regime=? ; qualidade=? |
 | 33 | 2026-09-11 01:05 | SUI/USDT | B | compra | 0.73610 | 0.73013 | 0.77280 | 6.15 | lateral | descartado | — | nao | correlacao=? ; regime=? ; qualidade=? |
 | 32 | 2026-09-10 22:05 | SUI/USDT | B | compra | 0.73260 | 0.72556 | 0.77040 | 5.37 | lateral | descartado | — | sim | correlacao=? ; regime=? ; qualidade=? |
