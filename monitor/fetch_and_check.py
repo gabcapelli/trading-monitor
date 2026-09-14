@@ -27,6 +27,40 @@ Dependencias: NENHUMA alem da biblioteca padrao do Python (urllib, json, etc.)
 -- roda em qualquer runner do GitHub Actions sem "pip install".
 
 --------------------------------------------------------------------------------
+CHANGELOG v7 (14/09/2026 -- 3 checks de julgamento humano na tabela de
+calibracao, decisao do Gabriel apos a v6 reconfirmar edge negativo no
+checklist mecanico puro em 300 dias, 10 pares, MIN_RR=2.0: expectancia
+-0.147R, IC 95% bootstrap [-0.289, -0.001] -- intervalo inteiramente
+negativo, ver CLAUDE.md e claude/auditoria-v6.md):
+
+1. 3 COLUNAS NOVAS EM sinais_mecanicos (migracao aditiva em ensure_trade_db,
+   mesmo padrao ALTER TABLE ADD COLUMN de sempre): check_correlacao,
+   check_regime, check_qualidade (TEXT livre -- sim/nao/motivo). Preenchidas
+   A MAO ao revisar um candidato confirmado, mesmo espirito de
+   resultado_mecanico_r vs resultado_r -- sao os 3 pontos do checklist
+   qualitativo que a geometria de zona/pivo nao captura (correlacao com
+   BTC/mercado, regime no timeframe maior, qualidade da vela de
+   confirmacao). A aposta e que julgamento humano nesses 3 pontos especificos
+   adicione valor real -- NAO esta provado, e a hipotese a testar no gate dos
+   30 (ver item 3 abaixo).
+
+2. COLUNA "Checks manuais" EM claude/sinais.md (SINAIS_COLUMNS): editavel
+   como Status/Resultado/Conta 30?, celula unica no formato
+   "correlacao=? ; regime=? ; qualidade=?" (fmt_checks / _parse_checks_cell)
+   -- sync_edits_from_sinais_md aplica de volta a sinais_mecanicos via
+   trade_id (1:1 com trades.id para toda linha aceita). So escreve o campo
+   que deixar de ser "?"; os demais mantem o valor ja gravado.
+
+3. monitor/analise_filtro_humano.py (script novo, nao mexe nos existentes):
+   compara resultado_r dos trades que o Gabriel de fato aceitou (status=
+   'entrado') contra resultado_mecanico_r de TODO sinal mecanicamente
+   confirmado (aceitos + descartados por R:R, sem filtro nenhum) -- com IC
+   95% bootstrap nos dois grupos e na diferenca entre eles. Pergunta que
+   responde: o filtro humano (do qual os 3 checks acima sao parte) bate a
+   linha de base "pegar tudo que o mecanico confirmar, sem julgamento"? Amostra
+   ainda pequena -- so leitura, nao decide nada sozinho.
+
+--------------------------------------------------------------------------------
 CHANGELOG v6 (10/09/2026 -- decisao do Gabriel sobre as 3 pendencias que a
 auditoria v5 deixou em aberto, na ordem que ele pediu: trocar a regra de
 alvo, rodar o replay de novo, reavaliar MIN_RR, testar breakeven so na
@@ -579,15 +613,24 @@ LONG_OPEN_CANDLES_1H = 48
 # colunas e o GitHub (visualizacao web/celular) corta ela da area visivel
 # sem indicar rolagem horizontal, tornando a data do sinal invisivel na
 # pratica (reportado pelo Gabriel).
+# 14/09/2026: "Checks manuais" adicionada ao final -- reflete os 3 checks de
+# julgamento humano gravados em sinais_mecanicos (check_correlacao/regime/
+# qualidade, ver ensure_trade_db v7). Editavel como Status/Resultado (R):
+# formato de celula unica "correlacao=? ; regime=? ; qualidade=?" (troque "?"
+# por sim/nao/motivo em cada campo -- sync_edits_from_sinais_md so escreve o
+# campo se "?" for substituido). Nao use "|" dentro do valor -- quebraria o
+# parser da tabela markdown.
 SINAIS_COLUMNS = [
     "ID", "Criado em", "Par", "Setup", "Direcao", "Preco entrada",
     "Stop sugerido", "Alvo sugerido", "R:R sugerido", "Tend. 4h", "Status",
-    "Resultado (R)", "Conta 30?",
+    "Resultado (R)", "Conta 30?", "Checks manuais",
 ]
 SINAIS_COL_ID = 0
 SINAIS_COL_STATUS = 10
 SINAIS_COL_RESULTADO = 11
 SINAIS_COL_CONTA30 = 12
+SINAIS_COL_CHECKS = 13
+CHECKS_FIELDS = ("correlacao", "regime", "qualidade")
 
 NTFY_TOPIC = os.environ.get("NTFY_TOPIC", "").strip()  # definido via GitHub secret
 
@@ -621,6 +664,17 @@ def fmt_price(v):
 def fmt_ratio(v):
     """Formata R:R (nao e preco, sempre 2 casas -- ex.: 2.35)."""
     return f"{v:.2f}" if v is not None else "\u2014"
+
+
+def fmt_checks(check_correlacao, check_regime, check_qualidade):
+    """
+    Formata a celula unica de "Checks manuais" (v7) a partir das 3 colunas de
+    sinais_mecanicos. Campo ainda nao revisado vira "?" -- sync_edits_from_
+    sinais_md so escreve de volta o que deixar de ser "?".
+    """
+    valores = {"correlacao": check_correlacao, "regime": check_regime,
+               "qualidade": check_qualidade}
+    return " ; ".join(f"{campo}={valores[campo] or '?'}" for campo in CHECKS_FIELDS)
 
 
 # ---------------------------------------------------------------------------
@@ -968,6 +1022,23 @@ def ensure_trade_db():
         "UPDATE sinais_mecanicos SET regra_alvo='recente', alvo_recente=alvo_sugerido, "
         "rr_recente=rr_sugerido WHERE regra_alvo IS NULL AND alvo_sugerido IS NOT NULL"
     )
+    conn.commit()
+
+    # v7 (14/09/2026): 3 checks de julgamento humano por candidato --
+    # correlacao com BTC/mercado, regime no timeframe maior, qualidade da vela
+    # de confirmacao. Motivacao: o checklist mecanico puro (A/B) tem edge
+    # NEGATIVO demonstrado (claude/auditoria-v6.md -- expectancia -0.147R, IC
+    # 95% bootstrap [-0.289, -0.001], reconfirmado em 14/09/2026). A aposta e
+    # que julgamento humano nesses 3 pontos especificos adicione valor que a
+    # geometria de zona/pivo nao captura -- NAO esta provado, e a hipotese a
+    # testar no gate dos 30 (ver monitor/analise_filtro_humano.py). Mesmo
+    # espirito de resultado_mecanico_r vs resultado_r: preenchidos a mao ao
+    # revisar um candidato, TEXT livre (sim / nao / motivo).
+    for col in ("check_correlacao", "check_regime", "check_qualidade"):
+        try:
+            conn.execute(f"ALTER TABLE sinais_mecanicos ADD COLUMN {col} TEXT")
+        except sqlite3.OperationalError:
+            pass  # coluna ja existe -- migracao ja rodou antes
     conn.commit()
     conn.close()
 
@@ -1362,14 +1433,41 @@ def check_long_open_alert(par_lbl, pair_state, now_ts):
     }
 
 
+def _parse_checks_cell(texto, id_):
+    """
+    Parseia a celula "Checks manuais" (v7): "correlacao=X ; regime=Y ;
+    qualidade=Z". So devolve os campos onde X/Y/Z deixou de ser "?" -- os
+    demais mantem o que ja esta no banco (mesmo espirito do "__skip__" usado
+    para resultado/conta30 abaixo). Campo desconhecido ou celula malformada
+    gera aviso e e ignorado, sem derrubar o resto da linha.
+    """
+    valores = {}
+    for parte in texto.split(";"):
+        if "=" not in parte:
+            if parte.strip():
+                print(f"[aviso] sinais.md linha ID {id_}: campo de checks '{parte.strip()}' "
+                      f"sem '=' -- ignorando este campo.")
+            continue
+        chave, _, valor = parte.partition("=")
+        chave = chave.strip().lower()
+        valor = valor.strip()
+        if chave not in CHECKS_FIELDS:
+            print(f"[aviso] sinais.md linha ID {id_}: campo de checks '{chave}' desconhecido "
+                  f"(esperado {'/'.join(CHECKS_FIELDS)}) -- ignorando.")
+            continue
+        if valor and valor != "?":
+            valores[chave] = valor
+    return valores
+
+
 def sync_edits_from_sinais_md():
     """
     Le claude/sinais.md (se existir) e aplica ao banco qualquer mudanca
-    manual nas colunas Status, Resultado (R) e Conta 30? -- essas sao as
-    unicas tres colunas que voce deve editar no arquivo (a terceira desde
-    CHANGELOG v4, item 1). Roda SEMPRE no inicio de main(), ANTES de
-    qualquer insercao nova ou reescrita do arquivo, para suas edicoes nunca
-    serem perdidas. Ver CHANGELOG v3, item 5.
+    manual nas colunas Status, Resultado (R), Conta 30? e Checks manuais --
+    essas sao as unicas colunas que voce deve editar no arquivo (a ultima
+    desde v7 -- ver ensure_trade_db). Roda SEMPRE no inicio de main(), ANTES
+    de qualquer insercao nova ou reescrita do arquivo, para suas edicoes
+    nunca serem perdidas. Ver CHANGELOG v3, item 5.
 
     Parsing deliberadamente simples e defensivo: ignora silenciosamente
     qualquer linha que nao comece com um ID numerico (cabecalho, separador
@@ -1389,7 +1487,7 @@ def sync_edits_from_sinais_md():
             continue
         cols = [c.strip() for c in linha.strip().strip("|").split("|")]
         if len(cols) <= max(SINAIS_COL_ID, SINAIS_COL_STATUS, SINAIS_COL_RESULTADO,
-                             SINAIS_COL_CONTA30):
+                             SINAIS_COL_CONTA30, SINAIS_COL_CHECKS):
             continue
         id_txt = cols[SINAIS_COL_ID]
         if not id_txt.isdigit():
@@ -1424,6 +1522,8 @@ def sync_edits_from_sinais_md():
                   f"invalido (esperado sim/nao) -- mantendo valor atual no banco.")
             conta30_val = "__skip__"
 
+        checks_vals = _parse_checks_cell(cols[SINAIS_COL_CHECKS], id_)
+
         if resultado_val == "__skip__":
             conn.execute("UPDATE trades SET status=? WHERE id=?", (status_txt, id_))
         else:
@@ -1435,6 +1535,16 @@ def sync_edits_from_sinais_md():
             conn.execute(
                 "UPDATE trades SET conta_para_validacao=? WHERE id=?",
                 (conta30_val, id_),
+            )
+        if checks_vals:
+            # trade_id em sinais_mecanicos e 1:1 com trades.id para toda linha
+            # aceita (so linhas aceitas viram trade e aparecem em sinais.md) --
+            # ver registrar_sinal_mecanico/insert_candidate_trade.
+            conn.execute(
+                "UPDATE sinais_mecanicos SET "
+                + ", ".join(f"check_{campo}=?" for campo in checks_vals)
+                + " WHERE trade_id=?",
+                (*checks_vals.values(), id_),
             )
         atualizados += 1
 
@@ -2143,11 +2253,18 @@ def write_sinais():
     else:
         conn = sqlite3.connect(TRADE_DB_PATH)
         try:
+            # LEFT JOIN com sinais_mecanicos (v7) para trazer os 3 checks
+            # manuais -- toda linha aceita em `trades` tem exatamente uma
+            # linha correspondente em sinais_mecanicos (trade_id), inserida
+            # junto na mesma confirmacao (ver insert_candidate_trade /
+            # registrar_sinal_mecanico).
             cur = conn.execute(
-                "SELECT id, par, setup, direcao, preco_entrada, stop_sugerido, "
-                "alvo_sugerido, rr_sugerido, tendencia_4h, status, resultado_r, "
-                "conta_para_validacao, criado_em "
-                "FROM trades ORDER BY id DESC"
+                "SELECT t.id, t.par, t.setup, t.direcao, t.preco_entrada, "
+                "t.stop_sugerido, t.alvo_sugerido, t.rr_sugerido, t.tendencia_4h, "
+                "t.status, t.resultado_r, t.conta_para_validacao, t.criado_em, "
+                "sm.check_correlacao, sm.check_regime, sm.check_qualidade "
+                "FROM trades t LEFT JOIN sinais_mecanicos sm ON sm.trade_id = t.id "
+                "ORDER BY t.id DESC"
             )
             rows = cur.fetchall()
         finally:
@@ -2162,29 +2279,36 @@ def write_sinais():
         header += "|" + "---|" * len(SINAIS_COLUMNS) + "\n"
         linhas = []
         for (id_, par, setup, direcao, preco_entrada, stop_s, alvo_s, rr_s,
-             tend, status, resultado, conta30, criado) in rows:
+             tend, status, resultado, conta30, criado,
+             check_corr, check_regime, check_qual) in rows:
             resultado_txt = f"{resultado:.2f}" if resultado is not None else "\u2014"
             conta30_txt = "sim" if conta30 else "nao"
+            checks_txt = fmt_checks(check_corr, check_regime, check_qual)
             linhas.append(
                 f"| {id_} | {criado} | {par} | {setup} | {direcao} | "
                 f"{fmt_price(preco_entrada)} | {fmt_price(stop_s)} | {fmt_price(alvo_s)} | "
-                f"{fmt_ratio(rr_s)} | {tend} | {status} | {resultado_txt} | {conta30_txt} |"
+                f"{fmt_ratio(rr_s)} | {tend} | {status} | {resultado_txt} | {conta30_txt} | "
+                f"{checks_txt} |"
             )
         body = header + "\n".join(linhas) + "\n"
 
     content = (
         f"# Sinais -- atualizado {now_brt} BRT\n\n"
         f"> Gerado a partir de `claude/trade_journal.db` a cada execucao. "
-        f"**Edite as colunas Status (candidato/entrado/descartado), Resultado (R) e "
-        f"Conta 30? (sim/nao) direto neste arquivo** -- a proxima execucao le suas "
-        f"mudancas e aplica ao banco antes de reescrever o arquivo, entao suas "
-        f"edicoes nunca se perdem. NAO edite a ordem ou os nomes das colunas, so os "
-        f"valores dessas tres. Resultado (R) de um trade 'entrado' pode ser "
-        f"preenchido automaticamente pelo script quando o stop ou o alvo sugerido "
-        f"forem tocados numa candle de 1h -- edite manualmente so se voce operou com "
-        f"stop/alvo diferentes dos sugeridos (sua edicao sempre tem prioridade). "
-        f"Conta 30? nasce 'sim' -- mude para 'nao' se este trade nao deve contar para "
-        f"o gate de validacao (ex.: duplicata de um lote correlacionado). "
+        f"**Edite as colunas Status (candidato/entrado/descartado), Resultado (R), "
+        f"Conta 30? (sim/nao) e Checks manuais direto neste arquivo** -- a proxima "
+        f"execucao le suas mudancas e aplica ao banco antes de reescrever o arquivo, "
+        f"entao suas edicoes nunca se perdem. NAO edite a ordem ou os nomes das "
+        f"colunas, so os valores dessas quatro. Resultado (R) de um trade 'entrado' "
+        f"pode ser preenchido automaticamente pelo script quando o stop ou o alvo "
+        f"sugerido forem tocados numa candle de 1h -- edite manualmente so se voce "
+        f"operou com stop/alvo diferentes dos sugeridos (sua edicao sempre tem "
+        f"prioridade). Conta 30? nasce 'sim' -- mude para 'nao' se este trade nao "
+        f"deve contar para o gate de validacao (ex.: duplicata de um lote "
+        f"correlacionado). Checks manuais nasce 'correlacao=? ; regime=? ; "
+        f"qualidade=?' -- ao revisar o candidato, troque cada '?' por sim/nao/um "
+        f"motivo curto (correlacao com BTC/mercado, regime no timeframe maior, "
+        f"qualidade da vela de confirmacao); nao use '|' dentro do valor. "
         f"Preco de entrada / Stop / Alvo / R:R aqui sao SUGESTOES MECANICAS SIMPLES "
         f"(preco de entrada = fechamento do candle 1h de confirmacao; stop = extremo "
         f"da varredura + buffer de ATR; alvo = pivo 1h oposto mais recente) -- "
