@@ -1,9 +1,11 @@
-# Sinais -- atualizado 2026-09-15 16:05 BRT
+# Sinais -- atualizado 2026-09-15 17:05 BRT
 
 > Gerado a partir de `claude/trade_journal.db` a cada execucao. **Edite as colunas Status (candidato/entrado/descartado), Resultado (R), Conta 30? (sim/nao) e Checks manuais direto neste arquivo** -- a proxima execucao le suas mudancas e aplica ao banco antes de reescrever o arquivo, entao suas edicoes nunca se perdem. NAO edite a ordem ou os nomes das colunas, so os valores dessas quatro. Resultado (R) de um trade 'entrado' pode ser preenchido automaticamente pelo script quando o stop ou o alvo sugerido forem tocados numa candle de 1h -- edite manualmente so se voce operou com stop/alvo diferentes dos sugeridos (sua edicao sempre tem prioridade). Conta 30? nasce 'sim' -- mude para 'nao' se este trade nao deve contar para o gate de validacao (ex.: duplicata de um lote correlacionado). Checks manuais nasce 'correlacao=? ; regime=? ; qualidade=?' -- ao revisar o candidato, troque cada '?' por sim/nao/um motivo curto (correlacao com BTC/mercado, regime no timeframe maior, qualidade da vela de confirmacao); nao use '|' dentro do valor. Preco de entrada / Stop / Alvo / R:R aqui sao SUGESTOES MECANICAS SIMPLES (preco de entrada = fechamento do candle 1h de confirmacao; stop = extremo da varredura + buffer de ATR; alvo = pivo 1h oposto mais recente) -- validar no grafico antes de usar, nao substituem o checklist da secao 4 do plano. So aparecem aqui sinais que ja passaram no filtro de R:R minimo (2) do plano.
 
 | ID | Criado em | Par | Setup | Direcao | Preco entrada | Stop sugerido | Alvo sugerido | R:R sugerido | Tend. 4h | Status | Resultado (R) | Conta 30? | Checks manuais |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| 42 | 2026-09-15 17:05 | ETH/USDT | B | compra | 2415.5 | 2393.2 | 2474.3 | 2.63 | alta | candidato | — | sim | correlacao=? ; regime=? ; qualidade=? |
+| 41 | 2026-09-15 17:05 | BTC/USDT | B | compra | 76144.9 | 75693.7 | 77198.5 | 2.34 | lateral | candidato | — | sim | correlacao=? ; regime=? ; qualidade=? |
 | 40 | 2026-09-14 02:05 | BTC/USDT | B | compra | 77643.8 | 77455.8 | 78520.0 | 4.66 | lateral | descartado | — | sim | correlacao=? ; regime=? ; qualidade=? |
 | 39 | 2026-09-13 18:05 | ARB/USDT | B | compra | 0.13802 | 0.13717 | 0.14104 | 3.57 | lateral | descartado | — | sim | correlacao=? ; regime=? ; qualidade=? |
 | 38 | 2026-09-13 05:05 | XRP/USDT | A | venda | 1.3572 | 1.3623 | 1.3453 | 2.35 | baixa | entrado | 2.35 | sim | correlacao=? ; regime=? ; qualidade=? |
