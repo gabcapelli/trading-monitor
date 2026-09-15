@@ -1,4 +1,4 @@
-# Calibracao — registro mecanico de sinais (atualizado 2026-09-15 10:05 BRT)
+# Calibracao — registro mecanico de sinais (atualizado 2026-09-15 11:05 BRT)
 
 > **Nao edite este arquivo** — ele e reescrito a cada execucao a partir da tabela `sinais_mecanicos`. Diferente de `sinais.md`, aqui nao ha nenhuma decisao sua: e TODA confirmacao mecanica detectada, inclusive as descartadas por R:R baixo, com desfecho medido por geometria de preco (OHLC de 1h contra stop/alvo sugeridos).
 >
@@ -11,14 +11,14 @@ Regra de alvo em vigor agora: **proximo** (coluna `Regra` abaixo mostra qual dec
 | Grupo | Sinais | Resolvidos | Acertos | Soma (expectancia) |
 |---|---|---|---|---|
 | Aceitos (R:R >= 2) | 32 | 32 | 4 (12%) | -18.93R (-0.591R/sinal) |
-| Descartados por R:R baixo | 65 | 63 | 47 (75%) | +9.93R (+0.158R/sinal) |
-| TODOS | 97 | 95 | 51 (54%) | -9.00R (-0.095R/sinal) |
+| Descartados por R:R baixo | 66 | 65 | 47 (72%) | +7.93R (+0.122R/sinal) |
+| TODOS | 98 | 97 | 51 (53%) | -11.00R (-0.113R/sinal) |
 
 **MAE dos acertos** (quanto o preco foi CONTRA antes de dar certo) — n=51, mediana 0.37R, maximo 0.98R, 12% acima de 0.8R.
 
 > Le-se assim: apertar `STOP_BUFFER_ATR_MULT` mata os acertos cujo MAE ja esta perto de 1R. Se essa cauda for gorda, nao ha folga pra apertar o stop.
 
-**MFE dos erros** (quanto o preco foi A FAVOR antes de bater stop) — n=44, mediana 0.36R, 27% chegaram a 1R a favor.
+**MFE dos erros** (quanto o preco foi A FAVOR antes de bater stop) — n=46, mediana 0.45R, 30% chegaram a 1R a favor.
 
 > Le-se assim: se muitos erros chegaram perto de 1R antes de virar, o problema esta no ALVO/saida, nao na entrada. Se a mediana for baixa, o problema esta na entrada e mexer no alvo nao resolve.
 
@@ -26,9 +26,10 @@ Regra de alvo em vigor agora: **proximo** (coluna `Regra` abaixo mostra qual dec
 
 | Par | Setup | Direcao | Aceito | Regra | R:R (recente) | R:R (proximo) | Resultado | MAE | MFE | Candles | Quando |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| DOGE/USDT | B | compra | nao | proximo | 3.45 | 1.45 | aberto | — | — | — | 2026-09-15 11:05 |
 | ETH/USDT | B | compra | nao | proximo | 9.09 | 0.49 | +0.49 | 0.374 | 0.633 | 2 | 2026-09-15 06:05 |
-| SOL/USDT | B | compra | nao | proximo | 6.40 | 1.36 | aberto | 0.382 | 0.871 | — | 2026-09-15 06:05 |
-| DOGE/USDT | A | venda | nao | proximo | 1.23 | 0.70 | aberto | 0.995 | 0.498 | — | 2026-09-15 05:05 |
+| SOL/USDT | B | compra | nao | proximo | 6.40 | 1.36 | -1.00 | 1.543 | 1.146 | 5 | 2026-09-15 06:05 |
+| DOGE/USDT | A | venda | nao | proximo | 1.23 | 0.70 | -1.00 | 1.772 | 1.194 | 6 | 2026-09-15 05:05 |
 | BTC/USDT | B | venda | nao | proximo | 1.87 | 0.09 | +0.09 | 0.065 | 0.856 | 1 | 2026-09-15 04:05 |
 | XRP/USDT | B | venda | nao | proximo | 1.31 | 1.31 | -1.00 | 1.722 | 1.066 | 6 | 2026-09-15 04:05 |
 | SUI/USDT | A | venda | nao | proximo | 3.00 | 0.41 | +0.41 | 0.445 | 0.871 | 1 | 2026-09-15 04:05 |
@@ -50,4 +51,3 @@ Regra de alvo em vigor agora: **proximo** (coluna `Regra` abaixo mostra qual dec
 | DOGE/USDT | B | compra | nao | proximo | 0.33 | 0.26 | -1.00 | 1.273 | 0.203 | 3 | 2026-09-14 07:05 |
 | ETH/USDT | B | venda | nao | proximo | 3.28 | 0.22 | +0.22 | 0.983 | 0.442 | 1 | 2026-09-14 06:05 |
 | BTC/USDT | B | compra | sim | proximo | 11.94 | 4.66 | -1.00 | 1.068 | 0.055 | 1 | 2026-09-14 02:05 |
-| DOGE/USDT | B | venda | nao | proximo | 4.19 | 0.77 | -1.00 | 1.416 | 0.167 | 3 | 2026-09-14 01:05 |
