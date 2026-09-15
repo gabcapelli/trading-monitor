@@ -1,4 +1,4 @@
-# Calibracao — registro mecanico de sinais (atualizado 2026-09-15 08:05 BRT)
+# Calibracao — registro mecanico de sinais (atualizado 2026-09-15 09:05 BRT)
 
 > **Nao edite este arquivo** — ele e reescrito a cada execucao a partir da tabela `sinais_mecanicos`. Diferente de `sinais.md`, aqui nao ha nenhuma decisao sua: e TODA confirmacao mecanica detectada, inclusive as descartadas por R:R baixo, com desfecho medido por geometria de preco (OHLC de 1h contra stop/alvo sugeridos).
 >
@@ -27,8 +27,8 @@ Regra de alvo em vigor agora: **proximo** (coluna `Regra` abaixo mostra qual dec
 | Par | Setup | Direcao | Aceito | Regra | R:R (recente) | R:R (proximo) | Resultado | MAE | MFE | Candles | Quando |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | ETH/USDT | B | compra | nao | proximo | 9.09 | 0.49 | +0.49 | 0.374 | 0.633 | 2 | 2026-09-15 06:05 |
-| SOL/USDT | B | compra | nao | proximo | 6.40 | 1.36 | aberto | 0.214 | 0.687 | — | 2026-09-15 06:05 |
-| DOGE/USDT | A | venda | nao | proximo | 1.23 | 0.70 | aberto | 0.717 | 0.458 | — | 2026-09-15 05:05 |
+| SOL/USDT | B | compra | nao | proximo | 6.40 | 1.36 | aberto | 0.382 | 0.687 | — | 2026-09-15 06:05 |
+| DOGE/USDT | A | venda | nao | proximo | 1.23 | 0.70 | aberto | 0.796 | 0.498 | — | 2026-09-15 05:05 |
 | BTC/USDT | B | venda | nao | proximo | 1.87 | 0.09 | +0.09 | 0.065 | 0.856 | 1 | 2026-09-15 04:05 |
 | XRP/USDT | B | venda | nao | proximo | 1.31 | 1.31 | aberto | 0.533 | 1.066 | — | 2026-09-15 04:05 |
 | SUI/USDT | A | venda | nao | proximo | 3.00 | 0.41 | +0.41 | 0.445 | 0.871 | 1 | 2026-09-15 04:05 |
