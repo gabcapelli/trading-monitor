@@ -4,17 +4,17 @@
 
 | ID | Criado em | Par | Setup | Direcao | Preco entrada | Stop sugerido | Alvo sugerido | R:R sugerido | Tend. 4h | Status | Resultado (R) | Conta 30? | Checks manuais |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 51 | 2026-09-17 03:05 | UNI/USDT | B | venda | 6.7350 | 6.8507 | 6.5010 | 2.02 | lateral | candidato | — | sim | correlacao=? ; regime=? ; qualidade=? |
-| 50 | 2026-09-17 02:05 | LINK/USDT | B | compra | 11.14 | 11.03 | 11.41 | 2.46 | lateral | candidato | — | sim | correlacao=? ; regime=? ; qualidade=? |
-| 49 | 2026-09-17 00:05 | LINK/USDT | B | compra | 11.13 | 11.02 | 11.41 | 2.64 | lateral | candidato | — | sim | correlacao=? ; regime=? ; qualidade=? |
-| 48 | 2026-09-16 18:05 | LINK/USDT | B | compra | 10.99 | 10.88 | 11.41 | 3.73 | lateral | candidato | — | sim | correlacao=? ; regime=? ; qualidade=? |
-| 47 | 2026-09-16 09:05 | LINK/USDT | B | compra | 10.87 | 10.79 | 11.41 | 6.22 | lateral | candidato | — | sim | correlacao=? ; regime=? ; qualidade=? |
-| 46 | 2026-09-16 09:05 | BTC/USDT | B | compra | 76205.3 | 75796.6 | 77198.5 | 2.43 | lateral | candidato | — | sim | correlacao=? ; regime=? ; qualidade=? |
-| 45 | 2026-09-16 04:05 | SOL/USDT | B | compra | 97.34 | 96.73 | 100.09 | 4.51 | lateral | candidato | — | sim | correlacao=? ; regime=? ; qualidade=? |
-| 44 | 2026-09-15 20:05 | LINK/USDT | B | compra | 10.89 | 10.79 | 11.41 | 5.09 | lateral | candidato | — | sim | correlacao=? ; regime=? ; qualidade=? |
-| 43 | 2026-09-15 20:05 | SOL/USDT | B | compra | 97.09 | 96.10 | 100.09 | 3.03 | lateral | candidato | — | sim | correlacao=? ; regime=? ; qualidade=? |
-| 42 | 2026-09-15 17:05 | ETH/USDT | B | compra | 2415.5 | 2393.2 | 2474.3 | 2.63 | alta | candidato | — | sim | correlacao=? ; regime=? ; qualidade=? |
-| 41 | 2026-09-15 17:05 | BTC/USDT | B | compra | 76144.9 | 75693.7 | 77198.5 | 2.34 | lateral | candidato | — | sim | correlacao=? ; regime=? ; qualidade=? |
+| 51 | 2026-09-17 03:05 | UNI/USDT | B | venda | 6.7350 | 6.8507 | 6.5010 | 2.02 | lateral | entrado | -1.00 | sim | correlacao=? ; regime=? ; qualidade=? |
+| 50 | 2026-09-17 02:05 | LINK/USDT | B | compra | 11.14 | 11.03 | 11.41 | 2.46 | lateral | entrado | 2.46 | sim | correlacao=? ; regime=? ; qualidade=? |
+| 49 | 2026-09-17 00:05 | LINK/USDT | B | compra | 11.13 | 11.02 | 11.41 | 2.64 | lateral | entrado | 2.64 | sim | correlacao=? ; regime=? ; qualidade=? |
+| 48 | 2026-09-16 18:05 | LINK/USDT | B | compra | 10.99 | 10.88 | 11.41 | 3.73 | lateral | entrado | -1.00 | sim | correlacao=? ; regime=? ; qualidade=? |
+| 47 | 2026-09-16 09:05 | LINK/USDT | B | compra | 10.87 | 10.79 | 11.41 | 6.22 | lateral | entrado | -1.00 | sim | correlacao=? ; regime=? ; qualidade=? |
+| 46 | 2026-09-16 09:05 | BTC/USDT | B | compra | 76205.3 | 75796.6 | 77198.5 | 2.43 | lateral | entrado | -1.00 | sim | correlacao=? ; regime=? ; qualidade=? |
+| 45 | 2026-09-16 04:05 | SOL/USDT | B | compra | 97.34 | 96.73 | 100.09 | 4.51 | lateral | entrado | -1.00 | sim | correlacao=? ; regime=? ; qualidade=? |
+| 44 | 2026-09-15 20:05 | LINK/USDT | B | compra | 10.89 | 10.79 | 11.41 | 5.09 | lateral | entrado | -1.00 | sim | correlacao=? ; regime=? ; qualidade=? |
+| 43 | 2026-09-15 20:05 | SOL/USDT | B | compra | 97.09 | 96.10 | 100.09 | 3.03 | lateral | entrado | -1.00 | sim | correlacao=? ; regime=? ; qualidade=? |
+| 42 | 2026-09-15 17:05 | ETH/USDT | B | compra | 2415.5 | 2393.2 | 2474.3 | 2.63 | alta | entrado | -1.00 | sim | correlacao=? ; regime=? ; qualidade=? |
+| 41 | 2026-09-15 17:05 | BTC/USDT | B | compra | 76144.9 | 75693.7 | 77198.5 | 2.34 | lateral | entrado | -1.00 | sim | correlacao=? ; regime=? ; qualidade=? |
 | 40 | 2026-09-14 02:05 | BTC/USDT | B | compra | 77643.8 | 77455.8 | 78520.0 | 4.66 | lateral | descartado | — | sim | correlacao=? ; regime=? ; qualidade=? |
 | 39 | 2026-09-13 18:05 | ARB/USDT | B | compra | 0.13802 | 0.13717 | 0.14104 | 3.57 | lateral | descartado | — | sim | correlacao=? ; regime=? ; qualidade=? |
 | 38 | 2026-09-13 05:05 | XRP/USDT | A | venda | 1.3572 | 1.3623 | 1.3453 | 2.35 | baixa | entrado | 2.35 | sim | correlacao=? ; regime=? ; qualidade=? |
