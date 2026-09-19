@@ -2,9 +2,9 @@
   "posicoes_abertas": [],
   "pares": {
     "BTC-USDT-SWAP": {
-      "status": "zona_expirada_setup_A",
+      "status": "sem_zona",
       "zone": null,
-      "last_1h_ts": 1789776000000,
+      "last_1h_ts": 1789779600000,
       "avisado_aberto_longo": false,
       "cooldowns": {
         "venda": {
@@ -20,7 +20,7 @@
     "ETH-USDT-SWAP": {
       "status": "sem_zona",
       "zone": null,
-      "last_1h_ts": 1789776000000,
+      "last_1h_ts": 1789779600000,
       "avisado_aberto_longo": false,
       "cooldowns": {
         "venda": {
@@ -36,7 +36,7 @@
     "SOL-USDT-SWAP": {
       "status": "sem_zona",
       "zone": null,
-      "last_1h_ts": 1789776000000,
+      "last_1h_ts": 1789779600000,
       "avisado_aberto_longo": false,
       "cooldowns": {
         "venda": {
@@ -57,12 +57,12 @@
         "level": 1.3804,
         "zone_low": 1.3758232142857143,
         "zone_high": 1.3849767857142858,
-        "candles_since_creation": 6,
+        "candles_since_creation": 7,
         "touches": 0,
         "created_at": 1789754400000,
         "last_touch_ts": 1789754400000
       },
-      "last_1h_ts": 1789776000000,
+      "last_1h_ts": 1789779600000,
       "avisado_aberto_longo": false,
       "cooldowns": {
         "compra": {
@@ -76,19 +76,9 @@
       }
     },
     "DOGE-USDT-SWAP": {
-      "status": "zona_mapeada_setup_B",
-      "zone": {
-        "setup": "B",
-        "direction": "compra",
-        "level": 0.08845,
-        "zone_low": 0.08820392857142857,
-        "zone_high": 0.08869607142857143,
-        "candles_since_creation": 0,
-        "touches": 0,
-        "created_at": 1789776000000,
-        "last_touch_ts": 1789776000000
-      },
-      "last_1h_ts": 1789776000000,
+      "status": "invalidado_setup_B",
+      "zone": null,
+      "last_1h_ts": 1789779600000,
       "avisado_aberto_longo": false,
       "cooldowns": {
         "venda": {
@@ -96,15 +86,15 @@
           "until_ts": 1789786800000
         },
         "compra": {
-          "level": 0.08784,
-          "until_ts": 1789801200000
+          "level": 0.08845,
+          "until_ts": 1789808400000
         }
       }
     },
     "ARB-USDT-SWAP": {
       "status": "sem_zona",
       "zone": null,
-      "last_1h_ts": 1789776000000,
+      "last_1h_ts": 1789779600000,
       "avisado_aberto_longo": false,
       "cooldowns": {
         "venda": {
@@ -118,19 +108,9 @@
       }
     },
     "WLD-USDT-SWAP": {
-      "status": "zona_mapeada_setup_B",
-      "zone": {
-        "setup": "B",
-        "direction": "venda",
-        "level": 0.4115,
-        "zone_low": 0.40841249999999996,
-        "zone_high": 0.4145875,
-        "candles_since_creation": 7,
-        "touches": 0,
-        "created_at": 1789750800000,
-        "last_touch_ts": 1789750800000
-      },
-      "last_1h_ts": 1789776000000,
+      "status": "zona_expirada_setup_B",
+      "zone": null,
+      "last_1h_ts": 1789779600000,
       "avisado_aberto_longo": false,
       "cooldowns": {
         "compra": {
@@ -138,15 +118,15 @@
           "until_ts": 1789718400000
         },
         "venda": {
-          "level": 0.4287,
-          "until_ts": 1789776000000
+          "level": 0.4115,
+          "until_ts": 1789808400000
         }
       }
     },
     "SUI-USDT-SWAP": {
-      "status": "zona_expirada_setup_A",
+      "status": "sem_zona",
       "zone": null,
-      "last_1h_ts": 1789776000000,
+      "last_1h_ts": 1789779600000,
       "avisado_aberto_longo": false,
       "cooldowns": {
         "venda": {
@@ -162,7 +142,7 @@
     "UNI-USDT-SWAP": {
       "status": "sem_zona",
       "zone": null,
-      "last_1h_ts": 1789776000000,
+      "last_1h_ts": 1789779600000,
       "avisado_aberto_longo": false,
       "cooldowns": {
         "venda": {
@@ -176,9 +156,9 @@
       }
     },
     "LINK-USDT-SWAP": {
-      "status": "invalidado_setup_B",
+      "status": "sem_zona",
       "zone": null,
-      "last_1h_ts": 1789776000000,
+      "last_1h_ts": 1789779600000,
       "avisado_aberto_longo": false,
       "cooldowns": {
         "venda": {
