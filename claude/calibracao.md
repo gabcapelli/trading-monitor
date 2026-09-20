@@ -1,4 +1,4 @@
-# Calibracao — registro mecanico de sinais (atualizado 2026-09-20 15:05 BRT)
+# Calibracao — registro mecanico de sinais (atualizado 2026-09-20 16:05 BRT)
 
 > **Nao edite este arquivo** — ele e reescrito a cada execucao a partir da tabela `sinais_mecanicos`. Diferente de `sinais.md`, aqui nao ha nenhuma decisao sua: e TODA confirmacao mecanica detectada, inclusive as descartadas por R:R baixo, com desfecho medido por geometria de preco (OHLC de 1h contra stop/alvo sugeridos).
 >
@@ -11,10 +11,10 @@ Regra de alvo em vigor agora: **proximo** (coluna `Regra` abaixo mostra qual dec
 | Grupo | Sinais | Resolvidos | Acertos | Soma (expectancia) |
 |---|---|---|---|---|
 | Aceitos (R:R >= 2) | 48 | 48 | 8 (17%) | -20.36R (-0.424R/sinal) |
-| Descartados por R:R baixo | 118 | 117 | 76 (65%) | -0.25R (-0.002R/sinal) |
-| TODOS | 166 | 165 | 84 (51%) | -20.61R (-0.125R/sinal) |
+| Descartados por R:R baixo | 118 | 118 | 77 (65%) | -0.18R (-0.002R/sinal) |
+| TODOS | 166 | 166 | 85 (51%) | -20.53R (-0.124R/sinal) |
 
-**MAE dos acertos** (quanto o preco foi CONTRA antes de dar certo) — n=84, mediana 0.38R, maximo 0.98R, 11% acima de 0.8R.
+**MAE dos acertos** (quanto o preco foi CONTRA antes de dar certo) — n=85, mediana 0.38R, maximo 0.98R, 11% acima de 0.8R.
 
 > Le-se assim: apertar `STOP_BUFFER_ATR_MULT` mata os acertos cujo MAE ja esta perto de 1R. Se essa cauda for gorda, nao ha folga pra apertar o stop.
 
@@ -26,7 +26,7 @@ Regra de alvo em vigor agora: **proximo** (coluna `Regra` abaixo mostra qual dec
 
 | Par | Setup | Direcao | Aceito | Regra | R:R (recente) | R:R (proximo) | Resultado | MAE | MFE | Candles | Quando |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| LINK/USDT | B | venda | nao | proximo | 3.09 | 0.08 | aberto | — | — | — | 2026-09-20 15:05 |
+| LINK/USDT | B | venda | nao | proximo | 3.09 | 0.08 | +0.08 | 0.476 | 0.377 | 1 | 2026-09-20 15:05 |
 | WLD/USDT | B | venda | nao | proximo | 0.51 | 0.51 | -1.00 | 1.012 | 0.118 | 1 | 2026-09-20 06:05 |
 | LINK/USDT | B | compra | nao | proximo | 2.22 | 0.11 | +0.11 | 0.156 | 0.374 | 1 | 2026-09-19 20:05 |
 | WLD/USDT | A | compra | sim | proximo | 2.69 | 2.69 | -1.00 | 2.688 | 0.616 | 2 | 2026-09-19 17:05 |
