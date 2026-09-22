@@ -476,10 +476,10 @@ Script: `monitor/replay_qmom.py` · log: `claude/qmom.log` · fonte: *Quantitati
 
 | | Amostra A | **Amostra D (decide)** |
 |---|---|---|
-| Momentum XS puro (controle) | Sharpe +0.36 | **+0.13** |
-| Momentum de qualidade (FIP) | Sharpe −0.22 | **−0.77** |
+| Momentum XS puro (controle) | Sharpe −0.04 | **−0.24**, IC [−1.22, +0.75] |
+| Momentum de qualidade (FIP) | Sharpe −0.22 | **−0.01**, IC [−1.05, +1.04] |
 
-**Veredito: NÃO PASSA** (as duas). O filtro de qualidade **piora** o resultado em cripto, ao contrário do que o livro reporta em ações. Coerente com o resto dos achados: em cripto o que se move em saltos tende a continuar, e não a reverter.
+**Veredito: NÃO PASSA** (as duas). Momentum de 12 meses no corte transversal não funciona em cripto, com ou sem o filtro de qualidade — os dois ficam em torno de zero, sem diferença entre si. O prêmio que o livro documenta em ações não aparece aqui.
 
 ## Leitura conjunta
 
