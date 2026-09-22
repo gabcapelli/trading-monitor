@@ -66,7 +66,7 @@ def baixar(inst_id, bar="1Dutc", dias=3000):
         if proximo <= cursor:
             break
         cursor = proximo
-        if len(raw) < LIMITE:
+        if len(raw) < LIMITE_SPOT:
             break
     candles = [todos[k] for k in sorted(todos)]
     os.makedirs(CACHE_DIR, exist_ok=True)
@@ -123,3 +123,61 @@ def baixar_funding(inst_id, dias=3000):
     with open(fpath, "w") as f:
         json.dump(serie, f)
     return serie
+
+
+SPOT_BASE = "https://api.binance.com"
+LIMITE_SPOT = 1000   # a API de spot limita a 1000 por pagina (a de futuros aceita 1500)
+
+
+def baixar_spot(inst_id, bar="1Dutc", dias=3000):
+    """Candles do mercado a VISTA (spot). Mesmo formato de baixar()."""
+    intervalo = {"1Dutc": "1d", "1H": "1h", "8H": "8h"}[bar]
+    sym = simbolo(inst_id)
+    fpath = os.path.join(CACHE_DIR, f"{sym}_spot_{intervalo}_{dias}.json")
+    if os.path.exists(fpath):
+        with open(fpath) as f:
+            return json.load(f)
+    # marca de "nao existe mercado a vista": evita repetir 5 tentativas a cada rodada
+    fvazio = os.path.join(CACHE_DIR, f"{sym}_spot_INEXISTENTE")
+    if os.path.exists(fvazio):
+        return []
+    agora = int(time.time() * 1000)
+    cursor, todos = agora - dias * MS_DIA, {}
+    while cursor < agora:
+        url = (f"{SPOT_BASE}/api/v3/klines?symbol={sym}&interval={intervalo}"
+               f"&startTime={cursor}&limit={LIMITE_SPOT}")
+        for tentativa in range(5):
+            try:
+                req = urllib.request.Request(url, headers={"User-Agent": "btc-monitor-script"})
+                with urllib.request.urlopen(req, timeout=20) as resp:
+                    raw = json.loads(resp.read().decode("utf-8"))
+                break
+            except urllib.error.HTTPError as e:
+                if e.code == 400:   # simbolo inexistente no spot
+                    os.makedirs(CACHE_DIR, exist_ok=True)
+                    open(fvazio, "w").close()
+                    return []
+                if tentativa == 4:
+                    raise
+                time.sleep(2 + 2 * tentativa)
+            except Exception:
+                if tentativa == 4:
+                    raise
+                time.sleep(2 + 2 * tentativa)
+        time.sleep(0.12)
+        if not raw:
+            break
+        for k in raw:
+            if int(k[6]) < agora:
+                todos[int(k[0])] = [int(k[0]), float(k[1]), float(k[2]), float(k[3]), float(k[4]), float(k[5])]
+        prox = int(raw[-1][0]) + 1
+        if prox <= cursor:
+            break
+        cursor = prox
+        if len(raw) < LIMITE_SPOT:
+            break
+    candles = [todos[k] for k in sorted(todos)]
+    os.makedirs(CACHE_DIR, exist_ok=True)
+    with open(fpath, "w") as f:
+        json.dump(candles, f)
+    return candles

@@ -1,0 +1,23 @@
+amostra A: 19 pares com spot | amostra D: 144 pares com spot
+
+====================================================================================================
+AMOSTRA A (desenvolvimento)
+====================================================================================================
+  condicional : dias=2568 | retorno +5.4%/ano | IC95 [+4.1%, +6.7%]
+    Sharpe +5.50 | IC95 [+4.16, +6.95] | vol 1.0%/ano
+  sempre      : dias=2568 | retorno +5.0%/ano | IC95 [+3.7%, +6.4%]
+    Sharpe +4.56 | IC95 [+2.94, +6.67] | vol 1.1%/ano
+  top         : dias=2568 | retorno -0.5%/ano | IC95 [-2.1%, +1.3%]
+    Sharpe -0.34 | IC95 [-1.79, +0.94] | vol 1.3%/ano
+
+====================================================================================================
+AMOSTRA D -- DECIDE (primaria: condicional)
+====================================================================================================
+  condicional (PRIMARIA): dias=2422 | retorno +6.3%/ano | IC95 [+4.8%, +8.0%]
+    Sharpe +5.56 | IC95 [+4.74, +6.41] | vol 1.1%/ano
+  sempre       (descritivo): dias=2422 | retorno +2.9%/ano | IC95 [+1.2%, +4.7%]
+    Sharpe +2.07 | IC95 [+0.88, +3.32] | vol 1.4%/ano
+  top          (descritivo): dias=2422 | retorno +1.3%/ano | IC95 [-0.6%, +3.4%]
+    Sharpe +0.82 | IC95 [-0.37, +1.92] | vol 1.6%/ano
+
+==> DECISAO cash-and-carry: PASSA

@@ -504,6 +504,48 @@ A skew deu **+0.64 (A), +0.67 (D) e agora +0.20 (E)**. A "replicação" que pare
 
 Combinar não resolveu: o combo (+0.42) ficou na mesma faixa dos componentes, e não acima deles, o que indica que o pouco que existe é o mesmo pedaço de exposição em todos — não três fontes independentes de retorno.
 
+## 20. Cash-and-carry (spot + perpétuo) — **PASSA**, com ressalva grande — 22/09/2026
+
+Script: `monitor/replay_cash_and_carry.py` · log: `claude/cash_and_carry.log` · fonte: *151 Trading Strategies*, estratégia 6.2
+
+**É a primeira estratégia a passar no critério pré-registrado, em 20 estudos.** Também é a única cujo retorno **não depende de prever nada**: compra-se o ativo no mercado à vista e vende-se o perpétuo na mesma quantidade. A posição fica neutra em preço e o que sobra é o funding, pago por quem está alavancado comprado. Ataca diretamente o achado do estudo 14 ("o carry é real e coletável, mas a variância do preço o engole").
+
+- **Variante primária ("condicional"):** carrega o par só quando a média de funding dos últimos 7 dias é positiva.
+- **Capital:** metade no spot, metade como margem do perpétuo (sem alavancagem; sem risco de liquidação).
+- **Custo:** 0.30% por ciclo completo (as duas pernas, ida e volta).
+
+| Amostra | Retorno | IC95 | Sharpe | Vol |
+|---|---|---|---|---|
+| A (19 majors, desenvolvimento) | +5.4%/ano | [+4.1%, +6.7%] | +5.50 | 1.0% |
+| **D (144 alts, decide)** | **+6.3%/ano** | **[+4.8%, +8.0%]** | **+5.56** | 1.1% |
+
+Drawdown máximo de **2.03%** em 6.6 anos; pior dia −0.30%. Média de 47 pares carregados por dia.
+
+### A ressalva que muda a conclusão prática: o prêmio secou
+
+| Período | D (alts) | A (majors) |
+|---|---|---|
+| 2020–2026 | +6.3%/ano | +5.4%/ano |
+| 2024–2026 | +3.1%/ano | +1.6%/ano |
+| **2025–2026** | **+1.0%/ano** (IC [+0.5, +1.5]) | **−0.9%/ano** (IC [−1.6, −0.2]) |
+
+Ano a ano nos alts: 2020 +10.2%, 2021 +20.7%, **2022 −1.5%**, 2023 +4.1%, 2024 +6.6%, 2025 +0.9%, 2026 +0.9%.
+
+O grosso do retorno veio de 2020–2021, quando havia alavancagem comprada em excesso. Depois disso o prêmio foi competido: hoje rende ~1%/ano nos alts e **negativo nos majors**. Isso bate com a literatura, que reporta o Sharpe do carry em cripto caindo de 6.4 (2020–2025) para negativo em 2025.
+
+**Sensibilidade ao custo** (o risco operacional principal, porque em alt ilíquido 0.30% é otimista):
+
+| Custo por ciclo | Retorno | Sharpe |
+|---|---|---|
+| 0.3% (modelado) | +6.3%/ano | +5.56 |
+| 0.6% | +4.7%/ano | +3.95 |
+| 1.0% | +2.6%/ano | +1.99 |
+| 2.0% | **−2.7%/ano** | −1.56 |
+
+**O que o teste não modela:** slippage real em alts ilíquidos, risco de delistagem do perpétuo enquanto a posição está montada (a amostra só tem pares vivos hoje), risco de corretora/custódia, e mudanças de taxa por nível de volume.
+
+**Veredito: PASSA o critério, e é mecanicamente operável — mas no regime atual rende ~1%/ano**, abaixo de aplicações em stablecoin, e com o custo real podendo zerar isso. A leitura honesta: a estratégia é real e o mecanismo existe, só que o prêmio hoje é pequeno demais para justificar o trabalho e os riscos operacionais. Se o funding voltar a níveis de 2020–2021, ela volta a fazer sentido — e é fácil monitorar isso, porque o próprio sinal (média de funding de 7 dias) diz quando o prêmio está de volta.
+
 ## Leitura conjunta
 
 Mesma direção do achado da auditoria v6 sobre o checklist mecânico dos Setups A/B. Nenhum dos dez setups de vídeo tem edge mecânico demonstrável nesses 20 pares (o 9.1 também não, fora da amostra, nos 80 pares do estudo 6):
