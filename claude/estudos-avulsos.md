@@ -384,6 +384,35 @@ Primeiro estudo **fora da família price action**: o sinal vem do **funding**, n
 
 **Estado das amostras:** A, B, C gastas; **D agora foi usada duas vezes** (varredura do 1-2-3 e carry). Para o próximo estudo, a amostra limpa restante é o paper trade ou um universo novo (ex.: perps de outra corretora).
 
+## 15. Skew do Carver (estratégia 24) — 22/09/2026
+
+Script: `monitor/replay_carver_skew.py` · log: `claude/carver_skew.log`
+
+**Tese:** investidor gosta de ativo-loteria (skew positiva) e paga prêmio para não carregar skew negativa. Então compra-se o que teve skew negativa recente e vende-se o que teve skew positiva. Em cripto isso é especialmente testável, porque memecoin é o caso extremo de ativo-loteria.
+
+- **Forecast = −skew** dos retornos diários em janelas de 60, 120 e 240 dias, suavizado por EWMA de span = janela/4, escalas 33.3 / 37.2 / 39.2, limite ±20; a primária é a média das três.
+- **Cross-sectional:** o mesmo forecast menos a mediana do dia.
+- Dimensionamento, custo e limites: idênticos ao estudo 14.
+
+| | Amostra A (desenvolvimento) | **Amostra D (decide)** |
+|---|---|---|
+| Skew combinada | Sharpe −0.65 | **Sharpe −0.26**, IC [−1.06, +0.51] |
+| **Skew cross-sectional** | Sharpe **+0.64**, alfa +1.7%/ano | **Sharpe +0.67**, IC [−0.13, +1.44]; alfa +2.5%/ano, IC [−1.9, +7.0] |
+
+**Veredito: NÃO PASSA** — mas é o resultado mais interessante dos 15 estudos, e por um motivo diferente dos outros.
+
+- **Replicou:** +0.64 nos 20 pares e +0.67 nos 215 pares da Binance. Nenhum outro estudo repetiu o número fora da amostra.
+- **A magnitude é plausível:** o livro reporta 0.3–0.6 para skew isolada em futuros. Não acionou o alerta de sanidade (ao contrário do carry relativo, que deu +1.77 e não replicou).
+- **A versão direcional (combinada) é negativa,** o que também faz sentido: ela fica comprada em quase tudo que caiu feio, num mercado de memecoins.
+
+### Por que este estudo não pode ser decidido com os dados que existem
+
+Com Sharpe de 0.65 e ~6.3 anos de histórico, o erro padrão do Sharpe é ≈ 1/√anos ≈ 0.40. Ou seja, o IC95 tem largura de ±0.78 **independentemente de quantos pares usemos** — os pares são correlacionados e o que conta é o tempo. Para o IC95 sair de cima do zero com Sharpe 0.65, seriam necessários **~9 a 10 anos** de histórico. Perpétuo de cripto só existe desde 2019/2020.
+
+**Consequência:** não é possível "provar" esta estratégia com dados históricos de cripto, nem gastando mais amostras. As saídas são (a) paper trade adiante, sabendo que levaria anos para confirmar; (b) aceitar operar com evidência fraca e tamanho pequeno, o que é decisão do operador, não do teste; ou (c) arquivar.
+
+**Estado das amostras:** A, B, C gastas; D usada três vezes (varredura do 1-2-3, carry, skew). Depois deste estudo, a amostra limpa restante é o paper trade.
+
 ## Leitura conjunta
 
 Mesma direção do achado da auditoria v6 sobre o checklist mecânico dos Setups A/B. Nenhum dos dez setups de vídeo tem edge mecânico demonstrável nesses 20 pares (o 9.1 também não, fora da amostra, nos 80 pares do estudo 6):

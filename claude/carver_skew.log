@@ -1,0 +1,22 @@
+amostra A: 20 instrumentos
+amostra D: 215 instrumentos
+
+====================================================================================================
+AMOSTRA A (20 pares) -- desenvolvimento, nao decide
+====================================================================================================
+  skew combinada (60/120/240): dias=2449 | retorno -11.3%/ano | Sharpe -0.65 | IC95 [-1.42, +0.07]
+    alfa vs mercado +0.2%/ano | IC95 [-9.5%, +10.1%] | Sharpe do mercado +1.06
+  skew cross-sectional: dias=2349 | retorno +3.5%/ano | Sharpe +0.64 | IC95 [-0.14, +1.43]
+    alfa vs mercado +1.7%/ano | IC95 [-2.5%, +5.9%] | Sharpe do mercado +1.06
+
+====================================================================================================
+AMOSTRA D (215 pares) -- DECIDE
+====================================================================================================
+  skew combinada (60/120/240): dias=2303 | retorno -3.6%/ano | Sharpe -0.26 | IC95 [-1.06, +0.51]
+    alfa vs mercado +2.2%/ano | IC95 [-6.0%, +10.7%] | Sharpe do mercado +0.73
+  skew cross-sectional: dias=2292 | retorno +4.4%/ano | Sharpe +0.67 | IC95 [-0.13, +1.44]
+    alfa vs mercado +2.5%/ano | IC95 [-1.9%, +7.0%] | Sharpe do mercado +0.73
+
+==> DECISAO skew combinada (60/120/240): NAO PASSA
+
+==> DECISAO skew cross-sectional: NAO PASSA
