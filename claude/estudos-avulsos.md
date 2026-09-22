@@ -49,6 +49,10 @@ Quando o vídeo deixa parâmetros em aberto e testamos uma grade de combinaçõe
 
 A grade completa fica no log, sem poder de decisão. Esses três estudos usam o cache com volume de `monitor/replay_stoch_vwap.py`; os logs estão em `claude/`.
 
+**Atualizações do protocolo (valem para os estudos seguintes; os anteriores não são refeitos):**
+- **Confirmação fora da amostra** (desde o estudo 8): a célula escolhida também precisa ter IC95 > 0 nos 80 pares de `replay_91_beta.UNIVERSO_B`. PASSA só se as duas etapas passarem.
+- **Mínimo de n ≥ 200 trades no treino** para uma célula concorrer (decidido em 22/09/2026, depois do estudo 9). No estudo 9, o mínimo de 30 deixou uma célula semanal com 40 trades vencer por sorte. A alternativa — seleção separada por tempo gráfico com o erro dividido entre eles — foi descartada por tirar poder justamente do diário, que tem mais dados. Se nenhuma célula tiver n ≥ 200 no treino, o estudo não tem amostra para decidir e é registrado assim, não como NÃO PASSA.
+
 ## 3. Estocástico + bandas VWAP / MM144 ("scalp em 5 minutos") — 22/09/2026
 
 Script: `monitor/replay_stoch_vwap.py` · log: `claude/stoch_vwap.log`
