@@ -51,6 +51,7 @@ A grade completa fica no log, sem poder de decisão. Esses três estudos usam o 
 
 **Atualizações do protocolo (valem para os estudos seguintes; os anteriores não são refeitos):**
 - **Confirmação fora da amostra** (desde o estudo 8): a célula escolhida também precisa ter IC95 > 0 nos 80 pares de `replay_91_beta.UNIVERSO_B`. PASSA só se as duas etapas passarem.
+- **Bootstrap por bloco de semana** (não por dia) quando a duração média do trade passar de ~5 dias, e **teste de beta obrigatório** (excesso sobre entrada aleatória de mesma duração, mesmo par e mesmo lado) antes de declarar PASSA em qualquer estratégia direcional. Ambos decididos em 22/09/2026, depois de o estudo 13 passar no critério antigo e cair nos dois testes.
 - **Mínimo de n ≥ 200 trades no treino** para uma célula concorrer (decidido em 22/09/2026, depois do estudo 9). No estudo 9, o mínimo de 30 deixou uma célula semanal com 40 trades vencer por sorte. A alternativa — seleção separada por tempo gráfico com o erro dividido entre eles — foi descartada por tirar poder justamente do diário, que tem mais dados. Se nenhuma célula tiver n ≥ 200 no treino, o estudo não tem amostra para decidir e é registrado assim, não como NÃO PASSA.
 
 ## 3. Estocástico + bandas VWAP / MM144 ("scalp em 5 minutos") — 22/09/2026
@@ -325,6 +326,38 @@ Amostra limpa é recurso finito. Situação em 22/09/2026:
 **Infra da Binance** (`monitor/dados_binance.py`, criada em 22/09/2026): mesma interface de `baixar`, cache em `cache_binance/`, aceita os `instId` da OKX. Os 20 pares de A já estão baixados no diário.
 
 **Atenção ao usar a Binance:** os *mesmos* pares na Binance **não são amostra independente** — é o mesmo mercado, no mesmo período, com séries quase idênticas. Servem para testar robustez de execução e diferença entre corretoras. A amostra realmente nova é a **D**: os 215 perpétuos que só existem na Binance.
+
+## 13. 1-2-3 do Crisp — varredura de parâmetros + universo D — 22/09/2026
+
+Script: `monitor/replay_123_varredura.py` · log: `claude/123_varredura.log`
+
+Primeira varredura de parâmetros do projeto, feita a pedido e **assumida como exploratória**: os números da varredura não são evidência, porque a seleção infla o vencedor.
+
+- **Varredura (20 pares OKX, 1D, 36 células):** mínimo do movimento 1 (2 ou 3), stop no fundo 3 ou 1, alvo 1.0/1.5/2.0× a amplitude, filtro de tendência (nenhum/MMA80/MME21).
+- **Vencedora:** mov1≥3, stop no fundo 1, alvo 1.0×, filtro MME21 → +0.111R (n=632). Original: +0.066R.
+- **Validação (universo D, amostra nova):** os 215 perpétuos USDT-M que só existem na **Binance**, fora de A, B e C, listados há ≥400 dias (lista congelada em `monitor/universo_d.txt`).
+- **Critério pré-registrado:** IC95 > 0 no universo D **e** superar a regra original lá.
+
+| Universo D (215 pares) | n | Expectância | IC95 |
+|---|---|---|---|
+| **Vencedora** | 2720 | **+0.071R** | [+0.004, +0.143] |
+| Original | 11227 | −0.048R | [−0.137, +0.031] |
+
+**Pelo critério pré-registrado: PASSA** (o primeiro em 13 estudos). A regra também fica positiva nos quatro universos: A +0.111R, B +0.064R, C +0.118R, D +0.071R.
+
+### Mas não sobrevive aos testes de robustez — não usar
+
+Três verificações feitas depois (todas enfraquecem, nenhuma foi usada para escolher nada):
+
+1. **Bootstrap por semana em vez de por dia:** IC95 vai de [+0.004, +0.143] para **[−0.020, +0.159]**, cruzando zero. O critério usava reamostragem por dia; com trades de 23 dias de duração média, o dia é uma unidade otimista.
+2. **O lucro é todo do lado vendido:** compras +0.019R (IC cruza zero), vendas +0.105R. Num universo de memecoins que caíram muito, isso é suspeito.
+3. **Teste de beta (mesmo do estudo 6):** contra entradas aleatórias no mesmo par, mesma direção e mesma duração, o **excesso é +0.33%, IC [−1.12, +1.70]** — zero. Nas vendas, −0.14%. **O ganho é exposição à queda do universo, não timing.**
+
+O que está saudável: 124 dos 212 pares positivos, mediana por par +0.092R, sem depender de um par isolado.
+
+**Conclusão:** o critério pré-registrado era fraco demais para este caso. Duas lições incorporadas ao protocolo:
+- **Bootstrap por bloco de semana** quando a duração média do trade passar de ~5 dias.
+- **Teste de beta obrigatório** (excesso sobre entrada aleatória de mesma duração) antes de qualquer PASSA em estratégia direcional.
 
 ## Leitura conjunta
 

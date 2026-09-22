@@ -1,0 +1,55 @@
+====================================================================================================
+1) VARREDURA EXPLORATORIA -- universo A (20 pares OKX), 1Dutc
+   (os numeros abaixo NAO sao evidencia: a selecao infla o vencedor)
+====================================================================================================
+  combinacao                                     n  exp liq   bruto  acerto
+  mov1>=2 fundo3 alvo=1x filtro=nenhum        2466   +0.066  +0.107   34.7%
+  mov1>=2 fundo3 alvo=1x filtro=mma80         1792   +0.054  +0.096   34.6%
+  mov1>=2 fundo3 alvo=1x filtro=mme21         1616   +0.040  +0.083   31.8%
+  mov1>=2 fundo3 alvo=1.5x filtro=nenhum      1985   +0.080  +0.122   26.2%
+  mov1>=2 fundo3 alvo=1.5x filtro=mma80       1506   +0.045  +0.089   25.7%
+  mov1>=2 fundo3 alvo=1.5x filtro=mme21       1453   +0.027  +0.071   23.5%
+  mov1>=2 fundo3 alvo=2x filtro=nenhum        1668   +0.045  +0.088   20.7%
+  mov1>=2 fundo3 alvo=2x filtro=mma80         1344   +0.016  +0.059   20.8%
+  mov1>=2 fundo3 alvo=2x filtro=mme21         1323   +0.013  +0.058   19.0%
+  mov1>=2 fundo1 alvo=1x filtro=nenhum        1411   +0.014  +0.035   46.8%
+  mov1>=2 fundo1 alvo=1x filtro=mma80         1144   +0.021  +0.044   46.6%
+  mov1>=2 fundo1 alvo=1x filtro=mme21          985   +0.007  +0.026   46.3%
+  mov1>=2 fundo1 alvo=1.5x filtro=nenhum       885   +0.009  +0.031   37.4%
+  mov1>=2 fundo1 alvo=1.5x filtro=mma80        782   +0.005  +0.027   36.4%
+  mov1>=2 fundo1 alvo=1.5x filtro=mme21        671   +0.041  +0.060   37.9%
+  mov1>=2 fundo1 alvo=2x filtro=nenhum         719   +0.057  +0.079   31.6%
+  mov1>=2 fundo1 alvo=2x filtro=mma80          691   +0.021  +0.044   30.7%
+  mov1>=2 fundo1 alvo=2x filtro=mme21          559   +0.108  +0.127   33.1%
+  mov1>=3 fundo3 alvo=1x filtro=nenhum        1773   +0.041  +0.083   35.0%
+  mov1>=3 fundo3 alvo=1x filtro=mma80         1015   +0.091  +0.134   35.8%
+  mov1>=3 fundo3 alvo=1x filtro=mme21          814   +0.089  +0.132   32.3%
+  mov1>=3 fundo3 alvo=1.5x filtro=nenhum      1448   +0.094  +0.136   27.4%
+  mov1>=3 fundo3 alvo=1.5x filtro=mma80        907   +0.090  +0.133   26.6%
+  mov1>=3 fundo3 alvo=1.5x filtro=mme21        728   +0.064  +0.109   23.1%
+  mov1>=3 fundo3 alvo=2x filtro=nenhum        1260   +0.076  +0.119   22.0%
+  mov1>=3 fundo3 alvo=2x filtro=mma80          837   +0.109  +0.154   22.2%
+  mov1>=3 fundo3 alvo=2x filtro=mme21          667   +0.013  +0.059   17.7%
+  mov1>=3 fundo1 alvo=1x filtro=nenhum        1251   +0.070  +0.091   49.1%
+  mov1>=3 fundo1 alvo=1x filtro=mma80          811   +0.098  +0.120   50.3%
+  mov1>=3 fundo1 alvo=1x filtro=mme21          632   +0.111  +0.129   51.4%
+  mov1>=3 fundo1 alvo=1.5x filtro=nenhum       846   +0.101  +0.122   40.2%
+  mov1>=3 fundo1 alvo=1.5x filtro=mma80        633   +0.062  +0.085   38.9%
+  mov1>=3 fundo1 alvo=1.5x filtro=mme21        497   +0.106  +0.124   40.2%
+  mov1>=3 fundo1 alvo=2x filtro=nenhum         687   +0.079  +0.100   32.8%
+  mov1>=3 fundo1 alvo=2x filtro=mma80          543   +0.059  +0.082   32.0%
+  mov1>=3 fundo1 alvo=2x filtro=mme21          424   +0.108  +0.126   33.7%
+
+  vencedora da varredura: mov1>=3 fundo1 alvo=1x filtro=mme21 -> +0.111R (n=632)
+  original                : mov1>=2 fundo3 alvo=1x filtro=nenhum -> +0.066R
+
+====================================================================================================
+2) VALIDACAO -- universo D (215 perps so da Binance) -- DECIDE
+====================================================================================================
+  vencedora (mov1>=3 fundo1 alvo=1x filtro=mme21): n= 2720 | dias=  963 | exp +0.071R | IC95 [+0.004, +0.143] | acerto 50.3% | custo 0.029R
+  original  (mov1>=2 fundo3 alvo=1x filtro=nenhum): n=11227 | dias= 1718 | exp -0.048R | IC95 [-0.137, +0.031] | acerto 33.6% | custo 0.117R
+
+  1) IC95 da vencedora acima de zero: sim
+  2) vencedora supera a original no universo D: sim (+0.071R vs -0.048R)
+
+==> DECISAO: PASSA
