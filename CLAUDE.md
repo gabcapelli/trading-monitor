@@ -60,6 +60,10 @@ Relatórios completos em `claude/auditoria-v5.md` e `claude/auditoria-v6.md` (v6
 - **Stop no breakeven: testado só na simulação, não implementado.** `desfecho_mecanico()` aceita `breakeven_apos_r` (default `None`, nunca usado em produção). O único resultado positivo de toda a auditoria apareceu em breakeven a 0.5R (+0.045R), mas o IC 95% bootstrap ([-0.310, +0.444]) inclui zero e negativo — é ruído com n=59, não sinal. Não implemente essa regra sem mais dado.
 - **Parâmetros desacoplados:** `ZONE_PROXIMITY_ATR_MULT` e `COOLDOWN_LEVEL_TOL_ATR_MULT` saíram de dentro de `ZONE_ATR_MULT` (que governava três comportamentos ao mesmo tempo), com os mesmos valores efetivos.
 
+## Estudos avulsos (setups de terceiros)
+
+Setups vistos em vídeo são testados em scripts separados, pré-registrados, fora do monitor de produção. Resultados em `claude/estudos-avulsos.md`. Em 21/09/2026, o **leque de médias (EMA 20–50)** e o **1-2-3 de Mark Crisp** foram testados em 20 pares e **nenhum dos dois passou**: nenhum tempo gráfico decisivo teve IC95 da expectância inteiro acima de zero. Não reabra esses testes variando parâmetros sobre os mesmos dados.
+
 ## Achado em investigação (não é regra ainda)
 
 Em 09/09/2026, um lote de confirmações mecânicas de Setup B (compra) disparou simultaneamente em ETH, SOL, XRP e SUI, coincidindo com queda correlacionada de todo o mercado. SUI e XRP bateram stop nas horas seguintes (ambos -1R). Hipótese a investigar: sinais de Setup B em múltiplos pares de altcoin ao mesmo tempo podem estar refletindo beta de mercado (correlação com BTC/ETH), não confirmações tecnicamente independentes por par. Nenhum critério atual do Setup B filtra por correlação entre pares — candidato a virar um novo dado contextual (no espírito de volume/funding), ainda não decidido se vira filtro de invalidação.

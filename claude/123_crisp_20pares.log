@@ -1,0 +1,122 @@
+
+================================================================================================
+1Dutc (3000 dias max)  -- DECIDE
+================================================================================================
+    BTC-USDT-SWAP    candles=  2455 trades= 159 exp=+0.004R
+    ETH-USDT-SWAP    candles=  2455 trades= 165 exp=-0.096R
+    SOL-USDT-SWAP    candles=  2067 trades= 133 exp=-0.062R
+    XRP-USDT-SWAP    candles=  2455 trades= 180 exp=-0.290R
+    DOGE-USDT-SWAP   candles=  2263 trades= 171 exp=-0.208R
+    ARB-USDT-SWAP    candles=  1278 trades=  81 exp=+0.153R
+    WLD-USDT-SWAP    candles=  1155 trades=  73 exp=+0.282R
+    SUI-USDT-SWAP    candles=  1235 trades=  84 exp=-0.075R
+    UNI-USDT-SWAP    candles=  2194 trades= 168 exp=-0.007R
+    LINK-USDT-SWAP   candles=  2389 trades= 182 exp=-0.053R
+    BNB-USDT-SWAP    candles=  1369 trades=  90 exp=-0.135R
+    TRX-USDT-SWAP    candles=  2456 trades= 176 exp=-0.336R
+    ZEC-USDT-SWAP    candles=   320 trades=  29 exp=+0.279R
+    HYPE-USDT-SWAP   candles=   578 trades=  44 exp=-0.603R
+    ADA-USDT-SWAP    candles=  2386 trades= 157 exp=-0.123R
+    XLM-USDT-SWAP    candles=  2324 trades= 183 exp=-0.285R
+    NEAR-USDT-SWAP   candles=  2100 trades= 150 exp=-0.050R
+    AVAX-USDT-SWAP   candles=  2189 trades= 158 exp=+0.001R
+    LTC-USDT-SWAP    candles=  2456 trades= 190 exp=-0.185R
+    BCH-USDT-SWAP    candles=  2456 trades= 170 exp=-0.048R
+  stop fundo 3 (principal): n= 2743 | dias= 1277 | exp -0.112R | IC95 [-0.187, -0.036] | acerto 29.7% | payoff 2.14 | custo 0.043R
+  so compras           : n= 1547 | dias=  828 | exp -0.133R | IC95 [-0.236, -0.024] | acerto 28.8% | payoff 2.16 | custo 0.043R
+  so vendas            : n= 1196 | dias=  683 | exp -0.085R | IC95 [-0.199, +0.032] | acerto 30.8% | payoff 2.11 | custo 0.041R
+  so 10 pares originais: n= 1396 | dias=  857 | exp -0.068R | IC95 [-0.170, +0.034] | acerto 30.9% | payoff 2.15 | custo 0.041R
+  so 10 pares novos    : n= 1347 | dias=  893 | exp -0.157R | IC95 [-0.247, -0.067] | acerto 28.4% | payoff 2.12 | custo 0.044R
+  descr.: stop fundo 1 : n= 1518 | dias=  872 | exp -0.034R | IC95 [-0.105, +0.037] | acerto 44.7% | payoff 1.21 | custo 0.022R
+
+================================================================================================
+1Wutc (3000 dias max)  -- DECIDE
+================================================================================================
+    BTC-USDT-SWAP    candles=   351 trades=  31 exp=-0.061R
+    ETH-USDT-SWAP    candles=   351 trades=  24 exp=-0.422R
+    SOL-USDT-SWAP    candles=   296 trades=  23 exp=+0.054R
+    XRP-USDT-SWAP    candles=   351 trades=  14 exp=+0.006R
+    DOGE-USDT-SWAP   candles=   324 trades=  17 exp=-0.077R
+    ARB-USDT-SWAP    candles=   183 trades=  13 exp=+0.049R
+    WLD-USDT-SWAP    candles=   165 trades=   9 exp=+0.030R
+    SUI-USDT-SWAP    candles=   177 trades=  13 exp=-0.348R
+    UNI-USDT-SWAP    candles=   314 trades=  17 exp=-0.299R
+    LINK-USDT-SWAP   candles=   342 trades=  23 exp=-0.300R
+    BNB-USDT-SWAP    candles=   196 trades=  15 exp=-0.201R
+    TRX-USDT-SWAP    candles=   351 trades=  21 exp=-0.085R
+    ZEC-USDT-SWAP    candles=    46 trades=   2 exp=+0.571R
+    HYPE-USDT-SWAP   candles=    83 trades=   7 exp=-0.541R
+    ADA-USDT-SWAP    candles=   341 trades=  20 exp=-0.688R
+    XLM-USDT-SWAP    candles=   332 trades=  21 exp=-0.608R
+    NEAR-USDT-SWAP   candles=   300 trades=  21 exp=-0.402R
+    AVAX-USDT-SWAP   candles=   313 trades=  28 exp=-0.468R
+    LTC-USDT-SWAP    candles=   351 trades=   8 exp=+0.421R
+    BCH-USDT-SWAP    candles=   351 trades=  23 exp=+0.049R
+  stop fundo 3 (principal): n=  350 | dias=  173 | exp -0.225R | IC95 [-0.397, -0.035] | acerto 27.4% | payoff 1.88 | custo 0.014R
+  so compras           : n=  204 | dias=  122 | exp -0.068R | IC95 [-0.317, +0.207] | acerto 31.4% | payoff 2.02 | custo 0.016R
+  so vendas            : n=  146 | dias=   80 | exp -0.443R | IC95 [-0.655, -0.211] | acerto 21.9% | payoff 1.59 | custo 0.011R
+  so 10 pares originais: n=  184 | dias=  125 | exp -0.150R | IC95 [-0.366, +0.078] | acerto 29.3% | payoff 1.94 | custo 0.014R
+  so 10 pares novos    : n=  166 | dias=  113 | exp -0.307R | IC95 [-0.512, -0.077] | acerto 25.3% | payoff 1.79 | custo 0.014R
+  descr.: stop fundo 1 : n=  221 | dias=  127 | exp -0.119R | IC95 [-0.277, +0.052] | acerto 39.8% | payoff 1.23 | custo 0.008R
+
+================================================================================================
+4H (2000 dias max)  -- descritivo
+================================================================================================
+    BTC-USDT-SWAP    candles= 11999 trades= 863 exp=-0.225R
+    ETH-USDT-SWAP    candles= 11999 trades= 949 exp=-0.225R
+    SOL-USDT-SWAP    candles= 11999 trades= 887 exp=-0.287R
+    XRP-USDT-SWAP    candles= 11999 trades= 902 exp=-0.245R
+    DOGE-USDT-SWAP   candles= 11999 trades= 857 exp=-0.129R
+    ARB-USDT-SWAP    candles=  7670 trades= 560 exp=-0.176R
+    WLD-USDT-SWAP    candles=  6933 trades= 527 exp=-0.211R
+    SUI-USDT-SWAP    candles=  7415 trades= 575 exp=-0.206R
+    UNI-USDT-SWAP    candles= 11999 trades= 885 exp=-0.312R
+    LINK-USDT-SWAP   candles= 11999 trades= 911 exp=-0.273R
+    BNB-USDT-SWAP    candles=  8213 trades= 605 exp=-0.298R
+    TRX-USDT-SWAP    candles= 11999 trades= 889 exp=-0.304R
+    ZEC-USDT-SWAP    candles=  1920 trades= 141 exp=+0.043R
+    HYPE-USDT-SWAP   candles=  3467 trades= 271 exp=-0.292R
+    ADA-USDT-SWAP    candles= 11999 trades= 844 exp=-0.281R
+    XLM-USDT-SWAP    candles= 11999 trades= 917 exp=-0.289R
+    NEAR-USDT-SWAP   candles= 11999 trades= 939 exp=-0.308R
+    AVAX-USDT-SWAP   candles= 11999 trades= 934 exp=-0.241R
+    LTC-USDT-SWAP    candles= 11999 trades= 919 exp=-0.299R
+    BCH-USDT-SWAP    candles= 11999 trades= 951 exp=-0.301R
+  stop fundo 3 (principal): n=15326 | dias= 1989 | exp -0.258R | IC95 [-0.292, -0.222] | acerto 28.2% | payoff 2.07 | custo 0.122R
+  so compras           : n= 8206 | dias= 1843 | exp -0.313R | IC95 [-0.362, -0.261] | acerto 26.8% | payoff 2.03 | custo 0.124R
+  so vendas            : n= 7120 | dias= 1793 | exp -0.194R | IC95 [-0.250, -0.136] | acerto 29.8% | payoff 2.10 | custo 0.120R
+  so 10 pares originais: n= 7916 | dias= 1912 | exp -0.233R | IC95 [-0.277, -0.189] | acerto 28.8% | payoff 2.06 | custo 0.116R
+  so 10 pares novos    : n= 7410 | dias= 1925 | exp -0.284R | IC95 [-0.325, -0.243] | acerto 27.5% | payoff 2.07 | custo 0.129R
+  descr.: stop fundo 1 : n= 6832 | dias= 1800 | exp -0.067R | IC95 [-0.099, -0.035] | acerto 45.5% | payoff 1.19 | custo 0.063R
+
+================================================================================================
+1H (300 dias max)  -- descritivo
+================================================================================================
+    BTC-USDT-SWAP    candles=  7199 trades= 554 exp=-0.622R
+    ETH-USDT-SWAP    candles=  7199 trades= 520 exp=-0.419R
+    SOL-USDT-SWAP    candles=  7199 trades= 551 exp=-0.458R
+    XRP-USDT-SWAP    candles=  7199 trades= 519 exp=-0.381R
+    DOGE-USDT-SWAP   candles=  7199 trades= 535 exp=-0.334R
+    ARB-USDT-SWAP    candles=  7199 trades= 506 exp=-0.287R
+    WLD-USDT-SWAP    candles=  7199 trades= 534 exp=-0.186R
+    SUI-USDT-SWAP    candles=  7199 trades= 492 exp=-0.399R
+    UNI-USDT-SWAP    candles=  7199 trades= 565 exp=-0.410R
+    LINK-USDT-SWAP   candles=  7199 trades= 551 exp=-0.383R
+    BNB-USDT-SWAP    candles=  7199 trades= 554 exp=-0.678R
+    TRX-USDT-SWAP    candles=  7199 trades= 499 exp=-0.990R
+    ZEC-USDT-SWAP    candles=  7199 trades= 510 exp=-0.204R
+    HYPE-USDT-SWAP   candles=  7199 trades= 545 exp=-0.350R
+    ADA-USDT-SWAP    candles=  7199 trades= 471 exp=-0.350R
+    XLM-USDT-SWAP    candles=  7199 trades= 507 exp=-0.352R
+    NEAR-USDT-SWAP   candles=  7199 trades= 531 exp=-0.403R
+    AVAX-USDT-SWAP   candles=  7199 trades= 523 exp=-0.361R
+    LTC-USDT-SWAP    candles=  7199 trades= 575 exp=-0.520R
+    BCH-USDT-SWAP    candles=  7199 trades= 546 exp=-0.446R
+  stop fundo 3 (principal): n=10588 | dias=  300 | exp -0.428R | IC95 [-0.474, -0.381] | acerto 29.2% | payoff 2.01 | custo 0.307R
+  so compras           : n= 5631 | dias=  300 | exp -0.504R | IC95 [-0.571, -0.432] | acerto 26.9% | payoff 2.00 | custo 0.311R
+  so vendas            : n= 4957 | dias=  300 | exp -0.341R | IC95 [-0.419, -0.261] | acerto 31.8% | payoff 2.03 | custo 0.302R
+  so 10 pares originais: n= 5327 | dias=  300 | exp -0.390R | IC95 [-0.447, -0.331] | acerto 30.0% | payoff 1.98 | custo 0.284R
+  so 10 pares novos    : n= 5261 | dias=  300 | exp -0.466R | IC95 [-0.517, -0.414] | acerto 28.3% | payoff 2.05 | custo 0.329R
+  descr.: stop fundo 1 : n= 5746 | dias=  300 | exp -0.203R | IC95 [-0.242, -0.166] | acerto 43.8% | payoff 1.20 | custo 0.165R
+
+==> DECISAO: 1Dutc: NAO PASSA, 1Wutc: NAO PASSA
