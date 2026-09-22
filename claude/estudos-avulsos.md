@@ -481,6 +481,29 @@ Script: `monitor/replay_qmom.py` · log: `claude/qmom.log` · fonte: *Quantitati
 
 **Veredito: NÃO PASSA** (as duas). Momentum de 12 meses no corte transversal não funciona em cripto, com ou sem o filtro de qualidade — os dois ficam em torno de zero, sem diferença entre si. O prêmio que o livro documenta em ações não aparece aqui.
 
+## 19. Combo de três prêmios transversais — e o que ele revela sobre a skew — 22/09/2026
+
+Script: `monitor/replay_combo_premios.py` · log: `claude/combo_premios.log`
+
+**Hipótese (não é garimpo de parâmetro):** skew (estudo 15, +0.67), baixa volatilidade (17, +0.49) e carry relativo (14, +0.30) medem a mesma ideia — comprar o "chato", vender o "loteria". Se são medidas ruidosas do mesmo prêmio, combiná-las cancela ruído idiossincrático. As correlações entre os forecasts confirmam que são medidas diferentes: +0.42 (skew × vol), −0.15 (skew × carry), −0.21 (vol × carry).
+
+**Amostra nova (E):** os 153 perpétuos da Binance correspondentes aos pares OKX de B e C, fora de A e D (`monitor/universo_e.txt`). Nenhum componente deste combo os tinha visto.
+
+| | Amostra A (desenvolvimento) | **Amostra E (decide)** |
+|---|---|---|
+| **Combo dos três** | Sharpe +1.29, alfa +3.2%/ano | **Sharpe +0.42**, IC [−0.30, +1.21], **alfa −0.1%/ano** |
+| skew isolada | +0.59 | +0.20 |
+| baixa volatilidade | −0.16 | +0.24 |
+| carry relativo | +1.63 | +0.36 |
+
+**Veredito: NÃO PASSA.**
+
+### O que isso corrige no estudo 15
+
+A skew deu **+0.64 (A), +0.67 (D) e agora +0.20 (E)**. A "replicação" que parecia forte não se sustentou numa terceira amostra. A leitura honesta passa a ser: **todos os prêmios transversais em cripto ficam entre +0.2 e +0.4 de Sharpe, com alfa contra o mercado ≈ 0**. Isso é indistinguível de zero com o histórico disponível, e a diferença entre eles é ruído.
+
+Combinar não resolveu: o combo (+0.42) ficou na mesma faixa dos componentes, e não acima deles, o que indica que o pouco que existe é o mesmo pedaço de exposição em todos — não três fontes independentes de retorno.
+
 ## Leitura conjunta
 
 Mesma direção do achado da auditoria v6 sobre o checklist mecânico dos Setups A/B. Nenhum dos dez setups de vídeo tem edge mecânico demonstrável nesses 20 pares (o 9.1 também não, fora da amostra, nos 80 pares do estudo 6):
