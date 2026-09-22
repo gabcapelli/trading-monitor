@@ -27,8 +27,8 @@ Tudo pelo FECHAMENTO comparado ao fechamento anterior.
   mencionada uma vez no video, nao foi modelada.
 - Deteccao de setup e independente da posicao; depois, por par, pega os
   trades em ordem cronologica ignorando os que entrariam com outro aberto.
-- Conservador intra-candle: no candle da entrada so o stop pode ser
-  atingido; stop e alvo no mesmo candle = stop.
+- Candle da entrada: toque no stop resolvido pela heuristica OHLC (ver
+  REEXECUCAO abaixo); stop e alvo no mesmo candle depois dele = stop.
 - Custo: 0.18% do nocional ida+volta, convertido em R (igual ao ema_ribbon).
 
 DADOS
@@ -37,6 +37,18 @@ OKX, os 10 pares do trading-monitor. Rerodado em 21/09/2026 no UNIVERSO
 de 20 pares (replay_ema_ribbon.py); mesmas regras e criterio, decisao
 sobre os 20. 1Dutc e 1Wutc: todo o historico ate 3000 dias. 4H: ate 2000
 dias. 1H: 300 dias.
+
+REEXECUCAO (22/09/2026)
+----------------------
+Refeito com a regra OHLC do candle da entrada (stop_vale_no_candle_entrada
+em replay_ema_ribbon.py). A regra original ("qualquer toque no stop no
+candle da entrada = perda") era enviesada contra o trade. No 1Dutc, o
+principal foi de -0.112R para +0.078R, IC95 [-0.004, +0.160] -- continua
+NAO PASSA, mas no limite.
+CONFIRMACAO FORA DA AMOSTRA (pre-registrada ANTES de rodar, 22/09/2026):
+a mesma regra, sem nenhuma mudanca (stop no fundo 3, 1Dutc, historico
+inteiro), nos 80 pares de replay_91_beta.UNIVERSO_B. PASSA se o IC95 ali
+ficar inteiro acima de zero. Uso: python replay_123_crisp.py --fora-da-amostra
 
 CRITERIO DE DECISAO (pre-registrado)
 ------------------------------------
@@ -51,7 +63,7 @@ que o video afirma.
 import sys
 
 import fetch_and_check as m
-from replay_ema_ribbon import baixar, ic_bootstrap, CUSTO_RT, UNIVERSO, PARES_NOVOS
+from replay_ema_ribbon import baixar, ic_bootstrap, CUSTO_RT, UNIVERSO, PARES_NOVOS, stop_vale_no_candle_entrada
 
 MIN_MOV1 = 2
 TEMPOS = [("1Dutc", 3000, True), ("1Wutc", 3000, True), ("4H", 2000, False), ("1H", 300, False)]
@@ -133,7 +145,7 @@ def resolver(c, cand, chave_stop):
         saida = None
         for t in range(j, len(c)):
             hi, lo = c[t][2], c[t][3]
-            if (lo <= stop) if d == 1 else (hi >= stop):
+            if ((lo <= stop) if d == 1 else (hi >= stop)) and (t > j or stop_vale_no_candle_entrada(c[j], d, entrada)):
                 saida, r = t, -1.0
                 break
             if t > j and ((hi >= alvo) if d == 1 else (lo <= alvo)):
@@ -162,7 +174,29 @@ def resumo(rotulo, trades):
     return lo > 0
 
 
+def fora_da_amostra():
+    from replay_91_beta import UNIVERSO_B
+    print(f"{'='*96}\n1Dutc -- 80 pares FORA DA AMOSTRA -- confirmacao (DECIDE)\n{'='*96}")
+    t3, t1, usados = [], [], 0
+    for inst in UNIVERSO_B:
+        c = baixar(inst, "1Dutc", 3000)
+        if len(c) < 400:
+            continue
+        usados += 1
+        cand = candidatos(c, 1) + candidatos(c, -1)
+        t3 += resolver(c, cand, "stop3")
+        t1 += resolver(c, cand, "stop1")
+    print(f"  pares usados: {usados}")
+    ok = resumo("stop fundo 3 (principal)", t3)
+    resumo("so compras           ", [x for x in t3 if x["d"] == 1])
+    resumo("so vendas            ", [x for x in t3 if x["d"] == -1])
+    resumo("descr.: stop fundo 1 ", t1)
+    print(f"\n==> CONFIRMACAO FORA DA AMOSTRA: {'PASSA' if ok else 'NAO PASSA'}")
+
+
 def main():
+    if "--fora-da-amostra" in sys.argv:
+        return fora_da_amostra()
     decisao = {}
     for bar, dias, decide in TEMPOS:
         print(f"\n{'='*96}\n{bar} ({dias} dias max){'  -- DECIDE' if decide else '  -- descritivo'}\n{'='*96}")

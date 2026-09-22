@@ -1,0 +1,10 @@
+================================================================================================
+1Dutc -- 80 pares FORA DA AMOSTRA -- confirmacao (DECIDE)
+================================================================================================
+  pares usados: 80
+  stop fundo 3 (principal): n= 8991 | dias= 1823 | exp +0.043R | IC95 [-0.026, +0.115] | acerto 33.9% | payoff 2.17 | custo 0.032R
+  so compras           : n= 4993 | dias= 1352 | exp -0.011R | IC95 [-0.111, +0.088] | acerto 32.6% | payoff 2.13 | custo 0.033R
+  so vendas            : n= 3998 | dias= 1177 | exp +0.110R | IC95 [+0.005, +0.219] | acerto 35.5% | payoff 2.21 | custo 0.030R
+  descr.: stop fundo 1 : n= 4415 | dias= 1481 | exp +0.008R | IC95 [-0.047, +0.064] | acerto 46.4% | payoff 1.21 | custo 0.017R
+
+==> CONFIRMACAO FORA DA AMOSTRA: NAO PASSA

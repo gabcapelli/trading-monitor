@@ -178,11 +178,42 @@ Até o estudo 7, os scripts usavam a regra "conservadora": no candle da entrada,
 - **O problema:** quando a entrada é por ordem **stop** e o stop está a menos de um candle de distância, essa regra é enviesada contra o trade. Muitas vezes o preço tocou o stop **antes** de acionar a entrada.
 - **Medida:** num passeio aleatório com caminho intra-candle fino (480 passos), a regra conservadora dá **−0.13 a −0.21R** bruto no inside bar; a heurística OHLC (candle a favor: extremo contra antes do gatilho; candle contra: o inverso) dá **−0.01 a +0.04R**, dentro do ruído. Daqui em diante, OHLC.
 - **Quem não é afetado:** entrada na abertura (IFR, `abertura` do estocástico+VWAP), entrada no fechamento (Renko) e sem stop (9.1 original, estudo 6). Nesses casos, qualquer toque no stop depois da entrada é perda de fato.
-- **Afetados, com viés negativo:** leque de médias (1), 1-2-3 (2), células `rompimento` do estocástico+VWAP (3) e variante `stop=minima` do 9.1 (4). O tamanho depende da distância entre gatilho e stop em relação ao candle. **Os vereditos desses estudos ainda não foram refeitos com a regra corrigida.**
+- **Afetados, com viés negativo:** leque de médias (1), 1-2-3 (2), células `rompimento` do estocástico+VWAP (3) e variante `stop=minima` do 9.1 (4). O tamanho depende da distância entre gatilho e stop em relação ao candle. Refeitos logo abaixo.
+
+### Reexecução dos estudos 1–4 com a regra corrigida — 22/09/2026
+
+A regra agora fica num lugar só: `stop_vale_no_candle_entrada` em `monitor/replay_ema_ribbon.py`, padrão OHLC; `REGRA_CANDLE_ENTRADA=conservadora` reproduz a antiga.
+
+- **Mesmos dados nas duas rodadas:** os estudos 1 e 2 passaram a ler o cache com volume, porque o cache original não estava nesta máquina. Cada estudo rodou duas vezes nesses dados, uma com cada regra, então a diferença é só a regra. A regra antiga nos dados novos reproduz os números originais (ex.: 1-2-3 1D, n=2743, −0.112R).
+- **Critérios:** os pré-registrados, inalterados. É correção de bug, não mudança de regra.
+- **Logs novos:** `*_ohlc.log`. Os antigos ficam como histórico.
+
+| Estudo | Regra antiga | **Regra OHLC** | IC95 (OHLC) | Veredito |
+|---|---|---|---|---|
+| 1. Leque, 4H | −0.099R | −0.045R | [−0.106, +0.017] | não passa |
+| 1. Leque, 1D | +0.015R | +0.058R | [−0.069, +0.192] | não passa |
+| 2. 1-2-3, 1D | −0.112R | **+0.078R** | [−0.004, +0.160] | não passa (no limite) |
+| 2. 1-2-3, 1W | −0.225R | −0.107R | [−0.285, +0.085] | não passa |
+| 3. Estocástico+VWAP V1 (teste) | −0.428R | −0.407R | [−0.462, −0.352] | não passa |
+| 3. Estocástico+MM144 V2 (teste) | −0.157R | −0.081R | [−0.140, −0.021] | não passa |
+| 4. 9.1 (célula escolhida, sem stop) | +0.115R | +0.115R | não afetada | não passa |
+
+Nos intraday descritivos, a correção melhora bastante, mas continua negativo (1-2-3 4H: −0.258 → −0.057R; 1H: −0.428 → −0.264R). No 9.1 com stop, as células do 1D sobem para +0.17 a +0.28R, parecidas com as sem stop — valem as mesmas ressalvas de beta do estudo 6.
+
+**1-2-3 no diário — confirmação fora da amostra** (pré-registrada antes de rodar, no docstring de `replay_123_crisp.py`): a mesma regra, sem mudança, nos 80 pares do estudo 6. Log: `claude/123_crisp_fora_amostra.log`.
+
+| | n | Expectância | IC95 |
+|---|---|---|---|
+| **80 pares fora da amostra** | 8991 | **+0.043R** | [−0.026, +0.115] |
+| só compras | 4993 | −0.011R | [−0.111, +0.088] |
+| só vendas | 3998 | +0.110R | [+0.005, +0.219] |
+
+**Não passa.** O resultado no limite dos 20 pares encolhe fora da amostra. Não tratar "só vendas" como pista: é um recorte depois de ver o resultado, e nos 20 pares eram as compras que iam melhor.
 
 ## Leitura conjunta
 
 Mesma direção do achado da auditoria v6 sobre o checklist mecânico dos Setups A/B. Nenhum dos seis setups de vídeo tem edge mecânico demonstrável nesses 20 pares (o 9.1 também não, fora da amostra, nos 80 pares do estudo 6):
+- **Regra do candle da entrada:** vale com a regra corrigida (reexecução acima). O mais perto de passar foi o 1-2-3 no diário, que não se confirmou nos 80 pares.
 - **Custo:** todos pioram quanto menor o tempo gráfico, porque o custo em R cresce.
 - **Sinal:** nos intraday, o resultado bruto fica em torno de zero; o sinal não carrega informação.
 - **Acerto alto:** as taxas de acerto altas prometidas nos vídeos se reproduzem (1-2-3 não; IFR sim), mas vêm de ganhos pequenos e perdas grandes, e não de edge.

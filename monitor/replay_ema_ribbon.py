@@ -29,8 +29,12 @@ REGRAS (fieis ao video; desvios marcados com [desvio])
   Descritivo (nao decide): alvo cheio em 3R.
   [desvio] "se o alvo ficar percentualmente muito amplo, trabalhar 2:1"
   e discricionario -- nao modelado.
-- Conservador em ambiguidade intra-candle: no candle da entrada so o stop
-  pode ser atingido; se stop e alvo caem no mesmo candle, conta stop.
+- Candle da entrada: alvo nunca conta; toque no stop resolvido pela
+  heuristica OHLC (stop_vale_no_candle_entrada, abaixo). Stop e alvo no
+  mesmo candle depois dele = stop. [corrigido em 22/09/2026: a regra
+  original, "qualquer toque no stop no candle da entrada = perda", era
+  enviesada contra o trade; resultados antigos em ema_ribbon*.log, novos em
+  ema_ribbon_20pares_ohlc.log]
 - Uma posicao por par por vez; setups durante trade aberto sao ignorados.
   Trades ainda abertos no fim do historico sao descartados.
 - Custo: 0.18% do nocional ida+volta (0.04% taxa + 0.05% slippage por lado,
@@ -87,16 +91,53 @@ N_RESAMPLES = 5000
 SEED = 42
 CACHE_DIR = os.environ.get("EMA_RIBBON_CACHE", "cache_ema_ribbon")
 
+# Regra do candle da entrada quando a entrada e por ordem stop e o stop tambem
+# e tocado nesse candle (22/09/2026, ver estudos-avulsos.md, estudo 8):
+# "ohlc" (padrao) -- candle a favor vai O-L-H-C / O-H-L-C e o extremo contra
+# veio ANTES do gatilho, entao o stop nao vale; "conservadora" -- qualquer
+# toque conta como perda (a regra original dos estudos 1-7, enviesada contra
+# o trade: -0.13 a -0.21R bruto num passeio aleatorio no inside bar).
+REGRA_CANDLE_ENTRADA = os.environ.get("REGRA_CANDLE_ENTRADA", "ohlc")
+
+
+def stop_vale_no_candle_entrada(candle, d, entrada):
+    """O toque no stop dentro do candle da entrada conta como perda?"""
+    if REGRA_CANDLE_ENTRADA == "conservadora":
+        return True
+    if entrada == candle[1]:
+        return True  # entrou na abertura: qualquer toque depois e perda real
+    a_favor = candle[4] >= candle[1] if d == 1 else candle[4] <= candle[1]
+    return not a_favor
+
 
 # ---------------------------------------------------------------------------
 # Dados
 # ---------------------------------------------------------------------------
+
+def _do_cache_com_volume(inst_id, bar, dias):
+    """Mesmas series do cache de replay_stoch_vwap.py, sem a coluna de volume.
+    Usado quando o cache proprio nao existe (ele nao foi preservado entre
+    maquinas). 1Dutc de 2000 dias sai do de 3000; 15m sai do 5m agregado."""
+    from replay_stoch_vwap import baixar as baixar_vol, agregar, CACHE_DIR as dir_vol
+    if bar == "15m":
+        c = agregar(baixar_vol(inst_id, "5m", dias), 3)
+    else:
+        fonte = 3000 if bar == "1Dutc" and dias < 3000 else dias
+        if not os.path.exists(os.path.join(dir_vol, f"{inst_id}_{bar}_{fonte}_vol.json")):
+            return None
+        c = baixar_vol(inst_id, bar, fonte)
+    limite = c[-1][0] - dias * 86_400_000 if c else 0
+    return [x[:5] for x in c if x[0] > limite]
+
 
 def baixar(inst_id, bar, dias):
     fpath = os.path.join(CACHE_DIR, f"{inst_id}_{bar}_{dias}.json")
     if os.path.exists(fpath):
         with open(fpath) as f:
             return json.load(f)
+    c = _do_cache_com_volume(inst_id, bar, dias)
+    if c is not None:
+        return c
     limite = int(time.time() * 1000) - dias * 86_400_000
     todos, after = {}, None
     while True:
@@ -162,6 +203,8 @@ def desfecho(c, j, d, entrada, stop, alvos):
     for t in range(j, len(c)):
         hi, lo = c[t][2], c[t][3]
         bateu_stop = lo <= stop if d == 1 else hi >= stop
+        if bateu_stop and t == j and not stop_vale_no_candle_entrada(c[j], d, entrada):
+            bateu_stop = False
         for n, a in enumerate(alvos):
             if resultados[n] is not None:
                 continue

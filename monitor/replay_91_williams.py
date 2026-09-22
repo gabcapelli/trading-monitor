@@ -26,8 +26,10 @@ VARIACOES (as que o proprio video testa)
 - Media: MME9 (original) ou MMA9.
 - Stop: "sem" (original: so a saida pela virada) ou "minima": stop fixo na
   minima do candle que virou a media para cima (o candle de referencia da
-  entrada). Stopado, fica fora ate a proxima virada. No candle da entrada so
-  o stop pode ser atingido (conservador).
+  entrada). Stopado, fica fora ate a proxima virada. No candle da entrada,
+  toque no stop resolvido pela heuristica OHLC (stop_vale_no_candle_entrada
+  em replay_ema_ribbon.py; corrigido em 22/09/2026 -- a regra original
+  "qualquer toque = perda" era enviesada contra o trade).
 - Filtro: "nenhum" ou "mm50": so compra com a MMA50 subindo (MMA50[t] >
   MMA50[t-1]) no candle que virou a media [interp: aritmetica; o video diz
   "media de 50 virada para cima"]. Com filtro, o stop and reverse so reverte
@@ -67,7 +69,7 @@ reamostrando dias de entrada). Grade completa no log so como descritivo.
 
 import time
 
-from replay_ema_ribbon import ic_bootstrap, CUSTO_RT, UNIVERSO
+from replay_ema_ribbon import ic_bootstrap, CUSTO_RT, UNIVERSO, stop_vale_no_candle_entrada
 from replay_stoch_vwap import baixar, sma
 
 MEDIAS = ["mme9", "mma9"]
@@ -150,10 +152,11 @@ def simular(c, media, stop_modo, filtro):
                 pos, saida = None, None
                 if rev is not None and rev["permitido"]:
                     pos = abrir(k, -d, preco, rev["ref"])
-                    # candle da entrada: so o stop pode ser atingido (conservador)
+                    # candle da entrada: stop so vale se o caminho OHLC o poe depois da entrada
                     if pos and pos["stop"] is not None:
                         s = pos["stop"]
-                        if (lo <= s) if pos["d"] == 1 else (hi >= s):
+                        if ((lo <= s) if pos["d"] == 1 else (hi >= s)) and \
+                                stop_vale_no_candle_entrada(c[k], pos["d"], preco):
                             fechar(k, s)
                             pos = None
         elif ordem is not None:
@@ -164,7 +167,7 @@ def simular(c, media, stop_modo, filtro):
                 ordem = None
                 if pos and pos["stop"] is not None:
                     s = pos["stop"]
-                    if (lo <= s) if d == 1 else (hi >= s):
+                    if ((lo <= s) if d == 1 else (hi >= s)) and stop_vale_no_candle_entrada(c[k], d, preco):
                         fechar(k, s)
                         pos = None
 

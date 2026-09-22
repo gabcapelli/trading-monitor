@@ -1,0 +1,196 @@
+
+====================================================================================================
+5m (300 dias max) -- V1
+====================================================================================================
+    BTC-USDT-SWAP    candles= 86399 trades(todas as combinacoes)= 24457
+    ETH-USDT-SWAP    candles= 86399 trades(todas as combinacoes)= 20688
+    SOL-USDT-SWAP    candles= 86399 trades(todas as combinacoes)= 27512
+    XRP-USDT-SWAP    candles= 86399 trades(todas as combinacoes)= 29495
+    DOGE-USDT-SWAP   candles= 86399 trades(todas as combinacoes)= 24579
+    ARB-USDT-SWAP    candles= 86399 trades(todas as combinacoes)= 29834
+    WLD-USDT-SWAP    candles= 86399 trades(todas as combinacoes)= 27841
+    SUI-USDT-SWAP    candles= 86399 trades(todas as combinacoes)= 26029
+    UNI-USDT-SWAP    candles= 86399 trades(todas as combinacoes)= 26995
+    LINK-USDT-SWAP   candles= 86399 trades(todas as combinacoes)= 25745
+    BNB-USDT-SWAP    candles= 86399 trades(todas as combinacoes)= 29058
+    TRX-USDT-SWAP    candles= 86399 trades(todas as combinacoes)= 31139
+    ZEC-USDT-SWAP    candles= 86399 trades(todas as combinacoes)= 26580
+    HYPE-USDT-SWAP   candles= 86399 trades(todas as combinacoes)= 30873
+    ADA-USDT-SWAP    candles= 86399 trades(todas as combinacoes)= 27955
+    XLM-USDT-SWAP    candles= 86399 trades(todas as combinacoes)= 29550
+    NEAR-USDT-SWAP   candles= 86399 trades(todas as combinacoes)= 30500
+    AVAX-USDT-SWAP   candles= 86399 trades(todas as combinacoes)= 23586
+    LTC-USDT-SWAP    candles= 86399 trades(todas as combinacoes)= 29427
+    BCH-USDT-SWAP    candles= 86399 trades(todas as combinacoes)= 26318
+  ponto medio do holdout: 2026-04-25
+  combinacao                            n  exp liq   bruto  custo |  n tr  exp tr |  n te  exp te
+  st14-3-3 b1sd abertura            62086   -0.854  +0.002  0.856 | 32812  -0.809 | 29274  -0.905
+  st14-3-3 b2sd abertura            40596   -0.864  +0.003  0.868 | 21811  -0.837 | 18785  -0.896
+  st14-3-3 b1sd rompimento          47174   -0.547  +0.029  0.576 | 24872  -0.518 | 22302  -0.579
+  st14-3-3 b2sd rompimento          30400   -0.532  +0.046  0.578 | 16278  -0.497 | 14122  -0.573
+  st8-3-3 b1sd abertura             62782   -0.905  -0.002  0.903 | 33114  -0.912 | 29668  -0.897
+  st8-3-3 b2sd abertura             40938   -0.933  +0.000  0.933 | 21913  -0.946 | 19025  -0.918
+  st8-3-3 b1sd rompimento           48063   -0.582  +0.024  0.605 | 25398  -0.546 | 22665  -0.621
+  st8-3-3 b2sd rompimento           30756   -0.560  +0.038  0.597 | 16485  -0.516 | 14271  -0.610
+  st5-3-3 b1sd abertura             63528   -0.962  -0.005  0.957 | 33586  -0.948 | 29942  -0.977
+  st5-3-3 b2sd abertura             40941   -1.005  +0.001  1.006 | 21923  -1.046 | 19018  -0.958
+  st5-3-3 b1sd rompimento           49562   -0.613  +0.020  0.633 | 25721  -0.566 | 23841  -0.664
+  st5-3-3 b2sd rompimento           31335   -0.571  +0.034  0.605 | 16612  -0.527 | 14723  -0.620
+
+====================================================================================================
+10m (300 dias max) -- V1
+====================================================================================================
+    BTC-USDT-SWAP    candles= 43199 trades(todas as combinacoes)= 15284
+    ETH-USDT-SWAP    candles= 43199 trades(todas as combinacoes)= 13175
+    SOL-USDT-SWAP    candles= 43199 trades(todas as combinacoes)= 16001
+    XRP-USDT-SWAP    candles= 43199 trades(todas as combinacoes)= 15938
+    DOGE-USDT-SWAP   candles= 43199 trades(todas as combinacoes)= 14230
+    ARB-USDT-SWAP    candles= 43199 trades(todas as combinacoes)= 18276
+    WLD-USDT-SWAP    candles= 43199 trades(todas as combinacoes)= 16752
+    SUI-USDT-SWAP    candles= 43199 trades(todas as combinacoes)= 15992
+    UNI-USDT-SWAP    candles= 43199 trades(todas as combinacoes)= 15862
+    LINK-USDT-SWAP   candles= 43199 trades(todas as combinacoes)= 15634
+    BNB-USDT-SWAP    candles= 43199 trades(todas as combinacoes)= 17636
+    TRX-USDT-SWAP    candles= 43199 trades(todas as combinacoes)= 18970
+    ZEC-USDT-SWAP    candles= 43199 trades(todas as combinacoes)= 16399
+    HYPE-USDT-SWAP   candles= 43199 trades(todas as combinacoes)= 19227
+    ADA-USDT-SWAP    candles= 43199 trades(todas as combinacoes)= 17080
+    XLM-USDT-SWAP    candles= 43199 trades(todas as combinacoes)= 18173
+    NEAR-USDT-SWAP   candles= 43199 trades(todas as combinacoes)= 18553
+    AVAX-USDT-SWAP   candles= 43199 trades(todas as combinacoes)= 14795
+    LTC-USDT-SWAP    candles= 43199 trades(todas as combinacoes)= 18178
+    BCH-USDT-SWAP    candles= 43199 trades(todas as combinacoes)= 15950
+  ponto medio do holdout: 2026-04-25
+  combinacao                            n  exp liq   bruto  custo |  n tr  exp tr |  n te  exp te
+  st14-3-3 b1sd abertura            36525   -0.638  -0.009  0.629 | 19117  -0.645 | 17408  -0.629
+  st14-3-3 b2sd abertura            27110   -0.667  -0.012  0.655 | 14366  -0.687 | 12744  -0.644
+  st14-3-3 b1sd rompimento          26681   -0.370  +0.022  0.392 | 13814  -0.342 | 12867  -0.400
+  st14-3-3 b2sd rompimento          19578   -0.370  +0.019  0.389 | 10314  -0.336 |  9264  -0.406
+  st8-3-3 b1sd abertura             36792   -0.673  -0.007  0.666 | 19278  -0.677 | 17514  -0.668
+  st8-3-3 b2sd abertura             27179   -0.696  -0.012  0.684 | 14396  -0.712 | 12783  -0.679
+  st8-3-3 b1sd rompimento           26656   -0.374  +0.030  0.404 | 13905  -0.338 | 12751  -0.412
+  st8-3-3 b2sd rompimento           19655   -0.363  +0.033  0.396 | 10328  -0.324 |  9327  -0.407
+  st5-3-3 b1sd abertura             37520   -0.703  -0.014  0.689 | 19867  -0.714 | 17653  -0.691
+  st5-3-3 b2sd abertura             27341   -0.732  -0.019  0.713 | 14545  -0.750 | 12796  -0.711
+  st5-3-3 b1sd rompimento           27117   -0.378  +0.025  0.403 | 14150  -0.353 | 12967  -0.406
+  st5-3-3 b2sd rompimento           19951   -0.373  +0.028  0.401 | 10551  -0.346 |  9400  -0.403
+
+====================================================================================================
+2H (2000 dias max) -- V2
+====================================================================================================
+    BTC-USDT-SWAP    candles= 23999 trades(todas as combinacoes)=  9875
+    ETH-USDT-SWAP    candles= 23999 trades(todas as combinacoes)= 10340
+    SOL-USDT-SWAP    candles= 23999 trades(todas as combinacoes)= 11273
+    XRP-USDT-SWAP    candles= 23999 trades(todas as combinacoes)= 10486
+    DOGE-USDT-SWAP   candles= 23999 trades(todas as combinacoes)= 10587
+    ARB-USDT-SWAP    candles= 15348 trades(todas as combinacoes)=  7017
+    WLD-USDT-SWAP    candles= 13874 trades(todas as combinacoes)=  6389
+    SUI-USDT-SWAP    candles= 14838 trades(todas as combinacoes)=  6820
+    UNI-USDT-SWAP    candles= 23999 trades(todas as combinacoes)= 10934
+    LINK-USDT-SWAP   candles= 23999 trades(todas as combinacoes)= 10978
+    BNB-USDT-SWAP    candles= 16432 trades(todas as combinacoes)=  7266
+    TRX-USDT-SWAP    candles= 23999 trades(todas as combinacoes)= 11068
+    ZEC-USDT-SWAP    candles=  3846 trades(todas as combinacoes)=  1744
+    HYPE-USDT-SWAP   candles=  6940 trades(todas as combinacoes)=  3389
+    ADA-USDT-SWAP    candles= 23999 trades(todas as combinacoes)= 11008
+    XLM-USDT-SWAP    candles= 23999 trades(todas as combinacoes)= 10825
+    NEAR-USDT-SWAP   candles= 23999 trades(todas as combinacoes)= 11008
+    AVAX-USDT-SWAP   candles= 23999 trades(todas as combinacoes)= 11160
+    LTC-USDT-SWAP    candles= 23999 trades(todas as combinacoes)= 10580
+    BCH-USDT-SWAP    candles= 23999 trades(todas as combinacoes)=  9991
+  ponto medio do holdout: 2023-12-27
+  combinacao                            n  exp liq   bruto  custo |  n tr  exp tr |  n te  exp te
+  st14-3-3 mm144 abertura           34804   -0.499  -0.104  0.395 | 15087  -0.505 | 19717  -0.495
+  st14-3-3 mm144 rompimento         24038   -0.140  +0.002  0.141 | 10409  -0.150 | 13629  -0.132
+  st8-3-3 mm144 abertura            36060   -0.472  -0.105  0.367 | 15638  -0.438 | 20422  -0.498
+  st8-3-3 mm144 rompimento          24544   -0.143  -0.002  0.140 | 10620  -0.146 | 13924  -0.140
+  st5-3-3 mm144 abertura            37638   -0.479  -0.107  0.372 | 16157  -0.491 | 21481  -0.469
+  st5-3-3 mm144 rompimento          25654   -0.142  -0.002  0.140 | 11050  -0.137 | 14604  -0.146
+
+====================================================================================================
+4H (2000 dias max) -- V2
+====================================================================================================
+    BTC-USDT-SWAP    candles= 11999 trades(todas as combinacoes)=  5170
+    ETH-USDT-SWAP    candles= 11999 trades(todas as combinacoes)=  5366
+    SOL-USDT-SWAP    candles= 11999 trades(todas as combinacoes)=  5457
+    XRP-USDT-SWAP    candles= 11999 trades(todas as combinacoes)=  5381
+    DOGE-USDT-SWAP   candles= 11999 trades(todas as combinacoes)=  5107
+    ARB-USDT-SWAP    candles=  7674 trades(todas as combinacoes)=  3508
+    WLD-USDT-SWAP    candles=  6937 trades(todas as combinacoes)=  2985
+    SUI-USDT-SWAP    candles=  7419 trades(todas as combinacoes)=  3341
+    UNI-USDT-SWAP    candles= 11999 trades(todas as combinacoes)=  5356
+    LINK-USDT-SWAP   candles= 11999 trades(todas as combinacoes)=  5600
+    BNB-USDT-SWAP    candles=  8216 trades(todas as combinacoes)=  3757
+    TRX-USDT-SWAP    candles= 11999 trades(todas as combinacoes)=  5612
+    ZEC-USDT-SWAP    candles=  1923 trades(todas as combinacoes)=   852
+    HYPE-USDT-SWAP   candles=  3470 trades(todas as combinacoes)=  1616
+    ADA-USDT-SWAP    candles= 11999 trades(todas as combinacoes)=  5591
+    XLM-USDT-SWAP    candles= 11999 trades(todas as combinacoes)=  5210
+    NEAR-USDT-SWAP   candles= 11999 trades(todas as combinacoes)=  5395
+    AVAX-USDT-SWAP   candles= 11999 trades(todas as combinacoes)=  5418
+    LTC-USDT-SWAP    candles= 11999 trades(todas as combinacoes)=  5433
+    BCH-USDT-SWAP    candles= 11999 trades(todas as combinacoes)=  5171
+  ponto medio do holdout: 2023-12-27
+  combinacao                            n  exp liq   bruto  custo |  n tr  exp tr |  n te  exp te
+  st14-3-3 mm144 abertura           17275   -0.305  -0.072  0.233 |  7424  -0.294 |  9851  -0.313
+  st14-3-3 mm144 rompimento         11844   -0.059  +0.036  0.095 |  5026  -0.029 |  6818  -0.081
+  st8-3-3 mm144 abertura            18045   -0.326  -0.083  0.243 |  7808  -0.322 | 10237  -0.329
+  st8-3-3 mm144 rompimento          12076   -0.048  +0.047  0.095 |  5188  -0.038 |  6888  -0.056
+  st5-3-3 mm144 abertura            19224   -0.349  -0.083  0.266 |  8257  -0.348 | 10967  -0.350
+  st5-3-3 mm144 rompimento          12862   -0.058  +0.041  0.098 |  5452  -0.036 |  7410  -0.073
+
+====================================================================================================
+15m (300 dias max) -- V1 -- descritivo, fora da selecao
+====================================================================================================
+    BTC-USDT-SWAP    candles= 28799 trades(todas as combinacoes)= 10952
+    ETH-USDT-SWAP    candles= 28799 trades(todas as combinacoes)= 10097
+    SOL-USDT-SWAP    candles= 28799 trades(todas as combinacoes)= 12157
+    XRP-USDT-SWAP    candles= 28799 trades(todas as combinacoes)= 12983
+    DOGE-USDT-SWAP   candles= 28799 trades(todas as combinacoes)= 11113
+    ARB-USDT-SWAP    candles= 28799 trades(todas as combinacoes)= 13827
+    WLD-USDT-SWAP    candles= 28799 trades(todas as combinacoes)= 13569
+    SUI-USDT-SWAP    candles= 28799 trades(todas as combinacoes)= 11640
+    UNI-USDT-SWAP    candles= 28799 trades(todas as combinacoes)=  9678
+    LINK-USDT-SWAP   candles= 28799 trades(todas as combinacoes)= 11735
+    BNB-USDT-SWAP    candles= 28799 trades(todas as combinacoes)= 13571
+    TRX-USDT-SWAP    candles= 28799 trades(todas as combinacoes)= 14039
+    ZEC-USDT-SWAP    candles= 28799 trades(todas as combinacoes)= 13268
+    HYPE-USDT-SWAP   candles= 28799 trades(todas as combinacoes)= 14352
+    ADA-USDT-SWAP    candles= 28799 trades(todas as combinacoes)= 12962
+    XLM-USDT-SWAP    candles= 28799 trades(todas as combinacoes)= 13798
+    NEAR-USDT-SWAP   candles= 28799 trades(todas as combinacoes)= 14243
+    AVAX-USDT-SWAP   candles= 28799 trades(todas as combinacoes)= 11010
+    LTC-USDT-SWAP    candles= 28799 trades(todas as combinacoes)= 13680
+    BCH-USDT-SWAP    candles= 28799 trades(todas as combinacoes)= 12318
+  ponto medio do holdout: 2026-04-25
+  combinacao                            n  exp liq   bruto  custo |  n tr  exp tr |  n te  exp te
+  st14-3-3 b1sd abertura            27598   -0.470  +0.004  0.474 | 14419  -0.467 | 13179  -0.473
+  st14-3-3 b2sd abertura            21008   -0.481  +0.008  0.489 | 11019  -0.467 |  9989  -0.498
+  st14-3-3 b1sd rompimento          19401   -0.292  +0.014  0.306 | 10056  -0.272 |  9345  -0.314
+  st14-3-3 b2sd rompimento          14641   -0.283  +0.027  0.310 |  7569  -0.266 |  7072  -0.300
+  st8-3-3 b1sd abertura             27822   -0.484  +0.012  0.496 | 14579  -0.479 | 13243  -0.491
+  st8-3-3 b2sd abertura             21154   -0.508  +0.005  0.513 | 11105  -0.493 | 10049  -0.525
+  st8-3-3 b1sd rompimento           19663   -0.298  +0.019  0.318 | 10150  -0.286 |  9513  -0.312
+  st8-3-3 b2sd rompimento           15016   -0.294  +0.025  0.318 |  7821  -0.288 |  7195  -0.300
+  st5-3-3 b1sd abertura             28379   -0.523  +0.003  0.526 | 14848  -0.506 | 13531  -0.541
+  st5-3-3 b2sd abertura             21436   -0.536  -0.001  0.535 | 11160  -0.515 | 10276  -0.559
+  st5-3-3 b1sd rompimento           19750   -0.303  +0.022  0.325 | 10169  -0.282 |  9581  -0.324
+  st5-3-3 b2sd rompimento           15124   -0.292  +0.034  0.326 |  7815  -0.271 |  7309  -0.315
+
+====================================================================================================
+HOLDOUT -- DECIDE
+====================================================================================================
+
+  V1: selecionada no treino -> 10m | st8-3-3 b2sd rompimento
+  treino (1a metade, so referencia): n= 10328 | dias=  150 | exp -0.324R | IC95 [-0.383, -0.261] | bruto +0.058R | acerto 35.3% | custo 0.382R
+  TESTE (2a metade, decide)       : n=  9327 | dias=  151 | exp -0.407R | IC95 [-0.462, -0.352] | bruto +0.005R | acerto 33.5% | custo 0.412R
+  so compras (teste)               : n=  4578 | dias=  149 | exp -0.373R | IC95 [-0.445, -0.296] | bruto +0.013R | acerto 33.8% | custo 0.386R
+  so vendas (teste)                : n=  4749 | dias=  150 | exp -0.441R | IC95 [-0.525, -0.350] | bruto -0.003R | acerto 33.2% | custo 0.438R
+
+  V2: selecionada no treino -> 4H | st14-3-3 mm144 rompimento
+  treino (1a metade, so referencia): n=  5026 | dias=  922 | exp -0.029R | IC95 [-0.094, +0.038] | bruto +0.061R | acerto 35.4% | custo 0.090R
+  TESTE (2a metade, decide)       : n=  6818 | dias=  982 | exp -0.081R | IC95 [-0.140, -0.021] | bruto +0.018R | acerto 33.9% | custo 0.098R
+  so compras (teste)               : n=  3326 | dias=  766 | exp -0.097R | IC95 [-0.180, -0.014] | bruto +0.004R | acerto 33.5% | custo 0.101R
+  so vendas (teste)                : n=  3492 | dias=  714 | exp -0.065R | IC95 [-0.150, +0.023] | bruto +0.031R | acerto 34.4% | custo 0.096R
+
+==> DECISAO: V1: NAO PASSA, V2: NAO PASSA

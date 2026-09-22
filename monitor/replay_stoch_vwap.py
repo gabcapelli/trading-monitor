@@ -42,8 +42,12 @@ Comum as duas
 - Alvo: 2R fixo ("alvo duas vezes o risco", o que ele mais repete). [desvio]
   alvos alternativos (topo anterior, 161%, sair/virar na banda oposta) nao
   modelados.
-- Conservador intra-candle: no candle da entrada so o stop pode ser atingido;
-  stop e alvo no mesmo candle = stop. Stop >= entrada -> descartado.
+- Candle da entrada: alvo nunca conta; toque no stop resolvido pela
+  heuristica OHLC (stop_vale_no_candle_entrada em replay_ema_ribbon.py; so
+  muda algo na entrada "rompimento" -- na "abertura" todo toque e perda
+  real). Stop e alvo no mesmo candle depois dele = stop. Stop >= entrada ->
+  descartado. [corrigido em 22/09/2026; log antigo em stoch_vwap.log, novo
+  em stoch_vwap_ohlc.log]
 - Uma posicao por par por vez; sinais durante trade aberto ignorados.
   Trades ainda abertos no fim do historico sao descartados.
 - Custo: 0.18% do nocional ida+volta convertido em R (igual aos outros
@@ -88,7 +92,7 @@ import time
 from collections import OrderedDict
 
 import fetch_and_check as m
-from replay_ema_ribbon import ic_bootstrap, CUSTO_RT, UNIVERSO
+from replay_ema_ribbon import ic_bootstrap, CUSTO_RT, UNIVERSO, stop_vale_no_candle_entrada
 
 STOCHS = [(14, 3, 3), (8, 3, 3), (5, 3, 3)]
 BANDAS = [1.0, 2.0]
@@ -318,7 +322,7 @@ def resolver(c, cand):
         saida = None
         for t in range(j, len(c)):
             hi, lo = c[t][2], c[t][3]
-            if (lo <= stop) if d == 1 else (hi >= stop):
+            if ((lo <= stop) if d == 1 else (hi >= stop)) and (t > j or stop_vale_no_candle_entrada(c[j], d, entrada)):
                 saida, r = t, -1.0
                 break
             if t > j and ((hi >= alvo) if d == 1 else (lo <= alvo)):

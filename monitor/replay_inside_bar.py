@@ -61,7 +61,7 @@ PASSA so se 1 e 2 passarem.
 
 import time
 
-from replay_ema_ribbon import ic_bootstrap, CUSTO_RT, UNIVERSO
+from replay_ema_ribbon import ic_bootstrap, CUSTO_RT, UNIVERSO, stop_vale_no_candle_entrada
 from replay_stoch_vwap import baixar, sma, estocastico
 from replay_91_beta import UNIVERSO_B
 
@@ -162,8 +162,7 @@ def simular(c, st, alvo_modo, contexto):
         for q in range(j, len(c)):
             hi, lo = c[q][2], c[q][3]
             if (lo <= stop) if d == 1 else (hi >= stop):
-                a_favor = (c[q][4] >= c[q][1]) if d == 1 else (c[q][4] <= c[q][1])
-                if not (q == j and a_favor):  # OHLC: no candle a favor o extremo contra veio antes do gatilho
+                if q > j or stop_vale_no_candle_entrada(c[j], d, entrada):
                     preco = min(stop, c[q][1]) if d == 1 else max(stop, c[q][1])
                     saida = q
                     break

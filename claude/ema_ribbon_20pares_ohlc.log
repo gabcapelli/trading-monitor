@@ -1,0 +1,130 @@
+
+========================================================================================
+4H  (2000 dias max)  -- DECIDE
+========================================================================================
+    BTC-USDT-SWAP    candles= 11999 trades= 310 exp=-0.108R
+    ETH-USDT-SWAP    candles= 11999 trades= 301 exp=-0.189R
+    SOL-USDT-SWAP    candles= 11999 trades= 324 exp=+0.081R
+    XRP-USDT-SWAP    candles= 11999 trades= 350 exp=-0.029R
+    DOGE-USDT-SWAP   candles= 11999 trades= 359 exp=-0.010R
+    ARB-USDT-SWAP    candles=  7674 trades= 201 exp=+0.081R
+    WLD-USDT-SWAP    candles=  6937 trades= 178 exp=-0.033R
+    SUI-USDT-SWAP    candles=  7419 trades= 212 exp=+0.093R
+    UNI-USDT-SWAP    candles= 11999 trades= 340 exp=-0.142R
+    LINK-USDT-SWAP   candles= 11999 trades= 353 exp=-0.086R
+    BNB-USDT-SWAP    candles=  8216 trades= 241 exp=-0.104R
+    TRX-USDT-SWAP    candles= 11999 trades= 352 exp=-0.010R
+    ZEC-USDT-SWAP    candles=  1923 trades=  55 exp=+0.005R
+    HYPE-USDT-SWAP   candles=  3470 trades= 105 exp=-0.198R
+    ADA-USDT-SWAP    candles= 11999 trades= 324 exp=-0.035R
+    XLM-USDT-SWAP    candles= 11999 trades= 317 exp=+0.047R
+    NEAR-USDT-SWAP   candles= 11999 trades= 324 exp=-0.001R
+    AVAX-USDT-SWAP   candles= 11999 trades= 337 exp=+0.158R
+    LTC-USDT-SWAP    candles= 11999 trades= 319 exp=-0.173R
+    BCH-USDT-SWAP    candles= 11999 trades= 391 exp=-0.213R
+  regra do video (2R/3R): n= 5693 | dias= 1639 | exp -0.045R | IC95 [-0.106, +0.017] | %pos 34.4%
+  descritivo: 3R cheio   : n= 5693 | dias= 1639 | exp -0.031R | IC95 [-0.101, +0.040] | %pos 26.6%
+  so compras (video)     : n= 2682 | dias= 1047 | exp -0.047R | IC95 [-0.127, +0.034] | %pos 34.5%
+  so vendas (video)      : n= 3011 | dias= 1013 | exp -0.044R | IC95 [-0.132, +0.049] | %pos 34.4%
+  so 10 pares originais  : n= 2928 | dias= 1304 | exp -0.043R | IC95 [-0.116, +0.031] | %pos 34.6%
+  so 10 pares novos      : n= 2765 | dias= 1339 | exp -0.048R | IC95 [-0.117, +0.023] | %pos 34.2%
+  custo medio por trade: 0.093R
+  inicio dos dados: BTC:2021-04-01, ETH:2021-04-01, SOL:2021-04-01, XRP:2021-04-01, DOGE:2021-04-01, ARB:2023-03-23, WLD:2023-07-24, SUI:2023-05-05, UNI:2021-04-01, LINK:2021-04-01, BNB:2022-12-23, TRX:2021-04-01, ZEC:2025-11-06, HYPE:2025-02-21, ADA:2021-04-01, XLM:2021-04-01, NEAR:2021-04-01, AVAX:2021-04-01, LTC:2021-04-01, BCH:2021-04-01
+
+========================================================================================
+1Dutc  (2000 dias max)  -- DECIDE
+========================================================================================
+    BTC-USDT-SWAP    candles=  2000 trades=  52 exp=-0.021R
+    ETH-USDT-SWAP    candles=  2000 trades=  55 exp=+0.032R
+    SOL-USDT-SWAP    candles=  2000 trades=  49 exp=-0.250R
+    XRP-USDT-SWAP    candles=  2000 trades=  51 exp=-0.246R
+    DOGE-USDT-SWAP   candles=  2000 trades=  50 exp=+0.002R
+    ARB-USDT-SWAP    candles=  1279 trades=  25 exp=-0.083R
+    WLD-USDT-SWAP    candles=  1156 trades=  22 exp=+0.323R
+    SUI-USDT-SWAP    candles=  1236 trades=  38 exp=+0.056R
+    UNI-USDT-SWAP    candles=  2000 trades=  49 exp=-0.005R
+    LINK-USDT-SWAP   candles=  2000 trades=  50 exp=-0.128R
+    BNB-USDT-SWAP    candles=  1369 trades=  39 exp=+0.178R
+    TRX-USDT-SWAP    candles=  2000 trades=  61 exp=+0.327R
+    ZEC-USDT-SWAP    candles=   320 trades=   4 exp=+0.725R
+    HYPE-USDT-SWAP   candles=   578 trades=  12 exp=+0.558R
+    ADA-USDT-SWAP    candles=  2000 trades=  40 exp=+0.230R
+    XLM-USDT-SWAP    candles=  2000 trades=  44 exp=+0.169R
+    NEAR-USDT-SWAP   candles=  2000 trades=  42 exp=+0.118R
+    AVAX-USDT-SWAP   candles=  2000 trades=  54 exp=+0.132R
+    LTC-USDT-SWAP    candles=  2000 trades=  48 exp=+0.009R
+    BCH-USDT-SWAP    candles=  2000 trades=  49 exp=+0.128R
+  regra do video (2R/3R): n=  834 | dias=  535 | exp +0.058R | IC95 [-0.069, +0.192] | %pos 35.6%
+  descritivo: 3R cheio   : n=  834 | dias=  535 | exp +0.083R | IC95 [-0.060, +0.236] | %pos 27.9%
+  so compras (video)     : n=  410 | dias=  272 | exp -0.003R | IC95 [-0.178, +0.179] | %pos 32.7%
+  so vendas (video)      : n=  424 | dias=  272 | exp +0.117R | IC95 [-0.082, +0.311] | %pos 38.4%
+  so 10 pares originais  : n=  441 | dias=  332 | exp -0.053R | IC95 [-0.210, +0.101] | %pos 32.9%
+  so 10 pares novos      : n=  393 | dias=  314 | exp +0.183R | IC95 [+0.014, +0.362] | %pos 38.7%
+  custo medio por trade: 0.035R
+  inicio dos dados: BTC:2021-04-01, ETH:2021-04-01, SOL:2021-04-01, XRP:2021-04-01, DOGE:2021-04-01, ARB:2023-03-23, WLD:2023-07-24, SUI:2023-05-05, UNI:2021-04-01, LINK:2021-04-01, BNB:2022-12-23, TRX:2021-04-01, ZEC:2025-11-06, HYPE:2025-02-21, ADA:2021-04-01, XLM:2021-04-01, NEAR:2021-04-01, AVAX:2021-04-01, LTC:2021-04-01, BCH:2021-04-01
+
+========================================================================================
+1H  (300 dias max)  -- descritivo
+========================================================================================
+    BTC-USDT-SWAP    candles=  7199 trades= 192 exp=-0.303R
+    ETH-USDT-SWAP    candles=  7199 trades= 187 exp=-0.221R
+    SOL-USDT-SWAP    candles=  7199 trades= 184 exp=-0.282R
+    XRP-USDT-SWAP    candles=  7199 trades= 204 exp=-0.427R
+    DOGE-USDT-SWAP   candles=  7199 trades= 172 exp=-0.300R
+    ARB-USDT-SWAP    candles=  7199 trades= 208 exp=-0.134R
+    WLD-USDT-SWAP    candles=  7199 trades= 233 exp=-0.181R
+    SUI-USDT-SWAP    candles=  7199 trades= 195 exp=-0.200R
+    UNI-USDT-SWAP    candles=  7199 trades= 196 exp=-0.180R
+    LINK-USDT-SWAP   candles=  7199 trades= 202 exp=-0.303R
+    BNB-USDT-SWAP    candles=  7199 trades= 235 exp=-0.538R
+    TRX-USDT-SWAP    candles=  7199 trades= 206 exp=-0.568R
+    ZEC-USDT-SWAP    candles=  7199 trades= 185 exp=+0.048R
+    HYPE-USDT-SWAP   candles=  7199 trades= 198 exp=-0.352R
+    ADA-USDT-SWAP    candles=  7199 trades= 195 exp=-0.159R
+    XLM-USDT-SWAP    candles=  7199 trades= 195 exp=-0.125R
+    NEAR-USDT-SWAP   candles=  7199 trades= 203 exp=-0.192R
+    AVAX-USDT-SWAP   candles=  7199 trades= 211 exp=-0.320R
+    LTC-USDT-SWAP    candles=  7199 trades= 185 exp=-0.190R
+    BCH-USDT-SWAP    candles=  7199 trades= 224 exp=-0.320R
+  regra do video (2R/3R): n= 4010 | dias=  294 | exp -0.266R | IC95 [-0.348, -0.185] | %pos 32.1%
+  descritivo: 3R cheio   : n= 4010 | dias=  294 | exp -0.263R | IC95 [-0.358, -0.169] | %pos 24.5%
+  so compras (video)     : n= 1860 | dias=  252 | exp -0.273R | IC95 [-0.382, -0.160] | %pos 31.5%
+  so vendas (video)      : n= 2150 | dias=  253 | exp -0.261R | IC95 [-0.381, -0.134] | %pos 32.6%
+  so 10 pares originais  : n= 1973 | dias=  289 | exp -0.251R | IC95 [-0.354, -0.149] | %pos 32.2%
+  so 10 pares novos      : n= 2037 | dias=  292 | exp -0.281R | IC95 [-0.363, -0.201] | %pos 32.0%
+  custo medio por trade: 0.244R
+  inicio dos dados: BTC:2025-11-26, ETH:2025-11-26, SOL:2025-11-26, XRP:2025-11-26, DOGE:2025-11-26, ARB:2025-11-26, WLD:2025-11-26, SUI:2025-11-26, UNI:2025-11-26, LINK:2025-11-26, BNB:2025-11-26, TRX:2025-11-26, ZEC:2025-11-26, HYPE:2025-11-26, ADA:2025-11-26, XLM:2025-11-26, NEAR:2025-11-26, AVAX:2025-11-26, LTC:2025-11-26, BCH:2025-11-26
+
+========================================================================================
+15m  (300 dias max)  -- descritivo
+========================================================================================
+    BTC-USDT-SWAP    candles= 28799 trades= 820 exp=-0.862R
+    ETH-USDT-SWAP    candles= 28799 trades= 820 exp=-0.610R
+    SOL-USDT-SWAP    candles= 28799 trades= 862 exp=-0.432R
+    XRP-USDT-SWAP    candles= 28799 trades= 855 exp=-0.531R
+    DOGE-USDT-SWAP   candles= 28799 trades= 792 exp=-0.546R
+    ARB-USDT-SWAP    candles= 28799 trades= 830 exp=-0.310R
+    WLD-USDT-SWAP    candles= 28799 trades= 840 exp=-0.176R
+    SUI-USDT-SWAP    candles= 28799 trades= 841 exp=-0.354R
+    UNI-USDT-SWAP    candles= 28799 trades= 803 exp=-0.335R
+    LINK-USDT-SWAP   candles= 28799 trades= 822 exp=-0.415R
+    BNB-USDT-SWAP    candles= 28799 trades= 859 exp=-0.761R
+    TRX-USDT-SWAP    candles= 28799 trades= 814 exp=-1.521R
+    ZEC-USDT-SWAP    candles= 28799 trades= 840 exp=-0.165R
+    HYPE-USDT-SWAP   candles= 28799 trades= 887 exp=-0.236R
+    ADA-USDT-SWAP    candles= 28799 trades= 814 exp=-0.319R
+    XLM-USDT-SWAP    candles= 28799 trades= 857 exp=-0.358R
+    NEAR-USDT-SWAP   candles= 28799 trades= 810 exp=-0.308R
+    AVAX-USDT-SWAP   candles= 28799 trades= 846 exp=-0.437R
+    LTC-USDT-SWAP    candles= 28799 trades= 865 exp=-0.618R
+    BCH-USDT-SWAP    candles= 28799 trades= 844 exp=-0.598R
+  regra do video (2R/3R): n=16721 | dias=  299 | exp -0.493R | IC95 [-0.551, -0.435] | %pos 31.0%
+  descritivo: 3R cheio   : n=16721 | dias=  299 | exp -0.481R | IC95 [-0.546, -0.415] | %pos 26.4%
+  so compras (video)     : n= 7958 | dias=  297 | exp -0.499R | IC95 [-0.575, -0.423] | %pos 31.1%
+  so vendas (video)      : n= 8763 | dias=  295 | exp -0.487R | IC95 [-0.570, -0.401] | %pos 30.9%
+  so 10 pares originais  : n= 8285 | dias=  299 | exp -0.456R | IC95 [-0.525, -0.386] | %pos 31.2%
+  so 10 pares novos      : n= 8436 | dias=  299 | exp -0.529R | IC95 [-0.586, -0.472] | %pos 30.8%
+  custo medio por trade: 0.541R
+  inicio dos dados: BTC:2025-11-26, ETH:2025-11-26, SOL:2025-11-26, XRP:2025-11-26, DOGE:2025-11-26, ARB:2025-11-26, WLD:2025-11-26, SUI:2025-11-26, UNI:2025-11-26, LINK:2025-11-26, BNB:2025-11-26, TRX:2025-11-26, ZEC:2025-11-26, HYPE:2025-11-26, ADA:2025-11-26, XLM:2025-11-26, NEAR:2025-11-26, AVAX:2025-11-26, LTC:2025-11-26, BCH:2025-11-26
+
+==> DECISAO: 4H: NAO PASSA, 1Dutc: NAO PASSA

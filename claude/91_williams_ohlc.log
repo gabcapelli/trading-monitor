@@ -1,0 +1,147 @@
+
+====================================================================================================
+1H (300 dias max)
+====================================================================================================
+    BTC-USDT-SWAP    candles=  7199 trades(todas as combinacoes)=  4832
+    ETH-USDT-SWAP    candles=  7199 trades(todas as combinacoes)=  4760
+    SOL-USDT-SWAP    candles=  7199 trades(todas as combinacoes)=  4842
+    XRP-USDT-SWAP    candles=  7199 trades(todas as combinacoes)=  4838
+    DOGE-USDT-SWAP   candles=  7199 trades(todas as combinacoes)=  4695
+    ARB-USDT-SWAP    candles=  7199 trades(todas as combinacoes)=  4766
+    WLD-USDT-SWAP    candles=  7199 trades(todas as combinacoes)=  4657
+    SUI-USDT-SWAP    candles=  7199 trades(todas as combinacoes)=  4951
+    UNI-USDT-SWAP    candles=  7199 trades(todas as combinacoes)=  4949
+    LINK-USDT-SWAP   candles=  7199 trades(todas as combinacoes)=  4869
+    BNB-USDT-SWAP    candles=  7199 trades(todas as combinacoes)=  4645
+    TRX-USDT-SWAP    candles=  7199 trades(todas as combinacoes)=  4551
+    ZEC-USDT-SWAP    candles=  7199 trades(todas as combinacoes)=  4457
+    HYPE-USDT-SWAP   candles=  7199 trades(todas as combinacoes)=  4967
+    ADA-USDT-SWAP    candles=  7199 trades(todas as combinacoes)=  4868
+    XLM-USDT-SWAP    candles=  7199 trades(todas as combinacoes)=  5005
+    NEAR-USDT-SWAP   candles=  7199 trades(todas as combinacoes)=  5123
+    AVAX-USDT-SWAP   candles=  7199 trades(todas as combinacoes)=  4830
+    LTC-USDT-SWAP    candles=  7199 trades(todas as combinacoes)=  4989
+    BCH-USDT-SWAP    candles=  7199 trades(todas as combinacoes)=  4846
+  ponto medio do holdout: 2026-04-25
+  combinacao                             n  exp liq   bruto   %/tr acerto |  n tr  exp tr |  n te  exp te
+  mme9 stop=sem filtro=nenhum        17580   -0.172  +0.071  -0.16  29.5% |  8348  -0.119 |  9232  -0.220
+  mme9 stop=sem filtro=mm50           9075   -0.170  +0.075  -0.15  29.1% |  4331  -0.179 |  4744  -0.163
+  mme9 stop=minima filtro=nenhum     18675   -0.164  +0.080  -0.15  26.7% |  8868  -0.100 |  9807  -0.221
+  mme9 stop=minima filtro=mm50        9632   -0.163  +0.083  -0.14  26.2% |  4601  -0.162 |  5031  -0.163
+  mma9 stop=sem filtro=nenhum        13048   -0.167  +0.098  -0.15  31.0% |  6316  -0.098 |  6732  -0.233
+  mma9 stop=sem filtro=mm50           6749   -0.157  +0.106  -0.16  30.6% |  3288  -0.161 |  3461  -0.152
+  mma9 stop=minima filtro=nenhum     14339   -0.169  +0.098  -0.15  25.2% |  6953  -0.090 |  7386  -0.243
+  mma9 stop=minima filtro=mm50        7342   -0.145  +0.117  -0.15  24.9% |  3566  -0.123 |  3776  -0.167
+
+====================================================================================================
+4H (2000 dias max)
+====================================================================================================
+    BTC-USDT-SWAP    candles= 11999 trades(todas as combinacoes)=  7832
+    ETH-USDT-SWAP    candles= 11999 trades(todas as combinacoes)=  7700
+    SOL-USDT-SWAP    candles= 11999 trades(todas as combinacoes)=  7672
+    XRP-USDT-SWAP    candles= 11999 trades(todas as combinacoes)=  8104
+    DOGE-USDT-SWAP   candles= 11999 trades(todas as combinacoes)=  7437
+    ARB-USDT-SWAP    candles=  7674 trades(todas as combinacoes)=  5140
+    WLD-USDT-SWAP    candles=  6937 trades(todas as combinacoes)=  4214
+    SUI-USDT-SWAP    candles=  7419 trades(todas as combinacoes)=  5041
+    UNI-USDT-SWAP    candles= 11999 trades(todas as combinacoes)=  8227
+    LINK-USDT-SWAP   candles= 11999 trades(todas as combinacoes)=  8100
+    BNB-USDT-SWAP    candles=  8216 trades(todas as combinacoes)=  5772
+    TRX-USDT-SWAP    candles= 11999 trades(todas as combinacoes)=  8090
+    ZEC-USDT-SWAP    candles=  1923 trades(todas as combinacoes)=  1016
+    HYPE-USDT-SWAP   candles=  3470 trades(todas as combinacoes)=  2375
+    ADA-USDT-SWAP    candles= 11999 trades(todas as combinacoes)=  7796
+    XLM-USDT-SWAP    candles= 11999 trades(todas as combinacoes)=  8163
+    NEAR-USDT-SWAP   candles= 11999 trades(todas as combinacoes)=  7936
+    AVAX-USDT-SWAP   candles= 11999 trades(todas as combinacoes)=  7822
+    LTC-USDT-SWAP    candles= 11999 trades(todas as combinacoes)=  8125
+    BCH-USDT-SWAP    candles= 11999 trades(todas as combinacoes)=  7774
+  ponto medio do holdout: 2023-12-27
+  combinacao                             n  exp liq   bruto   %/tr acerto |  n tr  exp tr |  n te  exp te
+  mme9 stop=sem filtro=nenhum        24850   -0.018  +0.075  -0.13  30.5% | 10841  -0.026 | 14009  -0.013
+  mme9 stop=sem filtro=mm50          12647   +0.014  +0.109  -0.03  30.6% |  5522  +0.027 |  7125  +0.003
+  mme9 stop=minima filtro=nenhum     26285   -0.022  +0.072  -0.11  27.7% | 11505  -0.040 | 14780  -0.008
+  mme9 stop=minima filtro=mm50       13336   +0.012  +0.108  -0.02  27.7% |  5833  +0.006 |  7503  +0.016
+  mma9 stop=sem filtro=nenhum        18150   +0.034  +0.142  -0.00  32.3% |  7983  -0.035 | 10167  +0.088
+  mma9 stop=sem filtro=mm50           9251   +0.078  +0.185  +0.15  32.2% |  4091  +0.072 |  5160  +0.084
+  mma9 stop=minima filtro=nenhum     19794   +0.008  +0.117  -0.01  26.2% |  8744  -0.038 | 11050  +0.045
+  mma9 stop=minima filtro=mm50       10023   +0.057  +0.164  +0.13  26.2% |  4452  +0.048 |  5571  +0.064
+
+====================================================================================================
+1Dutc (3000 dias max)
+====================================================================================================
+    BTC-USDT-SWAP    candles=  2456 trades(todas as combinacoes)=  1492
+    ETH-USDT-SWAP    candles=  2456 trades(todas as combinacoes)=  1531
+    SOL-USDT-SWAP    candles=  2068 trades(todas as combinacoes)=  1313
+    XRP-USDT-SWAP    candles=  2456 trades(todas as combinacoes)=  1453
+    DOGE-USDT-SWAP   candles=  2264 trades(todas as combinacoes)=  1338
+    ARB-USDT-SWAP    candles=  1279 trades(todas as combinacoes)=   780
+    WLD-USDT-SWAP    candles=  1156 trades(todas as combinacoes)=   710
+    SUI-USDT-SWAP    candles=  1236 trades(todas as combinacoes)=   701
+    UNI-USDT-SWAP    candles=  2195 trades(todas as combinacoes)=  1406
+    LINK-USDT-SWAP   candles=  2390 trades(todas as combinacoes)=  1613
+    BNB-USDT-SWAP    candles=  1369 trades(todas as combinacoes)=   862
+    TRX-USDT-SWAP    candles=  2456 trades(todas as combinacoes)=  1657
+    ZEC-USDT-SWAP    candles=   320 trades(todas as combinacoes)=   153
+    HYPE-USDT-SWAP   candles=   578 trades(todas as combinacoes)=   351
+    ADA-USDT-SWAP    candles=  2386 trades(todas as combinacoes)=  1582
+    XLM-USDT-SWAP    candles=  2324 trades(todas as combinacoes)=  1412
+    NEAR-USDT-SWAP   candles=  2100 trades(todas as combinacoes)=  1393
+    AVAX-USDT-SWAP   candles=  2189 trades(todas as combinacoes)=  1372
+    LTC-USDT-SWAP    candles=  2456 trades(todas as combinacoes)=  1709
+    BCH-USDT-SWAP    candles=  2456 trades(todas as combinacoes)=  1591
+  ponto medio do holdout: 2023-05-12
+  combinacao                             n  exp liq   bruto   %/tr acerto |  n tr  exp tr |  n te  exp te
+  mme9 stop=sem filtro=nenhum         4494   +0.193  +0.227  +0.87  31.5% |  1755  +0.271 |  2739  +0.144
+  mme9 stop=sem filtro=mm50           2232   +0.188  +0.222  +1.23  31.4% |   898  +0.153 |  1334  +0.211
+  mme9 stop=minima filtro=nenhum      4744   +0.195  +0.228  +0.93  28.8% |  1846  +0.243 |  2898  +0.164
+  mme9 stop=minima filtro=mm50        2368   +0.173  +0.207  +1.11  28.5% |   947  +0.141 |  1421  +0.194
+  mma9 stop=sem filtro=nenhum         3399   +0.224  +0.264  +0.98  32.2% |  1330  +0.394 |  2069  +0.115
+  mma9 stop=sem filtro=mm50           1680   +0.271  +0.310  +1.63  32.3% |   656  +0.348 |  1024  +0.221
+  mma9 stop=minima filtro=nenhum      3697   +0.249  +0.290  +1.10  26.4% |  1426  +0.296 |  2271  +0.220
+  mma9 stop=minima filtro=mm50        1805   +0.275  +0.314  +1.54  27.0% |   699  +0.269 |  1106  +0.279
+
+====================================================================================================
+1Wutc (3000 dias max)
+====================================================================================================
+    BTC-USDT-SWAP    candles=   351 trades(todas as combinacoes)=   174
+    ETH-USDT-SWAP    candles=   351 trades(todas as combinacoes)=   131
+    SOL-USDT-SWAP    candles=   296 trades(todas as combinacoes)=   139
+    XRP-USDT-SWAP    candles=   351 trades(todas as combinacoes)=   182
+    DOGE-USDT-SWAP   candles=   324 trades(todas as combinacoes)=   137
+    ARB-USDT-SWAP    candles=   183 trades(todas as combinacoes)=    52
+    WLD-USDT-SWAP    candles=   165 trades(todas as combinacoes)=    71
+    SUI-USDT-SWAP    candles=   177 trades(todas as combinacoes)=    66
+    UNI-USDT-SWAP    candles=   314 trades(todas as combinacoes)=   127
+    LINK-USDT-SWAP   candles=   342 trades(todas as combinacoes)=   190
+    BNB-USDT-SWAP    candles=   196 trades(todas as combinacoes)=    71
+    TRX-USDT-SWAP    candles=   351 trades(todas as combinacoes)=   150
+    ZEC-USDT-SWAP    candles=    46 (curto demais, ignorado)
+    HYPE-USDT-SWAP   candles=    83 trades(todas as combinacoes)=     4
+    ADA-USDT-SWAP    candles=   341 trades(todas as combinacoes)=   150
+    XLM-USDT-SWAP    candles=   332 trades(todas as combinacoes)=   183
+    NEAR-USDT-SWAP   candles=   300 trades(todas as combinacoes)=   134
+    AVAX-USDT-SWAP   candles=   313 trades(todas as combinacoes)=   142
+    LTC-USDT-SWAP    candles=   351 trades(todas as combinacoes)=   201
+    BCH-USDT-SWAP    candles=   351 trades(todas as combinacoes)=   165
+  ponto medio do holdout: 2023-05-08
+  combinacao                             n  exp liq   bruto   %/tr acerto |  n tr  exp tr |  n te  exp te
+  mme9 stop=sem filtro=nenhum          445   +0.052  +0.063  -0.52  31.7% |   175  -0.200 |   270  +0.215
+  mme9 stop=sem filtro=mm50            224   +0.112  +0.123  -1.13  33.0% |    87  -0.155 |   137  +0.281
+  mme9 stop=minima filtro=nenhum       484   +0.080  +0.091  -0.01  27.9% |   181  -0.144 |   303  +0.214
+  mme9 stop=minima filtro=mm50         248   +0.101  +0.113  -1.01  29.0% |    90  -0.086 |   158  +0.208
+  mma9 stop=sem filtro=nenhum          328   +0.141  +0.154  -0.71  33.8% |   135  -0.437 |   193  +0.546
+  mma9 stop=sem filtro=mm50            176   -0.120  -0.107  -5.88  32.4% |    70  -0.469 |   106  +0.111
+  mma9 stop=minima filtro=nenhum       367   +0.274  +0.286  +1.08  27.5% |   143  -0.281 |   224  +0.628
+  mma9 stop=minima filtro=mm50         197   +0.132  +0.145  -2.15  27.4% |    72  -0.139 |   125  +0.288
+
+====================================================================================================
+HOLDOUT -- DECIDE
+====================================================================================================
+  selecionada no treino -> 1Dutc | mma9 stop=sem filtro=nenhum
+  treino (1a metade, so referencia): n= 1330 | dias=  558 | exp +0.394R | IC95 [+0.026, +0.872] | bruto +0.427R | %/trade +2.20% | acerto 33.3% | custo 0.033R
+  TESTE (2a metade, decide)       : n= 2069 | dias=  733 | exp +0.115R | IC95 [-0.141, +0.399] | bruto +0.159R | %/trade +0.20% | acerto 31.6% | custo 0.044R
+  so compras (teste)               : n= 1033 | dias=  395 | exp +0.541R | IC95 [+0.070, +1.075] | bruto +0.587R | %/trade +1.79% | acerto 31.3% | custo 0.047R
+  so vendas (teste)                : n= 1036 | dias=  410 | exp -0.309R | IC95 [-0.508, -0.100] | bruto -0.268R | %/trade -1.39% | acerto 31.9% | custo 0.042R
+
+==> DECISAO: NAO PASSA
