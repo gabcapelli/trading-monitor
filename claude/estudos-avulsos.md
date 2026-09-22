@@ -150,6 +150,36 @@ O vídeo é quase todo um relato de um dia de operações; o setup Renko ocupa ~
 - **VWAP:** o mesmo padrão **sem** a condição da VWAP dá resultado igual. A VWAP não acrescenta nada.
 - **Custo:** 0.08R com tijolo de 1%, 0.25R com tijolo de 0.3%.
 
+## 8. Inside bar + estocástico lento (tendência e "V15") — 22/09/2026
+
+Script: `monitor/replay_inside_bar.py` · log: `claude/inside_bar.log`
+
+- **Sinal:** inside bar com o estocástico lento abaixo de 20 (compra) ou acima de 80 (venda).
+- **Entrada e stop:** entrada por stop no rompimento, válida só no candle seguinte; stop no outro extremo do inside bar.
+- **Contextos:**
+  - *tendência*: MMA80 a favor, no 1D e no 1W.
+  - *V15*: o sinal de calendário do vídeo; perto do dia 15 ou do dia 1º, depois de a quinzena ter andado contra; só no 1D.
+- **Alvos:** 2R, topo anterior (máxima de 20 candles) ou banda de Bollinger(20,2).
+- **Grade:** 3 estocásticos, somando 27 células.
+- **Critério:** holdout **e** confirmação obrigatória nos 80 pares fora da amostra.
+
+| Célula escolhida no treino | Treino | 1) Teste (2ª metade) | 2) 80 pares fora da amostra |
+|---|---|---|---|
+| V15, 1D, st 8-3-3, alvo topo | +0.457R (n=90) | **+0.197R**, IC [−0.227, +0.664] | **−0.150R**, IC [−0.402, +0.133] |
+
+**Veredito: NÃO PASSA** — nenhuma das duas etapas.
+- **V15:** o +0.197R da 2ª metade, com n=181 e acerto de 21%, não se sustenta; nos 80 pares o acerto cai para 13% e a expectância fica negativa.
+- **Semanal:** as células têm n de 22 a 45, pouco demais para ler qualquer coisa.
+
+### Viés do simulador encontrado aqui — afeta estudos anteriores
+
+Até o estudo 7, os scripts usavam a regra "conservadora": no candle da entrada, qualquer toque no stop conta como perda.
+
+- **O problema:** quando a entrada é por ordem **stop** e o stop está a menos de um candle de distância, essa regra é enviesada contra o trade. Muitas vezes o preço tocou o stop **antes** de acionar a entrada.
+- **Medida:** num passeio aleatório com caminho intra-candle fino (480 passos), a regra conservadora dá **−0.13 a −0.21R** bruto no inside bar; a heurística OHLC (candle a favor: extremo contra antes do gatilho; candle contra: o inverso) dá **−0.01 a +0.04R**, dentro do ruído. Daqui em diante, OHLC.
+- **Quem não é afetado:** entrada na abertura (IFR, `abertura` do estocástico+VWAP), entrada no fechamento (Renko) e sem stop (9.1 original, estudo 6). Nesses casos, qualquer toque no stop depois da entrada é perda de fato.
+- **Afetados, com viés negativo:** leque de médias (1), 1-2-3 (2), células `rompimento` do estocástico+VWAP (3) e variante `stop=minima` do 9.1 (4). O tamanho depende da distância entre gatilho e stop em relação ao candle. **Os vereditos desses estudos ainda não foram refeitos com a regra corrigida.**
+
 ## Leitura conjunta
 
 Mesma direção do achado da auditoria v6 sobre o checklist mecânico dos Setups A/B. Nenhum dos seis setups de vídeo tem edge mecânico demonstrável nesses 20 pares (o 9.1 também não, fora da amostra, nos 80 pares do estudo 6):

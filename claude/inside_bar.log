@@ -1,0 +1,49 @@
+========================================================================================================
+UNIVERSO A (20 pares) -- grade
+========================================================================================================
+  combinacao                                   n  exp liq   bruto acerto |  n tr  exp tr |  n te  exp te
+  tendencia 1Dutc st14-3-3 alvo=2R           363   -0.001  +0.055  34.7% |   134  -0.224 |   229  +0.130
+  tendencia 1Dutc st14-3-3 alvo=topo         348   -0.120  -0.066  15.2% |   133  -0.375 |   215  +0.037
+  tendencia 1Dutc st14-3-3 alvo=bollinger    361   -0.098  -0.043  22.2% |   134  -0.451 |   227  +0.110
+  tendencia 1Dutc st8-3-3 alvo=2R            345   -0.003  +0.052  34.8% |   122  -0.280 |   223  +0.148
+  tendencia 1Dutc st8-3-3 alvo=topo          332   -0.100  -0.046  16.6% |   120  -0.326 |   212  +0.027
+  tendencia 1Dutc st8-3-3 alvo=bollinger     342   -0.043  +0.012  22.8% |   120  -0.402 |   222  +0.152
+  tendencia 1Dutc st5-3-3 alvo=2R            251   -0.102  -0.042  31.5% |    89  -0.319 |   162  +0.018
+  tendencia 1Dutc st5-3-3 alvo=topo          238   -0.267  -0.207  14.3% |    87  -0.436 |   151  -0.170
+  tendencia 1Dutc st5-3-3 alvo=bollinger     248   -0.128  -0.068  21.0% |    87  -0.523 |   161  +0.085
+  tendencia 1Wutc st14-3-3 alvo=2R            45   +0.109  +0.127  35.6% |    12  +0.486 |    33  -0.029
+  tendencia 1Wutc st14-3-3 alvo=topo          45   -0.824  -0.806   2.2% |    12  -1.014 |    33  -0.756
+  tendencia 1Wutc st14-3-3 alvo=bollinger     45   -0.460  -0.442  11.1% |    12  -0.847 |    33  -0.319
+  tendencia 1Wutc st8-3-3 alvo=2R             32   +0.172  +0.189  37.5% |     7  -0.156 |    25  +0.263
+  tendencia 1Wutc st8-3-3 alvo=topo           32   -0.209  -0.191  12.5% |     7  -1.013 |    25  +0.016
+  tendencia 1Wutc st8-3-3 alvo=bollinger      32   -0.057  -0.040  18.8% |     7  -1.013 |    25  +0.210
+  tendencia 1Wutc st5-3-3 alvo=2R             22   -0.183  -0.163  27.3% |     3  -0.020 |    19  -0.209
+  tendencia 1Wutc st5-3-3 alvo=topo           22   +0.085  +0.104  18.2% |     3  -1.020 |    19  +0.259
+  tendencia 1Wutc st5-3-3 alvo=bollinger      22   -0.032  -0.013  22.7% |     3  -1.020 |    19  +0.124
+  v15       1Dutc st14-3-3 alvo=2R           329   -0.151  -0.093  29.8% |   108  -0.249 |   221  -0.103
+  v15       1Dutc st14-3-3 alvo=topo         327   +0.051  +0.109  16.2% |   108  +0.084 |   219  +0.035
+  v15       1Dutc st14-3-3 alvo=bollinger    329   -0.047  +0.011  21.6% |   108  -0.180 |   221  +0.019
+  v15       1Dutc st8-3-3 alvo=2R            272   -0.077  -0.019  32.4% |    90  -0.278 |   182  +0.022
+  v15       1Dutc st8-3-3 alvo=topo          271   +0.283  +0.341  20.3% |    90  +0.457 |   181  +0.197
+  v15       1Dutc st8-3-3 alvo=bollinger     272   +0.147  +0.204  25.0% |    90  +0.054 |   182  +0.192
+  v15       1Dutc st5-3-3 alvo=2R            170   -0.141  -0.084  30.0% |    60  -0.347 |   110  -0.028
+  v15       1Dutc st5-3-3 alvo=topo          168   +0.023  +0.080  16.1% |    59  +0.081 |   109  -0.008
+  v15       1Dutc st5-3-3 alvo=bollinger     169   +0.004  +0.061  22.5% |    59  -0.183 |   110  +0.104
+
+  descritivo -- inside bar + estocastico SEM contexto:
+  nenhum    1Dutc st14-3-3 alvo=2R          1040   -0.062  -0.009
+  nenhum    1Dutc st14-3-3 alvo=topo         933   +0.007  +0.058
+  nenhum    1Dutc st14-3-3 alvo=bollinger   1010   -0.068  -0.015
+  nenhum    1Wutc st14-3-3 alvo=2R           117   +0.364  +0.383
+  nenhum    1Wutc st14-3-3 alvo=topo         111   -0.133  -0.115
+  nenhum    1Wutc st14-3-3 alvo=bollinger    116   -0.000  +0.019
+
+========================================================================================================
+DECISAO
+========================================================================================================
+  selecionada no treino -> v15       1Dutc st8-3-3 alvo=topo
+  treino (1a metade, so referencia): n=   90 | dias=   56 | exp +0.457R | IC95 [-0.226, +1.275] | bruto +0.501R | acerto 18.9% | custo 0.044R
+  1) TESTE (2a metade)              : n=  181 | dias=  102 | exp +0.197R | IC95 [-0.227, +0.664] | bruto +0.261R | acerto 21.0% | custo 0.064R
+  2) 80 PARES FORA DA AMOSTRA        : n=  869 | dias=  256 | exp -0.150R | IC95 [-0.402, +0.133] | bruto -0.107R | acerto 12.9% | custo 0.043R
+
+==> DECISAO: holdout falhou, fora da amostra falhou -> NAO PASSA
