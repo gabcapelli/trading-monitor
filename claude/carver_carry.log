@@ -1,0 +1,22 @@
+amostra A: 20 instrumentos com dados
+amostra D: 215 instrumentos com dados
+
+====================================================================================================
+AMOSTRA A (20 pares) -- desenvolvimento, nao decide
+====================================================================================================
+  estrategia 10 (basic carry): dias=2508 | retorno -5.3%/ano | Sharpe -0.40 | IC95 [-1.16, +0.36]
+    alfa vs mercado +2.1%/ano | IC95 [-5.8%, +10.0%] | Sharpe do mercado +1.06
+  estrategia 20 (cross-sectional): dias=2408 | retorno +7.2%/ano | Sharpe +1.77 | IC95 [+1.09, +2.43]
+    alfa vs mercado +5.6%/ano | IC95 [+2.6%, +8.8%] | Sharpe do mercado +1.06
+
+====================================================================================================
+AMOSTRA D (215 pares so da Binance) -- DECIDE
+====================================================================================================
+  estrategia 10 (basic carry): dias=2362 | retorno -2.1%/ano | Sharpe -0.20 | IC95 [-0.98, +0.61]
+    alfa vs mercado +1.3%/ano | IC95 [-6.2%, +8.6%] | Sharpe do mercado +0.73
+  estrategia 20 (cross-sectional): dias=2351 | retorno +1.5%/ano | Sharpe +0.30 | IC95 [-0.48, +1.06]
+    alfa vs mercado -1.0%/ano | IC95 [-4.2%, +2.1%] | Sharpe do mercado +0.73
+
+==> DECISAO estrategia 10 (basic carry): NAO PASSA
+
+==> DECISAO estrategia 20 (cross-sectional): NAO PASSA

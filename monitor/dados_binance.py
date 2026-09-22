@@ -86,3 +86,40 @@ if __name__ == "__main__":
             print(f"{inst:<18} {simbolo(inst):<12} candles={len(c):>5} desde {ini}", flush=True)
         except Exception as e:
             print(f"{inst:<18} {simbolo(inst):<12} FALHOU: {type(e).__name__} {str(e)[:80]}", flush=True)
+
+
+def baixar_funding(inst_id, dias=3000):
+    """Historico de funding [ts, taxa]. A Binance devolve desde a criacao do
+    contrato (a OKX limita a ~96 dias, por isso a Binance aqui)."""
+    fpath = os.path.join(CACHE_DIR, f"{simbolo(inst_id)}_funding.json")
+    if os.path.exists(fpath):
+        with open(fpath) as f:
+            return json.load(f)
+    agora = int(time.time() * 1000)
+    cursor, out = agora - dias * MS_DIA, {}
+    while cursor < agora:
+        for tentativa in range(5):
+            try:
+                raw = _get("/fapi/v1/fundingRate", {"symbol": simbolo(inst_id),
+                                                    "startTime": cursor, "limit": 1000})
+                break
+            except Exception:
+                if tentativa == 4:
+                    raise
+                time.sleep(2 + 2 * tentativa)
+        time.sleep(0.15)
+        if not raw:
+            break
+        for r in raw:
+            out[int(r["fundingTime"])] = float(r["fundingRate"])
+        proximo = int(raw[-1]["fundingTime"]) + 1
+        if proximo <= cursor:
+            break
+        cursor = proximo
+        if len(raw) < 1000:
+            break
+    serie = [[k, out[k]] for k in sorted(out)]
+    os.makedirs(CACHE_DIR, exist_ok=True)
+    with open(fpath, "w") as f:
+        json.dump(serie, f)
+    return serie

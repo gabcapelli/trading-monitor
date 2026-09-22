@@ -359,6 +359,31 @@ O que está saudável: 124 dos 212 pares positivos, mediana por par +0.092R, sem
 - **Bootstrap por bloco de semana** quando a duração média do trade passar de ~5 dias.
 - **Teste de beta obrigatório** (excesso sobre entrada aleatória de mesma duração) antes de qualquer PASSA em estratégia direcional.
 
+## 14. Carry do Carver (estratégias 10 e 20) — 22/09/2026
+
+Script: `monitor/replay_carver_carry.py` · log: `claude/carver_carry.log` · fonte: *Advanced Futures Trading Strategies*, Robert Carver (2023)
+
+Primeiro estudo **fora da família price action**: o sinal vem do **funding**, não do preço; a posição é contínua e dimensionada por volatilidade, sem stop nem alvo; a medida é Sharpe de carteira.
+
+- **Carry no perpétuo** [interp]: `carry_anual = −funding médio do dia × 3 × 365`. Positivo = ficar comprado paga.
+- **Forecast** = carry ÷ volatilidade (ambos anualizados) × 30 (estratégia 10) ou, relativo à mediana do dia e suavizado em 90 dias, × 50 (estratégia 20); limite ±20. Volatilidade como no livro: 0.3 da média de 10 anos + 0.7 de EWMA(32), anualizada.
+- **Posição** = forecast/10 × peso × 20% de risco ÷ volatilidade, com buffer de 10%; funding pago/recebido na simulação; custo de 0.06% do nocional negociado.
+- **Amostras:** A (20 pares) só desenvolvimento; **D (215 perps só da Binance) decide**.
+- **Critério:** Sharpe com IC95 > 0 **e** alfa contra a carteira equal-weight com IC95 > 0.
+
+| | Amostra A (desenvolvimento) | **Amostra D (decide)** |
+|---|---|---|
+| Estratégia 10 (carry simples) | Sharpe −0.40 | **Sharpe −0.20**, IC [−0.98, +0.61] |
+| Estratégia 20 (carry relativo) | Sharpe **+1.77**, alfa +5.6%/ano (IC [+2.6, +8.8]) | **Sharpe +0.30**, IC [−0.48, +1.06]; alfa **−1.0%/ano**, IC [−4.2, +2.1] |
+
+**Veredito: NÃO PASSA** (as duas). O Sharpe de +1.77 nos 20 pares não se replicou nos 215 — e ele já tinha acionado o alerta de sanidade pré-registrado (o livro reporta 0.8–1.0 para carry em futuros diversificados).
+
+- **Por que a estratégia 10 é negativa:** o funding em cripto é quase sempre positivo (BTC: +11.6%/ano em média), então o carry simples fica quase sempre vendido, num período em que o mercado subiu. O carry relativo (20) é neutro por construção.
+- **Erro de implementação encontrado na rodada de fumaça** (corrigido antes da rodada que decide, e registrado no docstring): nos primeiros dias de cada série a EWMA de volatilidade começa fria (chegava a 0.002% ao ano) e, como a posição divide pela volatilidade, isso gerava **posição de 1250× o capital** e retorno de +9376%/ano. Correções: descartar 60 dias de aquecimento, piso de 10% na volatilidade anual, teto de 1× por instrumento e 3× de alavancagem bruta.
+- **Infra nova:** `dados_binance.baixar_funding` (histórico de funding desde 2019; a OKX limita a ~96 dias).
+
+**Estado das amostras:** A, B, C gastas; **D agora foi usada duas vezes** (varredura do 1-2-3 e carry). Para o próximo estudo, a amostra limpa restante é o paper trade ou um universo novo (ex.: perps de outra corretora).
+
 ## Leitura conjunta
 
 Mesma direção do achado da auditoria v6 sobre o checklist mecânico dos Setups A/B. Nenhum dos dez setups de vídeo tem edge mecânico demonstrável nesses 20 pares (o 9.1 também não, fora da amostra, nos 80 pares do estudo 6):
