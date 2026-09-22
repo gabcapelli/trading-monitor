@@ -445,6 +445,25 @@ E o espelho (comprar o que se afastou para cima) não resolve: o bruto seria ≈
 
 Das 30 estratégias, 6 foram testadas — as que fazem sentido em perpétuo e não são pura tendência (carry 10/20, skew 24, momentum XS 19, aceleração 23, mean reversion 26/27). Só a **skew relativa** sobreviveu, com +0.67 contra os 0.60–0.75 que o livro reporta em futuros. As de tendência confirmaram o que 11 estudos de vídeo já indicavam, e o carry e a mean reversion falharam com mecanismo identificável.
 
+## 17. Três de "151 Trading Strategies" (Kakushadze & Serur) — 22/09/2026
+
+Script: `monitor/replay_k151.py` · log: `claude/k151.log` · fonte: *151 Trading Strategies*, cap. 3 (Stocks)
+
+Famílias que ainda não tinham sido testadas: reversão **cross-sectional** (o estudo 16 testou reversão temporal) e anomalia de **baixa volatilidade**. Três testes na amostra D → IC de 98.33% (Bonferroni).
+
+| Estratégia | Amostra A | **Amostra D (decide)** | Veredito |
+|---|---|---|---|
+| 3.9 reversão XS, 1 dia | Sharpe −1.96 | **−0.09** | não passa |
+| 3.9 reversão XS, 5 dias | Sharpe −1.75 | **−0.37** | não passa |
+| 3.4 baixa volatilidade | Sharpe −0.16 | **+0.49**, IC [−0.50, +1.45] | não passa |
+
+**O que se aprende:**
+- **Reversão cross-sectional é fortemente negativa nos 20 majors** (−1.96), ou seja, quem sobe mais que o grupo *continua* subindo no dia seguinte. É o mesmo sinal do estudo 16 (continuação, não reversão), agora no corte transversal.
+- **Mas o espelho não serve:** momentum XS de 1 dia daria +1.96 nos majors e apenas **+0.09** nos 215 alts. O efeito existe só onde já olhamos, e some fora da amostra.
+- **Baixa volatilidade inverte de sinal entre as amostras** (−0.16 e +0.49), o que é assinatura de ruído, não de prêmio de risco.
+
+Pairs trading (3.8) não foi testada: é o caso N=2 da 3.9, que falhou.
+
 ## Leitura conjunta
 
 Mesma direção do achado da auditoria v6 sobre o checklist mecânico dos Setups A/B. Nenhum dos dez setups de vídeo tem edge mecânico demonstrável nesses 20 pares (o 9.1 também não, fora da amostra, nos 80 pares do estudo 6):
