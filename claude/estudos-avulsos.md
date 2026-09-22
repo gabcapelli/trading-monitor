@@ -282,6 +282,50 @@ Script: `monitor/replay_didi.py` · log: `claude/didi.log`
 - **Lookahead corrigido antes de rodar:** a tolerância de 1 candle aceitava o cruzamento da linha longa no candle seguinte, que ainda não fechou quando a entrada acontece na abertura dele. Num passeio aleatório isso dava +0.17 a +0.38R de vantagem falsa; corrigido (o sinal vale no último dos dois cruzamentos), o viés some. **Vale como alerta para os próximos estudos:** qualquer "tolerância de N candles" precisa ser checada nesse sentido.
 - **Sinal raro:** ~22 agulhadas em 2.456 candles diários do BTC; só 10 das 20 células chegaram a n ≥ 200 no treino.
 
+## 12. 1-2-3 do Crisp — follow-up: custo fiel, carteira e 3ª amostra — 22/09/2026
+
+Script: `monitor/replay_123_carteira.py` · log: `claude/123_carteira.log`
+
+**Não varre nenhum parâmetro do setup.** As regras do estudo 2 ficam intactas. Duas mudanças de mecanismo, decididas antes de rodar, mais uma amostra nova.
+
+**Universo C (novo, decide):** perpétuos USDT de cripto da OKX listados há 400–1000 dias, fora de A e B → 83 pares. Ressalva: moedas recentes, muitas memecoins, histórico só de 2024–2026.
+
+| Amostra | n | Expectância (custo fiel) | IC95 |
+|---|---|---|---|
+| A (20 pares, in-sample) | 2576 | +0.073R | [−0.011, +0.157] |
+| B (80 pares) | 8991 | +0.044R | [−0.025, +0.116] |
+| **C (83 novos, decide)** | 3451 | **+0.073R** | **[−0.022, +0.170]** |
+
+**Veredito: NÃO PASSA** — terceira amostra positiva, IC ainda cruzando zero. As três estimativas pontuais positivas (+0.073, +0.044, +0.073) são consistentes, mas os períodos se sobrepõem e os pares são correlacionados, então não são três evidências independentes.
+
+**1. Custo por tipo de saída (entrada taker 0.05%+0.05% slippage; saída no alvo maker 0.02% sem slippage; saída no stop taker).** Efeito: **+0.001 a +0.002R**, desprezível. O custo já era pequeno no diário (0.03–0.04R). Fica registrado: **não há ganho relevante a extrair do modelo de custo neste tempo gráfico** — ao contrário do intraday, onde o custo é o que mata.
+
+**2. Carteira (1% de risco, 3x, 2 posições, trava −6R/semana, 200 sorteios da ordem dos sinais do mesmo dia):**
+
+| Amostra | Período | Patrimônio (mediana) | CAGR | Drawdown mediano |
+|---|---|---|---|---|
+| A | 6.7 anos | 1.90× (p5 1.29 – p95 2.81) | +10.1%/ano | 27% |
+| B | 6.7 anos | 1.37× (p5 0.81 – p95 2.10) | +4.8%/ano | 37% |
+| C | 2.7 anos | 1.33× (p5 0.87 – p95 1.85) | +10.9%/ano | 19% |
+
+**3. Mapa risco × posições (descritivo, bloco 4 do log).** Mais posições simultâneas aumentam CAGR e drawdown quase na mesma proporção, e reduzem a dispersão entre sorteios (menos dependência de qual sinal chegou primeiro). Ex. no universo A com 1% de risco: 1 posição → +5.4%/ano com DD 19%; 2 → +10.1% com DD 27%; 4 → +18.9% com DD 41%; 6 → +21.5% com DD 55%. **Escolher aqui o ponto de maior retorno seria ajuste a dados** — a escolha é do operador, pelo drawdown que tolera, e todos esses números pressupõem um edge que não está demonstrado.
+
+### Amostras disponíveis e como estão sendo gastas
+
+Amostra limpa é recurso finito. Situação em 22/09/2026:
+
+| Amostra | O que é | Estado |
+|---|---|---|
+| A — 20 pares OKX | onde tudo nasceu | in-sample, gasta |
+| B — 80 pares OKX | listados há ≥1000 dias, fora de A | gasta no 9.1 (estudo 6), inside bar (8), Landry (9), 123 de candles (10) e 1-2-3 (reexecução) |
+| C — 83 pares OKX | listados há 400–1000 dias | gasta neste estudo |
+| **D — 215 perps só da Binance** | não existem na OKX, ≥400 dias | **ainda limpa** |
+| Paper trade | daqui para frente | único teste realmente fora da amostra no tempo |
+
+**Infra da Binance** (`monitor/dados_binance.py`, criada em 22/09/2026): mesma interface de `baixar`, cache em `cache_binance/`, aceita os `instId` da OKX. Os 20 pares de A já estão baixados no diário.
+
+**Atenção ao usar a Binance:** os *mesmos* pares na Binance **não são amostra independente** — é o mesmo mercado, no mesmo período, com séries quase idênticas. Servem para testar robustez de execução e diferença entre corretoras. A amostra realmente nova é a **D**: os 215 perpétuos que só existem na Binance.
+
 ## Leitura conjunta
 
 Mesma direção do achado da auditoria v6 sobre o checklist mecânico dos Setups A/B. Nenhum dos dez setups de vídeo tem edge mecânico demonstrável nesses 20 pares (o 9.1 também não, fora da amostra, nos 80 pares do estudo 6):
