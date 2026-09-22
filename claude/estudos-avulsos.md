@@ -99,13 +99,64 @@ Script: `monitor/replay_ifr_recuo.py` · log: `claude/ifr_recuo.log`
 - **Sem stop no 1D:** acerto de 92–95% e +2–3% por trade, o número do vídeo. Mas é compra sem stop, só do lado comprado, num universo com viés de sobrevivência, e o plano de risco não consegue dimensionar essa posição.
 - **Stop na mínima sem folga:** às vezes o stop fica em ~0.01% da entrada, e o custo convertido em R explode (pior trade: −1580R no 1H). Refeito com o dimensionamento do plano (1% de risco, teto de 3x), a célula que decidiu dá −0.133R contra −0.134R em R puro: o teto corta as duas caudas e o veredito não muda.
 
+## 6. 9.1 — follow-up: timing ou beta? — 22/09/2026
+
+Script: `monitor/replay_91_beta.py` · log: `claude/91_beta.log`
+
+**Pergunta:** as compras do 9.1 rendem mais do que compras em datas aleatórias no mesmo par, com a mesma duração?
+
+- **Regra:** uma só, o original (MME9, sem stop, sem filtro).
+- **Linha de base:** 500 compras aleatórias por trade.
+- **Excesso:** retorno bruto do 9.1 − 0.10% de margem de slippage − média da linha de base.
+- **Por que a margem:** no teste sintético, o simulador preenche a ordem stop exatamente no gatilho e ganha ~0.3% por trade num passeio aleatório; o viés some com caminhos intra-candle mais finos.
+- **Quem decide:** o **universo B**, com 80 perpétuos USDT de cripto da OKX listados há ≥ 1000 dias, **fora dos 20**. O universo A (os 20 de sempre, 18 com ≥ 1000 dias) é só descritivo.
+
+| | Universo B (decide) | Universo A (descritivo) |
+|---|---|---|
+| **Compras: excesso sobre aleatório** | **+0.29%**, IC [−0.83, +1.46] | +0.90%, IC [−0.48, +2.38] |
+| Compras: retorno absoluto (custo + funding) | +0.25%, IC [−0.88, +1.44] | +2.23%, IC [+0.76, +3.80] |
+| Vendas: excesso sobre aleatório | +0.48%, IC [−0.39, +1.40] | +1.08%, IC [+0.15, +2.04] |
+| Vendas: retorno absoluto | +0.12% | −0.75% |
+
+**Veredito: NÃO PASSA.**
+
+- **De onde vinha o resultado do A:** no universo onde a hipótese nasceu, ~2/3 do retorno bruto das compras (+2.65%) é o que uma compra aleatória de mesma duração também faria. Era sobretudo beta das moedas que sobreviveram e subiram.
+- **Fora da amostra:** nos 80 pares, as compras do 9.1 **nem sequer ganham em termos absolutos** com confiança (+0.25%).
+- **O que sobra:** as estimativas pontuais de excesso são positivas nos dois universos e nos dois lados. Isso é compatível com algum timing de seguidor de tendência, de no máximo ~1% por trade, mas não está demonstrado.
+- **Poder do teste:** o IC no B tem ±1.1% de largura (os 80 pares se movem juntos, e o bootstrap é por dia), então o teste não detecta excesso menor que ~1% por trade.
+
+Não há como estreitar isso com estes dados. O que resta é paper trade daqui para frente, se valer a pena.
+
+## 7. Renko + VWAP ("um dos melhores sistemas de daytrade") — 22/09/2026
+
+Script: `monitor/replay_renko_vwap.py` · log: `claude/renko_vwap.log`
+
+O vídeo é quase todo um relato de um dia de operações; o setup Renko ocupa ~2 minutos e não diz o tamanho do tijolo. Versão objetivada:
+- **Renko:** percentual, construído com os fechamentos de 5m (reversão de 2 tijolos).
+- **Sinal:** tijolo de baixa cuja faixa contém a VWAP diária, seguido de tijolo de reversão.
+- **Entrada:** no fechamento que completa a reversão.
+- **Stop:** na base do tijolo de baixa.
+- **Alvo:** a amplitude do padrão, em 1× ou 1.618×.
+- **Grade:** tijolo 0.3/0.5/1% = 6 células, 300 dias, 20 pares.
+
+"Parede de proteção" e "falha de rompimento" não foram testadas: dependem de gap e do primeiro candle do pregão, que cripto não tem.
+
+| Célula escolhida no treino | Treino | **Teste (decide)** | IC95 teste |
+|---|---|---|---|
+| tijolo 1.0%, alvo 1× | −0.124R | **−0.106R** (n=1056) | [−0.186, −0.026] |
+
+**Veredito: NÃO PASSA.**
+- **Sinal:** o bruto fica entre −0.04 e +0.01R em todas as células; o padrão não carrega informação.
+- **VWAP:** o mesmo padrão **sem** a condição da VWAP dá resultado igual. A VWAP não acrescenta nada.
+- **Custo:** 0.08R com tijolo de 1%, 0.25R com tijolo de 0.3%.
+
 ## Leitura conjunta
 
-Mesma direção do achado da auditoria v6 sobre o checklist mecânico dos Setups A/B. Nenhum dos cinco setups de vídeo tem edge mecânico demonstrável nesses 20 pares:
+Mesma direção do achado da auditoria v6 sobre o checklist mecânico dos Setups A/B. Nenhum dos seis setups de vídeo tem edge mecânico demonstrável nesses 20 pares (o 9.1 também não, fora da amostra, nos 80 pares do estudo 6):
 - **Custo:** todos pioram quanto menor o tempo gráfico, porque o custo em R cresce.
 - **Sinal:** nos intraday, o resultado bruto fica em torno de zero; o sinal não carrega informação.
 - **Acerto alto:** as taxas de acerto altas prometidas nos vídeos se reproduzem (1-2-3 não; IFR sim), mas vêm de ganhos pequenos e perdas grandes, e não de edge.
 
-A única regularidade, o 9.1 no diário, aparece só no lado comprado e ainda não se distingue de beta.
+A única regularidade, o 9.1 no diário, vinha sobretudo de beta. Fora da amostra, nem o retorno absoluto se sustenta. Se existir algum timing, ele fica abaixo do que estes dados conseguem detectar (~1% por trade).
 
 Não reabrir esses testes sem uma regra nova pré-registrada. Variar parâmetro sobre estes mesmos dados até algo ficar positivo invalida o critério.

@@ -64,9 +64,13 @@ Relatórios completos em `claude/auditoria-v5.md` e `claude/auditoria-v6.md` (v6
 
 Setups vistos em vídeo são testados em scripts separados, pré-registrados, fora do monitor de produção. Resultados em `claude/estudos-avulsos.md`. Cinco setups foram testados em 20 pares e **nenhum passou**:
 - 21/09/2026: o **leque de médias (EMA 20–50)** e o **1-2-3 de Mark Crisp**.
-- 22/09/2026: **estocástico + VWAP/MM144**, **9.1 de Larry Williams** e **IFR curto no recuo**.
+- 22/09/2026: **estocástico + VWAP/MM144**, **9.1 de Larry Williams**, **IFR curto no recuo** e **Renko + VWAP**.
 
-Estudos com grade de parâmetros usam **holdout temporal**: escolhe-se a célula na 1ª metade e testa-se só essa célula na 2ª. O único resultado a acompanhar é o 9.1 no diário, positivo em todas as combinações mas só do lado comprado (pode ser beta). Não reabra esses testes variando parâmetros sobre os mesmos dados.
+Estudos com grade de parâmetros usam **holdout temporal**: escolhe-se a célula na 1ª metade e testa-se só essa célula na 2ª.
+
+O 9.1 no diário, que parecia positivo, foi checado contra compras aleatórias de mesma duração em 80 pares fora da amostra (`monitor/replay_91_beta.py`). Era sobretudo beta, e fora da amostra nem o retorno absoluto se sustenta.
+
+Não reabra esses testes variando parâmetros sobre os mesmos dados.
 
 ## Achado em investigação (não é regra ainda)
 

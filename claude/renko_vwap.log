@@ -1,0 +1,48 @@
+====================================================================================================
+5m (300 dias) -- Renko percentual + VWAP diaria UTC
+====================================================================================================
+    BTC-USDT-SWAP    candles= 86399 trades(todas)=  3712
+    ETH-USDT-SWAP    candles= 86399 trades(todas)=  5609
+    SOL-USDT-SWAP    candles= 86399 trades(todas)=  6883
+    XRP-USDT-SWAP    candles= 86399 trades(todas)=  6273
+    DOGE-USDT-SWAP   candles= 86399 trades(todas)=  7004
+    ARB-USDT-SWAP    candles= 86399 trades(todas)= 11716
+    WLD-USDT-SWAP    candles= 86399 trades(todas)= 15162
+    SUI-USDT-SWAP    candles= 86399 trades(todas)= 10170
+    UNI-USDT-SWAP    candles= 86399 trades(todas)= 11184
+    LINK-USDT-SWAP   candles= 86399 trades(todas)=  7130
+    BNB-USDT-SWAP    candles= 86399 trades(todas)=  3782
+    TRX-USDT-SWAP    candles= 86399 trades(todas)=  1250
+    ZEC-USDT-SWAP    candles= 86399 trades(todas)= 16299
+    HYPE-USDT-SWAP   candles= 86399 trades(todas)= 12606
+    ADA-USDT-SWAP    candles= 86399 trades(todas)=  8747
+    XLM-USDT-SWAP    candles= 86399 trades(todas)=  9210
+    NEAR-USDT-SWAP   candles= 86399 trades(todas)= 13438
+    AVAX-USDT-SWAP   candles= 86399 trades(todas)=  7366
+    LTC-USDT-SWAP    candles= 86399 trades(todas)=  5630
+    BCH-USDT-SWAP    candles= 86399 trades(todas)=  6958
+  ponto medio do holdout: 2026-04-25
+  combinacao                                  n  exp liq   bruto  custo acerto |  n tr  exp tr |  n te  exp te
+  tijolo 0.3% alvo 1x                      6074   -0.254  -0.005  0.249  55.0% |  3086  -0.273 |  2988  -0.233
+  tijolo 0.3% alvo 1.618x                  5937   -0.235  +0.014  0.248  44.0% |  3017  -0.259 |  2920  -0.209
+  tijolo 0.3% alvo 1x SEM VWAP (descr.)   48856   -0.250  -0.011  0.239  55.6% | 24027  -0.261 | 24829  -0.239
+  tijolo 0.3% alvo 1.618x SEM VWAP (descr.)  41907   -0.248  -0.009  0.239  44.1% | 20616  -0.252 | 21291  -0.243
+  tijolo 0.5% alvo 1x                      4084   -0.185  -0.029  0.156  52.3% |  1978  -0.224 |  2106  -0.148
+  tijolo 0.5% alvo 1.618x                  3932   -0.176  -0.020  0.156  41.2% |  1909  -0.220 |  2023  -0.135
+  tijolo 0.5% alvo 1x SEM VWAP (descr.)   22856   -0.162  -0.010  0.152  54.0% | 11019  -0.160 | 11837  -0.164
+  tijolo 0.5% alvo 1.618x SEM VWAP (descr.)  19262   -0.161  -0.009  0.152  42.4% |  9271  -0.171 |  9991  -0.152
+  tijolo 1.0% alvo 1x                      2014   -0.115  -0.033  0.082  50.8% |   958  -0.124 |  1056  -0.106
+  tijolo 1.0% alvo 1.618x                  1888   -0.118  -0.036  0.082  39.1% |   899  -0.132 |   989  -0.106
+  tijolo 1.0% alvo 1x SEM VWAP (descr.)    7337   -0.084  -0.003  0.081  52.9% |  3492  -0.084 |  3845  -0.083
+  tijolo 1.0% alvo 1.618x SEM VWAP (descr.)   5982   -0.099  -0.019  0.081  40.5% |  2858  -0.077 |  3124  -0.120
+
+====================================================================================================
+HOLDOUT -- DECIDE
+====================================================================================================
+  selecionada no treino -> tijolo 1.0% alvo 1x
+  treino (1a metade, so referencia): n=  958 | dias= 147 | exp -0.124R | IC95 [-0.210, -0.037] | bruto -0.042R | acerto 50.3% | custo 0.082R
+  TESTE (2a metade, decide)       : n= 1056 | dias= 150 | exp -0.106R | IC95 [-0.186, -0.026] | bruto -0.024R | acerto 51.2% | custo 0.082R
+  so compras (teste)               : n=  497 | dias= 133 | exp -0.184R | IC95 [-0.300, -0.066] | bruto -0.102R | acerto 47.3% | custo 0.082R
+  so vendas (teste)                : n=  559 | dias= 128 | exp -0.036R | IC95 [-0.148, +0.078] | bruto +0.045R | acerto 54.7% | custo 0.081R
+
+==> DECISAO: NAO PASSA

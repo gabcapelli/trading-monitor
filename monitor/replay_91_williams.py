@@ -121,7 +121,7 @@ def simular(c, media, stop_modo, filtro):
         risco = abs(pos["entrada"] - pos["ref"])
         custo_r = CUSTO_RT * pos["entrada"] / risco
         bruto = (preco - pos["entrada"]) * d / risco
-        trades.append({"ts": c[pos["j"]][0], "d": d, "r": bruto - custo_r, "bruto": bruto,
+        trades.append({"ts": c[pos["j"]][0], "j": pos["j"], "k": k, "d": d, "r": bruto - custo_r, "bruto": bruto,
                        "custo_r": custo_r, "pct": 100 * ((preco / pos["entrada"] - 1) * d - CUSTO_RT)})
 
     def abrir(k, d, preco, ref):
