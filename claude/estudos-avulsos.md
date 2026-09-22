@@ -210,9 +210,33 @@ Nos intraday descritivos, a correção melhora bastante, mas continua negativo (
 
 **Não passa.** O resultado no limite dos 20 pares encolhe fora da amostra. Não tratar "só vendas" como pista: é um recorte depois de ver o resultado, e nos 20 pares eram as compras que iam melhor.
 
+## 9. Pullback de Dave Landry ("Setup de Swing Trade") — 22/09/2026
+
+Script: `monitor/replay_landry.py` · log: `claude/landry.log`
+
+- **Tendência:** MMA21 subindo (original) ou MMA 9, 20 e 50 subindo juntas (a modificação do autor).
+- **Sinal:** candle com mínima abaixo das mínimas dos 2 anteriores.
+- **Ordem:** compra stop na máxima, stop na mínima, alvo 2R. A cada novo sinal, a ordem desce para o candle novo; cancela se a média virar.
+- **Candle sem sinal e sem acionamento:** duas leituras — a ordem persiste, ou cai (1 candle).
+- **Grade e critério:** 1D e 1W, 8 células; holdout **e** confirmação nos 80 pares.
+- **Validação:** passeio aleatório com caminho fino dá bruto −0.006 a +0.025R e acerto ~33% (o esperado para 2R sem edge).
+
+| Célula escolhida no treino | Treino | 1) Teste (2ª metade) | 2) 80 pares fora da amostra |
+|---|---|---|---|
+| 1W, 9-20-50, 1 candle | +0.338R (**n=40**) | **−0.122R**, IC [−0.520, +0.340] | **−0.097R**, IC [−0.343, +0.160] |
+
+**Veredito: NÃO PASSA.**
+- **Diário (grade descritiva):** o original (MMA21) fica levemente positivo, +0.02 a +0.05R líquido, nas duas metades (n≈2.500) — pequeno demais para distinguir de zero.
+- **Acerto:** 33–36%, não os ~50% do vídeo; no semanal, 28–35%, não os ~68%.
+- **4H e 1H:** o bruto fica em +0.01 a +0.05R, e o custo (0.10–0.28R) o transforma em negativo.
+
+**Falha de protocolo exposta aqui:** o mínimo de n ≥ 30 na seleção deixou uma célula semanal com 40 trades vencer diárias com ~1.000. Com amostra tão pequena, a "melhor" célula é quase sempre a de mais sorte. O holdout pegou (−0.122R), mas o teste foi gasto numa célula ruim.
+
+**Proposta para os próximos estudos (a decidir antes de rodar):** mínimo de n ≥ 200 no treino para concorrer, ou seleção separada por tempo gráfico.
+
 ## Leitura conjunta
 
-Mesma direção do achado da auditoria v6 sobre o checklist mecânico dos Setups A/B. Nenhum dos seis setups de vídeo tem edge mecânico demonstrável nesses 20 pares (o 9.1 também não, fora da amostra, nos 80 pares do estudo 6):
+Mesma direção do achado da auditoria v6 sobre o checklist mecânico dos Setups A/B. Nenhum dos oito setups de vídeo tem edge mecânico demonstrável nesses 20 pares (o 9.1 também não, fora da amostra, nos 80 pares do estudo 6):
 - **Regra do candle da entrada:** vale com a regra corrigida (reexecução acima). O mais perto de passar foi o 1-2-3 no diário, que não se confirmou nos 80 pares.
 - **Custo:** todos pioram quanto menor o tempo gráfico, porque o custo em R cresce.
 - **Sinal:** nos intraday, o resultado bruto fica em torno de zero; o sinal não carrega informação.
