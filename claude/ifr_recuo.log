@@ -1,0 +1,159 @@
+
+==============================================================================================================
+1H (300 dias max)
+==============================================================================================================
+    BTC-USDT-SWAP    candles=  7199 trades(todas as combinacoes)= 11995
+    ETH-USDT-SWAP    candles=  7199 trades(todas as combinacoes)= 11914
+    SOL-USDT-SWAP    candles=  7199 trades(todas as combinacoes)= 11534
+    XRP-USDT-SWAP    candles=  7199 trades(todas as combinacoes)= 10534
+    DOGE-USDT-SWAP   candles=  7199 trades(todas as combinacoes)= 11207
+    ARB-USDT-SWAP    candles=  7199 trades(todas as combinacoes)= 10819
+    WLD-USDT-SWAP    candles=  7199 trades(todas as combinacoes)= 11679
+    SUI-USDT-SWAP    candles=  7199 trades(todas as combinacoes)= 10880
+    UNI-USDT-SWAP    candles=  7199 trades(todas as combinacoes)= 11512
+    LINK-USDT-SWAP   candles=  7199 trades(todas as combinacoes)= 11982
+    BNB-USDT-SWAP    candles=  7199 trades(todas as combinacoes)= 12483
+    TRX-USDT-SWAP    candles=  7199 trades(todas as combinacoes)= 13993
+    ZEC-USDT-SWAP    candles=  7199 trades(todas as combinacoes)= 12599
+    HYPE-USDT-SWAP   candles=  7199 trades(todas as combinacoes)= 13665
+    ADA-USDT-SWAP    candles=  7199 trades(todas as combinacoes)= 10329
+    XLM-USDT-SWAP    candles=  7199 trades(todas as combinacoes)= 10293
+    NEAR-USDT-SWAP   candles=  7199 trades(todas as combinacoes)= 11910
+    AVAX-USDT-SWAP   candles=  7199 trades(todas as combinacoes)= 11040
+    LTC-USDT-SWAP    candles=  7199 trades(todas as combinacoes)= 11295
+    BCH-USDT-SWAP    candles=  7199 trades(todas as combinacoes)= 10188
+  ponto medio do holdout: 2026-04-25
+  (stop=sem: so descritivo; exp em R sem sentido, olhar %/tr e acerto)
+  combinacao                                     n  exp liq   bruto   %/tr acerto   pior |  n tr  exp tr |  n te  exp te
+  mme9x11 ifr2<25 stop=minima 1o-lucro        8281   -2.623  -0.050  -0.20  21.8% -1579.9 |  4008  -2.192 |  4273  -3.027
+  mme9x11 ifr2<25 stop=minima 1o-lucro-apos-1  8028   -2.613  -0.031  -0.20  19.2% -1579.9 |  3892  -2.112 |  4136  -3.084
+  mme9x11 ifr2<25 stop=minima-1atr 1o-lucro   7542   -0.205  -0.021  -0.20  47.6%   -2.3 |  3595  -0.224 |  3947  -0.187
+  mme9x11 ifr2<25 stop=minima-1atr 1o-lucro-apos-1  6959   -0.208  -0.024  -0.21  48.9%   -2.3 |  3317  -0.237 |  3642  -0.181
+  mme9x11 ifr2<25 stop=sem 1o-lucro           1060   -0.556  +1.068  +0.16  68.7% -998.4 |   680  -2.192 |   380  +2.373
+  mme9x11 ifr2<25 stop=sem 1o-lucro-apos-1     836   -0.801  +0.773  +0.21  72.5% -998.4 |   540  -2.628 |   296  +2.532
+  mme9x11 ifr2<35 stop=minima 1o-lucro       11956   -2.444  -0.042  -0.20  21.6% -1579.9 |  5777  -2.279 |  6179  -2.598
+  mme9x11 ifr2<35 stop=minima 1o-lucro-apos-1 11406   -2.399  -0.012  -0.19  18.8% -1579.9 |  5531  -2.232 |  5875  -2.556
+  mme9x11 ifr2<35 stop=minima-1atr 1o-lucro  10448   -0.198  -0.015  -0.20  48.2%   -2.4 |  4972  -0.210 |  5476  -0.187
+  mme9x11 ifr2<35 stop=minima-1atr 1o-lucro-apos-1  9343   -0.201  -0.017  -0.20  48.6%   -2.4 |  4482  -0.215 |  4861  -0.188
+  mme9x11 ifr2<35 stop=sem 1o-lucro            991   +0.105  +2.243  +0.08  66.8% -998.4 |   591  -1.427 |   400  +2.369
+  mme9x11 ifr2<35 stop=sem 1o-lucro-apos-1     785   +0.185  +2.218  +0.11  68.7% -998.4 |   482  -1.465 |   303  +2.809
+  mme9x11 ifr4<25 stop=minima 1o-lucro        1171   -3.917  +0.037  -0.16  25.7% -1579.9 |   591  -4.146 |   580  -3.684
+  mme9x11 ifr4<25 stop=minima 1o-lucro-apos-1  1162   -3.902  +0.075  -0.13  24.2% -1579.9 |   585  -4.204 |   577  -3.596
+  mme9x11 ifr4<25 stop=minima-1atr 1o-lucro   1193   -0.145  +0.040  -0.09  50.4%   -2.0 |   604  -0.127 |   589  -0.163
+  mme9x11 ifr4<25 stop=minima-1atr 1o-lucro-apos-1  1180   -0.132  +0.054  -0.06  52.1%   -2.0 |   595  -0.128 |   585  -0.136
+  mme9x11 ifr4<25 stop=sem 1o-lucro            805   +1.121  +4.558  +0.28  67.0% -165.6 |   436  +0.979 |   369  +1.289
+  mme9x11 ifr4<25 stop=sem 1o-lucro-apos-1     672   +1.975  +5.865  +0.33  73.5% -165.6 |   388  +0.766 |   284  +3.626
+  mme9x11 ifr4<35 stop=minima 1o-lucro        4283   -2.395  -0.077  -0.20  23.1% -1579.9 |  2071  -2.632 |  2212  -2.173
+  mme9x11 ifr4<35 stop=minima 1o-lucro-apos-1  4155   -2.405  -0.100  -0.19  20.0% -1579.9 |  1998  -2.639 |  2157  -2.189
+  mme9x11 ifr4<35 stop=minima-1atr 1o-lucro   4129   -0.197  -0.017  -0.19  47.7%   -2.1 |  1984  -0.208 |  2145  -0.188
+  mme9x11 ifr4<35 stop=minima-1atr 1o-lucro-apos-1  3878   -0.206  -0.026  -0.20  48.5%   -2.1 |  1865  -0.225 |  2013  -0.189
+  mme9x11 ifr4<35 stop=sem 1o-lucro           1132   +0.412  +1.896  +0.22  68.7% -561.0 |   693  +0.469 |   439  +0.323
+  mme9x11 ifr4<35 stop=sem 1o-lucro-apos-1     939   -1.212  +0.626  +0.29  73.5% -1990.1 |   577  -2.912 |   362  +1.498
+  mme17x20 ifr2<25 stop=minima 1o-lucro      10147   -2.403  -0.036  -0.19  23.0% -1579.9 |  4943  -2.104 |  5204  -2.686
+  mme17x20 ifr2<25 stop=minima 1o-lucro-apos-1  9740   -2.394  -0.024  -0.19  20.4% -1579.9 |  4748  -2.042 |  4992  -2.728
+  mme17x20 ifr2<25 stop=minima-1atr 1o-lucro  8570   -0.200  -0.018  -0.19  47.8%   -2.3 |  4102  -0.222 |  4468  -0.181
+  mme17x20 ifr2<25 stop=minima-1atr 1o-lucro-apos-1  7731   -0.210  -0.028  -0.21  49.0%   -2.3 |  3704  -0.243 |  4027  -0.181
+  mme17x20 ifr2<25 stop=sem 1o-lucro          1104   +0.009  +1.746  +0.13  68.0% -998.4 |   631  -1.614 |   473  +2.174
+  mme17x20 ifr2<25 stop=sem 1o-lucro-apos-1    825   -0.708  +1.040  +0.09  70.8% -998.4 |   509  -2.489 |   316  +2.160
+  mme17x20 ifr2<35 stop=minima 1o-lucro      13800   -2.225  -0.010  -0.19  22.8% -1579.9 |  6693  -2.063 |  7107  -2.377
+  mme17x20 ifr2<35 stop=minima 1o-lucro-apos-1 13029   -2.178  +0.012  -0.18  20.2% -1579.9 |  6338  -2.020 |  6691  -2.328
+  mme17x20 ifr2<35 stop=minima-1atr 1o-lucro 11272   -0.196  -0.015  -0.19  48.7%   -2.4 |  5373  -0.214 |  5899  -0.180
+  mme17x20 ifr2<35 stop=minima-1atr 1o-lucro-apos-1  9956   -0.200  -0.019  -0.19  49.1%   -2.4 |  4780  -0.220 |  5176  -0.182
+  mme17x20 ifr2<35 stop=sem 1o-lucro          1026   +0.877  +3.074  +0.07  66.4% -460.6 |   560  -0.295 |   466  +2.284
+  mme17x20 ifr2<35 stop=sem 1o-lucro-apos-1    798   +0.735  +2.825  +0.11  67.8% -299.7 |   460  -0.489 |   338  +2.402
+  mme17x20 ifr4<25 stop=minima 1o-lucro       3194   -2.826  +0.017  -0.16  26.3% -1579.9 |  1645  -2.576 |  1549  -3.091
+  mme17x20 ifr4<25 stop=minima 1o-lucro-apos-1  3083   -2.834  +0.038  -0.14  24.1% -1579.9 |  1589  -2.595 |  1494  -3.088
+  mme17x20 ifr4<25 stop=minima-1atr 1o-lucro  2915   -0.158  +0.023  -0.12  51.4%   -2.0 |  1491  -0.165 |  1424  -0.150
+  mme17x20 ifr4<25 stop=minima-1atr 1o-lucro-apos-1  2719   -0.162  +0.018  -0.11  51.2%   -2.0 |  1391  -0.175 |  1328  -0.147
+  mme17x20 ifr4<25 stop=sem 1o-lucro          1184   +1.494  +4.296  +0.24  70.6% -136.6 |   733  +1.420 |   451  +1.614
+  mme17x20 ifr4<25 stop=sem 1o-lucro-apos-1   1062   +1.838  +4.753  +0.33  73.4% -187.9 |   650  +1.452 |   412  +2.447
+  mme17x20 ifr4<35 stop=minima 1o-lucro       7172   -2.052  -0.027  -0.18  24.8% -1579.9 |  3552  -2.232 |  3620  -1.875
+  mme17x20 ifr4<35 stop=minima 1o-lucro-apos-1  6804   -2.023  -0.030  -0.18  22.0% -1579.9 |  3353  -2.180 |  3451  -1.871
+  mme17x20 ifr4<35 stop=minima-1atr 1o-lucro  6092   -0.188  -0.008  -0.18  48.6%   -2.1 |  2988  -0.210 |  3104  -0.167
+  mme17x20 ifr4<35 stop=minima-1atr 1o-lucro-apos-1  5417   -0.206  -0.027  -0.20  49.0%   -2.2 |  2657  -0.232 |  2760  -0.181
+  mme17x20 ifr4<35 stop=sem 1o-lucro          1075   +0.743  +2.546  +0.14  68.7% -460.6 |   677  +0.063 |   398  +1.900
+  mme17x20 ifr4<35 stop=sem 1o-lucro-apos-1    802   -1.934  -0.204  +0.09  70.7% -1990.1 |   548  -3.740 |   254  +1.962
+
+==============================================================================================================
+1Dutc (3000 dias max)
+==============================================================================================================
+    BTC-USDT-SWAP    candles=  2456 trades(todas as combinacoes)=  4676
+    ETH-USDT-SWAP    candles=  2456 trades(todas as combinacoes)=  4781
+    SOL-USDT-SWAP    candles=  2068 trades(todas as combinacoes)=  3484
+    XRP-USDT-SWAP    candles=  2456 trades(todas as combinacoes)=  4138
+    DOGE-USDT-SWAP   candles=  2264 trades(todas as combinacoes)=  3106
+    ARB-USDT-SWAP    candles=  1279 trades(todas as combinacoes)=  1887
+    WLD-USDT-SWAP    candles=  1156 trades(todas as combinacoes)=  1728
+    SUI-USDT-SWAP    candles=  1236 trades(todas as combinacoes)=  2121
+    UNI-USDT-SWAP    candles=  2195 trades(todas as combinacoes)=  3685
+    LINK-USDT-SWAP   candles=  2390 trades(todas as combinacoes)=  4178
+    BNB-USDT-SWAP    candles=  1369 trades(todas as combinacoes)=  2702
+    TRX-USDT-SWAP    candles=  2456 trades(todas as combinacoes)=  5288
+    ZEC-USDT-SWAP    candles=   320 trades(todas as combinacoes)=   534
+    HYPE-USDT-SWAP   candles=   578 trades(todas as combinacoes)=  1186
+    ADA-USDT-SWAP    candles=  2386 trades(todas as combinacoes)=  3774
+    XLM-USDT-SWAP    candles=  2324 trades(todas as combinacoes)=  3650
+    NEAR-USDT-SWAP   candles=  2100 trades(todas as combinacoes)=  3155
+    AVAX-USDT-SWAP   candles=  2189 trades(todas as combinacoes)=  3323
+    LTC-USDT-SWAP    candles=  2456 trades(todas as combinacoes)=  4072
+    BCH-USDT-SWAP    candles=  2456 trades(todas as combinacoes)=  3733
+  ponto medio do holdout: 2023-05-12
+  (stop=sem: so descritivo; exp em R sem sentido, olhar %/tr e acerto)
+  combinacao                                     n  exp liq   bruto   %/tr acerto   pior |  n tr  exp tr |  n te  exp te
+  mme9x11 ifr2<25 stop=minima 1o-lucro        2174   -0.327  -0.024  -0.09  32.4%  -54.4 |   852  -0.276 |  1322  -0.360
+  mme9x11 ifr2<25 stop=minima 1o-lucro-apos-1  2108   -0.295  +0.008  -0.04  26.2%  -54.4 |   819  -0.131 |  1289  -0.399
+  mme9x11 ifr2<25 stop=minima-1atr 1o-lucro   1980   -0.001  +0.024  +0.15  71.8%   -1.1 |   799  +0.027 |  1181  -0.019
+  mme9x11 ifr2<25 stop=minima-1atr 1o-lucro-apos-1  1825   -0.004  +0.021  +0.11  66.8%   -1.1 |   733  +0.044 |  1092  -0.036
+  mme9x11 ifr2<25 stop=sem 1o-lucro            746   +3.092  +3.526  +1.98  92.4% -220.8 |   418  +3.402 |   328  +2.697
+  mme9x11 ifr2<25 stop=sem 1o-lucro-apos-1     602   +1.861  +2.220  +2.39  92.7% -356.7 |   341  +2.418 |   261  +1.133
+  mme9x11 ifr2<35 stop=minima 1o-lucro        3098   -0.312  -0.030  -0.09  31.4%  -47.3 |  1235  -0.229 |  1863  -0.368
+  mme9x11 ifr2<35 stop=minima 1o-lucro-apos-1  2943   -0.247  +0.037  +0.01  24.9%  -47.3 |  1162  -0.155 |  1781  -0.306
+  mme9x11 ifr2<35 stop=minima-1atr 1o-lucro   2695   -0.014  +0.011  -0.01  69.9%   -1.1 |  1109  +0.011 |  1586  -0.031
+  mme9x11 ifr2<35 stop=minima-1atr 1o-lucro-apos-1  2384   -0.004  +0.021  +0.08  65.5%   -1.1 |   961  +0.014 |  1423  -0.016
+  mme9x11 ifr2<35 stop=sem 1o-lucro            851   +3.447  +3.767  +2.30  92.6% -133.6 |   533  +3.758 |   318  +2.924
+  mme9x11 ifr2<35 stop=sem 1o-lucro-apos-1     656   +3.221  +3.553  +3.28  93.1% -356.7 |   406  +3.613 |   250  +2.584
+  mme9x11 ifr4<25 stop=minima 1o-lucro         290   -0.331  -0.048  -0.19  33.8%  -16.9 |   105  +0.021 |   185  -0.530
+  mme9x11 ifr4<25 stop=minima 1o-lucro-apos-1   290   -0.365  -0.083  -0.35  27.9%  -16.9 |   105  -0.029 |   185  -0.556
+  mme9x11 ifr4<25 stop=minima-1atr 1o-lucro    289   +0.080  +0.103  +0.96  80.6%   -1.1 |   105  +0.121 |   184  +0.057
+  mme9x11 ifr4<25 stop=minima-1atr 1o-lucro-apos-1   288   +0.057  +0.079  +0.80  75.0%   -1.1 |   105  +0.061 |   183  +0.055
+  mme9x11 ifr4<25 stop=sem 1o-lucro            247   +1.030  +1.330  +2.56  94.7% -252.5 |    95  +0.569 |   152  +1.318
+  mme9x11 ifr4<25 stop=sem 1o-lucro-apos-1     236   +0.786  +1.094  +2.64  92.8% -252.5 |    91  +0.435 |   145  +1.006
+  mme9x11 ifr4<35 stop=minima 1o-lucro        1116   -0.341  +0.018  -0.18  33.2%  -54.4 |   445  -0.290 |   671  -0.374
+  mme9x11 ifr4<35 stop=minima 1o-lucro-apos-1  1089   -0.336  +0.026  -0.22  27.9%  -54.4 |   431  -0.262 |   658  -0.384
+  mme9x11 ifr4<35 stop=minima-1atr 1o-lucro   1076   +0.025  +0.049  +0.27  74.3%   -1.1 |   438  +0.047 |   638  +0.010
+  mme9x11 ifr4<35 stop=minima-1atr 1o-lucro-apos-1  1013   +0.022  +0.046  +0.19  69.9%   -1.1 |   406  +0.050 |   607  +0.004
+  mme9x11 ifr4<35 stop=sem 1o-lucro            624   +3.688  +4.119  +2.47  93.3% -252.5 |   315  +3.775 |   309  +3.598
+  mme9x11 ifr4<35 stop=sem 1o-lucro-apos-1     503   +3.246  +3.723  +2.52  92.8% -356.7 |   255  +2.070 |   248  +4.455
+  mme17x20 ifr2<25 stop=minima 1o-lucro       2619   -0.136  +0.142  +0.14  34.1%  -54.4 |  1035  -0.002 |  1584  -0.224
+  mme17x20 ifr2<25 stop=minima 1o-lucro-apos-1  2502   -0.076  +0.201  +0.20  27.4%  -54.4 |   980  +0.217 |  1522  -0.266
+  mme17x20 ifr2<25 stop=minima-1atr 1o-lucro  2247   +0.020  +0.044  +0.45  73.2%   -1.1 |   923  +0.072 |  1324  -0.016
+  mme17x20 ifr2<25 stop=minima-1atr 1o-lucro-apos-1  2020   +0.030  +0.054  +0.51  68.2%   -1.1 |   830  +0.096 |  1190  -0.016
+  mme17x20 ifr2<25 stop=sem 1o-lucro           782   +4.094  +4.501  +2.49  93.7% -150.1 |   451  +3.995 |   331  +4.228
+  mme17x20 ifr2<25 stop=sem 1o-lucro-apos-1    631   +4.017  +4.451  +2.86  92.4% -243.7 |   364  +3.127 |   267  +5.229
+  mme17x20 ifr2<35 stop=minima 1o-lucro       3547   -0.194  +0.068  +0.03  32.6%  -47.3 |  1402  -0.084 |  2145  -0.265
+  mme17x20 ifr2<35 stop=minima 1o-lucro-apos-1  3330   -0.102  +0.158  +0.17  25.7%  -47.3 |  1305  +0.076 |  2025  -0.217
+  mme17x20 ifr2<35 stop=minima-1atr 1o-lucro  2919   +0.001  +0.025  +0.24  71.3%   -1.1 |  1208  +0.041 |  1711  -0.027
+  mme17x20 ifr2<35 stop=minima-1atr 1o-lucro-apos-1  2544   +0.028  +0.052  +0.46  67.2%   -1.1 |  1045  +0.070 |  1499  -0.000
+  mme17x20 ifr2<35 stop=sem 1o-lucro           868   +3.884  +4.202  +2.77  92.6% -174.5 |   541  +4.237 |   327  +3.300
+  mme17x20 ifr2<35 stop=sem 1o-lucro-apos-1    676   +3.227  +3.557  +3.26  93.2% -249.3 |   420  +3.356 |   256  +3.015
+  mme17x20 ifr4<25 stop=minima 1o-lucro        776   +0.009  +0.232  +0.63  35.7%  -16.9 |   297  +0.487 |   479  -0.287
+  mme17x20 ifr4<25 stop=minima 1o-lucro-apos-1   742   +0.180  +0.408  +0.44  29.9%  -16.9 |   277  +0.709 |   465  -0.134
+  mme17x20 ifr4<25 stop=minima-1atr 1o-lucro   702   +0.051  +0.072  +1.11  74.4%   -1.1 |   277  +0.157 |   425  -0.018
+  mme17x20 ifr4<25 stop=minima-1atr 1o-lucro-apos-1   647   +0.061  +0.082  +1.05  70.6%   -1.1 |   247  +0.140 |   400  +0.012
+  mme17x20 ifr4<25 stop=sem 1o-lucro           475   +1.201  +1.459  +3.42  92.2% -252.5 |   227  +1.158 |   248  +1.240
+  mme17x20 ifr4<25 stop=sem 1o-lucro-apos-1    370   +1.639  +1.916  +3.38  90.5% -241.7 |   173  +2.120 |   197  +1.217
+  mme17x20 ifr4<35 stop=minima 1o-lucro       1799   -0.051  +0.238  +0.25  35.6%  -54.4 |   705  +0.068 |  1094  -0.127
+  mme17x20 ifr4<35 stop=minima 1o-lucro-apos-1  1706   +0.010  +0.300  +0.24  29.8%  -54.4 |   665  +0.212 |  1041  -0.120
+  mme17x20 ifr4<35 stop=minima-1atr 1o-lucro  1536   +0.028  +0.051  +0.48  73.6%   -1.1 |   626  +0.084 |   910  -0.011
+  mme17x20 ifr4<35 stop=minima-1atr 1o-lucro-apos-1  1373   +0.042  +0.064  +0.50  69.6%   -1.1 |   550  +0.087 |   823  +0.011
+  mme17x20 ifr4<35 stop=sem 1o-lucro           713   +4.170  +4.579  +2.87  94.1% -252.5 |   379  +4.542 |   334  +3.748
+  mme17x20 ifr4<35 stop=sem 1o-lucro-apos-1    554   +4.173  +4.623  +2.95  92.4% -252.5 |   294  +3.137 |   260  +5.345
+
+==============================================================================================================
+HOLDOUT -- DECIDE
+==============================================================================================================
+  selecionada no treino -> 1Dutc | mme17x20 ifr4<25 stop=minima 1o-lucro-apos-1
+  treino (1a metade, so referencia): n=  277 | dias=  123 | exp +0.709R | IC95 [-0.364, +2.536] | bruto +0.858R | %/trade +1.49% | acerto liq 34.7% | pior -2.6R | custo 0.150R
+  TESTE (2a metade, decide)       : n=  465 | dias=  226 | exp -0.134R | IC95 [-0.545, +0.368] | bruto +0.140R | %/trade -0.18% | acerto liq 27.1% | pior -16.9R | custo 0.274R
+
+==> DECISAO: NAO PASSA

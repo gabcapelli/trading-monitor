@@ -62,7 +62,11 @@ Relatórios completos em `claude/auditoria-v5.md` e `claude/auditoria-v6.md` (v6
 
 ## Estudos avulsos (setups de terceiros)
 
-Setups vistos em vídeo são testados em scripts separados, pré-registrados, fora do monitor de produção. Resultados em `claude/estudos-avulsos.md`. Em 21/09/2026, o **leque de médias (EMA 20–50)** e o **1-2-3 de Mark Crisp** foram testados em 20 pares e **nenhum dos dois passou**: nenhum tempo gráfico decisivo teve IC95 da expectância inteiro acima de zero. Não reabra esses testes variando parâmetros sobre os mesmos dados.
+Setups vistos em vídeo são testados em scripts separados, pré-registrados, fora do monitor de produção. Resultados em `claude/estudos-avulsos.md`. Cinco setups foram testados em 20 pares e **nenhum passou**:
+- 21/09/2026: o **leque de médias (EMA 20–50)** e o **1-2-3 de Mark Crisp**.
+- 22/09/2026: **estocástico + VWAP/MM144**, **9.1 de Larry Williams** e **IFR curto no recuo**.
+
+Estudos com grade de parâmetros usam **holdout temporal**: escolhe-se a célula na 1ª metade e testa-se só essa célula na 2ª. O único resultado a acompanhar é o 9.1 no diário, positivo em todas as combinações mas só do lado comprado (pode ser beta). Não reabra esses testes variando parâmetros sobre os mesmos dados.
 
 ## Achado em investigação (não é regra ainda)
 
