@@ -464,6 +464,23 @@ Famílias que ainda não tinham sido testadas: reversão **cross-sectional** (o 
 
 Pairs trading (3.8) não foi testada: é o caso N=2 da 3.9, que falhou.
 
+## 18. Momentum de qualidade — "frog in the pan" (Gray & Vogel) — 22/09/2026
+
+Script: `monitor/replay_qmom.py` · log: `claude/qmom.log` · fonte: *Quantitative Momentum*
+
+**Tese:** alta construída devagar (muitos dias pequenos positivos) passa despercebida e continua; alta aos trancos vem de atenção e reverte. Mede-se com **FIP = sinal(retorno) × (% dias negativos − % dias positivos)** em 252 dias — quanto menor, mais suave a trajetória.
+
+- Momentum 252 dias pulando os últimos 21 (o "12-2" do livro), rebalanceado a cada 21 dias.
+- Versão "qualidade": dentro do quintil de maior momentum, compra os de menor FIP; no quintil inferior, vende os de maior FIP.
+- Controle: momentum XS puro, sem o filtro.
+
+| | Amostra A | **Amostra D (decide)** |
+|---|---|---|
+| Momentum XS puro (controle) | Sharpe +0.36 | **+0.13** |
+| Momentum de qualidade (FIP) | Sharpe −0.22 | **−0.77** |
+
+**Veredito: NÃO PASSA** (as duas). O filtro de qualidade **piora** o resultado em cripto, ao contrário do que o livro reporta em ações. Coerente com o resto dos achados: em cripto o que se move em saltos tende a continuar, e não a reverter.
+
 ## Leitura conjunta
 
 Mesma direção do achado da auditoria v6 sobre o checklist mecânico dos Setups A/B. Nenhum dos dez setups de vídeo tem edge mecânico demonstrável nesses 20 pares (o 9.1 também não, fora da amostra, nos 80 pares do estudo 6):
