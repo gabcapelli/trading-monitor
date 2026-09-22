@@ -238,9 +238,32 @@ Script: `monitor/replay_landry.py` · log: `claude/landry.log`
 
 **Proposta para os próximos estudos (a decidir antes de rodar):** mínimo de n ≥ 200 no treino para concorrer, ou seleção separada por tempo gráfico.
 
+## 10. 123 de três candles (contexto MM8/MM80) — 22/09/2026
+
+Script: `monitor/replay_123_candles.py` · log: `claude/123_candles.log`
+
+Não é o 1-2-3 do Crisp (estudo 2); aqui o padrão tem exatamente 3 candles.
+- **Padrão de compra:** a mínima do candle 2 fica abaixo da do 1 e da do 3; compra stop na máxima do candle 3, válida no candle seguinte.
+- **Stops (as 3 opções do vídeo):** mínima do candle 3; mínima do candle 2; mínima do candle 2 menos a amplitude do padrão.
+- **Alvo:** 1× ou 1.618× a amplitude dos 3 candles.
+- **Contexto:** *tendência* (MME80 inclinada a favor e candle 3 do lado certo dela) ou *tendência + MM8* (também MME8 a favor, com os 3 candles fechando além dela — o "123 fantástico", fora da "zona neutra").
+- **Grade e critério:** 1D e 4H, 24 células, primeiro estudo com **n ≥ 200** na seleção (as 24 atingiram); holdout **e** 80 pares.
+- **Validação:** passeio aleatório com caminho fino dá bruto −0.02 a +0.035R.
+
+| Célula escolhida no treino | Treino | 1) Teste (2ª metade) | 2) 80 pares fora da amostra |
+|---|---|---|---|
+| 1D, tendência+MM8, stop no candle 2, alvo 1.618× | +0.095R (n=411) | **+0.007R**, IC [−0.143, +0.157] | **−0.017R**, IC [−0.117, +0.083] |
+
+**Veredito: NÃO PASSA.**
+- **Diário:** todas as 12 combinações ficam entre −0.01 e +0.05R líquido — o mesmo "levemente positivo, indistinguível de zero" do Landry e do 1-2-3 corrigido.
+- **Contexto da MM8:** não acrescenta nada; os resultados com e sem ela são parecidos.
+- **4H:** o bruto fica em 0 a +0.09R, e o custo (0.03–0.12R) deixa tudo negativo.
+- **Semanal (descritivo):** todas as combinações negativas.
+- **Acerto:** vai de 28% (stop curto, alvo longo) a 65% (stop amplo, alvo 1×) sem mudar a expectância. É o trade-off que o vídeo descreve, sem edge por trás.
+
 ## Leitura conjunta
 
-Mesma direção do achado da auditoria v6 sobre o checklist mecânico dos Setups A/B. Nenhum dos oito setups de vídeo tem edge mecânico demonstrável nesses 20 pares (o 9.1 também não, fora da amostra, nos 80 pares do estudo 6):
+Mesma direção do achado da auditoria v6 sobre o checklist mecânico dos Setups A/B. Nenhum dos nove setups de vídeo tem edge mecânico demonstrável nesses 20 pares (o 9.1 também não, fora da amostra, nos 80 pares do estudo 6):
 - **Regra do candle da entrada:** vale com a regra corrigida (reexecução acima). O mais perto de passar foi o 1-2-3 no diário, que não se confirmou nos 80 pares.
 - **Custo:** todos pioram quanto menor o tempo gráfico, porque o custo em R cresce.
 - **Sinal:** nos intraday, o resultado bruto fica em torno de zero; o sinal não carrega informação.
