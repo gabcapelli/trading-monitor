@@ -1,0 +1,20 @@
+amostra A: 20 | amostra D: 60
+
+====================================================================================================
+AMOSTRA A (desenvolvimento)
+====================================================================================================
+  26 mean reversion rapida : dias=2409 | retorno -26.7%/ano | Sharpe -1.29 | IC98.75 [-2.00, -0.66]
+    alfa vs mercado -28.8%/ano | IC98.75 [-46.7%, -10.9%] | mercado +1.14
+  27 com filtro de tendencia: dias=2409 | retorno -11.5%/ano | Sharpe -0.81 | IC98.75 [-1.44, -0.12]
+    alfa vs mercado -13.4%/ano | IC98.75 [-25.2%, -1.4%] | mercado +1.14
+
+====================================================================================================
+AMOSTRA D -- DECIDE (IC 98.75%, Bonferroni)
+====================================================================================================
+  26 mean reversion rapida : dias=2187 | retorno -7.9%/ano | Sharpe -0.46 | IC98.75 [-1.26, +0.41]
+    alfa vs mercado -7.0%/ano | IC98.75 [-21.9%, +7.7%] | mercado -0.19
+  27 com filtro de tendencia: dias=2187 | retorno -3.7%/ano | Sharpe -0.34 | IC98.75 [-1.16, +0.57]
+    alfa vs mercado -3.8%/ano | IC98.75 [-13.5%, +5.7%] | mercado -0.19
+
+==> DECISAO 26: NAO PASSA
+==> DECISAO 27: NAO PASSA

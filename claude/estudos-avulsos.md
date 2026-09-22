@@ -413,6 +413,38 @@ Com Sharpe de 0.65 e ~6.3 anos de histórico, o erro padrão do Sharpe é ≈ 1/
 
 **Estado das amostras:** A, B, C gastas; D usada três vezes (varredura do 1-2-3, carry, skew). Depois deste estudo, a amostra limpa restante é o paper trade.
 
+## 16. Mais quatro do Carver: momentum XS, aceleração e mean reversion rápida — 22/09/2026
+
+Scripts: `monitor/replay_carver_outras.py` (19 e 23) e `monitor/replay_carver_mr.py` (26 e 27) · logs: `claude/carver_outras.log`, `claude/carver_mr.log`
+
+Família de **quatro testes na mesma amostra D**, então cada um usa **IC de 98.75%** (Bonferroni, 0.05/4) em vez de 95%. Mesmo arcabouço dos estudos 14 e 15.
+
+| Estratégia | Sharpe no livro | Amostra A | **Amostra D (decide)** | Veredito |
+|---|---|---|---|---|
+| 19 — momentum cross-section | — | −0.00 | **−0.19** | não passa |
+| 23 — aceleração | 0.20–0.59 | +0.25 | **+0.02** | não passa |
+| 26 — mean reversion rápida (1H) | 0.44–0.75 | −1.29 | **−0.46** | não passa |
+| 27 — idem, com filtro de tendência | — | −0.81 | **−0.34** | não passa |
+
+**Value (estratégia 22) não foi testada:** o próprio livro reporta **SR −0.06** para ela isolada e só a usa com 5% de peso numa combinação. Gastar amostra nela não se justifica.
+
+### O achado que vale: mean reversion tem o sinal invertido em cripto
+
+Separei custo de sinal rodando a 26 com custo zero (8 pares, amostra A):
+
+| | Sharpe |
+|---|---|
+| Com custo (0.06% por giro) | −1.53 |
+| **Sem custo nenhum (bruto)** | **−0.80** |
+
+**O custo não é a causa.** Comprar quando o preço cai abaixo do equilíbrio de 5 dias — que rende 0.44–0.75 em futuros — perde dinheiro em cripto **antes de qualquer custo**. No horizonte de horas, cripto **continua** o movimento em vez de reverter.
+
+E o espelho (comprar o que se afastou para cima) não resolve: o bruto seria ≈ +0.80, mas girar de hora em hora custa ~0.73 de Sharpe, sobrando ~+0.07. É o mesmo muro dos 11 setups intradiários dos vídeos.
+
+### Balanço do livro
+
+Das 30 estratégias, 6 foram testadas — as que fazem sentido em perpétuo e não são pura tendência (carry 10/20, skew 24, momentum XS 19, aceleração 23, mean reversion 26/27). Só a **skew relativa** sobreviveu, com +0.67 contra os 0.60–0.75 que o livro reporta em futuros. As de tendência confirmaram o que 11 estudos de vídeo já indicavam, e o carry e a mean reversion falharam com mecanismo identificável.
+
 ## Leitura conjunta
 
 Mesma direção do achado da auditoria v6 sobre o checklist mecânico dos Setups A/B. Nenhum dos dez setups de vídeo tem edge mecânico demonstrável nesses 20 pares (o 9.1 também não, fora da amostra, nos 80 pares do estudo 6):

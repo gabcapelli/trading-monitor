@@ -1,0 +1,27 @@
+amostra A: 20 | amostra D: 215
+
+====================================================================================================
+19 momentum cross-sectional
+====================================================================================================
+  escala estimada na amostra A: 3.28
+    A (desenvolvimento): dias=2408 | retorno -0.0%/ano | Sharpe -0.00 | IC98.75 [-1.00, +1.00]
+    alfa vs mercado +0.9%/ano | IC98.75 [-3.3%, +4.9%] | mercado +1.06
+    D (DECIDE)         : dias=2351 | retorno -2.1%/ano | Sharpe -0.44 | IC98.75 [-1.50, +0.69]
+    alfa vs mercado -0.3%/ano | IC98.75 [-4.9%, +4.4%] | mercado +0.73
+
+====================================================================================================
+23 aceleracao
+====================================================================================================
+  escala estimada na amostra A: 6.16
+    A (desenvolvimento): dias=2408 | retorno +4.1%/ano | Sharpe +0.25 | IC98.75 [-0.66, +1.14]
+    alfa vs mercado +5.1%/ano | IC98.75 [-10.5%, +20.5%] | mercado +1.06
+    D (DECIDE)         : dias=2351 | retorno +0.3%/ano | Sharpe +0.02 | IC98.75 [-0.98, +0.98]
+    alfa vs mercado +1.1%/ano | IC98.75 [-14.4%, +16.9%] | mercado +0.73
+
+====================================================================================================
+DECISAO (IC 98.75%, Bonferroni para 4 testes)
+====================================================================================================
+  19 momentum cross-sectional: NAO PASSA
+  23 aceleracao: NAO PASSA
+
+  (estrategias 26 e 27, mean reversion horaria, rodam em replay_carver_mr.py)
