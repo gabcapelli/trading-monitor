@@ -1,0 +1,48 @@
+========================================================================================================
+UNIVERSO A (20 pares) -- grade
+========================================================================================================
+  combinacao                                n  exp liq   bruto acerto  custo |  n tr  exp tr |  n te  exp te
+  1Dutc conf=nenhuma     saida=2R         255   +0.245  +0.362  37.3%  0.117 |    91  +0.096 |   164  +0.328
+  1Dutc conf=nenhuma     saida=reversao    257   +0.138  +0.262  31.1%  0.124 |    91  -0.043 |   166  +0.237
+  1Dutc conf=bollinger   saida=2R         205   +0.373  +0.440  39.0%  0.067 |    80  +0.094 |   125  +0.552
+  1Dutc conf=bollinger   saida=reversao    207   +0.195  +0.264  34.8%  0.069 |    81  +0.042 |   126  +0.293
+  1Dutc conf=trix        saida=2R         219   +0.270  +0.398  37.4%  0.128 |    82  +0.114 |   137  +0.363
+  1Dutc conf=trix        saida=reversao    220   +0.201  +0.331  30.9%  0.130 |    82  -0.055 |   138  +0.353
+  1Dutc conf=estocastico saida=2R         242   +0.243  +0.361  36.8%  0.118 |    89  +0.087 |   153  +0.333
+  1Dutc conf=estocastico saida=reversao    244   +0.105  +0.230  30.3%  0.126 |    89  -0.032 |   155  +0.183
+  1Dutc conf=todas       saida=2R         169   +0.455  +0.521  40.2%  0.066 |    73  +0.079 |    96  +0.740
+  1Dutc conf=todas       saida=reversao    171   +0.248  +0.316  34.5%  0.069 |    74  -0.007 |    97  +0.442
+  4H    conf=nenhuma     saida=2R        1515   -0.214  +0.125  32.4%  0.339 |   668  -0.269 |   847  -0.170
+  4H    conf=nenhuma     saida=reversao   1570   -0.166  +0.171  25.0%  0.336 |   683  -0.400 |   887  +0.015
+  4H    conf=bollinger   saida=2R        1234   -0.121  +0.118  33.4%  0.239 |   536  -0.232 |   698  -0.036
+  4H    conf=bollinger   saida=reversao   1281   -0.097  +0.140  26.7%  0.237 |   550  -0.379 |   731  +0.114
+  4H    conf=trix        saida=2R        1352   -0.264  +0.089  31.8%  0.353 |   596  -0.317 |   756  -0.221
+  4H    conf=trix        saida=reversao   1398   -0.187  +0.162  24.5%  0.349 |   610  -0.431 |   788  +0.002
+  4H    conf=estocastico saida=2R        1433   -0.212  +0.123  33.0%  0.335 |   635  -0.278 |   798  -0.160
+  4H    conf=estocastico saida=reversao   1486   -0.181  +0.151  25.6%  0.333 |   649  -0.381 |   837  -0.026
+  4H    conf=todas       saida=2R        1062   -0.144  +0.100  33.0%  0.244 |   463  -0.245 |   599  -0.066
+  4H    conf=todas       saida=reversao   1099   -0.089  +0.154  26.3%  0.243 |   475  -0.422 |   624  +0.164
+
+  descritivo (fora da selecao):
+  1H    conf=nenhuma     saida=2R        1095   -0.568  +0.037  29.5%  0.605
+  1H    conf=nenhuma     saida=reversao   1148   -0.445  +0.160  23.3%  0.605
+  1H    conf=bollinger   saida=2R         904   -0.479  -0.033  30.3%  0.445
+  1H    conf=bollinger   saida=reversao    941   -0.461  -0.013  25.0%  0.447
+  1H    conf=trix        saida=2R         981   -0.616  +0.000  30.1%  0.616
+  1H    conf=trix        saida=reversao   1027   -0.624  -0.008  23.6%  0.617
+  1H    conf=estocastico saida=2R        1047   -0.565  +0.022  29.4%  0.587
+  1H    conf=estocastico saida=reversao   1091   -0.440  +0.146  23.6%  0.586
+  1H    conf=todas       saida=2R         773   -0.460  -0.028  31.0%  0.432
+  1H    conf=todas       saida=reversao    803   -0.484  -0.050  25.5%  0.434
+
+========================================================================================================
+DECISAO
+========================================================================================================
+  selecionada no treino -> 4H    conf=bollinger   saida=2R   (10 de 20 celulas com n >= 200)
+  treino (1a metade, so referencia): n=  536 | dias=  309 | exp -0.232R | IC95 [-0.440, -0.006] | bruto +0.072R | acerto 30.2% | custo 0.304R
+  1) TESTE (2a metade)              : n=  698 | dias=  384 | exp -0.036R | IC95 [-0.179, +0.109] | bruto +0.153R | acerto 35.8% | custo 0.189R
+     so compras (teste)             : n=  362 | dias=  203 | exp -0.145R | IC95 [-0.345, +0.069] | bruto +0.033R | acerto 32.0% | custo 0.177R
+     so vendas (teste)              : n=  336 | dias=  216 | exp +0.080R | IC95 [-0.115, +0.281] | bruto +0.282R | acerto 39.9% | custo 0.202R
+
+[execucao interrompida: a confirmacao nos 80 pares exigia baixar o 4H desses
+pares (~1h20) e o veredito ja estava decidido pelo holdout -- NAO PASSA]

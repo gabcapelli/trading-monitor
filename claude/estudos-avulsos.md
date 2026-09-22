@@ -261,9 +261,30 @@ Não é o 1-2-3 do Crisp (estudo 2); aqui o padrão tem exatamente 3 candles.
 - **Semanal (descritivo):** todas as combinações negativas.
 - **Acerto:** vai de 28% (stop curto, alvo longo) a 65% (stop amplo, alvo 1×) sem mudar a expectância. É o trade-off que o vídeo descreve, sem edge por trás.
 
+## 11. Agulhada do Didi — 22/09/2026
+
+Script: `monitor/replay_didi.py` · log: `claude/didi.log`
+
+- **Agulhada:** Didi Index (MMA3/MMA8 e MMA20/MMA8); a curta cruza 1 para cima e a longa para baixo, com 1 candle de tolerância.
+- **Confirmações** (os "quatro indicadores sincronizados"): Bollinger(8,2) abrindo, TRIX(9) acima do sinal, estocástico lento (8,3,3) — testadas isoladas, todas juntas e nenhuma.
+- **Entrada:** abertura do candle seguinte. **Stop:** mínima do candle da agulhada (o vídeo não define stop). **Saída:** 2R ou quando a agulhada se desfaz.
+- **Grade:** 1D e 4H, 20 células; 1H descritivo.
+
+| | n | Expectância | IC95 |
+|---|---|---|---|
+| Treino — **melhor** célula da grade (4H, Bollinger, 2R) | 536 | **−0.232R** | [−0.440, −0.006] |
+| Teste (2ª metade) | 698 | **−0.036R** | [−0.179, +0.109] |
+
+**Veredito: NÃO PASSA** pelo holdout. A confirmação nos 80 pares não chegou a rodar (exigia baixar o 4H desses pares, ~1h20; interrompido, já que o veredito estava decidido).
+
+- **Único estudo em que a melhor célula do treino já era negativa.** Nos anteriores a vencedora sempre parecia positiva por sorte e morria no teste.
+- **O motivo é o custo:** o bruto fica em −0.05 a +0.15R e o custo sozinho é de 0.19R no 4H e 0.43–0.62R no 1H. O stop na mínima do candle da agulhada é curtíssimo, e 0.18% de custo vira um R inteiro.
+- **Lookahead corrigido antes de rodar:** a tolerância de 1 candle aceitava o cruzamento da linha longa no candle seguinte, que ainda não fechou quando a entrada acontece na abertura dele. Num passeio aleatório isso dava +0.17 a +0.38R de vantagem falsa; corrigido (o sinal vale no último dos dois cruzamentos), o viés some. **Vale como alerta para os próximos estudos:** qualquer "tolerância de N candles" precisa ser checada nesse sentido.
+- **Sinal raro:** ~22 agulhadas em 2.456 candles diários do BTC; só 10 das 20 células chegaram a n ≥ 200 no treino.
+
 ## Leitura conjunta
 
-Mesma direção do achado da auditoria v6 sobre o checklist mecânico dos Setups A/B. Nenhum dos nove setups de vídeo tem edge mecânico demonstrável nesses 20 pares (o 9.1 também não, fora da amostra, nos 80 pares do estudo 6):
+Mesma direção do achado da auditoria v6 sobre o checklist mecânico dos Setups A/B. Nenhum dos dez setups de vídeo tem edge mecânico demonstrável nesses 20 pares (o 9.1 também não, fora da amostra, nos 80 pares do estudo 6):
 - **Regra do candle da entrada:** vale com a regra corrigida (reexecução acima). O mais perto de passar foi o 1-2-3 no diário, que não se confirmou nos 80 pares.
 - **Custo:** todos pioram quanto menor o tempo gráfico, porque o custo em R cresce.
 - **Sinal:** nos intraday, o resultado bruto fica em torno de zero; o sinal não carrega informação.
