@@ -561,6 +561,28 @@ Cripto negocia 24/7, mas Ásia, Europa e EUA têm fluxos diferentes, e fim de se
 
 **Veredito: NÃO PASSA** (as duas). O efeito de sábado aparece nas duas amostras com sinal positivo e tamanho parecido, mas o intervalo cruza zero: são só ~350 sábados em 6,6 anos, e cada um é um evento ruidoso. É o mesmo problema de poder estatístico da skew — não há amostra suficiente no tempo.
 
+### Onde o efeito está (descritivo)
+
+| Cesta | Média por sábado | % positivos | t | ~ao ano |
+|---|---|---|---|---|
+| Só BTC | +0.040% | 53.4% | +0.42 | +2.1% |
+| Só ETH | +0.237% | 56.2% | +1.49 | +12.3% |
+| 5 maiores | +0.409% | 58.9% | +2.77 | +21.3% |
+| **20 majors** | **+0.441%** | **64.6%** | **+2.93** | +22.9% |
+| 60 alts | +0.368% | 59.0% | +1.86 | +19.1% |
+
+**Só BTC não tem efeito.** Ele aparece por diversificação: 83% dos pares individuais (35 de 42) têm sábado positivo, mas só 3 têm significância sozinhos — padrão de efeito pequeno e difuso. A sexta também aparece forte (+0.616% nos alts, t=+2.22), então parece ser um efeito de "fim de semana", não de sábado isolado.
+
+**Fragilidades registradas:** os 5 melhores sábados somam +45.7% de um total de +106.6% (metade do retorno em 5 de 350 dias); 2022 ficou em −0.9% e 2026 está em −4.2% com 45% de acerto.
+
+### Em teste de papel desde 23/09/2026
+
+Script: `monitor/sabado_paper.py` · registro: `claude/sabado-paper.md` · workflow: `.github/workflows/sabado-paper.yml`
+
+Regra **congelada** (não alterar durante o teste): comprar a cesta de peso igual no fechamento de sexta UTC, vender no fechamento de sábado, custo de 0.06% e funding descontados. Registra em paralelo a cesta de 20 majors (principal) e a de 5 maiores (operacionalmente mais simples). **Nenhuma ordem é enviada.**
+
+**Critério de leitura, fixado antes de começar:** só reavaliar com **104 sábados novos (~2 anos)**. Qualquer leitura antes disso é ruído — com 52 observações por ano e a dispersão medida, nada menos que isso distingue +20%/ano de zero.
+
 ## 22. Trend following canônico (Carver, estratégia 9) — 22/09/2026
 
 Script: `monitor/replay_carver_trend.py` · log: `claude/carver_trend.log`

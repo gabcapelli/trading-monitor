@@ -1,0 +1,35 @@
+name: Sabado Paper
+
+# Registro em papel do efeito de sabado (estudo 21). NAO envia ordem.
+# Roda uma vez por semana; basta que rode algum dia depois do sabado, porque
+# o script busca sempre o ultimo sabado ja fechado e ignora os ja registrados.
+on:
+  workflow_dispatch: {}          # permite disparo manual e por cron externo (Cloudflare)
+  schedule:
+    - cron: "30 1 * * 0"         # domingo 01:30 UTC (o cron do GitHub e irregular; ver README)
+
+permissions:
+  contents: write
+
+jobs:
+  registro:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Registrar o sabado (sem dependencias externas)
+        run: python monitor/sabado_paper.py
+
+      - name: Commitar o registro atualizado
+        run: |
+          git config user.name "btc-monitor-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add claude/sabado-paper.md monitor/sabado_paper_state.json
+          git diff --cached --quiet || git commit -m "Registra sabado em papel ($(date -u +'%Y-%m-%d'))"
+          git push
