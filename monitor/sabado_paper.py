@@ -29,8 +29,18 @@ NOTIFICACOES (push via ntfy, mesmo topico do monitor)
   lista a cesta -- e o momento da entrada.
 - SABADO 21:00 no Brasil (00:0x UTC de domingo): avisa o resultado do sabado
   que acabou de fechar.
-Como o workflow roda de hora em hora (gatilho do Cloudflare), o script so
-notifica quando a hora UTC do momento e 0 e o dia da semana e o esperado.
+Como o workflow roda de hora em hora (gatilho do Cloudflare), a abertura so e
+notificada quando a hora UTC e 0 de sabado; o resultado, na rodada em que o
+sabado e registrado (o arquivo do vision pode sair horas depois das 00:00).
+
+FONTE DE PRECOS (corrigido em 23/09/2026, antes do 1o sabado do teste)
+----------------------------------------------------------------------
+Os runners do GitHub ficam nos EUA, e fapi.binance.com pode bloquear IP
+americano: aqui isso nao quebrava nada, mas registraria "sem dados" todo
+domingo sem avisar. Precos e funding agora vem das funcoes de
+unlock_paper.py (data.binance.vision, com a API como reserva). Funding ainda
+indisponivel (arquivo mensal do vision sai depois do fim do mes) fica
+PENDENTE e e completado nas rodadas seguintes. A regra nao muda.
 Isso e um REGISTRO EM PAPEL: a notificacao e para acompanhar, nao e ordem.
 
 O QUE ESTE TESTE PRECISA PARA VALER
@@ -51,8 +61,8 @@ from datetime import datetime, timezone
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-import dados_binance as B
 import fetch_and_check as m
+import unlock_paper as U
 
 PRINCIPAL = ["BTCUSDT", "ETHUSDT", "SOLUSDT", "XRPUSDT", "DOGEUSDT", "ARBUSDT", "WLDUSDT",
              "SUIUSDT", "UNIUSDT", "LINKUSDT", "BNBUSDT", "TRXUSDT", "ZECUSDT", "HYPEUSDT",
@@ -77,27 +87,24 @@ def ultimo_sabado_fechado(agora=None):
 
 
 def retorno_cesta(pares, dia_sabado):
-    """Retorno liquido da cesta comprada no sabado (sexta->sabado), e detalhe."""
-    linhas, rets = [], []
+    """Retorno liquido da cesta comprada no sabado (sexta->sabado), e detalhe.
+    Fechamento de sexta = abertura de sabado; fechamento de sabado = abertura
+    de domingo. Devolve tambem se o funding de algum par ficou pendente."""
+    linhas, rets, pendente = [], [], False
     for sym in pares:
-        try:
-            c = B.baixar(sym, "1Dutc", 3000)
-        except Exception:
+        p_sex = U.abertura(sym, dia_sabado)
+        p_sab = U.abertura(sym, dia_sabado + 1)
+        if not p_sex or not p_sab:
             continue
-        por_dia = {x[0] // MS_DIA: x for x in c}
-        sab, sex = por_dia.get(dia_sabado), por_dia.get(dia_sabado - 1)
-        if not sab or not sex or sex[4] <= 0:
-            continue
-        r = sab[4] / sex[4] - 1
-        try:
-            fund = sum(t for ts, t in B.baixar_funding(sym) if ts // MS_DIA == dia_sabado)
-        except Exception:
-            fund = 0.0
+        r = p_sab / p_sex - 1
+        fund = U.funding(sym, dia_sabado, dia_sabado + 1)
+        if fund is None:
+            pendente, fund = True, 0.0
         rets.append(r - fund)
-        linhas.append((sym.replace("USDT", ""), sex[4], sab[4], 100 * r, 100 * fund))
-    if not rets:
-        return None, []
-    return sum(rets) / len(rets) - CUSTO, linhas
+        linhas.append((sym.replace("USDT", ""), p_sex, p_sab, 100 * r, 100 * fund))
+    if len(rets) < len(pares) // 2:
+        return None, [], pendente
+    return sum(rets) / len(rets) - CUSTO, linhas, pendente
 
 
 def carrega_estado():
@@ -139,7 +146,8 @@ def escreve_ledger(estado):
         acum = 0.0
         for s in sab:
             acum += s["principal"]
-            linhas.append(f"| {s['data']} | {100*s['principal']:+.2f}% | "
+            nota = " (funding pendente)" if s.get("funding_pendente") else ""
+            linhas.append(f"| {s['data']}{nota} | {100*s['principal']:+.2f}% | "
                           f"{100*s['secundaria']:+.2f}% | {100*acum:+.2f}% |")
     else:
         linhas.append("_Nenhum sábado registrado ainda._")
@@ -149,15 +157,13 @@ def escreve_ledger(estado):
 
 
 def precos_atuais(pares):
-    """Ultimo fechamento diario disponivel de cada par."""
+    """Preco de abertura de hoje (= fechamento de sexta) de cada par."""
+    hoje = int(time.time()) // 86400
     out = []
     for sym in pares:
-        try:
-            c = B.baixar(sym, "1Dutc", 3000)
-            if c:
-                out.append((sym.replace("USDT", ""), c[-1][4]))
-        except Exception:
-            continue
+        p = U.abertura(sym, hoje)
+        if p:
+            out.append((sym.replace("USDT", ""), p))
     return out
 
 
@@ -199,24 +205,32 @@ def main():
         salva_estado(estado)
         escreve_ledger(estado)
         return
+    for s_ in estado["sabados"]:        # completa funding que ficou pendente
+        if s_.get("funding_pendente"):
+            rp, _, pp = retorno_cesta(PRINCIPAL, s_["dia"])
+            rs, _, ps = retorno_cesta(SECUNDARIA, s_["dia"])
+            if rp is not None and rs is not None and not (pp or ps):
+                s_.update({"principal": rp, "secundaria": rs, "funding_pendente": False})
+                print(f"funding do sabado {s_['data']} completado")
     if any(s["dia"] == alvo for s in estado["sabados"]):
         print(f"sabado {time.strftime('%d/%m/%Y', time.gmtime(alvo*86400))} ja registrado")
+        salva_estado(estado)
         escreve_ledger(estado)
         return
-    rp, detalhe = retorno_cesta(PRINCIPAL, alvo)
-    rs, _ = retorno_cesta(SECUNDARIA, alvo)
-    if rp is None:
-        print("sem dados para o sabado alvo")
+    rp, detalhe, pp = retorno_cesta(PRINCIPAL, alvo)
+    rs, _, ps = retorno_cesta(SECUNDARIA, alvo)
+    if rp is None or rs is None:
+        print("sem dados para o sabado alvo (o arquivo do vision pode ainda nao ter saido)")
         return
     estado["sabados"].append({"dia": alvo,
                               "data": time.strftime("%d/%m/%Y", time.gmtime(alvo * 86400)),
-                              "principal": rp, "secundaria": rs})
+                              "principal": rp, "secundaria": rs, "funding_pendente": pp or ps})
     estado["sabados"].sort(key=lambda s: s["dia"])
     salva_estado(estado)
     escreve_ledger(estado)
     print(f"sabado {time.strftime('%d/%m/%Y', time.gmtime(alvo*86400))}: "
           f"20 majors {100*rp:+.2f}% | 5 maiores {100*rs:+.2f}%")
-    if "--sem-push" not in sys.argv and agora.hour == 0 and agora.weekday() == 6:
+    if "--sem-push" not in sys.argv:
         notifica_resultado(estado["sabados"][-1])
         print("notificacao de resultado enviada")
     for sym, p_sex, p_sab, r, f in sorted(detalhe, key=lambda x: -x[3])[:5]:
