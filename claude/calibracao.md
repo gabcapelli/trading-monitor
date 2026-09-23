@@ -1,4 +1,4 @@
-# Calibracao — registro mecanico de sinais (atualizado 2026-09-23 10:05 BRT)
+# Calibracao — registro mecanico de sinais (atualizado 2026-09-23 11:05 BRT)
 
 > **Nao edite este arquivo** — ele e reescrito a cada execucao a partir da tabela `sinais_mecanicos`. Diferente de `sinais.md`, aqui nao ha nenhuma decisao sua: e TODA confirmacao mecanica detectada, inclusive as descartadas por R:R baixo, com desfecho medido por geometria de preco (OHLC de 1h contra stop/alvo sugeridos).
 >
@@ -11,14 +11,14 @@ Regra de alvo em vigor agora: **proximo** (coluna `Regra` abaixo mostra qual dec
 | Grupo | Sinais | Resolvidos | Acertos | Soma (expectancia) |
 |---|---|---|---|---|
 | Aceitos (R:R >= 2) | 52 | 52 | 10 (19%) | -17.53R (-0.337R/sinal) |
-| Descartados por R:R baixo | 133 | 130 | 82 (63%) | -4.76R (-0.037R/sinal) |
-| TODOS | 185 | 182 | 92 (51%) | -22.30R (-0.123R/sinal) |
+| Descartados por R:R baixo | 133 | 131 | 82 (63%) | -5.76R (-0.044R/sinal) |
+| TODOS | 185 | 183 | 92 (50%) | -23.30R (-0.127R/sinal) |
 
 **MAE dos acertos** (quanto o preco foi CONTRA antes de dar certo) — n=92, mediana 0.38R, maximo 0.98R, 12% acima de 0.8R.
 
 > Le-se assim: apertar `STOP_BUFFER_ATR_MULT` mata os acertos cujo MAE ja esta perto de 1R. Se essa cauda for gorda, nao ha folga pra apertar o stop.
 
-**MFE dos erros** (quanto o preco foi A FAVOR antes de bater stop) — n=90, mediana 0.36R, 24% chegaram a 1R a favor.
+**MFE dos erros** (quanto o preco foi A FAVOR antes de bater stop) — n=91, mediana 0.36R, 25% chegaram a 1R a favor.
 
 > Le-se assim: se muitos erros chegaram perto de 1R antes de virar, o problema esta no ALVO/saida, nao na entrada. Se a mediana for baixa, o problema esta na entrada e mexer no alvo nao resolve.
 
@@ -36,7 +36,7 @@ Regra de alvo em vigor agora: **proximo** (coluna `Regra` abaixo mostra qual dec
 | SOL/USDT | A | compra | nao | proximo | — | — | -1.00 | 1.293 | 0.563 | 1 | 2026-09-21 20:05 |
 | ETH/USDT | A | compra | nao | proximo | — | — | -1.00 | 1.44 | 2.173 | 9 | 2026-09-21 16:05 |
 | LINK/USDT | A | compra | nao | proximo | 1.18 | 1.18 | +1.18 | 0.263 | 1.993 | 2 | 2026-09-21 16:05 |
-| ETH/USDT | A | compra | nao | proximo | — | — | aberto | 0.99 | 5.501 | — | 2026-09-21 09:05 |
+| ETH/USDT | A | compra | nao | proximo | — | — | -1.00 | 1.205 | 5.501 | 50 | 2026-09-21 09:05 |
 | ARB/USDT | B | venda | nao | proximo | 1.79 | 1.79 | -1.00 | 2.032 | 0.221 | 1 | 2026-09-21 09:05 |
 | WLD/USDT | A | compra | nao | proximo | 0.16 | 0.16 | -1.00 | 1.457 | 0.585 | 1 | 2026-09-21 06:05 |
 | SUI/USDT | A | compra | nao | proximo | — | — | aberto | 0.349 | 5.082 | — | 2026-09-21 05:05 |
