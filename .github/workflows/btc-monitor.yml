@@ -23,11 +23,14 @@ jobs:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
         run: python monitor/fetch_and_check.py
 
+      - name: Registrar sabado em papel (idempotente; so grava apos um sabado novo)
+        run: python monitor/sabado_paper.py
+
       - name: Commitar log/status/state atualizados
         run: |
           git config user.name "btc-monitor-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add claude/log-monitoramento-btc-auto.md claude/status-simulacao.md claude/sinais.md claude/calibracao.md monitor/state.json claude/trade_journal.db
+          git add claude/log-monitoramento-btc-auto.md claude/status-simulacao.md claude/sinais.md claude/calibracao.md monitor/state.json claude/trade_journal.db claude/sabado-paper.md monitor/sabado_paper_state.json
           git rm --ignore-unmatch claude/candidatos-pendentes.md
           git diff --cached --quiet || git commit -m "Atualiza monitoramento BTC ($(date -u +'%Y-%m-%d %H:%M UTC'))"
           git push
