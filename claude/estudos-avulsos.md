@@ -707,6 +707,15 @@ Estudo feito no repo separado `token-unlocks` (desenho, resultado e robustez no 
 - **Preços:** vêm do data.binance.vision, com a API como reserva, porque os runners do GitHub ficam nos EUA. Sem a API, o funding fica pendente até o arquivo mensal sair. Os dois caminhos foram validados em simulação.
 - **Critério de leitura, fixado antes de começar:** só reavaliar com **150 trades fechados** (~7–8 meses no ritmo de 2025–2026).
 
+## 26. Perpétuo recém-lançado com stop — teste de papel desde 23/09/2026
+
+Estudo no repo separado `binance-listings`. Vender perpétuo novo **não passou**: em 654 lançamentos (2020–2026, inclusive deslistados), 73% caem em 30 dias (mediana −27% no teste), mas altas de até +3.072% deixam a média negativa, e o vendido ainda paga funding. Uma versão com stop só pode ser testada em lançamentos futuros, porque foi imaginada depois de ver os dados.
+
+**Teste de papel:** `monitor/novos_paper.py` · registro: `claude/novos-paper.md` · workflow horário, com `continue-on-error`.
+- **Regra congelada, com parâmetros redondos e sem otimizar no histórico:** vender na abertura do 2º dia após o lançamento, recompra obrigatória a +50%, saída em 30 dias.
+- **Comparação:** registra junto a versão sem stop e o excesso sobre os 20 majors.
+- **Leitura:** só com **100 trades fechados**. A maioria dos lançamentos de 2026 é de ações e commodities (69 de 73 nos últimos 70 dias), então isso leva ~1.5–2 anos.
+
 ## Leitura conjunta
 
 Mesma direção do achado da auditoria v6 sobre o checklist mecânico dos Setups A/B. Nenhum dos dez setups de vídeo tem edge mecânico demonstrável nesses 20 pares (o 9.1 também não, fora da amostra, nos 80 pares do estudo 6):

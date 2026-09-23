@@ -33,11 +33,18 @@ jobs:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
         run: python monitor/unlock_paper.py
 
+      - name: Registrar perpetuos novos em papel (idempotente; varredura 1x por dia)
+        continue-on-error: true   # falha aqui nunca bloqueia o commit do monitor
+        timeout-minutes: 15
+        env:
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+        run: python monitor/novos_paper.py
+
       - name: Commitar log/status/state atualizados
         run: |
           git config user.name "btc-monitor-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add claude/log-monitoramento-btc-auto.md claude/status-simulacao.md claude/sinais.md claude/calibracao.md monitor/state.json claude/trade_journal.db claude/sabado-paper.md monitor/sabado_paper_state.json claude/unlock-paper.md monitor/unlock_paper_state.json monitor/unlock_paper_protocolos.json
+          git add claude/log-monitoramento-btc-auto.md claude/status-simulacao.md claude/sinais.md claude/calibracao.md monitor/state.json claude/trade_journal.db claude/sabado-paper.md monitor/sabado_paper_state.json claude/unlock-paper.md monitor/unlock_paper_state.json monitor/unlock_paper_protocolos.json claude/novos-paper.md monitor/novos_paper_state.json
           git rm --ignore-unmatch claude/candidatos-pendentes.md
           git diff --cached --quiet || git commit -m "Atualiza monitoramento BTC ($(date -u +'%Y-%m-%d %H:%M UTC'))"
           git push
