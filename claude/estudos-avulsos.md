@@ -546,6 +546,33 @@ O grosso do retorno veio de 2020–2021, quando havia alavancagem comprada em ex
 
 **Veredito: PASSA o critério, e é mecanicamente operável — mas no regime atual rende ~1%/ano**, abaixo de aplicações em stablecoin, e com o custo real podendo zerar isso. A leitura honesta: a estratégia é real e o mecanismo existe, só que o prêmio hoje é pequeno demais para justificar o trabalho e os riscos operacionais. Se o funding voltar a níveis de 2020–2021, ela volta a fazer sentido — e é fácil monitorar isso, porque o próprio sinal (média de funding de 7 dias) diz quando o prêmio está de volta.
 
+## 21. Sazonalidade (hora do dia e dia da semana) — 22/09/2026
+
+Script: `monitor/replay_sazonalidade.py` · log: `claude/sazonalidade.log`
+
+Cripto negocia 24/7, mas Ásia, Europa e EUA têm fluxos diferentes, e fim de semana tem menos liquidez. Se houver padrão, ele roda 100% mecanicamente — é só um relógio.
+
+**Seleção sem garimpo:** a melhor hora e o melhor dia foram escolhidos na **primeira metade** do histórico dos 20 pares; só eles foram testados nos 60 pares da amostra E, que a seleção nunca viu.
+
+| Escolhido no desenvolvimento | Amostra A (todo o histórico) | **Amostra E (decide)** |
+|---|---|---|
+| Comprado às 15h UTC | −10.1%/ano, Sharpe −0.53 | **−12.0%/ano**, Sharpe −0.54 |
+| Comprado no sábado | +19.8%/ano, Sharpe +0.95 | **+16.0%/ano**, IC97.5 [−7.7%, +38.5%], Sharpe +0.60 |
+
+**Veredito: NÃO PASSA** (as duas). O efeito de sábado aparece nas duas amostras com sinal positivo e tamanho parecido, mas o intervalo cruza zero: são só ~350 sábados em 6,6 anos, e cada um é um evento ruidoso. É o mesmo problema de poder estatístico da skew — não há amostra suficiente no tempo.
+
+## 22. Trend following canônico (Carver, estratégia 9) — 22/09/2026
+
+Script: `monitor/replay_carver_trend.py` · log: `claude/carver_trend.log`
+
+Fecha um buraco: os 11 estudos de vídeo testaram tendência com stop e alvo; o estudo 16 testou a versão transversal e a aceleração. Faltava a **forma canônica**: posição contínua e direcional, combinando EWMAC(8,32), (16,64), (32,128) e (64,256), com alvo de risco — a base da indústria de managed futures.
+
+| | Amostra A | **Amostra E (decide)** |
+|---|---|---|
+| Trend canônico | Sharpe +0.20, alfa +5.6%/ano | **Sharpe +0.01**, IC [−0.72, +0.75]; alfa +6.2%/ano, IC [−5.9%, +18.5%] |
+
+**Veredito: NÃO PASSA.** Com isso, a família tendência foi testada em três formas independentes (setup com stop/alvo, transversal e canônica direcional) e as três dão zero em cripto.
+
 ## Leitura conjunta
 
 Mesma direção do achado da auditoria v6 sobre o checklist mecânico dos Setups A/B. Nenhum dos dez setups de vídeo tem edge mecânico demonstrável nesses 20 pares (o 9.1 também não, fora da amostra, nos 80 pares do estudo 6):

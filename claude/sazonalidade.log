@@ -1,0 +1,26 @@
+amostra A: 20 pares com dados horarios
+
+  escolhidos na 1a metade da amostra A:
+    hora 15h UTC, lado comprado
+    sabado, lado comprado
+
+====================================================================================================
+AMOSTRA A (desenvolvimento, historico inteiro)
+====================================================================================================
+  hora 15h: eventos=2571 | retorno -10.1%/ano | IC97.5 [-26.1%, +5.4%]
+    Sharpe -0.53 | IC97.5 [-1.38, +0.29]
+  sabado   : eventos=367 | retorno +19.8%/ano | IC97.5 [+1.8%, +37.9%]
+    Sharpe +0.95 | IC97.5 [+0.09, +1.87]
+
+amostra E: 60 pares com dados horarios
+
+====================================================================================================
+AMOSTRA E -- DECIDE (IC 97.5%, Bonferroni)
+====================================================================================================
+  hora 15h: eventos=2421 | retorno -12.0%/ano | IC97.5 [-31.5%, +6.7%]
+    Sharpe -0.54 | IC97.5 [-1.40, +0.29]
+  sabado   : eventos=346 | retorno +16.0%/ano | IC97.5 [-7.7%, +38.5%]
+    Sharpe +0.60 | IC97.5 [-0.28, +1.52]
+
+==> DECISAO hora do dia: NAO PASSA
+==> DECISAO dia da semana: NAO PASSA
