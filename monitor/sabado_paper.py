@@ -23,6 +23,16 @@ REGRA PRE-REGISTRADA (congelada em 22/09/2026, nao alterar durante o teste)
   entram no resultado.
 - Sem stop, sem alvo, sem discricao.
 
+NOTIFICACOES (push via ntfy, mesmo topico do monitor)
+------------------------------------------------------
+- SEXTA 21:00 no Brasil (00:0x UTC de sabado): avisa que a janela abriu e
+  lista a cesta -- e o momento da entrada.
+- SABADO 21:00 no Brasil (00:0x UTC de domingo): avisa o resultado do sabado
+  que acabou de fechar.
+Como o workflow roda de hora em hora (gatilho do Cloudflare), o script so
+notifica quando a hora UTC do momento e 0 e o dia da semana e o esperado.
+Isso e um REGISTRO EM PAPEL: a notificacao e para acompanhar, nao e ordem.
+
 O QUE ESTE TESTE PRECISA PARA VALER
 ------------------------------------
 O estudo 21 achou +19.8%/ano (20 majors) e +16.0%/ano (60 alts), mas com
@@ -42,6 +52,7 @@ from datetime import datetime, timezone
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 import dados_binance as B
+import fetch_and_check as m
 
 PRINCIPAL = ["BTCUSDT", "ETHUSDT", "SOLUSDT", "XRPUSDT", "DOGEUSDT", "ARBUSDT", "WLDUSDT",
              "SUIUSDT", "UNIUSDT", "LINKUSDT", "BNBUSDT", "TRXUSDT", "ZECUSDT", "HYPEUSDT",
@@ -137,7 +148,46 @@ def escreve_ledger(estado):
         f.write("\n".join(linhas))
 
 
+def precos_atuais(pares):
+    """Ultimo fechamento diario disponivel de cada par."""
+    out = []
+    for sym in pares:
+        try:
+            c = B.baixar(sym, "1Dutc", 3000)
+            if c:
+                out.append((sym.replace("USDT", ""), c[-1][4]))
+        except Exception:
+            continue
+    return out
+
+
+def notifica_abertura():
+    precos = precos_atuais(SECUNDARIA)
+    linhas = ", ".join(f"{s} {p:g}" for s, p in precos)
+    m.send_ntfy(
+        "Janela de sabado ABRIU (papel)",
+        "Entrada da cesta de peso igual agora (fechamento de sexta UTC).\n"
+        f"5 maiores: {linhas}\n"
+        "Saida amanha no mesmo horario. Isto e registro em papel, nao e ordem.",
+    )
+
+
+def notifica_resultado(reg):
+    m.send_ntfy(
+        f"Sabado em papel: {100*reg['principal']:+.2f}%",
+        f"{reg['data']} -- 20 majors {100*reg['principal']:+.2f}% | "
+        f"5 maiores {100*reg['secundaria']:+.2f}%\n"
+        "Registro atualizado em claude/sabado-paper.md.",
+    )
+
+
 def main():
+    agora = datetime.now(timezone.utc)
+    if "--sem-push" not in sys.argv and agora.hour == 0:
+        if agora.weekday() == 5:      # sabado 00:0x UTC = sexta 21h no Brasil
+            notifica_abertura()
+            print("notificacao de abertura enviada")
+
     estado = carrega_estado()
     hoje = int(time.time()) // 86400
     if estado["inicio"] is None:
@@ -166,6 +216,9 @@ def main():
     escreve_ledger(estado)
     print(f"sabado {time.strftime('%d/%m/%Y', time.gmtime(alvo*86400))}: "
           f"20 majors {100*rp:+.2f}% | 5 maiores {100*rs:+.2f}%")
+    if "--sem-push" not in sys.argv and agora.hour == 0 and agora.weekday() == 6:
+        notifica_resultado(estado["sabados"][-1])
+        print("notificacao de resultado enviada")
     for sym, p_sex, p_sab, r, f in sorted(detalhe, key=lambda x: -x[3])[:5]:
         print(f"    {sym:<6} {p_sex:>12.4f} -> {p_sab:>12.4f}  {r:+.2f}% (funding {f:+.3f}%)")
 
