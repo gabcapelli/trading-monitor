@@ -3,3 +3,5 @@ cache_ema_ribbon/
 cache_stoch_vwap/
 cache_binance/
 pdfs/
+monitor/fmz/indice*.json
+claude/fmz_download_1h*.log

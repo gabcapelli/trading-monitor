@@ -1,0 +1,182 @@
+====================================================================================================
+ETAPA 1 -- universo A (20 majors, desenvolvimento)
+====================================================================================================
+  universo A: 20 pares com >= 400 candles diarios
+
+  [00 bandpass (SAR)]  duracao media 23.7 d | 50% compras
+  liquido (custo)                    n=   948 sem= 308 media  +1.116% IC95 [ -0.755,  +3.134]
+  absoluto (custo+funding)           n=   948 sem= 308 media  +1.055% IC95 [ -0.781,  +3.028]
+  excesso mesmo par (descritivo)     n=   948 sem= 308 media  +2.174% IC95 [ -0.010,  +4.507]
+  EXCESSO transversal (decide)       n=   947 sem= 307 media  +1.300% IC95 [ -0.522,  +3.370]
+
+  [01 EMA/HMA200+RSI (piramide)]  duracao media 74.5 d | 100% compras
+  liquido (custo)                    n=   500 sem= 119 media  +6.908% IC95 [ +1.834, +12.849]
+  absoluto (custo+funding)           n=   500 sem= 119 media  +6.274% IC95 [ +1.275, +12.222]
+  excesso mesmo par (descritivo)     n=   500 sem= 119 media  -1.473% IC95 [ -8.044,  +5.279]
+  EXCESSO transversal (decide)       n=   500 sem= 119 media  -2.104% IC95 [ -5.537,  +1.200]
+
+  [02 SMA9x21+RSI (SAR)]  duracao media 19.2 d | 50% compras
+  liquido (custo)                    n=  2119 sem= 318 media  +4.300% IC95 [ +1.094,  +7.763]
+  absoluto (custo+funding)           n=  2119 sem= 318 media  +4.030% IC95 [ +0.917,  +7.385]
+  excesso mesmo par (descritivo)     n=  2119 sem= 318 media  +4.697% IC95 [ +1.701,  +7.957]
+  EXCESSO transversal (decide)       n=  2118 sem= 317 media  +2.081% IC95 [ +0.719,  +3.940]
+
+  [03 chandelier exit (so compra)]  duracao media 29.6 d | 100% compras
+  liquido (custo)                    n=   600 sem= 201 media +30.800% IC95 [ +7.830, +72.485]
+  absoluto (custo+funding)           n=   600 sem= 201 media +29.425% IC95 [ +6.751, +70.710]
+  excesso mesmo par (descritivo)     n=   600 sem= 201 media +22.415% IC95 [ +0.548, +62.027]
+  EXCESSO transversal (decide)       n=   600 sem= 201 media +16.310% IC95 [ -1.225, +50.163]
+
+  [04 vende sempre 7d]  duracao media 5.1 d | 0% compras
+  liquido (custo)                    n=  6760 sem= 358 media  -1.088% IC95 [ -1.762,  -0.410]
+  absoluto (custo+funding)           n=  6760 sem= 358 media  -0.965% IC95 [ -1.631,  -0.295]
+  excesso mesmo par (descritivo)     n=  6760 sem= 358 media  +0.200% IC95 [ -0.495,  +0.899]
+  EXCESSO transversal (decide)       n=  6757 sem= 355 media  +0.087% IC95 [ -0.064,  +0.237]
+
+  [05 Jim's MACD]  duracao media 10.2 d | 50% compras
+  liquido (custo)                    n=  1943 sem= 328 media  +3.407% IC95 [ +1.458,  +5.600]
+  absoluto (custo+funding)           n=  1943 sem= 328 media  +3.094% IC95 [ +1.203,  +5.229]
+  excesso mesmo par (descritivo)     n=  1943 sem= 328 media  +3.448% IC95 [ +1.565,  +5.538]
+  EXCESSO transversal (decide)       n=  1941 sem= 326 media  +1.241% IC95 [ +0.367,  +2.141]
+
+  [06 bandas EMA300]  duracao media 1.3 d | 25% compras
+  liquido (custo)                    n=   463 sem= 169 media  -1.253% IC95 [ -2.041,  -0.463]
+  absoluto (custo+funding)           n=   463 sem= 169 media  -1.188% IC95 [ -1.971,  -0.405]
+  excesso mesmo par (descritivo)     n=   463 sem= 169 media  -0.950% IC95 [ -1.734,  -0.175]
+  EXCESSO transversal (decide)       n=   463 sem= 169 media  +0.102% IC95 [ -0.814,  +1.008]
+
+  [07 maxima 200 / ATR (so compra)]  duracao media 16.0 d | 100% compras
+  liquido (custo)                    n=   176 sem=  82 media +17.120% IC95 [ +5.293, +32.363]
+  absoluto (custo+funding)           n=   176 sem=  82 media +15.626% IC95 [ +3.851, +30.694]
+  excesso mesmo par (descritivo)     n=   176 sem=  82 media +14.132% IC95 [ +2.714, +28.846]
+  EXCESSO transversal (decide)       n=   176 sem=  82 media  +5.548% IC95 [ -4.119, +19.557]
+
+  [08 SMA14x28 (SAR)]  duracao media 26.0 d | 50% compras
+  liquido (custo)                    n=  1561 sem= 297 media  +6.876% IC95 [ +2.296, +11.964]
+  absoluto (custo+funding)           n=  1561 sem= 297 media  +6.539% IC95 [ +2.053, +11.499]
+  excesso mesmo par (descritivo)     n=  1561 sem= 297 media  +7.234% IC95 [ +2.804, +12.062]
+  EXCESSO transversal (decide)       n=  1560 sem= 296 media  +3.027% IC95 [ +0.776,  +5.788]
+
+  [09 CCI +-100 (SAR)]  duracao media 27.3 d | 50% compras
+  liquido (custo)                    n=  1492 sem= 311 media  -4.678% IC95 [ -8.542,  -1.253]
+  absoluto (custo+funding)           n=  1492 sem= 311 media  -4.450% IC95 [ -8.201,  -1.099]
+  excesso mesmo par (descritivo)     n=  1492 sem= 311 media  -4.472% IC95 [ -8.179,  -1.019]
+  EXCESSO transversal (decide)       n=  1492 sem= 311 media  -0.933% IC95 [ -3.055,  +1.072]
+
+  [10 Big 3 SMA20/40/80]  duracao media 16.7 d | 47% compras
+  liquido (custo)                    n=  1565 sem= 307 media  +5.844% IC95 [ +2.484, +10.276]
+  absoluto (custo+funding)           n=  1565 sem= 307 media  +5.369% IC95 [ +2.117,  +9.656]
+  excesso mesmo par (descritivo)     n=  1565 sem= 307 media  +5.853% IC95 [ +2.754,  +9.855]
+  EXCESSO transversal (decide)       n=  1565 sem= 307 media  +0.670% IC95 [ -2.120,  +3.738]
+
+  [11 BB/Fib/MACD/RSI (GPT)]  duracao media 0.9 d | 45% compras
+  liquido (custo)                    n= 15979 sem= 358 media  -0.335% IC95 [ -0.471,  -0.194]
+  absoluto (custo+funding)           n= 15979 sem= 358 media  -0.309% IC95 [ -0.443,  -0.171]
+  excesso mesmo par (descritivo)     n= 15979 sem= 358 media  -0.134% IC95 [ -0.269,  +0.004]
+  EXCESSO transversal (decide)       n= 15972 sem= 355 media  -0.084% IC95 [ -0.141,  -0.027]
+  etapa 1 00 bandpass (SAR)                  n=  948 liq=+1.116% exc=+1.300% -> AVANCA
+  etapa 1 01 EMA/HMA200+RSI (piramide)       n=  500 liq=+6.908% exc=-2.104% -> para
+  etapa 1 02 SMA9x21+RSI (SAR)               n= 2119 liq=+4.300% exc=+2.081% -> AVANCA
+  etapa 1 03 chandelier exit (so compra)     n=  600 liq=+30.800% exc=+16.310% -> AVANCA
+  etapa 1 04 vende sempre 7d                 n= 6760 liq=-1.088% exc=+0.087% -> para
+  etapa 1 05 Jim's MACD                      n= 1943 liq=+3.407% exc=+1.241% -> AVANCA
+  etapa 1 06 bandas EMA300                   n=  463 liq=-1.253% exc=+0.102% -> para
+  etapa 1 07 maxima 200 / ATR (so compra)    n=  176 liq=+17.120% exc=+5.548% -> AVANCA
+  etapa 1 08 SMA14x28 (SAR)                  n= 1561 liq=+6.876% exc=+3.027% -> AVANCA
+  etapa 1 09 CCI +-100 (SAR)                 n= 1492 liq=-4.678% exc=-0.933% -> para
+  etapa 1 10 Big 3 SMA20/40/80               n= 1565 liq=+5.844% exc=+0.670% -> AVANCA
+  etapa 1 11 BB/Fib/MACD/RSI (GPT)           n=15979 liq=-0.335% exc=-0.084% -> para
+
+  avancam: ['00 bandpass (SAR)', '02 SMA9x21+RSI (SAR)', '03 chandelier exit (so compra)', "05 Jim's MACD", '07 maxima 200 / ATR (so compra)', '08 SMA14x28 (SAR)', '10 Big 3 SMA20/40/80'] | K = 11 | confianca da etapa 2 = 99.55%
+
+====================================================================================================
+ETAPA 2 -- universo DE (368 perps da Binance; decide so para as que avancaram)
+====================================================================================================
+  universo DE: 368 pares com >= 400 candles diarios
+
+  [00 bandpass (SAR)]  duracao media 60.9 d | 50% compras
+  liquido (custo)                    n=  1032 sem= 291 media  +0.809% IC99.5 [ -2.391,  +4.314]
+  absoluto (custo+funding)           n=  1032 sem= 291 media  +0.610% IC99.5 [ -2.441,  +4.136]
+  excesso mesmo par (descritivo)     n=  1032 sem= 291 media  +0.490% IC99.5 [ -2.580,  +3.756]
+  EXCESSO transversal (decide)       n=  1032 sem= 291 media  +0.382% IC99.5 [ -1.963,  +2.945]
+
+  [01 EMA/HMA200+RSI (piramide)]  duracao media 59.2 d | 100% compras
+  liquido (custo)                    n=  5415 sem= 235 media  +0.182% IC99.5 [ -3.936,  +5.161]
+  absoluto (custo+funding)           n=  5415 sem= 235 media  +0.558% IC99.5 [ -3.507,  +5.376]
+  excesso mesmo par (descritivo)     n=  5415 sem= 235 media  +4.641% IC99.5 [ +1.029,  +9.024]
+  EXCESSO transversal (decide)       n=  5415 sem= 235 media  -0.882% IC99.5 [ -3.448,  +1.116]
+
+  [02 SMA9x21+RSI (SAR)]  duracao media 19.0 d | 50% compras
+  liquido (custo)                    n= 18812 sem= 336 media  +0.799% IC99.5 [ -1.759,  +3.786]
+  absoluto (custo+funding)           n= 18812 sem= 336 media  +0.632% IC99.5 [ -1.863,  +3.489]
+  excesso mesmo par (descritivo)     n= 18812 sem= 336 media  +0.679% IC99.5 [ -1.765,  +3.544]
+  EXCESSO transversal (decide)       n= 18812 sem= 336 media  +0.090% IC99.5 [ -0.543,  +0.768]
+
+  [03 chandelier exit (so compra)]  duracao media 22.7 d | 100% compras
+  liquido (custo)                    n=  5006 sem= 298 media  +2.658% IC99.5 [ -2.975,  +8.869]
+  absoluto (custo+funding)           n=  5006 sem= 298 media  +2.554% IC99.5 [ -2.837,  +8.482]
+  excesso mesmo par (descritivo)     n=  5006 sem= 298 media  +2.310% IC99.5 [ -3.406,  +8.530]
+  EXCESSO transversal (decide)       n=  5006 sem= 298 media  +0.114% IC99.5 [ -2.020,  +2.484]
+
+  [04 vende sempre 7d]  duracao media 4.9 d | 0% compras
+  liquido (custo)                    n= 61282 sem= 341 media  -0.335% IC99.5 [ -1.347,  +0.722]
+  absoluto (custo+funding)           n= 61282 sem= 341 media  -0.340% IC99.5 [ -1.342,  +0.718]
+  excesso mesmo par (descritivo)     n= 61282 sem= 341 media  -0.128% IC99.5 [ -1.131,  +0.918]
+  EXCESSO transversal (decide)       n= 61282 sem= 341 media  -0.066% IC99.5 [ -0.197,  +0.062]
+
+  [05 Jim's MACD]  duracao media 9.6 d | 41% compras
+  liquido (custo)                    n= 17780 sem= 336 media  +0.535% IC99.5 [ -1.105,  +2.250]
+  absoluto (custo+funding)           n= 17780 sem= 336 media  +0.415% IC99.5 [ -1.199,  +2.097]
+  excesso mesmo par (descritivo)     n= 17780 sem= 336 media  +0.512% IC99.5 [ -1.132,  +2.242]
+  EXCESSO transversal (decide)       n= 17780 sem= 336 media  +0.166% IC99.5 [ -0.285,  +0.679]
+
+  [06 bandas EMA300]  duracao media 1.6 d | 64% compras
+  liquido (custo)                    n=  2614 sem= 233 media  -0.539% IC99.5 [ -1.390,  +0.206]
+  absoluto (custo+funding)           n=  2614 sem= 233 media  -0.476% IC99.5 [ -1.329,  +0.260]
+  excesso mesmo par (descritivo)     n=  2614 sem= 233 media  -0.279% IC99.5 [ -1.118,  +0.453]
+  EXCESSO transversal (decide)       n=  2614 sem= 233 media  -0.252% IC99.5 [ -0.924,  +0.463]
+
+  [07 maxima 200 / ATR (so compra)]  duracao media 11.4 d | 100% compras
+  liquido (custo)                    n=   627 sem= 152 media  +1.250% IC99.5 [ -5.422,  +9.817]
+  absoluto (custo+funding)           n=   627 sem= 152 media  +1.009% IC99.5 [ -5.441,  +9.487]
+  excesso mesmo par (descritivo)     n=   627 sem= 152 media  +0.123% IC99.5 [ -6.531,  +8.411]
+  EXCESSO transversal (decide)       n=   627 sem= 152 media  -0.432% IC99.5 [ -4.795,  +4.595]
+
+  [08 SMA14x28 (SAR)]  duracao media 26.0 d | 50% compras
+  liquido (custo)                    n= 13670 sem= 327 media  +1.415% IC99.5 [ -1.909,  +5.166]
+  absoluto (custo+funding)           n= 13670 sem= 327 media  +1.172% IC99.5 [ -2.101,  +4.694]
+  excesso mesmo par (descritivo)     n= 13670 sem= 327 media  +1.049% IC99.5 [ -2.068,  +4.540]
+  EXCESSO transversal (decide)       n= 13670 sem= 327 media  +0.536% IC99.5 [ -0.446,  +1.636]
+
+  [09 CCI +-100 (SAR)]  duracao media 26.8 d | 50% compras
+  liquido (custo)                    n= 13467 sem= 335 media  -2.040% IC99.5 [ -5.431,  +1.125]
+  absoluto (custo+funding)           n= 13467 sem= 335 media  -1.813% IC99.5 [ -5.124,  +1.219]
+  excesso mesmo par (descritivo)     n= 13467 sem= 335 media  -1.412% IC99.5 [ -4.576,  +1.674]
+  EXCESSO transversal (decide)       n= 13467 sem= 335 media  -0.465% IC99.5 [ -1.410,  +0.457]
+
+  [10 Big 3 SMA20/40/80]  duracao media 16.5 d | 36% compras
+  liquido (custo)                    n= 14001 sem= 328 media  +1.010% IC99.5 [ -0.748,  +2.982]
+  absoluto (custo+funding)           n= 14001 sem= 328 media  +0.775% IC99.5 [ -0.933,  +2.676]
+  excesso mesmo par (descritivo)     n= 14001 sem= 328 media  +0.414% IC99.5 [ -1.182,  +2.249]
+  EXCESSO transversal (decide)       n= 14001 sem= 328 media  -0.309% IC99.5 [ -0.980,  +0.336]
+
+  [11 BB/Fib/MACD/RSI (GPT)]  duracao media 0.8 d | 62% compras
+  liquido (custo)                    n=144428 sem= 341 media  -0.264% IC99.5 [ -0.466,  -0.066]
+  absoluto (custo+funding)           n=144428 sem= 341 media  -0.252% IC99.5 [ -0.458,  -0.054]
+  excesso mesmo par (descritivo)     n=144428 sem= 341 media  -0.071% IC99.5 [ -0.274,  +0.128]
+  EXCESSO transversal (decide)       n=144428 sem= 341 media  -0.051% IC99.5 [ -0.099,  -0.005]
+
+  DECISAO:
+    00 bandpass (SAR)                  NAO PASSA
+    02 SMA9x21+RSI (SAR)               NAO PASSA
+    03 chandelier exit (so compra)     NAO PASSA
+    05 Jim's MACD                      NAO PASSA
+    07 maxima 200 / ATR (so compra)    NAO PASSA
+    08 SMA14x28 (SAR)                  NAO PASSA
+    10 Big 3 SMA20/40/80               NAO PASSA
+
+  [167s]
+
+real	2m46.930s
+user	0m0.000s
+sys	0m0.015s

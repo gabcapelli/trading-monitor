@@ -595,6 +595,118 @@ Fecha um buraco: os 11 estudos de vídeo testaram tendência com stop e alvo; o 
 
 **Veredito: NÃO PASSA.** Com isso, a família tendência foi testada em três formas independentes (setup com stop/alvo, transversal e canônica direcional) e as três dão zero em cripto.
 
+## 23. Acervo FMZ (strategies-for-test) — triagem por amostra sorteada — 23/09/2026
+
+Scripts: `monitor/fmz/` (índice, classificação, sorteio), `monitor/fmz_motor.py` (emulador do broker do Pine) e `monitor/replay_fmz_triagem.py` · log: `claude/fmz_triagem.log`
+
+**O acervo:** 5.807 estratégias da biblioteca da FMZ (repo `strategies-for-test`). 91% são PineScript, e 80% foram republicadas em série pela conta "ChaoZhang" a partir de scripts do TradingView. Pela classificação por nome, ~85% são combinações de indicadores das famílias que os estudos 1–22 já cobriram:
+
+| Família (rótulo primário, pelo nome) | Estratégias |
+|---|---|
+| rompimento de canal / Donchian / breakout | 1.590 |
+| tendência / médias / MACD / Supertrend | 1.415 |
+| oscilador / reversão (RSI, Bollinger, CCI) | 1.158 |
+| sem rótulo / ferramentas / utilitários | 704 |
+| SMC / pivôs / suporte-resistência | 188 |
+| volume / VWAP | 182 |
+| grid / martingale / DCA | 141 |
+| padrões de candle | 119 |
+| market making / HFT / order book | 116 |
+| arbitragem / hedge / base | 88 |
+| sazonal, rompimento de volatilidade, pares, ML | 106 |
+
+**Amostra representativa, sem escolha a dedo:** população de 3.764 scripts (Pine com `strategy()`, sem `request.security`, até 6.000 caracteres, família de indicador). Sorteio com semente 20260923 (`monitor/fmz/fila_sorteio.json`). Foram traduzidas as 12 primeiras traduzíveis, com os **parâmetros padrão de cada script**; uma foi pulada (stop e alvo em *ticks*). No diário, com custo de 0.18%, 0.05% de slippage por ordem stop e o funding real da Binance.
+
+**Critério:** etapa 1 em A (avança com n ≥ 100, líquido > 0 e excesso > 0); etapa 2 em DE (368 perps da Binance = D + E), decide com `abs` e `excesso` IC > 0 a 1 − 0.05/K. K = 7 que avançaram + 4 hipóteses do estudo 24 = **11**, confiança 99.55%.
+
+| Estratégia sorteada | A: líquido | A: excesso | **DE: absoluto** | **DE: excesso** | Veredito |
+|---|---|---|---|---|---|
+| 00 bandpass (SAR) | +1.12% | +1.30% | +0.61% | +0.38% | não passa |
+| 01 EMA/HMA200 + RSI | +6.91% | −2.10% | — | — | parou em A |
+| 02 SMA 9×21 + RSI (SAR) | +4.30% | **+2.08%** | +0.63% | +0.09% | não passa |
+| 03 Chandelier exit | +30.8% | +16.3% | +2.55% | +0.11% | não passa |
+| 04 vende sempre, 7 dias | −1.09% | +0.09% | — | — | parou em A |
+| 05 Jim's MACD | +3.41% | **+1.24%** | +0.42% | +0.17% | não passa |
+| 06 bandas EMA300 | −1.25% | +0.10% | — | — | parou em A |
+| 07 máxima de 200 / ATR | +17.1% | +5.55% | +1.01% | −0.43% | não passa |
+| 08 SMA 14×28 (SAR) | +6.88% | **+3.03%** | +1.17% | +0.54% | não passa |
+| 09 CCI ±100 (SAR) | −4.68% | −0.93% | — | — | parou em A |
+| 10 Big 3 (SMA 20/40/80) | +5.84% | +0.67% | +0.78% | −0.31% | não passa |
+| 11 BB/Fib/MACD/RSI ("GPT") | −0.34% | −0.08% | — | — | parou em A |
+
+(% por trade; em negrito, excesso com IC95 > 0 em A. Todos os IC de DE cruzam zero.)
+
+**Veredito: NÃO PASSA** — nenhuma das 12.
+- **Em A, 7 de 12 pareciam boas**, e três cruzamentos de médias tinham até excesso transversal significativo. Em 368 pares, tudo cai para ±0.5% por trade, indistinguível de zero. É o mesmo padrão de todos os estudos anteriores: o que "funciona" nos 20 majors é a história desses 20 ativos em 2019–2026.
+- **Custo:** a de maior giro (11, "GPT", 0.8 dia por trade) perde com confiança; o custo sozinho a mata.
+- **Leitura para o acervo inteiro:** com 12 sorteadas e nenhuma sobrevivendo, a proporção de estratégias com edge nesse acervo é baixa (IC95 de Clopper-Pearson para 0/12: até 26%). Isso não prova que nenhuma das 3.764 funciona. Diz que achar uma exigiria testar muitas, e cada teste consome a mesma amostra.
+
+### Viés da linha de base de mesmo par — encontrado aqui, afeta o teste de beta dos estudos 6 e 13
+
+Antes de rodar dado real, as 12 traduções rodaram num passeio aleatório sem drift (`monitor/fmz_teste_passeio.py`, 120 séries, 480 passos intra-candle):
+- **O motor está limpo:** o bruto fica em zero nas 12.
+- **A linha de base do estudo 6 não está:** o "excesso sobre entrada aleatória no mesmo par" sai significativo em 5 das 12. Dá +1.7% numa estratégia de contra-tendência e −0.5 a −1.2% nos seguidores de tendência.
+- **Causa:** a linha de base usa a deriva realizada da série inteira, inclusive o futuro do trade, e a direção da estratégia se correlaciona com ela.
+
+**Correção adotada daqui em diante:** linha de base **transversal**, com o mesmo lado e as mesmas datas exatas em até 30 outros pares do universo. No passeio aleatório ela acompanha o bruto e não gera falso positivo. Em dado real, remove a exposição ao mercado no período do trade, que era exatamente a preocupação dos estudos 6 e 13. A de mesmo par fica impressa como descritivo (`excesso_par`).
+
+Nos estudos 6 e 13 o viés não mudaria o veredito: os dois eram NÃO PASSA pelo teste de beta. O 9.1 e o 1-2-3 são seguidores de tendência, e para eles a linha de base antiga é enviesada **contra** a estratégia. O excesso "zero" de lá pode ter sido levemente pessimista. Fica o alerta: essa linha de base não serve para aprovar nada, e sobretudo não serve para aprovar contra-tendência.
+
+## 24. Acervo FMZ — os mecanismos distintos — 23/09/2026
+
+Scripts: `monitor/replay_fmz_mecanismos.py` e `monitor/replay_fmz_base_trimestral.py` · logs: `claude/fmz_mecanismos.log`, `claude/fmz_base_trimestral.log`
+
+Fora da sopa de indicadores, o acervo tem poucos mecanismos testáveis com candles. Market making, HFT e arbitragem entre corretoras (~200 scripts) precisam de livro de ofertas e ficaram de fora. Martingale também: o plano de risco (1% por trade) o proíbe por construção. Quatro hipóteses com poder de decisão, pré-registradas com o estudo 23 e dentro do mesmo K = 11 (confiança 99.55% em DE):
+
+- **M1a Dual Thrust (stop and reverse):** parâmetros do acervo, N=4 e K=0.5, executado no caminho de 1h. Sempre posicionado.
+- **M1b Dual Thrust intradiário:** as mesmas linhas, zerando no fim do dia UTC.
+- **M2 Balanceamento 50/50:** gatilho de 5%, checado de hora em hora, custo de spot 0.15%. Medido contra o 50/50 parado.
+- **M4 Pares:** Bollinger(20, 2) na razão moeda/BTC, saída na média, duas pernas (0.36% de custo).
+
+Validação no passeio aleatório (`monitor/fmz_teste_passeio_mec.py`): pares e Dual Thrust SAR dão bruto zero. O intradiário tinha +0.11% com 20 passos por hora, que cai para +0.04% (não significativo, abaixo do slippage cobrado) com 120 passos. Era discretização do sintético.
+
+**Correção de registro feita em A, antes de rodar DE:** a medida do M2 estava registrada como diferença **aritmética** de retornos diários. Em A ela deu −10.6%/ano, enquanto o balanceado terminava acima do parado em 15 de 20 pares (mediana 4.71× contra 2.75×). A hipótese ("demônio de Shannon") é de ganho **geométrico**, então a medida que decide passou a ser a diferença de **log-retornos**. A aritmética segue no log.
+
+| Hipótese | A (descritivo) | **DE: absoluto** | **DE: excesso** | Veredito |
+|---|---|---|---|---|
+| M1a Dual Thrust SAR (5.1 dias/trade) | +0.31%, excesso +0.31% (IC95 > 0) | −0.11% | **−0.26%**, IC99.5 [−0.48, −0.05] | não passa |
+| M1b Dual Thrust intradiário | −0.14% | −0.27% | **−0.16%**, IC99.5 [−0.24, −0.09] | não passa |
+| M4 pares moeda/BTC | **−3.59%**, IC95 [−6.5, −1.3] | +0.14% | +0.23%, IC99.5 [−0.45, +0.82] | não passa |
+| M2 balanceamento (excesso de log-retorno) | +5.3%/ano, IC95 [−8, +19] | — | +7.0%/ano, IC99.5 [−8.3, +22.6] | não passa |
+
+**Veredito: NÃO PASSA** (os quatro).
+- **Dual Thrust:** o excesso positivo em A se inverte em DE e fica **negativo com confiança** nas duas versões. O rompimento de 0.5× o range de 4 dias entra tarde. O intradiário, com ~150 mil trades, perde até o custo.
+- **Pares:** em A, comprar a moeda que caiu contra o BTC perde com confiança (−3.6%/trade). Em DE fica em zero. É o mesmo "continuação, não reversão" dos estudos 16 e 17.
+- **Balanceamento:** centro positivo nas duas amostras (+5 a +7%/ano de log-retorno), mas com IC de ±15%/ano. Terminou acima do parado em 75% dos majors e só em 55% dos 368 pares, onde a mediana dos dois é de **perda** (0.66× contra 0.58×). Mesmo que o excesso fosse real, é 50% comprado em cripto: ele reduz o arrasto de volatilidade, mas não cria retorno positivo onde o ativo cai.
+
+**Uso das amostras:** D e E foram usados de novo, agora para 11 hipóteses (estudos 23 e 24), com Bonferroni.
+
+### M3 — base de futuros trimestrais (medição, sem teste)
+
+É o 期现对冲 / 跨期对冲 do acervo e a versão com vencimento do cash-and-carry do estudo 20. **A diferença que importa:** no perpétuo o retorno depende do funding *futuro*; no trimestral, a base fica **travada na entrada**. A montagem coin-M funciona assim: compra a moeda, deposita como margem e vende o trimestral inverso no mesmo valor em USD. Fica neutra em dólar sem capital extra e é **praticamente não liquidável**: patrimônio e margem de manutenção escalam juntos com 1/preço, e só a divergência entre marcação e índice mexe nisso. O retorno sobre o capital é F/S − 1 no vencimento.
+
+| Coin-M | Carry realizado 2020–2026 (1º dia do contrato até o vencimento, líquido de 0.30%/ciclo) | Pior trimestre (anualizado) | Base hoje (mediana 30 d, anualizada) |
+|---|---|---|---|
+| **BTC** | **+7.1%/ano** (+50% em 6.0 anos) | −0.7% | 4.2% (trimestre atual), 4.7% (próximo) |
+| **ETH** | **+7.0%/ano** (+49% em 5.9 anos) | −2.4% | 4.5% / 3.4% |
+| XRP | +5.5%/ano | −8.4% | 1.5% / 4.1% |
+| SOL (1.7 ano) | +1.2%/ano | −3.8% | 3.3% / 2.1% |
+| BNB | −1.7%/ano (base negativa 2022–2024) | −11.4% | 8.3% / 5.5% |
+
+Base anualizada mediana do trimestre corrente, BTC: 2020 11.2% · 2021 13.0% · 2022 1.6% · 2023 5.5% · 2024 10.0% · 2025 6.1% · **2026 2.6%**.
+
+**Leitura:** dos três mecanismos sem previsão nenhuma (estudo 20, este e o balanceamento), o trimestral em BTC/ETH é o de melhor histórico. Rendeu ~7%/ano por seis anos, com o pior trimestre em −0.7%, e o prêmio **não secou como o do perpétuo**: em 2025 ainda pagou 6%. Em 2026, porém, a mediana caiu para ~2–3%. Nos últimos 30 dias ele trava ~4.5%/ano bruto. O custo é de ~1.2%/ano rolando a cada trimestre, ou ~0.6% no contrato do semestre seguinte, o que deixa **~3.5–4%/ano líquido**. É mecanicamente operável, sem risco de preço e praticamente sem risco de liquidação na montagem coin-M. Mas o retorno atual é de renda fixa, não de trading, e só se justifica se vencer o que o mesmo capital renderia parado em stablecoin. Riscos não modelados: corretora e custódia, USDT contra USD, e o preço executável contra o fechamento diário.
+
+## 25. Desbloqueio de tokens para insiders — teste de papel desde 23/09/2026
+
+Estudo feito no repo separado `token-unlocks` (desenho, resultado e robustez no README de lá). Vender o perpétuo 7 dias antes de um desbloqueio ≥ 1% da oferta com ≥ 50% para insiders **passou** no teste pré-registrado de 2025–2026: excesso de +2.1% por evento, IC98.75 [+0.8, +3.4], e +2.9% absoluto. Sobreviveu a bootstrap por token, placebo e dose-resposta. A ressalva é de concentração: sem os 3 maiores contribuidores, o IC toca zero.
+
+**Teste de papel:** `monitor/unlock_paper.py` · registro: `claude/unlock-paper.md` · roda no workflow horário (`btc-monitor.yml`), com `continue-on-error`.
+- **Regra congelada:** descrita no docstring. Registra a versão **pura** (só a venda) e a **com hedge** (venda + cesta dos 20 majors), com custo e funding real. **Nenhuma ordem é enviada.**
+- **Calendário:** a DefiLlama é atualizada 1× por dia. Evento que aparece depois da data de entrada é descartado ("conhecido tarde"), para não olhar o futuro.
+- **Preços:** vêm do data.binance.vision, com a API como reserva, porque os runners do GitHub ficam nos EUA. Sem a API, o funding fica pendente até o arquivo mensal sair. Os dois caminhos foram validados em simulação.
+- **Critério de leitura, fixado antes de começar:** só reavaliar com **150 trades fechados** (~7–8 meses no ritmo de 2025–2026).
+
 ## Leitura conjunta
 
 Mesma direção do achado da auditoria v6 sobre o checklist mecânico dos Setups A/B. Nenhum dos dez setups de vídeo tem edge mecânico demonstrável nesses 20 pares (o 9.1 também não, fora da amostra, nos 80 pares do estudo 6):
@@ -604,5 +716,10 @@ Mesma direção do achado da auditoria v6 sobre o checklist mecânico dos Setups
 - **Acerto alto:** as taxas de acerto altas prometidas nos vídeos se reproduzem (1-2-3 não; IFR sim), mas vêm de ganhos pequenos e perdas grandes, e não de edge.
 
 A única regularidade, o 9.1 no diário, vinha sobretudo de beta. Fora da amostra, nem o retorno absoluto se sustenta. Se existir algum timing, ele fica abaixo do que estes dados conseguem detectar (~1% por trade).
+
+O acervo FMZ (estudos 23 e 24, 5.807 estratégias) não mudou o quadro:
+- **Amostra sorteada:** 12 estratégias de indicador, nenhuma sobreviveu. Sete pareciam boas nos 20 majors e todas desabaram nos 368 pares.
+- **Mecanismos distintos:** nenhum dos quatro passou.
+- **O único operável** continua sendo carry sem previsão. O trimestral coin-M em BTC/ETH rendeu ~7%/ano em 2020–2026 e hoje trava ~3.5–4%/ano líquido.
 
 Não reabrir esses testes sem uma regra nova pré-registrada. Variar parâmetro sobre estes mesmos dados até algo ficar positivo invalida o critério.

@@ -1,0 +1,63 @@
+K = 11 (estudo 23) | confianca no universo DE = 99.55%
+
+====================================================================================================
+UNIVERSO A (descritivo)
+====================================================================================================
+  Dual Thrust, universo A: 20 pares
+
+  [M1a SAR]  duracao media 5.14 d | trades 8178
+  liquido (custo)                    n=  8178 sem= 365 media  +0.375% IC95 [ -0.218,  +1.052]
+  absoluto (custo+funding)           n=  8178 sem= 365 media  +0.310% IC95 [ -0.275,  +0.980]
+  EXCESSO transversal (decide)       n=  8158 sem= 356 media  +0.312% IC95 [ +0.057,  +0.604]
+
+  [M1b intradiario]  duracao media 0.44 d | trades 16877
+  liquido (custo)                    n= 16877 sem= 367 media  -0.132% IC95 [ -0.279,  +0.024]
+  absoluto (custo+funding)           n= 16877 sem= 367 media  -0.140% IC95 [ -0.286,  +0.014]
+  EXCESSO transversal (decide)       n= 16279 sem= 357 media  +0.006% IC95 [ -0.067,  +0.085]
+  Pares, universo A: 19 razoes moeda/BTC
+
+  [M4 pares moeda/BTC (Bollinger 20, z=2)]  duracao media 13.46 d | trades 1541
+  liquido (custo)                    n=  1541 sem= 324 media  -3.663% IC95 [ -6.597,  -1.401]
+  absoluto (custo+funding)           n=  1541 sem= 324 media  -3.585% IC95 [ -6.520,  -1.320]
+  EXCESSO transversal (decide)       n=  1541 sem= 324 media  -2.514% IC95 [ -5.055,  -0.798]
+  Balanceamento, universo A: 20 pares; balanceado > parado no fim em 15 (75%); mediana fim balanceado 4.71x, parado 2.75x
+
+  [M2 balanceamento 50/50, 5%]  excesso de LOG-retorno sobre 50/50 parado (decide): +5.26%/ano IC95.00 [-8.02, +19.09]
+  [M2] excesso aritmetico (registro original, descritivo): -10.64%/ano [-24.25, +3.39]
+
+====================================================================================================
+UNIVERSO DE (DECIDE)
+====================================================================================================
+  Dual Thrust, universo DE: 368 pares
+
+  [M1a SAR]  duracao media 5.09 d | trades 75503
+  liquido (custo)                    n= 75503 sem= 348 media  -0.152% IC99.5 [ -0.835,  +0.549]
+  absoluto (custo+funding)           n= 75503 sem= 348 media  -0.111% IC99.5 [ -0.782,  +0.593]
+  EXCESSO transversal (decide)       n= 75383 sem= 347 media  -0.264% IC99.5 [ -0.480,  -0.052]
+
+  [M1b intradiario]  duracao media 0.45 d | trades 154306
+  liquido (custo)                    n=154306 sem= 348 media  -0.283% IC99.5 [ -0.516,  -0.013]
+  absoluto (custo+funding)           n=154306 sem= 348 media  -0.269% IC99.5 [ -0.501,  +0.001]
+  EXCESSO transversal (decide)       n=149809 sem= 347 media  -0.160% IC99.5 [ -0.237,  -0.085]
+  Pares, universo DE: 368 razoes moeda/BTC
+
+  [M4 pares moeda/BTC (Bollinger 20, z=2)]  duracao media 12.39 d | trades 15208
+  liquido (custo)                    n= 15208 sem= 341 media  +0.174% IC99.5 [ -1.083,  +1.277]
+  absoluto (custo+funding)           n= 15208 sem= 341 media  +0.139% IC99.5 [ -1.147,  +1.239]
+  EXCESSO transversal (decide)       n= 15208 sem= 341 media  +0.226% IC99.5 [ -0.447,  +0.822]
+  Balanceamento, universo DE: 368 pares; balanceado > parado no fim em 201 (55%); mediana fim balanceado 0.66x, parado 0.58x
+
+  [M2 balanceamento 50/50, 5%]  excesso de LOG-retorno sobre 50/50 parado (decide): +6.97%/ano IC99.55 [-8.26, +22.59]
+  [M2] excesso aritmetico (registro original, descritivo): +5.15%/ano [-9.55, +19.25]
+
+  DECISAO (universo DE):
+    M1a SAR                  NAO PASSA
+    M1b intradiario          NAO PASSA
+    M4 pares                 NAO PASSA
+    M2 balanceamento         NAO PASSA
+
+  [160s]
+
+real	2m40.311s
+user	0m0.000s
+sys	0m0.015s
