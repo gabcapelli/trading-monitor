@@ -1,4 +1,4 @@
-# Calibracao — registro mecanico de sinais (atualizado 2026-09-24 03:05 BRT)
+# Calibracao — registro mecanico de sinais (atualizado 2026-09-24 04:05 BRT)
 
 > **Nao edite este arquivo** — ele e reescrito a cada execucao a partir da tabela `sinais_mecanicos`. Diferente de `sinais.md`, aqui nao ha nenhuma decisao sua: e TODA confirmacao mecanica detectada, inclusive as descartadas por R:R baixo, com desfecho medido por geometria de preco (OHLC de 1h contra stop/alvo sugeridos).
 >
@@ -10,9 +10,9 @@ Regra de alvo em vigor agora: **proximo** (coluna `Regra` abaixo mostra qual dec
 
 | Grupo | Sinais | Resolvidos | Acertos | Soma (expectancia) |
 |---|---|---|---|---|
-| Aceitos (R:R >= 2) | 54 | 54 | 10 (19%) | -19.53R (-0.362R/sinal) |
+| Aceitos (R:R >= 2) | 55 | 54 | 10 (19%) | -19.53R (-0.362R/sinal) |
 | Descartados por R:R baixo | 137 | 136 | 83 (61%) | -9.68R (-0.071R/sinal) |
-| TODOS | 191 | 190 | 93 (49%) | -29.21R (-0.154R/sinal) |
+| TODOS | 192 | 190 | 93 (49%) | -29.21R (-0.154R/sinal) |
 
 **MAE dos acertos** (quanto o preco foi CONTRA antes de dar certo) — n=93, mediana 0.37R, maximo 0.98R, 12% acima de 0.8R.
 
@@ -26,6 +26,7 @@ Regra de alvo em vigor agora: **proximo** (coluna `Regra` abaixo mostra qual dec
 
 | Par | Setup | Direcao | Aceito | Regra | R:R (recente) | R:R (proximo) | Resultado | MAE | MFE | Candles | Quando |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| WLD/USDT | A | compra | sim | proximo | 9.41 | 3.87 | aberto | — | — | — | 2026-09-24 04:05 |
 | LINK/USDT | B | venda | nao | proximo | 0.43 | 0.23 | -1.00 | 1.427 | 0.703 | 1 | 2026-09-23 23:05 |
 | ETH/USDT | B | venda | sim | proximo | 3.35 | 2.28 | -1.00 | 2.552 | 0.304 | 2 | 2026-09-23 18:05 |
 | SOL/USDT | B | venda | nao | proximo | 1.45 | 1.45 | -1.00 | 1.976 | 0.221 | 2 | 2026-09-23 18:05 |
@@ -50,4 +51,3 @@ Regra de alvo em vigor agora: **proximo** (coluna `Regra` abaixo mostra qual dec
 | SUI/USDT | A | compra | nao | proximo | — | — | aberto | 0.778 | 4.781 | — | 2026-09-21 01:05 |
 | ETH/USDT | A | compra | nao | proximo | 0.56 | 0.12 | +0.12 | 0.198 | 0.582 | 1 | 2026-09-21 00:05 |
 | WLD/USDT | B | venda | nao | proximo | 1.03 | 0.41 | -1.00 | 1.036 | 0.304 | 4 | 2026-09-20 23:05 |
-| DOGE/USDT | B | compra | nao | proximo | 1.70 | 0.11 | +0.11 | 0.934 | 0.687 | 1 | 2026-09-20 22:05 |
