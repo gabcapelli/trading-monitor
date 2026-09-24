@@ -7,7 +7,7 @@
 > venda + compra da cesta dos 20 majors. Custo 0.18% por perna e funding real.
 > **Só reavaliar com 150 trades fechados.** Antes disso é ruído.
 
-_Atualizado em 2026-09-23 (calendário de 2026-09-23)._
+_Atualizado em 2026-09-24 (calendário de 2026-09-24)._
 
 ## Abertos
 
@@ -19,7 +19,6 @@ _Atualizado em 2026-09-23 (calendário de 2026-09-23)._
 
 | Token | Desbloqueio | % da oferta | % insiders | Entrada prevista |
 |---|---|---|---|---|
-| GUN | 2026-10-01 | 7.0% | 77% | 2026-09-24 |
 | 2Z | 2026-10-02 | 47.8% | 94% | 2026-09-25 |
 | EIGEN | 2026-10-02 | 4.3% | 100% | 2026-09-25 |
 | MAV | 2026-10-02 | 3.4% | 100% | 2026-09-25 |
@@ -39,6 +38,8 @@ _Atualizado em 2026-09-23 (calendário de 2026-09-23)._
 | SOLV | 2026-10-19 | 3.4% | 68% | 2026-10-12 |
 | KAITO | 2026-10-20 | 3.7% | 53% | 2026-10-13 |
 | ZRO | 2026-10-21 | 3.6% | 100% | 2026-10-14 |
+| APR | 2026-10-24 | 47.2% | 78% | 2026-10-17 |
+| H | 2026-10-24 | 7.3% | 55% | 2026-10-17 |
 
 _Passa pelos filtros (perpétuo com ≥ 30 dias, mesmo token a ≥ 14 dias) só no dia da entrada._
 
