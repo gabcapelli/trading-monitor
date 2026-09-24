@@ -14,6 +14,7 @@ _Atualizado em 2026-09-24 (calendário de 2026-09-24)._
 | Token | Desbloqueio | % da oferta | Venda em (abertura) | Preço de entrada |
 |---|---|---|---|---|
 | ZORA | 2026-09-30 | 3.0% | 2026-09-23 | 0.009349 |
+| GUN | 2026-10-01 | 7.0% | 2026-09-24 | 0.002929 |
 
 ## Próximas entradas (calendário atual)
 
