@@ -42,11 +42,15 @@ jobs:
           UNLOCK_PAPER_FAPI: ${{ secrets.UNLOCK_PAPER_FAPI }}   # proxy/worker.js; vazio = fapi direta (451 nos EUA)
         run: python monitor/novos_paper.py
 
+      - name: Atualizar painel (README.md; so le os estados gravados acima)
+        continue-on-error: true   # falha aqui nunca bloqueia o commit do monitor
+        run: python monitor/painel.py
+
       - name: Commitar log/status/state atualizados
         run: |
           git config user.name "btc-monitor-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add claude/log-monitoramento-btc-auto.md claude/status-simulacao.md claude/sinais.md claude/calibracao.md monitor/state.json claude/trade_journal.db claude/sabado-paper.md monitor/sabado_paper_state.json claude/unlock-paper.md monitor/unlock_paper_state.json monitor/unlock_paper_protocolos.json claude/novos-paper.md monitor/novos_paper_state.json
+          git add claude/log-monitoramento-btc-auto.md claude/status-simulacao.md claude/sinais.md claude/calibracao.md monitor/state.json claude/trade_journal.db claude/sabado-paper.md monitor/sabado_paper_state.json claude/unlock-paper.md monitor/unlock_paper_state.json monitor/unlock_paper_protocolos.json claude/novos-paper.md monitor/novos_paper_state.json README.md
           git rm --ignore-unmatch claude/candidatos-pendentes.md
           git diff --cached --quiet || git commit -m "Atualiza monitoramento BTC ($(date -u +'%Y-%m-%d %H:%M UTC'))"
           git push

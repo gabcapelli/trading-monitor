@@ -34,6 +34,7 @@ Sistema pessoal de trading de futuros de criptomoedas (perpétuos USDT), centrad
 - `monitor/fetch_and_check.py`: só biblioteca padrão do Python, replica o checklist mecânico (classificação de tendência via pivôs fractais, mapeamento de zona, detecção de confirmação/invalidação).
 - `btc-monitor.yml`: workflow do GitHub Actions, agendamento horário.
 - Notificações push via ntfy.sh.
+- **`README.md` da raiz é um painel gerado** por `monitor/painel.py` a cada execução (resumo de cada estratégia para ler no app do GitHub) — não edite à mão; mude o script. A documentação antiga do monitor foi para `monitor/README.md`.
 - **O script deliberadamente NÃO faz interpretação qualitativa, dimensionamento de risco nem avaliação de estado pessoal** — isso é manual, feito colando atualizações de status numa conversa com o Claude. Essa separação é intencional e importante — não proponha automatizar isso.
 - Problema conhecido e resolvido: o cron interno do GitHub Actions (`schedule`) era pouco confiável em repositórios novos (disparava irregular ou atrasado). Corrigido usando um cron job externo no Cloudflare como gatilho.
 - Candidatos a trade ficam num banco SQLite (`claude/trade_journal.db`); a superfície principal de interação, porém, é o espelho em markdown **`claude/sinais.md`** — Gabriel edita status/resultado de trade direto ali (não no SQLite, que não é prático de editar do celular ou sem editor SQL). O script só deve *anexar* candidatos novos e atualizar campos mecânicos, nunca sobrescrever o que Gabriel editou manualmente.
