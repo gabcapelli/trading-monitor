@@ -31,6 +31,7 @@ jobs:
         timeout-minutes: 15
         env:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+          UNLOCK_PAPER_FAPI: ${{ secrets.UNLOCK_PAPER_FAPI }}   # proxy/worker.js; vazio = fapi direta (451 nos EUA)
         run: python monitor/unlock_paper.py
 
       - name: Registrar perpetuos novos em papel (idempotente; varredura 1x por dia)
@@ -38,6 +39,7 @@ jobs:
         timeout-minutes: 15
         env:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+          UNLOCK_PAPER_FAPI: ${{ secrets.UNLOCK_PAPER_FAPI }}   # proxy/worker.js; vazio = fapi direta (451 nos EUA)
         run: python monitor/novos_paper.py
 
       - name: Commitar log/status/state atualizados

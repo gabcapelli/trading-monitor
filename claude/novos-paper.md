@@ -10,17 +10,16 @@ _Atualizado em 2026-09-25._
 
 ## Abertos
 
-| Token | Lançado | Venda em | Entrada | Stop (+50%) | Saída prevista |
-|---|---|---|---|---|---|
-| OURA | 2026-09-23 | 2026-09-25 | 50.43 | 75.645 | 2026-10-25 |
+_Nenhum._
 
 ## Fechados
 
 _Nenhum ainda._
 
-<details><summary>Descartados (2)</summary>
+<details><summary>Descartados (3)</summary>
 
 - USDBRLUSDT (2026-09-21): nao-cripto (FX)
 - MOONSHOTUSDT (2026-09-22): nao-cripto (PREMARKET)
+- OURAUSDT (2026-09-23): nao-cripto (PREMARKET) (confirmado apos a abertura)
 
 </details>

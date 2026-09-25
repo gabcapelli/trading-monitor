@@ -1,0 +1,10 @@
+name = "binance-fapi-proxy"
+main = "worker.js"
+compatibility_date = "2026-09-01"
+
+# Roda perto da Binance (AWS Toquio), e nao no data center mais proximo de quem
+# chama -- chamado do GitHub Actions, cairia nos EUA e levaria o mesmo 451.
+[placement]
+region = "aws:ap-northeast-1"
+
+# PROXY_TOKEN nao fica aqui: npx wrangler secret put PROXY_TOKEN

@@ -15,7 +15,9 @@ redondos escolhidos por principio, sem otimizar no historico)
 - Evento: perpetuo USDT-M novo na Binance (primeiro candle diario no
   data.binance.vision = dia d0), de ativo cripto (underlyingType COIN na
   exchangeInfo; se a API estiver inacessivel, o tipo fica "?" e o trade e
-  registrado com essa marca), sem stablecoin e sem relistagem (ativo com
+  registrado com essa marca, e o tipo e reconsultado a cada execucao --
+  nao-cripto confirmado depois vira descarte, mesmo ja aberto; adendo de
+  25/09/2026 apos OURA, pre-IPO que passou como "?"), sem stablecoin e sem relistagem (ativo com
   outro ticker 1000X ja existente).
 - VENDE na abertura de d0 + 2 (00:00 UTC).
 - STOP: recompra se a maxima diaria atingir +50% sobre a entrada (no preco
@@ -119,8 +121,27 @@ def novos_eventos(estado, hoje):
                                "status": "descartado" if motivo else "aguardando", "motivo": motivo}
 
 
+def revalida_tipo(estado):
+    """Tipo '?' (exchangeInfo inacessivel na varredura): tenta de novo antes de abrir
+    e enquanto aberto. Nao-cripto confirmado vira descarte, como na varredura."""
+    pend = [t for t in estado["trades"].values() if t["tipo"] == "?" and t["status"] in ("aguardando", "aberto")]
+    if not pend:
+        return
+    tp = tipos()
+    if not tp:
+        return
+    for t in pend:
+        tipo = tp.get(t["par"], "?")
+        t["tipo"] = tipo
+        if tipo not in ("COIN", "?"):
+            quando = " (confirmado apos a abertura)" if t["status"] == "aberto" else ""
+            t.update({"status": "descartado", "motivo": f"nao-cripto ({tipo}){quando}"})
+            print(f"  DESCARTA {t['par']}: {t['motivo']}")
+
+
 def processa(estado, hoje):
     abertos, fechados = [], []
+    revalida_tipo(estado)
     for t in estado["trades"].values():
         if t["status"] == "aguardando" and hoje >= t["entrada"]:
             px = U.abertura(t["par"], t["entrada"])
@@ -216,7 +237,7 @@ def escreve_ledger(estado, hoje):
         L += ["| Token | Lançado | Venda em | Entrada | Stop (+50%) | Saída prevista |", "|---|---|---|---|---|---|"]
         L += [f"| {t['par'].replace('USDT', '')} | {U._data(t['d0'])} | {U._data(t['entrada'])} | {t['px_in']:g} | "
               f"{t['stop_px']:g}{' **acionado**' if t.get('stop_dia') is not None else ''} | "
-              f"{U._data(t['entrada'] + HORIZ)} |" for t in abertos]
+              f"{U._data(t['entrada'] + HORIZ)}{' (tipo não confirmado)' if t['tipo'] == '?' else ''} |" for t in abertos]
     else:
         L.append("_Nenhum._")
     if agu:
@@ -246,7 +267,9 @@ def notifica(abertos, fechados):
     if abertos:
         m.send_ntfy(f"Perpetuo novo: {len(abertos)} venda(s) em papel",
                     "\n".join(f"VENDER {t['par']} a {t['px_in']:g}; stop (recompra) em {t['stop_px']:g}; "
-                              f"saida em {U._data(t['entrada'] + HORIZ)}" for t in abertos)
+                              f"saida em {U._data(t['entrada'] + HORIZ)}"
+                              + (" (TIPO NAO CONFIRMADO: pode ser acao/pre-IPO)" if t["tipo"] == "?" else "")
+                              for t in abertos)
                     + "\nRegistro em papel, nao e ordem.")
     if fechados:
         m.send_ntfy(f"Perpetuo novo: {len(fechados)} trade(s) fechado(s) em papel",

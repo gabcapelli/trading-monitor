@@ -91,7 +91,7 @@ CESTA = ["BTCUSDT", "ETHUSDT", "SOLUSDT", "XRPUSDT", "DOGEUSDT", "ARBUSDT", "WLD
 LLAMA = "https://defillama-datasets.llama.fi"
 VISION = "https://data.binance.vision/data/futures/um"
 S3 = "https://s3-ap-northeast-1.amazonaws.com/data.binance.vision"
-FAPI = os.environ.get("UNLOCK_PAPER_FAPI", "https://fapi.binance.com/fapi/v1")
+FAPI = os.environ.get("UNLOCK_PAPER_FAPI") or "https://fapi.binance.com/fapi/v1"  # proxy: ver proxy/worker.js
 
 
 # ---------------------------------------------------------------------------

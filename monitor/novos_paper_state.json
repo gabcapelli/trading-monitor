@@ -920,12 +920,12 @@
 "d0": 20719,
 "dias_vistos": [],
 "entrada": 20721,
-"motivo": null,
+"motivo": "nao-cripto (PREMARKET) (confirmado apos a abertura)",
 "par": "OURAUSDT",
 "px_in": 50.43,
-"status": "aberto",
+"status": "descartado",
 "stop_px": 75.645,
-"tipo": "?"
+"tipo": "PREMARKET"
 },
 "USDBRLUSDT": {
 "d0": 20717,
