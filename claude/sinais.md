@@ -4,19 +4,19 @@
 
 | ID | Criado em | Par | Setup | Direcao | Preco entrada | Stop sugerido | Alvo sugerido | R:R sugerido | Tend. 4h | Status | Resultado (R) | Conta 30? | Checks manuais |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 64 | 2026-09-24 20:05 | LINK/USDT | B | venda | 13.21 | 13.32 | 12.91 | 2.95 | lateral | candidato | — | sim | correlacao=? ; regime=? ; qualidade=? |
-| 63 | 2026-09-24 04:05 | WLD/USDT | A | compra | 0.41550 | 0.41083 | 0.43360 | 3.87 | alta | candidato | — | sim | correlacao=? ; regime=? ; qualidade=? |
-| 62 | 2026-09-23 18:05 | ETH/USDT | B | venda | 2669.9 | 2680.8 | 2645.0 | 2.28 | lateral | candidato | — | sim | correlacao=? ; regime=? ; qualidade=? |
-| 61 | 2026-09-23 17:05 | WLD/USDT | B | compra | 0.40750 | 0.40182 | 0.43360 | 4.59 | alta | candidato | — | sim | correlacao=? ; regime=? ; qualidade=? |
-| 60 | 2026-09-22 19:05 | SOL/USDT | A | compra | 118.01 | 117.51 | 119.10 | 2.17 | alta | candidato | — | sim | correlacao=? ; regime=? ; qualidade=? |
-| 59 | 2026-09-22 14:05 | BTC/USDT | A | compra | 86375.1 | 85965.7 | 87374.3 | 2.44 | alta | candidato | — | sim | correlacao=? ; regime=? ; qualidade=? |
-| 58 | 2026-09-22 11:05 | ETH/USDT | A | compra | 2758.0 | 2735.7 | 2807.0 | 2.19 | alta | candidato | — | sim | correlacao=? ; regime=? ; qualidade=? |
-| 57 | 2026-09-21 21:05 | ARB/USDT | B | venda | 0.22559 | 0.23094 | 0.21139 | 2.66 | lateral | candidato | — | sim | correlacao=? ; regime=? ; qualidade=? |
-| 56 | 2026-09-19 17:05 | WLD/USDT | A | compra | 0.43440 | 0.42953 | 0.44750 | 2.69 | alta | candidato | — | sim | correlacao=? ; regime=? ; qualidade=? |
-| 55 | 2026-09-18 13:05 | LINK/USDT | B | venda | 12.15 | 12.26 | 11.72 | 3.86 | lateral | candidato | — | sim | correlacao=? ; regime=? ; qualidade=? |
-| 54 | 2026-09-18 04:05 | BTC/USDT | B | compra | 77572.0 | 77346.2 | 78345.0 | 3.42 | alta | candidato | — | sim | correlacao=? ; regime=? ; qualidade=? |
-| 53 | 2026-09-18 02:05 | BTC/USDT | A | compra | 77540.1 | 77147.4 | 78345.0 | 2.05 | alta | candidato | — | sim | correlacao=? ; regime=? ; qualidade=? |
-| 52 | 2026-09-17 17:05 | ARB/USDT | B | venda | 0.17533 | 0.18113 | 0.16204 | 2.29 | lateral | candidato | — | sim | correlacao=? ; regime=? ; qualidade=? |
+| 64 | 2026-09-24 20:05 | LINK/USDT | B | venda | 13.21 | 13.32 | 12.91 | 2.95 | lateral | descartado | — | sim | correlacao=? ; regime=? ; qualidade=? |
+| 63 | 2026-09-24 04:05 | WLD/USDT | A | compra | 0.41550 | 0.41083 | 0.43360 | 3.87 | alta | descartado | — | sim | correlacao=? ; regime=? ; qualidade=? |
+| 62 | 2026-09-23 18:05 | ETH/USDT | B | venda | 2669.9 | 2680.8 | 2645.0 | 2.28 | lateral | descartado | — | sim | correlacao=? ; regime=? ; qualidade=? |
+| 61 | 2026-09-23 17:05 | WLD/USDT | B | compra | 0.40750 | 0.40182 | 0.43360 | 4.59 | alta | descartado | — | sim | correlacao=? ; regime=? ; qualidade=? |
+| 60 | 2026-09-22 19:05 | SOL/USDT | A | compra | 118.01 | 117.51 | 119.10 | 2.17 | alta | descartado | — | sim | correlacao=? ; regime=? ; qualidade=? |
+| 59 | 2026-09-22 14:05 | BTC/USDT | A | compra | 86375.1 | 85965.7 | 87374.3 | 2.44 | alta | descartado | — | sim | correlacao=? ; regime=? ; qualidade=? |
+| 58 | 2026-09-22 11:05 | ETH/USDT | A | compra | 2758.0 | 2735.7 | 2807.0 | 2.19 | alta | descartado | — | sim | correlacao=? ; regime=? ; qualidade=? |
+| 57 | 2026-09-21 21:05 | ARB/USDT | B | venda | 0.22559 | 0.23094 | 0.21139 | 2.66 | lateral | descartado | — | sim | correlacao=? ; regime=? ; qualidade=? |
+| 56 | 2026-09-19 17:05 | WLD/USDT | A | compra | 0.43440 | 0.42953 | 0.44750 | 2.69 | alta | descartado | — | sim | correlacao=? ; regime=? ; qualidade=? |
+| 55 | 2026-09-18 13:05 | LINK/USDT | B | venda | 12.15 | 12.26 | 11.72 | 3.86 | lateral | descartado | — | sim | correlacao=? ; regime=? ; qualidade=? |
+| 54 | 2026-09-18 04:05 | BTC/USDT | B | compra | 77572.0 | 77346.2 | 78345.0 | 3.42 | alta | descartado | — | sim | correlacao=? ; regime=? ; qualidade=? |
+| 53 | 2026-09-18 02:05 | BTC/USDT | A | compra | 77540.1 | 77147.4 | 78345.0 | 2.05 | alta | descartado | — | sim | correlacao=? ; regime=? ; qualidade=? |
+| 52 | 2026-09-17 17:05 | ARB/USDT | B | venda | 0.17533 | 0.18113 | 0.16204 | 2.29 | lateral | descartado | — | sim | correlacao=? ; regime=? ; qualidade=? |
 | 51 | 2026-09-17 03:05 | UNI/USDT | B | venda | 6.7350 | 6.8507 | 6.5010 | 2.02 | lateral | entrado | -1.00 | sim | correlacao=? ; regime=? ; qualidade=? |
 | 50 | 2026-09-17 02:05 | LINK/USDT | B | compra | 11.14 | 11.03 | 11.41 | 2.46 | lateral | entrado | 2.46 | sim | correlacao=? ; regime=? ; qualidade=? |
 | 49 | 2026-09-17 00:05 | LINK/USDT | B | compra | 11.13 | 11.02 | 11.41 | 2.64 | lateral | entrado | 2.64 | sim | correlacao=? ; regime=? ; qualidade=? |

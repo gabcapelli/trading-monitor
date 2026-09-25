@@ -732,3 +732,20 @@ O acervo FMZ (estudos 23 e 24, 5.807 estratégias) não mudou o quadro:
 - **O único operável** continua sendo carry sem previsão. O trimestral coin-M em BTC/ETH rendeu ~7%/ano em 2020–2026 e hoje trava ~3.5–4%/ano líquido.
 
 Não reabrir esses testes sem uma regra nova pré-registrada. Variar parâmetro sobre estes mesmos dados até algo ficar positivo invalida o critério.
+
+## Setups A/B — encerrado em 25/09/2026
+
+Não é setup de terceiro, mas o veredito fica registrado aqui junto dos outros.
+
+| Fonte | n | Média | IC 95% |
+|---|---|---|---|
+| Diário (meta dos 30, `conta_para_validacao = 1`) | 34 | −0.13R | [−0.62, +0.44] |
+| Replay de 300 dias, MIN_RR = 2.0 (auditoria v6) | 534 | −0.15R | [−0.28, −0.00] |
+
+**Veredito: NÃO PASSA.**
+- O diário ao vivo reproduz o replay. O IC do diário é largo e cruza zero: 30 trades nunca teriam poder para mostrar edge (±0.5R de largura). O que decide é o replay, com o IC inteiramente negativo.
+- O n efetivo do diário é menor que 34: há lotes disparados juntos (BTC/ETH/XRP em 07/09, BTC+ETH e SOL+LINK em 15/09, BTC+LINK em 16/09).
+- Só 3 dos 34 são Setup A. Não há leitura separada dele.
+- O filtro humano (checks de correlação, regime e qualidade) nunca foi preenchido nos 34 trades, então não foi testado. O Gabriel decidiu não testá-lo: o objetivo do projeto é uma regra 100% mecânica.
+
+**O que muda no código:** `SETUP_AB_ENCERRADO = True` em `fetch_and_check.py`. Toda confirmação continua indo para `sinais_mecanicos`, com o desfecho mecânico medido como antes (calibração). A que passa no R:R deixa de virar candidato no diário e não gera push. Os 13 candidatos pendentes (17/09 a 24/09) foram marcados como descartados em `sinais.md`.

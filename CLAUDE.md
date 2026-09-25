@@ -16,6 +16,8 @@ Sistema pessoal de trading de futuros de criptomoedas (perpétuos USDT), centrad
 
 ## Os dois (em breve três) setups
 
+> **Setups A/B ENCERRADOS em 25/09/2026 — não passaram.** A meta dos 30 fechou em 34 trades a −0.13R/trade (IC 95% [−0.62, +0.44]), na mesma direção do replay de 300 dias (n=534, IC inteiramente negativo). O filtro humano não foi testado, e o Gabriel decidiu não testar: **o objetivo do projeto é uma regra 100% mecânica.** `SETUP_AB_ENCERRADO = True` em `fetch_and_check.py`: as confirmações só alimentam `sinais_mecanicos` (calibração), sem candidato no diário nem push. Não reative nem recalibre os setups para "tentar de novo". O que passou até agora vem de mecanismo estrutural (evento/fluxo: desbloqueio de tokens, carry), não de padrão gráfico. Veja `claude/estudos-avulsos.md`, seção "Setups A/B".
+
 - **Setup A — Rompimento + Retest**: continuação de tendência. Contexto no 4h, rompimento de estrutura no 1h a favor da tendência, entrada no retest com confirmação (rejeição ou higher low/lower high).
 - **Setup B — Reversão em Zona**: reversão em order block/zona de oferta-demanda no 4h, após varredura de liquidez + rejeição no 1h.
 - Regras comuns: R:R mínimo 1:2, zona expira após 8 candles de 1h sem toque ou 3 toques sem confirmação válida.

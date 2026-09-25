@@ -566,6 +566,14 @@ COOLDOWN_LEVEL_TOL_ATR_MULT = 0.25  # era ZONE_ATR_MULT
 # inseridos no diario nem notificados (ver CHANGELOG v3, item 2).
 MIN_RR = 2.0
 
+# SETUP A/B ENCERRADO (25/09/2026): a meta dos 30 fechou em 34 trades a
+# -0.13R/trade, na mesma direcao do replay de 300 dias (v6: n=534, IC 95%
+# inteiramente negativo) -- ver estudos-avulsos.md, "Setups A/B". Com True, a
+# confirmacao que passa no R:R vai SO para sinais_mecanicos (calibracao, com
+# desfecho mecanico medido como antes): nao vira candidato no diario e nao
+# gera push. Zonas, cooldown, log e status seguem iguais.
+SETUP_AB_ENCERRADO = True
+
 PIVOT_WINDOW = 3             # janela esquerda/direita para pivo fractal confirmado
 ATR_PERIOD = 14
 
@@ -977,7 +985,7 @@ def ensure_trade_db():
             rr_proximo REAL,
             alvo_recente REAL,           -- sempre calculado, regra "pivo oposto mais RECENTE"
             rr_recente REAL,
-            aceito INTEGER NOT NULL,     -- 1 = virou linha em `trades`; 0 = descartado por R:R
+            aceito INTEGER NOT NULL,     -- 1 = passou no R:R (virava linha em `trades` ate o encerramento do A/B em 25/09/2026); 0 = descartado por R:R
             motivo_descarte TEXT,
             candles_ate_confirmar INTEGER,
             toques_ate_confirmar INTEGER,
@@ -1957,6 +1965,18 @@ def process_single_pair(inst_id, pair_state, candles_1h, candles_4h, trend, atr_
                                      else f"rr_{rr_sug:.2f}_abaixo_de_{MIN_RR:.1f}"),
                     confirm_ts=last_ts,
                 )
+                _set_cooldown(zone)
+                pair_state["zone"] = None
+            elif SETUP_AB_ENCERRADO:
+                new_status = f"confirmado_calibracao_setup_{zone['setup']}"
+                registrar_sinal_mecanico(
+                    inst_id, zone, trend, atr_1h, sug, aceito=True, confirm_ts=last_ts,
+                )
+                evento = {
+                    "tipo": "info",
+                    "titulo": f"{par_lbl} -- Setup {zone['setup']} confirmaria (so calibracao)",
+                    "mensagem": f"R:R {fmt_ratio(rr_sug)}. Setup A/B encerrado em 25/09/2026: sem diario, sem push.",
+                }
                 _set_cooldown(zone)
                 pair_state["zone"] = None
             else:

@@ -15,6 +15,7 @@ from datetime import datetime, timedelta, timezone
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
+import fetch_and_check as M
 import unlock_paper as U
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -75,20 +76,22 @@ def main():
               for i, dt, par, st, dr, rr in recentes]
         L.append(f"- → marcar status e checks em [sinais.md](claude/sinais.md)")
     else:
-        L.append("_Nada nas últimas 24h._")
+        L.append("_Nada pendente._")
     antigos = len(cand) - len(recentes)
     if antigos:
         L += ["", f"<sub>{antigos} candidato(s) mais antigo(s) seguem sem decisão em sinais.md.</sub>"]
 
     L += ["", "## Estratégias", "",
           "| Estratégia | Abertos | Fechados | Média |", "|---|---|---|---|",
-          f"| [Setup A/B](claude/sinais.md) | {ab_d}/2 | {len(fech)} (meta 30) | "
-          f"{'—' if m_d is None else f'{m_d:+.2f}R'} |",
           f"| [Desbloqueio](claude/unlock-paper.md) | {len(un_ab)} | {len(un_fe)}/150 | "
           f"{'—' if m_un is None else _pct(m_un)} |",
           f"| [Perpétuo novo](claude/novos-paper.md) | {len(nv_ab)} | {len(nv_fe)}/100 | "
           f"{'—' if m_nv is None else _pct(m_nv)} |",
           f"| [Sábado](claude/sabado-paper.md) | — | {len(sab)}/104 | {'—' if m_sb is None else _pct(m_sb)} |",
+          (f"| [Setup A/B](claude/estudos-avulsos.md#setups-ab--encerrado-em-25092026) · encerrado | — | {len(fech)} | "
+           f"{'—' if m_d is None else f'{m_d:+.2f}R'} |" if M.SETUP_AB_ENCERRADO else
+           f"| [Setup A/B](claude/sinais.md) | {ab_d}/2 | {len(fech)} (meta 30) | "
+           f"{'—' if m_d is None else f'{m_d:+.2f}R'} |"),
           "",
           "<sub>Média: Setup A/B em R por trade; desbloqueio com hedge; perpétuo novo com stop; "
           "sábado por fim de semana. Fechados = amostra atual / amostra mínima para reavaliar.</sub>"]

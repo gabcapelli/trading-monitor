@@ -1,6 +1,6 @@
 # Painel de estratégias
 
-_Atualizado em 25/09 19:05 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
+_Atualizado em 25/09 19:30 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
 
 ## Precisa de você
 
@@ -13,10 +13,10 @@ _Atualizado em 25/09 19:05 (Brasília), a cada hora. Tudo em papel: nenhuma orde
 
 | Estratégia | Abertos | Fechados | Média |
 |---|---|---|---|
-| [Setup A/B](claude/sinais.md) | 0/2 | 34 (meta 30) | -0.13R |
 | [Desbloqueio](claude/unlock-paper.md) | 6 | 0/150 | — |
 | [Perpétuo novo](claude/novos-paper.md) | 0 | 0/100 | — |
 | [Sábado](claude/sabado-paper.md) | — | 0/104 | — |
+| [Setup A/B](claude/estudos-avulsos.md#setups-ab--encerrado-em-25092026) · encerrado | — | 34 | -0.13R |
 
 <sub>Média: Setup A/B em R por trade; desbloqueio com hedge; perpétuo novo com stop; sábado por fim de semana. Fechados = amostra atual / amostra mínima para reavaliar.</sub>
 
