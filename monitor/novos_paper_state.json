@@ -577,6 +577,7 @@
 "ORCLUSDT": 20588,
 "ORDERUSDT": 20357,
 "ORDIUSDT": 19668,
+"OURAUSDT": 20719,
 "OUSDT": 20628,
 "OXTUSDT": 19580,
 "PANWUSDT": 20655,
@@ -893,6 +894,14 @@
 "status": "descartado",
 "tipo": "PREMARKET"
 },
+"OURAUSDT": {
+"d0": 20719,
+"entrada": 20721,
+"motivo": null,
+"par": "OURAUSDT",
+"status": "aguardando",
+"tipo": "?"
+},
 "USDBRLUSDT": {
 "d0": 20717,
 "entrada": 20719,
@@ -902,5 +911,5 @@
 "tipo": "FX"
 }
 },
-"ultimo_scan": 20720
+"ultimo_scan": 20721
 }

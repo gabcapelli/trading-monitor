@@ -7,7 +7,7 @@
 > venda + compra da cesta dos 20 majors. Custo 0.18% por perna e funding real.
 > **Só reavaliar com 150 trades fechados.** Antes disso é ruído.
 
-_Atualizado em 2026-09-24 (calendário de 2026-09-24)._
+_Atualizado em 2026-09-25 (calendário de 2026-09-25)._
 
 ## Abertos
 
@@ -20,10 +20,6 @@ _Atualizado em 2026-09-24 (calendário de 2026-09-24)._
 
 | Token | Desbloqueio | % da oferta | % insiders | Entrada prevista |
 |---|---|---|---|---|
-| 2Z | 2026-10-02 | 47.8% | 94% | 2026-09-25 |
-| EIGEN | 2026-10-02 | 4.3% | 100% | 2026-09-25 |
-| MAV | 2026-10-02 | 3.4% | 100% | 2026-09-25 |
-| ZETA | 2026-10-02 | 2.8% | 51% | 2026-09-25 |
 | STO | 2026-10-03 | 4.9% | 61% | 2026-09-26 |
 | MOVE | 2026-10-10 | 3.7% | 70% | 2026-10-03 |
 | CARV | 2026-10-11 | 6.1% | 88% | 2026-10-04 |

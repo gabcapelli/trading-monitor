@@ -6,11 +6,15 @@
 > em paralelo a venda **sem stop** (a regra do estudo, que não passou). Custo 0.18% e funding real.
 > **Só reavaliar com 100 trades fechados.** Antes disso é ruído.
 
-_Atualizado em 2026-09-24._
+_Atualizado em 2026-09-25._
 
 ## Abertos
 
 _Nenhum._
+
+## Aguardando a entrada
+
+- OURA: lançado 2026-09-23, venda em 2026-09-25 (tipo não confirmado)
 
 ## Fechados
 
