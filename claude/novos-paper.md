@@ -10,11 +10,9 @@ _Atualizado em 2026-09-25._
 
 ## Abertos
 
-_Nenhum._
-
-## Aguardando a entrada
-
-- OURA: lançado 2026-09-23, venda em 2026-09-25 (tipo não confirmado)
+| Token | Lançado | Venda em | Entrada | Stop (+50%) | Saída prevista |
+|---|---|---|---|---|---|
+| OURA | 2026-09-23 | 2026-09-25 | 50.43 | 75.645 | 2026-10-25 |
 
 ## Fechados
 

@@ -895,11 +895,36 @@
 "tipo": "PREMARKET"
 },
 "OURAUSDT": {
+"cesta_in": {
+"ADAUSDT": 0.2476,
+"ARBUSDT": 0.21636,
+"AVAXUSDT": 10.201,
+"BCHUSDT": 338.71,
+"BNBUSDT": 777.14,
+"BTCUSDT": 84370.0,
+"DOGEUSDT": 0.09573,
+"ETHUSDT": 2686.65,
+"HYPEUSDT": 92.063,
+"LINKUSDT": 13.215,
+"LTCUSDT": 71.92,
+"NEARUSDT": 4.59,
+"SOLUSDT": 116.99,
+"SUIUSDT": 1.0137,
+"TRXUSDT": 0.34005,
+"UNIUSDT": 9.145,
+"WLDUSDT": 0.4398,
+"XLMUSDT": 0.21773,
+"XRPUSDT": 1.534,
+"ZECUSDT": 1545.73
+},
 "d0": 20719,
+"dias_vistos": [],
 "entrada": 20721,
 "motivo": null,
 "par": "OURAUSDT",
-"status": "aguardando",
+"px_in": 50.43,
+"status": "aberto",
+"stop_px": 75.645,
 "tipo": "?"
 },
 "USDBRLUSDT": {
