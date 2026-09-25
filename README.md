@@ -1,13 +1,10 @@
 # Painel de estratégias
 
-_Atualizado em 25/09 19:30 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
+_Atualizado em 25/09 20:05 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
 
 ## Precisa de você
 
-- **#64** LINK Setup B, venda, R:R 2.95 (24/09 20:05)
-- → marcar status e checks em [sinais.md](claude/sinais.md)
-
-<sub>12 candidato(s) mais antigo(s) seguem sem decisão em sinais.md.</sub>
+_Nada pendente._
 
 ## Estratégias
 
