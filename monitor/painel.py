@@ -61,7 +61,9 @@ def main():
     nv = _json("novos_paper_state.json").get("trades", {}).values()
     nv_ab = [t for t in nv if t["status"] == "aberto"]
     nv_fe = [t for t in nv if t["status"] == "fechado"]
-    sab = _json("sabado_paper_state.json").get("sabados", [])
+    sb_est = _json("sabado_paper_state.json")
+    sab = sb_est.get("sabados", [])
+    janela = sb_est.get("janela")      # cesta de sabado aberta (ainda nao registrada)
 
     media = lambda xs: sum(xs) / len(xs) if xs else None
     m_d, m_un, m_nv, m_sb = (media(fech), media([t["hedge"] for t in un_fe]),
@@ -87,7 +89,7 @@ def main():
           f"{'—' if m_un is None else _pct(m_un)} |",
           f"| [Perpétuo novo](claude/novos-paper.md) | {len(nv_ab)} | {len(nv_fe)}/100 | "
           f"{'—' if m_nv is None else _pct(m_nv)} |",
-          f"| [Sábado](claude/sabado-paper.md) | — | {len(sab)}/104 | {'—' if m_sb is None else _pct(m_sb)} |",
+          f"| [Sábado](claude/sabado-paper.md) | {1 if janela else 0} | {len(sab)}/104 | {'—' if m_sb is None else _pct(m_sb)} |",
           (f"| [Setup A/B](claude/estudos-avulsos.md#setups-ab--encerrado-em-25092026) · encerrado | — | {len(fech)} | "
            f"{'—' if m_d is None else f'{m_d:+.2f}R'} |" if M.SETUP_AB_ENCERRADO else
            f"| [Setup A/B](claude/sinais.md) | {ab_d}/2 | {len(fech)} (meta 30) | "
@@ -107,6 +109,11 @@ def main():
     if fut:
         prox.append((fut[0][0], f"Desbloqueio: venda prevista de {', '.join(p for d, p in fut if d == fut[0][0])}"))
     prox += [(t["entrada"] + 30, f"Perpétuo novo: saída de {t['par'][:-4]} (stop {t['stop_px']:g})") for t in nv_ab]
+    if janela:
+        prox.append((janela["dia"], "Sábado: saída da cesta (21h) e resultado"))
+    else:              # proxima entrada: fechamento de sexta = 00:00 UTC de sabado
+        sab_prox = hoje + (5 - datetime(1970, 1, 1).weekday() - hoje) % 7   # 5 = sabado
+        prox.append((sab_prox - 1, "Sábado: entrada da cesta (21h)"))
     prox = [f"- {_data(d)} · {txt}" for d, txt in sorted(prox)[:4]]
     if prox:
         L += ["", "## Próximos eventos", ""] + prox

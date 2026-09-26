@@ -26,6 +26,7 @@ jobs:
       - name: Registrar o sabado (sem dependencias externas)
         env:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+          UNLOCK_PAPER_FAPI: ${{ secrets.UNLOCK_PAPER_FAPI }}   # precos via unlock_paper.py (proxy/worker.js)
         run: python monitor/sabado_paper.py
 
       - name: Commitar o registro atualizado

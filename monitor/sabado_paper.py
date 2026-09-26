@@ -119,6 +119,22 @@ def salva_estado(e):
         json.dump(e, f, indent=1)
 
 
+def atualiza_janela(estado, hoje):
+    """Guarda os precos de entrada da janela aberta (sabado UTC em curso), para
+    o ledger e o painel mostrarem o trade aberto. So informativo: o registro
+    oficial continua sendo retorno_cesta(), calculado depois do sabado."""
+    if time.gmtime(hoje * 86400).tm_wday != 5 or hoje < estado["inicio"]:
+        return
+    j = estado.get("janela")
+    if not j or j["dia"] != hoje:
+        j = estado["janela"] = {"dia": hoje, "precos": {}}
+    for sym in PRINCIPAL:
+        if sym not in j["precos"]:
+            p = U.abertura(sym, hoje)
+            if p:
+                j["precos"][sym] = p
+
+
 def escreve_ledger(estado):
     linhas = ["# Registro em papel — efeito de sábado",
               "",
@@ -128,6 +144,24 @@ def escreve_ledger(estado):
               "> fechamento de sábado. Custo de 0.06% e funding já descontados.",
               "> **Só reavaliar com 104 sábados novos (~2 anos).** Antes disso é ruído.",
               ""]
+    j = estado.get("janela")
+    if j:
+        dia = j["dia"]
+        fim = time.strftime("%d/%m", time.gmtime((dia + 1) * 86400))
+        hoje = int(time.time()) // 86400
+        situacao = (f"saída no fechamento de sábado (21h de {time.strftime('%d/%m', time.gmtime(dia * 86400))} "
+                    "em Brasília)" if hoje <= dia else
+                    f"sábado já fechou; resultado entra quando os preços de {fim} saírem")
+        faltam = [s_[:-4] for s_ in PRINCIPAL if s_ not in j["precos"]]
+        linhas += ["## Aberto agora", "",
+                   f"Cesta comprada no fechamento de sexta "
+                   f"({time.strftime('%d/%m', time.gmtime((dia - 1) * 86400))}, 21h em Brasília); {situacao}.",
+                   "", "| Par | Entrada |", "|---|---|"]
+        linhas += [f"| {sym[:-4]}{' ★' if sym in SECUNDARIA else ''} | {j['precos'][sym]:g} |"
+                   for sym in PRINCIPAL if sym in j["precos"]]
+        linhas += ["", "<sub>★ = cesta secundária (5 maiores). Abertura diária da Binance (UTC)."
+                   + (f" Ainda sem preço: {', '.join(faltam)}." if faltam else "") + "</sub>", "",
+                   "## Registrados", ""]
     sab = estado["sabados"]
     if sab:
         acum_p = acum_s = 0.0
@@ -200,6 +234,7 @@ def main():
     if estado["inicio"] is None:
         estado["inicio"] = hoje
         print(f"iniciando registro em {time.strftime('%d/%m/%Y', time.gmtime(hoje*86400))}")
+    atualiza_janela(estado, hoje)
     alvo = ultimo_sabado_fechado()
     if alvo < estado["inicio"]:
         print("ainda nao houve sabado desde o inicio do registro")
@@ -222,11 +257,15 @@ def main():
     rs, _, ps = retorno_cesta(SECUNDARIA, alvo)
     if rp is None or rs is None:
         print("sem dados para o sabado alvo (o arquivo do vision pode ainda nao ter saido)")
+        salva_estado(estado)
+        escreve_ledger(estado)
         return
     estado["sabados"].append({"dia": alvo,
                               "data": time.strftime("%d/%m/%Y", time.gmtime(alvo * 86400)),
                               "principal": rp, "secundaria": rs, "funding_pendente": pp or ps})
     estado["sabados"].sort(key=lambda s: s["dia"])
+    if estado.get("janela", {}).get("dia") == alvo:
+        del estado["janela"]
     salva_estado(estado)
     escreve_ledger(estado)
     print(f"sabado {time.strftime('%d/%m/%Y', time.gmtime(alvo*86400))}: "
