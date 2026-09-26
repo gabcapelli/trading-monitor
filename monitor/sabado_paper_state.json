@@ -3,6 +3,27 @@
  "sabados": [],
  "janela": {
   "dia": 20722,
-  "precos": {}
+  "precos": {
+   "BTCUSDT": 84056.0,
+   "ETHUSDT": 2690.56,
+   "SOLUSDT": 122.1,
+   "XRPUSDT": 1.5677,
+   "DOGEUSDT": 0.09893,
+   "ARBUSDT": 0.22656,
+   "WLDUSDT": 0.4952,
+   "SUIUSDT": 1.1943,
+   "UNIUSDT": 9.628,
+   "LINKUSDT": 13.924,
+   "BNBUSDT": 777.53,
+   "TRXUSDT": 0.33803,
+   "ZECUSDT": 1555.2,
+   "HYPEUSDT": 92.368,
+   "ADAUSDT": 0.2586,
+   "XLMUSDT": 0.22032,
+   "NEARUSDT": 4.948,
+   "AVAXUSDT": 10.647,
+   "LTCUSDT": 72.54,
+   "BCHUSDT": 343.08
+  }
  }
 }
