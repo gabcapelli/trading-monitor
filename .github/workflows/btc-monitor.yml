@@ -24,6 +24,8 @@ jobs:
         run: python monitor/fetch_and_check.py
 
       - name: Registrar sabado em papel (idempotente; so grava apos um sabado novo)
+        env:
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
         run: python monitor/sabado_paper.py
 
       - name: Registrar desbloqueios em papel (idempotente; calendario 1x por dia)

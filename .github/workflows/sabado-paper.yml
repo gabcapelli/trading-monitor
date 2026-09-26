@@ -24,6 +24,8 @@ jobs:
           python-version: "3.12"
 
       - name: Registrar o sabado (sem dependencias externas)
+        env:
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
         run: python monitor/sabado_paper.py
 
       - name: Commitar o registro atualizado

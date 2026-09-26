@@ -192,7 +192,8 @@ def main():
     if "--sem-push" not in sys.argv and agora.hour == 0:
         if agora.weekday() == 5:      # sabado 00:0x UTC = sexta 21h no Brasil
             notifica_abertura()
-            print("notificacao de abertura enviada")
+            if m.NTFY_TOPIC:
+                print("notificacao de abertura enviada")
 
     estado = carrega_estado()
     hoje = int(time.time()) // 86400
@@ -232,7 +233,8 @@ def main():
           f"20 majors {100*rp:+.2f}% | 5 maiores {100*rs:+.2f}%")
     if "--sem-push" not in sys.argv:
         notifica_resultado(estado["sabados"][-1])
-        print("notificacao de resultado enviada")
+        if m.NTFY_TOPIC:
+            print("notificacao de resultado enviada")
     for sym, p_sex, p_sab, r, f in sorted(detalhe, key=lambda x: -x[3])[:5]:
         print(f"    {sym:<6} {p_sex:>12.4f} -> {p_sab:>12.4f}  {r:+.2f}% (funding {f:+.3f}%)")
 
