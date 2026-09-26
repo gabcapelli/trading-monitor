@@ -7,7 +7,7 @@
 > venda + compra da cesta dos 20 majors. Custo 0.18% por perna e funding real.
 > **Só reavaliar com 150 trades fechados.** Antes disso é ruído.
 
-_Atualizado em 2026-09-25 (calendário de 2026-09-25)._
+_Atualizado em 2026-09-26 (calendário de 2026-09-26)._
 
 ## Abertos
 
@@ -24,7 +24,6 @@ _Atualizado em 2026-09-25 (calendário de 2026-09-25)._
 
 | Token | Desbloqueio | % da oferta | % insiders | Entrada prevista |
 |---|---|---|---|---|
-| STO | 2026-10-03 | 4.9% | 61% | 2026-09-26 |
 | MOVE | 2026-10-10 | 3.7% | 70% | 2026-10-03 |
 | CARV | 2026-10-11 | 6.1% | 88% | 2026-10-04 |
 | APT | 2026-10-12 | 1.3% | 60% | 2026-10-05 |

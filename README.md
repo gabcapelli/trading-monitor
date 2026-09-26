@@ -1,6 +1,6 @@
 # Painel de estratégias
 
-_Atualizado em 25/09 20:05 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
+_Atualizado em 25/09 21:05 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
 
 ## Precisa de você
 
@@ -19,10 +19,10 @@ _Nada pendente._
 
 ## Próximos eventos
 
-- 26/09 · Desbloqueio: venda prevista de STO
 - 30/09 · Desbloqueio: recompra de ZORA
 - 01/10 · Desbloqueio: recompra de GUN
 - 02/10 · Desbloqueio: recompra de 2Z, EIGEN, MAV, ZETA
+- 03/10 · Desbloqueio: venda prevista de MOVE
 
 ## Outros
 
