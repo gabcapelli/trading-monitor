@@ -6,35 +6,12 @@
 > fechamento de sábado. Custo de 0.06% e funding já descontados.
 > **Só reavaliar com 104 sábados novos (~2 anos).** Antes disso é ruído.
 
-## Aberto agora
+**Sábados registrados:** 1 de 104 necessários (1%)
 
-Cesta comprada no fechamento de sexta (25/09, 21h em Brasília); sábado já fechou; resultado entra quando os preços de 27/09 saírem.
+**Acumulado (20 majors):** -0.76% | positivos: 0/1 (0%)
 
-| Par | Entrada |
-|---|---|
-| BTC ★ | 84056 |
-| ETH ★ | 2690.56 |
-| SOL ★ | 122.1 |
-| XRP ★ | 1.5677 |
-| DOGE ★ | 0.09893 |
-| ARB | 0.22656 |
-| WLD | 0.4952 |
-| SUI | 1.1943 |
-| UNI | 9.628 |
-| LINK | 13.924 |
-| BNB | 777.53 |
-| TRX | 0.33803 |
-| ZEC | 1555.2 |
-| HYPE | 92.368 |
-| ADA | 0.2586 |
-| XLM | 0.22032 |
-| NEAR | 4.948 |
-| AVAX | 10.647 |
-| LTC | 72.54 |
-| BCH | 343.08 |
+**Acumulado (5 maiores):** -1.05%
 
-<sub>★ = cesta secundária (5 maiores). Abertura diária da Binance (UTC).</sub>
-
-## Registrados
-
-_Nenhum sábado registrado ainda._
+| Sábado | 20 majors | 5 maiores | acum. 20 majors |
+|---|---|---|---|
+| 26/09/2026 (funding pendente) | -0.76% | -1.05% | -0.76% |
