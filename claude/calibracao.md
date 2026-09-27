@@ -1,4 +1,4 @@
-# Calibracao — registro mecanico de sinais (atualizado 2026-09-27 07:06 BRT)
+# Calibracao — registro mecanico de sinais (atualizado 2026-09-27 08:06 BRT)
 
 > **Nao edite este arquivo** — ele e reescrito a cada execucao a partir da tabela `sinais_mecanicos`. Diferente de `sinais.md`, aqui nao ha nenhuma decisao sua: e TODA confirmacao mecanica detectada, inclusive as descartadas por R:R baixo, com desfecho medido por geometria de preco (OHLC de 1h contra stop/alvo sugeridos).
 >
@@ -11,10 +11,10 @@ Regra de alvo em vigor agora: **proximo** (coluna `Regra` abaixo mostra qual dec
 | Grupo | Sinais | Resolvidos | Acertos | Soma (expectancia) |
 |---|---|---|---|---|
 | Aceitos (R:R >= 2) | 56 | 56 | 10 (18%) | -21.53R (-0.385R/sinal) |
-| Descartados por R:R baixo | 159 | 156 | 94 (60%) | -12.98R (-0.083R/sinal) |
-| TODOS | 215 | 212 | 104 (49%) | -34.52R (-0.163R/sinal) |
+| Descartados por R:R baixo | 159 | 158 | 96 (61%) | -12.92R (-0.082R/sinal) |
+| TODOS | 215 | 214 | 106 (50%) | -34.46R (-0.161R/sinal) |
 
-**MAE dos acertos** (quanto o preco foi CONTRA antes de dar certo) — n=104, mediana 0.37R, maximo 0.98R, 11% acima de 0.8R.
+**MAE dos acertos** (quanto o preco foi CONTRA antes de dar certo) — n=106, mediana 0.37R, maximo 0.98R, 10% acima de 0.8R.
 
 > Le-se assim: apertar `STOP_BUFFER_ATR_MULT` mata os acertos cujo MAE ja esta perto de 1R. Se essa cauda for gorda, nao ha folga pra apertar o stop.
 
@@ -26,8 +26,8 @@ Regra de alvo em vigor agora: **proximo** (coluna `Regra` abaixo mostra qual dec
 
 | Par | Setup | Direcao | Aceito | Regra | R:R (recente) | R:R (proximo) | Resultado | MAE | MFE | Candles | Quando |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| BTC/USDT | A | compra | nao | proximo | 0.85 | 0.05 | aberto | — | — | — | 2026-09-27 07:06 |
-| ARB/USDT | A | compra | nao | proximo | 0.01 | 0.01 | aberto | — | — | — | 2026-09-27 07:06 |
+| BTC/USDT | A | compra | nao | proximo | 0.85 | 0.05 | +0.05 | 0.372 | 0.456 | 1 | 2026-09-27 07:06 |
+| ARB/USDT | A | compra | nao | proximo | 0.01 | 0.01 | +0.01 | 0.504 | 0.012 | 1 | 2026-09-27 07:06 |
 | DOGE/USDT | B | compra | nao | proximo | 0.43 | 0.06 | +0.06 | 0.352 | 0.264 | 1 | 2026-09-27 05:06 |
 | BTC/USDT | A | compra | nao | proximo | 3.53 | 0.59 | +0.59 | 0.789 | 0.854 | 4 | 2026-09-26 23:06 |
 | ARB/USDT | B | venda | nao | proximo | 1.41 | 0.47 | +0.47 | 0.185 | 1.218 | 2 | 2026-09-26 16:06 |
