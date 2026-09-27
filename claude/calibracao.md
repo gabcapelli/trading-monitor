@@ -1,4 +1,4 @@
-# Calibracao — registro mecanico de sinais (atualizado 2026-09-27 05:06 BRT)
+# Calibracao — registro mecanico de sinais (atualizado 2026-09-27 06:06 BRT)
 
 > **Nao edite este arquivo** — ele e reescrito a cada execucao a partir da tabela `sinais_mecanicos`. Diferente de `sinais.md`, aqui nao ha nenhuma decisao sua: e TODA confirmacao mecanica detectada, inclusive as descartadas por R:R baixo, com desfecho medido por geometria de preco (OHLC de 1h contra stop/alvo sugeridos).
 >
@@ -11,10 +11,10 @@ Regra de alvo em vigor agora: **proximo** (coluna `Regra` abaixo mostra qual dec
 | Grupo | Sinais | Resolvidos | Acertos | Soma (expectancia) |
 |---|---|---|---|---|
 | Aceitos (R:R >= 2) | 56 | 56 | 10 (18%) | -21.53R (-0.385R/sinal) |
-| Descartados por R:R baixo | 157 | 155 | 93 (60%) | -13.04R (-0.084R/sinal) |
-| TODOS | 213 | 211 | 103 (49%) | -34.57R (-0.164R/sinal) |
+| Descartados por R:R baixo | 157 | 156 | 94 (60%) | -12.98R (-0.083R/sinal) |
+| TODOS | 213 | 212 | 104 (49%) | -34.52R (-0.163R/sinal) |
 
-**MAE dos acertos** (quanto o preco foi CONTRA antes de dar certo) — n=103, mediana 0.37R, maximo 0.98R, 11% acima de 0.8R.
+**MAE dos acertos** (quanto o preco foi CONTRA antes de dar certo) — n=104, mediana 0.37R, maximo 0.98R, 11% acima de 0.8R.
 
 > Le-se assim: apertar `STOP_BUFFER_ATR_MULT` mata os acertos cujo MAE ja esta perto de 1R. Se essa cauda for gorda, nao ha folga pra apertar o stop.
 
@@ -26,7 +26,7 @@ Regra de alvo em vigor agora: **proximo** (coluna `Regra` abaixo mostra qual dec
 
 | Par | Setup | Direcao | Aceito | Regra | R:R (recente) | R:R (proximo) | Resultado | MAE | MFE | Candles | Quando |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| DOGE/USDT | B | compra | nao | proximo | 0.43 | 0.06 | aberto | — | — | — | 2026-09-27 05:06 |
+| DOGE/USDT | B | compra | nao | proximo | 0.43 | 0.06 | +0.06 | 0.352 | 0.264 | 1 | 2026-09-27 05:06 |
 | BTC/USDT | A | compra | nao | proximo | 3.53 | 0.59 | +0.59 | 0.789 | 0.854 | 4 | 2026-09-26 23:06 |
 | ARB/USDT | B | venda | nao | proximo | 1.41 | 0.47 | +0.47 | 0.185 | 1.218 | 2 | 2026-09-26 16:06 |
 | ARB/USDT | B | venda | nao | proximo | 1.98 | 1.17 | +1.17 | 0.046 | 1.82 | 4 | 2026-09-26 14:06 |
