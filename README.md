@@ -1,6 +1,6 @@
 # Painel de estratégias
 
-_Atualizado em 27/09 20:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
+_Atualizado em 27/09 21:07 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
 
 ## Precisa de você
 
@@ -12,7 +12,7 @@ _Nada pendente._
 |---|---|---|---|
 | [Desbloqueio](claude/unlock-paper.md) | 7 | 0/150 | — |
 | [Perpétuo novo](claude/novos-paper.md) | 0 | 0/100 | — |
-| [Sábado](claude/sabado-paper.md) | 0 | 1/104 | -0.76% |
+| [Sábado](claude/sabado-paper.md) | 0 | 1/104 | -0.04% |
 | [Setup A/B](claude/estudos-avulsos.md#setups-ab--encerrado-em-25092026) · encerrado | — | 34 | -0.13R |
 
 <sub>Média: Setup A/B em R por trade; desbloqueio com hedge; perpétuo novo com stop; sábado por fim de semana. Fechados = amostra atual / amostra mínima para reavaliar.</sub>

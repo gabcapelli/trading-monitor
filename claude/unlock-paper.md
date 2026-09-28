@@ -7,7 +7,7 @@
 > venda + compra da cesta dos 20 majors. Custo 0.18% por perna e funding real.
 > **Só reavaliar com 150 trades fechados.** Antes disso é ruído.
 
-_Atualizado em 2026-09-27 (calendário de 2026-09-27)._
+_Atualizado em 2026-09-28 (calendário de 2026-09-28)._
 
 ## Abertos
 
@@ -42,6 +42,7 @@ _Atualizado em 2026-09-27 (calendário de 2026-09-27)._
 | APR | 2026-10-24 | 47.2% | 78% | 2026-10-17 |
 | H | 2026-10-24 | 7.3% | 55% | 2026-10-17 |
 | ALT | 2026-10-27 | 3.3% | 66% | 2026-10-20 |
+| RESOLV | 2026-10-28 | 3.5% | 100% | 2026-10-21 |
 
 _Passa pelos filtros (perpétuo com ≥ 30 dias, mesmo token a ≥ 14 dias) só no dia da entrada._
 
