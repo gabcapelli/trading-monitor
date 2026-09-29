@@ -4,16 +4,6 @@
 
 | Data/Hora (BRT) | Par | Close 1h | High/Low 1h | Close 4h | Swing 1h ref | ATR 1h | Funding | Zona ativa | Status checklist |
 |---|---|---|---|---|---|---|---|---|---|
-| 2026-09-27 07:06 | BTC-USDT-SWAP | 84910.8 | 84919.0/84546.3 | 84746.5 | res 84535.0 (ha 8 candles) | 241.10 | -0.0019% | — | descartado_rr_baixo_setup_A |
-| 2026-09-27 07:06 | ETH-USDT-SWAP | 2715.0 | 2716.3/2704.2 | 2717.1 | sup 2662.2 (ha 13 candles) | 12.01 | 0.0058% | — | sem_zona |
-| 2026-09-27 07:06 | SOL-USDT-SWAP | 124.38 | 124.47/123.27 | 124.08 | res 121.80 (ha 10 candles) | 1.1200 | 0.0075% | A/compra@121.80 (0t/2c) | zona_mapeada_setup_A |
-| 2026-09-27 07:06 | XRP-USDT-SWAP | 1.5379 | 1.5380/1.5258 | 1.5381 | — | 0.01256 | 0.0062% | — | sem_zona |
-| 2026-09-27 07:06 | DOGE-USDT-SWAP | 0.09795 | 0.09797/0.09719 | 0.09809 | res 0.09868 (ha 18 candles) | 0.00086 | 0.0100% | — | sem_zona |
-| 2026-09-27 07:06 | ARB-USDT-SWAP | 0.23092 | 0.23219/0.22715 | 0.23459 | res 0.23061 (ha 7 candles) | 0.00533 | 0.0100% | — | descartado_rr_baixo_setup_A |
-| 2026-09-27 07:06 | WLD-USDT-SWAP | 0.56560 | 0.56920/0.54280 | 0.53750 | — | 0.01291 | 0.0100% | — | sem_zona |
-| 2026-09-27 07:06 | SUI-USDT-SWAP | 1.2538 | 1.2668/1.2404 | 1.2635 | res 1.1900 (ha 7 candles) | 0.02461 | 0.0096% | A/compra@1.1900 (0t/3c) | zona_mapeada_setup_A |
-| 2026-09-27 07:06 | UNI-USDT-SWAP | 9.9870 | 10.11/9.8900 | 10.07 | — | 0.18321 | 0.0100% | — | invalidado_setup_B |
-| 2026-09-27 07:06 | LINK-USDT-SWAP | 14.34 | 14.39/14.24 | 14.44 | res 14.38 (ha 7 candles) | 0.16186 | 0.0100% | — | sem_zona |
 | 2026-09-27 08:06 | BTC-USDT-SWAP | 84844.6 | 85088.0/84766.4 | 84746.5 | res 84535.0 (ha 9 candles) | 243.34 | -0.0012% | — | sem_zona |
 | 2026-09-27 08:06 | ETH-USDT-SWAP | 2709.0 | 2718.5/2707.7 | 2717.1 | sup 2662.2 (ha 14 candles) | 11.22 | 0.0061% | — | sem_zona |
 | 2026-09-27 08:06 | SOL-USDT-SWAP | 123.95 | 124.75/123.78 | 124.08 | res 121.80 (ha 11 candles) | 1.0814 | 0.0044% | A/compra@121.80 (0t/3c) | zona_mapeada_setup_A |
@@ -484,3 +474,13 @@
 | 2026-09-29 06:06 | SUI-USDT-SWAP | 1.1433 | 1.1598/1.1388 | 1.1526 | res 1.1696 (ha 9 candles) | 0.02404 | 0.0060% | — | sem_zona |
 | 2026-09-29 06:06 | UNI-USDT-SWAP | 9.0030 | 9.3000/8.9120 | 8.9340 | res 8.8310 (ha 8 candles) | 0.17586 | -0.0049% | A/compra@8.8310 (0t/0c) | zona_mapeada_setup_A |
 | 2026-09-29 06:06 | LINK-USDT-SWAP | 15.30 | 15.33/15.07 | 15.20 | sup 14.62 (ha 4 candles) | 0.30300 | -0.0039% | B/venda@14.48 (0t/4c) | zona_mapeada_setup_B |
+| 2026-09-29 07:06 | BTC-USDT-SWAP | 84206.3 | 84290.0/83729.0 | 83944.5 | sup 82726.0 (ha 8 candles) | 416.71 | 0.0022% | — | sem_zona |
+| 2026-09-29 07:06 | ETH-USDT-SWAP | 2716.5 | 2721.1/2701.6 | 2711.0 | sup 2650.7 (ha 7 candles) | 19.56 | 0.0070% | — | invalidado_setup_B |
+| 2026-09-29 07:06 | SOL-USDT-SWAP | 119.87 | 120.05/118.81 | 119.47 | — | 1.1371 | 0.0066% | B/venda@119.69 (0t/0c) | zona_mapeada_setup_B |
+| 2026-09-29 07:06 | XRP-USDT-SWAP | 1.5103 | 1.5140/1.4975 | 1.5072 | sup 1.4647 (ha 8 candles) | 0.01644 | 0.0100% | — | zona_expirada_setup_B |
+| 2026-09-29 07:06 | DOGE-USDT-SWAP | 0.09550 | 0.09592/0.09470 | 0.09499 | sup 0.09175 (ha 7 candles) | 0.00111 | 0.0100% | B/venda@0.09138 (0t/7c) | zona_mapeada_setup_B |
+| 2026-09-29 07:06 | ARB-USDT-SWAP | 0.20808 | 0.20870/0.20378 | 0.20374 | res 0.20870 (ha 16 candles) | 0.00407 | -0.0237% | B/compra@0.21025 (0t/0c) | zona_mapeada_setup_B |
+| 2026-09-29 07:06 | WLD-USDT-SWAP | 0.49900 | 0.50230/0.49730 | 0.50220 | res 0.49680 (ha 9 candles) | 0.01087 | 0.0100% | A/compra@0.49680 (2t/0c) | zona_mapeada_setup_A |
+| 2026-09-29 07:06 | SUI-USDT-SWAP | 1.1670 | 1.1718/1.1402 | 1.1526 | res 1.1696 (ha 10 candles) | 0.02415 | 0.0015% | — | sem_zona |
+| 2026-09-29 07:06 | UNI-USDT-SWAP | 9.0540 | 9.0870/8.9400 | 8.9340 | res 8.8310 (ha 9 candles) | 0.17243 | -0.0070% | A/compra@8.8310 (0t/1c) | zona_mapeada_setup_A |
+| 2026-09-29 07:06 | LINK-USDT-SWAP | 15.45 | 15.48/15.24 | 15.20 | sup 14.62 (ha 5 candles) | 0.29600 | -0.0039% | B/venda@14.48 (0t/5c) | zona_mapeada_setup_B |
