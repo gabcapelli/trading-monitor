@@ -9,9 +9,9 @@
 
 _Atualizado em 2026-09-30 (calendário de 2026-09-30)._
 
-**Trades fechados:** 1 de 150 (1%) · 1 com funding pendente
+**Trades fechados:** 1 de 150 (1%)
 
-**Média por trade:** puro +15.79% · com hedge +13.52% · hedge positivo em 1/1 (100%)
+**Média por trade:** puro +16.00% · com hedge +13.64% · hedge positivo em 1/1 (100%)
 
 _Referência do backtest (2025–2026): puro +2.9%, excesso sobre o universo +2.1%._
 
@@ -55,4 +55,4 @@ _Passa pelos filtros (perpétuo com ≥ 30 dias, mesmo token a ≥ 14 dias) só 
 
 | Token | Desbloqueio | % da oferta | Retorno do token | Cesta | Puro | Com hedge | Obs. |
 |---|---|---|---|---|---|---|---|
-| ZORA | 2026-09-30 | 3.0% | -15.97% | -2.09% | +15.79% | +13.52% | funding pendente |
+| ZORA | 2026-09-30 | 3.0% | -15.97% | -2.09% | +16.00% | +13.64% |  |
