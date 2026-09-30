@@ -10,15 +10,13 @@ _Atualizado em 2026-09-30._
 
 ## Abertos
 
-_Nenhum._
-
-## Aguardando a entrada
-
-- CVNA: lançado 2026-09-28, venda em 2026-09-30 (tipo não confirmado)
-- OKLO: lançado 2026-09-28, venda em 2026-09-30 (tipo não confirmado)
-- RUM: lançado 2026-09-28, venda em 2026-09-30 (tipo não confirmado)
-- TWST: lançado 2026-09-28, venda em 2026-09-30 (tipo não confirmado)
-- XOM: lançado 2026-09-28, venda em 2026-09-30 (tipo não confirmado)
+| Token | Lançado | Venda em | Entrada | Stop (+50%) | Saída prevista |
+|---|---|---|---|---|---|
+| CVNA | 2026-09-28 | 2026-09-30 | 63.86 | 95.79 | 2026-10-30 (tipo não confirmado) |
+| OKLO | 2026-09-28 | 2026-09-30 | 37.35 | 56.025 | 2026-10-30 (tipo não confirmado) |
+| RUM | 2026-09-28 | 2026-09-30 | 7.77 | 11.655 | 2026-10-30 (tipo não confirmado) |
+| TWST | 2026-09-28 | 2026-09-30 | 187.52 | 281.28 | 2026-10-30 (tipo não confirmado) |
+| XOM | 2026-09-28 | 2026-09-30 | 161.58 | 242.37 | 2026-10-30 (tipo não confirmado) |
 
 ## Fechados
 

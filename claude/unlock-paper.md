@@ -9,11 +9,16 @@
 
 _Atualizado em 2026-09-30 (calendário de 2026-09-30)._
 
+**Trades fechados:** 1 de 150 (1%) · 1 com funding pendente
+
+**Média por trade:** puro +15.79% · com hedge +13.52% · hedge positivo em 1/1 (100%)
+
+_Referência do backtest (2025–2026): puro +2.9%, excesso sobre o universo +2.1%._
+
 ## Abertos
 
 | Token | Desbloqueio | % da oferta | Venda em (abertura) | Preço de entrada |
 |---|---|---|---|---|
-| ZORA | 2026-09-30 | 3.0% | 2026-09-23 | 0.009349 |
 | GUN | 2026-10-01 | 7.0% | 2026-09-24 | 0.002929 |
 | 2Z | 2026-10-02 | 47.8% | 2026-09-25 | 0.05586 |
 | EIGEN | 2026-10-02 | 4.3% | 2026-09-25 | 0.2383 |
@@ -48,4 +53,6 @@ _Passa pelos filtros (perpétuo com ≥ 30 dias, mesmo token a ≥ 14 dias) só 
 
 ## Fechados
 
-_Nenhum ainda._
+| Token | Desbloqueio | % da oferta | Retorno do token | Cesta | Puro | Com hedge | Obs. |
+|---|---|---|---|---|---|---|---|
+| ZORA | 2026-09-30 | 3.0% | -15.97% | -2.09% | +15.79% | +13.52% | funding pendente |
