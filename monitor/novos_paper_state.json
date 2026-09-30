@@ -232,6 +232,7 @@
 "CUDISUSDT": 20320,
 "CUSDT": 20284,
 "CVCUSDT": 18577,
+"CVNAUSDT": 20724,
 "CVXUSDT": 19257,
 "CXMTUSDT": 20683,
 "CYBERUSDT": 19590,
@@ -557,6 +558,7 @@
 "OCEANUSDT": 18569,
 "OGNUSDT": 18718,
 "OGUSDT": 20220,
+"OKLOUSDT": 20724,
 "OLUSDT": 20264,
 "OMGUSDT": 18445,
 "OMNIUSDT": 19830,
@@ -658,6 +660,7 @@
 "ROSEUSDT": 18992,
 "RPLUSDT": 19975,
 "RSRUSDT": 18554,
+"RUMUSDT": 20724,
 "RUNEUSDT": 18509,
 "RVNUSDT": 18681,
 "RVVUSDT": 20379,
@@ -789,6 +792,7 @@
 "TURTLEUSDT": 20383,
 "TUSDT": 19389,
 "TUTUSDT": 20167,
+"TWSTUSDT": 20724,
 "TWTUSDT": 19664,
 "TXNUSDT": 20636,
 "TZAUSDT": 20650,
@@ -850,6 +854,7 @@
 "XLMUSDT": 18281,
 "XMRUSDT": 18295,
 "XNYUSDT": 20313,
+"XOMUSDT": 20724,
 "XPDUSDT": 20483,
 "XPINUSDT": 20343,
 "XPLUSDT": 20322,
@@ -886,6 +891,14 @@
 },
 "inicio": 20719,
 "trades": {
+"CVNAUSDT": {
+"d0": 20724,
+"entrada": 20726,
+"motivo": null,
+"par": "CVNAUSDT",
+"status": "aguardando",
+"tipo": "?"
+},
 "MOONSHOTUSDT": {
 "d0": 20718,
 "entrada": 20720,
@@ -893,6 +906,14 @@
 "par": "MOONSHOTUSDT",
 "status": "descartado",
 "tipo": "PREMARKET"
+},
+"OKLOUSDT": {
+"d0": 20724,
+"entrada": 20726,
+"motivo": null,
+"par": "OKLOUSDT",
+"status": "aguardando",
+"tipo": "?"
 },
 "OURAUSDT": {
 "cesta_in": {
@@ -927,6 +948,22 @@
 "stop_px": 75.645,
 "tipo": "PREMARKET"
 },
+"RUMUSDT": {
+"d0": 20724,
+"entrada": 20726,
+"motivo": null,
+"par": "RUMUSDT",
+"status": "aguardando",
+"tipo": "?"
+},
+"TWSTUSDT": {
+"d0": 20724,
+"entrada": 20726,
+"motivo": null,
+"par": "TWSTUSDT",
+"status": "aguardando",
+"tipo": "?"
+},
 "USDBRLUSDT": {
 "d0": 20717,
 "entrada": 20719,
@@ -934,7 +971,15 @@
 "par": "USDBRLUSDT",
 "status": "descartado",
 "tipo": "FX"
+},
+"XOMUSDT": {
+"d0": 20724,
+"entrada": 20726,
+"motivo": null,
+"par": "XOMUSDT",
+"status": "aguardando",
+"tipo": "?"
 }
 },
-"ultimo_scan": 20725
+"ultimo_scan": 20726
 }

@@ -1,4 +1,4 @@
-# Situacao atual -- Multi-Par (script gratuito, sem LLM) -- atualizado 2026-09-29 20:06 BRT
+# Situacao atual -- Multi-Par (script gratuito, sem LLM) -- atualizado 2026-09-29 21:06 BRT
 
 > Gerado por `monitor/fetch_and_check.py` via GitHub Actions, sem chamar a API do Claude. Registra fatos objetivos; a interpretacao qualitativa fica a seu criterio (ou cole este arquivo + o log numa conversa do Claude).
 
@@ -8,13 +8,13 @@
 
 | Par | Tendencia 4h | Close 1h | Funding | Zona / setup candidato | Status |
 |---|---|---|---|---|---|
-| BTC/USDT | baixa | 83575.9 | 0.0100% | — | sem_zona |
-| ETH/USDT | baixa | 2680.7 | 0.0074% | — | zona_expirada_setup_B |
-| SOL/USDT | baixa | 119.05 | -0.0053% | — | sem_zona |
-| XRP/USDT | baixa | 1.4931 | 0.0021% | — | sem_zona |
-| DOGE/USDT | baixa | 0.09399 | 0.0100% | — | sem_zona |
-| ARB/USDT | lateral | 0.20603 | -0.0005% | Setup B (compra) 0.20921-0.21129 (0/3 toques, 2/8 candles) | zona_mapeada_setup_B |
-| WLD/USDT | lateral | 0.48790 | 0.0100% | Setup B (venda) 0.47632-0.48267 (0/3 toques, 5/8 candles) | zona_mapeada_setup_B |
-| SUI/USDT | lateral | 1.1494 | 0.0100% | — | sem_zona |
-| UNI/USDT | lateral | 8.9180 | 0.0100% | — | sem_zona |
-| LINK/USDT | lateral | 14.68 | 0.0100% | — | sem_zona |
+| BTC/USDT | baixa | 83627.0 | 0.0100% | — | sem_zona |
+| ETH/USDT | baixa | 2676.8 | 0.0057% | Setup B (venda) 2668.0-2677.1 (0/3 toques, 0/8 candles) | zona_mapeada_setup_B |
+| SOL/USDT | baixa | 119.08 | -0.0064% | — | sem_zona |
+| XRP/USDT | baixa | 1.4898 | 0.0014% | — | sem_zona |
+| DOGE/USDT | baixa | 0.09386 | 0.0100% | — | sem_zona |
+| ARB/USDT | lateral | 0.20338 | -0.0022% | Setup B (compra) 0.20921-0.21129 (0/3 toques, 3/8 candles) | zona_mapeada_setup_B |
+| WLD/USDT | lateral | 0.48340 | 0.0100% | — | invalidado_setup_B |
+| SUI/USDT | baixa | 1.1519 | 0.0100% | — | sem_zona |
+| UNI/USDT | baixa | 8.8850 | 0.0100% | — | sem_zona |
+| LINK/USDT | lateral | 14.60 | 0.0100% | Setup B (venda) 14.43-14.53 (0/3 toques, 0/8 candles) | zona_mapeada_setup_B |

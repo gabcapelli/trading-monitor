@@ -6,11 +6,19 @@
 > em paralelo a venda **sem stop** (a regra do estudo, que não passou). Custo 0.18% e funding real.
 > **Só reavaliar com 100 trades fechados.** Antes disso é ruído.
 
-_Atualizado em 2026-09-29._
+_Atualizado em 2026-09-30._
 
 ## Abertos
 
 _Nenhum._
+
+## Aguardando a entrada
+
+- CVNA: lançado 2026-09-28, venda em 2026-09-30 (tipo não confirmado)
+- OKLO: lançado 2026-09-28, venda em 2026-09-30 (tipo não confirmado)
+- RUM: lançado 2026-09-28, venda em 2026-09-30 (tipo não confirmado)
+- TWST: lançado 2026-09-28, venda em 2026-09-30 (tipo não confirmado)
+- XOM: lançado 2026-09-28, venda em 2026-09-30 (tipo não confirmado)
 
 ## Fechados
 
