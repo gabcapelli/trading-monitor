@@ -1,3 +1,6 @@
+// NAO USADO: a Binance responde 403 a requisicoes que saem de Workers (testado em
+// 30/09/2026). O proxy em uso e proxy-vercel/api/fapi.js. Mantido so como registro.
+//
 // Proxy somente-leitura para a API de futuros da Binance (fapi).
 //
 // Por que existe: o GitHub Actions roda em IPs dos EUA e a Binance responde 451

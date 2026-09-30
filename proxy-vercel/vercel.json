@@ -1,0 +1,4 @@
+{
+  "regions": ["hnd1"],
+  "rewrites": [{ "source": "/:p*", "destination": "/api/fapi?p=:p*" }]
+}
