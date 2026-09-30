@@ -917,12 +917,12 @@
 "d0": 20724,
 "dias_vistos": [],
 "entrada": 20726,
-"motivo": null,
+"motivo": "nao-cripto (EQUITY) (confirmado apos a abertura)",
 "par": "CVNAUSDT",
 "px_in": 63.86,
-"status": "aberto",
+"status": "descartado",
 "stop_px": 95.78999999999999,
-"tipo": "?"
+"tipo": "EQUITY"
 },
 "MOONSHOTUSDT": {
 "d0": 20718,
@@ -958,12 +958,12 @@
 "d0": 20724,
 "dias_vistos": [],
 "entrada": 20726,
-"motivo": null,
+"motivo": "nao-cripto (EQUITY) (confirmado apos a abertura)",
 "par": "OKLOUSDT",
 "px_in": 37.35,
-"status": "aberto",
+"status": "descartado",
 "stop_px": 56.025000000000006,
-"tipo": "?"
+"tipo": "EQUITY"
 },
 "OURAUSDT": {
 "cesta_in": {
@@ -1024,12 +1024,12 @@
 "d0": 20724,
 "dias_vistos": [],
 "entrada": 20726,
-"motivo": null,
+"motivo": "nao-cripto (EQUITY) (confirmado apos a abertura)",
 "par": "RUMUSDT",
 "px_in": 7.77,
-"status": "aberto",
+"status": "descartado",
 "stop_px": 11.655,
-"tipo": "?"
+"tipo": "EQUITY"
 },
 "TWSTUSDT": {
 "cesta_in": {
@@ -1057,12 +1057,12 @@
 "d0": 20724,
 "dias_vistos": [],
 "entrada": 20726,
-"motivo": null,
+"motivo": "nao-cripto (EQUITY) (confirmado apos a abertura)",
 "par": "TWSTUSDT",
 "px_in": 187.52,
-"status": "aberto",
+"status": "descartado",
 "stop_px": 281.28000000000003,
-"tipo": "?"
+"tipo": "EQUITY"
 },
 "USDBRLUSDT": {
 "d0": 20717,
@@ -1098,12 +1098,12 @@
 "d0": 20724,
 "dias_vistos": [],
 "entrada": 20726,
-"motivo": null,
+"motivo": "nao-cripto (EQUITY) (confirmado apos a abertura)",
 "par": "XOMUSDT",
 "px_in": 161.58,
-"status": "aberto",
+"status": "descartado",
 "stop_px": 242.37,
-"tipo": "?"
+"tipo": "EQUITY"
 }
 },
 "ultimo_scan": 20726
