@@ -6,11 +6,21 @@
 > em paralelo a venda **sem stop** (a regra do estudo, que não passou). Custo 0.18% e funding real.
 > **Só reavaliar com 100 trades fechados.** Antes disso é ruído.
 
-_Atualizado em 2026-09-30._
+_Atualizado em 2026-10-01._
 
 ## Abertos
 
 _Nenhum._
+
+## Aguardando a entrada
+
+- ACN: lançado 2026-09-29, venda em 2026-10-01 (tipo não confirmado)
+- BWET: lançado 2026-09-29, venda em 2026-10-01 (tipo não confirmado)
+- CRML: lançado 2026-09-29, venda em 2026-10-01 (tipo não confirmado)
+- MP: lançado 2026-09-29, venda em 2026-10-01 (tipo não confirmado)
+- NKE: lançado 2026-09-29, venda em 2026-10-01 (tipo não confirmado)
+- SECZ: lançado 2026-09-29, venda em 2026-10-01 (tipo não confirmado)
+- UNH: lançado 2026-09-29, venda em 2026-10-01 (tipo não confirmado)
 
 ## Fechados
 

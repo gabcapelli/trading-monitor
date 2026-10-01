@@ -27,6 +27,7 @@
 "AAVEUSDT": 18551,
 "ACEUSDT": 19709,
 "ACHUSDT": 19410,
+"ACNUSDT": 20725,
 "ACTUSDT": 20038,
 "ACUUSDT": 20474,
 "ACXUSDT": 20063,
@@ -174,6 +175,7 @@
 "BTWUSDT": 20608,
 "BULLAUSDT": 20273,
 "BUSDT": 20230,
+"BWETUSDT": 20725,
 "BXUSDT": 20612,
 "BYDUSDT": 20703,
 "BZRXUSDT": 18510,
@@ -218,6 +220,7 @@
 "COWUSDT": 20033,
 "CRCLUSDT": 20493,
 "CRDOUSDT": 20612,
+"CRMLUSDT": 20725,
 "CRMUSDT": 20607,
 "CROSSUSDT": 20279,
 "CRVUSDT": 18506,
@@ -514,6 +517,7 @@
 "MORPHOUSDT": 20054,
 "MOVEUSDT": 20066,
 "MOVRUSDT": 19717,
+"MPUSDT": 20725,
 "MRKUSDT": 20693,
 "MRNAUSDT": 20690,
 "MRVLUSDT": 20588,
@@ -541,6 +545,7 @@
 "NFPUSDT": 19718,
 "NIGHTUSDT": 20432,
 "NILUSDT": 20171,
+"NKEUSDT": 20725,
 "NKNUSDT": 18726,
 "NMRUSDT": 19530,
 "NOKUSDT": 20605,
@@ -675,6 +680,7 @@
 "SCRTUSDT": 20048,
 "SCRUSDT": 20018,
 "SCUSDT": 18729,
+"SECZUSDT": 20725,
 "SEIUSDT": 19586,
 "SENTUSDT": 20406,
 "SFPUSDT": 18682,
@@ -801,6 +807,7 @@
 "UBUSDT": 20343,
 "UMAUSDT": 19487,
 "UNFIUSDT": 18677,
+"UNHUSDT": 20725,
 "UNITREEUSDT": 20684,
 "UNIUSDT": 18523,
 "URNMUSDT": 20613,
@@ -891,6 +898,30 @@
 },
 "inicio": 20719,
 "trades": {
+"ACNUSDT": {
+"d0": 20725,
+"entrada": 20727,
+"motivo": null,
+"par": "ACNUSDT",
+"status": "aguardando",
+"tipo": "?"
+},
+"BWETUSDT": {
+"d0": 20725,
+"entrada": 20727,
+"motivo": null,
+"par": "BWETUSDT",
+"status": "aguardando",
+"tipo": "?"
+},
+"CRMLUSDT": {
+"d0": 20725,
+"entrada": 20727,
+"motivo": null,
+"par": "CRMLUSDT",
+"status": "aguardando",
+"tipo": "?"
+},
 "CVNAUSDT": {
 "cesta_in": {
 "ADAUSDT": 0.2443,
@@ -931,6 +962,22 @@
 "par": "MOONSHOTUSDT",
 "status": "descartado",
 "tipo": "PREMARKET"
+},
+"MPUSDT": {
+"d0": 20725,
+"entrada": 20727,
+"motivo": null,
+"par": "MPUSDT",
+"status": "aguardando",
+"tipo": "?"
+},
+"NKEUSDT": {
+"d0": 20725,
+"entrada": 20727,
+"motivo": null,
+"par": "NKEUSDT",
+"status": "aguardando",
+"tipo": "?"
 },
 "OKLOUSDT": {
 "cesta_in": {
@@ -1031,6 +1078,14 @@
 "stop_px": 11.655,
 "tipo": "EQUITY"
 },
+"SECZUSDT": {
+"d0": 20725,
+"entrada": 20727,
+"motivo": null,
+"par": "SECZUSDT",
+"status": "aguardando",
+"tipo": "?"
+},
 "TWSTUSDT": {
 "cesta_in": {
 "ADAUSDT": 0.2443,
@@ -1063,6 +1118,14 @@
 "status": "descartado",
 "stop_px": 281.28000000000003,
 "tipo": "EQUITY"
+},
+"UNHUSDT": {
+"d0": 20725,
+"entrada": 20727,
+"motivo": null,
+"par": "UNHUSDT",
+"status": "aguardando",
+"tipo": "?"
 },
 "USDBRLUSDT": {
 "d0": 20717,
@@ -1106,5 +1169,5 @@
 "tipo": "EQUITY"
 }
 },
-"ultimo_scan": 20726
+"ultimo_scan": 20727
 }
