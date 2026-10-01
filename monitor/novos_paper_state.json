@@ -899,27 +899,78 @@
 "inicio": 20719,
 "trades": {
 "ACNUSDT": {
+"cesta_in": {
+"ADAUSDT": 0.2466,
+"ARBUSDT": 0.20288,
+"AVAXUSDT": 10.933,
+"BCHUSDT": 306.14,
+"BNBUSDT": 769.73,
+"BTCUSDT": 83576.9,
+"DOGEUSDT": 0.0945,
+"ETHUSDT": 2684.68,
+"HYPEUSDT": 90.965,
+"LINKUSDT": 14.359,
+"SUIUSDT": 1.1636,
+"TRXUSDT": 0.33723
+},
 "d0": 20725,
+"dias_vistos": [],
 "entrada": 20727,
 "motivo": null,
 "par": "ACNUSDT",
-"status": "aguardando",
+"px_in": 184.17,
+"status": "aberto",
+"stop_px": 276.255,
 "tipo": "?"
 },
 "BWETUSDT": {
+"cesta_in": {
+"ADAUSDT": 0.2466,
+"ARBUSDT": 0.20288,
+"AVAXUSDT": 10.933,
+"BCHUSDT": 306.14,
+"BNBUSDT": 769.73,
+"BTCUSDT": 83576.9,
+"DOGEUSDT": 0.0945,
+"ETHUSDT": 2684.68,
+"HYPEUSDT": 90.965,
+"LINKUSDT": 14.359,
+"SUIUSDT": 1.1636,
+"TRXUSDT": 0.33723
+},
 "d0": 20725,
+"dias_vistos": [],
 "entrada": 20727,
 "motivo": null,
 "par": "BWETUSDT",
-"status": "aguardando",
+"px_in": 793.21,
+"status": "aberto",
+"stop_px": 1189.815,
 "tipo": "?"
 },
 "CRMLUSDT": {
+"cesta_in": {
+"ADAUSDT": 0.2466,
+"ARBUSDT": 0.20288,
+"AVAXUSDT": 10.933,
+"BCHUSDT": 306.14,
+"BNBUSDT": 769.73,
+"BTCUSDT": 83576.9,
+"DOGEUSDT": 0.0945,
+"ETHUSDT": 2684.68,
+"HYPEUSDT": 90.965,
+"LINKUSDT": 14.359,
+"SUIUSDT": 1.1636,
+"TRXUSDT": 0.33723
+},
 "d0": 20725,
+"dias_vistos": [],
 "entrada": 20727,
 "motivo": null,
 "par": "CRMLUSDT",
-"status": "aguardando",
+"px_in": 7.298,
+"status": "aberto",
+"stop_px": 10.947,
 "tipo": "?"
 },
 "CVNAUSDT": {
@@ -972,11 +1023,28 @@
 "tipo": "?"
 },
 "NKEUSDT": {
+"cesta_in": {
+"ADAUSDT": 0.2466,
+"ARBUSDT": 0.20288,
+"AVAXUSDT": 10.933,
+"BCHUSDT": 306.14,
+"BNBUSDT": 769.73,
+"BTCUSDT": 83576.9,
+"DOGEUSDT": 0.0945,
+"ETHUSDT": 2684.68,
+"HYPEUSDT": 90.965,
+"LINKUSDT": 14.359,
+"SUIUSDT": 1.1636,
+"TRXUSDT": 0.33723
+},
 "d0": 20725,
+"dias_vistos": [],
 "entrada": 20727,
 "motivo": null,
 "par": "NKEUSDT",
-"status": "aguardando",
+"px_in": 35.49,
+"status": "aberto",
+"stop_px": 53.235,
 "tipo": "?"
 },
 "OKLOUSDT": {
@@ -1079,11 +1147,28 @@
 "tipo": "EQUITY"
 },
 "SECZUSDT": {
+"cesta_in": {
+"ADAUSDT": 0.2466,
+"ARBUSDT": 0.20288,
+"AVAXUSDT": 10.933,
+"BCHUSDT": 306.14,
+"BNBUSDT": 769.73,
+"BTCUSDT": 83576.9,
+"DOGEUSDT": 0.0945,
+"ETHUSDT": 2684.68,
+"HYPEUSDT": 90.965,
+"LINKUSDT": 14.359,
+"SUIUSDT": 1.1636,
+"TRXUSDT": 0.33723
+},
 "d0": 20725,
+"dias_vistos": [],
 "entrada": 20727,
 "motivo": null,
 "par": "SECZUSDT",
-"status": "aguardando",
+"px_in": 14.64,
+"status": "aberto",
+"stop_px": 21.96,
 "tipo": "?"
 },
 "TWSTUSDT": {

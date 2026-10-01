@@ -811,14 +811,21 @@
 "XRPUSDT": 1.4999,
 "ZECUSDT": 1498.0
 },
+"confirmado": true,
 "entrada": 20720,
 "first_seen": 20719,
 "frac": 0.7745439639270343,
+"funding": "pendente",
+"hedge": 0.010024193241745537,
 "par": "GUNUSDT",
 "pct": 7.020648967551622,
 "protocolo": "gunz",
+"puro": -0.01238381700238975,
 "px_in": 0.002929,
-"status": "aberto",
+"px_out": 0.00296,
+"ret": 0.01058381700238975,
+"ret_cesta": 0.024208010244135287,
+"status": "fechado",
 "t0": 20727
 },
 "MAVUSDT|20728": {

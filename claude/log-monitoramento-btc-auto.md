@@ -4,16 +4,6 @@
 
 | Data/Hora (BRT) | Par | Close 1h | High/Low 1h | Close 4h | Swing 1h ref | ATR 1h | Funding | Zona ativa | Status checklist |
 |---|---|---|---|---|---|---|---|---|---|
-| 2026-09-29 07:06 | BTC-USDT-SWAP | 84206.3 | 84290.0/83729.0 | 83944.5 | sup 82726.0 (ha 8 candles) | 416.71 | 0.0022% | — | sem_zona |
-| 2026-09-29 07:06 | ETH-USDT-SWAP | 2716.5 | 2721.1/2701.6 | 2711.0 | sup 2650.7 (ha 7 candles) | 19.56 | 0.0070% | — | invalidado_setup_B |
-| 2026-09-29 07:06 | SOL-USDT-SWAP | 119.87 | 120.05/118.81 | 119.47 | — | 1.1371 | 0.0066% | B/venda@119.69 (0t/0c) | zona_mapeada_setup_B |
-| 2026-09-29 07:06 | XRP-USDT-SWAP | 1.5103 | 1.5140/1.4975 | 1.5072 | sup 1.4647 (ha 8 candles) | 0.01644 | 0.0100% | — | zona_expirada_setup_B |
-| 2026-09-29 07:06 | DOGE-USDT-SWAP | 0.09550 | 0.09592/0.09470 | 0.09499 | sup 0.09175 (ha 7 candles) | 0.00111 | 0.0100% | B/venda@0.09138 (0t/7c) | zona_mapeada_setup_B |
-| 2026-09-29 07:06 | ARB-USDT-SWAP | 0.20808 | 0.20870/0.20378 | 0.20374 | res 0.20870 (ha 16 candles) | 0.00407 | -0.0237% | B/compra@0.21025 (0t/0c) | zona_mapeada_setup_B |
-| 2026-09-29 07:06 | WLD-USDT-SWAP | 0.49900 | 0.50230/0.49730 | 0.50220 | res 0.49680 (ha 9 candles) | 0.01087 | 0.0100% | A/compra@0.49680 (2t/0c) | zona_mapeada_setup_A |
-| 2026-09-29 07:06 | SUI-USDT-SWAP | 1.1670 | 1.1718/1.1402 | 1.1526 | res 1.1696 (ha 10 candles) | 0.02415 | 0.0015% | — | sem_zona |
-| 2026-09-29 07:06 | UNI-USDT-SWAP | 9.0540 | 9.0870/8.9400 | 8.9340 | res 8.8310 (ha 9 candles) | 0.17243 | -0.0070% | A/compra@8.8310 (0t/1c) | zona_mapeada_setup_A |
-| 2026-09-29 07:06 | LINK-USDT-SWAP | 15.45 | 15.48/15.24 | 15.20 | sup 14.62 (ha 5 candles) | 0.29600 | -0.0039% | B/venda@14.48 (0t/5c) | zona_mapeada_setup_B |
 | 2026-09-29 08:06 | BTC-USDT-SWAP | 83988.3 | 84288.0/83942.2 | 83944.5 | sup 82726.0 (ha 9 candles) | 416.37 | 0.0007% | — | sem_zona |
 | 2026-09-29 08:06 | ETH-USDT-SWAP | 2713.9 | 2719.4/2709.0 | 2711.0 | sup 2650.7 (ha 8 candles) | 19.16 | 0.0074% | B/venda@2724.2 (0t/0c) | zona_mapeada_setup_B |
 | 2026-09-29 08:06 | SOL-USDT-SWAP | 119.37 | 119.98/119.15 | 119.47 | — | 1.1286 | 0.0063% | — | descartado_rr_baixo_setup_B |
@@ -484,3 +474,13 @@
 | 2026-10-01 04:06 | SUI-USDT-SWAP | 1.1755 | 1.1798/1.1673 | 1.1763 | res 1.1913 (ha 5 candles) | 0.01916 | 0.0086% | — | sem_zona |
 | 2026-10-01 04:06 | UNI-USDT-SWAP | 8.9730 | 8.9860/8.8860 | 8.8780 | — | 0.10007 | 0.0100% | B/compra@9.0370 (0t/0c) | zona_mapeada_setup_B |
 | 2026-10-01 04:06 | LINK-USDT-SWAP | 14.44 | 14.49/14.41 | 14.50 | — | 0.12471 | -0.0008% | — | confirmado_calibracao_setup_B |
+| 2026-10-01 05:06 | BTC-USDT-SWAP | 83380.1 | 84180.7/83272.6 | 83380.1 | res 85639.0 (ha 18 candles) | 349.46 | 0.0021% | B/compra@83118.0 (0t/6c) | zona_mapeada_setup_B |
+| 2026-10-01 05:06 | ETH-USDT-SWAP | 2676.0 | 2719.9/2673.5 | 2676.0 | — | 14.38 | 0.0077% | B/venda@2672.5 (0t/0c) | zona_mapeada_setup_B |
+| 2026-10-01 05:06 | SOL-USDT-SWAP | 117.40 | 119.34/117.21 | 117.40 | res 118.48 (ha 8 candles) | 0.90214 | 0.0028% | — | sem_zona |
+| 2026-10-01 05:06 | XRP-USDT-SWAP | 1.4859 | 1.5069/1.4789 | 1.4859 | sup 1.4841 (ha 9 candles) | 0.01063 | 0.0021% | — | sem_zona |
+| 2026-10-01 05:06 | DOGE-USDT-SWAP | 0.09424 | 0.09594/0.09400 | 0.09424 | — | 0.00079 | 0.0071% | — | sem_zona |
+| 2026-10-01 05:06 | ARB-USDT-SWAP | 0.19950 | 0.20619/0.19865 | 0.19950 | — | 0.00311 | -0.0096% | — | sem_zona |
+| 2026-10-01 05:06 | WLD-USDT-SWAP | 0.51930 | 0.54400/0.51760 | 0.51930 | res 0.54660 (ha 7 candles) | 0.01131 | 0.0100% | B/venda@0.55180 (0t/7c) | zona_mapeada_setup_B |
+| 2026-10-01 05:06 | SUI-USDT-SWAP | 1.1437 | 1.1815/1.1411 | 1.1437 | res 1.1913 (ha 6 candles) | 0.01984 | -0.0015% | — | sem_zona |
+| 2026-10-01 05:06 | UNI-USDT-SWAP | 8.7910 | 8.9810/8.7680 | 8.7910 | — | 0.10250 | 0.0100% | B/compra@9.0370 (0t/1c) | zona_mapeada_setup_B |
+| 2026-10-01 05:06 | LINK-USDT-SWAP | 14.21 | 14.48/14.19 | 14.21 | — | 0.13536 | -0.0014% | B/venda@14.21 (0t/0c) | zona_mapeada_setup_B |

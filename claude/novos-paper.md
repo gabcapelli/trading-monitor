@@ -10,16 +10,17 @@ _Atualizado em 2026-10-01._
 
 ## Abertos
 
-_Nenhum._
+| Token | Lançado | Venda em | Entrada | Stop (+50%) | Saída prevista |
+|---|---|---|---|---|---|
+| ACN | 2026-09-29 | 2026-10-01 | 184.17 | 276.255 | 2026-10-31 (tipo não confirmado) |
+| BWET | 2026-09-29 | 2026-10-01 | 793.21 | 1189.82 | 2026-10-31 (tipo não confirmado) |
+| CRML | 2026-09-29 | 2026-10-01 | 7.298 | 10.947 | 2026-10-31 (tipo não confirmado) |
+| NKE | 2026-09-29 | 2026-10-01 | 35.49 | 53.235 | 2026-10-31 (tipo não confirmado) |
+| SECZ | 2026-09-29 | 2026-10-01 | 14.64 | 21.96 | 2026-10-31 (tipo não confirmado) |
 
 ## Aguardando a entrada
 
-- ACN: lançado 2026-09-29, venda em 2026-10-01 (tipo não confirmado)
-- BWET: lançado 2026-09-29, venda em 2026-10-01 (tipo não confirmado)
-- CRML: lançado 2026-09-29, venda em 2026-10-01 (tipo não confirmado)
 - MP: lançado 2026-09-29, venda em 2026-10-01 (tipo não confirmado)
-- NKE: lançado 2026-09-29, venda em 2026-10-01 (tipo não confirmado)
-- SECZ: lançado 2026-09-29, venda em 2026-10-01 (tipo não confirmado)
 - UNH: lançado 2026-09-29, venda em 2026-10-01 (tipo não confirmado)
 
 ## Fechados
