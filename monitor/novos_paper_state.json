@@ -914,7 +914,9 @@
 "TRXUSDT": 0.33723
 },
 "d0": 20725,
-"dias_vistos": [],
+"dias_vistos": [
+20727
+],
 "entrada": 20727,
 "motivo": null,
 "par": "ACNUSDT",
@@ -939,7 +941,9 @@
 "TRXUSDT": 0.33723
 },
 "d0": 20725,
-"dias_vistos": [],
+"dias_vistos": [
+20727
+],
 "entrada": 20727,
 "motivo": null,
 "par": "BWETUSDT",
@@ -964,7 +968,9 @@
 "TRXUSDT": 0.33723
 },
 "d0": 20725,
-"dias_vistos": [],
+"dias_vistos": [
+20727
+],
 "entrada": 20727,
 "motivo": null,
 "par": "CRMLUSDT",
@@ -1063,7 +1069,9 @@
 "TRXUSDT": 0.33723
 },
 "d0": 20725,
-"dias_vistos": [],
+"dias_vistos": [
+20727
+],
 "entrada": 20727,
 "motivo": null,
 "par": "NKEUSDT",
@@ -1187,7 +1195,9 @@
 "TRXUSDT": 0.33723
 },
 "d0": 20725,
-"dias_vistos": [],
+"dias_vistos": [
+20727
+],
 "entrada": 20727,
 "motivo": null,
 "par": "SECZUSDT",
