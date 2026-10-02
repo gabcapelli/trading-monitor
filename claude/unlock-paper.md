@@ -7,7 +7,7 @@
 > venda + compra da cesta dos 20 majors. Custo 0.18% por perna e funding real.
 > **Só reavaliar com 150 trades fechados.** Antes disso é ruído.
 
-_Atualizado em 2026-10-01 (calendário de 2026-10-01)._
+_Atualizado em 2026-10-02 (calendário de 2026-10-02)._
 
 **Trades fechados:** 2 de 150 (1%)
 
@@ -49,6 +49,7 @@ _Referência do backtest (2025–2026): puro +2.9%, excesso sobre o universo +2.
 | RESOLV | 2026-10-28 | 3.5% | 100% | 2026-10-21 |
 | GUN | 2026-10-31 | 6.6% | 77% | 2026-10-24 |
 | ZORA | 2026-10-31 | 2.9% | 75% | 2026-10-24 |
+| EIGEN | 2026-11-01 | 4.1% | 100% | 2026-10-25 |
 
 _Passa pelos filtros (perpétuo com ≥ 30 dias, mesmo token a ≥ 14 dias) só no dia da entrada._
 
