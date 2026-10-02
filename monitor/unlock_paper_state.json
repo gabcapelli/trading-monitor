@@ -949,14 +949,21 @@
 "XRPUSDT": 1.534,
 "ZECUSDT": 1545.73
 },
+"confirmado": true,
 "entrada": 20721,
 "first_seen": 20719,
 "frac": 0.5057709660474411,
+"funding": "pendente",
+"hedge": -0.005986316073966394,
 "par": "ZETAUSDT",
 "pct": 2.764904249002895,
 "protocolo": "zetachain",
+"puro": -0.00867893081761004,
 "px_in": 0.05088,
-"status": "aberto",
+"px_out": 0.05123,
+"ret": 0.0068789308176100405,
+"ret_cesta": 0.0044926147436436465,
+"status": "fechado",
 "t0": 20728
 },
 "ZORAUSDT|20726": {

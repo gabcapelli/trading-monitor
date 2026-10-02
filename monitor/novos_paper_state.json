@@ -1044,7 +1044,9 @@
 "ZECUSDT": 1438.11
 },
 "d0": 20725,
-"dias_vistos": [],
+"dias_vistos": [
+20727
+],
 "entrada": 20727,
 "motivo": null,
 "par": "MPUSDT",
