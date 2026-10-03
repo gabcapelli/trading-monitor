@@ -232,6 +232,7 @@
 "CTKUSDT": 18585,
 "CTRUSDT": 20601,
 "CTSIUSDT": 18926,
+"CTUSDT": 20727,
 "CUDISUSDT": 20320,
 "CUSDT": 20284,
 "CVCUSDT": 18577,
@@ -979,6 +980,14 @@
 "stop_px": 10.947,
 "tipo": "?"
 },
+"CTUSDT": {
+"d0": 20727,
+"entrada": 20729,
+"motivo": null,
+"par": "CTUSDT",
+"status": "aguardando",
+"tipo": "?"
+},
 "CVNAUSDT": {
 "cesta_in": {
 "ADAUSDT": 0.2443,
@@ -1318,5 +1327,5 @@
 "tipo": "EQUITY"
 }
 },
-"ultimo_scan": 20728
+"ultimo_scan": 20729
 }

@@ -1,6 +1,6 @@
 # Painel de estratégias
 
-_Atualizado em 02/10 20:05 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
+_Atualizado em 02/10 21:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
 
 ## Precisa de você
 
@@ -12,16 +12,16 @@ _Nada pendente._
 |---|---|---|---|
 | [Desbloqueio](claude/unlock-paper.md) | 1 | 6/150 | +1.34% |
 | [Perpétuo novo](claude/novos-paper.md) | 7 | 0/100 | — |
-| [Sábado](claude/sabado-paper.md) | 0 | 1/104 | -0.04% |
+| [Sábado](claude/sabado-paper.md) | 1 | 1/104 | -0.04% |
 | [Setup A/B](claude/estudos-avulsos.md#setups-ab--encerrado-em-25092026) · encerrado | — | 34 | -0.13R |
 
 <sub>Média: Setup A/B em R por trade; desbloqueio com hedge; perpétuo novo com stop; sábado por fim de semana. Fechados = amostra atual / amostra mínima para reavaliar.</sub>
 
 ## Próximos eventos
 
-- 02/10 · Sábado: entrada da cesta (21h)
 - 03/10 · Desbloqueio: recompra de STO
-- 03/10 · Desbloqueio: venda prevista de MOVE
+- 03/10 · Sábado: saída da cesta (21h) e resultado
+- 04/10 · Desbloqueio: venda prevista de CARV
 - 31/10 · Perpétuo novo: saída de ACN (stop 276.255)
 
 ## Outros

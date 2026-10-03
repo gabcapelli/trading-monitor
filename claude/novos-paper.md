@@ -6,7 +6,7 @@
 > em paralelo a venda **sem stop** (a regra do estudo, que não passou). Custo 0.18% e funding real.
 > **Só reavaliar com 100 trades fechados.** Antes disso é ruído.
 
-_Atualizado em 2026-10-02._
+_Atualizado em 2026-10-03._
 
 ## Abertos
 
@@ -19,6 +19,10 @@ _Atualizado em 2026-10-02._
 | NKE | 2026-09-29 | 2026-10-01 | 35.49 | 53.235 | 2026-10-31 (tipo não confirmado) |
 | SECZ | 2026-09-29 | 2026-10-01 | 14.64 | 21.96 | 2026-10-31 (tipo não confirmado) |
 | UNH | 2026-09-29 | 2026-10-01 | 368.34 | 552.51 | 2026-10-31 (tipo não confirmado) |
+
+## Aguardando a entrada
+
+- CT: lançado 2026-10-01, venda em 2026-10-03 (tipo não confirmado)
 
 ## Fechados
 
