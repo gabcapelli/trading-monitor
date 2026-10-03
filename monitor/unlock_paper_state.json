@@ -911,6 +911,39 @@
 "status": "fechado",
 "t0": 20728
 },
+"MOVEUSDT|20736": {
+"cesta_in": {
+"ADAUSDT": 0.2444,
+"ARBUSDT": 0.19583,
+"AVAXUSDT": 10.795,
+"BCHUSDT": 311.49,
+"BNBUSDT": 768.6,
+"BTCUSDT": 84482.8,
+"DOGEUSDT": 0.09289,
+"ETHUSDT": 2667.28,
+"HYPEUSDT": 89.095,
+"LINKUSDT": 13.787,
+"LTCUSDT": 69.85,
+"NEARUSDT": 4.69,
+"SOLUSDT": 118.56,
+"SUIUSDT": 1.1455,
+"TRXUSDT": 0.33441,
+"UNIUSDT": 8.948,
+"WLDUSDT": 0.5565,
+"XLMUSDT": 0.21534,
+"XRPUSDT": 1.484,
+"ZECUSDT": 1301.27
+},
+"entrada": 20729,
+"first_seen": 20719,
+"frac": 0.6962025316455696,
+"par": "MOVEUSDT",
+"pct": 3.7019681349578257,
+"protocolo": "movement",
+"px_in": 0.009912,
+"status": "aberto",
+"t0": 20736
+},
 "STOUSDT|20729": {
 "cesta_in": {
 "ADAUSDT": 0.2586,
@@ -934,14 +967,21 @@
 "XRPUSDT": 1.5677,
 "ZECUSDT": 1555.2
 },
+"confirmado": true,
 "entrada": 20722,
 "first_seen": 20719,
 "frac": 0.614704325351104,
+"funding": "pendente",
+"hedge": 0.015364874021341186,
 "par": "STOUSDT",
 "pct": 4.894913738571092,
 "protocolo": "stakestone",
+"puro": 0.0544654113427482,
 "px_in": 0.04461,
-"status": "aberto",
+"px_out": 0.0421,
+"ret": -0.056265411342748206,
+"ret_cesta": -0.03730053732140702,
+"status": "fechado",
 "t0": 20729
 },
 "ZETAUSDT|20728": {

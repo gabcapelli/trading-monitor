@@ -916,7 +916,8 @@
 },
 "d0": 20725,
 "dias_vistos": [
-20727
+20727,
+20728
 ],
 "entrada": 20727,
 "motivo": null,
@@ -943,7 +944,8 @@
 },
 "d0": 20725,
 "dias_vistos": [
-20727
+20727,
+20728
 ],
 "entrada": 20727,
 "motivo": null,
@@ -970,7 +972,8 @@
 },
 "d0": 20725,
 "dias_vistos": [
-20727
+20727,
+20728
 ],
 "entrada": 20727,
 "motivo": null,
@@ -981,11 +984,36 @@
 "tipo": "?"
 },
 "CTUSDT": {
+"cesta_in": {
+"ADAUSDT": 0.2444,
+"ARBUSDT": 0.19583,
+"AVAXUSDT": 10.795,
+"BCHUSDT": 311.49,
+"BNBUSDT": 768.6,
+"BTCUSDT": 84482.8,
+"DOGEUSDT": 0.09289,
+"ETHUSDT": 2667.28,
+"HYPEUSDT": 89.095,
+"LINKUSDT": 13.787,
+"LTCUSDT": 69.85,
+"NEARUSDT": 4.69,
+"SOLUSDT": 118.56,
+"SUIUSDT": 1.1455,
+"TRXUSDT": 0.33441,
+"UNIUSDT": 8.948,
+"WLDUSDT": 0.5565,
+"XLMUSDT": 0.21534,
+"XRPUSDT": 1.484,
+"ZECUSDT": 1301.27
+},
 "d0": 20727,
+"dias_vistos": [],
 "entrada": 20729,
 "motivo": null,
 "par": "CTUSDT",
-"status": "aguardando",
+"px_in": 0.50286,
+"status": "aberto",
+"stop_px": 0.7542899999999999,
 "tipo": "?"
 },
 "CVNAUSDT": {
@@ -1054,7 +1082,8 @@
 },
 "d0": 20725,
 "dias_vistos": [
-20727
+20727,
+20728
 ],
 "entrada": 20727,
 "motivo": null,
@@ -1081,7 +1110,8 @@
 },
 "d0": 20725,
 "dias_vistos": [
-20727
+20727,
+20728
 ],
 "entrada": 20727,
 "motivo": null,
@@ -1207,7 +1237,8 @@
 },
 "d0": 20725,
 "dias_vistos": [
-20727
+20727,
+20728
 ],
 "entrada": 20727,
 "motivo": null,
@@ -1275,7 +1306,8 @@
 },
 "d0": 20725,
 "dias_vistos": [
-20727
+20727,
+20728
 ],
 "entrada": 20727,
 "motivo": null,

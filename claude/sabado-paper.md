@@ -12,8 +12,28 @@ Cesta comprada no fechamento de sexta (02/10, 21h em Brasília); saída no fecha
 
 | Par | Entrada |
 |---|---|
+| BTC ★ | 84482.8 |
+| ETH ★ | 2667.28 |
+| SOL ★ | 118.56 |
+| XRP ★ | 1.484 |
+| DOGE ★ | 0.09289 |
+| ARB | 0.19583 |
+| WLD | 0.5565 |
+| SUI | 1.1455 |
+| UNI | 8.948 |
+| LINK | 13.787 |
+| BNB | 768.6 |
+| TRX | 0.33441 |
+| ZEC | 1301.27 |
+| HYPE | 89.095 |
+| ADA | 0.2444 |
+| XLM | 0.21534 |
+| NEAR | 4.69 |
+| AVAX | 10.795 |
+| LTC | 69.85 |
+| BCH | 311.49 |
 
-<sub>★ = cesta secundária (5 maiores). Abertura diária da Binance (UTC). Ainda sem preço: BTC, ETH, SOL, XRP, DOGE, ARB, WLD, SUI, UNI, LINK, BNB, TRX, ZEC, HYPE, ADA, XLM, NEAR, AVAX, LTC, BCH.</sub>
+<sub>★ = cesta secundária (5 maiores). Abertura diária da Binance (UTC).</sub>
 
 ## Registrados
 
