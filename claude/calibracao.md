@@ -1,4 +1,4 @@
-# Calibracao — registro mecanico de sinais (atualizado 2026-10-04 11:05 BRT)
+# Calibracao — registro mecanico de sinais (atualizado 2026-10-04 12:05 BRT)
 
 > **Nao edite este arquivo** — ele e reescrito a cada execucao a partir da tabela `sinais_mecanicos`. Diferente de `sinais.md`, aqui nao ha nenhuma decisao sua: e TODA confirmacao mecanica detectada, inclusive as descartadas por R:R baixo, com desfecho medido por geometria de preco (OHLC de 1h contra stop/alvo sugeridos).
 >
@@ -11,8 +11,8 @@ Regra de alvo em vigor agora: **proximo** (coluna `Regra` abaixo mostra qual dec
 | Grupo | Sinais | Resolvidos | Acertos | Soma (expectancia) |
 |---|---|---|---|---|
 | Aceitos (R:R >= 2) | 68 | 67 | 17 (25%) | -5.10R (-0.076R/sinal) |
-| Descartados por R:R baixo | 245 | 241 | 159 (66%) | +3.95R (+0.016R/sinal) |
-| TODOS | 313 | 308 | 176 (57%) | -1.15R (-0.004R/sinal) |
+| Descartados por R:R baixo | 248 | 241 | 159 (66%) | +3.95R (+0.016R/sinal) |
+| TODOS | 316 | 308 | 176 (57%) | -1.15R (-0.004R/sinal) |
 
 **MAE dos acertos** (quanto o preco foi CONTRA antes de dar certo) — n=176, mediana 0.35R, maximo 0.98R, 7% acima de 0.8R.
 
@@ -26,11 +26,14 @@ Regra de alvo em vigor agora: **proximo** (coluna `Regra` abaixo mostra qual dec
 
 | Par | Setup | Direcao | Aceito | Regra | R:R (recente) | R:R (proximo) | Resultado | MAE | MFE | Candles | Quando |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| ETH/USDT | B | venda | nao | proximo | 1.95 | 0.73 | aberto | 0.693 | 0.078 | — | 2026-10-04 10:05 |
-| ARB/USDT | B | compra | nao | proximo | 3.45 | 1.95 | aberto | 0.167 | 0.482 | — | 2026-10-04 10:05 |
+| BTC/USDT | B | compra | nao | proximo | 0.68 | 0.68 | aberto | — | — | — | 2026-10-04 12:05 |
+| SOL/USDT | A | compra | nao | proximo | 2.11 | 1.33 | aberto | — | — | — | 2026-10-04 12:05 |
+| LINK/USDT | B | compra | nao | proximo | 0.02 | 0.02 | aberto | — | — | — | 2026-10-04 12:05 |
+| ETH/USDT | B | venda | nao | proximo | 1.95 | 0.73 | aberto | 0.693 | 0.432 | — | 2026-10-04 10:05 |
+| ARB/USDT | B | compra | nao | proximo | 3.45 | 1.95 | aberto | 0.535 | 0.703 | — | 2026-10-04 10:05 |
 | LINK/USDT | B | compra | nao | proximo | 1.48 | 0.36 | +0.36 | 0.462 | 0.473 | 1 | 2026-10-04 10:05 |
 | BTC/USDT | A | compra | nao | proximo | 10.84 | 0.27 | +0.27 | 0.054 | 1.1 | 1 | 2026-10-04 07:05 |
-| ETH/USDT | B | venda | nao | proximo | 2.64 | 1.35 | aberto | 0.798 | 0.695 | — | 2026-10-04 06:05 |
+| ETH/USDT | B | venda | nao | proximo | 2.64 | 1.35 | aberto | 0.798 | 1.036 | — | 2026-10-04 06:05 |
 | BTC/USDT | B | compra | nao | proximo | 11.05 | 0.87 | +0.87 | 0.36 | 1.137 | 2 | 2026-10-04 05:05 |
 | DOGE/USDT | B | compra | nao | proximo | 0.04 | 0.04 | +0.04 | 0.684 | 0.129 | 1 | 2026-10-04 05:05 |
 | UNI/USDT | B | compra | nao | proximo | 1.14 | 0.35 | +0.35 | 0.52 | 0.47 | 1 | 2026-10-04 05:05 |
@@ -48,6 +51,3 @@ Regra de alvo em vigor agora: **proximo** (coluna `Regra` abaixo mostra qual dec
 | DOGE/USDT | A | venda | nao | proximo | 4.75 | 0.03 | +0.03 | 0.381 | 0.281 | 1 | 2026-10-02 23:05 |
 | SUI/USDT | B | venda | nao | proximo | 2.44 | 0.05 | +0.05 | 0.331 | 0.32 | 1 | 2026-10-02 23:05 |
 | UNI/USDT | B | compra | nao | proximo | 0.76 | 0.15 | +0.15 | 0.29 | 0.527 | 1 | 2026-10-02 22:05 |
-| LINK/USDT | B | compra | sim | proximo | 4.63 | 2.13 | +2.13 | 0.802 | 2.285 | 22 | 2026-10-02 22:05 |
-| SUI/USDT | B | compra | nao | proximo | 2.80 | 0.67 | +0.67 | 0.073 | 1.801 | 1 | 2026-10-02 21:05 |
-| UNI/USDT | B | compra | nao | proximo | 3.72 | 0.38 | +0.38 | 0.429 | 0.848 | 1 | 2026-10-02 19:05 |
