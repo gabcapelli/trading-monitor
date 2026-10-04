@@ -7,7 +7,7 @@
 > venda + compra da cesta dos 20 majors. Custo 0.18% por perna e funding real.
 > **Só reavaliar com 150 trades fechados.** Antes disso é ruído.
 
-_Atualizado em 2026-10-03 (calendário de 2026-10-03)._
+_Atualizado em 2026-10-04 (calendário de 2026-10-04)._
 
 **Trades fechados:** 7 de 150 (5%) · 5 com funding pendente
 
@@ -25,7 +25,6 @@ _Referência do backtest (2025–2026): puro +2.9%, excesso sobre o universo +2.
 
 | Token | Desbloqueio | % da oferta | % insiders | Entrada prevista |
 |---|---|---|---|---|
-| CARV | 2026-10-11 | 6.1% | 88% | 2026-10-04 |
 | APT | 2026-10-12 | 1.3% | 60% | 2026-10-05 |
 | BB | 2026-10-13 | 2.9% | 80% | 2026-10-06 |
 | PUMP | 2026-10-13 | 1.3% | 100% | 2026-10-06 |
@@ -46,6 +45,7 @@ _Referência do backtest (2025–2026): puro +2.9%, excesso sobre o universo +2.
 | ZORA | 2026-10-31 | 2.9% | 75% | 2026-10-24 |
 | EIGEN | 2026-11-01 | 4.1% | 100% | 2026-10-25 |
 | ZETA | 2026-11-02 | 2.7% | 51% | 2026-10-26 |
+| STO | 2026-11-03 | 4.7% | 61% | 2026-10-27 |
 
 _Passa pelos filtros (perpétuo com ≥ 30 dias, mesmo token a ≥ 14 dias) só no dia da entrada._
 

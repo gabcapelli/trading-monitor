@@ -8,7 +8,7 @@
 
 ## Aberto agora
 
-Cesta comprada no fechamento de sexta (02/10, 21h em Brasília); saída no fechamento de sábado (21h de 03/10 em Brasília).
+Cesta comprada no fechamento de sexta (02/10, 21h em Brasília); sábado já fechou; resultado entra quando os preços de 04/10 saírem.
 
 | Par | Entrada |
 |---|---|

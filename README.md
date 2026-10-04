@@ -1,6 +1,6 @@
 # Painel de estratégias
 
-_Atualizado em 03/10 20:05 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
+_Atualizado em 03/10 21:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
 
 ## Precisa de você
 
@@ -20,7 +20,7 @@ _Nada pendente._
 ## Próximos eventos
 
 - 03/10 · Sábado: saída da cesta (21h) e resultado
-- 04/10 · Desbloqueio: venda prevista de CARV
+- 05/10 · Desbloqueio: venda prevista de APT
 - 10/10 · Desbloqueio: recompra de MOVE
 - 31/10 · Perpétuo novo: saída de ACN (stop 276.255)
 
