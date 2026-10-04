@@ -1,4 +1,4 @@
-# Situacao atual -- Multi-Par (script gratuito, sem LLM) -- atualizado 2026-10-04 13:05 BRT
+# Situacao atual -- Multi-Par (script gratuito, sem LLM) -- atualizado 2026-10-04 14:05 BRT
 
 > Gerado por `monitor/fetch_and_check.py` via GitHub Actions, sem chamar a API do Claude. Registra fatos objetivos; a interpretacao qualitativa fica a seu criterio (ou cole este arquivo + o log numa conversa do Claude).
 
@@ -8,13 +8,13 @@
 
 | Par | Tendencia 4h | Close 1h | Funding | Zona / setup candidato | Status |
 |---|---|---|---|---|---|
-| BTC/USDT | alta | 85213.4 | 0.0048% | — | sem_zona |
-| ETH/USDT | lateral | 2697.4 | 0.0040% | — | sem_zona |
-| SOL/USDT | alta | 121.53 | 0.0100% | — | sem_zona |
-| XRP/USDT | lateral | 1.5040 | 0.0100% | — | sem_zona |
-| DOGE/USDT | alta | 0.09413 | 0.0042% | Setup B (compra) 0.09301-0.09319 (0/3 toques, 3/8 candles) | zona_mapeada_setup_B |
-| ARB/USDT | baixa | 0.20146 | -0.0045% | — | sem_zona |
-| WLD/USDT | alta | 0.57990 | 0.0100% | — | sem_zona |
-| SUI/USDT | lateral | 1.2546 | 0.0100% | — | sem_zona |
-| UNI/USDT | alta | 9.0180 | 0.0024% | Setup B (compra) 9.0223-9.0517 (0/3 toques, 0/8 candles) | zona_mapeada_setup_B |
-| LINK/USDT | lateral | 14.14 | 0.0092% | — | sem_zona |
+| BTC/USDT | alta | 85338.2 | 0.0058% | — | sem_zona |
+| ETH/USDT | lateral | 2702.0 | 0.0033% | Setup B (venda) 2704.5-2708.4 (0/3 toques, 0/8 candles) | zona_mapeada_setup_B |
+| SOL/USDT | alta | 121.69 | 0.0100% | — | sem_zona |
+| XRP/USDT | lateral | 1.5026 | 0.0100% | Setup B (compra) 1.4989-1.5019 (0/3 toques, 0/8 candles) | zona_mapeada_setup_B |
+| DOGE/USDT | alta | 0.09449 | 0.0053% | Setup B (compra) 0.09301-0.09319 (0/3 toques, 4/8 candles) | zona_mapeada_setup_B |
+| ARB/USDT | baixa | 0.20231 | -0.0020% | — | sem_zona |
+| WLD/USDT | alta | 0.58070 | 0.0100% | — | sem_zona |
+| SUI/USDT | lateral | 1.2243 | 0.0100% | Setup B (venda) 1.2143-1.2223 (0/3 toques, 0/8 candles) | zona_mapeada_setup_B |
+| UNI/USDT | alta | 9.0210 | 0.0066% | — | invalidado_setup_B |
+| LINK/USDT | lateral | 14.15 | 0.0042% | — | sem_zona |
