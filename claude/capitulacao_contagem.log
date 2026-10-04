@@ -1,0 +1,31 @@
+
+====================================================================================================
+UNIVERSO A (descritivo) -- SO CONTAGEM
+====================================================================================================
+    ... 0 pares
+  universo A: 20 pares | 969 dias candidatos (queda >= 2 sigma) | 794 com open interest
+  PRIMARIA: capitulacao (OI <= -10%), H=3    trades    145 | semanas   51
+  capitulacao, H=1                           trades    148 | semanas   52
+  capitulacao, H=7                           trades    140 | semanas   51
+  CONTRASTE: queda com OI >= +10%, H=3       trades     58 | semanas   38
+  queda sem filtro de OI, H=3                trades    715 | semanas  136
+
+====================================================================================================
+UNIVERSO DE (DECIDE) -- SO CONTAGEM
+====================================================================================================
+    ... 0 pares
+    ... 50 pares
+    ... 100 pares
+    ... 150 pares
+    ... 200 pares
+    ... 250 pares
+    ... 300 pares
+    ... 350 pares
+  universo DE: 368 pares | 8624 dias candidatos (queda >= 2 sigma) | 8181 com open interest
+  PRIMARIA: capitulacao (OI <= -10%), H=3    trades   1634 | semanas  175
+  capitulacao, H=1                           trades   1676 | semanas  176
+  capitulacao, H=7                           trades   1585 | semanas  173
+  CONTRASTE: queda com OI >= +10%, H=3       trades    743 | semanas  166
+  queda sem filtro de OI, H=3                trades   7409 | semanas  222
+
+  [934s]

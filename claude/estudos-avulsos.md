@@ -827,6 +827,30 @@ Script: `monitor/replay_pos_listagem.py` · log: `claude/pos_listagem.log`
 
 **Decisão (04/10/2026): não vai para o papel.** O Gabriel decidiu não testar adiante. O resultado é inconclusivo (absoluto positivo, mas com IC cruzando zero), e o custo de um teste de 1,5–2 anos não se justifica diante do funding contra o vendido, da cauda de squeeze e de 2026 negativo. Encerrado.
 
+## 31. Capitulação (queda forte + open interest despencando) — 04/10/2026
+
+Script: `monitor/replay_capitulacao.py` · logs: `claude/capitulacao.log`, `claude/capitulacao_contagem.log`
+
+- **Dados novos:** open interest histórico da Binance (`data.binance.vision`, `futures/um/daily/metrics`, a cada 5 min, desde 09/2020), campo de **quantidade** de contratos. Vem em um arquivo por par por dia, então foram baixados só os dias candidatos (8.624 no DE). Cache em `monitor/cache_vision/oi/`.
+- **Regra:**
+  - **Sinal:** queda no dia ≥ 2 desvios-padrão dos 60 dias anteriores **e** open interest do mesmo dia (23:55 vs. 00:00) caindo ≥ 10%.
+  - **Execução:** compra na abertura seguinte e vende 3 dias depois, sem stop.
+- **Critério:** igual ao do estudo 27 (A descritivo; DE decide com `abs` e `excesso` transversal, IC95 > 0, bootstrap por semana).
+- **Contraste pré-registrado:** a mesma queda com open interest **subindo** ≥ 10%.
+
+| | A: absoluto | A: excesso | **DE: absoluto** | **DE: excesso** |
+|---|---|---|---|---|
+| **Capitulação, H=3 (decide)** | +3.89% [+1.21, +6.69] | +1.37% [+0.20, +2.81] | **+3.38%** [−0.08, +7.10] | **+0.34%** [−0.51, +1.66] |
+| Capitulação, H=1 / H=7 | −0.16% / +0.55% | −0.26% / +0.18% | −0.51% / +0.29% | −0.20% / −0.45% |
+| Contraste (OI subindo), H=3 | +1.63% | −1.09% | +1.76% | +0.27% |
+| Queda sem filtro de OI, H=3 | +0.75% | −0.15% | +1.33% | +0.08% |
+
+**Veredito: NÃO PASSA.** O DE tem 1.634 trades em 175 semanas.
+- **O repique existe, mas é do mercado inteiro.** Depois de dia de crash o absoluto fica positivo (+3.4% no DE, IC tocando zero), só que o excesso sobre outros pares nas mesmas datas é **+0.34%**, indistinguível de zero. Comprar o par que capitulou rende o mesmo que comprar qualquer outro par no dia seguinte ao crash. O open interest não seleciona nada.
+- **O open interest não separa capitulação de não capitulação:** o contraste (OI subindo) tem excesso parecido (+0.27%).
+- **H=3 fica isolado:** H=1 e H=7 dão zero, e um efeito real não deveria aparecer só num horizonte.
+- **Mesmo padrão de sempre em A:** nos 20 majors, o excesso de +1.37% tinha IC > 0. Em 368 pares, sumiu.
+
 ## Leitura conjunta
 
 Mesma direção do achado da auditoria v6 sobre o checklist mecânico dos Setups A/B. Nenhum dos dez setups de vídeo tem edge mecânico demonstrável nesses 20 pares (o 9.1 também não, fora da amostra, nos 80 pares do estudo 6):
