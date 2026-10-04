@@ -1,0 +1,99 @@
+  ... 0/586 tickers
+  ... 200/586 tickers
+Eventos de listagem no spot (anuncio -> spot em ate 7 d): 465 em 427 anuncios
+Montagem: {'sem perpetuo': 263, 'spot abriu antes da entrada': 27, 'sem candle de entrada/saida': 113, 'ok': 62}
+Trades validos: 62 em 53 anuncios | duracao mediana 4 h
+Por ano: {2023: 2, 2024: 5, 2025: 41, 2026: 14}
+
+====================================================================================================
+COMPRADO NO PERPETUO, anuncio -> abertura do spot (positivo = comprado ganhou)
+====================================================================================================
+  bruto                                    n=  62 anuncios= 53 media    -0.40% IC95 [   -4.17,    +3.30]
+  funding pago                             n=  62 anuncios= 53 media    -0.15% IC95 [   -0.28,    -0.04]
+  ABSOLUTO (decide)                        n=  62 anuncios= 53 media    -0.43% IC95 [   -4.24,    +3.27]
+  EXCESSO sobre majors (decide)            n=  62 anuncios= 53 media    -1.21% IC95 [   -5.15,    +2.60]
+  absoluto, custo 0.5%                     n=  62 anuncios= 53 media    -0.75% IC95 [   -4.56,    +2.95]
+  reacao perdida (anuncio -> entrada)      n=  62 anuncios= 53 media   +21.86% IC95 [  +12.65,   +31.73]
+  depois: abertura do spot -> +24h         n=  62 anuncios= 53 media    -9.87% IC95 [  -15.37,    -3.90]
+  depois: abertura do spot -> +7d          n=  62 anuncios= 53 media   -20.58% IC95 [  -28.09,   -12.75]
+  PLACEBO -30d: bruto                      n=  24 anuncios= 21 media    -0.64% IC95 [   -1.44,    +0.16]
+  PLACEBO -30d: excesso                    n=  24 anuncios= 21 media    -0.32% IC95 [   -1.23,    +0.45]
+
+  Por ano (descritivo):
+  2023 abs                                 (insuficiente)
+  2023 excesso                             (insuficiente)
+  2024 abs                                 n=   5 anuncios=  5 media    +0.03% IC95 [   -4.75,    +3.83]
+  2024 excesso                             n=   5 anuncios=  5 media    -0.34% IC95 [   -5.04,    +3.14]
+  2025 abs                                 n=  41 anuncios= 33 media    -0.20% IC95 [   -5.83,    +4.88]
+  2025 excesso                             n=  41 anuncios= 33 media    -0.63% IC95 [   -6.34,    +4.52]
+  2026 abs                                 n=  14 anuncios= 13 media    -2.35% IC95 [   -7.91,    +3.14]
+  2026 excesso                             n=  14 anuncios= 13 media    -4.50% IC95 [  -10.86,    +1.61]
+
+  abs: positivos 33/62 | mediana +0.49% | 5 piores [-50.1, -39.5, -37.3, -24.0, -17.4] | 5 melhores [24.6, 27.5, 30.1, 32.9, 43.5]
+
+  Por trade:
+    2023-11-24 06:09 BLURUSDT             1 h | bruto   +2.73% | abs   +2.54% | excesso   +2.83%
+    2023-12-15 03:58 1000BONKUSDT         3 h | bruto  +11.90% | abs  +11.72% | excesso  +12.65%
+    2024-02-02 07:50 PYTHUSDT             3 h | bruto   +4.18% | abs   +4.00% | excesso   +3.77%
+    2024-03-05 10:01 WIFUSDT              2 h | bruto   -8.90% | abs   -9.11% | excesso   -9.56%
+    2024-08-08 05:39 TONUSDT              3 h | bruto   -0.27% | abs   -0.43% | excesso   -0.27%
+    2024-09-16 05:45 TURBOUSDT            3 h | bruto   +0.65% | abs   +0.49% | excesso   +0.56%
+    2024-12-16 12:36 1000CATUSDT         19 h | bruto   +5.23% | abs   +5.18% | excesso   +3.80%
+    2025-01-10 08:55 AIXBTUSDT            3 h | bruto   +1.83% | abs   +1.65% | excesso   +2.02%
+    2025-01-10 08:55 CGPTUSDT             3 h | bruto   +3.93% | abs   +4.13% | excesso   +4.12%
+    2025-01-10 08:55 COOKIEUSDT           3 h | bruto   -7.05% | abs   -7.24% | excesso   -6.87%
+    2025-01-19 04:05 TRUMPUSDT            2 h | bruto  +27.67% | abs  +27.49% | excesso  +28.58%
+    2025-02-09 07:10 1000CHEEMSUSDT       2 h | bruto   -3.44% | abs   -3.62% | excesso   -2.48%
+    2025-02-27 05:15 SHELLUSDT            6 h | bruto   +1.45% | abs   +1.30% | excesso   +1.29%
+    2025-03-04 05:18 GPSUSDT              6 h | bruto   -2.87% | abs   -2.92% | excesso   -2.35%
+    2025-03-18 09:52 BMTUSDT              4 h | bruto   +2.59% | abs   +3.02% | excesso   +3.39%
+    2025-03-27 17:27 BANANAS31USDT        2 h | bruto   -5.02% | abs   -5.39% | excesso   -5.09%
+    2025-03-27 17:27 BROCCOLI714USDT      2 h | bruto   -1.82% | abs   -0.69% | excesso   -1.88%
+    2025-03-27 17:27 MUBARAKUSDT          2 h | bruto   +7.64% | abs   +7.46% | excesso   +7.58%
+    2025-03-27 17:27 TUTUSDT              2 h | bruto   -3.87% | abs   -2.05% | excesso   -3.93%
+    2025-04-09 08:42 BABYUSDT            25 h | bruto  +24.79% | abs  +24.58% | excesso  +18.33%
+    2025-04-11 10:08 BIGTIMEUSDT          2 h | bruto   +3.01% | abs   +3.00% | excesso   +2.34%
+    2025-04-11 10:08 ONDOUSDT             2 h | bruto   +2.84% | abs   +2.71% | excesso   +2.18%
+    2025-04-11 10:08 VIRTUALUSDT          2 h | bruto   +5.48% | abs   +5.45% | excesso   +4.82%
+    2025-05-02 10:21 STOUSDT              4 h | bruto   -1.71% | abs   -1.94% | excesso   -2.07%
+    2025-05-05 14:14 SXTUSDT             69 h | bruto  -39.26% | abs  -39.53% | excesso  -47.19%
+    2025-05-06 11:25 KMNOUSDT             2 h | bruto   -0.07% | abs   -0.25% | excesso   -0.20%
+    2025-05-21 10:04 HAEDALUSDT           3 h | bruto  +14.35% | abs  +15.01% | excesso  +12.77%
+    2025-06-11 10:24 RESOLVUSDT           2 h | bruto   +5.46% | abs   +5.51% | excesso   +4.33%
+    2025-06-23 14:08 NEWTUSDT            22 h | bruto  +43.68% | abs  +43.47% | excesso  +35.67%
+    2025-07-09 09:58 LAUSDT               5 h | bruto   -0.16% | abs   +2.55% | excesso   -1.09%
+    2025-08-18 09:36 PLUMEUSDT            4 h | bruto   +0.85% | abs   +0.71% | excesso   +0.03%
+    2025-08-27 10:43 DOLOUSDT             4 h | bruto  -10.67% | abs  -10.85% | excesso  -11.42%
+    2025-09-01 01:49 WLFIUSDT            10 h | bruto  -15.16% | abs  -15.36% | excesso  -16.72%
+    2025-09-01 08:59 SOMIUSDT            28 h | bruto  -49.88% | abs  -50.10% | excesso  -49.78%
+    2025-09-08 14:26 LINEAUSDT           48 h | bruto   -9.40% | abs   -9.64% | excesso  -12.74%
+    2025-09-21 08:58 0GUSDT              24 h | bruto  +33.13% | abs  +32.92% | excesso  +40.67%
+    2025-09-23 05:09 HEMIUSDT             5 h | bruto  +30.27% | abs  +30.14% | excesso  +30.87%
+    2025-09-24 08:00 XPLUSDT             27 h | bruto   +6.30% | abs   +6.09% | excesso  +10.17%
+    2025-10-03 09:51 MORPHOUSDT           4 h | bruto   -1.89% | abs   -2.08% | excesso   -1.78%
+    2025-10-06 07:48 ASTERUSDT            3 h | bruto   +0.92% | abs   +0.74% | excesso   +0.60%
+    2025-10-10 02:21 WALUSDT              3 h | bruto   -3.82% | abs   -4.00% | excesso   -3.78%
+    2025-10-14 09:46 YBUSDT              24 h | bruto  -23.77% | abs  -23.98% | excesso  -27.61%
+    2025-10-25 03:02 GIGGLEUSDT           1 h | bruto   -0.34% | abs   -0.52% | excesso   -0.31%
+    2025-10-31 08:09 KITEUSDT            75 h | bruto  -37.06% | abs  -37.34% | excesso  -32.61%
+    2025-11-06 04:45 SAPIENUSDT           4 h | bruto   -8.46% | abs   -8.64% | excesso   -8.36%
+    2025-11-13 10:00 BANKUSDT             2 h | bruto   -6.88% | abs   -6.86% | excesso   -6.06%
+    2025-11-13 10:00 METUSDT              2 h | bruto   +2.90% | abs   +2.71% | excesso   +3.71%
+    2025-11-27 08:38 ATUSDT               4 h | bruto   +4.41% | abs   +4.29% | excesso   +5.14%
+    2026-01-05 10:04 BREVUSDT            26 h | bruto  -12.67% | abs  -12.89% | excesso  -16.92%
+    2026-01-07 10:39 ZKPUSDT              2 h | bruto   -0.29% | abs   +0.45% | excesso   +0.42%
+    2026-01-12 12:50 FOGOUSDT            72 h | bruto  -17.09% | abs  -17.36% | excesso  -22.57%
+    2026-01-22 05:25 SENTUSDT             6 h | bruto  +23.56% | abs  +23.37% | excesso  +23.99%
+    2026-02-02 04:28 ZAMAUSDT             7 h | bruto  -10.72% | abs  -10.91% | excesso  -14.79%
+    2026-02-12 07:28 ESPUSDT              4 h | bruto  -17.13% | abs  -17.32% | excesso  -17.68%
+    2026-03-02 12:45 OPNUSDT             71 h | bruto   -6.93% | abs   -7.20% | excesso  -13.95%
+    2026-03-04 13:13 ROBOUSDT             1 h | bruto   +0.95% | abs   +0.77% | excesso   -1.86%
+    2026-03-11 11:31 NIGHTUSDT            2 h | bruto   +2.64% | abs   +2.46% | excesso   +1.42%
+    2026-03-13 01:45 KATUSDT            130 h | bruto   -3.98% | abs   -4.33% | excesso   -6.51%
+    2026-05-14 10:00 AIGENSYNUSDT         5 h | bruto   +7.45% | abs   +7.62% | excesso   +3.94%
+    2026-05-22 07:18 GENIUSUSDT           3 h | bruto   +3.67% | abs   +3.49% | excesso   +3.26%
+    2026-05-22 07:18 OPGUSDT              3 h | bruto   +0.26% | abs   +0.08% | excesso   -0.16%
+    2026-07-17 07:30 AEROUSDT             7 h | bruto   -1.03% | abs   -1.17% | excesso   -1.65%
+
+  DECISAO: NAO PASSA
+  [130s]

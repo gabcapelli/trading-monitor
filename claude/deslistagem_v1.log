@@ -1,0 +1,96 @@
+Eventos (token x anuncio), sem stablecoins/wrapped: 162 em 45 anuncios
+Montagem: {'sem perpetuo': 94, 'ok': 68}
+Trades validos: 68 em 27 anuncios | duracao media 11.0 d
+
+====================================================================================================
+VENDIDO NO PERPETUO (positivo = vendido ganhou)
+====================================================================================================
+  bruto                                    n=  68 anuncios= 27 media   -20.57% IC95 [ -101.29,   +18.82]
+  liquido (custo 0.18%)                    n=  68 anuncios= 27 media   -20.75% IC95 [ -101.47,   +18.64]
+  funding recebido                         n=  68 anuncios= 27 media    -2.53% IC95 [   -6.33,    -0.38]
+  ABSOLUTO (decide)                        n=  68 anuncios= 27 media   -23.28% IC95 [ -107.72,   +17.31]
+  EXCESSO sobre majors (decide)            n=  67 anuncios= 26 media   +12.46% IC95 [   +0.03,   +24.18]
+  absoluto, custo 0.5%                     n=  68 anuncios= 27 media   -23.60% IC95 [ -108.04,   +16.99]
+  absoluto, custo 1.0%                     n=  68 anuncios= 27 media   -24.10% IC95 [ -108.54,   +16.49]
+  reacao perdida (anuncio -> entrada)      n=  68 anuncios= 27 media   +12.56% IC95 [   +7.53,   +17.22]
+  PLACEBO -30d: bruto                      n=  68 anuncios= 27 media    +4.77% IC95 [   -0.51,   +10.02]
+  PLACEBO -30d: excesso                    n=  68 anuncios= 27 media    +3.60% IC95 [   -0.75,    +8.10]
+
+====================================================================================================
+SPOT, todos os eventos com par USDT (descritivo; positivo = preco subiu)
+====================================================================================================
+  reacao (anuncio -> entrada)              n= 116 anuncios= 31 media   -20.00% IC95 [  -24.17,   -15.84]
+  deriva (entrada -> 24h antes do delist)  n= 116 anuncios= 31 media   -21.10% IC95 [  -34.68,    +0.66]
+
+  Por trade (perpetuo):
+    2022-12-15 BTCSTUSDT        5.8 d | reacao    -0.0% | bruto    -0.0% | funding  +0.17% | abs    -0.0% | excesso    -9.9%
+    2023-03-17 HNTUSDT          5.6 d | reacao   +18.8% | bruto   +10.9% | funding  -0.14% | abs   +10.6% | excesso   +13.2%
+    2023-08-15 SRMUSDT          5.6 d | reacao    -0.0% | bruto    -0.0% | funding  +0.16% | abs    -0.0% | excesso   -12.2%
+    2023-11-27 BTSUSDT          8.7 d | reacao    -0.0% | bruto    -0.0% | funding  +0.26% | abs    +0.1% | excesso    +8.8%
+    2024-02-06 ANTUSDT         12.6 d | reacao    -0.2% | bruto   -23.9% | funding  -0.50% | abs   -24.5% | excesso    -0.8%
+    2024-02-06 XMRUSDT         12.6 d | reacao   +14.0% | bruto   +14.2% | funding  -3.78% | abs   +10.3% | excesso   +37.3%
+    2024-06-03 OMGUSDT         12.8 d | reacao   +22.5% | bruto   +28.5% | funding  -2.00% | abs   +26.4% | excesso   +19.5%
+    2024-06-03 WAVESUSDT       12.8 d | reacao   +24.3% | bruto   +25.3% | funding  -1.10% | abs   +24.0% | excesso   +16.2%
+    2024-06-03 XEMUSDT         12.8 d | reacao   +25.7% | bruto   +33.8% | funding  -2.04% | abs   +31.6% | excesso   +24.8%
+    2024-07-08 BONDUSDT        12.6 d | reacao   +14.6% | bruto    +2.8% | funding -11.00% | abs    -8.3% | excesso   +22.7%
+    2024-08-12 LOOMUSDT        12.6 d | reacao   +10.1% | bruto    -9.8% | funding  -6.39% | abs   -16.4% | excesso    +3.8%
+    2024-08-12 REEFUSDT        12.6 d | reacao   +18.0% | bruto   +11.0% | funding  -1.16% | abs    +9.7% | excesso   +24.7%
+    2024-10-23 UNFIUSDT        12.6 d | reacao   +34.7% | bruto    -0.2% | funding  -0.05% | abs    -0.5% | excesso    -7.1%
+    2024-11-26 KEYUSDT         12.6 d | reacao   +29.7% | bruto    +7.8% | funding  -3.62% | abs    +4.0% | excesso   +44.3%
+    2024-11-26 RENUSDT         12.6 d | reacao   +23.1% | bruto   -21.4% | funding  -9.21% | abs   -30.8% | excesso   +15.1%
+    2024-12-18 BLZUSDT          5.6 d | reacao   +10.8% | bruto   +37.5% | funding  -1.08% | abs   +36.2% | excesso   +28.3%
+    2025-02-17 AMBUSDT          5.6 d | reacao   +26.1% | bruto   +55.7% | funding +12.72% | abs   +68.2% | excesso   +54.4%
+    2025-02-17 STMXUSDT         5.6 d | reacao    +7.4% | bruto    -2.6% | funding  -3.52% | abs    -6.3% | excesso    -3.9%
+    2025-03-21 AERGOUSDT        5.7 d | reacao    +4.6% | bruto    +3.2% | funding  -6.39% | abs    -3.3% | excesso    +8.6%
+    2025-03-21 COMBOUSDT        5.7 d | reacao    +3.7% | bruto   +48.9% | funding  -5.80% | abs   +42.9% | excesso   +54.3%
+    2025-03-21 LINAUSDT         5.7 d | reacao    +7.5% | bruto   +56.5% | funding  +0.31% | abs   +56.7% | excesso   +61.9%
+    2025-04-24 ALPACAUSDT       6.8 d | reacao   -45.5% | bruto -2148.3% | funding -96.21% | abs -2244.6% | excesso    +nan%
+    2025-06-26 ALPHAUSDT        6.6 d | reacao    -3.8% | bruto   +27.0% | funding  -1.05% | abs   +25.8% | excesso   +30.4%
+    2025-06-26 BSWUSDT          6.6 d | reacao   -28.2% | bruto   +29.2% | funding  -0.15% | abs   +28.9% | excesso   +32.6%
+    2025-06-26 LEVERUSDT        6.6 d | reacao    +0.3% | bruto   +21.0% | funding  -3.86% | abs   +17.0% | excesso   +24.4%
+    2025-09-03 BAKEUSDT        12.8 d | reacao   +12.5% | bruto    +2.3% | funding  +1.53% | abs    +3.6% | excesso   +12.9%
+    2025-09-03 HIFIUSDT        12.8 d | reacao    +2.5% | bruto   -71.2% | funding  +2.66% | abs   -68.7% | excesso   -60.6%
+    2025-10-29 FLMUSDT         12.8 d | reacao   -29.8% | bruto   +23.7% | funding  +3.46% | abs   +27.0% | excesso   +24.8%
+    2025-10-29 KDAUSDT         12.8 d | reacao    +9.0% | bruto   +57.6% | funding  +2.10% | abs   +59.5% | excesso   +58.6%
+    2025-10-29 PERPUSDT        12.8 d | reacao   +17.1% | bruto   +18.4% | funding  +0.07% | abs   +18.3% | excesso   +19.5%
+    2025-12-03 FISUSDT         12.7 d | reacao    +7.1% | bruto   +29.8% | funding  +0.59% | abs   +30.2% | excesso   +20.6%
+    2025-12-03 REIUSDT         12.7 d | reacao    +7.9% | bruto   +28.6% | funding  +1.30% | abs   +29.7% | excesso   +19.4%
+    2025-12-03 VOXELUSDT       12.7 d | reacao    -2.5% | bruto   +20.4% | funding  +0.93% | abs   +21.1% | excesso   +11.2%
+    2026-02-02 CHESSUSDT        9.6 d | reacao   +10.2% | bruto   +15.1% | funding  +4.15% | abs   +19.0% | excesso    +1.5%
+    2026-02-02 DFUSDT           9.6 d | reacao   +21.0% | bruto   +43.1% | funding  +0.53% | abs   +43.5% | excesso   +29.6%
+    2026-02-02 GHSTUSDT         9.6 d | reacao   +24.0% | bruto   +25.4% | funding  +0.36% | abs   +25.6% | excesso   +11.8%
+    2026-02-02 NKNUSDT          9.6 d | reacao   +18.4% | bruto   +32.4% | funding  +1.08% | abs   +33.3% | excesso   +18.8%
+    2026-03-18 A2ZUSDT         12.5 d | reacao   +33.0% | bruto  -102.6% | funding  +8.97% | abs   -93.8% | excesso  -114.4%
+    2026-03-18 FORTHUSDT       12.5 d | reacao   +21.6% | bruto   +43.7% | funding  +0.10% | abs   +43.6% | excesso   +31.9%
+    2026-03-18 HOOKUSDT        12.5 d | reacao   +20.9% | bruto   +22.7% | funding  -2.00% | abs   +20.5% | excesso   +10.9%
+    2026-03-18 IDEXUSDT        12.5 d | reacao    -0.0% | bruto    -0.0% | funding  +0.00% | abs    -0.2% | excesso   -11.8%
+    2026-03-18 LRCUSDT         12.5 d | reacao   +11.0% | bruto   +11.6% | funding  -2.76% | abs    +8.6% | excesso    -0.2%
+    2026-03-18 NTRNUSDT        12.5 d | reacao   +20.5% | bruto   +15.1% | funding  -0.56% | abs   +14.4% | excesso    +3.4%
+    2026-03-18 RDNTUSDT        12.5 d | reacao   +15.9% | bruto   -29.6% | funding  -6.67% | abs   -36.4% | excesso   -41.3%
+    2026-03-18 SXPUSDT         12.5 d | reacao    -0.0% | bruto    -0.0% | funding  +0.00% | abs    -0.2% | excesso   -11.8%
+    2026-04-09 FIOUSDT         12.7 d | reacao   +22.5% | bruto   +44.2% | funding  +2.42% | abs   +46.5% | excesso   +49.8%
+    2026-04-09 FUNUSDT         12.7 d | reacao   +37.0% | bruto   +41.3% | funding  +0.15% | abs   +41.2% | excesso   +46.8%
+    2026-04-09 MDTUSDT         12.7 d | reacao    -0.0% | bruto    -0.0% | funding  +0.00% | abs    -0.2% | excesso    +5.6%
+    2026-04-09 OXTUSDT         12.7 d | reacao   +14.2% | bruto   +15.0% | funding  -3.29% | abs   +11.5% | excesso   +20.5%
+    2026-04-17 DEGOUSDT         9.5 d | reacao   +25.1% | bruto   +32.5% | funding  +1.48% | abs   +33.8% | excesso   +31.9%
+    2026-04-17 DENTUSDT         9.5 d | reacao   +25.3% | bruto    +0.6% | funding  +0.91% | abs    +1.3% | excesso    -0.0%
+    2026-04-17 TRUUSDT          9.5 d | reacao   +15.8% | bruto    +9.6% | funding  -2.85% | abs    +6.5% | excesso    +9.0%
+    2026-05-13 ATAUSDT         12.6 d | reacao   +39.0% | bruto   +37.0% | funding  +1.47% | abs   +38.3% | excesso   +36.5%
+    2026-05-13 MLNUSDT         12.6 d | reacao   +30.7% | bruto    -5.4% | funding  -3.05% | abs    -8.7% | excesso    -5.9%
+    2026-05-13 PHBUSDT         12.6 d | reacao   +30.5% | bruto   +39.2% | funding  -1.62% | abs   +37.4% | excesso   +38.7%
+    2026-05-13 SYSUSDT         12.6 d | reacao   +37.6% | bruto   +39.1% | funding  +0.79% | abs   +39.7% | excesso   +38.6%
+    2026-06-05 COSUSDT         12.6 d | reacao   +17.9% | bruto   +39.5% | funding  -7.85% | abs   +31.4% | excesso   +48.9%
+    2026-06-05 DUSDT           12.6 d | reacao   +17.4% | bruto   +26.9% | funding  -3.40% | abs   +23.3% | excesso   +36.3%
+    2026-06-05 HIGHUSDT        12.6 d | reacao   +15.5% | bruto   +40.5% | funding  -3.96% | abs   +36.4% | excesso   +50.0%
+    2026-06-05 MBOXUSDT        12.6 d | reacao   +24.3% | bruto   +40.0% | funding  -4.28% | abs   +35.5% | excesso   +49.4%
+    2026-06-26 NFPUSDT         12.5 d | reacao   +20.6% | bruto   -41.0% | funding -17.36% | abs   -58.5% | excesso   -34.0%
+    2026-08-03 ACXUSDT         12.8 d | reacao    +3.9% | bruto    -4.4% | funding  +0.29% | abs    -4.3% | excesso    -5.1%
+    2026-08-03 HFTUSDT         12.8 d | reacao   +11.8% | bruto  -211.5% | funding  +7.35% | abs  -204.3% | excesso  -212.2%
+    2026-08-03 VANRYUSDT       12.8 d | reacao    -6.0% | bruto   +15.3% | funding  -3.64% | abs   +11.5% | excesso   +14.7%
+    2026-08-03 VICUSDT         12.8 d | reacao   +12.2% | bruto    +1.5% | funding  +0.20% | abs    +1.5% | excesso    +0.8%
+    2026-08-20 ICXUSDT         12.7 d | reacao   +14.6% | bruto    +1.6% | funding  +0.66% | abs    +2.1% | excesso   +15.3%
+    2026-08-20 SCRTUSDT        12.7 d | reacao    +6.9% | bruto   +41.5% | funding  +1.16% | abs   +42.5% | excesso   +55.1%
+    2026-08-20 STORJUSDT       12.7 d | reacao    -1.2% | bruto    +4.6% | funding  -7.71% | abs    -3.2% | excesso   +18.3%
+
+  DECISAO: NAO PASSA
+  [156s]

@@ -1,0 +1,112 @@
+  ... 0/586 tickers
+  ... 200/586 tickers
+Eventos: 465 | vistos no estudo 29: 62 | amostra limpa: 403
+Montagem: {'sem perpetuo na abertura do spot': 255, 'perpetuo sem negociacao na entrada': 92, 'ok': 56}
+Trades validos: 56 em 56 anuncios | por ano {2023: 3, 2024: 4, 2025: 41, 2026: 8}
+
+====================================================================================================
+VENDIDO NO PERPETUO da abertura do spot ate +7d (positivo = vendido ganhou)
+====================================================================================================
+
+  [AMOSTRA LIMPA, H=7d (decide: absoluto E excesso)]
+  bruto                                    n=  56 anuncios= 56 media   +13.08% IC95 [   +0.94,   +24.58]
+  funding recebido                         n=  56 anuncios= 56 media    -4.32% IC95 [   -5.87,    -2.94]
+  absoluto                                 n=  56 anuncios= 56 media    +8.58% IC95 [   -4.00,   +20.53]
+  excesso sobre majors                     n=  56 anuncios= 56 media   +12.96% IC95 [   +0.55,   +24.51]
+  absoluto, custo 0.5%                     n=  56 anuncios= 56 media    +8.26% IC95 [   -4.32,   +20.21]
+  abs: positivos 38/56 | mediana +23.94% | 5 piores [-120.8, -92.8, -92.3, -91.7, -78.2]
+
+  [amostra limpa, H=24h (descritivo)]
+  bruto                                    n=  56 anuncios= 56 media    +1.14% IC95 [  -11.92,   +12.31]
+  funding recebido                         n=  56 anuncios= 56 media    -1.80% IC95 [   -2.64,    -1.12]
+  absoluto                                 n=  56 anuncios= 56 media    -0.83% IC95 [  -13.99,   +10.53]
+  excesso sobre majors                     n=  56 anuncios= 56 media    +1.62% IC95 [  -11.33,   +12.67]
+  absoluto, custo 0.5%                     n=  56 anuncios= 56 media    -1.15% IC95 [  -14.31,   +10.21]
+  abs: positivos 36/56 | mediana +11.81% | 5 piores [-205.3, -117.2, -106.3, -88.4, -83.9]
+
+  [amostra limpa, H=14d (descritivo)]
+  bruto                                    n=  56 anuncios= 56 media   +23.26% IC95 [  +12.82,   +33.05]
+  funding recebido                         n=  56 anuncios= 56 media    -5.67% IC95 [   -7.81,    -3.74]
+  absoluto                                 n=  56 anuncios= 56 media   +17.41% IC95 [   +6.33,   +27.66]
+  excesso sobre majors                     n=  56 anuncios= 56 media   +23.65% IC95 [  +13.34,   +33.37]
+  absoluto, custo 0.5%                     n=  56 anuncios= 56 media   +17.09% IC95 [   +6.01,   +27.34]
+  abs: positivos 38/56 | mediana +30.28% | 5 piores [-99.1, -88.3, -61.1, -58.7, -48.0]
+
+  [os 62 do estudo 29, H=7d (amostra JA VISTA, so referencia)]
+  bruto                                    n=  62 anuncios= 53 media   +20.58% IC95 [  +12.75,   +28.09]
+  funding recebido                         n=  62 anuncios= 53 media    -2.73% IC95 [   -4.28,    -1.51]
+  absoluto                                 n=  62 anuncios= 53 media   +17.67% IC95 [   +9.48,   +25.59]
+  excesso sobre majors                     n=  62 anuncios= 53 media   +20.84% IC95 [  +14.54,   +26.87]
+  absoluto, custo 0.5%                     n=  62 anuncios= 53 media   +17.35% IC95 [   +9.16,   +25.27]
+  abs: positivos 47/62 | mediana +20.37% | 5 piores [-77.7, -42.6, -34.4, -31.4, -30.3]
+
+  Por ano (amostra limpa, H=7d):
+  2023 abs                                 n=   3 anuncios=  3 media    -9.15% IC95 [  -92.32,   +64.57]
+  2023 excesso                             n=   3 anuncios=  3 media   -10.70% IC95 [  -86.93,   +54.39]
+  2024 abs                                 n=   4 anuncios=  4 media   +31.47% IC95 [  +22.59,   +42.33]
+  2024 excesso                             n=   4 anuncios=  4 media   +26.08% IC95 [  +14.72,   +36.01]
+  2025 abs                                 n=  41 anuncios= 41 media   +12.36% IC95 [   -2.69,   +26.46]
+  2025 excesso                             n=  41 anuncios= 41 media   +18.12% IC95 [   +3.38,   +31.95]
+  2026 abs                                 n=   8 anuncios=  8 media   -15.55% IC95 [  -34.86,    +4.37]
+  2026 excesso                             n=   8 anuncios=  8 media   -11.16% IC95 [  -32.60,   +11.21]
+
+  Por trade (amostra limpa, H=7d):
+    2023-03-23 15:00 ARBUSDT          bruto   +0.19% | funding  +0.28% | abs   +0.29% | excesso   +0.43%
+    2023-05-05 18:00 1000PEPEUSDT     bruto  +64.87% | funding  -0.11% | abs  +64.57% | excesso  +54.39%
+    2023-11-07 12:00 ORDIUSDT         bruto  -93.11% | funding  +0.96% | abs  -92.32% | excesso  -86.93%
+    2024-03-16 12:00 BOMEUSDT         bruto  +29.52% | funding  +1.23% | abs  +30.57% | excesso  +24.47%
+    2024-08-26 12:00 DOGSUSDT         bruto  +20.21% | funding  -0.10% | abs  +19.93% | excesso   +7.85%
+    2024-09-20 11:00 CATIUSDT         bruto  +28.33% | funding  +0.25% | abs  +28.40% | excesso  +35.34%
+    2024-09-26 12:00 HMSTRUSDT        bruto  +46.94% | funding  +0.21% | abs  +46.97% | excesso  +36.68%
+    2025-02-20 13:00 KAITOUSDT        bruto  -68.16% | funding  -9.90% | abs  -78.24% | excesso  -77.98%
+    2025-03-13 08:00 EPICUSDT         bruto  +17.39% | funding  -0.29% | abs  +16.92% | excesso  +24.56%
+    2025-03-19 08:00 FORMUSDT         bruto  -14.83% | funding  +0.21% | abs  -14.81% | excesso   -4.71%
+    2025-03-24 13:00 NILUSDT          bruto  +35.98% | funding  -0.03% | abs  +35.78% | excesso  +27.71%
+    2025-03-25 13:00 PARTIUSDT        bruto  +45.73% | funding  -1.20% | abs  +44.34% | excesso  +38.51%
+    2025-03-31 13:00 GUNUSDT          bruto  +57.47% | funding  -2.38% | abs  +54.91% | excesso  +42.27%
+    2025-04-14 12:00 KERNELUSDT       bruto  +49.80% | funding  -6.77% | abs  +42.85% | excesso  +49.91%
+    2025-04-15 11:00 WCTUSDT          bruto  -22.69% | funding  -9.65% | abs  -32.52% | excesso  -20.19%
+    2025-04-22 13:00 HYPERUSDT        bruto  +24.14% | funding  -0.20% | abs  +23.76% | excesso  +35.61%
+    2025-04-24 11:00 INITUSDT         bruto  -19.21% | funding  -0.22% | abs  -19.61% | excesso  -13.91%
+    2025-04-28 11:00 SIGNUSDT         bruto   -5.61% | funding -10.75% | abs  -16.54% | excesso  -11.85%
+    2025-05-15 07:00 NXPCUSDT         bruto  +35.73% | funding  -3.72% | abs  +31.83% | excesso  +37.52%
+    2025-05-21 08:00 AWEUSDT          bruto   +3.88% | funding  -0.93% | abs   +2.76% | excesso   +7.57%
+    2025-05-26 13:00 HUMAUSDT         bruto  +53.51% | funding  -0.49% | abs  +52.84% | excesso  +44.17%
+    2025-05-28 13:00 SOPHUSDT         bruto  +38.30% | funding -14.18% | abs  +23.94% | excesso  +30.73%
+    2025-06-12 15:00 HOMEUSDT         bruto  +38.38% | funding  -6.42% | abs  +31.78% | excesso  +28.70%
+    2025-06-17 09:00 SPKUSDT          bruto  +29.16% | funding  -7.07% | abs  +21.91% | excesso  +25.28%
+    2025-06-26 12:00 SAHARAUSDT       bruto  +11.89% | funding -18.91% | abs   -7.20% | excesso  +18.60%
+    2025-07-17 15:00 ERAUSDT          bruto  -68.43% | funding -24.15% | abs  -92.76% | excesso  -64.79%
+    2025-07-29 14:00 TREEUSDT         bruto  +57.34% | funding  -1.85% | abs  +55.31% | excesso  +51.37%
+    2025-07-30 08:00 A2ZUSDT          bruto  +15.99% | funding  -0.33% | abs  +15.48% | excesso  +10.16%
+    2025-08-05 14:00 TOWNSUSDT        bruto  +44.63% | funding  -2.95% | abs  +41.50% | excesso  +53.06%
+    2025-08-05 17:00 PROVEUSDT        bruto  -88.00% | funding  -3.54% | abs  -91.72% | excesso  -73.88%
+    2025-08-29 15:00 MITOUSDT         bruto  +33.50% | funding  -4.62% | abs  +28.70% | excesso  +33.60%
+    2025-09-08 13:00 OPENUSDT         bruto  -64.36% | funding  -3.49% | abs  -68.03% | excesso  -60.33%
+    2025-09-11 12:00 HOLOUSDT         bruto  +45.89% | funding  -2.59% | abs  +43.12% | excesso  +50.21%
+    2025-09-11 12:00 PUMPUSDT         bruto  -40.54% | funding  +0.34% | abs  -40.37% | excesso  -36.21%
+    2025-09-15 14:00 ZKCUSDT          bruto  +53.12% | funding  -1.92% | abs  +51.02% | excesso  +49.70%
+    2025-09-15 05:00 AVNTUSDT         bruto -119.77% | funding  -0.85% | abs -120.79% | excesso -123.88%
+    2025-09-18 11:00 BARDUSDT         bruto  +11.44% | funding  -4.60% | abs   +6.66% | excesso   +0.46%
+    2025-09-26 12:00 MIRAUSDT         bruto  +56.49% | funding  -5.73% | abs  +50.58% | excesso  +77.20%
+    2025-09-29 13:00 FFUSDT           bruto  +60.03% | funding  -2.06% | abs  +57.79% | excesso  +76.85%
+    2025-09-30 11:00 EDENUSDT         bruto  +65.91% | funding  -0.68% | abs  +65.05% | excesso  +80.84%
+    2025-10-02 13:00 2ZUSDT           bruto  +55.15% | funding  -1.10% | abs  +53.87% | excesso  +54.75%
+    2025-10-01 08:00 NOMUSDT          bruto  +38.92% | funding  -0.51% | abs  +38.22% | excesso  +45.93%
+    2025-10-13 14:00 EULUSDT          bruto  +38.38% | funding  -1.08% | abs  +37.12% | excesso  +32.68%
+    2025-10-14 09:00 ENSOUSDT         bruto  +49.49% | funding  -3.13% | abs  +46.18% | excesso  +44.67%
+    2025-10-17 13:00 ZBTUSDT          bruto  +58.46% | funding -16.58% | abs  +41.70% | excesso  +65.87%
+    2025-10-22 15:00 TURTLEUSDT       bruto  +46.29% | funding  -3.67% | abs  +42.43% | excesso  +52.34%
+    2025-11-04 12:00 MMTUSDT          bruto  -38.81% | funding  -4.89% | abs  -43.88% | excesso  -27.50%
+    2025-11-11 14:00 ALLOUSDT         bruto  +78.24% | funding  -3.24% | abs  +74.82% | excesso  +67.17%
+    2026-01-15 08:00 FRAXUSDT         bruto  -39.84% | funding -11.13% | abs  -51.15% | excesso  -50.48%
+    2026-03-04 08:00 MANTRAUSDT       bruto  -17.25% | funding -10.10% | abs  -27.53% | excesso  -18.09%
+    2026-03-16 13:00 CFGUSDT          bruto  +33.58% | funding -16.82% | abs  +16.58% | excesso  +27.72%
+    2026-03-26 14:00 XAUTUSDT         bruto   -3.11% | funding  +0.02% | abs   -3.26% | excesso   -9.51%
+    2026-04-21 13:00 CHIPUSDT         bruto  -36.71% | funding  -6.94% | abs  -43.83% | excesso  -38.20%
+    2026-04-30 11:00 MEGAUSDT         bruto  +31.09% | funding  -1.18% | abs  +29.73% | excesso  +40.06%
+    2026-06-18 14:00 REUSDT           bruto  -32.56% | funding -12.23% | abs  -44.97% | excesso  -46.00%
+    2026-07-02 08:00 GRAMUSDT         bruto   +0.31% | funding  -0.08% | abs   +0.06% | excesso   +5.21%
+
+  DECISAO: NAO PASSA
+  [154s]
