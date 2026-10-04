@@ -1,4 +1,4 @@
-# Situacao atual -- Multi-Par (script gratuito, sem LLM) -- atualizado 2026-10-04 14:05 BRT
+# Situacao atual -- Multi-Par (script gratuito, sem LLM) -- atualizado 2026-10-04 15:05 BRT
 
 > Gerado por `monitor/fetch_and_check.py` via GitHub Actions, sem chamar a API do Claude. Registra fatos objetivos; a interpretacao qualitativa fica a seu criterio (ou cole este arquivo + o log numa conversa do Claude).
 
@@ -8,13 +8,13 @@
 
 | Par | Tendencia 4h | Close 1h | Funding | Zona / setup candidato | Status |
 |---|---|---|---|---|---|
-| BTC/USDT | alta | 85338.2 | 0.0058% | — | sem_zona |
-| ETH/USDT | lateral | 2702.0 | 0.0033% | Setup B (venda) 2704.5-2708.4 (0/3 toques, 0/8 candles) | zona_mapeada_setup_B |
-| SOL/USDT | alta | 121.69 | 0.0100% | — | sem_zona |
-| XRP/USDT | lateral | 1.5026 | 0.0100% | Setup B (compra) 1.4989-1.5019 (0/3 toques, 0/8 candles) | zona_mapeada_setup_B |
-| DOGE/USDT | alta | 0.09449 | 0.0053% | Setup B (compra) 0.09301-0.09319 (0/3 toques, 4/8 candles) | zona_mapeada_setup_B |
-| ARB/USDT | baixa | 0.20231 | -0.0020% | — | sem_zona |
-| WLD/USDT | alta | 0.58070 | 0.0100% | — | sem_zona |
-| SUI/USDT | lateral | 1.2243 | 0.0100% | Setup B (venda) 1.2143-1.2223 (0/3 toques, 0/8 candles) | zona_mapeada_setup_B |
-| UNI/USDT | alta | 9.0210 | 0.0066% | — | invalidado_setup_B |
-| LINK/USDT | lateral | 14.15 | 0.0042% | — | sem_zona |
+| BTC/USDT | alta | 85276.9 | 0.0058% | — | sem_zona |
+| ETH/USDT | lateral | 2701.0 | 0.0034% | — | confirmado_calibracao_setup_B |
+| SOL/USDT | alta | 121.45 | 0.0100% | — | sem_zona |
+| XRP/USDT | lateral | 1.5005 | 0.0099% | Setup B (compra) 1.4989-1.5019 (1/3 toques, 0/8 candles) | zona_mapeada_setup_B |
+| DOGE/USDT | alta | 0.09540 | 0.0088% | Setup B (compra) 0.09301-0.09319 (0/3 toques, 5/8 candles) | zona_mapeada_setup_B |
+| ARB/USDT | baixa | 0.20169 | -0.0003% | — | sem_zona |
+| WLD/USDT | alta | 0.57910 | 0.0100% | — | sem_zona |
+| SUI/USDT | lateral | 1.2212 | 0.0100% | Setup B (venda) 1.2143-1.2223 (1/3 toques, 0/8 candles) | zona_mapeada_setup_B |
+| UNI/USDT | alta | 9.0140 | 0.0096% | — | sem_zona |
+| LINK/USDT | lateral | 14.15 | 0.0024% | — | sem_zona |
