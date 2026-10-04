@@ -807,6 +807,39 @@
 "status": "fechado",
 "t0": 20728
 },
+"CARVUSDT|20737": {
+"cesta_in": {
+"ADAUSDT": 0.2436,
+"ARBUSDT": 0.20121,
+"AVAXUSDT": 11.12,
+"BCHUSDT": 319.55,
+"BNBUSDT": 787.43,
+"BTCUSDT": 84710.6,
+"DOGEUSDT": 0.09276,
+"ETHUSDT": 2686.01,
+"HYPEUSDT": 89.314,
+"LINKUSDT": 14.109,
+"LTCUSDT": 70.23,
+"NEARUSDT": 4.832,
+"SOLUSDT": 119.55,
+"SUIUSDT": 1.1834,
+"TRXUSDT": 0.33527,
+"UNIUSDT": 9.048,
+"WLDUSDT": 0.5978,
+"XLMUSDT": 0.21597,
+"XRPUSDT": 1.4855,
+"ZECUSDT": 1304.94
+},
+"entrada": 20730,
+"first_seen": 20719,
+"frac": 0.8786189534256427,
+"par": "CARVUSDT",
+"pct": 6.125475870281403,
+"protocolo": "carv",
+"px_in": 0.04427,
+"status": "aberto",
+"t0": 20737
+},
 "EIGENUSDT|20728": {
 "cesta_in": {
 "ADAUSDT": 0.2476,
