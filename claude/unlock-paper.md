@@ -7,7 +7,7 @@
 > venda + compra da cesta dos 20 majors. Custo 0.18% por perna e funding real.
 > **Só reavaliar com 150 trades fechados.** Antes disso é ruído.
 
-_Atualizado em 2026-10-04 (calendário de 2026-10-04)._
+_Atualizado em 2026-10-05 (calendário de 2026-10-05)._
 
 **Trades fechados:** 7 de 150 (5%) · 5 com funding pendente
 
@@ -26,7 +26,6 @@ _Referência do backtest (2025–2026): puro +2.9%, excesso sobre o universo +2.
 
 | Token | Desbloqueio | % da oferta | % insiders | Entrada prevista |
 |---|---|---|---|---|
-| APT | 2026-10-12 | 1.3% | 60% | 2026-10-05 |
 | BB | 2026-10-13 | 2.9% | 80% | 2026-10-06 |
 | PUMP | 2026-10-13 | 1.3% | 100% | 2026-10-06 |
 | SEI | 2026-10-14 | 1.6% | 89% | 2026-10-07 |

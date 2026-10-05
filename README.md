@@ -1,6 +1,6 @@
 # Painel de estratégias
 
-_Atualizado em 04/10 20:05 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
+_Atualizado em 04/10 21:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
 
 ## Precisa de você
 
@@ -19,7 +19,7 @@ _Nada pendente._
 
 ## Próximos eventos
 
-- 05/10 · Desbloqueio: venda prevista de APT
+- 06/10 · Desbloqueio: venda prevista de BB, PUMP
 - 09/10 · Sábado: entrada da cesta (21h)
 - 10/10 · Desbloqueio: recompra de MOVE
 - 11/10 · Desbloqueio: recompra de CARV
