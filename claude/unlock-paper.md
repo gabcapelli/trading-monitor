@@ -21,6 +21,7 @@ _Referência do backtest (2025–2026): puro +2.9%, excesso sobre o universo +2.
 |---|---|---|---|---|
 | MOVE | 2026-10-10 | 3.7% | 2026-10-03 | 0.009912 |
 | CARV | 2026-10-11 | 6.1% | 2026-10-04 | 0.04427 |
+| APT | 2026-10-12 | 1.3% | 2026-10-05 | 0.8008 |
 
 ## Próximas entradas (calendário atual)
 
