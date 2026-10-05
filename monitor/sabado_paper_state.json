@@ -11,9 +11,9 @@
   {
    "dia": 20729,
    "data": "03/10/2026",
-   "principal": 0.014912243123380093,
-   "secundaria": 0.002913988099319776,
-   "funding_pendente": true
+   "principal": 0.014830122823048417,
+   "secundaria": 0.0028800273575939617,
+   "funding_pendente": false
   }
  ]
 }

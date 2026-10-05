@@ -922,12 +922,12 @@
 20730
 ],
 "entrada": 20727,
-"motivo": null,
+"motivo": "nao-cripto (EQUITY) (confirmado apos a abertura)",
 "par": "ACNUSDT",
 "px_in": 184.17,
-"status": "aberto",
+"status": "descartado",
 "stop_px": 276.255,
-"tipo": "?"
+"tipo": "EQUITY"
 },
 "BWETUSDT": {
 "cesta_in": {
@@ -952,12 +952,12 @@
 20730
 ],
 "entrada": 20727,
-"motivo": null,
+"motivo": "nao-cripto (EQUITY) (confirmado apos a abertura)",
 "par": "BWETUSDT",
 "px_in": 793.21,
-"status": "aberto",
+"status": "descartado",
 "stop_px": 1189.815,
-"tipo": "?"
+"tipo": "EQUITY"
 },
 "CRMLUSDT": {
 "cesta_in": {
@@ -982,12 +982,12 @@
 20730
 ],
 "entrada": 20727,
-"motivo": null,
+"motivo": "nao-cripto (EQUITY) (confirmado apos a abertura)",
 "par": "CRMLUSDT",
 "px_in": 7.298,
-"status": "aberto",
+"status": "descartado",
 "stop_px": 10.947,
-"tipo": "?"
+"tipo": "EQUITY"
 },
 "CTUSDT": {
 "cesta_in": {
@@ -1023,7 +1023,7 @@
 "px_in": 0.50286,
 "status": "aberto",
 "stop_px": 0.7542899999999999,
-"tipo": "?"
+"tipo": "COIN"
 },
 "CVNAUSDT": {
 "cesta_in": {
@@ -1097,12 +1097,12 @@
 20730
 ],
 "entrada": 20727,
-"motivo": null,
+"motivo": "nao-cripto (EQUITY) (confirmado apos a abertura)",
 "par": "MPUSDT",
 "px_in": 47.47,
-"status": "aberto",
+"status": "descartado",
 "stop_px": 71.205,
-"tipo": "?"
+"tipo": "EQUITY"
 },
 "NKEUSDT": {
 "cesta_in": {
@@ -1127,12 +1127,12 @@
 20730
 ],
 "entrada": 20727,
-"motivo": null,
+"motivo": "nao-cripto (EQUITY) (confirmado apos a abertura)",
 "par": "NKEUSDT",
 "px_in": 35.49,
-"status": "aberto",
+"status": "descartado",
 "stop_px": 53.235,
-"tipo": "?"
+"tipo": "EQUITY"
 },
 "OKLOUSDT": {
 "cesta_in": {
@@ -1256,12 +1256,12 @@
 20730
 ],
 "entrada": 20727,
-"motivo": null,
+"motivo": "nao-cripto (EQUITY) (confirmado apos a abertura)",
 "par": "SECZUSDT",
 "px_in": 14.64,
-"status": "aberto",
+"status": "descartado",
 "stop_px": 21.96,
-"tipo": "?"
+"tipo": "EQUITY"
 },
 "TWSTUSDT": {
 "cesta_in": {
@@ -1327,12 +1327,12 @@
 20730
 ],
 "entrada": 20727,
-"motivo": null,
+"motivo": "nao-cripto (EQUITY) (confirmado apos a abertura)",
 "par": "UNHUSDT",
 "px_in": 368.34,
-"status": "aberto",
+"status": "descartado",
 "stop_px": 552.51,
-"tipo": "?"
+"tipo": "EQUITY"
 },
 "USDBRLUSDT": {
 "d0": 20717,

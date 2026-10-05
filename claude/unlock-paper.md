@@ -9,9 +9,9 @@
 
 _Atualizado em 2026-10-05 (calendário de 2026-10-05)._
 
-**Trades fechados:** 7 de 150 (5%) · 5 com funding pendente
+**Trades fechados:** 7 de 150 (5%)
 
-**Média por trade:** puro +2.26% · com hedge +1.36% · hedge positivo em 4/7 (57%)
+**Média por trade:** puro +2.04% · com hedge +1.08% · hedge positivo em 4/7 (57%)
 
 _Referência do backtest (2025–2026): puro +2.9%, excesso sobre o universo +2.1%._
 
@@ -54,10 +54,10 @@ _Passa pelos filtros (perpétuo com ≥ 30 dias, mesmo token a ≥ 14 dias) só 
 
 | Token | Desbloqueio | % da oferta | Retorno do token | Cesta | Puro | Com hedge | Obs. |
 |---|---|---|---|---|---|---|---|
-| STO | 2026-10-03 | 4.9% | -5.63% | -3.73% | +5.45% | +1.54% | funding pendente |
-| ZETA | 2026-10-02 | 2.8% | +0.69% | +0.45% | -0.87% | -0.60% | funding pendente |
-| MAV | 2026-10-02 | 3.4% | -1.46% | -0.63% | +1.28% | +0.47% | funding pendente |
-| EIGEN | 2026-10-02 | 4.3% | +3.48% | -0.63% | -3.66% | -4.47% | funding pendente |
-| 2Z | 2026-10-02 | 47.8% | +1.16% | -0.63% | -1.34% | -2.16% | funding pendente |
+| STO | 2026-10-03 | 4.9% | -5.63% | -3.73% | +5.64% | +1.65% |  |
+| ZETA | 2026-10-02 | 2.8% | +0.69% | +0.45% | -0.64% | -0.46% |  |
+| MAV | 2026-10-02 | 3.4% | -1.46% | -0.63% | +1.49% | +0.59% |  |
+| EIGEN | 2026-10-02 | 4.3% | +3.48% | -0.63% | -3.45% | -4.35% |  |
+| 2Z | 2026-10-02 | 47.8% | +1.16% | -0.63% | -3.73% | -4.62% |  |
 | GUN | 2026-10-01 | 7.0% | +1.06% | +2.42% | -1.03% | +1.13% |  |
 | ZORA | 2026-09-30 | 3.0% | -15.97% | -2.09% | +16.00% | +13.64% |  |

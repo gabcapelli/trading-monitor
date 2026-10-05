@@ -8,11 +8,11 @@
 
 **Sábados registrados:** 2 de 104 necessários (2%)
 
-**Acumulado (20 majors):** +1.45% | positivos: 1/2 (50%)
+**Acumulado (20 majors):** +1.44% | positivos: 1/2 (50%)
 
 **Acumulado (5 maiores):** -0.78%
 
 | Sábado | 20 majors | 5 maiores | acum. 20 majors |
 |---|---|---|---|
 | 26/09/2026 | -0.04% | -1.07% | -0.04% |
-| 03/10/2026 (funding pendente) | +1.49% | +0.29% | +1.45% |
+| 03/10/2026 | +1.48% | +0.29% | +1.44% |
