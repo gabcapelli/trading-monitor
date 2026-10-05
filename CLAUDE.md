@@ -105,6 +105,10 @@ A mesma regra do papel (vendido de +60 min a +24h) aplicada à designação de "
 
 Vendido de +60 min a +4h após o fim de suporte da Upbit, 15 anúncios: líquido −1.8% [−6.3, +1.0], mediana ~0. O efeito (−7%) acontece na primeira hora. Não sustenta o braço exploratório de deslistagem do papel. **A família "anúncios de corretora" está praticamente esgotada.** O que resta é o papel da Monitoring Tag.
 
+### Estudo 41 — "efeito Upbit" (05/10/2026, não passou)
+
+Comprar o perpétuo após a Upbit anunciar uma listagem em KRW (43 anúncios): o movimento é de **+16%**, mas acontece **inteiro no primeiro minuto**. Entrando com 1 minuto, sobra +0.3% [−1.4, +2.2], e sem os 3 maiores trades fica negativo. **Encerra a ideia de um servidor de execução rápida para anúncios**, porque é corrida de milissegundos. Em anúncios, só a Monitoring Tag (24h) dura além do primeiro minuto.
+
 **Leitura acumulada (37 estudos):** nenhuma regra direcional passou. Os fracassos têm três causas recorrentes: efeito rápido demais para latência horária, efeito que é do mercado inteiro (beta) e custo de carregar a posição (funding, squeeze). O que funcionou foi estrutural e sem previsão: cash-and-carry (estudo 20; prêmio secou), base trimestral (24) e desbloqueio de tokens (25, no papel).
 
 **Infra nova (reaproveitável):**

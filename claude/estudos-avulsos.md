@@ -1076,6 +1076,33 @@ Script: `monitor/replay_upbit_deslistagem.py` (reaproveita o 39) · log: `claude
 - **Não sustenta o braço de deslistagem do papel.** Ele segue registrando como exploratório, sem expectativa.
 - **Ressalva:** são só 15 eventos, e um anúncio da Upbit mexe menos no perpétuo da Binance que um da própria Binance.
 
+## 41. "Efeito Upbit": comprar o perpétuo logo após a Upbit anunciar uma listagem — 05/10/2026
+
+Script: `monitor/replay_upbit_listagem.py` · log: `claude/upbit_listagem.log`
+
+- **Por quê:** o estudo 38 mostrou que o dinheiro dos anúncios está nos primeiros minutos. Antes de montar um servidor de execução rápida, a pergunta era se sobra algo com **1 minuto** de latência num evento nunca usado aqui.
+- **Eventos:** "신규 거래지원" (listagem nova) na Upbit. O braço que decide são as listagens **com mercado KRW**.
+  - **Filtro:** só tokens que já negociavam havia ≥ 30 dias no perpétuo da Binance, sem listagem da Binance colada (35 excluídos).
+  - **Amostra:** **44 trades em 43 anúncios** (2024–2026), mais 27 listagens só em BTC/USDT, como descritivo.
+- **Regra:** comprado, entrada na abertura do minuto seguinte ao anúncio (0–60 s depois), saída em 15, 60 ou 240 min, custo de 0.5% (slippage de notícia).
+- **Critério:**
+  - Líquido e excesso sobre o BTC com IC 98.33% > 0 (Bonferroni, 3 horizontes).
+  - **E** a média sem os 3 maiores trades > 0, contra a média puxada por poucos trades, a fragilidade vista no estudo 38.
+- **Checagem do horário:** o pré-movimento (−15 min → anúncio) dá +0.4%, mediana 0, então o `listed_at` da Upbit é confiável.
+
+| Saída | Total (anúncio → saída) | **+1 min: líquido (decide)** | +1 min: sem os 3 maiores | +2 min: líquido |
+|---|---|---|---|---|
+| 15 min | **+16.0%** (mediana +9.4%) | +0.3% [−1.4, +2.2] | −0.7% | −0.2% |
+| 60 min | +15.8% | +0.3% [−2.1, +2.7] | −0.7% | −0.2% |
+| 240 min | +15.0% | +0.6% [−4.3, +5.6] | −1.7% | 0.0% |
+
+**Veredito: NÃO PASSA.** É o resultado mais nítido da série.
+- **O efeito é enorme e real:** +16% em média, mediana de +9% a +12%.
+- **Mas acontece inteiro dentro do primeiro minuto:** quem chega com 1 minuto de atraso pega zero. Com custo de 1%, fica negativo.
+- **Nas listagens só em BTC/USDT** o atrasado perde (−2.8%).
+- **Consequência:** **encerra a ideia de um servidor de execução rápida** para anúncios. Disputar esse efeito exige reação em segundos ou milissegundos, terreno de robôs profissionais com acesso privilegiado ao anúncio.
+- **Leitura combinada com o 38:** nos anúncios, o único efeito que dura além do primeiro minuto é a Monitoring Tag (24h), que já está no papel.
+
 ## Leitura conjunta
 
 Mesma direção do achado da auditoria v6 sobre o checklist mecânico dos Setups A/B. Nenhum dos dez setups de vídeo tem edge mecânico demonstrável nesses 20 pares (o 9.1 também não, fora da amostra, nos 80 pares do estudo 6):

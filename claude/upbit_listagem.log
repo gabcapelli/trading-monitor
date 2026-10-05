@@ -1,0 +1,92 @@
+Listagens na Upbit (token, 1o anuncio): 145 | fora por listagem da Binance colada: 35
+Montagem (motivo, KRW?): {('ok', True): 44, ('sem perpetuo', True): 29, ('sem volume ou listado ha menos de 30 dias', True): 31, ('sem perpetuo', False): 8, ('sem volume ou listado ha menos de 30 dias', False): 6, ('ok', False): 27}
+Trades validos: principal (KRW) 44 em 43 anuncios | so BTC/USDT 27
+
+==============================================================================================================
+PRINCIPAL: listagem com mercado KRW (comprado; positivo = comprado ganhou)
+==============================================================================================================
+    pre-movimento (-15 min -> anuncio)   n=  44 an= 43 media   +0.41% IC95 [  -0.14,   +1.09] mediana  +0.02%
+
+  Saida em 15 min:
+    total (anuncio -> saida, sem custo)  n=  44 an= 43 media  +15.99% IC95 [ +10.03,  +23.13] mediana  +9.37%
+    +1 min: LIQUIDO custo 0.5% (decide)  n=  44 an= 43 media   +0.32% IC98.33 [  -1.37,   +2.22] mediana  +0.29%
+    +1 min: EXCESSO s/ BTC (decide)      n=  44 an= 43 media   +0.83% IC98.33 [  -0.85,   +2.73] mediana  +0.79%
+    +1 min: liquido, custo 1.0%          n=  44 an= 43 media   -0.18% IC95 [  -1.60,   +1.36] mediana  -0.21%
+    +1 min: liquido sem os 3 maiores       -0.66%
+    +2 min: LIQUIDO custo 0.5%           n=  44 an= 43 media   -0.16% IC95 [  -1.12,   +0.94] mediana  -0.38%
+    +2 min: EXCESSO s/ BTC               n=  44 an= 43 media   +0.34% IC95 [  -0.62,   +1.44] mediana  +0.15%
+    +5 min: LIQUIDO custo 0.5%           n=  44 an= 43 media   -0.45% IC95 [  -1.17,   +0.26] mediana  -0.15%
+    +5 min: EXCESSO s/ BTC               n=  44 an= 43 media   +0.05% IC95 [  -0.67,   +0.76] mediana  +0.19%
+
+  Saida em 60 min:
+    total (anuncio -> saida, sem custo)  n=  44 an= 43 media  +15.82% IC95 [  +9.81,  +22.88] mediana +11.60%
+    +1 min: LIQUIDO custo 0.5% (decide)  n=  44 an= 43 media   +0.28% IC98.33 [  -2.05,   +2.65] mediana  -0.28%
+    +1 min: EXCESSO s/ BTC (decide)      n=  44 an= 43 media   +0.80% IC98.33 [  -1.55,   +3.20] mediana  +0.68%
+    +1 min: liquido, custo 1.0%          n=  44 an= 43 media   -0.22% IC95 [  -2.18,   +1.76] mediana  -0.78%
+    +1 min: liquido sem os 3 maiores       -0.74%
+    +2 min: LIQUIDO custo 0.5%           n=  44 an= 43 media   -0.21% IC95 [  -1.77,   +1.34] mediana  -0.33%
+    +2 min: EXCESSO s/ BTC               n=  44 an= 43 media   +0.30% IC95 [  -1.29,   +1.86] mediana  +0.23%
+    +5 min: LIQUIDO custo 0.5%           n=  44 an= 43 media   -0.50% IC95 [  -1.93,   +0.85] mediana  +0.62%
+    +5 min: EXCESSO s/ BTC               n=  44 an= 43 media   +0.01% IC95 [  -1.44,   +1.38] mediana  +1.12%
+    +15 min: LIQUIDO custo 0.5%          n=  44 an= 43 media   -0.50% IC95 [  -1.91,   +0.88] mediana  -0.71%
+    +15 min: EXCESSO s/ BTC              n=  44 an= 43 media   -0.01% IC95 [  -1.44,   +1.37] mediana  -0.14%
+
+  Saida em 240 min:
+    total (anuncio -> saida, sem custo)  n=  44 an= 43 media  +15.04% IC95 [  +8.54,  +22.30] mediana +11.97%
+    +1 min: LIQUIDO custo 0.5% (decide)  n=  44 an= 43 media   +0.58% IC98.33 [  -4.29,   +5.59] mediana  -1.24%
+    +1 min: EXCESSO s/ BTC (decide)      n=  44 an= 43 media   +0.38% IC98.33 [  -4.42,   +5.39] mediana  -1.17%
+    +1 min: liquido, custo 1.0%          n=  44 an= 43 media   +0.08% IC95 [  -3.89,   +4.18] mediana  -1.74%
+    +1 min: liquido sem os 3 maiores       -1.70%
+    +2 min: LIQUIDO custo 0.5%           n=  44 an= 43 media   -0.00% IC95 [  -3.49,   +3.54] mediana  -1.15%
+    +2 min: EXCESSO s/ BTC               n=  44 an= 43 media   -0.21% IC95 [  -3.62,   +3.35] mediana  -1.16%
+    +5 min: LIQUIDO custo 0.5%           n=  44 an= 43 media   -0.23% IC95 [  -3.73,   +3.37] mediana  -0.97%
+    +5 min: EXCESSO s/ BTC               n=  44 an= 43 media   -0.43% IC95 [  -3.94,   +3.13] mediana  -1.15%
+    +15 min: LIQUIDO custo 0.5%          n=  44 an= 43 media   -0.27% IC95 [  -3.70,   +3.28] mediana  -0.84%
+    +15 min: EXCESSO s/ BTC              n=  44 an= 43 media   -0.49% IC95 [  -3.92,   +3.05] mediana  -1.01%
+
+    +1 min, saida 60 min, liquido, so 2025-26 n=  37 an= 36 media   +0.63% IC95 [  -1.60,   +2.85] mediana  -0.28%
+
+==============================================================================================================
+DESCRITIVO: so BTC/USDT (comprado; positivo = comprado ganhou)
+==============================================================================================================
+    pre-movimento (-15 min -> anuncio)   n=  27 an= 20 media   +0.11% IC95 [  -0.16,   +0.34] mediana  +0.15%
+
+  Saida em 15 min:
+    total (anuncio -> saida, sem custo)  n=  27 an= 20 media   +6.38% IC95 [  +3.17,  +10.22] mediana  +3.72%
+    +1 min: LIQUIDO custo 0.5%           n=  27 an= 20 media   -1.78% IC95 [  -4.23,   +0.91] mediana  -1.28%
+    +1 min: EXCESSO s/ BTC               n=  27 an= 20 media   -1.26% IC95 [  -3.72,   +1.41] mediana  -0.87%
+    +1 min: liquido, custo 1.0%          n=  27 an= 20 media   -2.28% IC95 [  -4.73,   +0.41] mediana  -1.78%
+    +1 min: liquido sem os 3 maiores       -3.19%
+    +2 min: LIQUIDO custo 0.5%           n=  27 an= 20 media   -1.35% IC95 [  -3.43,   +0.85] mediana  -1.43%
+    +2 min: EXCESSO s/ BTC               n=  27 an= 20 media   -0.84% IC95 [  -2.91,   +1.35] mediana  -0.83%
+    +5 min: LIQUIDO custo 0.5%           n=  27 an= 20 media   -0.22% IC95 [  -1.82,   +1.52] mediana  -0.62%
+    +5 min: EXCESSO s/ BTC               n=  27 an= 20 media   +0.28% IC95 [  -1.29,   +2.02] mediana  -0.13%
+
+  Saida em 60 min:
+    total (anuncio -> saida, sem custo)  n=  27 an= 20 media   +5.28% IC95 [  +1.67,   +9.70] mediana  +3.46%
+    +1 min: LIQUIDO custo 0.5%           n=  27 an= 20 media   -2.84% IC95 [  -5.48,   +0.22] mediana  -2.42%
+    +1 min: EXCESSO s/ BTC               n=  27 an= 20 media   -2.31% IC95 [  -4.97,   +0.72] mediana  -2.01%
+    +1 min: liquido, custo 1.0%          n=  27 an= 20 media   -3.34% IC95 [  -5.98,   -0.28] mediana  -2.92%
+    +1 min: liquido sem os 3 maiores       -4.39%
+    +2 min: LIQUIDO custo 0.5%           n=  27 an= 20 media   -2.40% IC95 [  -4.79,   +0.22] mediana  -2.65%
+    +2 min: EXCESSO s/ BTC               n=  27 an= 20 media   -1.88% IC95 [  -4.24,   +0.70] mediana  -2.28%
+    +5 min: LIQUIDO custo 0.5%           n=  27 an= 20 media   -1.29% IC95 [  -3.35,   +1.03] mediana  -0.84%
+    +5 min: EXCESSO s/ BTC               n=  27 an= 20 media   -0.77% IC95 [  -2.82,   +1.51] mediana  -0.39%
+    +15 min: LIQUIDO custo 0.5%          n=  27 an= 20 media   -1.57% IC95 [  -2.59,   -0.57] mediana  -1.73%
+    +15 min: EXCESSO s/ BTC              n=  27 an= 20 media   -1.07% IC95 [  -2.04,   -0.13] mediana  -1.20%
+
+  Saida em 240 min:
+    total (anuncio -> saida, sem custo)  n=  27 an= 20 media   +4.17% IC95 [  +0.50,   +9.54] mediana  +1.52%
+    +1 min: LIQUIDO custo 0.5%           n=  27 an= 20 media   -3.75% IC95 [  -7.02,   +0.40] mediana  -5.29%
+    +1 min: EXCESSO s/ BTC               n=  27 an= 20 media   -3.42% IC95 [  -6.66,   +0.66] mediana  -5.38%
+    +1 min: liquido, custo 1.0%          n=  27 an= 20 media   -4.25% IC95 [  -7.52,   -0.10] mediana  -5.79%
+    +1 min: liquido sem os 3 maiores       -6.39%
+    +2 min: LIQUIDO custo 0.5%           n=  27 an= 20 media   -3.33% IC95 [  -6.35,   +0.37] mediana  -5.40%
+    +2 min: EXCESSO s/ BTC               n=  27 an= 20 media   -3.01% IC95 [  -5.96,   +0.60] mediana  -5.14%
+    +5 min: LIQUIDO custo 0.5%           n=  27 an= 20 media   -2.24% IC95 [  -4.90,   +1.14] mediana  -4.34%
+    +5 min: EXCESSO s/ BTC               n=  27 an= 20 media   -1.93% IC95 [  -4.56,   +1.39] mediana  -3.78%
+    +15 min: LIQUIDO custo 0.5%          n=  27 an= 20 media   -2.59% IC95 [  -4.47,   -0.48] mediana  -3.61%
+    +15 min: EXCESSO s/ BTC              n=  27 an= 20 media   -2.29% IC95 [  -4.11,   -0.27] mediana  -3.29%
+
+  DECISAO: NAO PASSA
+  [6s]
