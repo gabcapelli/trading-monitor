@@ -125,6 +125,10 @@ Rompimento de 7 dias com volume ≥ 2× em barras de 4h, segurando 48h, nos 50 p
 
 207 tokens desde 06/2023, até 10 pares com diferença ≥ 20%/ano, 1× por perna, custo de 0.39% ida e volta: **+7.0%/ano, IC95 [+4.8, +9.1], queda de −1.7%**. A diferença persiste (correlação de +0.41 entre semanas). **Mas com custo dobrado vira −3.9%/ano**: o custo real de execução decide. 2024 e 2025 ficaram abaixo da stablecoin. 3× por perna daria ~21%/ano só na aritmética, com risco de liquidação de uma perna. Não é trading direcional, que é o que o Gabriel procura.
 
+### Estudo 46 — rompimento de 48h no top 20 de volume de cada dia (05/10/2026, NÃO PASSA por um fio)
+
+Mesma regra do 45, nas 20 de maior volume de cada dia entre 679 perpétuos (inclusive deslistados): líquido **+0.76%**, IC [−0.03, +1.60], falha por um fio; excesso +0.79%, IC > 0; metades e trades fora das majors positivos. **É o melhor resultado direcional do projeto.** "Só compras" (+1.36%, IC > 0) passaria, mas foi escolhido depois de ver o dado. Pela regra do Gabriel, não vai para o papel sem a decisão dele.
+
 **Leitura acumulada (37 estudos):** nenhuma regra direcional passou. Os fracassos têm três causas recorrentes: efeito rápido demais para latência horária, efeito que é do mercado inteiro (beta) e custo de carregar a posição (funding, squeeze). O que funcionou foi estrutural e sem previsão: cash-and-carry (estudo 20; prêmio secou), base trimestral (24) e desbloqueio de tokens (25, no papel).
 
 **Infra nova (reaproveitável):**

@@ -1238,6 +1238,34 @@ Script: `monitor/replay_funding_hl.py` · log: `claude/funding_hl.log`
 - **Fragilidade 3, alavancagem:** com 3× por perna, um token que anda 30% contra uma perna a liquida antes do reequilíbrio. Alts fazem isso num dia. Os ~21%/ano com 3× são aritmética e ignoram esse risco.
 - **Não é trading direcional:** o Gabriel registrou em 05/10/2026 que procura trading. A estratégia fica como o único candidato de renda que passou.
 
+## 46. A regra do 45 nas 20 moedas de maior volume de cada dia (sem viés de sobrevivência) — 05/10/2026
+
+Script: `monitor/replay_continuacao_top20.py` · log: `claude/continuacao_top20.log`
+
+- **Por quê:** no estudo 45, nas 20 majors de hoje, a regra deu +0.93% por trade (excesso +0.56%, positivo em todos os anos e em 18 de 20 moedas). O Gabriel perguntou por que não operar só as principais. As "principais de hoje" foram escolhidas olhando para trás, então havia viés de sobrevivência. O teste justo usa as 20 de maior volume **em cada dia**, entre **todos** os perpétuos USDT-M cripto da Binance, inclusive os deslistados.
+- **Universo:** 679 perpétuos; 268 estiveram no top 20 em algum dia.
+- **Regra e medidas:** idênticas ao estudo 45, sem mudar nada.
+- **Critério para o papel (todos juntos):**
+  - líquido e excesso com IC95 > 0;
+  - média > 0 nas duas metades;
+  - média > 0 nos trades fora das 20 majors de hoje.
+
+| | Média por trade | IC95 |
+|---|---|---|
+| **Líquido (decide)** | **+0.76%** (n=3.253) | **[−0.03, +1.60]** |
+| **Excesso sobre o top 20 do dia (decide)** | **+0.79%** | [+0.20, +1.51] |
+| Metades | 1ª +0.91% · 2ª +0.60% | |
+| Fora das 20 majors de hoje | +0.52% (n=1.223) | [−1.15, +2.48] |
+| Só compras | +1.36%, excesso +1.08% | ambos > 0 |
+| Só vendas | −0.55%, excesso +0.18% | ambos cruzam zero |
+| Por ano | 2020 +0.2 · 2021 +2.2 · 2022 +0.5 · 2023 +0.7 · **2024 −0.5** · 2025 +1.1 · 2026 +1.1 | |
+
+**Veredito: NÃO PASSA, por um fio.**
+- **O IC do líquido toca zero** (−0.03). Os outros três itens passam: excesso com IC > 0, as duas metades positivas e a média fora das majors positiva.
+- **Este é o melhor resultado direcional do projeto.** Sem o viés de sobrevivência, o efeito encolhe pouco (+0.93 → +0.76%) e o excesso continua com IC > 0. Isso sugere que o viés não explicava tudo.
+- **"Só compras" passaria sozinho (+1.36%, IC > 0), mas foi escolhido depois de ver o dado.** Pela regra do projeto (estudo 34), isso é garimpo e não se decide assim.
+- **Pela regra do Gabriel**, papel só com o critério completo. Fica registrado como **quase**, e a decisão de abrir uma exceção cabe a ele.
+
 ## Leitura conjunta
 
 Mesma direção do achado da auditoria v6 sobre o checklist mecânico dos Setups A/B. Nenhum dos dez setups de vídeo tem edge mecânico demonstrável nesses 20 pares (o 9.1 também não, fora da amostra, nos 80 pares do estudo 6):
