@@ -1139,6 +1139,42 @@ Script: `monitor/replay_venda_vol.py` · log: `claude/venda_vol.log`
 - **O straddle** (vender também a call) piora tudo.
 - **Contexto importante para a meta:** de 03/2021 a 10/2026, **nem comprar e segurar BTC ou ETH chegou a 20%/ano** (+9.5% e +10.3%, com quedas de quase 80%). A meta de 20–50% ficou acima do que o próprio mercado entregou na janela com dados.
 
+## 43. Comprado com freio: filtro de tendência + alvo de volatilidade — 05/10/2026
+
+Script: `monitor/replay_tendencia_vol.py` (`--robustez`, `--cesta`) · logs: `claude/tendencia_vol.log`, `claude/tendencia_vol_robustez.log`
+
+- **O que é:** não procura vantagem sobre o mercado (os estudos 22 e 34 já mostraram que tendência não tem excesso). Pergunta se dá para ficar com boa parte do retorno do mercado **com bem menos queda**. É aposta no mercado com freio.
+- **Variantes canônicas, sem otimizar:**
+  - **T:** comprado se o preço estiver acima da média de 200 dias; caixa se não.
+  - **V:** posição = min(1, 40% ÷ vol de 30 dias).
+  - **TV:** as duas regras juntas.
+- **Execução:** 1 dia de atraso, custo de 0.1% sobre o valor negociado, caixa rende zero. Spot da Binance desde 2017.
+- **Critério (perfil de risco, sem teste de significância; um caminho histórico só):**
+  - **"Serve":** queda ≤ 50% e retorno ≥ 70% do de comprar e segurar, na janela 2021–26 e no histórico inteiro.
+  - **"Atende a meta":** além disso, ≥ 20%/ano em 2021–26.
+
+| 2021–26 (decide) | Comprar e segurar | T | V | **TV** |
+|---|---|---|---|---|
+| BTC | +9.5%/ano, queda −77% | +8.3%, −55% | +12.8%, −65% | **+9.7%, −37% (serve)** |
+| ETH | +10.3%, −79% | +23.6%, −59% | +17.2%, −56% | **+21.4%, −33% (atende a meta)** |
+
+**Robustez (definida depois de ver o resultado, sem poder de decisão):** a mesma regra TV, sem mudar nada, em 14 outras moedas grandes.
+- **Queda máxima menor em 14 de 14.** Comprar e segurar caiu de −70% a −99%; TV caiu de −26% a −57%.
+- **Rendeu mais que comprar e segurar em 10 de 14** (em 2021–26, muitas moedas caíram). Atingiu ≥ 20%/ano em só 3 de 14 (SOL, TRX, MATIC).
+- **Cesta de peso igual, todas as 16 moedas, sem escolher nenhuma:**
+
+| Cesta (16 moedas) | Comprar e segurar | **TV** |
+|---|---|---|
+| 2021–26 | +12.3%/ano, queda −77% | **+12.8%/ano, queda −26%** |
+| 2019–26 | +55.9%/ano, queda −77% | **+22.4%/ano, queda −27%** |
+
+**Leitura:**
+- **O freio é robusto:** em todas as moedas e na cesta, TV corta a queda máxima para cerca de um terço.
+- **Num mercado lateral (2021–26),** o retorno fica igual ao de comprar e segurar. **Num mercado em alta (2019–26),** abre mão de boa parte da alta: +22% contra +56%.
+- **O retorno vem do mercado, não da regra.** Atingir 20%/ano depende de a cesta subir, ou de escolher a moeda certa, o que só se sabe depois. ETH e SOL atingiram a meta, mas apontá-los agora seria escolher o vencedor olhando para trás.
+- **Viés de sobrevivência:** as 16 moedas são as que existem hoje. Afeta os dois lados, mas TV sofre menos, porque sai das moedas em queda.
+- **É o único resultado da série que se encaixa no perfil do Gabriel** (queda tolerável de até 50%): a cesta TV com alavancagem de ~1.5× daria ~19%/ano com queda de ~−40% em 2021–26. É aritmética, não teste. Alavancar amplifica um caminho histórico só.
+
 ## Leitura conjunta
 
 Mesma direção do achado da auditoria v6 sobre o checklist mecânico dos Setups A/B. Nenhum dos dez setups de vídeo tem edge mecânico demonstrável nesses 20 pares (o 9.1 também não, fora da amostra, nos 80 pares do estudo 6):

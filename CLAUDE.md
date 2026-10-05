@@ -113,6 +113,10 @@ Comprar o perpétuo após a Upbit anunciar uma listagem em KRW (43 anúncios): o
 
 **Perfil do Gabriel definido em 05/10/2026:** meta de 20–50% ao ano, aceita quedas de 50% ou mais, horizonte indiferente, aberto a spot, opções e outros mercados. Daí veio o teste de vender puts no dinheiro de 30 dias (DVOL da Deribit, 2021–2026). O prêmio de variância existe no BTC (+7.9 pts), mas está encolhendo (−3 em 2026). No ETH sumiu. A put no BTC rendeu +11.9%/ano com queda de −43%, com IC cruzando zero e abaixo da meta. **Nem comprar e segurar BTC ou ETH deu 20%/ano na janela 2021–26** (+9.5%/+10.3%, quedas de ~−78%).
 
+### Estudo 43 — comprado com freio (05/10/2026)
+
+Regra TV (comprado se acima da média de 200 dias, com posição = min(1, 40% ÷ vol de 30 dias)), sem otimizar. **Corta a queda máxima para cerca de um terço em 16 de 16 moedas e na cesta.** Cesta de peso igual de 16 moedas: 2021–26 +12.8%/ano com queda de −26% (comprar e segurar: +12.3%, −77%); 2019–26 +22.4% com −27% (comprar e segurar: +56%, −77%). Não é vantagem: o retorno vem do mercado. ETH (+21%) e SOL (+36%) atingiram a meta, mas escolhê-los seria olhar para trás. É o único resultado que se encaixa no perfil de risco do Gabriel.
+
 **Leitura acumulada (37 estudos):** nenhuma regra direcional passou. Os fracassos têm três causas recorrentes: efeito rápido demais para latência horária, efeito que é do mercado inteiro (beta) e custo de carregar a posição (funding, squeeze). O que funcionou foi estrutural e sem previsão: cash-and-carry (estudo 20; prêmio secou), base trimestral (24) e desbloqueio de tokens (25, no papel).
 
 **Infra nova (reaproveitável):**
