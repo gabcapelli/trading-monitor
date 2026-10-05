@@ -88,7 +88,11 @@ Busca de estratégias **direcionais** fora de padrão gráfico (evento, fluxo, c
 - 34 Turtle canônico: **fecha a família tendência** (quatro formas, todas zero). Os +16% nos majors eram beta (só compras, viés de sobrevivência). O Gabriel perguntou sobre operar só comprado e sobre variações; a resposta registrada é que "só compras" escolhido depois de ver o dado é garimpo, e não sobra amostra limpa para testar.
 - 35 gap da CME: fecha em 69% (vs. 47% no placebo), mas a expectância é negativa.
 
-**Leitura acumulada (36 estudos):** nenhuma regra direcional passou. Os fracassos têm três causas recorrentes: efeito rápido demais para latência horária, efeito que é do mercado inteiro (beta) e custo de carregar a posição (funding, squeeze). O que funcionou foi estrutural e sem previsão: cash-and-carry (estudo 20; prêmio secou), base trimestral (24) e desbloqueio de tokens (25, no papel).
+### Estudo 37 — Monitoring Tag (05/10/2026, não passou)
+
+Vender o perpétuo depois que a Binance aplica a Monitoring Tag. Os dados (anúncios de 2023 a 2026) eram nunca usados. A linha de base inclui perpétuos deslistados (sem viés de sobrevivência). Resultado: excesso de +1.9%/+2.7% com IC de ±10%. O trade típico ganha (mediana +10%), mas os squeezes (até −233%) destroem a média. O anúncio derruba −9% antes da entrada horária, e o placebo de −30 dias dá o mesmo excesso. **Não testar "com stop" sobre esses dados.** O passeio aleatório em 20 sementes mostrou que, com caudas pesadas e cerca de 20 grupos, o IC bootstrap é otimista (5% de falso PASSA contra ~2,5% nominal). Vale para estudos de evento futuros. Script reaproveitável: `monitor/replay_monitoring_tag.py` (universo completo de perpétuos USDT-M do S3, inclusive deslistados, e `--passeio --semente N`).
+
+**Leitura acumulada (37 estudos):** nenhuma regra direcional passou. Os fracassos têm três causas recorrentes: efeito rápido demais para latência horária, efeito que é do mercado inteiro (beta) e custo de carregar a posição (funding, squeeze). O que funcionou foi estrutural e sem previsão: cash-and-carry (estudo 20; prêmio secou), base trimestral (24) e desbloqueio de tokens (25, no papel).
 
 **Infra nova (reaproveitável):**
 - `monitor/replay_deslistagem.py`: carregadores do `data.binance.vision` (candles de 1h com volume, funding e listagem do S3 de perpétuos e spot, inclusive contratos removidos) e do feed de anúncios da Binance (cache versionado em `monitor/cache_anuncios/`).

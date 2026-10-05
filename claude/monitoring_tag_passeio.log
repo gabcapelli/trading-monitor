@@ -1,0 +1,133 @@
+Eventos (token x anuncio), sem stablecoins e sem repeticao: 137 em 25 anuncios
+Montagem: {'sem perpetuo': 43, 'sem candle com volume na entrada': 8, 'ok': 85, 'listado ha menos de 30 dias': 1}
+Trades validos: 85 em 23 anuncios | perpetuo acabou antes da saida: 5 | deslistagem anunciada na janela: 9
+
+*** PASSEIO ALEATORIO (validacao): precos sinteticos sem deriva, funding zero ***
+
+========================================================================================================
+JANELA 0 -> +7 DIAS, VENDIDO (positivo = vendido ganhou)
+========================================================================================================
+  bruto                                        n=  85 anuncios= 23 media   -2.71% IC97.5 [  -6.43,   +1.20]
+  funding recebido                             n=  85 anuncios= 23 media   +0.00% IC97.5 [  +0.00,   +0.00]
+  ABSOLUTO, custo 0.18% (decide)               n=  85 anuncios= 23 media   -2.89% IC97.5 [  -6.61,   +1.02]
+  EXCESSO sobre a base (decide)                n=  85 anuncios= 23 media   -1.70% IC97.5 [  -5.60,   +2.74]
+  absoluto, custo 0.5%                         n=  85 anuncios= 23 media   -3.21% IC97.5 [  -6.93,   +0.70]
+  absoluto, custo 1.0%                         n=  85 anuncios= 23 media   -3.71% IC97.5 [  -7.43,   +0.20]
+  PLACEBO -30d: bruto                          n=  85 anuncios= 23 media   -1.97% IC97.5 [  -5.22,   +1.40]
+  PLACEBO -30d: excesso                        n=  85 anuncios= 23 media   -3.78% IC97.5 [  -6.62,   -1.00]
+  excesso, sem deslistagem na janela           n=  76 anuncios= 23 media   -0.52% IC97.5 [  -4.58,   +3.64]
+  excesso, anuncios 2023-24                    n=  11 anuncios=  5 media   -0.90% IC95 [  -7.45,   +4.18]
+  excesso, anuncios 2025-26                    n=  74 anuncios= 18 media   -1.82% IC95 [  -5.54,   +2.48]
+
+========================================================================================================
+JANELA 0 -> +14 DIAS, VENDIDO (positivo = vendido ganhou)
+========================================================================================================
+  bruto                                        n=  85 anuncios= 23 media   -2.28% IC97.5 [  -6.95,   +2.73]
+  funding recebido                             n=  85 anuncios= 23 media   +0.00% IC97.5 [  +0.00,   +0.00]
+  ABSOLUTO, custo 0.18% (decide)               n=  85 anuncios= 23 media   -2.46% IC97.5 [  -7.13,   +2.55]
+  EXCESSO sobre a base (decide)                n=  85 anuncios= 23 media   -1.34% IC97.5 [  -6.76,   +4.15]
+  absoluto, custo 0.5%                         n=  85 anuncios= 23 media   -2.78% IC97.5 [  -7.45,   +2.23]
+  absoluto, custo 1.0%                         n=  85 anuncios= 23 media   -3.28% IC97.5 [  -7.95,   +1.73]
+  PLACEBO -30d: bruto                          n=  85 anuncios= 23 media   -3.38% IC97.5 [  -8.48,   +0.65]
+  PLACEBO -30d: excesso                        n=  85 anuncios= 23 media   -5.29% IC97.5 [ -11.00,   -0.24]
+  excesso, sem deslistagem na janela           n=  76 anuncios= 23 media   +0.07% IC97.5 [  -6.21,   +6.22]
+  excesso, anuncios 2023-24                    n=  11 anuncios=  5 media   -5.15% IC95 [  -9.21,   -1.77]
+  excesso, anuncios 2025-26                    n=  74 anuncios= 18 media   -0.78% IC95 [  -6.11,   +4.68]
+
+  reacao perdida (anuncio -> entrada)          n=  85 anuncios= 23 media   -0.26% IC95 [  -0.83,   +0.27]
+
+========================================================================================================
+SPOT, todos os tokens com par USDT (descritivo; positivo = preco SUBIU)
+========================================================================================================
+  deriva entrada -> +7 d                       n= 133 anuncios= 24 media   -0.07% IC95 [  -5.17,   +5.09]
+  deriva entrada -> +14 d                      n= 132 anuncios= 24 media   -1.95% IC95 [  -7.38,   +4.36]
+
+  Por trade:
+    2023-10-04 XEMUSDT        base=30 | reacao   -1.6% | +7d bruto  -15.1% exc  -19.0% fund +0.00% | +14d bruto   -6.9% exc  -12.4% fund +0.00%
+    2024-01-04 ANTUSDT        base=30 | reacao   +0.3% | +7d bruto   +2.9% exc   +4.6% fund +0.00% | +14d bruto   +2.9% exc   +2.0% fund +0.00%
+    2024-01-04 REEFUSDT       base=30 | reacao   +1.6% | +7d bruto  +25.7% exc  +27.4% fund +0.00% | +14d bruto  +26.4% exc  +25.5% fund +0.00%
+    2024-01-04 XMRUSDT        base=30 | reacao   +0.5% | +7d bruto   +2.1% exc   +3.8% fund +0.00% | +14d bruto   -6.2% exc   -7.1% fund +0.00%
+    2024-01-04 ZECUSDT        base=30 | reacao   -0.3% | +7d bruto   -1.5% exc   +0.2% fund +0.00% | +14d bruto   -5.6% exc   -6.5% fund +0.00%
+    2024-01-04 ZENUSDT        base=30 | reacao   +1.4% | +7d bruto  -47.1% exc  -45.4% fund +0.00% | +14d bruto  -41.1% exc  -41.9% fund +0.00%
+    2024-04-03 UNFIUSDT       base=30 | reacao   -1.8% | +7d bruto  +20.8% exc  +23.0% fund +0.00% | +14d bruto  +13.2% exc  +20.1% fund +0.00%
+    2024-04-03 WAVESUSDT      base=30 | reacao   -1.8% | +7d bruto  -18.3% exc  -16.1% fund +0.00% | +14d bruto  -29.4% exc  -22.5% fund +0.00%
+    2024-07-01 BALUSDT        base=30 | reacao   -0.1% | +7d bruto   -2.1% exc   -0.5% fund +0.00% | +14d bruto  -20.0% exc  -14.0% fund +0.00%
+    2024-10-03 BLZUSDT        base=30 | reacao   +2.1% | +7d bruto   -3.0% exc   -2.7% fund +0.00% | +14d bruto  -17.8% exc  -16.0% fund +0.00%
+    2024-10-03 KEYUSDT        base=30 | reacao   +1.4% | +7d bruto  +14.5% exc  +14.8% fund +0.00% | +14d bruto  +14.4% exc  +16.1% fund +0.00%
+    2025-01-02 STMXUSDT       base=30 | reacao   -1.0% | +7d bruto  +24.5% exc  +20.6% fund +0.00% | +14d bruto  +48.6% exc  +43.6% fund +0.00%
+    2025-01-02 TROYUSDT       base=30 | reacao   -6.9% | +7d bruto   -1.9% exc   -5.8% fund +0.00% | +14d bruto  -69.1% exc  -74.1% fund +0.00%
+    2025-03-04 AERGOUSDT      base=30 | reacao   +0.9% | +7d bruto  +18.0% exc  +13.1% fund +0.00% | +14d bruto   +4.1% exc   -0.2% fund +0.00%
+    2025-03-04 ALPACAUSDT     base=30 | reacao   +2.4% | +7d bruto   -2.2% exc   -7.1% fund +0.00% | +14d bruto  +12.2% exc   +7.9% fund +0.00%
+    2025-03-04 BADGERUSDT     base=30 | reacao   +0.0% | +7d bruto  -16.8% exc  -21.7% fund +0.00% | +14d bruto  -37.4% exc  -41.7% fund +0.00%
+    2025-03-04 COMBOUSDT      base=30 | reacao   +1.2% | +7d bruto  -10.7% exc  -15.7% fund +0.00% | +14d bruto  -18.1% exc  -22.4% fund +0.00%
+    2025-03-04 NULSUSDT       base=30 | reacao   -0.9% | +7d bruto  -11.5% exc  -16.4% fund +0.00% | +14d bruto  -29.2% exc  -33.5% fund +0.00%
+    2025-03-04 VIDTUSDT       base=30 | reacao   -1.8% | +7d bruto  +19.3% exc  +14.4% fund +0.00% | +14d bruto  -26.6% exc  -30.9% fund +0.00%
+    2025-04-03 BSWUSDT        base=30 | reacao   -3.2% | +7d bruto   +6.2% exc   +5.5% fund +0.00% | +14d bruto  +37.0% exc  +38.8% fund +0.00%
+    2025-04-03 FLMUSDT        base=30 | reacao   +4.1% | +7d bruto  -35.4% exc  -36.0% fund +0.00% | +14d bruto   +2.0% exc   +3.8% fund +0.00%
+    2025-04-03 NKNUSDT        base=30 | reacao   +0.1% | +7d bruto  -16.6% exc  -17.3% fund +0.00% | +14d bruto   -4.3% exc   -2.5% fund +0.00%
+    2025-04-03 PERPUSDT       base=30 | reacao   -0.6% | +7d bruto  -18.1% exc  -18.8% fund +0.00% | +14d bruto  -32.5% exc  -30.7% fund +0.00%
+    2025-04-03 VOXELUSDT      base=30 | reacao   -3.3% | +7d bruto   +7.1% exc   +6.5% fund +0.00% | +14d bruto  +28.0% exc  +29.8% fund +0.00%
+    2025-05-07 ALPHAUSDT      base=30 | reacao   -1.7% | +7d bruto  -19.9% exc  -19.0% fund +0.00% | +14d bruto  -29.5% exc  -27.9% fund +0.00%
+    2025-05-07 HIFIUSDT       base=30 | reacao   -3.6% | +7d bruto  +12.3% exc  +13.2% fund +0.00% | +14d bruto   +9.6% exc  +11.2% fund +0.00%
+    2025-05-07 LEVERUSDT      base=30 | reacao   -0.1% | +7d bruto   -7.1% exc   -6.2% fund +0.00% | +14d bruto  +16.9% exc  +18.6% fund +0.00%
+    2025-05-07 MOVEUSDT       base=30 | reacao   +0.1% | +7d bruto  +24.0% exc  +24.9% fund +0.00% | +14d bruto  +14.9% exc  +16.5% fund +0.00%
+    2025-05-07 PORTALUSDT     base=30 | reacao   -1.0% | +7d bruto   -7.9% exc   -7.1% fund +0.00% | +14d bruto   -6.7% exc   -5.0% fund +0.00%
+    2025-05-07 REIUSDT        base=30 | reacao   -0.1% | +7d bruto  +15.0% exc  +15.9% fund +0.00% | +14d bruto   +4.9% exc   +6.5% fund +0.00%
+    2025-06-05 FISUSDT        base=30 | reacao   +1.6% | +7d bruto  -17.3% exc  -16.7% fund +0.00% | +14d bruto  -20.6% exc  -24.9% fund +0.00%
+    2025-07-07 BAKEUSDT       base=30 | reacao   -1.5% | +7d bruto   -0.4% exc   +0.1% fund +0.00% | +14d bruto   -3.4% exc   -5.7% fund +0.00%
+    2025-12-01 CHESSUSDT      base=30 | reacao   -0.3% | +7d bruto   -7.8% exc   -2.2% fund +0.00% | +14d bruto  -15.2% exc   -4.2% fund +0.00%
+    2025-12-01 DENTUSDT       base=30 | reacao   +3.3% | +7d bruto  -20.1% exc  -14.6% fund +0.00% | +14d bruto  -35.0% exc  -23.9% fund +0.00%
+    2025-12-01 DFUSDT         base=30 | reacao   +2.4% | +7d bruto  -22.1% exc  -16.5% fund +0.00% | +14d bruto  -26.9% exc  -15.8% fund +0.00%
+    2025-12-01 GHSTUSDT       base=30 | reacao   -1.8% | +7d bruto   +7.5% exc  +13.1% fund +0.00% | +14d bruto   +9.3% exc  +20.3% fund +0.00%
+    2025-12-01 SXPUSDT        base=30 | reacao   +0.1% | +7d bruto   +5.0% exc   +9.2% fund +0.00% | +14d bruto   +5.0% exc   +9.2% fund +0.00% [cortado]
+    2026-01-02 DUSDT          base=30 | reacao   +0.1% | +7d bruto   +5.6% exc   +5.4% fund +0.00% | +14d bruto   -6.6% exc   -5.0% fund +0.00%
+    2026-01-02 FLOWUSDT       base=30 | reacao   +3.9% | +7d bruto  -34.0% exc  -34.3% fund +0.00% | +14d bruto  -32.1% exc  -30.5% fund +0.00%
+    2026-03-06 COSUSDT        base=30 | reacao   -3.5% | +7d bruto   -0.8% exc   -0.1% fund +0.00% | +14d bruto  +12.6% exc  +14.6% fund +0.00%
+    2026-03-06 DEGOUSDT       base=30 | reacao   -3.1% | +7d bruto  +21.2% exc  +21.9% fund +0.00% | +14d bruto  +34.8% exc  +36.8% fund +0.00%
+    2026-03-06 FORTHUSDT      base=30 | reacao   -4.2% | +7d bruto   +5.4% exc   +6.1% fund +0.00% | +14d bruto   -3.2% exc   -1.2% fund +0.00% [deslist]
+    2026-03-06 FUNUSDT        base=30 | reacao   -1.3% | +7d bruto  +15.6% exc  +16.3% fund +0.00% | +14d bruto  +25.1% exc  +27.1% fund +0.00%
+    2026-03-06 HOOKUSDT       base=30 | reacao   -0.1% | +7d bruto  -22.5% exc  -21.8% fund +0.00% | +14d bruto  -23.7% exc  -21.7% fund +0.00% [deslist]
+    2026-03-06 LRCUSDT        base=30 | reacao   +0.4% | +7d bruto  -33.6% exc  -32.9% fund +0.00% | +14d bruto  -18.0% exc  -16.0% fund +0.00% [deslist]
+    2026-03-06 MBOXUSDT       base=30 | reacao   -1.0% | +7d bruto   +8.0% exc   +8.7% fund +0.00% | +14d bruto  -11.0% exc   -9.0% fund +0.00%
+    2026-03-06 OXTUSDT        base=30 | reacao   +2.6% | +7d bruto   -2.5% exc   -1.8% fund +0.00% | +14d bruto  -12.5% exc  -10.5% fund +0.00%
+    2026-03-06 WIFUSDT        base=30 | reacao   +2.7% | +7d bruto  -18.8% exc  -18.1% fund +0.00% | +14d bruto   +7.2% exc   +9.2% fund +0.00%
+    2026-03-13 ATAUSDT        base=30 | reacao   +1.2% | +7d bruto   -5.2% exc   -2.8% fund +0.00% | +14d bruto   -5.6% exc   -4.9% fund +0.00%
+    2026-03-13 A2ZUSDT        base=30 | reacao   -2.9% | +7d bruto  -32.1% exc  -29.7% fund +0.00% | +14d bruto  -36.2% exc  -35.3% fund +0.00% [deslist] [cortado]
+    2026-03-13 FIOUSDT        base=30 | reacao   -3.2% | +7d bruto  +26.9% exc  +29.3% fund +0.00% | +14d bruto  +50.0% exc  +50.7% fund +0.00%
+    2026-03-13 GTCUSDT        base=30 | reacao   +0.0% | +7d bruto   +5.1% exc   +7.5% fund +0.00% | +14d bruto   +7.4% exc   +8.0% fund +0.00%
+    2026-03-13 NTRNUSDT       base=30 | reacao   -3.0% | +7d bruto  -19.9% exc  -17.5% fund +0.00% | +14d bruto  -20.1% exc  -19.2% fund +0.00% [deslist] [cortado]
+    2026-03-13 PHBUSDT        base=30 | reacao   +0.4% | +7d bruto  -28.3% exc  -25.9% fund +0.00% | +14d bruto  -13.5% exc  -12.8% fund +0.00%
+    2026-03-13 RDNTUSDT       base=30 | reacao   -0.5% | +7d bruto  -30.1% exc  -27.8% fund +0.00% | +14d bruto  -38.8% exc  -37.9% fund +0.00% [deslist] [cortado]
+    2026-04-14 HIGHUSDT       base=30 | reacao   +1.5% | +7d bruto  +13.8% exc  +19.2% fund +0.00% | +14d bruto  +19.1% exc  +17.0% fund +0.00%
+    2026-04-14 MLNUSDT        base=30 | reacao   -0.9% | +7d bruto   +4.7% exc  +10.1% fund +0.00% | +14d bruto   +4.7% exc   +2.7% fund +0.00%
+    2026-04-14 RESOLVUSDT     base=30 | reacao   -2.1% | +7d bruto   +0.9% exc   +6.3% fund +0.00% | +14d bruto  -21.9% exc  -23.9% fund +0.00%
+    2026-04-14 SYSUSDT        base=30 | reacao   +0.8% | +7d bruto   +0.1% exc   +5.5% fund +0.00% | +14d bruto  +19.7% exc  +17.7% fund +0.00%
+    2026-04-14 TRUUSDT        base=30 | reacao   +2.9% | +7d bruto  +13.9% exc  +19.3% fund +0.00% | +14d bruto  +14.0% exc  +19.5% fund +0.00% [deslist] [cortado]
+    2026-04-14 VELODROMEUSDT  base=30 | reacao   +1.8% | +7d bruto   -3.4% exc   +2.0% fund +0.00% | +14d bruto  -12.7% exc  -14.7% fund +0.00%
+    2026-04-30 NFPUSDT        base=30 | reacao   -1.2% | +7d bruto   +0.1% exc   -0.9% fund +0.00% | +14d bruto  +14.7% exc  +15.2% fund +0.00%
+    2026-04-30 NOMUSDT        base=30 | reacao   -0.0% | +7d bruto  +14.2% exc  +13.2% fund +0.00% | +14d bruto  +51.4% exc  +51.9% fund +0.00%
+    2026-04-30 VICUSDT        base=30 | reacao   +1.1% | +7d bruto   -9.5% exc  -10.5% fund +0.00% | +14d bruto  -11.1% exc  -10.6% fund +0.00%
+    2026-05-22 COOKIEUSDT     base=30 | reacao   +2.4% | +7d bruto  -21.8% exc  -19.8% fund +0.00% | +14d bruto  -41.9% exc  -41.9% fund +0.00%
+    2026-05-22 EPICUSDT       base=30 | reacao   +0.8% | +7d bruto  -17.9% exc  -15.8% fund +0.00% | +14d bruto  +13.9% exc  +14.0% fund +0.00%
+    2026-05-22 HEIUSDT        base=30 | reacao   +0.1% | +7d bruto  +39.3% exc  +41.4% fund +0.00% | +14d bruto  +65.2% exc  +65.3% fund +0.00%
+    2026-05-22 HFTUSDT        base=30 | reacao   -0.8% | +7d bruto  -32.2% exc  -30.1% fund +0.00% | +14d bruto  -19.8% exc  -19.8% fund +0.00%
+    2026-05-22 STORJUSDT      base=30 | reacao   +1.2% | +7d bruto  -26.2% exc  -24.1% fund +0.00% | +14d bruto  -46.0% exc  -46.0% fund +0.00%
+    2026-05-22 SYNUSDT        base=30 | reacao   +6.3% | +7d bruto  -45.8% exc  -43.7% fund +0.00% | +14d bruto  -67.6% exc  -67.5% fund +0.00%
+    2026-05-22 TLMUSDT        base=30 | reacao   +1.3% | +7d bruto   +9.6% exc  +11.7% fund +0.00% | +14d bruto  +19.3% exc  +19.4% fund +0.00%
+    2026-06-18 ACTUSDT        base=30 | reacao   -1.5% | +7d bruto  +13.0% exc  +10.9% fund +0.00% | +14d bruto  +25.5% exc  +18.1% fund +0.00%
+    2026-06-18 BLURUSDT       base=30 | reacao   -2.6% | +7d bruto   +3.2% exc   +1.2% fund +0.00% | +14d bruto  +17.2% exc   +9.8% fund +0.00%
+    2026-07-03 SCRTUSDT       base=30 | reacao   +0.8% | +7d bruto   +8.2% exc   +9.4% fund +0.00% | +14d bruto  +15.3% exc  +16.8% fund +0.00%
+    2026-07-03 VANRYUSDT      base=30 | reacao   -0.9% | +7d bruto   +5.1% exc   +6.3% fund +0.00% | +14d bruto  +24.2% exc  +25.7% fund +0.00%
+    2026-07-24 ACXUSDT        base=30 | reacao   +1.7% | +7d bruto   +2.8% exc   +2.8% fund +0.00% | +14d bruto   +2.0% exc   +4.5% fund +0.00% [deslist]
+    2026-07-24 LSKUSDT        base=30 | reacao   -0.1% | +7d bruto  -11.0% exc  -11.0% fund +0.00% | +14d bruto   -7.8% exc   -5.3% fund +0.00%
+    2026-07-24 STXUSDT        base=30 | reacao   -1.0% | +7d bruto  +17.3% exc  +17.2% fund +0.00% | +14d bruto  +10.8% exc  +13.3% fund +0.00%
+    2026-08-11 ICXUSDT        base=30 | reacao   -1.0% | +7d bruto   -0.5% exc   -3.0% fund +0.00% | +14d bruto   -8.0% exc  -12.3% fund +0.00% [deslist]
+    2026-08-11 MOVRUSDT       base=30 | reacao   -0.8% | +7d bruto   +7.3% exc   +4.8% fund +0.00% | +14d bruto   -6.2% exc  -10.5% fund +0.00%
+    2026-08-11 RAREUSDT       base=30 | reacao   -1.7% | +7d bruto   -2.0% exc   -4.5% fund +0.00% | +14d bruto   +1.0% exc   -3.3% fund +0.00%
+    2026-08-11 SOPHUSDT       base=30 | reacao   -0.9% | +7d bruto   -7.2% exc   -9.7% fund +0.00% | +14d bruto  +12.7% exc   +8.4% fund +0.00%
+    2026-09-04 AVAUSDT        base=30 | reacao   -3.4% | +7d bruto   -0.8% exc   +8.5% fund +0.00% | +14d bruto  -11.9% exc   +1.1% fund +0.00%
+    2026-09-04 SCRUSDT        base=30 | reacao   -1.7% | +7d bruto  +16.6% exc  +26.0% fund +0.00% | +14d bruto  +21.1% exc  +34.1% fund +0.00%
+    2026-09-04 TOWNSUSDT      base=30 | reacao   -2.9% | +7d bruto  +16.0% exc  +25.3% fund +0.00% | +14d bruto  +25.6% exc  +38.6% fund +0.00%
+
+  DECISAO (PASSEIO): NAO PASSA
+  [1530s]

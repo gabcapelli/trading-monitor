@@ -960,6 +960,32 @@ Script: `monitor/replay_premio.py` · logs: `claude/premio.log`, `claude/premio_
 - **Há um sinal minúsculo de reversão na hora seguinte** (bruto de +0.11% em 1h, excesso de +0.08% com IC > 0 no DE). Ele fica abaixo do custo de 0.18% por giro, como os setups intraday dos estudos 3, 7 e 11.
 - **Confirma o estudo 27:** prêmio e funding extremos não preveem a direção do perpétuo em nenhuma escala testada (horas ou dias).
 
+## 37. Vender o perpétuo depois da Monitoring Tag da Binance — 05/10/2026
+
+Script: `monitor/replay_monitoring_tag.py` · logs: `claude/monitoring_tag.log`, `claude/monitoring_tag_passeio.log`, `claude/monitoring_tag_passeio_sementes.log`
+
+- **Mecanismo:** a Binance marca o token como de alto risco e candidato a deslistagem. A hipótese era de venda lenta (dias) por quem não quer carregar o risco. A diferença para o estudo 28 é que o spot continua listado, então o squeeze no perpétuo deveria ser menor.
+- **Dados novos, nunca usados:** 25 anúncios de 10/2023 a 09/2026 (feed da Binance, catálogos 49 e 161), 137 tokens, **85 trades com perpétuo em 23 anúncios**.
+- **Regra:**
+  - **Direção:** vendido, fixada *a priori*. Sem parâmetro a escolher, então a amostra inteira decide.
+  - **Execução:** entra na 2ª hora cheia após o anúncio e sai em +7 e +14 dias.
+- **Linha de base nova:** 30 perpétuos sorteados entre **todos** os que existiam na data, inclusive os deslistados depois (lista do S3 do `data.binance.vision`), para não ter viés de sobrevivência.
+- **Critério:** absoluto (custo 0.18% + funding) e excesso com IC 97.5% > 0 (Bonferroni para 2 janelas), bootstrap por anúncio.
+- **Validação em 20 sementes de passeio aleatório:** sem viés (médias perto de zero), mas o IC é otimista com caudas tão pesadas e só 23 grupos. A decisão deu PASSA falso em 1 de 20 sementes. Isso foi registrado antes de rodar com preços reais.
+
+| Janela | Absoluto (decide) | **Excesso (decide)** | Placebo −30d: excesso | Funding pago pelo vendido |
+|---|---|---|---|---|
+| +7 dias | +1.1% [−9.7, +11.1] | **+1.9%** [−8.0, +10.8] | +1.5% [−1.6, +4.7] | 0.8% |
+| +14 dias | +1.5% [−6.2, +9.6] | **+2.7%** [−6.5, +11.3] | +2.5% [−1.2, +6.4] | 1.4% |
+
+**Veredito: NÃO PASSA.** É o mesmo padrão dos estudos 26 e 28.
+- **O trade típico ganha:** mediana de +10% de excesso em 14 dias, com o vendido à frente em 58 de 85 trades.
+- **A cauda destrói:** DEGO −233% e HIGH −165% em 7 dias, EPIC −170% em 14 dias. O spot listado não protegeu o perpétuo de alts pequenas contra squeeze.
+- **O efeito do anúncio é imediato:** o preço cai **−9.2% entre o anúncio e a entrada** (IC [−12.6, −6.4]; caiu em 80 de 85). É o "efeito rápido demais para latência horária" do estudo 29.
+- **O que sobra depois da entrada é "token morrendo", não o anúncio:** o placebo (mesma janela, 30 dias antes) dá praticamente o mesmo excesso (+1.5% e +2.5% contra +1.9% e +2.7%).
+- **No spot (descritivo, 133 tokens, inclusive sem perpétuo):** −5.3% em 7 dias e −6.9% em 14 dias (IC95 [−12.5, −1.2]). O mecanismo existe onde não dá para vender.
+- **Não testar "com stop" sobre estes dados:** a mediana de +10% convida a isso, mas um stop escolhido depois de ver a cauda é garimpo. Se quiser, só como teste de papel adiante, como no estudo 26. O placebo indica que esse papel estaria testando "vender token morrendo" (o mesmo do 26), não o anúncio.
+
 ## Leitura conjunta
 
 Mesma direção do achado da auditoria v6 sobre o checklist mecânico dos Setups A/B. Nenhum dos dez setups de vídeo tem edge mecânico demonstrável nesses 20 pares (o 9.1 também não, fora da amostra, nos 80 pares do estudo 6):
@@ -984,6 +1010,8 @@ Não reabrir esses testes sem uma regra nova pré-registrada. Variar parâmetro 
   - Na deslistagem e no pós-listagem, há sinal de preço (o 30 passou no excesso), mas o custo de ficar vendido (funding e squeeze) consome o ganho.
 - **Calendário e outros** (32, 33, 35): pré-FOMC sem poder e zero no período recente; lead-lag sem sinal em 1h; gap da CME com acerto alto e expectância negativa.
 - **Tendência** fecha com o Turtle (34): quatro formas independentes, todas zero.
+
+**Estudo 37 (05/10/2026, Monitoring Tag):** não passou e reúne duas das três causas recorrentes. O anúncio derruba o preço em −9% antes de qualquer entrada horária, e o que sobra depois é deriva de token fraco (o placebo dá o mesmo), engolida por squeeze no perpétuo.
 
 ## Setups A/B — encerrado em 25/09/2026
 
