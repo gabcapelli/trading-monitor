@@ -1205,6 +1205,39 @@ Script: `monitor/replay_continuacao.py` · logs: `claude/continuacao.log`, `clau
 - **Os anos se alternam:** 2020 e 2024 negativos, os outros positivos. O IC é largo porque as semanas são muito diferentes entre si.
 - **Encerra a ideia "continuação de curto prazo com giro menor".**
 
+## 44. Arbitragem de funding Hyperliquid × Binance (neutra em preço) — 05/10/2026
+
+Script: `monitor/replay_funding_hl.py` · log: `claude/funding_hl.log`
+
+- **Contexto:** o CLAUDE.md registrava que o Gabriel não tinha gostado da ideia. Depois da pesquisa na internet de 05/10/2026, ele liberou testar "na ordem que achar melhor".
+- **Mecanismo:** vendido onde o funding é mais alto e comprado onde é mais baixo, no mesmo token e no mesmo nocional. O preço se cancela e sobra a diferença.
+- **Dados:** funding horário da Hyperliquid desde 05/2023 (API pública); funding e prêmio horário da Binance (vision). Foram **207 tokens** nas duas corretoras.
+- **Regra (sem otimizar):**
+  - **Sinal:** todo dia, a diferença média de funding das 168h anteriores, anualizada.
+  - **Entrada e saída:** até 10 pares com |diferença| ≥ 20%/ano; sai abaixo de 5% ou na inversão.
+  - **Base entre as pernas:** aproximada pela diferença dos prêmios de cada corretora.
+  - **Custo:** 0.39% do nocional ida e volta (taxas + 0.05% de slippage por perna).
+  - **Alavancagem:** 1× por perna.
+- **Critério:** retorno sobre o capital com IC95 inteiro acima de 4%/ano (stablecoin).
+- **Correção antes do veredito:** a 1ª rodada saiu com "nan" em 2024, por horas sem dado, e não produziu número. Essas horas passaram a ser ignoradas.
+
+| | Resultado |
+|---|---|
+| Persistência (diferença de 7 dias antes × 7 dias depois) | correlação **+0.41** (n=22.657) |
+| **Retorno sobre o capital (decide)** | **+7.0%/ano**, IC95 [+4.8, +9.1] |
+| Queda máxima | −1.7% |
+| Por ano | 2023 (jun–dez) +16.1% · 2024 +3.2% · 2025 +1.1% · 2026 +13.1% |
+| Só funding (sem a base) | +6.5%/ano |
+| **Custo dobrado (0.78% ida e volta)** | **−3.9%/ano** |
+| Com 3× por perna (aritmética) | ~+21%/ano, queda ~−5% |
+
+**Veredito: PASSA, com fragilidade grande.**
+- **É a primeira estratégia de retorno, desde o carry, a passar no critério com IC.** Não prevê direção: a diferença de funding entre as corretoras persiste de uma semana para outra.
+- **Fragilidade 1, o custo manda em tudo:** dobrar o custo transforma +7% em −3.9%/ano. O giro come cerca de 11%/ano do bruto (~18%). O custo real de execução, com ordens limitadas ou a mercado e slippage nas alts, decide se existe estratégia. **Só papel ou operação pequena responde isso.**
+- **Fragilidade 2, anos fracos:** 2024 e 2025 ficaram abaixo da stablecoin. O prêmio oscila com o apetite do mercado.
+- **Fragilidade 3, alavancagem:** com 3× por perna, um token que anda 30% contra uma perna a liquida antes do reequilíbrio. Alts fazem isso num dia. Os ~21%/ano com 3× são aritmética e ignoram esse risco.
+- **Não é trading direcional:** o Gabriel registrou em 05/10/2026 que procura trading. A estratégia fica como o único candidato de renda que passou.
+
 ## Leitura conjunta
 
 Mesma direção do achado da auditoria v6 sobre o checklist mecânico dos Setups A/B. Nenhum dos dez setups de vídeo tem edge mecânico demonstrável nesses 20 pares (o 9.1 também não, fora da amostra, nos 80 pares do estudo 6):

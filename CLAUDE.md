@@ -121,6 +121,10 @@ Regra TV (comprado se acima da média de 200 dias, com posição = min(1, 40% ÷
 
 Rompimento de 7 dias com volume ≥ 2× em barras de 4h, segurando 48h, nos 50 pares mais líquidos de DE: +0.27% por trade com IC [−0.44, +1.05]; excesso +0.24% com IC cruzando zero. Nas majors dá +0.93% com IC > 0, o mesmo filme de sempre. **Regra do Gabriel (05/10/2026): só vai para o papel o que passar no critério completo.**
 
+### Estudo 44 — arbitragem de funding Hyperliquid × Binance (05/10/2026, PASSA com fragilidade)
+
+207 tokens desde 06/2023, até 10 pares com diferença ≥ 20%/ano, 1× por perna, custo de 0.39% ida e volta: **+7.0%/ano, IC95 [+4.8, +9.1], queda de −1.7%**. A diferença persiste (correlação de +0.41 entre semanas). **Mas com custo dobrado vira −3.9%/ano**: o custo real de execução decide. 2024 e 2025 ficaram abaixo da stablecoin. 3× por perna daria ~21%/ano só na aritmética, com risco de liquidação de uma perna. Não é trading direcional, que é o que o Gabriel procura.
+
 **Leitura acumulada (37 estudos):** nenhuma regra direcional passou. Os fracassos têm três causas recorrentes: efeito rápido demais para latência horária, efeito que é do mercado inteiro (beta) e custo de carregar a posição (funding, squeeze). O que funcionou foi estrutural e sem previsão: cash-and-carry (estudo 20; prêmio secou), base trimestral (24) e desbloqueio de tokens (25, no papel).
 
 **Infra nova (reaproveitável):**
@@ -134,7 +138,7 @@ Rompimento de 7 dias com volume ≥ 2× em barras de 4h, segurando 48h, nos 50 p
 **Ideias levantadas e ainda não testadas** (para retomar):
 - Compressão de volatilidade (NR7/squeeze): descartada por ser rompimento com parâmetros em aberto.
 - Turtle com piramidação: só com K=3 no DE; recomendação é não insistir.
-- Diferença de funding entre Binance e Bybit (neutro em preço, família que funcionou): **o Gabriel não gostou da ideia**; não reabrir sem ele pedir.
+- Diferença de funding entre corretoras: o Gabriel não tinha gostado da ideia, mas **liberou o teste em 05/10/2026** (estudo 44, Hyperliquid × Binance).
 
 Ao retomar, a pergunta em aberto é se vale continuar buscando regra direcional ou se o projeto deve olhar para os mecanismos estruturais e os testes de papel que já estão rodando.
 

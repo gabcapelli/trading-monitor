@@ -1,0 +1,25 @@
+  ... 0/234 (1 com dados nas duas)
+  ... 20/234 (20 com dados nas duas)
+  ... 40/234 (36 com dados nas duas)
+  ... 60/234 (51 com dados nas duas)
+  ... 80/234 (71 com dados nas duas)
+  ... 100/234 (88 com dados nas duas)
+  ... 120/234 (106 com dados nas duas)
+  ... 140/234 (124 com dados nas duas)
+  ... 160/234 (141 com dados nas duas)
+  ... 180/234 (160 com dados nas duas)
+  ... 200/234 (179 com dados nas duas)
+  ... 220/234 (197 com dados nas duas)
+Tokens com historico nas duas corretoras: 207
+
+Janela: 2023-06-12 a hoje | pares ativos em media 9.7
+PERSISTENCIA: correlacao (7 d antes x 7 d depois) = +0.41 (n=22657)
+
+RETORNO SOBRE O CAPITAL (1x por perna, decide): media +7.0%/ano IC95 [+4.8, +9.1] | composto +7.2%/ano | queda maxima -1.7%
+  por ano: 2023: +16.1% | 2024: +3.2% | 2025: +1.1% | 2026: +13.1%
+  so funding (sem base): +6.5%/ano
+  custo dobrado: -3.9%/ano
+  com 3x por perna (descritivo): ~+20.9%/ano, queda ~-5.2%
+
+  DECISAO: PASSA (IC95 inteiro acima de 4%/ano) | meta com 3x: ATENDE
+  [438s]
