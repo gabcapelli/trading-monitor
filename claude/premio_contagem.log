@@ -1,0 +1,29 @@
+
+====================================================================================================
+UNIVERSO A (descritivo) -- SO CONTAGEM
+====================================================================================================
+    ... 0 pares
+  universo A: 20 pares com premio e candles
+  PRIMARIA: premio extremo, 8h     trades   1466 | vendas   907 | compras   559 | semanas  174
+  1h                               trades   2663 | vendas  1605 | compras  1058 | semanas  174
+  24h                              trades   1068 | vendas   648 | compras   420 | semanas  174
+  sem piso absoluto, 8h            trades  23963 | vendas 14476 | compras  9487 | semanas  343
+
+====================================================================================================
+UNIVERSO DE (DECIDE) -- SO CONTAGEM
+====================================================================================================
+    ... 0 pares
+    ... 50 pares
+    ... 100 pares
+    ... 150 pares
+    ... 200 pares
+    ... 250 pares
+    ... 300 pares
+    ... 350 pares
+  universo DE: 364 pares com premio e candles
+  PRIMARIA: premio extremo, 8h     trades  27223 | vendas  9836 | compras 17387 | semanas  338
+  1h                               trades  46139 | vendas 14030 | compras 32109 | semanas  338
+  24h                              trades  20858 | vendas  7552 | compras 13306 | semanas  338
+  sem piso absoluto, 8h            trades 392978 | vendas 295469 | compras 97509 | semanas  340
+
+  [3190s]

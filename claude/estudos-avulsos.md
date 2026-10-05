@@ -851,6 +851,115 @@ Script: `monitor/replay_capitulacao.py` · logs: `claude/capitulacao.log`, `clau
 - **H=3 fica isolado:** H=1 e H=7 dão zero, e um efeito real não deveria aparecer só num horizonte.
 - **Mesmo padrão de sempre em A:** nos 20 majors, o excesso de +1.37% tinha IC > 0. Em 368 pares, sumiu.
 
+## 32. Drift pré-FOMC — 04/10/2026
+
+Script: `monitor/replay_pre_fomc.py` · log: `claude/pre_fomc.log` · fonte: Lucca & Moench (2015), *The Pre-FOMC Announcement Drift*
+
+- **Hipótese:** é a única de calendário macro com direção esperada documentada. Em ações, o preço sobe nas 24h antes do comunicado do Fed. CPI e vencimento de opções ficaram de fora por não terem direção esperada.
+- **Eventos:** as 53 reuniões regulares de 2020 a 09/2026 (datas do federalreserve.gov), sem as de emergência de março/2020. Comunicado às 14:00 de Nova York (18:00 ou 19:00 UTC).
+- **Regra:** comprado no perpétuo BTCUSDT da Binance de T−24h até T, sem stop.
+- **Critério:** `abs` (custo + funding) **e** `excesso` sobre o retorno de 24h típico (mesma hora, nos 365 dias anteriores; só passado) com IC95 > 0, bootstrap por evento.
+- **Poder declarado antes de rodar:** só um drift acima de ~1% por evento seria detectável.
+
+| | n | Média | IC95 |
+|---|---|---|---|
+| **BTC absoluto (decide)** | 53 | **+0.64%** | [−0.21, +1.52] |
+| **BTC excesso (decide)** | 50 | **+0.39%** | [−0.37, +1.15] |
+| ETH, T−24h → T | 53 | +0.80% | [−0.15, +1.76] |
+| Cesta dos 20 majors | 53 | +0.58% | [−0.21, +1.38] |
+| BTC depois do comunicado (T → T+24h) | 53 | +0.03% | [−1.02, +1.21] |
+| BTC absoluto 2020–2022 | 23 | +1.66% | [−0.05, +3.34] |
+| BTC absoluto 2023–2026 | 30 | **−0.14%** | [−0.84, +0.55] |
+
+**Veredito: NÃO PASSA.**
+- **Centro positivo em tudo, sem poder para separar de zero:** BTC, ETH e cesta ficam todos entre +0.6% e +0.8%, com 33–34 de 53 eventos positivos. É o tamanho de efeito que o teste, com 53 eventos, não consegue distinguir de zero, como previsto no pré-registro.
+- **O efeito, se existiu, ficou em 2020–2022.** Em 2023–2026 é −0.14%. Bate com a literatura de ações, onde o drift pré-FOMC enfraqueceu depois de publicado. Não há como operar algo que, no período recente, é zero.
+- **Excesso menor que o absoluto:** parte do +0.64% é só a deriva de alta do BTC no período.
+
+## 33 e 34. Lead-lag BTC → alts e Turtle canônico — 04/10/2026
+
+Família de 2 hipóteses no DE → IC de **97.5%** (Bonferroni, K=2), fixado antes de rodar as duas. Eram as "menos promissoras" da lista de ideias; a compressão de volatilidade (NR7/squeeze) foi descartada sem teste: é rompimento com um filtro a mais, com parâmetros em aberto que exigiriam grade.
+
+### 33. Lead-lag BTC → altcoins em 1h
+
+Script: `monitor/replay_lead_lag.py` · log: `claude/lead_lag.log`
+
+- **Regra:** hora com |retorno do BTC| ≥ 2σ das 720h anteriores (3.242 sinais) → entra em cada alt na mesma direção na abertura da hora seguinte e sai 1h depois. A execução é **otimista**: entra no instante em que o sinal fecha.
+- **Decide:** `abs` e excesso **sobre o próprio BTC** na mesma hora. O excesso separa atraso das alts de momentum do BTC.
+- **Portão pré-registrado (etapa 1, universo A):** se o bruto médio não cobrir o custo de 0.18%, o estudo para e o DE não é usado.
+
+| Universo A (19 alts) | n | Média | IC95 |
+|---|---|---|---|
+| Bruto | 51.077 | **−0.029%** | [−0.070, +0.012] |
+| Excesso sobre o BTC | 51.077 | −0.015% | [−0.040, +0.010] |
+| 2ª hora / 4 horas (bruto) | 51.077 | −0.029% / −0.080% | — |
+| O próprio BTC na hora seguinte | 3.242 | −0.019% | [−0.055, +0.016] |
+
+**Veredito: NÃO PASSA (por custo, na etapa 1).** O DE não foi usado. Em resolução de 1h não há atraso mensurável: as alts ajustam ao BTC dentro da mesma hora, e o próprio BTC não continua na hora seguinte. Com 3σ também dá zero. Se existir atraso, ele é de minutos e só um robô com dados em tempo real conseguiria explorar, o que está fora do escopo do projeto.
+
+### 34. Turtle canônico (Donchian)
+
+Script: `monitor/replay_turtle.py` · log: `claude/turtle.log`
+
+- **Regra (Sistema 2, parâmetros originais, diário):**
+  - **Entrada:** fechamento rompe a máxima (mínima) de 55 dias → entra na abertura seguinte.
+  - **Stop:** 2N (ATR 20).
+  - **Saída:** rompimento contrário de 20 dias.
+  - Sem piramidação; os dois lados.
+- **Critério:** motor do acervo FMZ; DE decide com `abs` e `excesso` transversal (IC97.5).
+
+| | A: absoluto | A: excesso | **DE: absoluto** | **DE: excesso** |
+|---|---|---|---|---|
+| **Sistema 2, 55/20 (decide)** | +16.4% | −1.1% | **+0.34%** [−2.8, +4.0] | **−1.25%** [−2.48, −0.02] |
+| Sistema 1, 20/10 | +5.9% | +1.8% | +0.07% | −0.53% |
+
+**Veredito: NÃO PASSA.** O excesso no DE fica até negativo com confiança.
+- **Os +16% por trade nos 20 majors são beta.** Vêm todos das compras num universo que subiu (+29%), e o excesso transversal é −1.1%. Nos 368 pares o absoluto cai para +0.3%.
+- **A família tendência fecha aqui:** foram quatro formas independentes (setup com stop/alvo, transversal, EWMAC do Carver e Donchian/Turtle), todas com zero em cripto.
+
+## 35. "O gap da CME sempre fecha" (BTC) — 04/10/2026
+
+Script: `monitor/replay_gap_cme.py` · log: `claude/gap_cme.log`
+
+- **Horários:** a CME fecha na sexta às 16:00 de Chicago e reabre no domingo às 17:00, o que dá 21:00/22:00 UTC no horário de verão americano e 22:00/23:00 UTC fora dele. Preço do perpétuo BTCUSDT da Binance, 1h, de 09/2019 a 09/2026 (368 fins de semana).
+- **Regra:** com |gap| ≥ 1%, entra na reabertura na direção do fechamento do gap. O alvo é o fechamento de sexta (ordem limitada); se não for tocado, sai por tempo no fechamento da CME da sexta seguinte. Sem stop.
+- **Critério:** `abs` e excesso sobre a deriva passada do BTC, IC95 > 0, bootstrap por evento.
+- **Placebo:** o mesmo procedimento com um "gap" falso de terça para quinta, com a mesma distância em horas.
+
+| | Eventos | Gap fechou | Absoluto | Excesso |
+|---|---|---|---|---|
+| **CME, gap ≥ 1% (decide)** | 179 | **69%** | **−0.65%** [−1.67, +0.28] | −0.36% [−1.36, +0.59] |
+| CME, gap ≥ 2% | 97 | 59% | −1.14% | −0.80% |
+| Placebo terça → quinta, ≥ 1% | 265 | 47% | −0.92% | −0.70% |
+
+**Veredito: NÃO PASSA.** A alegação é meio verdadeira:
+- **O gap fecha mais que o acaso:** 69% contra 47% no placebo de meio de semana. O movimento de fim de semana, com pouca liquidez, tem mais tendência a voltar.
+- **Mesmo assim, operar perde:** o ganho, quando fecha, é só o tamanho do gap (~1–2%), e a perda, quando não fecha, é o movimento da semana inteira. É acerto alto com expectância negativa, como o IFR do estudo 5. Um stop não resolveria sem virar outra hipótese, escolhida depois de ver os dados.
+
+## 36. Prêmio extremo do perpétuo sobre o índice (horário) — 04/10/2026
+
+Script: `monitor/replay_premio.py` · logs: `claude/premio.log`, `claude/premio_contagem.log`
+
+- **Dados novos:** histórico do prêmio horário (perpétuo − índice)/índice, de `data.binance.vision` (`premiumIndexKlines`, desde 2020). Cache em `monitor/cache_vision/premio/`.
+- **Sobreposição assumida com o estudo 27:** o prêmio é o que gera o funding. A diferença testada aqui é a escala: sinal horário e saída em horas.
+- **Regra:**
+  - **Venda:** prêmio da hora ≥ p99 das 720h anteriores **e** ≥ +0.3%.
+  - **Compra:** prêmio ≤ p1 **e** ≤ −0.3%.
+  - **Execução:** entra na abertura seguinte e sai 8h depois (um período de funding).
+- **Critério:** DE decide com `abs` e excesso sobre o BTC nas mesmas horas, IC95 > 0, bootstrap por semana.
+
+| | A: absoluto | A: excesso | **DE: absoluto** | **DE: excesso** |
+|---|---|---|---|---|
+| **Primária, 8h (decide)** | +0.32% | +0.05% | **+0.07%** [−0.07, +0.23] | **−0.01%** [−0.15, +0.15] |
+| Saída em 1h | +0.27% | +0.26% | −0.03% (bruto +0.11%) | +0.08% |
+| Saída em 24h | −0.38% | −0.98% | +0.24% | +0.00% |
+| Sem piso absoluto, 8h | −0.06% | +0.06% | −0.12% | +0.05% |
+
+**Veredito: NÃO PASSA.** Foram 27.223 trades no DE, e o resultado é zero.
+- **O mesmo filme dos outros estudos:** nos 20 majors, as compras com prêmio muito negativo pareciam fortes (+2.3% de absoluto, excesso de +1.5% com IC > 0). Nos 364 pares, isso cai para +0.25% e +0.06%.
+- **Há um sinal minúsculo de reversão na hora seguinte** (bruto de +0.11% em 1h, excesso de +0.08% com IC > 0 no DE). Ele fica abaixo do custo de 0.18% por giro, como os setups intraday dos estudos 3, 7 e 11.
+- **Confirma o estudo 27:** prêmio e funding extremos não preveem a direção do perpétuo em nenhuma escala testada (horas ou dias).
+
 ## Leitura conjunta
 
 Mesma direção do achado da auditoria v6 sobre o checklist mecânico dos Setups A/B. Nenhum dos dez setups de vídeo tem edge mecânico demonstrável nesses 20 pares (o 9.1 também não, fora da amostra, nos 80 pares do estudo 6):

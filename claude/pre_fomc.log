@@ -1,0 +1,71 @@
+Eventos FOMC regulares com dado: 53 de 53
+
+BTCUSDT perpetuo, comprado de T-24h ate T (T = comunicado)
+  retorno bruto                                  n= 53 media  +0.85% IC95 [ -0.00,  +1.73] | positivos 34
+  funding pago                                   n= 53 media  +0.03% IC95 [ +0.02,  +0.04] | positivos 47
+  ABSOLUTO (decide)                              n= 53 media  +0.64% IC95 [ -0.21,  +1.52] | positivos 33
+  EXCESSO sobre 24h tipicas, 365d antes (decide) n= 50 media  +0.39% IC95 [ -0.37,  +1.15] | positivos 31
+
+Descritivos
+  ETHUSDT, T-24h -> T                            n= 53 media  +0.80% IC95 [ -0.15,  +1.76] | positivos 33
+  cesta 20 majors, T-24h -> T                    n= 53 media  +0.58% IC95 [ -0.21,  +1.38] | positivos 31
+  BTC DEPOIS: T -> T+24h                         n= 53 media  +0.03% IC95 [ -1.02,  +1.21] | positivos 25
+  BTC abs 2020-2022                              n= 23 media  +1.66% IC95 [ -0.05,  +3.34] | positivos 17
+  BTC abs 2023-2026                              n= 30 media  -0.14% IC95 [ -0.84,  +0.55] | positivos 16
+
+  Por evento:
+    2020-01-29  BTC  +4.14%  abs  +3.74%  excesso   +nan%  depois  +1.37%
+    2020-04-29  BTC +12.83%  abs +12.62%  excesso   +nan%  depois  -1.85%
+    2020-06-10  BTC  +0.71%  abs  +0.50%  excesso   +nan%  depois  -4.02%
+    2020-07-29  BTC  +2.10%  abs  +1.70%  excesso  +1.82%  depois  -1.14%
+    2020-09-16  BTC  +2.27%  abs  +2.11%  excesso  +2.05%  depois  -1.61%
+    2020-11-05  BTC  +6.12%  abs  +5.91%  excesso  +5.85%  depois  +3.52%
+    2020-12-16  BTC  +5.45%  abs  +5.20%  excesso  +5.10%  depois +12.96%
+    2021-01-27  BTC  -7.79%  abs  -8.00%  excesso  -8.22%  depois  +9.85%
+    2021-03-17  BTC  +0.48%  abs  +0.22%  excesso  -0.26%  depois  +6.74%
+    2021-04-28  BTC  -0.04%  abs  -0.25%  excesso  -0.65%  depois  -3.74%
+    2021-06-16  BTC  -3.73%  abs  -3.94%  excesso  -4.22%  depois  -3.76%
+    2021-07-28  BTC  +3.12%  abs  +2.93%  excesso  +2.69%  depois  +1.65%
+    2021-09-22  BTC  +3.42%  abs  +3.21%  excesso  +2.94%  depois  +3.92%
+    2021-11-03  BTC  -1.61%  abs  -1.94%  excesso  -2.13%  depois  -2.57%
+    2021-12-15  BTC  +2.53%  abs  +2.32%  excesso  +2.19%  depois  +0.36%
+    2022-01-26  BTC  +1.74%  abs  +1.57%  excesso  +1.63%  depois  -4.64%
+    2022-03-16  BTC  +2.90%  abs  +2.70%  excesso  +2.92%  depois  +0.86%
+    2022-05-04  BTC  +2.43%  abs  +2.22%  excesso  +2.47%  depois  -5.59%
+    2022-06-15  BTC  -5.56%  abs  -5.73%  excesso  -5.46%  depois  -0.25%
+    2022-07-27  BTC  +3.35%  abs  +3.16%  excesso  +3.46%  depois +11.00%
+    2022-09-21  BTC  +5.77%  abs  +5.58%  excesso  +5.94%  depois  -3.92%
+    2022-11-02  BTC  -0.00%  abs  -0.19%  excesso  +0.24%  depois  -1.04%
+    2022-12-14  BTC  +2.83%  abs  +2.62%  excesso  +3.04%  depois  -4.50%
+    2023-02-01  BTC  -0.37%  abs  -0.58%  excesso  -0.28%  depois  +4.27%
+    2023-03-22  BTC  +1.86%  abs  +1.68%  excesso  +1.92%  depois  -0.73%
+    2023-05-03  BTC  -0.04%  abs  -0.24%  excesso  -0.00%  depois  +0.95%
+    2023-06-14  BTC  +0.80%  abs  +0.61%  excesso  +0.73%  depois  -3.39%
+    2023-07-26  BTC  -0.04%  abs  -0.24%  excesso  -0.15%  depois  -0.14%
+    2023-09-20  BTC  +0.23%  abs  +0.05%  excesso  +0.10%  depois  -2.02%
+    2023-11-01  BTC  +0.38%  abs  +0.17%  excesso  +0.20%  depois  +0.72%
+    2023-12-13  BTC  +1.97%  abs  +1.76%  excesso  +1.70%  depois  +1.70%
+    2024-01-31  BTC  +0.33%  abs  +0.13%  excesso  +0.13%  depois  -1.54%
+    2024-03-20  BTC  -1.18%  abs  -1.40%  excesso  -1.44%  depois  +2.55%
+    2024-05-01  BTC  -4.89%  abs  -5.10%  excesso  -5.13%  depois  +3.09%
+    2024-06-12  BTC  +4.52%  abs  +4.31%  excesso  +4.23%  depois  -4.13%
+    2024-07-31  BTC  +1.24%  abs  +1.05%  excesso  +0.99%  depois  -5.18%
+    2024-09-18  BTC  -1.58%  abs  -1.77%  excesso  -1.83%  depois  +6.16%
+    2024-11-07  BTC  +1.82%  abs  +1.61%  excesso  +1.58%  depois  +0.26%
+    2024-12-18  BTC  -1.65%  abs  -1.86%  excesso  -1.94%  depois  -5.62%
+    2025-01-29  BTC  +0.63%  abs  +0.42%  excesso  +0.36%  depois  +2.64%
+    2025-03-19  BTC  +3.39%  abs  +3.20%  excesso  +3.30%  depois  -0.15%
+    2025-05-07  BTC  +1.91%  abs  +1.73%  excesso  +1.77%  depois  +4.88%
+    2025-06-18  BTC  +0.52%  abs  +0.33%  excesso  +0.37%  depois  +0.19%
+    2025-07-30  BTC  +0.02%  abs  -0.19%  excesso  -0.16%  depois  -0.03%
+    2025-09-17  BTC  -0.81%  abs  -1.01%  excesso  -1.02%  depois  +1.78%
+    2025-10-29  BTC  -2.97%  abs  -3.16%  excesso  -3.14%  depois  -3.91%
+    2025-12-10  BTC  -1.53%  abs  -1.72%  excesso  -1.55%  depois  -1.94%
+    2026-01-28  BTC  +1.42%  abs  +1.22%  excesso  +1.43%  depois  -6.77%
+    2026-03-18  BTC  -3.93%  abs  -4.10%  excesso  -3.92%  depois  -2.43%
+    2026-04-29  BTC  -0.02%  abs  -0.20%  excesso  +0.01%  depois  +0.09%
+    2026-06-17  BTC  +0.19%  abs  +0.02%  excesso  +0.30%  depois  -5.29%
+    2026-07-29  BTC  +0.91%  abs  +0.71%  excesso  +1.06%  depois  +0.93%
+    2026-09-16  BTC  -1.54%  abs  -1.73%  excesso  -1.45%  depois  +1.18%
+
+  DECISAO: NAO PASSA

@@ -1,0 +1,19 @@
+BTC: 61709 horas | sinais 2 sigma: 3242 | 3 sigma: 1212
+  descr.: o proprio BTC em t+1       n=  3242 sem= 362 media  -0.019% IC95 [ -0.055,  +0.016]
+
+====================================================================================================
+ETAPA 1 -- universo A (portao: bruto medio > 0.18%?)
+====================================================================================================
+  universo A: 19 alts | 51077 trades
+  bruto                              n= 51077 sem= 355 media  -0.029% IC95 [ -0.070,  +0.012]
+  absoluto (custo+funding)           n= 51077 sem= 355 media  -0.209% IC95 [ -0.250,  -0.168]
+  excesso sobre o BTC                n= 51077 sem= 355 media  -0.015% IC95 [ -0.040,  +0.010]
+  descr.: 2a hora                    n= 51077 sem= 355 media  -0.029% IC95 [ -0.072,  +0.013]
+  descr.: 4 horas (bruto)            n= 51077 sem= 355 media  -0.080% IC95 [ -0.178,  +0.007]
+  universo A: 19 alts | 18973 trades
+  descr.: 3 sigma, bruto             n= 18973 sem= 304 media  -0.006% IC95 [ -0.086,  +0.076]
+
+  Bruto medio em A = -0.029% <= custo 0.18%: a regra nao cobre o custo.
+  DECISAO: NAO PASSA (por custo, na etapa 1). Universo DE NAO usado.
+
+  [17s]

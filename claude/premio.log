@@ -1,0 +1,95 @@
+
+====================================================================================================
+UNIVERSO A (descritivo)
+====================================================================================================
+    ... 0 pares
+  universo A: 20 pares com premio e candles
+
+  [PRIMARIA: premio extremo, 8h]  trades 1466 (vendas 907)
+  bruto                              n=  1466 sem= 174 media  +0.367% IC95 [ -0.247,  +1.083]
+  abs                                n=  1466 sem= 174 media  +0.321% IC95 [ -0.289,  +1.028]
+  excesso                            n=  1433 sem= 173 media  +0.045% IC95 [ -0.454,  +0.659]
+  so vendas: abs                     n=   907 sem=  89 media  -0.927% IC95 [ -1.559,  -0.323]
+  so vendas: excesso                 n=   880 sem=  88 media  -0.895% IC95 [ -1.422,  -0.278]
+  so compras: abs                    n=   559 sem= 139 media  +2.348% IC95 [ +1.231,  +3.451]
+  so compras: excesso                n=   553 sem= 139 media  +1.541% IC95 [ +0.843,  +2.308]
+
+  [1h]  trades 2663 (vendas 1605)
+  bruto                              n=  2663 sem= 174 media  +0.441% IC95 [ +0.219,  +0.714]
+  abs                                n=  2663 sem= 174 media  +0.273% IC95 [ +0.052,  +0.546]
+  excesso                            n=  2604 sem= 173 media  +0.263% IC95 [ +0.091,  +0.492]
+  so vendas: abs                     n=  1605 sem=  92 media  -0.116% IC95 [ -0.386,  +0.112]
+  so vendas: excesso                 n=  1561 sem=  91 media  -0.046% IC95 [ -0.261,  +0.159]
+  so compras: abs                    n=  1058 sem= 139 media  +0.863% IC95 [ +0.357,  +1.472]
+  so compras: excesso                n=  1043 sem= 139 media  +0.727% IC95 [ +0.371,  +1.141]
+
+  [24h]  trades 1068 (vendas 648)
+  bruto                              n=  1068 sem= 174 media  -0.458% IC95 [ -1.823,  +0.917]
+  abs                                n=  1068 sem= 174 media  -0.382% IC95 [ -1.735,  +0.968]
+  excesso                            n=  1037 sem= 173 media  -0.975% IC95 [ -2.326,  +0.222]
+  so vendas: abs                     n=   648 sem=  87 media  -2.646% IC95 [ -4.714,  -0.840]
+  so vendas: excesso                 n=   622 sem=  86 media  -2.851% IC95 [ -4.676,  -1.218]
+  so compras: abs                    n=   420 sem= 138 media  +3.110% IC95 [ +1.281,  +5.110]
+  so compras: excesso                n=   415 sem= 138 media  +1.837% IC95 [ +0.603,  +3.221]
+
+  [sem piso absoluto, 8h]  trades 23963 (vendas 14476)
+  bruto                              n= 23963 sem= 343 media  +0.101% IC95 [ +0.030,  +0.173]
+  abs                                n= 23963 sem= 343 media  -0.064% IC95 [ -0.135,  +0.007]
+  excesso                            n= 22920 sem= 343 media  +0.063% IC95 [ +0.010,  +0.116]
+  so vendas: abs                     n= 14476 sem= 320 media  -0.209% IC95 [ -0.300,  -0.117]
+  so vendas: excesso                 n= 13970 sem= 316 media  -0.053% IC95 [ -0.127,  +0.015]
+  so compras: abs                    n=  9487 sem= 337 media  +0.158% IC95 [ +0.031,  +0.290]
+  so compras: excesso                n=  8950 sem= 337 media  +0.245% IC95 [ +0.154,  +0.336]
+
+====================================================================================================
+UNIVERSO DE (DECIDE)
+====================================================================================================
+    ... 0 pares
+    ... 50 pares
+    ... 100 pares
+    ... 150 pares
+    ... 200 pares
+    ... 250 pares
+    ... 300 pares
+    ... 350 pares
+  universo DE: 364 pares com premio e candles
+
+  [PRIMARIA: premio extremo, 8h]  trades 27223 (vendas 9836)
+  bruto                              n= 27223 sem= 338 media  +0.041% IC95 [ -0.105,  +0.200]
+  abs                                n= 27223 sem= 338 media  +0.072% IC95 [ -0.073,  +0.228]
+  excesso                            n= 27212 sem= 338 media  -0.009% IC95 [ -0.147,  +0.145]
+  so vendas: abs                     n=  9836 sem= 311 media  -0.239% IC95 [ -0.447,  -0.032]
+  so vendas: excesso                 n=  9827 sem= 311 media  -0.126% IC95 [ -0.319,  +0.070]
+  so compras: abs                    n= 17387 sem= 334 media  +0.248% IC95 [ +0.042,  +0.469]
+  so compras: excesso                n= 17385 sem= 334 media  +0.058% IC95 [ -0.139,  +0.269]
+
+  [1h]  trades 46139 (vendas 14030)
+  bruto                              n= 46139 sem= 338 media  +0.105% IC95 [ +0.041,  +0.180]
+  abs                                n= 46139 sem= 338 media  -0.031% IC95 [ -0.094,  +0.044]
+  excesso                            n= 46122 sem= 338 media  +0.079% IC95 [ +0.021,  +0.146]
+  so vendas: abs                     n= 14030 sem= 314 media  -0.098% IC95 [ -0.206,  +0.015]
+  so vendas: excesso                 n= 14019 sem= 314 media  +0.071% IC95 [ -0.018,  +0.174]
+  so compras: abs                    n= 32109 sem= 335 media  -0.001% IC95 [ -0.090,  +0.114]
+  so compras: excesso                n= 32103 sem= 335 media  +0.082% IC95 [ +0.008,  +0.174]
+
+  [24h]  trades 20858 (vendas 7552)
+  bruto                              n= 20858 sem= 338 media  +0.063% IC95 [ -0.184,  +0.326]
+  abs                                n= 20858 sem= 338 media  +0.239% IC95 [ -0.007,  +0.496]
+  excesso                            n= 20844 sem= 338 media  +0.000% IC95 [ -0.225,  +0.240]
+  so vendas: abs                     n=  7552 sem= 308 media  -0.509% IC95 [ -0.956,  -0.069]
+  so vendas: excesso                 n=  7541 sem= 308 media  -0.403% IC95 [ -0.763,  -0.045]
+  so compras: abs                    n= 13306 sem= 332 media  +0.664% IC95 [ +0.291,  +1.067]
+  so compras: excesso                n= 13303 sem= 332 media  +0.229% IC95 [ -0.081,  +0.564]
+
+  [sem piso absoluto, 8h]  trades 392978 (vendas 295469)
+  bruto                              n=392978 sem= 340 media  +0.043% IC95 [ -0.007,  +0.092]
+  abs                                n=392978 sem= 340 media  -0.123% IC95 [ -0.172,  -0.073]
+  excesso                            n=392700 sem= 340 media  +0.045% IC95 [ +0.012,  +0.080]
+  so vendas: abs                     n=295469 sem= 334 media  -0.166% IC95 [ -0.237,  -0.096]
+  so vendas: excesso                 n=295233 sem= 334 media  +0.028% IC95 [ -0.018,  +0.076]
+  so compras: abs                    n= 97509 sem= 340 media  +0.008% IC95 [ -0.086,  +0.098]
+  so compras: excesso                n= 97467 sem= 340 media  +0.097% IC95 [ +0.025,  +0.166]
+
+  DECISAO (universo DE, regra primaria): NAO PASSA
+
+  [406s]
