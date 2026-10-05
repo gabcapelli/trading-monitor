@@ -716,6 +716,250 @@ Estudo no repo separado `binance-listings`. Vender perpétuo novo **não passou*
 - **Comparação:** registra junto a versão sem stop e o excesso sobre os 20 majors.
 - **Leitura:** só com **100 trades fechados**. A maioria dos lançamentos de 2026 é de ações e commodities (69 de 73 nos últimos 70 dias), então isso leva ~1.5–2 anos.
 
+## 27. Funding extremo como gatilho de squeeze — 04/10/2026
+
+Script: `monitor/replay_funding_squeeze.py` · log: `claude/funding_squeeze.log`
+
+Primeiro uso do funding como **timing direcional**; até aqui ele só tinha sido prêmio contínuo (14, 19, 20). Mecanismo: funding extremo indica um lado alavancado lotado, e o preço começando a andar contra ele dispara liquidação em cascata.
+
+- **Regra (diário UTC):**
+  - **Venda:** funding do dia ≥ p95 dos 180 dias anteriores e ≥ +0.06%/dia, com fechamento abaixo da mínima de ontem.
+  - **Compra:** funding ≤ p5 e ≤ −0.03%/dia, com fechamento acima da máxima de ontem.
+  - **Execução:** entra na abertura seguinte e sai em 3 dias, sem stop, uma posição por par.
+- **Critério:** universo DE (368 pares), `abs` **e** `excesso` transversal com IC95 > 0 e bootstrap por semana. A é só descritivo. Não houve grade.
+- **Placebo pré-registrado:** a mesma regra com o funding de 365 dias antes.
+- **Contagem feita antes de qualquer retorno:** 4.103 trades no DE, em 314 semanas.
+
+| Universo DE | n | Absoluto | Excesso transversal |
+|---|---|---|---|
+| **Primária (decide)** | 4103 | −0.40%, IC [−1.38, +0.62] | **−0.56%**, IC [−1.05, −0.04] |
+| Placebo (funding de 365 d antes) | 3376 | +0.00% | **−0.45%**, IC [−0.85, −0.10] |
+| Sem gatilho de preço | 14346 | +0.26% | +0.01%, IC [−0.21, +0.25] |
+| Gatilho, H=1 / H=7 | 4759 / 3558 | −0.04% / −0.48% | −0.22% / −0.90% |
+
+**Veredito: NÃO PASSA.** O excesso fica até negativo com confiança.
+- **O funding não acrescenta nada:**
+  - **Primária vs. placebo:** a primária (−0.56%) e o placebo (−0.45%) têm praticamente o mesmo excesso. O negativo vem do gatilho de preço: no diário, em alts, o rompimento da máxima ou mínima de ontem tende a voltar nos 3 dias seguintes em relação ao mercado.
+  - **Sem o gatilho:** o funding extremo sozinho tem excesso zero (+0.01%, n=14.346).
+- **Mesmo padrão de sempre em A:** nos 20 majors a primária parecia boa (excesso +0.97%, IC [−0.00, +1.96]; H=7 +1.99%, IC > 0). Nos 368 pares virou negativa.
+- **Não tratar como pista:** "só compras, sem gatilho" tem `abs` +1.07% com IC > 0 no DE, mas o excesso é −0.13%. É o funding negativo **recebido** pelo comprado (carry), não timing, e o carry já foi estudado (estudo 20: o prêmio secou).
+
+## 28. Vender o perpétuo após anúncio de deslistagem na Binance — 04/10/2026
+
+Script: `monitor/replay_deslistagem.py` · log: `claude/deslistagem.log` (1ª rodada, com dois bugs: `claude/deslistagem_v1.log`)
+
+- **Eventos:** feed público de anúncios da Binance (catálogo 161 desde 02/2022, mais 2020–2021 dos catálogos 48/49). Cada evento é um token num título "Binance Will Delist A, B on data", sem stablecoins/wrapped. São 162 eventos em 45 anúncios; **62 com perpétuo USDT-M negociando, em 24 anúncios**.
+- **Regra:** vende o perpétuo na abertura da 2ª hora cheia após o anúncio. Sai 24h antes do primeiro dos dois prazos (deslistagem do spot ou fim do perpétuo), em média após 11 dias. Sem stop.
+- **Critério:** `abs` (custo de 0.18% + funding real) **e** `excesso` sobre vender os 20 majors, com IC95 > 0. Bootstrap **por anúncio**. Mínimo de 20 anúncios.
+- **Dados:** candles de 1h e funding do `data.binance.vision`, que preserva contratos removidos.
+
+| Perpétuo (positivo = vendido ganhou) | n | Média | IC95 |
+|---|---|---|---|
+| **Absoluto (decide)** | 62 | **−25.5%** | [−115.4, +19.2] |
+| **Excesso sobre majors (decide)** | 62 | **−20.6%** | [−105.4, +23.7] |
+| Funding recebido | 62 | −2.8% | [−6.7, −0.4] |
+| Reação perdida (anúncio → entrada) | 62 | +13.8% | [+8.3, +18.9] |
+| Placebo (mesma janela, 30 dias antes): excesso | 62 | +4.0% | [−0.9, +9.0] |
+
+**Veredito: NÃO PASSA.**
+
+- **O trade típico ganha, a cauda destrói.** 46 de 62 trades são positivos, com mediana de +19%. Os cinco piores, porém, são −2245% (ALPACA), −204% (HFT), −94% (A2Z), −69% (HIFI) e −59% (NFP). O ALPACA é real: o perpétuo subiu ~33x num short squeeze após o anúncio de 24/04/2025, com funding de −2% por hora. Retirar os piores leva a média para +11% a +19%, mas esse recorte é pós-hoc e não serve como evidência. A distribuição é de vendido em ativo de pouca liquidez: perda sem limite e assimetria contra o vendido.
+- **O funding cobra o vendido** (−2.8% em média): o lado vendido fica lotado depois do anúncio.
+- **O mecanismo existe no spot** (descritivo, 116 eventos em 31 anúncios): queda de −20% já antes da entrada e **mais −21%** até a deslistagem (IC [−34.7, +0.7]). No perpétuo, porém, a queda vira alvo de squeeze, porque a liquidez do spot some e o perpétuo fica livre para ser manipulado.
+- **Placebo:** esses tokens já caíam ~4–5% na mesma janela um mês antes ("token morrendo"). É pequeno perto da mediana pós-anúncio.
+
+**Correções de bug feitas depois da 1ª rodada** (registradas no docstring). Nenhuma muda regra:
+1. `_meses()` perdia o último mês quando a saída caía no dia 1º. Isso deixou a cesta do ALPACA vazia, e só por isso a 1ª rodada mostrava excesso de +12.5% com IC > 0.
+2. Seis perpétuos já encerrados (candles planos, volume zero) entravam como trades de 0%.
+
+**Não tratar como pista para variar aqui:** uma versão com stop é hipótese nova, imaginada depois de ver a cauda. Só pode ser testada com anúncios futuros, no papel (como o estudo 26). Mesmo assim, stop horário não protege contra um squeeze que abre com salto de 93% em uma hora.
+
+## 29. Comprar o perpétuo após anúncio de listagem no spot da Binance — 04/10/2026
+
+Script: `monitor/replay_listagem.py` (reusa a infra do 28) · logs: `claude/listagem.log`, `claude/listagem_contagem.log`
+
+- **Eventos (critério estrutural, sem classificar título):** anúncio do catálogo 48 (desde 2017) que cita "(TKR)" cujo spot começa a negociar na Binance (1º candle de 1h, qualquer cotação) até 7 dias depois. São 465 eventos em 427 anúncios.
+- **Operável:** perpétuo USDT-M negociando no horário de entrada. **62 trades em 53 anúncios**, quase todos de 2025–2026. Em 113 eventos o perpétuo só foi lançado depois da entrada; em 263 não havia perpétuo.
+- **Regra:** compra na abertura da 2ª hora cheia após o anúncio; vende na abertura do spot (duração mediana de 4h). Sem stop.
+- **Critério:** igual ao do 28 (`abs` e `excesso` com IC95 > 0, bootstrap por anúncio).
+
+| Comprado no perpétuo | n | Média | IC95 |
+|---|---|---|---|
+| **Absoluto (decide)** | 62 | **−0.43%** | [−4.24, +3.27] |
+| **Excesso sobre majors (decide)** | 62 | **−1.21%** | [−5.15, +2.60] |
+| Reação perdida (anúncio → entrada) | 62 | +21.9% | [+12.7, +31.7] |
+| Depois: abertura do spot → +24h | 62 | −9.9% | [−15.4, −3.9] |
+| Depois: abertura do spot → +7d | 62 | **−20.6%** | [−28.1, −12.8] |
+
+**Veredito: NÃO PASSA.**
+- **O efeito do anúncio acontece em menos de 2 horas:** +21.9% entre o anúncio e a entrada, e daí até a abertura do spot sobra zero (mediana +0.5%, 33 de 62 positivos). Confirma a literatura: o prêmio está no anúncio, e uma latência horária já chega tarde.
+- **Descritivo pré-registrado que chama atenção:** depois da abertura do spot, o perpétuo **devolve −9.9% em 24h e −20.6% em 7 dias**, com IC inteiro abaixo de zero. Bate com a literatura ("reverte em ~2 semanas"). **Não é resultado de decisão:** foi visto nesta amostra, sem excesso calculado e sem custo de vendido (funding, squeeze). Vira hipótese nova, a testar em amostra que ainda não foi vista (ver abaixo).
+- **2026 é o pior ano** (abs −2.35%, excesso −4.50%), na direção da compressão relatada.
+
+**Amostra limpa para a hipótese "vender o perpétuo na abertura do spot":** os 113 eventos em que o perpétuo foi lançado depois da entrada, mas pode existir na abertura do spot. Eles ficaram fora deste estudo, então seu pós-listagem não foi medido. Além deles, os 27 em que o spot abriu antes da entrada e as listagens futuras (papel).
+
+## 30. Vender o perpétuo na abertura do spot de uma listagem nova — 04/10/2026
+
+Script: `monitor/replay_pos_listagem.py` · log: `claude/pos_listagem.log`
+
+- **Origem:** descritivo pré-registrado do estudo 29. Nos 62 eventos de lá, o perpétuo devolvia −20.6% em 7 dias após a abertura do spot.
+- **Amostra limpa:** os eventos do 29 que **não** foram trade lá (403). Destes, **56 têm perpétuo negociando na abertura do spot, em 56 anúncios** (41 de 2025). É o mesmo período e o mesmo mercado dos 62: são eventos diferentes, mas não uma amostra independente no tempo.
+- **Regra:** vende na abertura da hora em que o spot começa e recompra 7 dias depois, sem stop.
+- **Critério:** `abs` (custo de 0.18% + funding real) **e** `excesso` sobre vender os 20 majors, com IC95 > 0 e bootstrap por anúncio.
+
+| Vendido no perpétuo, amostra limpa | n | Média | IC95 |
+|---|---|---|---|
+| Bruto | 56 | +13.1% | [+0.9, +24.6] |
+| Funding recebido | 56 | **−4.3%** | [−5.9, −2.9] |
+| **Absoluto, H=7d (decide)** | 56 | **+8.6%** | **[−4.0, +20.5]** |
+| **Excesso, H=7d (decide)** | 56 | **+13.0%** | [+0.6, +24.5] |
+| Absoluto, H=24h (descritivo) | 56 | −0.8% | [−14.0, +10.5] |
+| Absoluto, H=14d (descritivo) | 56 | +17.4% | [+6.3, +27.7] |
+| Referência: os 62 do estudo 29, H=7d (já vistos) | 62 | +17.7% | [+9.5, +25.6] |
+
+**Veredito: NÃO PASSA** — o excesso passa, o absoluto não.
+- **O preço replica:** em eventos que o estudo 29 não mediu, o perpétuo cai em relação ao mercado depois da abertura do spot (excesso +13.0%, IC > 0; mediana do `abs` +23.9%, com 38 de 56 positivos).
+- **O que derruba é o custo de ficar vendido:** −4.3% de funding em 7 dias (o vendido fica lotado) e uma cauda de squeeze (piores trades −121%, −93%, −92%, −92%, −78%). É o mesmo padrão do estudo 28 em escala menor.
+- **H=14d dá IC > 0 no absoluto, mas é descritivo:** trocar o horizonte depois de ver o resultado seria garimpo. A amostra limpa agora está gasta.
+- **2026 vai contra** (n=8: abs −15.6%, IC [−34.9, +4.4]), na direção da compressão relatada pela literatura. É pouco para ler, mas é o ano mais recente.
+
+**Se for adiante, só no papel:** regra congelada com anúncios futuros, H=7d (o pré-registrado) e H=14d registrados lado a lado, dizendo explicitamente que o 14d foi escolhido depois de ver os dados. Ritmo de eventos operáveis (perpétuo na abertura do spot, somando as amostras dos estudos 29 e 30): 82 em 2025, mas só 22 de janeiro a setembro de 2026 (~30/ano). Nesse ritmo, ~50 trades levam cerca de um ano e meio a dois anos.
+
+**Decisão (04/10/2026): não vai para o papel.** O Gabriel decidiu não testar adiante. O resultado é inconclusivo (absoluto positivo, mas com IC cruzando zero), e o custo de um teste de 1,5–2 anos não se justifica diante do funding contra o vendido, da cauda de squeeze e de 2026 negativo. Encerrado.
+
+## 31. Capitulação (queda forte + open interest despencando) — 04/10/2026
+
+Script: `monitor/replay_capitulacao.py` · logs: `claude/capitulacao.log`, `claude/capitulacao_contagem.log`
+
+- **Dados novos:** open interest histórico da Binance (`data.binance.vision`, `futures/um/daily/metrics`, a cada 5 min, desde 09/2020), campo de **quantidade** de contratos. Vem em um arquivo por par por dia, então foram baixados só os dias candidatos (8.624 no DE). Cache em `monitor/cache_vision/oi/`.
+- **Regra:**
+  - **Sinal:** queda no dia ≥ 2 desvios-padrão dos 60 dias anteriores **e** open interest do mesmo dia (23:55 vs. 00:00) caindo ≥ 10%.
+  - **Execução:** compra na abertura seguinte e vende 3 dias depois, sem stop.
+- **Critério:** igual ao do estudo 27 (A descritivo; DE decide com `abs` e `excesso` transversal, IC95 > 0, bootstrap por semana).
+- **Contraste pré-registrado:** a mesma queda com open interest **subindo** ≥ 10%.
+
+| | A: absoluto | A: excesso | **DE: absoluto** | **DE: excesso** |
+|---|---|---|---|---|
+| **Capitulação, H=3 (decide)** | +3.89% [+1.21, +6.69] | +1.37% [+0.20, +2.81] | **+3.38%** [−0.08, +7.10] | **+0.34%** [−0.51, +1.66] |
+| Capitulação, H=1 / H=7 | −0.16% / +0.55% | −0.26% / +0.18% | −0.51% / +0.29% | −0.20% / −0.45% |
+| Contraste (OI subindo), H=3 | +1.63% | −1.09% | +1.76% | +0.27% |
+| Queda sem filtro de OI, H=3 | +0.75% | −0.15% | +1.33% | +0.08% |
+
+**Veredito: NÃO PASSA.** O DE tem 1.634 trades em 175 semanas.
+- **O repique existe, mas é do mercado inteiro.** Depois de dia de crash o absoluto fica positivo (+3.4% no DE, IC tocando zero), só que o excesso sobre outros pares nas mesmas datas é **+0.34%**, indistinguível de zero. Comprar o par que capitulou rende o mesmo que comprar qualquer outro par no dia seguinte ao crash. O open interest não seleciona nada.
+- **O open interest não separa capitulação de não capitulação:** o contraste (OI subindo) tem excesso parecido (+0.27%).
+- **H=3 fica isolado:** H=1 e H=7 dão zero, e um efeito real não deveria aparecer só num horizonte.
+- **Mesmo padrão de sempre em A:** nos 20 majors, o excesso de +1.37% tinha IC > 0. Em 368 pares, sumiu.
+
+## 32. Drift pré-FOMC — 04/10/2026
+
+Script: `monitor/replay_pre_fomc.py` · log: `claude/pre_fomc.log` · fonte: Lucca & Moench (2015), *The Pre-FOMC Announcement Drift*
+
+- **Hipótese:** é a única de calendário macro com direção esperada documentada. Em ações, o preço sobe nas 24h antes do comunicado do Fed. CPI e vencimento de opções ficaram de fora por não terem direção esperada.
+- **Eventos:** as 53 reuniões regulares de 2020 a 09/2026 (datas do federalreserve.gov), sem as de emergência de março/2020. Comunicado às 14:00 de Nova York (18:00 ou 19:00 UTC).
+- **Regra:** comprado no perpétuo BTCUSDT da Binance de T−24h até T, sem stop.
+- **Critério:** `abs` (custo + funding) **e** `excesso` sobre o retorno de 24h típico (mesma hora, nos 365 dias anteriores; só passado) com IC95 > 0, bootstrap por evento.
+- **Poder declarado antes de rodar:** só um drift acima de ~1% por evento seria detectável.
+
+| | n | Média | IC95 |
+|---|---|---|---|
+| **BTC absoluto (decide)** | 53 | **+0.64%** | [−0.21, +1.52] |
+| **BTC excesso (decide)** | 50 | **+0.39%** | [−0.37, +1.15] |
+| ETH, T−24h → T | 53 | +0.80% | [−0.15, +1.76] |
+| Cesta dos 20 majors | 53 | +0.58% | [−0.21, +1.38] |
+| BTC depois do comunicado (T → T+24h) | 53 | +0.03% | [−1.02, +1.21] |
+| BTC absoluto 2020–2022 | 23 | +1.66% | [−0.05, +3.34] |
+| BTC absoluto 2023–2026 | 30 | **−0.14%** | [−0.84, +0.55] |
+
+**Veredito: NÃO PASSA.**
+- **Centro positivo em tudo, sem poder para separar de zero:** BTC, ETH e cesta ficam todos entre +0.6% e +0.8%, com 33–34 de 53 eventos positivos. É o tamanho de efeito que o teste, com 53 eventos, não consegue distinguir de zero, como previsto no pré-registro.
+- **O efeito, se existiu, ficou em 2020–2022.** Em 2023–2026 é −0.14%. Bate com a literatura de ações, onde o drift pré-FOMC enfraqueceu depois de publicado. Não há como operar algo que, no período recente, é zero.
+- **Excesso menor que o absoluto:** parte do +0.64% é só a deriva de alta do BTC no período.
+
+## 33 e 34. Lead-lag BTC → alts e Turtle canônico — 04/10/2026
+
+Família de 2 hipóteses no DE → IC de **97.5%** (Bonferroni, K=2), fixado antes de rodar as duas. Eram as "menos promissoras" da lista de ideias; a compressão de volatilidade (NR7/squeeze) foi descartada sem teste: é rompimento com um filtro a mais, com parâmetros em aberto que exigiriam grade.
+
+### 33. Lead-lag BTC → altcoins em 1h
+
+Script: `monitor/replay_lead_lag.py` · log: `claude/lead_lag.log`
+
+- **Regra:** hora com |retorno do BTC| ≥ 2σ das 720h anteriores (3.242 sinais) → entra em cada alt na mesma direção na abertura da hora seguinte e sai 1h depois. A execução é **otimista**: entra no instante em que o sinal fecha.
+- **Decide:** `abs` e excesso **sobre o próprio BTC** na mesma hora. O excesso separa atraso das alts de momentum do BTC.
+- **Portão pré-registrado (etapa 1, universo A):** se o bruto médio não cobrir o custo de 0.18%, o estudo para e o DE não é usado.
+
+| Universo A (19 alts) | n | Média | IC95 |
+|---|---|---|---|
+| Bruto | 51.077 | **−0.029%** | [−0.070, +0.012] |
+| Excesso sobre o BTC | 51.077 | −0.015% | [−0.040, +0.010] |
+| 2ª hora / 4 horas (bruto) | 51.077 | −0.029% / −0.080% | — |
+| O próprio BTC na hora seguinte | 3.242 | −0.019% | [−0.055, +0.016] |
+
+**Veredito: NÃO PASSA (por custo, na etapa 1).** O DE não foi usado. Em resolução de 1h não há atraso mensurável: as alts ajustam ao BTC dentro da mesma hora, e o próprio BTC não continua na hora seguinte. Com 3σ também dá zero. Se existir atraso, ele é de minutos e só um robô com dados em tempo real conseguiria explorar, o que está fora do escopo do projeto.
+
+### 34. Turtle canônico (Donchian)
+
+Script: `monitor/replay_turtle.py` · log: `claude/turtle.log`
+
+- **Regra (Sistema 2, parâmetros originais, diário):**
+  - **Entrada:** fechamento rompe a máxima (mínima) de 55 dias → entra na abertura seguinte.
+  - **Stop:** 2N (ATR 20).
+  - **Saída:** rompimento contrário de 20 dias.
+  - Sem piramidação; os dois lados.
+- **Critério:** motor do acervo FMZ; DE decide com `abs` e `excesso` transversal (IC97.5).
+
+| | A: absoluto | A: excesso | **DE: absoluto** | **DE: excesso** |
+|---|---|---|---|---|
+| **Sistema 2, 55/20 (decide)** | +16.4% | −1.1% | **+0.34%** [−2.8, +4.0] | **−1.25%** [−2.48, −0.02] |
+| Sistema 1, 20/10 | +5.9% | +1.8% | +0.07% | −0.53% |
+
+**Veredito: NÃO PASSA.** O excesso no DE fica até negativo com confiança.
+- **Os +16% por trade nos 20 majors são beta.** Vêm todos das compras num universo que subiu (+29%), e o excesso transversal é −1.1%. Nos 368 pares o absoluto cai para +0.3%.
+- **A família tendência fecha aqui:** foram quatro formas independentes (setup com stop/alvo, transversal, EWMAC do Carver e Donchian/Turtle), todas com zero em cripto.
+
+## 35. "O gap da CME sempre fecha" (BTC) — 04/10/2026
+
+Script: `monitor/replay_gap_cme.py` · log: `claude/gap_cme.log`
+
+- **Horários:** a CME fecha na sexta às 16:00 de Chicago e reabre no domingo às 17:00, o que dá 21:00/22:00 UTC no horário de verão americano e 22:00/23:00 UTC fora dele. Preço do perpétuo BTCUSDT da Binance, 1h, de 09/2019 a 09/2026 (368 fins de semana).
+- **Regra:** com |gap| ≥ 1%, entra na reabertura na direção do fechamento do gap. O alvo é o fechamento de sexta (ordem limitada); se não for tocado, sai por tempo no fechamento da CME da sexta seguinte. Sem stop.
+- **Critério:** `abs` e excesso sobre a deriva passada do BTC, IC95 > 0, bootstrap por evento.
+- **Placebo:** o mesmo procedimento com um "gap" falso de terça para quinta, com a mesma distância em horas.
+
+| | Eventos | Gap fechou | Absoluto | Excesso |
+|---|---|---|---|---|
+| **CME, gap ≥ 1% (decide)** | 179 | **69%** | **−0.65%** [−1.67, +0.28] | −0.36% [−1.36, +0.59] |
+| CME, gap ≥ 2% | 97 | 59% | −1.14% | −0.80% |
+| Placebo terça → quinta, ≥ 1% | 265 | 47% | −0.92% | −0.70% |
+
+**Veredito: NÃO PASSA.** A alegação é meio verdadeira:
+- **O gap fecha mais que o acaso:** 69% contra 47% no placebo de meio de semana. O movimento de fim de semana, com pouca liquidez, tem mais tendência a voltar.
+- **Mesmo assim, operar perde:** o ganho, quando fecha, é só o tamanho do gap (~1–2%), e a perda, quando não fecha, é o movimento da semana inteira. É acerto alto com expectância negativa, como o IFR do estudo 5. Um stop não resolveria sem virar outra hipótese, escolhida depois de ver os dados.
+
+## 36. Prêmio extremo do perpétuo sobre o índice (horário) — 04/10/2026
+
+Script: `monitor/replay_premio.py` · logs: `claude/premio.log`, `claude/premio_contagem.log`
+
+- **Dados novos:** histórico do prêmio horário (perpétuo − índice)/índice, de `data.binance.vision` (`premiumIndexKlines`, desde 2020). Cache em `monitor/cache_vision/premio/`.
+- **Sobreposição assumida com o estudo 27:** o prêmio é o que gera o funding. A diferença testada aqui é a escala: sinal horário e saída em horas.
+- **Regra:**
+  - **Venda:** prêmio da hora ≥ p99 das 720h anteriores **e** ≥ +0.3%.
+  - **Compra:** prêmio ≤ p1 **e** ≤ −0.3%.
+  - **Execução:** entra na abertura seguinte e sai 8h depois (um período de funding).
+- **Critério:** DE decide com `abs` e excesso sobre o BTC nas mesmas horas, IC95 > 0, bootstrap por semana.
+
+| | A: absoluto | A: excesso | **DE: absoluto** | **DE: excesso** |
+|---|---|---|---|---|
+| **Primária, 8h (decide)** | +0.32% | +0.05% | **+0.07%** [−0.07, +0.23] | **−0.01%** [−0.15, +0.15] |
+| Saída em 1h | +0.27% | +0.26% | −0.03% (bruto +0.11%) | +0.08% |
+| Saída em 24h | −0.38% | −0.98% | +0.24% | +0.00% |
+| Sem piso absoluto, 8h | −0.06% | +0.06% | −0.12% | +0.05% |
+
+**Veredito: NÃO PASSA.** Foram 27.223 trades no DE, e o resultado é zero.
+- **O mesmo filme dos outros estudos:** nos 20 majors, as compras com prêmio muito negativo pareciam fortes (+2.3% de absoluto, excesso de +1.5% com IC > 0). Nos 364 pares, isso cai para +0.25% e +0.06%.
+- **Há um sinal minúsculo de reversão na hora seguinte** (bruto de +0.11% em 1h, excesso de +0.08% com IC > 0 no DE). Ele fica abaixo do custo de 0.18% por giro, como os setups intraday dos estudos 3, 7 e 11.
+- **Confirma o estudo 27:** prêmio e funding extremos não preveem a direção do perpétuo em nenhuma escala testada (horas ou dias).
+
 ## Leitura conjunta
 
 Mesma direção do achado da auditoria v6 sobre o checklist mecânico dos Setups A/B. Nenhum dos dez setups de vídeo tem edge mecânico demonstrável nesses 20 pares (o 9.1 também não, fora da amostra, nos 80 pares do estudo 6):
@@ -732,6 +976,14 @@ O acervo FMZ (estudos 23 e 24, 5.807 estratégias) não mudou o quadro:
 - **O único operável** continua sendo carry sem previsão. O trimestral coin-M em BTC/ETH rendeu ~7%/ano em 2020–2026 e hoje trava ~3.5–4%/ano líquido.
 
 Não reabrir esses testes sem uma regra nova pré-registrada. Variar parâmetro sobre estes mesmos dados até algo ficar positivo invalida o critério.
+
+**Rodada de 04/10/2026 (estudos 27–36, evento, fluxo e calendário):** nenhum passou, e o quadro não mudou.
+- **Funding, prêmio e open interest** (27, 31, 36) não preveem direção. O que parecia forte nos 20 majors sumiu nos 368 pares.
+- **Eventos da Binance** (28–30):
+  - Na listagem, o efeito acontece em menos de 2h.
+  - Na deslistagem e no pós-listagem, há sinal de preço (o 30 passou no excesso), mas o custo de ficar vendido (funding e squeeze) consome o ganho.
+- **Calendário e outros** (32, 33, 35): pré-FOMC sem poder e zero no período recente; lead-lag sem sinal em 1h; gap da CME com acerto alto e expectância negativa.
+- **Tendência** fecha com o Turtle (34): quatro formas independentes, todas zero.
 
 ## Setups A/B — encerrado em 25/09/2026
 

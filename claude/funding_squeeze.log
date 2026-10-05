@@ -1,0 +1,114 @@
+
+====================================================================================================
+UNIVERSO A (descritivo)
+====================================================================================================
+  universo A: 20 pares com candles e funding
+
+  [PRIMARIA (gatilho, H=3)]  trades 322
+  liquido (custo)                    n=   322 sem= 147 media  -0.470% IC95 [ -2.081,  +1.242]
+  absoluto (custo+funding)           n=   322 sem= 147 media  -0.157% IC95 [ -1.739,  +1.538]
+  excesso transversal                n=   322 sem= 147 media  +0.970% IC95 [ -0.001,  +1.958]
+  excesso mesmo par (descr.)         n=   322 sem= 147 media  -0.406% IC95 [ -1.954,  +1.283]
+  so vendas: abs                     n=   137 sem=  44 media  -2.702% IC95 [ -5.220,  +0.210]
+  so vendas: excesso                 n=   137 sem=  44 media  +1.459% IC95 [ -0.007,  +3.058]
+  so compras: abs                    n=   185 sem= 113 media  +1.728% IC95 [ +0.084,  +3.376]
+  so compras: excesso                n=   185 sem= 113 media  +0.608% IC95 [ -0.552,  +1.825]
+
+  [gatilho, H=1]  trades 365
+  liquido (custo)                    n=   365 sem= 151 media  -0.588% IC95 [ -1.511,  +0.335]
+  absoluto (custo+funding)           n=   365 sem= 151 media  -0.470% IC95 [ -1.386,  +0.451]
+  excesso transversal                n=   365 sem= 151 media  -0.139% IC95 [ -0.788,  +0.494]
+  excesso mesmo par (descr.)         n=   365 sem= 151 media  -0.447% IC95 [ -1.343,  +0.463]
+  so vendas: abs                     n=   149 sem=  45 media  -2.095% IC95 [ -3.577,  -0.507]
+  so vendas: excesso                 n=   149 sem=  45 media  -0.225% IC95 [ -1.398,  +0.822]
+  so compras: abs                    n=   216 sem= 117 media  +0.650% IC95 [ -0.351,  +1.599]
+  so compras: excesso                n=   216 sem= 117 media  -0.080% IC95 [ -0.962,  +0.764]
+
+  [gatilho, H=7]  trades 280
+  liquido (custo)                    n=   280 sem= 140 media  -0.631% IC95 [ -4.012,  +2.573]
+  absoluto (custo+funding)           n=   280 sem= 140 media  +0.027% IC95 [ -3.203,  +3.116]
+  excesso transversal                n=   280 sem= 140 media  +1.990% IC95 [ +0.629,  +3.409]
+  excesso mesmo par (descr.)         n=   280 sem= 140 media  -0.781% IC95 [ -4.036,  +2.207]
+  so vendas: abs                     n=   118 sem=  42 media  -5.639% IC95 [-11.235,  -0.232]
+  so vendas: excesso                 n=   118 sem=  42 media  +2.326% IC95 [ +0.179,  +4.763]
+  so compras: abs                    n=   162 sem= 106 media  +4.154% IC95 [ +1.316,  +7.101]
+  so compras: excesso                n=   162 sem= 106 media  +1.746% IC95 [ -0.105,  +3.732]
+
+  [sem gatilho, H=3]  trades 1532
+  liquido (custo)                    n=  1532 sem= 274 media  -1.207% IC95 [ -2.294,  -0.075]
+  absoluto (custo+funding)           n=  1532 sem= 274 media  -0.855% IC95 [ -1.891,  +0.244]
+  excesso transversal                n=  1532 sem= 274 media  +0.227% IC95 [ -0.119,  +0.583]
+  excesso mesmo par (descr.)         n=  1532 sem= 274 media  -1.031% IC95 [ -2.070,  +0.053]
+  so vendas: abs                     n=   747 sem=  76 media  -2.883% IC95 [ -4.829,  -0.994]
+  so vendas: excesso                 n=   747 sem=  76 media  +0.249% IC95 [ -0.323,  +0.851]
+  so compras: abs                    n=   785 sem= 225 media  +1.075% IC95 [ +0.200,  +1.941]
+  so compras: excesso                n=   785 sem= 225 media  +0.205% IC95 [ -0.169,  +0.601]
+
+  [PLACEBO funding -365d, H=3]  trades 469
+  liquido (custo)                    n=   469 sem= 139 media  +0.059% IC95 [ -1.409,  +1.546]
+  absoluto (custo+funding)           n=   469 sem= 139 media  +0.000% IC95 [ -1.431,  +1.460]
+  excesso transversal                n=   469 sem= 139 media  +0.281% IC95 [ -0.225,  +0.832]
+  excesso mesmo par (descr.)         n=   469 sem= 139 media  +0.315% IC95 [ -1.133,  +1.803]
+  so vendas: abs                     n=   281 sem=  46 media  +0.274% IC95 [ -2.027,  +2.668]
+  so vendas: excesso                 n=   281 sem=  46 media  +0.614% IC95 [ +0.064,  +1.299]
+  so compras: abs                    n=   188 sem= 101 media  -0.409% IC95 [ -1.783,  +1.101]
+  so compras: excesso                n=   188 sem= 101 media  -0.216% IC95 [ -1.191,  +0.778]
+
+====================================================================================================
+UNIVERSO DE (DECIDE)
+====================================================================================================
+  universo DE: 368 pares com candles e funding
+
+  [PRIMARIA (gatilho, H=3)]  trades 4103
+  liquido (custo)                    n=  4103 sem= 314 media  -1.344% IC95 [ -2.300,  -0.350]
+  absoluto (custo+funding)           n=  4103 sem= 314 media  -0.395% IC95 [ -1.375,  +0.621]
+  excesso transversal                n=  4103 sem= 314 media  -0.557% IC95 [ -1.050,  -0.035]
+  excesso mesmo par (descr.)         n=  4103 sem= 314 media  -1.060% IC95 [ -2.022,  -0.066]
+  so vendas: abs                     n=  1145 sem= 143 media  -2.337% IC95 [ -4.731,  -0.032]
+  so vendas: excesso                 n=  1145 sem= 143 media  -0.207% IC95 [ -1.060,  +0.590]
+  so compras: abs                    n=  2958 sem= 289 media  +0.356% IC95 [ -0.543,  +1.348]
+  so compras: excesso                n=  2958 sem= 289 media  -0.692% IC95 [ -1.282,  -0.049]
+
+  [gatilho, H=1]  trades 4759
+  liquido (custo)                    n=  4759 sem= 314 media  -0.569% IC95 [ -1.173,  +0.040]
+  absoluto (custo+funding)           n=  4759 sem= 314 media  -0.044% IC95 [ -0.653,  +0.584]
+  excesso transversal                n=  4759 sem= 314 media  -0.216% IC95 [ -0.591,  +0.202]
+  excesso mesmo par (descr.)         n=  4759 sem= 314 media  -0.371% IC95 [ -0.973,  +0.241]
+  so vendas: abs                     n=  1279 sem= 147 media  -1.104% IC95 [ -2.527,  +0.294]
+  so vendas: excesso                 n=  1279 sem= 147 media  +0.038% IC95 [ -0.343,  +0.483]
+  so compras: abs                    n=  3480 sem= 290 media  +0.346% IC95 [ -0.243,  +0.957]
+  so compras: excesso                n=  3480 sem= 290 media  -0.310% IC95 [ -0.790,  +0.207]
+
+  [gatilho, H=7]  trades 3558
+  liquido (custo)                    n=  3558 sem= 312 media  -1.923% IC95 [ -3.875,  -0.130]
+  absoluto (custo+funding)           n=  3558 sem= 312 media  -0.480% IC95 [ -2.399,  +1.310]
+  excesso transversal                n=  3558 sem= 312 media  -0.897% IC95 [ -1.678,  -0.107]
+  excesso mesmo par (descr.)         n=  3558 sem= 312 media  -1.543% IC95 [ -3.483,  +0.253]
+  so vendas: abs                     n=   972 sem= 138 media  -3.329% IC95 [ -8.395,  +1.254]
+  so vendas: excesso                 n=   972 sem= 138 media  -0.358% IC95 [ -1.733,  +1.099]
+  so compras: abs                    n=  2586 sem= 286 media  +0.590% IC95 [ -0.882,  +2.174]
+  so compras: excesso                n=  2586 sem= 286 media  -1.099% IC95 [ -2.025,  -0.152]
+
+  [sem gatilho, H=3]  trades 14346
+  liquido (custo)                    n= 14346 sem= 330 media  -0.319% IC95 [ -1.199,  +0.555]
+  absoluto (custo+funding)           n= 14346 sem= 330 media  +0.255% IC95 [ -0.622,  +1.139]
+  excesso transversal                n= 14346 sem= 330 media  +0.013% IC95 [ -0.212,  +0.246]
+  excesso mesmo par (descr.)         n= 14346 sem= 330 media  -0.047% IC95 [ -0.920,  +0.827]
+  so vendas: abs                     n=  5358 sem= 203 media  -1.118% IC95 [ -2.924,  +0.777]
+  so vendas: excesso                 n=  5358 sem= 203 media  +0.259% IC95 [ -0.048,  +0.591]
+  so compras: abs                    n=  8988 sem= 306 media  +1.073% IC95 [ +0.297,  +1.834]
+  so compras: excesso                n=  8988 sem= 306 media  -0.133% IC95 [ -0.439,  +0.176]
+
+  [PLACEBO funding -365d, H=3]  trades 3376
+  liquido (custo)                    n=  3376 sem= 246 media  +0.006% IC95 [ -0.759,  +0.864]
+  absoluto (custo+funding)           n=  3376 sem= 246 media  +0.001% IC95 [ -0.766,  +0.858]
+  excesso transversal                n=  3376 sem= 246 media  -0.447% IC95 [ -0.851,  -0.104]
+  excesso mesmo par (descr.)         n=  3376 sem= 246 media  +0.233% IC95 [ -0.532,  +1.096]
+  so vendas: abs                     n=  1765 sem=  95 media  +0.102% IC95 [ -1.193,  +1.646]
+  so vendas: excesso                 n=  1765 sem=  95 media  -0.607% IC95 [ -1.280,  -0.055]
+  so compras: abs                    n=  1611 sem= 210 media  -0.110% IC95 [ -0.882,  +0.684]
+  so compras: excesso                n=  1611 sem= 210 media  -0.272% IC95 [ -0.620,  +0.094]
+
+  DECISAO (universo DE, regra primaria): NAO PASSA
+
+  [114s]

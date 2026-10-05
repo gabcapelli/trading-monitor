@@ -1,0 +1,18 @@
+BTCUSDT 1h: 59232 candles | fins de semana: 368
+
+  [CME, |gap| >= 1% (decide: abs e excesso)]  eventos 179 | gap fechou em 124 (69%)
+    bruto    media  -0.53% IC95 [ -1.56,  +0.42] | positivos 130
+    abs      media  -0.65% IC95 [ -1.67,  +0.28] | positivos 128
+    excesso  media  -0.36% IC95 [ -1.36,  +0.59] | positivos 131
+
+  [CME, |gap| >= 2% (descritivo)]  eventos 97 | gap fechou em 57 (59%)
+    bruto    media  -1.06% IC95 [ -2.76,  +0.61] | positivos 63
+    abs      media  -1.14% IC95 [ -2.83,  +0.50] | positivos 61
+    excesso  media  -0.80% IC95 [ -2.49,  +0.84] | positivos 63
+
+  [PLACEBO terca -> quinta, |gap| >= 1%]  eventos 265 | gap fechou em 124 (47%)
+    bruto    media  -0.80% IC95 [ -1.50,  -0.10] | positivos 147
+    abs      media  -0.92% IC95 [ -1.62,  -0.22] | positivos 144
+    excesso  media  -0.70% IC95 [ -1.39,  -0.01] | positivos 149
+
+  DECISAO: NAO PASSA

@@ -1,0 +1,83 @@
+
+====================================================================================================
+UNIVERSO A (descritivo)
+====================================================================================================
+    ... 0 pares
+  universo A: 20 pares | 969 dias candidatos (queda >= 2 sigma) | 794 com open interest
+
+  [PRIMARIA: capitulacao (OI <= -10%), H=3]  trades 145
+  liquido (custo)                    n=   145 sem=  51 media  +3.874% IC95 [ +1.208,  +6.674]
+  absoluto (custo+funding)           n=   145 sem=  51 media  +3.888% IC95 [ +1.214,  +6.685]
+  excesso transversal                n=   145 sem=  51 media  +1.365% IC95 [ +0.202,  +2.810]
+  excesso mesmo par (descr.)         n=   145 sem=  51 media  +3.431% IC95 [ +0.723,  +6.272]
+
+  [capitulacao, H=1]  trades 148
+  liquido (custo)                    n=   148 sem=  52 media  -0.172% IC95 [ -2.023,  +1.546]
+  absoluto (custo+funding)           n=   148 sem=  52 media  -0.160% IC95 [ -2.011,  +1.553]
+  excesso transversal                n=   148 sem=  52 media  -0.258% IC95 [ -0.775,  +0.339]
+  excesso mesmo par (descr.)         n=   148 sem=  52 media  -0.266% IC95 [ -2.118,  +1.450]
+
+  [capitulacao, H=7]  trades 140
+  liquido (custo)                    n=   140 sem=  51 media  +0.580% IC95 [ -1.987,  +3.514]
+  absoluto (custo+funding)           n=   140 sem=  51 media  +0.551% IC95 [ -2.014,  +3.429]
+  excesso transversal                n=   140 sem=  51 media  +0.180% IC95 [ -1.335,  +2.041]
+  excesso mesmo par (descr.)         n=   140 sem=  51 media  -0.629% IC95 [ -3.254,  +2.342]
+
+  [CONTRASTE: queda com OI >= +10%, H=3]  trades 58
+  liquido (custo)                    n=    58 sem=  38 media  +1.085% IC95 [ -2.711,  +4.276]
+  absoluto (custo+funding)           n=    58 sem=  38 media  +1.627% IC95 [ -1.667,  +4.496]
+  excesso transversal                n=    58 sem=  38 media  -1.085% IC95 [ -2.793,  +0.398]
+  excesso mesmo par (descr.)         n=    58 sem=  38 media  +0.723% IC95 [ -3.104,  +3.930]
+
+  [queda sem filtro de OI, H=3]  trades 715
+  liquido (custo)                    n=   715 sem= 136 media  +0.693% IC95 [ -1.056,  +2.379]
+  absoluto (custo+funding)           n=   715 sem= 136 media  +0.749% IC95 [ -0.968,  +2.421]
+  excesso transversal                n=   715 sem= 136 media  -0.148% IC95 [ -0.505,  +0.233]
+  excesso mesmo par (descr.)         n=   715 sem= 136 media  +0.268% IC95 [ -1.468,  +1.966]
+
+====================================================================================================
+UNIVERSO DE (DECIDE)
+====================================================================================================
+    ... 0 pares
+    ... 50 pares
+    ... 100 pares
+    ... 150 pares
+    ... 200 pares
+    ... 250 pares
+    ... 300 pares
+    ... 350 pares
+  universo DE: 368 pares | 8624 dias candidatos (queda >= 2 sigma) | 8181 com open interest
+
+  [PRIMARIA: capitulacao (OI <= -10%), H=3]  trades 1634
+  liquido (custo)                    n=  1634 sem= 175 media  +3.210% IC95 [ -0.234,  +6.899]
+  absoluto (custo+funding)           n=  1634 sem= 175 media  +3.384% IC95 [ -0.079,  +7.095]
+  excesso transversal                n=  1634 sem= 175 media  +0.342% IC95 [ -0.510,  +1.664]
+  excesso mesmo par (descr.)         n=  1634 sem= 175 media  +3.397% IC95 [ -0.045,  +7.080]
+
+  [capitulacao, H=1]  trades 1676
+  liquido (custo)                    n=  1676 sem= 176 media  -0.586% IC95 [ -2.373,  +0.960]
+  absoluto (custo+funding)           n=  1676 sem= 176 media  -0.505% IC95 [ -2.288,  +1.042]
+  excesso transversal                n=  1676 sem= 176 media  -0.196% IC95 [ -0.571,  +0.285]
+  excesso mesmo par (descr.)         n=  1676 sem= 176 media  -0.433% IC95 [ -2.209,  +1.117]
+
+  [capitulacao, H=7]  trades 1585
+  liquido (custo)                    n=  1585 sem= 173 media  -0.035% IC95 [ -2.117,  +1.972]
+  absoluto (custo+funding)           n=  1585 sem= 173 media  +0.294% IC95 [ -1.777,  +2.293]
+  excesso transversal                n=  1585 sem= 173 media  -0.447% IC95 [ -1.093,  +0.368]
+  excesso mesmo par (descr.)         n=  1585 sem= 173 media  +0.176% IC95 [ -1.922,  +2.204]
+
+  [CONTRASTE: queda com OI >= +10%, H=3]  trades 743
+  liquido (custo)                    n=   743 sem= 166 media  +1.160% IC95 [ -1.013,  +3.492]
+  absoluto (custo+funding)           n=   743 sem= 166 media  +1.763% IC95 [ -0.374,  +4.102]
+  excesso transversal                n=   743 sem= 166 media  +0.267% IC95 [ -1.129,  +1.905]
+  excesso mesmo par (descr.)         n=   743 sem= 166 media  +1.209% IC95 [ -0.978,  +3.547]
+
+  [queda sem filtro de OI, H=3]  trades 7409
+  liquido (custo)                    n=  7409 sem= 222 media  +1.198% IC95 [ -0.914,  +3.511]
+  absoluto (custo+funding)           n=  7409 sem= 222 media  +1.329% IC95 [ -0.798,  +3.638]
+  excesso transversal                n=  7409 sem= 222 media  +0.078% IC95 [ -0.229,  +0.420]
+  excesso mesmo par (descr.)         n=  7409 sem= 222 media  +1.369% IC95 [ -0.757,  +3.688]
+
+  DECISAO (universo DE, regra primaria): NAO PASSA
+
+  [22s]

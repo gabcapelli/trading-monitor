@@ -1,0 +1,6 @@
+  ... 0/586 tickers
+  ... 200/586 tickers
+Eventos de listagem no spot (anuncio -> spot em ate 7 d): 465 em 427 anuncios
+Montagem: {'sem perpetuo': 263, 'spot abriu antes da entrada': 27, 'sem candle de entrada/saida': 113, 'ok': 62}
+Trades validos: 62 em 53 anuncios | duracao mediana 4 h
+Por ano: {2023: 2, 2024: 5, 2025: 41, 2026: 14}
