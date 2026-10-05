@@ -101,6 +101,10 @@ Mede quanto do efeito dos anúncios sobra entrando 1–60 min depois, com candle
 
 A mesma regra do papel (vendido de +60 min a +24h) aplicada à designação de "token de alerta" da Upbit, com eventos independentes (31 anúncios). Excesso sobre o BTC de +2.0% [−0.1, +4.3], líquido de +0.5% [−1.6, +2.8] e placebo em zero. A direção é a mesma do 38, com tamanho menor. Não confirma nem desmente. O papel da Binance segue decidindo, e convém esperar um resultado abaixo dos +3.4%. Não juntar as amostras.
 
+### Estudo 40 — réplica da deslistagem na Upbit (05/10/2026, não passou)
+
+Vendido de +60 min a +4h após o fim de suporte da Upbit, 15 anúncios: líquido −1.8% [−6.3, +1.0], mediana ~0. O efeito (−7%) acontece na primeira hora. Não sustenta o braço exploratório de deslistagem do papel. **A família "anúncios de corretora" está praticamente esgotada.** O que resta é o papel da Monitoring Tag.
+
 **Leitura acumulada (37 estudos):** nenhuma regra direcional passou. Os fracassos têm três causas recorrentes: efeito rápido demais para latência horária, efeito que é do mercado inteiro (beta) e custo de carregar a posição (funding, squeeze). O que funcionou foi estrutural e sem previsão: cash-and-carry (estudo 20; prêmio secou), base trimestral (24) e desbloqueio de tokens (25, no papel).
 
 **Infra nova (reaproveitável):**

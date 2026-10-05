@@ -186,7 +186,8 @@ def main(argv):
             print(f"    {datetime.fromtimestamp(t['ts']/1000, timezone.utc):%Y-%m-%d %H:%M} {t['sym']}")
         return
 
-    print("\n" + "=" * 100 + "\nVENDIDO, entrada +60 min, saida +24h (positivo = vendido ganhou)\n" + "=" * 100)
+    print("\n" + "=" * 100 + f"\nVENDIDO, entrada +{ENTRADA_MIN} min, saida +{SAIDA_MIN // 60}h "
+          "(positivo = vendido ganhou)\n" + "=" * 100)
     lo = {}
     for chave, rot in (("liq", "LIQUIDO, custo 0.5% + funding (decide)"), ("excesso", "EXCESSO sobre o BTC (decide)"),
                        ("bruto", "bruto"), ("liq_2min", "liquido, entrada +2 min"),

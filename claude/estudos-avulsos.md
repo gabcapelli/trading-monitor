@@ -1053,6 +1053,29 @@ Script: `monitor/replay_upbit_alerta.py` · log: `claude/upbit_alerta.log`
 - **O que não fazer:** juntar as duas amostras depois de ver os resultados para "passar" seria garimpo.
 - **Consequência prática:** nada muda. O papel da Binance segue como o teste que decide, e é razoável esperar ali um resultado abaixo dos +3.4%.
 
+## 40. Réplica na Upbit: venda nas 4h após o fim de suporte (deslistagem) — 05/10/2026
+
+Script: `monitor/replay_upbit_deslistagem.py` (reaproveita o 39) · log: `claude/upbit_deslistagem.log`
+
+- **Objetivo:** testar em eventos independentes o braço exploratório de deslistagem do estudo 38 (vendido de +60 min até 4h após o anúncio). Na Binance esse braço deu +4.1% [+1.1, +6.9], mas fora da regra pré-registrada.
+- **Eventos:** "거래지원 종료" (fim de suporte) da Upbit, só o 1º anúncio de cada token.
+  - **Fora:** remoção de um único mercado, pares específicos, correções e mudanças de data, e anúncio da Binance colado (nenhum caso).
+  - **Amostra:** 53 tokens em 49 anúncios, **15 trades com perpétuo em 15 anúncios**, exatamente o mínimo.
+- **Regra e critério:** os do estudo 39, com saída em 4h.
+
+| | Média | IC95 | Mediana |
+|---|---|---|---|
+| **Líquido (decide)** | **−1.8%** | [−6.3, +1.0] | +0.25% |
+| **Excesso sobre o BTC (decide)** | **−1.0%** | [−5.4, +1.7] | +0.4% |
+| Perdido (anúncio → entrada com 60 min) | +7.1% | [+3.9, +10.8] | +3.8% |
+| Placebo −30d: excesso | −0.7% | [−2.3, +0.4] | |
+
+**Veredito: NÃO PASSA.**
+- **O efeito acontece na primeira hora:** a queda média é de 7%, antes da entrada horária.
+- **Depois disso não sobra nada:** a mediana fica perto de zero, e a média negativa vem de um squeeze (DENT −30%).
+- **Não sustenta o braço de deslistagem do papel.** Ele segue registrando como exploratório, sem expectativa.
+- **Ressalva:** são só 15 eventos, e um anúncio da Upbit mexe menos no perpétuo da Binance que um da própria Binance.
+
 ## Leitura conjunta
 
 Mesma direção do achado da auditoria v6 sobre o checklist mecânico dos Setups A/B. Nenhum dos dez setups de vídeo tem edge mecânico demonstrável nesses 20 pares (o 9.1 também não, fora da amostra, nos 80 pares do estudo 6):
