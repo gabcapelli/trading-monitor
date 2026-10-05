@@ -64,6 +64,9 @@ def main():
     mt = [t for t in _json("monitoring_paper_state.json").get("trades", {}).values() if t["braco"] == "principal"]
     mt_ab = [t for t in mt if t["status"] == "aberto"]
     mt_fe = [t for t in mt if t["status"] == "fechado"]
+    ct = _json("continuacao_paper_state.json").get("trades", [])
+    ct_ab = [t for t in ct if t["status"] == "aberto"]
+    ct_fe = [t for t in ct if t["status"] == "fechado"]
     sb_est = _json("sabado_paper_state.json")
     sab = sb_est.get("sabados", [])
     janela = sb_est.get("janela")      # cesta de sabado aberta (ainda nao registrada)
@@ -72,6 +75,7 @@ def main():
     m_d, m_un, m_nv, m_sb = (media(fech), media([t["hedge"] for t in un_fe]),
                              media([t["com_stop"] for t in nv_fe]), media([s["principal"] for s in sab]))
     m_mt = media([t["liq"] for t in mt_fe])
+    m_ct = media([t["liq"] for t in ct_fe])
 
     L = ["# Painel de estratégias", "",
          f"_Atualizado em {agora:%d/%m %H:%M} (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._", ""]
@@ -98,6 +102,8 @@ def main():
           f"{'—' if m_un is None else _pct(m_un)} |",
           f"| [Perpétuo novo](claude/novos-paper.md) | {len(nv_ab)} | {len(nv_fe)}/100 | "
           f"{'—' if m_nv is None else _pct(m_nv)} |",
+          f"| [Rompimento 48h](claude/continuacao-paper.md) · exceção | {len(ct_ab)} | {len(ct_fe)}/300 | "
+          f"{'—' if m_ct is None else _pct(m_ct / 100)} |",
           f"| [Monitoring Tag](claude/monitoring-paper.md) | {len(mt_ab)} | {len({t['anuncio_id'] for t in mt_fe})}/24 | "
           f"{'—' if m_mt is None else _pct(m_mt / 100)} |",
           f"| [Sábado](claude/sabado-paper.md) | {1 if janela else 0} | {len(sab)}/104 | {'—' if m_sb is None else _pct(m_sb)} |",

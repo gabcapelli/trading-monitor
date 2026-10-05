@@ -33,10 +33,14 @@ export default async function handler(req, res) {
     res.setHeader("Content-Type", r.headers.get("Content-Type") || "application/json");
     return res.send(Buffer.from(await r.arrayBuffer()));
   }
-  if (partes.length !== 4 || partes[1] !== "fapi" || partes[2] !== "v1" || !PERMITIDOS.has(partes[3]))
+  // ticker/24hr (volume de 24h de todos os perpetuos numa chamada; continuacao_paper.py, desde 05/10/2026)
+  const ticker24 = partes.length === 5 && partes[3] === "ticker" && partes[4] === "24hr";
+  if (!ticker24 && (partes.length !== 4 || !PERMITIDOS.has(partes[3])))
     return res.status(400).send("endpoint");
+  if (partes[1] !== "fapi" || partes[2] !== "v1") return res.status(400).send("endpoint");
   const qs = url.searchParams.toString();
-  const r = await fetch(`https://fapi.binance.com/fapi/v1/${partes[3]}${qs ? "?" + qs : ""}`, {
+  const ep = ticker24 ? "ticker/24hr" : partes[3];
+  const r = await fetch(`https://fapi.binance.com/fapi/v1/${ep}${qs ? "?" + qs : ""}`, {
     headers: { "User-Agent": "trading-monitor-proxy" },
   });
   res.status(r.status);

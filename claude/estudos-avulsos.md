@@ -1266,6 +1266,12 @@ Script: `monitor/replay_continuacao_top20.py` · log: `claude/continuacao_top20.
 - **"Só compras" passaria sozinho (+1.36%, IC > 0), mas foi escolhido depois de ver o dado.** Pela regra do projeto (estudo 34), isso é garimpo e não se decide assim.
 - **Pela regra do Gabriel**, papel só com o critério completo. Fica registrado como **quase**, e a decisão de abrir uma exceção cabe a ele.
 
+**Exceção aberta pelo Gabriel em 05/10/2026. Teste de papel desde então:** `monitor/continuacao_paper.py` · registro: `claude/continuacao-paper.md` · workflow horário.
+- **Regra:** congelada no docstring, idêntica à do estudo. O top 20 do dia é refeito 1× por dia (volume de 30 dias) e os sinais são lidos nas barras de 4h.
+- **Registro:** guarda também o preço real alcançável no minuto em que o script roda (~5 min de atraso).
+- **Validação:** em 956 barras de 4 moedas, os sinais do papel (API, 4h) bateram 21 de 21 com os do estudo (histórico, 1h). O fechamento foi conferido à mão.
+- **Leitura:** só com **300 trades fechados** (~7 meses). Decide com líquido e excesso, ambos com IC95 > 0.
+
 ## Leitura conjunta
 
 Mesma direção do achado da auditoria v6 sobre o checklist mecânico dos Setups A/B. Nenhum dos dez setups de vídeo tem edge mecânico demonstrável nesses 20 pares (o 9.1 também não, fora da amostra, nos 80 pares do estudo 6):
