@@ -977,6 +977,14 @@ O acervo FMZ (estudos 23 e 24, 5.807 estratégias) não mudou o quadro:
 
 Não reabrir esses testes sem uma regra nova pré-registrada. Variar parâmetro sobre estes mesmos dados até algo ficar positivo invalida o critério.
 
+**Rodada de 04/10/2026 (estudos 27–36, evento, fluxo e calendário):** nenhum passou, e o quadro não mudou.
+- **Funding, prêmio e open interest** (27, 31, 36) não preveem direção. O que parecia forte nos 20 majors sumiu nos 368 pares.
+- **Eventos da Binance** (28–30):
+  - Na listagem, o efeito acontece em menos de 2h.
+  - Na deslistagem e no pós-listagem, há sinal de preço (o 30 passou no excesso), mas o custo de ficar vendido (funding e squeeze) consome o ganho.
+- **Calendário e outros** (32, 33, 35): pré-FOMC sem poder e zero no período recente; lead-lag sem sinal em 1h; gap da CME com acerto alto e expectância negativa.
+- **Tendência** fecha com o Turtle (34): quatro formas independentes, todas zero.
+
 ## Setups A/B — encerrado em 25/09/2026
 
 Não é setup de terceiro, mas o veredito fica registrado aqui junto dos outros.

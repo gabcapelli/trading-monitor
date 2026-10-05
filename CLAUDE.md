@@ -76,6 +76,35 @@ O 9.1 no diário, que parecia positivo, foi checado contra compras aleatórias d
 
 Não reabra esses testes variando parâmetros sobre os mesmos dados.
 
+### Rodada de 04/10/2026 — estudos 27 a 36 (nenhum passou)
+
+Busca de estratégias **direcionais** fora de padrão gráfico (evento, fluxo, calendário), seguindo o protocolo acima. Detalhe e números em `claude/estudos-avulsos.md`, seções 27–36. Resumo:
+- 27 funding extremo + gatilho de preço · 31 capitulação (queda + open interest despencando) · 36 prêmio extremo do perpétuo (horário): **funding, prêmio e open interest não preveem direção** em nenhuma escala testada. O que parece funcionar nos 20 majors some nos 368 pares do DE.
+- 28 vender o perpétuo após anúncio de deslistagem: o trade típico ganha (mediana +19%), mas a cauda de short squeeze (ALPACA −2245%) destrói. O mecanismo existe no spot, não no perpétuo.
+- 29 comprar após anúncio de listagem: o efeito (+22%) acontece em menos de 2h, antes de qualquer latência horária.
+- 30 vender o perpétuo na abertura do spot de listagem nova: **o mais perto de passar** (excesso +13%, IC > 0), mas o absoluto não passou (funding de −4%/semana + squeeze). Inconclusivo. **O Gabriel decidiu não levar ao papel:** teste adiante de 1,5–2 anos para resultado inconclusivo não vale o tempo.
+- 32 drift pré-FOMC: centro +0.6%, sem poder estatístico (53 eventos), zero desde 2023.
+- 33 lead-lag BTC → alts em 1h: sinal bruto zero mesmo com execução otimista.
+- 34 Turtle canônico: **fecha a família tendência** (quatro formas, todas zero). Os +16% nos majors eram beta (só compras, viés de sobrevivência). O Gabriel perguntou sobre operar só comprado e sobre variações; a resposta registrada é que "só compras" escolhido depois de ver o dado é garimpo, e não sobra amostra limpa para testar.
+- 35 gap da CME: fecha em 69% (vs. 47% no placebo), mas a expectância é negativa.
+
+**Leitura acumulada (36 estudos):** nenhuma regra direcional passou. Os fracassos têm três causas recorrentes: efeito rápido demais para latência horária, efeito que é do mercado inteiro (beta) e custo de carregar a posição (funding, squeeze). O que funcionou foi estrutural e sem previsão: cash-and-carry (estudo 20; prêmio secou), base trimestral (24) e desbloqueio de tokens (25, no papel).
+
+**Infra nova (reaproveitável):**
+- `monitor/replay_deslistagem.py`: carregadores do `data.binance.vision` (candles de 1h com volume, funding e listagem do S3 de perpétuos e spot, inclusive contratos removidos) e do feed de anúncios da Binance (cache versionado em `monitor/cache_anuncios/`).
+- Open interest histórico: `replay_capitulacao.py`.
+- Prêmio horário: `replay_premio.py`.
+- O cache grande fica em `monitor/cache_vision/` (no `.gitignore`).
+
+**Estado das amostras:** A, B, C, D e E gastas, com D/E muito reusadas (cada estudo novo nelas tem menos poder e mais risco de falso positivo). A amostra limpa da hipótese pós-listagem (estudo 30) também foi gasta.
+
+**Ideias levantadas e ainda não testadas** (para retomar):
+- Compressão de volatilidade (NR7/squeeze): descartada por ser rompimento com parâmetros em aberto.
+- Turtle com piramidação: só com K=3 no DE; recomendação é não insistir.
+- Diferença de funding entre Binance e Bybit (neutro em preço, família que funcionou): **o Gabriel não gostou da ideia**; não reabrir sem ele pedir.
+
+Ao retomar, a pergunta em aberto é se vale continuar buscando regra direcional ou se o projeto deve olhar para os mecanismos estruturais e os testes de papel que já estão rodando.
+
 ## Achado em investigação (não é regra ainda)
 
 Em 09/09/2026, um lote de confirmações mecânicas de Setup B (compra) disparou simultaneamente em ETH, SOL, XRP e SUI, coincidindo com queda correlacionada de todo o mercado. SUI e XRP bateram stop nas horas seguintes (ambos -1R). Hipótese a investigar: sinais de Setup B em múltiplos pares de altcoin ao mesmo tempo podem estar refletindo beta de mercado (correlação com BTC/ETH), não confirmações tecnicamente independentes por par. Nenhum critério atual do Setup B filtra por correlação entre pares — candidato a virar um novo dado contextual (no espírito de volume/funding), ainda não decidido se vira filtro de invalidação.
