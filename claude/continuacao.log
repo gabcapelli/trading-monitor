@@ -1,0 +1,20 @@
+Pares com dados: A 20 | DE 368 (top 50 por liquidez a cada dia)
+
+==========================================================================================
+DECISAO (compras + vendas, saida 48h, custo 0.18% + funding)
+==========================================================================================
+  DE liquido: liq     n= 6673 media +0.274% IC95 [-0.442, +1.052]
+  DE liquido: excesso n= 6673 media +0.237% IC95 [-0.186, +0.734]
+  DE metades: 1a +0.186% | 2a +0.361%   |   A (majors): liq medio +0.929% (n=3345)
+
+  Descritivos:
+    DE so compras  liq n= 4784 media +0.509% IC95 [-0.324, +1.408] | excesso n= 4784 media +0.170% IC95 [-0.385, +0.857]
+    DE so vendas   liq n= 1889 media -0.321% IC95 [-1.753, +1.250] | excesso n= 1889 media +0.408% IC95 [-0.055, +0.902]
+    DE bruto (sem custo)   n= 6673 media +0.459% IC95 [-0.259, +1.213]
+    A  todos               liq n= 3345 media +0.929% IC95 [+0.402, +1.466]
+    DE por ano (liq medio): 2020: -0.78% (n=485) | 2021: +0.70% (n=1354) | 2022: +0.12% (n=976) | 2023: +0.63% (n=1179) | 2024: -0.41% (n=1173) | 2025: +0.85% (n=796) | 2026: +0.29% (n=710)
+    saida em 24h: DE liq n= 7654 media -0.092% IC95 [-0.591, +0.405]
+    saida em 96h: DE liq n= 5685 media +0.418% IC95 [-0.656, +1.510]
+    custo 0.3%:  DE liq n= 6673 media +0.154% IC95 [-0.562, +0.932]
+
+  DECISAO: NAO PASSA  [172s]

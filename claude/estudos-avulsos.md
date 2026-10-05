@@ -1175,6 +1175,36 @@ Script: `monitor/replay_tendencia_vol.py` (`--robustez`, `--cesta`) · logs: `cl
 - **Viés de sobrevivência:** as 16 moedas são as que existem hoje. Afeta os dois lados, mas TV sofre menos, porque sai das moedas em queda.
 - **É o único resultado da série que se encaixa no perfil do Gabriel** (queda tolerável de até 50%): a cesta TV com alavancagem de ~1.5× daria ~19%/ano com queda de ~−40% em 2021–26. É aritmética, não teste. Alavancar amplifica um caminho histórico só.
 
+## 45. Continuação em movimentos fortes nas moedas líquidas, segurando 48h — 05/10/2026
+
+Script: `monitor/replay_continuacao.py` · logs: `claude/continuacao.log`, `claude/continuacao_passeio.log`
+
+- **Por quê:** o estudo 16 achou que cripto **continua** no curto prazo (bruto do "espelho" ~ Sharpe +0.8), mas girar de hora em hora come o sinal. A literatura diz que moedas grandes e líquidas têm momentum de curto prazo. Pedido do Gabriel: algo mais rápido que o estudo 43, e **papel só se mostrar de fato que pode ser lucrativo**.
+- **Regra (sem grade):**
+  - **Sinal:** barras de 4h. Compra no fechamento acima da máxima de 7 dias com volume ≥ 2× a média de 30 dias; venda no espelho.
+  - **Execução:** entra na barra seguinte e sai 48h depois, sem stop. Custo de 0.18% mais funding real.
+- **Universo que decide:** DE (368 pares), só os **50 mais líquidos a cada dia** (volume em dólar dos 30 dias anteriores).
+- **Critério para ir ao papel (todos juntos):**
+  - líquido e excesso com IC95 > 0;
+  - média > 0 nas duas metades do período;
+  - média > 0 também nas 20 majors.
+- **Validação:** passeio aleatório em 10 sementes deu bruto médio −0.03% e nenhum PASSA falso.
+
+| | Média por trade | IC95 |
+|---|---|---|
+| **DE líquido: líquido (decide)** | **+0.27%** (n=6.673) | [−0.44, +1.05] |
+| **DE líquido: excesso (decide)** | **+0.24%** | [−0.19, +0.73] |
+| DE: metades | 1ª +0.19% · 2ª +0.36% | |
+| A (20 majors) | +0.93% | [+0.40, +1.47] |
+| DE só compras / só vendas | +0.51% / −0.32% | ambos cruzam zero |
+| Saída em 24h / 96h | −0.09% / +0.42% | ambos cruzam zero |
+
+**Veredito: NÃO PASSA. Não vai para o papel.**
+- **O mesmo filme dos estudos 27, 31 e 36:** nas 20 majors parece bom (+0.93%, IC > 0), mas nos pares líquidos que a ideia não viu cai para +0.27%, com o IC cruzando zero.
+- **O sinal de continuação existe, mas é pequeno:** bruto de +0.46%, perto do custo e do ruído.
+- **Os anos se alternam:** 2020 e 2024 negativos, os outros positivos. O IC é largo porque as semanas são muito diferentes entre si.
+- **Encerra a ideia "continuação de curto prazo com giro menor".**
+
 ## Leitura conjunta
 
 Mesma direção do achado da auditoria v6 sobre o checklist mecânico dos Setups A/B. Nenhum dos dez setups de vídeo tem edge mecânico demonstrável nesses 20 pares (o 9.1 também não, fora da amostra, nos 80 pares do estudo 6):

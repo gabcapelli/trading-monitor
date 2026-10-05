@@ -1,0 +1,12 @@
+  semente 1: DE bruto n= 3943 media -0.133% IC95 [-0.397, +0.126] | decisao NAO PASSA
+  semente 2: DE bruto n= 3955 media -0.047% IC95 [-0.334, +0.236] | decisao NAO PASSA
+  semente 3: DE bruto n= 3847 media -0.033% IC95 [-0.346, +0.281] | decisao NAO PASSA
+  semente 4: DE bruto n= 3947 media -0.356% IC95 [-0.666, -0.039] | decisao NAO PASSA
+  semente 5: DE bruto n= 3887 media -0.035% IC95 [-0.305, +0.241] | decisao NAO PASSA
+  semente 6: DE bruto n= 3971 media -0.029% IC95 [-0.350, +0.296] | decisao NAO PASSA
+  semente 7: DE bruto n= 3849 media +0.084% IC95 [-0.206, +0.377] | decisao NAO PASSA
+  semente 8: DE bruto n= 4000 media +0.130% IC95 [-0.142, +0.409] | decisao NAO PASSA
+  semente 9: DE bruto n= 3908 media -0.025% IC95 [-0.356, +0.306] | decisao NAO PASSA
+  semente 10: DE bruto n= 3931 media +0.120% IC95 [-0.176, +0.419] | decisao NAO PASSA
+
+  PASSEIO: 0/10 PASSA falso  [876s]

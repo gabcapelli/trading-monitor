@@ -117,6 +117,10 @@ Comprar o perpétuo após a Upbit anunciar uma listagem em KRW (43 anúncios): o
 
 Regra TV (comprado se acima da média de 200 dias, com posição = min(1, 40% ÷ vol de 30 dias)), sem otimizar. **Corta a queda máxima para cerca de um terço em 16 de 16 moedas e na cesta.** Cesta de peso igual de 16 moedas: 2021–26 +12.8%/ano com queda de −26% (comprar e segurar: +12.3%, −77%); 2019–26 +22.4% com −27% (comprar e segurar: +56%, −77%). Não é vantagem: o retorno vem do mercado. ETH (+21%) e SOL (+36%) atingiram a meta, mas escolhê-los seria olhar para trás. É o único resultado que se encaixa no perfil de risco do Gabriel.
 
+### Estudo 45 — continuação de 48h nas líquidas (05/10/2026, não passou)
+
+Rompimento de 7 dias com volume ≥ 2× em barras de 4h, segurando 48h, nos 50 pares mais líquidos de DE: +0.27% por trade com IC [−0.44, +1.05]; excesso +0.24% com IC cruzando zero. Nas majors dá +0.93% com IC > 0, o mesmo filme de sempre. **Regra do Gabriel (05/10/2026): só vai para o papel o que passar no critério completo.**
+
 **Leitura acumulada (37 estudos):** nenhuma regra direcional passou. Os fracassos têm três causas recorrentes: efeito rápido demais para latência horária, efeito que é do mercado inteiro (beta) e custo de carregar a posição (funding, squeeze). O que funcionou foi estrutural e sem previsão: cash-and-carry (estudo 20; prêmio secou), base trimestral (24) e desbloqueio de tokens (25, no papel).
 
 **Infra nova (reaproveitável):**
