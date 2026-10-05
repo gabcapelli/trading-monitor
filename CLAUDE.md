@@ -93,6 +93,10 @@ Busca de estratégias **direcionais** fora de padrão gráfico (evento, fluxo, c
 
 Vender o perpétuo depois que a Binance aplica a Monitoring Tag. Os dados (anúncios de 2023 a 2026) eram nunca usados. A linha de base inclui perpétuos deslistados (sem viés de sobrevivência). Resultado: excesso de +1.9%/+2.7% com IC de ±10%. O trade típico ganha (mediana +10%), mas os squeezes (até −233%) destroem a média. O anúncio derruba −9% antes da entrada horária, e o placebo de −30 dias dá o mesmo excesso. **Não testar "com stop" sobre esses dados.** O passeio aleatório em 20 sementes mostrou que, com caudas pesadas e cerca de 20 grupos, o IC bootstrap é otimista (5% de falso PASSA contra ~2,5% nominal). Vale para estudos de evento futuros. Script reaproveitável: `monitor/replay_monitoring_tag.py` (universo completo de perpétuos USDT-M do S3, inclusive deslistados, e `--passeio --semente N`).
 
+### Estudo 38 — latência (05/10/2026, descritivo)
+
+Mede quanto do efeito dos anúncios sobra entrando 1–60 min depois, com candles de 1 minuto. **Listagem:** corrida de robô (de +21%, sobra ~2% com 2 min). **Monitoring Tag:** vendido até 24h após o anúncio, +5.2% [+2.1, +8.1] com 2 min e **+3.4% [+1.8, +5.2] com 60 min**, sem beta. Cumpre a regra de decisão pré-fixada e é alcançável pelo workflow horário, sem infraestrutura nova. O efeito está nas primeiras 24h, e o estudo 37 segurava 7–14 dias. **Deslistagem 4h:** positivo de +5 a +60 min, mas fora da regra (exploratório). Nada disso é prova (mesmos eventos já usados, 24 anúncios, IC otimista): o próximo passo proposto é teste de papel adiante.
+
 **Leitura acumulada (37 estudos):** nenhuma regra direcional passou. Os fracassos têm três causas recorrentes: efeito rápido demais para latência horária, efeito que é do mercado inteiro (beta) e custo de carregar a posição (funding, squeeze). O que funcionou foi estrutural e sem previsão: cash-and-carry (estudo 20; prêmio secou), base trimestral (24) e desbloqueio de tokens (25, no papel).
 
 **Infra nova (reaproveitável):**

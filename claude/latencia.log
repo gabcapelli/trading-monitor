@@ -1,0 +1,152 @@
+  ... 0/586 tickers
+  ... 200/586 tickers
+
+==============================================================================================================
+LISTAGEM (comprado) -- {'sem perpetuo': 263, 'sem candle de 1m no anuncio': 135, 'ok': 67}
+==============================================================================================================
+
+  Saida em 60 min (ou abertura do spot):
+    total (p0 -> saida, sem custo)         n=  67 an= 58 media  +21.33% IC95 [ +12.17,  +31.43] mediana +12.24%
+    entra +1 min, custo 0.18%              n=  67 an= 58 media   +5.77% IC95 [  +0.27,  +11.79] mediana  +0.22%
+    entra +1 min, custo 0.5%               n=  67 an= 58 media   +5.45% IC95 [  -0.05,  +11.47] mediana  -0.10%
+    entra +2 min, custo 0.18%              n=  67 an= 58 media   +2.44% IC95 [  -1.49,   +6.95] mediana  -0.48%
+    entra +2 min, custo 0.5%               n=  67 an= 58 media   +2.12% IC95 [  -1.81,   +6.63] mediana  -0.80%
+    entra +5 min, custo 0.18%              n=  67 an= 58 media   +3.44% IC95 [  -0.19,   +7.49] mediana  +0.42%
+    entra +5 min, custo 0.5%               n=  67 an= 58 media   +3.12% IC95 [  -0.51,   +7.17] mediana  +0.10%
+    entra +15 min, custo 0.18%             n=  67 an= 58 media   +1.58% IC95 [  -0.40,   +3.50] mediana  -0.18%
+    entra +15 min, custo 0.5%              n=  67 an= 58 media   +1.26% IC95 [  -0.72,   +3.18] mediana  -0.50%
+    entra +30 min, custo 0.18%             n=  65 an= 56 media   +1.17% IC95 [  -0.46,   +2.94] mediana  +0.20%
+    entra +30 min, custo 0.5%              n=  65 an= 56 media   +0.85% IC95 [  -0.78,   +2.62] mediana  -0.12%
+    entra +60 min, custo 0.18%             (insuficiente)
+    entra +60 min, custo 0.5%              (insuficiente)
+
+  Saida em 240 min (ou abertura do spot):
+    total (p0 -> saida, sem custo)         n=  67 an= 58 media  +21.30% IC95 [ +12.95,  +30.30] mediana +10.80%
+    entra +1 min, custo 0.18%              n=  67 an= 58 media   +5.90% IC95 [  +0.75,  +11.24] mediana  +1.95%
+    entra +1 min, custo 0.5%               n=  67 an= 58 media   +5.58% IC95 [  +0.43,  +10.92] mediana  +1.63%
+    entra +2 min, custo 0.18%              n=  67 an= 58 media   +2.73% IC95 [  -1.02,   +6.80] mediana  +1.10%
+    entra +2 min, custo 0.5%               n=  67 an= 58 media   +2.41% IC95 [  -1.34,   +6.48] mediana  +0.78%
+    entra +5 min, custo 0.18%              n=  67 an= 58 media   +3.74% IC95 [  +0.27,   +7.27] mediana  +0.98%
+    entra +5 min, custo 0.5%               n=  67 an= 58 media   +3.42% IC95 [  -0.05,   +6.95] mediana  +0.66%
+    entra +15 min, custo 0.18%             n=  67 an= 58 media   +2.12% IC95 [  -0.23,   +4.63] mediana  +1.13%
+    entra +15 min, custo 0.5%              n=  67 an= 58 media   +1.80% IC95 [  -0.55,   +4.31] mediana  +0.81%
+    entra +30 min, custo 0.18%             n=  65 an= 56 media   +1.78% IC95 [  -0.64,   +4.38] mediana  +0.53%
+    entra +30 min, custo 0.5%              n=  65 an= 56 media   +1.46% IC95 [  -0.96,   +4.06] mediana  +0.21%
+    entra +60 min, custo 0.18%             n=  64 an= 55 media   +0.41% IC95 [  -1.13,   +2.12] mediana  +0.95%
+    entra +60 min, custo 0.5%              n=  64 an= 55 media   +0.09% IC95 [  -1.45,   +1.80] mediana  +0.63%
+
+  Saida em 1440 min (ou abertura do spot):
+    total (p0 -> saida, sem custo)         n=  67 an= 58 media  +21.08% IC95 [ +12.31,  +30.56] mediana +11.89%
+    entra +1 min, custo 0.18%              n=  67 an= 58 media   +5.68% IC95 [  +0.07,  +11.43] mediana  +1.44%
+    entra +1 min, custo 0.5%               n=  67 an= 58 media   +5.36% IC95 [  -0.25,  +11.11] mediana  +1.12%
+    entra +2 min, custo 0.18%              n=  67 an= 58 media   +2.59% IC95 [  -1.92,   +7.22] mediana  +1.10%
+    entra +2 min, custo 0.5%               n=  67 an= 58 media   +2.27% IC95 [  -2.24,   +6.90] mediana  +0.78%
+    entra +5 min, custo 0.18%              n=  67 an= 58 media   +3.55% IC95 [  -0.67,   +7.66] mediana  +2.32%
+    entra +5 min, custo 0.5%               n=  67 an= 58 media   +3.23% IC95 [  -0.99,   +7.34] mediana  +2.00%
+    entra +15 min, custo 0.18%             n=  67 an= 58 media   +1.88% IC95 [  -1.48,   +5.33] mediana  +0.42%
+    entra +15 min, custo 0.5%              n=  67 an= 58 media   +1.56% IC95 [  -1.80,   +5.01] mediana  +0.10%
+    entra +30 min, custo 0.18%             n=  65 an= 56 media   +1.58% IC95 [  -1.93,   +5.17] mediana  +0.51%
+    entra +30 min, custo 0.5%              n=  65 an= 56 media   +1.26% IC95 [  -2.25,   +4.85] mediana  +0.19%
+    entra +60 min, custo 0.18%             n=  64 an= 55 media   +0.20% IC95 [  -2.76,   +3.36] mediana  +0.33%
+    entra +60 min, custo 0.5%              n=  64 an= 55 media   -0.12% IC95 [  -3.08,   +3.04] mediana  +0.01%
+
+==============================================================================================================
+DESLISTAGEM (vendido) -- {'sem perpetuo': 94, 'ok': 68}
+==============================================================================================================
+
+  Saida em 60 min:
+    total (p0 -> saida, sem custo)         n=  68 an= 27 media  +10.55% IC95 [  +4.96,  +15.07] mediana +12.50%
+    entra +1 min, custo 0.18%              n=  68 an= 27 media   -0.16% IC95 [  -7.19,   +4.79] mediana  +2.28%
+    entra +1 min, custo 0.5%               n=  68 an= 27 media   -0.48% IC95 [  -7.51,   +4.47] mediana  +1.96%
+    entra +2 min, custo 0.18%              n=  68 an= 27 media   +0.25% IC95 [  -6.28,   +5.06] mediana  +1.58%
+    entra +2 min, custo 0.5%               n=  68 an= 27 media   -0.07% IC95 [  -6.60,   +4.74] mediana  +1.26%
+    entra +5 min, custo 0.18%              n=  68 an= 27 media   -1.11% IC95 [  -5.55,   +1.85] mediana  +0.38%
+    entra +5 min, custo 0.5%               n=  68 an= 27 media   -1.43% IC95 [  -5.87,   +1.53] mediana  +0.06%
+    entra +15 min, custo 0.18%             n=  68 an= 27 media   +0.44% IC95 [  -4.43,   +4.06] mediana  +0.51%
+    entra +15 min, custo 0.5%              n=  68 an= 27 media   +0.12% IC95 [  -4.75,   +3.74] mediana  +0.19%
+    entra +30 min, custo 0.18%             n=  68 an= 27 media   -0.32% IC95 [  -4.85,   +2.38] mediana  +1.45%
+    entra +30 min, custo 0.5%              n=  68 an= 27 media   -0.64% IC95 [  -5.17,   +2.06] mediana  +1.13%
+    entra +60 min, custo 0.18%             (insuficiente)
+    entra +60 min, custo 0.5%              (insuficiente)
+
+  Saida em 240 min:
+    total (p0 -> saida, sem custo)         n=  68 an= 27 media  +14.87% IC95 [  +8.98,  +19.48] mediana +19.98%
+    entra +1 min, custo 0.18%              n=  68 an= 27 media   +5.00% IC95 [  -1.17,   +9.54] mediana  +5.96%
+    entra +1 min, custo 0.5%               n=  68 an= 27 media   +4.68% IC95 [  -1.49,   +9.22] mediana  +5.64%
+    entra +2 min, custo 0.18%              n=  68 an= 27 media   +5.42% IC95 [  -0.17,   +9.76] mediana  +6.54%
+    entra +2 min, custo 0.5%               n=  68 an= 27 media   +5.10% IC95 [  -0.49,   +9.44] mediana  +6.22%
+    entra +5 min, custo 0.18%              n=  68 an= 27 media   +4.02% IC95 [  +0.53,   +6.96] mediana  +5.18%
+    entra +5 min, custo 0.5%               n=  68 an= 27 media   +3.70% IC95 [  +0.21,   +6.64] mediana  +4.86%
+    entra +15 min, custo 0.18%             n=  68 an= 27 media   +5.67% IC95 [  +2.65,   +8.61] mediana  +6.35%
+    entra +15 min, custo 0.5%              n=  68 an= 27 media   +5.35% IC95 [  +2.33,   +8.29] mediana  +6.03%
+    entra +30 min, custo 0.18%             n=  68 an= 27 media   +4.91% IC95 [  +2.17,   +7.20] mediana  +4.69%
+    entra +30 min, custo 0.5%              n=  68 an= 27 media   +4.59% IC95 [  +1.85,   +6.88] mediana  +4.37%
+    entra +60 min, custo 0.18%             n=  68 an= 27 media   +4.41% IC95 [  +1.46,   +7.21] mediana  +4.82%
+    entra +60 min, custo 0.5%              n=  68 an= 27 media   +4.09% IC95 [  +1.14,   +6.89] mediana  +4.50%
+
+  Saida em 1440 min:
+    total (p0 -> saida, sem custo)         n=  68 an= 27 media  +15.06% IC95 [  +6.88,  +21.64] mediana +17.93%
+    entra +1 min, custo 0.18%              n=  68 an= 27 media   +4.88% IC95 [  -5.23,  +12.16] mediana +11.78%
+    entra +1 min, custo 0.5%               n=  68 an= 27 media   +4.56% IC95 [  -5.55,  +11.84] mediana +11.46%
+    entra +2 min, custo 0.18%              n=  68 an= 27 media   +5.18% IC95 [  -4.84,  +12.40] mediana +10.33%
+    entra +2 min, custo 0.5%               n=  68 an= 27 media   +4.86% IC95 [  -5.16,  +12.08] mediana +10.01%
+    entra +5 min, custo 0.18%              n=  68 an= 27 media   +3.66% IC95 [  -6.22,  +10.75] mediana  +7.95%
+    entra +5 min, custo 0.5%               n=  68 an= 27 media   +3.34% IC95 [  -6.54,  +10.43] mediana  +7.63%
+    entra +15 min, custo 0.18%             n=  68 an= 27 media   +5.10% IC95 [  -4.71,  +12.53] mediana  +9.22%
+    entra +15 min, custo 0.5%              n=  68 an= 27 media   +4.78% IC95 [  -5.03,  +12.21] mediana  +8.90%
+    entra +30 min, custo 0.18%             n=  68 an= 27 media   +4.66% IC95 [  -3.74,  +10.96] mediana  +9.93%
+    entra +30 min, custo 0.5%              n=  68 an= 27 media   +4.34% IC95 [  -4.06,  +10.64] mediana  +9.61%
+    entra +60 min, custo 0.18%             n=  68 an= 27 media   +4.88% IC95 [  -2.44,  +10.64] mediana  +7.92%
+    entra +60 min, custo 0.5%              n=  68 an= 27 media   +4.56% IC95 [  -2.76,  +10.32] mediana  +7.60%
+
+==============================================================================================================
+MONITORING (vendido) -- {'sem perpetuo': 43, 'sem candle de 1m no anuncio': 1, 'ok': 93}
+==============================================================================================================
+
+  Saida em 60 min:
+    total (p0 -> saida, sem custo)         n=  93 an= 24 media   +6.90% IC95 [  +4.24,   +9.71] mediana  +6.30%
+    entra +1 min, custo 0.18%              n=  93 an= 24 media   +1.81% IC95 [  -2.53,   +5.42] mediana  +2.21%
+    entra +1 min, custo 0.5%               n=  93 an= 24 media   +1.49% IC95 [  -2.85,   +5.10] mediana  +1.89%
+    entra +2 min, custo 0.18%              n=  93 an= 24 media   +1.57% IC95 [  -2.35,   +4.86] mediana  +1.22%
+    entra +2 min, custo 0.5%               n=  93 an= 24 media   +1.25% IC95 [  -2.67,   +4.54] mediana  +0.90%
+    entra +5 min, custo 0.18%              n=  93 an= 24 media   +1.00% IC95 [  -2.47,   +4.04] mediana  +0.61%
+    entra +5 min, custo 0.5%               n=  93 an= 24 media   +0.68% IC95 [  -2.79,   +3.72] mediana  +0.29%
+    entra +15 min, custo 0.18%             n=  93 an= 24 media   +0.78% IC95 [  -1.77,   +2.87] mediana  +0.79%
+    entra +15 min, custo 0.5%              n=  93 an= 24 media   +0.46% IC95 [  -2.09,   +2.55] mediana  +0.47%
+    entra +30 min, custo 0.18%             n=  93 an= 24 media   +0.69% IC95 [  -0.63,   +2.02] mediana  +0.33%
+    entra +30 min, custo 0.5%              n=  93 an= 24 media   +0.37% IC95 [  -0.95,   +1.70] mediana  +0.01%
+    entra +60 min, custo 0.18%             (insuficiente)
+    entra +60 min, custo 0.5%              (insuficiente)
+
+  Saida em 240 min:
+    total (p0 -> saida, sem custo)         n=  93 an= 24 media   +8.53% IC95 [  +5.81,  +11.80] mediana  +7.96%
+    entra +1 min, custo 0.18%              n=  93 an= 24 media   +3.57% IC95 [  -0.43,   +7.47] mediana  +2.73%
+    entra +1 min, custo 0.5%               n=  93 an= 24 media   +3.25% IC95 [  -0.75,   +7.15] mediana  +2.41%
+    entra +2 min, custo 0.18%              n=  93 an= 24 media   +3.34% IC95 [  -0.25,   +6.99] mediana  +2.21%
+    entra +2 min, custo 0.5%               n=  93 an= 24 media   +3.02% IC95 [  -0.57,   +6.67] mediana  +1.89%
+    entra +5 min, custo 0.18%              n=  93 an= 24 media   +2.79% IC95 [  -0.43,   +6.18] mediana  +1.78%
+    entra +5 min, custo 0.5%               n=  93 an= 24 media   +2.47% IC95 [  -0.75,   +5.86] mediana  +1.46%
+    entra +15 min, custo 0.18%             n=  93 an= 24 media   +2.59% IC95 [  +0.10,   +5.21] mediana  +2.19%
+    entra +15 min, custo 0.5%              n=  93 an= 24 media   +2.27% IC95 [  -0.22,   +4.89] mediana  +1.87%
+    entra +30 min, custo 0.18%             n=  93 an= 24 media   +2.49% IC95 [  +0.68,   +4.55] mediana  +1.41%
+    entra +30 min, custo 0.5%              n=  93 an= 24 media   +2.17% IC95 [  +0.36,   +4.23] mediana  +1.09%
+    entra +60 min, custo 0.18%             n=  93 an= 24 media   +1.68% IC95 [  +0.56,   +2.93] mediana  +0.58%
+    entra +60 min, custo 0.5%              n=  93 an= 24 media   +1.36% IC95 [  +0.24,   +2.61] mediana  +0.26%
+
+  Saida em 1440 min:
+    total (p0 -> saida, sem custo)         n=  93 an= 24 media  +10.63% IC95 [  +8.10,  +13.17] mediana  +9.93%
+    entra +1 min, custo 0.18%              n=  93 an= 24 media   +5.77% IC95 [  +2.39,   +8.95] mediana  +5.10%
+    entra +1 min, custo 0.5%               n=  93 an= 24 media   +5.45% IC95 [  +2.07,   +8.63] mediana  +4.78%
+    entra +2 min, custo 0.18%              n=  93 an= 24 media   +5.54% IC95 [  +2.45,   +8.41] mediana  +5.57%
+    entra +2 min, custo 0.5%               n=  93 an= 24 media   +5.22% IC95 [  +2.13,   +8.09] mediana  +5.25%
+    entra +5 min, custo 0.18%              n=  93 an= 24 media   +5.00% IC95 [  +2.34,   +7.59] mediana  +4.45%
+    entra +5 min, custo 0.5%               n=  93 an= 24 media   +4.68% IC95 [  +2.02,   +7.27] mediana  +4.13%
+    entra +15 min, custo 0.18%             n=  93 an= 24 media   +4.74% IC95 [  +2.60,   +6.59] mediana  +4.36%
+    entra +15 min, custo 0.5%              n=  93 an= 24 media   +4.42% IC95 [  +2.28,   +6.27] mediana  +4.04%
+    entra +30 min, custo 0.18%             n=  93 an= 24 media   +4.58% IC95 [  +2.62,   +6.26] mediana  +3.08%
+    entra +30 min, custo 0.5%              n=  93 an= 24 media   +4.26% IC95 [  +2.30,   +5.94] mediana  +2.76%
+    entra +60 min, custo 0.18%             n=  93 an= 24 media   +3.73% IC95 [  +2.14,   +5.48] mediana  +3.54%
+    entra +60 min, custo 0.5%              n=  93 an= 24 media   +3.41% IC95 [  +1.82,   +5.16] mediana  +3.22%
+
+  DECISAO (regra fixada antes de rodar): VALE MONTAR PAPEL RAPIDO -- ['monitoring, saida 1440 min']
+  [997s]

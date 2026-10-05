@@ -986,6 +986,34 @@ Script: `monitor/replay_monitoring_tag.py` · logs: `claude/monitoring_tag.log`,
 - **No spot (descritivo, 133 tokens, inclusive sem perpétuo):** −5.3% em 7 dias e −6.9% em 14 dias (IC95 [−12.5, −1.2]). O mecanismo existe onde não dá para vender.
 - **Não testar "com stop" sobre estes dados:** a mediana de +10% convida a isso, mas um stop escolhido depois de ver a cauda é garimpo. Se quiser, só como teste de papel adiante, como no estudo 26. O placebo indica que esse papel estaria testando "vender token morrendo" (o mesmo do 26), não o anúncio.
 
+## 38. Latência: quanto do efeito dos anúncios sobra para quem chega em minutos — 05/10/2026 (descritivo)
+
+Script: `monitor/replay_latencia.py` · logs: `claude/latencia.log`, `claude/latencia_beta.log`
+
+- **Por quê:** os estudos 29 e 37 acharam efeito real perdido só pela latência horária. Antes de pensar em infraestrutura de execução rápida, a pergunta era quanto sobra entrando 1, 2, 5, 15, 30 e 60 minutos depois do anúncio.
+- **Natureza:** **descritivo, sem poder de aprovar.** Os eventos são os mesmos dos estudos 28, 29 e 37. O que ele decide é só se vale montar um **teste de papel adiante**.
+- **Regra de decisão, fixada antes de rodar:** vale o papel se, em alguma família, a entrada com **2 min** de latência e **custo de 0.5%** tiver IC95 > 0 em algum horizonte (60 min, 4h, 24h). Foram 9 olhares, então um acerto isolado é fraco.
+- **Dados:** candles de 1 minuto do perpétuo (`data.binance.vision`). p0 = abertura do minuto do anúncio.
+
+| Família | Total (p0 → saída) | Entra +1 min | **Entra +2 min** | Entra +60 min |
+|---|---|---|---|---|
+| Listagem, comprado, saída 4h | +21.3% | +5.6% [+0.4, +10.9] | +2.4% [−1.3, +6.5], mediana +0.8% | +0.1% |
+| Deslistagem, vendido, saída 4h | +14.9% | +4.7% [−1.5, +9.2] | +5.1% [−0.5, +9.4] | **+4.1% [+1.1, +6.9]** |
+| **Monitoring Tag, vendido, saída 24h** | +10.6% | +5.5% [+2.1, +8.6] | **+5.2% [+2.1, +8.1]**, mediana +5.3% | **+3.4% [+1.8, +5.2]** |
+
+(custo de 0.5% descontado das colunas de entrada; IC95 por anúncio)
+
+**Leitura:**
+- **Listagem:** é corrida de robô. Dos +21%, sobra ~2% (mediana perto de zero) já com 2 minutos de atraso. A linha morre aqui.
+- **Monitoring Tag:** **cumpre a regra.** O vendido segura até 24h depois do anúncio e ganha +5.2% entrando com 2 min de atraso. O que não se esperava: com **60 min** ainda sobra +3.4%, ou seja, **não precisa de execução rápida**. O workflow horário alcança. A mediana acompanha a média (não depende de outlier). Não é beta: o BTC dá +0.3% nas mesmas janelas e o excesso fica em +4.9% e +3.1% (`--beta`).
+- **Como conciliar com o estudo 37:** o efeito existe nas primeiras 24h. O 37 segurava 7–14 dias, e aí a deriva some no ruído e os squeezes destroem a média.
+- **Deslistagem, 4h:** a célula da regra (+2 min) cruza zero, mas de +5 a +60 min o IC fica > 0 (+4 a +5%, sem beta). Fica **fora da regra pré-registrada** e conta só como exploratório.
+- **Ressalvas:**
+  - As 24h foram escolhidas entre 3 horizontes e olhadas depois do 37 nos mesmos eventos.
+  - São 24 anúncios, e o passeio do 37 mostrou que o IC bootstrap é otimista nesse tamanho.
+  - O custo de 0.5% pode ser pouco para perpétuos ilíquidos logo após a notícia.
+  - **Nada disso é prova.** Por isso o próximo passo é papel adiante, não operar.
+
 ## Leitura conjunta
 
 Mesma direção do achado da auditoria v6 sobre o checklist mecânico dos Setups A/B. Nenhum dos dez setups de vídeo tem edge mecânico demonstrável nesses 20 pares (o 9.1 também não, fora da amostra, nos 80 pares do estudo 6):
