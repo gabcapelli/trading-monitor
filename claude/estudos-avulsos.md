@@ -1103,6 +1103,42 @@ Script: `monitor/replay_upbit_listagem.py` · log: `claude/upbit_listagem.log`
 - **Consequência:** **encerra a ideia de um servidor de execução rápida** para anúncios. Disputar esse efeito exige reação em segundos ou milissegundos, terreno de robôs profissionais com acesso privilegiado ao anúncio.
 - **Leitura combinada com o 38:** nos anúncios, o único efeito que dura além do primeiro minuto é a Monitoring Tag (24h), que já está no papel.
 
+## 42. Vender volatilidade em BTC e ETH (prêmio de variância) — 05/10/2026
+
+Script: `monitor/replay_venda_vol.py` · log: `claude/venda_vol.log`
+
+- **Por quê:** é a primeira fonte de retorno testada que não depende de prever direção. Atende ao perfil definido com o Gabriel em 05/10/2026: meta de 20–50% ao ano, aceitando quedas de 50% ou mais.
+- **Dados:**
+  - **Volatilidade implícita:** DVOL da Deribit (30 dias, no dinheiro), 03/2021 a 10/2026.
+  - **Preço:** perpétuo da Binance.
+  - **Limite:** sem a superfície completa, então só opções no dinheiro.
+- **Fase A (o prêmio existe?):** DVOL² − variância realizada nos 30 dias seguintes, em variância para evitar o viés de Jensen visto no teste sintético.
+- **Fase B (a estratégia rende?):**
+  - **Execução:** todo dia vende 1 put no dinheiro de 30 dias com garantia em caixa, em escada de 30 fatias marcadas a mercado diariamente.
+  - **Preço e custo:** Black-Scholes com DVOL − 2 pontos (spread) mais as taxas da Deribit.
+  - **Juro da garantia:** não incluído.
+- **Critério:** PASSA com retorno por fatia de IC 97.5% > 0 (2 moedas). Atende a meta com ≥ 20%/ano e queda ≤ 50%.
+- **Validação:** em preço sintético sem prêmio (30 sementes), deu −0.07% por fatia (esperado −0.04%) e nenhum PASSA falso. A contabilidade da escada foi corrigida antes de rodar.
+
+| | BTC | ETH |
+|---|---|---|
+| Prêmio (implícita − realizada) | **+7.9 pts de vol**, IC > 0; implícita maior em 71% dos dias | +2.7 pts, IC cruza zero |
+| Prêmio por ano | 2021 +16 · 2022 +10 · 2023–25 +6 · **2026 −3** | 2021–23 +6 · 2024 +2 · **2025–26 −4/−3** |
+| **Put vendida: por fatia (decide)** | **+1.3%** [−0.6, +2.9] | +1.0% [−1.5, +3.1] |
+| Carteira | **+11.9%/ano**, queda máxima −43.5% | +3.9%/ano, queda −54.8% |
+| Comprar e segurar no mesmo período | +9.5%/ano, queda −76.7% | +10.3%/ano, queda −79.4% |
+| Custo de 4 pts de vol | +8.8%/ano | +1.1%/ano |
+| Straddle vendido (descritivo) | +3.8%/ano, queda −50.5% | −15.8%/ano |
+
+**Veredito: NÃO PASSA e não atende a meta**, nas duas moedas.
+- **O prêmio existe no BTC** (fase A), mas está **encolhendo** (de +16 pts em 2021 para −3 em 2026). É o mesmo padrão do cash-and-carry (estudo 20): o prêmio foi competido.
+- **A put vendida no BTC** rendeu +11.9%/ano com queda de −43%. Na mesma janela, comprar e segurar deu +9.5%/ano com queda de −77%. O IC por fatia, porém, cruza zero.
+- **Parte do retorno é beta:** a put vendida é meio comprada.
+- **Mesmo somando ~4%/ano de juro sobre a garantia**, ficaria em ~16%, abaixo da meta.
+- **ETH:** o prêmio sumiu desde 2024.
+- **O straddle** (vender também a call) piora tudo.
+- **Contexto importante para a meta:** de 03/2021 a 10/2026, **nem comprar e segurar BTC ou ETH chegou a 20%/ano** (+9.5% e +10.3%, com quedas de quase 80%). A meta de 20–50% ficou acima do que o próprio mercado entregou na janela com dados.
+
 ## Leitura conjunta
 
 Mesma direção do achado da auditoria v6 sobre o checklist mecânico dos Setups A/B. Nenhum dos dez setups de vídeo tem edge mecânico demonstrável nesses 20 pares (o 9.1 também não, fora da amostra, nos 80 pares do estudo 6):

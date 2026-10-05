@@ -109,6 +109,10 @@ Vendido de +60 min a +4h após o fim de suporte da Upbit, 15 anúncios: líquido
 
 Comprar o perpétuo após a Upbit anunciar uma listagem em KRW (43 anúncios): o movimento é de **+16%**, mas acontece **inteiro no primeiro minuto**. Entrando com 1 minuto, sobra +0.3% [−1.4, +2.2], e sem os 3 maiores trades fica negativo. **Encerra a ideia de um servidor de execução rápida para anúncios**, porque é corrida de milissegundos. Em anúncios, só a Monitoring Tag (24h) dura além do primeiro minuto.
 
+### Estudo 42 — venda de volatilidade (05/10/2026, não passou)
+
+**Perfil do Gabriel definido em 05/10/2026:** meta de 20–50% ao ano, aceita quedas de 50% ou mais, horizonte indiferente, aberto a spot, opções e outros mercados. Daí veio o teste de vender puts no dinheiro de 30 dias (DVOL da Deribit, 2021–2026). O prêmio de variância existe no BTC (+7.9 pts), mas está encolhendo (−3 em 2026). No ETH sumiu. A put no BTC rendeu +11.9%/ano com queda de −43%, com IC cruzando zero e abaixo da meta. **Nem comprar e segurar BTC ou ETH deu 20%/ano na janela 2021–26** (+9.5%/+10.3%, quedas de ~−78%).
+
 **Leitura acumulada (37 estudos):** nenhuma regra direcional passou. Os fracassos têm três causas recorrentes: efeito rápido demais para latência horária, efeito que é do mercado inteiro (beta) e custo de carregar a posição (funding, squeeze). O que funcionou foi estrutural e sem previsão: cash-and-carry (estudo 20; prêmio secou), base trimestral (24) e desbloqueio de tokens (25, no papel).
 
 **Infra nova (reaproveitável):**

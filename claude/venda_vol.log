@@ -1,0 +1,30 @@
+
+====================================================================================================
+BTC  (2021-03-24 a 2026-10-04)
+====================================================================================================
+  FASE A  VRP em variancia (DVOL^2 - realizada^2, 30d): media +930 IC95 [+512, +1342] | ~+7.9 pts de vol | implicita > realizada em 71% dos dias (n=1991)
+          por ano (pts de vol equivalentes): 2021: +16.2 | 2022: +10.2 | 2023: +5.7 | 2024: +6.1 | 2025: +5.5 | 2026: -2.8
+  FASE B  put no dinheiro 30d, garantia em caixa: retorno por fatia +1.28% IC97.5 [-0.62, +2.92] | ganhou em 72% | pior fatia -33.8%
+          carteira em escada: +11.9%/ano | queda maxima -43.5%
+          comprar e segurar BTC: +9.5%/ano | queda maxima -76.7%
+          por ano (media por fatia): 2021: +0.51% | 2022: -0.60% | 2023: +3.23% | 2024: +3.81% | 2025: +0.88% | 2026: -1.12%
+          custo de 4 pts de vol: por fatia +1.05% | +8.8%/ano | queda -44.5%
+  DESCR.  straddle vendido: por fatia +0.73% | +3.8%/ano | queda -50.5% | pior fatia -49.9%
+
+  DECISAO BTC: NAO PASSA | meta (>=20%/ano e queda <=50%): NAO ATENDE
+
+====================================================================================================
+ETH  (2021-03-24 a 2026-10-04)
+====================================================================================================
+  FASE A  VRP em variancia (DVOL^2 - realizada^2, 30d): media +413 IC95 [-485, +1210] | ~+2.7 pts de vol | implicita > realizada em 64% dos dias (n=1991)
+          por ano (pts de vol equivalentes): 2021: +6.5 | 2022: +6.7 | 2023: +5.4 | 2024: +2.1 | 2025: -4.5 | 2026: -2.5
+  FASE B  put no dinheiro 30d, garantia em caixa: retorno por fatia +1.01% IC97.5 [-1.50, +3.14] | ganhou em 68% | pior fatia -39.8%
+          carteira em escada: +3.9%/ano | queda maxima -54.8%
+          comprar e segurar ETH: +10.3%/ano | queda maxima -79.4%
+          por ano (media por fatia): 2021: +3.95% | 2022: -1.18% | 2023: +3.50% | 2024: +1.85% | 2025: -0.76% | 2026: -1.44%
+          custo de 4 pts de vol: por fatia +0.78% | +1.1%/ano | queda -55.4%
+  DESCR.  straddle vendido: por fatia -0.72% | -15.8%/ano | queda -68.4% | pior fatia -73.0%
+
+  DECISAO ETH: NAO PASSA | meta (>=20%/ano e queda <=50%): NAO ATENDE
+
+  [58s]
