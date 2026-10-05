@@ -23,6 +23,14 @@ jobs:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
         run: python monitor/fetch_and_check.py
 
+      - name: Checar a fapi/proxy (avisa no ntfy se cair; nunca bloqueia)
+        continue-on-error: true
+        timeout-minutes: 5
+        env:
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+          UNLOCK_PAPER_FAPI: ${{ secrets.UNLOCK_PAPER_FAPI }}
+        run: python monitor/saude_fontes.py
+
       - name: Registrar sabado em papel (idempotente; so grava apos um sabado novo)
         env:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
@@ -53,7 +61,7 @@ jobs:
         run: |
           git config user.name "btc-monitor-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add claude/log-monitoramento-btc-auto.md claude/status-simulacao.md claude/sinais.md claude/calibracao.md monitor/state.json claude/trade_journal.db claude/sabado-paper.md monitor/sabado_paper_state.json claude/unlock-paper.md monitor/unlock_paper_state.json monitor/unlock_paper_protocolos.json claude/novos-paper.md monitor/novos_paper_state.json README.md
+          git add claude/log-monitoramento-btc-auto.md claude/status-simulacao.md claude/sinais.md claude/calibracao.md monitor/state.json claude/trade_journal.db claude/sabado-paper.md monitor/sabado_paper_state.json claude/unlock-paper.md monitor/unlock_paper_state.json monitor/unlock_paper_protocolos.json claude/novos-paper.md monitor/novos_paper_state.json monitor/saude_fontes.json README.md
           git rm --ignore-unmatch claude/candidatos-pendentes.md
           git diff --cached --quiet || git commit -m "Atualiza monitoramento BTC ($(date -u +'%Y-%m-%d %H:%M UTC'))"
           git push

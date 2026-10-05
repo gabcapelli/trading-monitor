@@ -73,11 +73,16 @@ def main():
          f"_Atualizado em {agora:%d/%m %H:%M} (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._", ""]
 
     L += ["## Precisa de você", ""]
+    fapi = _json("saude_fontes.json").get("fapi", {})
+    fapi_fora = bool(fapi) and not fapi.get("ok", True) and fapi.get("falhas", 0) >= 2
+    if fapi_fora:
+        L += [f"- **Proxy da fapi fora** desde {fapi.get('desde')} ({fapi.get('erro')}): registros em papel "
+              "com tipo e funding pendentes até voltar. Ver `proxy-vercel/`.", ""]
     if recentes:
         L += [f"- **#{i}** {par.replace('/USDT', '')} Setup {st}, {dr}, R:R {rr:.2f} ({dt[8:10]}/{dt[5:7]} {dt[11:]})"
               for i, dt, par, st, dr, rr in recentes]
         L.append(f"- → marcar status e checks em [sinais.md](claude/sinais.md)")
-    else:
+    elif not fapi_fora:
         L.append("_Nada pendente._")
     antigos = len(cand) - len(recentes)
     if antigos:
