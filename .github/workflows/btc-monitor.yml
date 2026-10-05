@@ -6,12 +6,20 @@ on:
 permissions:
   contents: write   # necessario para o job commitar o log/status atualizados
 
+# Uma execucao por vez: se o GitHub atrasar uma (incidente de 05/10/2026: 73 min na
+# fila), a seguinte espera em vez de rodar em paralelo e brigar no push.
+concurrency:
+  group: monitor
+  cancel-in-progress: false
+
 jobs:
   monitor:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout do repositorio
         uses: actions/checkout@v4
+        with:
+          ref: main   # o estado mais novo na hora em que roda, nao o do disparo (execucao atrasada usava dados velhos)
 
       - name: Configurar Python
         uses: actions/setup-python@v5
@@ -80,4 +88,4 @@ jobs:
           git add claude/log-monitoramento-btc-auto.md claude/status-simulacao.md claude/sinais.md claude/calibracao.md monitor/state.json claude/trade_journal.db claude/sabado-paper.md monitor/sabado_paper_state.json claude/unlock-paper.md monitor/unlock_paper_state.json monitor/unlock_paper_protocolos.json claude/novos-paper.md monitor/novos_paper_state.json monitor/saude_fontes.json claude/monitoring-paper.md monitor/monitoring_paper_state.json claude/continuacao-paper.md monitor/continuacao_paper_state.json README.md
           git rm --ignore-unmatch claude/candidatos-pendentes.md
           git diff --cached --quiet || git commit -m "Atualiza monitoramento BTC ($(date -u +'%Y-%m-%d %H:%M UTC'))"
-          git push
+          git pull --rebase origin main && git push   # se outra execucao gravou no meio tempo
