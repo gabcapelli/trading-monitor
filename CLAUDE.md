@@ -97,6 +97,10 @@ Vender o perpétuo depois que a Binance aplica a Monitoring Tag. Os dados (anún
 
 Mede quanto do efeito dos anúncios sobra entrando 1–60 min depois, com candles de 1 minuto. **Listagem:** corrida de robô (de +21%, sobra ~2% com 2 min). **Monitoring Tag:** vendido até 24h após o anúncio, +5.2% [+2.1, +8.1] com 2 min e **+3.4% [+1.8, +5.2] com 60 min**, sem beta. Cumpre a regra de decisão pré-fixada e é alcançável pelo workflow horário, sem infraestrutura nova. O efeito está nas primeiras 24h, e o estudo 37 segurava 7–14 dias. **Deslistagem 4h:** positivo de +5 a +60 min, mas fora da regra (exploratório). Nada disso é prova (mesmos eventos já usados, 24 anúncios, IC otimista). **Em teste de papel desde 05/10/2026:** `monitor/monitoring_paper.py` → `claude/monitoring-paper.md`. A regra está congelada no docstring: vende no minuto da detecção (5–65 min) e recompra 24h após o anúncio, com custo de 0.5% e funding real. Há um braço exploratório de deslistagem com saída em 4h. O script lê o feed pela rota `/cms` do proxy. **Só reavaliar com 24 anúncios fechados** (~2 anos).
 
+### Estudo 39 — réplica na Upbit (05/10/2026, não passou)
+
+A mesma regra do papel (vendido de +60 min a +24h) aplicada à designação de "token de alerta" da Upbit, com eventos independentes (31 anúncios). Excesso sobre o BTC de +2.0% [−0.1, +4.3], líquido de +0.5% [−1.6, +2.8] e placebo em zero. A direção é a mesma do 38, com tamanho menor. Não confirma nem desmente. O papel da Binance segue decidindo, e convém esperar um resultado abaixo dos +3.4%. Não juntar as amostras.
+
 **Leitura acumulada (37 estudos):** nenhuma regra direcional passou. Os fracassos têm três causas recorrentes: efeito rápido demais para latência horária, efeito que é do mercado inteiro (beta) e custo de carregar a posição (funding, squeeze). O que funcionou foi estrutural e sem previsão: cash-and-carry (estudo 20; prêmio secou), base trimestral (24) e desbloqueio de tokens (25, no papel).
 
 **Infra nova (reaproveitável):**

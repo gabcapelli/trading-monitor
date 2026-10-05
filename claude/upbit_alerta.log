@@ -1,0 +1,51 @@
+Eventos (token x designacao): 93 em 76 anuncios | fora por anuncio da Binance colado: 0
+Montagem: {'sem perpetuo': 53, 'ok': 31, 'sem volume ou listado ha menos de 30 dias': 9}
+Trades validos: 31 em 31 anuncios
+
+====================================================================================================
+VENDIDO, entrada +60 min, saida +24h (positivo = vendido ganhou)
+====================================================================================================
+  LIQUIDO, custo 0.5% + funding (decide)     n=  31 an= 31 media   +0.55% IC95 [  -1.58,   +2.79] mediana  +0.25%
+  EXCESSO sobre o BTC (decide)               n=  31 an= 31 media   +2.04% IC95 [  -0.11,   +4.27] mediana  +1.38%
+  bruto                                      n=  31 an= 31 media   +1.97% IC95 [  -0.18,   +4.13] mediana  +1.27%
+  liquido, entrada +2 min                    n=  31 an= 31 media   +2.47% IC95 [  -1.06,   +5.75] mediana  +2.16%
+  excesso, entrada +2 min                    n=  31 an= 31 media   +4.08% IC95 [  +0.60,   +7.36] mediana  +3.64%
+  PLACEBO -30d: excesso                      n=  31 an= 31 media   +0.48% IC95 [  -0.37,   +1.51] mediana  +0.51%
+  perdido (anuncio -> entrada)               n=  31 an= 31 media   +2.07% IC95 [  -1.43,   +5.03] mediana  +2.15%
+  excesso, so 2025-26                        n=  25 an= 25 media   +1.58% IC95 [  -1.06,   +4.29] mediana  +1.38%
+
+  Por trade:
+    2022-05-23 LTCUSDT        liq   +4.74% exc   +1.31%
+    2022-11-02 KAVAUSDT       liq   -0.17% exc   -1.00%
+    2022-12-08 WAVESUSDT      liq   +0.26% exc   +6.17%
+    2023-03-29 OMGUSDT        liq   +6.97% exc   +9.65%
+    2023-09-12 ENJUSDT        liq   +5.40% exc   +6.58%
+    2023-09-22 LINAUSDT       liq   +0.76% exc   +0.94%
+    2025-03-28 HIFIUSDT       liq  +11.70% exc  +10.23%
+    2025-04-24 SNXUSDT        liq  -10.59% exc   -9.24%
+    2025-09-23 UXLINKUSDT     liq   +0.25% exc   -0.30%
+    2025-12-29 FLOWUSDT       liq   -0.50% exc   -0.95%
+    2026-01-30 LRCUSDT        liq   -0.47% exc   +1.38%
+    2026-02-10 DENTUSDT       liq   +2.31% exc   -0.04%
+    2026-02-12 NOMUSDT        liq  +14.95% exc  +15.45%
+    2026-02-23 IOTXUSDT       liq   -6.63% exc   -9.70%
+    2026-03-23 RESOLVUSDT     liq  +10.82% exc  +15.39%
+    2026-04-02 DRIFTUSDT      liq  -10.08% exc   +3.03%
+    2026-04-13 DOTUSDT        liq   -2.74% exc   +3.79%
+    2026-04-20 KERNELUSDT     liq  -11.88% exc   -8.34%
+    2026-06-18 AERGOUSDT      liq   -0.59% exc   -1.73%
+    2026-06-22 TAIKOUSDT      liq   +4.70% exc   +5.59%
+    2026-07-07 1000BONKUSDT   liq   +4.98% exc   +5.19%
+    2026-07-22 ZILUSDT        liq   -4.94% exc   -4.47%
+    2026-07-28 STORJUSDT      liq   +6.54% exc  +10.00%
+    2026-07-31 JASMYUSDT      liq   +0.43% exc   -0.48%
+    2026-08-07 SNXUSDT        liq   +1.93% exc   +3.27%
+    2026-08-11 RVNUSDT        liq   +5.09% exc   +7.00%
+    2026-08-21 MANTRAUSDT     liq   -3.49% exc   -5.51%
+    2026-08-24 SANDUSDT       liq   -1.70% exc   +3.64%
+    2026-09-01 INJUSDT        liq   -1.98% exc   -1.97%
+    2026-09-21 EGLDUSDT       liq   -9.19% exc   -4.19%
+    2026-09-22 SOPHUSDT       liq   +0.02% exc   +2.56%
+
+  DECISAO: NAO PASSA
+  [3s]

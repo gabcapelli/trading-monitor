@@ -1024,6 +1024,35 @@ Script: `monitor/replay_latencia.py` · logs: `claude/latencia.log`, `claude/lat
 - **Leitura:** só com **24 anúncios** fechados (~2 anos).
 - **Validação:** a simulação do anúncio de 04/09/2026 reproduziu ao centésimo o cálculo do estudo 38.
 
+## 39. Réplica na Upbit: venda nas 24h após a designação de "token de alerta" — 05/10/2026
+
+Script: `monitor/replay_upbit_alerta.py` · log: `claude/upbit_alerta.log`
+
+- **Objetivo:** confirmar o achado do estudo 38 em eventos **independentes**. A Upbit tem o equivalente da Monitoring Tag (유의 종목 지정, designação de token de alerta). O "유의 촉구 안내" (apelo à cautela, mais brando) ficou de fora.
+- **Regra:** a do teste de papel, sem nada a ajustar.
+  - **Execução:** vendido no perpétuo da Binance, entrada 60 min depois do anúncio (pior caso do workflow), saída 24h depois do anúncio.
+  - **Medidas:** custo de 0.5% e funding real.
+  - **Exclusão:** token com anúncio da Binance colado (nenhum caso).
+- **Critério:** líquido e excesso sobre o BTC com IC95 > 0, bootstrap por anúncio.
+- **Leitura fixada antes:**
+  - **Passa:** confirmação independente.
+  - **Não passa:** sinal de que o 38 foi sorte, mas sem matá-lo sozinho, porque o público e as regras da Upbit diferem.
+- **Eventos:** 93 tokens em 76 designações (2019–2026), **31 trades com perpétuo em 31 anúncios** (25 em 2025–26).
+
+| | Média | IC95 | Mediana |
+|---|---|---|---|
+| **Líquido (decide)** | **+0.55%** | [−1.6, +2.8] | +0.25% |
+| **Excesso sobre o BTC (decide)** | **+2.0%** | [−0.1, +4.3] | +1.4% |
+| Excesso, entrada com 2 min | +4.1% | [+0.6, +7.4] | +3.6% |
+| Placebo −30d: excesso | +0.5% | [−0.4, +1.5] | |
+| Referência, estudo 38 (Binance, 60 min) | +3.4% líquido / +3.1% excesso | | |
+
+**Veredito: NÃO PASSA.** O resultado não confirma nem desmente o estudo 38.
+- **A favor do 38:** a direção é a mesma. O excesso fica em +2.0% com o IC encostando no zero, e o placebo fica em zero (+0.5%), então o que aparece é efeito do anúncio, não "token morrendo".
+- **Contra o 38:** o tamanho é menor. Depois do custo e de o mercado ter subido nessas janelas, o líquido fica em +0.5%, próximo de zero. É compatível com o efeito real ser menor do que os +3.4% da Binance (a estimativa do 38 tende a vir inflada) ou com ruído.
+- **O que não fazer:** juntar as duas amostras depois de ver os resultados para "passar" seria garimpo.
+- **Consequência prática:** nada muda. O papel da Binance segue como o teste que decide, e é razoável esperar ali um resultado abaixo dos +3.4%.
+
 ## Leitura conjunta
 
 Mesma direção do achado da auditoria v6 sobre o checklist mecânico dos Setups A/B. Nenhum dos dez setups de vídeo tem edge mecânico demonstrável nesses 20 pares (o 9.1 também não, fora da amostra, nos 80 pares do estudo 6):
