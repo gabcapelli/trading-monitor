@@ -1014,6 +1014,16 @@ Script: `monitor/replay_latencia.py` · logs: `claude/latencia.log`, `claude/lat
   - O custo de 0.5% pode ser pouco para perpétuos ilíquidos logo após a notícia.
   - **Nada disso é prova.** Por isso o próximo passo é papel adiante, não operar.
 
+**Teste de papel desde 05/10/2026:** `monitor/monitoring_paper.py` · registro: `claude/monitoring-paper.md` · workflow horário, com `continue-on-error`.
+- **Regra congelada no docstring:**
+  - **Entrada:** venda no minuto em que o anúncio é detectado (5–65 min no workflow horário). Anúncio detectado com mais de 90 min de atraso é descartado.
+  - **Saída:** recompra 24h após o anúncio.
+  - **Filtro:** perpétuo cripto listado há ≥ 30 dias.
+  - **Medidas:** custo de 0.5%, funding real e excesso sobre o BTC.
+- **Braço exploratório:** deslistagem com saída em 4h. Não decide.
+- **Leitura:** só com **24 anúncios** fechados (~2 anos).
+- **Validação:** a simulação do anúncio de 04/09/2026 reproduziu ao centésimo o cálculo do estudo 38.
+
 ## Leitura conjunta
 
 Mesma direção do achado da auditoria v6 sobre o checklist mecânico dos Setups A/B. Nenhum dos dez setups de vídeo tem edge mecânico demonstrável nesses 20 pares (o 9.1 também não, fora da amostra, nos 80 pares do estudo 6):

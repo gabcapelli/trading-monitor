@@ -7,6 +7,8 @@
 //
 // Uso: UNLOCK_PAPER_FAPI = https://<projeto>.vercel.app/<PROXY_TOKEN>/fapi/v1
 // So repassa GET de dados publicos (klines, fundingRate, exchangeInfo); nada de conta/ordem.
+// Desde 05/10/2026 tambem a lista publica de anuncios da Binance (monitoring_paper.py):
+//   https://<projeto>.vercel.app/<PROXY_TOKEN>/cms?catalogId=49&pageNo=1&pageSize=20
 
 const PERMITIDOS = new Set(["klines", "fundingRate", "exchangeInfo"]);
 
@@ -16,9 +18,23 @@ export default async function handler(req, res) {
   const partes = (url.searchParams.get("p") || "").split("/").filter(Boolean); // [token, "fapi", "v1", endpoint]
   const token = process.env.PROXY_TOKEN;
   if (!token || partes[0] !== token) return res.status(404).send("nao");
+  url.searchParams.delete("p");
+  if (partes.length === 2 && partes[1] === "cms") {
+    const q = new URLSearchParams({ type: "1" });
+    for (const k of ["catalogId", "pageNo", "pageSize"]) {
+      const v = url.searchParams.get(k);
+      if (!v || !/^\d{1,4}$/.test(v)) return res.status(400).send("parametro");
+      q.set(k, v);
+    }
+    const r = await fetch(`https://www.binance.com/bapi/composite/v1/public/cms/article/list/query?${q}`, {
+      headers: { "User-Agent": "Mozilla/5.0 trading-monitor-proxy" },
+    });
+    res.status(r.status);
+    res.setHeader("Content-Type", r.headers.get("Content-Type") || "application/json");
+    return res.send(Buffer.from(await r.arrayBuffer()));
+  }
   if (partes.length !== 4 || partes[1] !== "fapi" || partes[2] !== "v1" || !PERMITIDOS.has(partes[3]))
     return res.status(400).send("endpoint");
-  url.searchParams.delete("p");
   const qs = url.searchParams.toString();
   const r = await fetch(`https://fapi.binance.com/fapi/v1/${partes[3]}${qs ? "?" + qs : ""}`, {
     headers: { "User-Agent": "trading-monitor-proxy" },

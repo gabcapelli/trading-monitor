@@ -61,6 +61,9 @@ def main():
     nv = _json("novos_paper_state.json").get("trades", {}).values()
     nv_ab = [t for t in nv if t["status"] == "aberto"]
     nv_fe = [t for t in nv if t["status"] == "fechado"]
+    mt = [t for t in _json("monitoring_paper_state.json").get("trades", {}).values() if t["braco"] == "principal"]
+    mt_ab = [t for t in mt if t["status"] == "aberto"]
+    mt_fe = [t for t in mt if t["status"] == "fechado"]
     sb_est = _json("sabado_paper_state.json")
     sab = sb_est.get("sabados", [])
     janela = sb_est.get("janela")      # cesta de sabado aberta (ainda nao registrada)
@@ -68,6 +71,7 @@ def main():
     media = lambda xs: sum(xs) / len(xs) if xs else None
     m_d, m_un, m_nv, m_sb = (media(fech), media([t["hedge"] for t in un_fe]),
                              media([t["com_stop"] for t in nv_fe]), media([s["principal"] for s in sab]))
+    m_mt = media([t["liq"] for t in mt_fe])
 
     L = ["# Painel de estratégias", "",
          f"_Atualizado em {agora:%d/%m %H:%M} (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._", ""]
@@ -94,6 +98,8 @@ def main():
           f"{'—' if m_un is None else _pct(m_un)} |",
           f"| [Perpétuo novo](claude/novos-paper.md) | {len(nv_ab)} | {len(nv_fe)}/100 | "
           f"{'—' if m_nv is None else _pct(m_nv)} |",
+          f"| [Monitoring Tag](claude/monitoring-paper.md) | {len(mt_ab)} | {len({t['anuncio_id'] for t in mt_fe})}/24 | "
+          f"{'—' if m_mt is None else _pct(m_mt / 100)} |",
           f"| [Sábado](claude/sabado-paper.md) | {1 if janela else 0} | {len(sab)}/104 | {'—' if m_sb is None else _pct(m_sb)} |",
           (f"| [Setup A/B](claude/estudos-avulsos.md#setups-ab--encerrado-em-25092026) · encerrado | — | {len(fech)} | "
            f"{'—' if m_d is None else f'{m_d:+.2f}R'} |" if M.SETUP_AB_ENCERRADO else
@@ -101,7 +107,7 @@ def main():
            f"{'—' if m_d is None else f'{m_d:+.2f}R'} |"),
           "",
           "<sub>Média: Setup A/B em R por trade; desbloqueio com hedge; perpétuo novo com stop; "
-          "sábado por fim de semana. Fechados = amostra atual / amostra mínima para reavaliar.</sub>"]
+          "Monitoring Tag líquida (fechados em anúncios); sábado por fim de semana. Fechados = amostra atual / amostra mínima para reavaliar.</sub>"]
 
     prox = []            # (dia, texto), os mais proximos primeiro
     for d in sorted({t["t0"] for t in un_ab}):

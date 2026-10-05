@@ -163,9 +163,9 @@ Os estudos **não se reabrem variando parâmetros sobre os mesmos dados**. Uma n
 
 Para hipóteses que passaram ou ficaram promissoras e só podem ser confirmadas com tempo:
 
-- **Scripts:** `unlock_paper.py` (venda de perpétuo antes de desbloqueio de tokens para insiders), `novos_paper.py` (venda de perpétuo recém-lançado com stop de +50%), `sabado_paper.py` (cesta comprada de sexta a sábado).
+- **Scripts:** `unlock_paper.py` (venda de perpétuo antes de desbloqueio de tokens para insiders), `novos_paper.py` (venda de perpétuo recém-lançado com stop de +50%), `sabado_paper.py` (cesta comprada de sexta a sábado), `monitoring_paper.py` (venda de perpétuo nas 24h após a Monitoring Tag, desde 05/10/2026).
 - **Regra congelada** no docstring, não alterável durante o teste; registra versões em paralelo (ex.: pura vs. com hedge) com custo e funding reais. **Nenhuma ordem é enviada.**
-- **Critério de leitura fixado antes de começar:** só reavaliar com 150 trades fechados (desbloqueio), 100 (lançamentos) ou 104 sábados (~2 anos). Antes disso, qualquer leitura é ruído.
+- **Critério de leitura fixado antes de começar:** só reavaliar com 150 trades fechados (desbloqueio), 100 (lançamentos), 104 sábados (~2 anos) ou 24 anúncios (Monitoring Tag). Antes disso, qualquer leitura é ruído.
 - **Execução:** workflow horário no GitHub Actions. A fapi da Binance responde 451 a IPs dos EUA, então os scripts chamam o proxy `proxy-vercel/` (Tóquio) via o secret `UNLOCK_PAPER_FAPI`; preços de fechamento vêm do `data.binance.vision`. Eventos que só aparecem no calendário *depois* da data de entrada são descartados ("conhecido tarde") para não olhar o futuro.
 
 ---
