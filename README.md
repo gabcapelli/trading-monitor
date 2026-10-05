@@ -1,6 +1,6 @@
 # Painel de estratégias
 
-_Atualizado em 05/10 16:05 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
+_Atualizado em 05/10 17:34 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
 
 ## Precisa de você
 
@@ -12,6 +12,7 @@ _Nada pendente._
 |---|---|---|---|
 | [Desbloqueio](claude/unlock-paper.md) | 3 | 7/150 | +1.08% |
 | [Perpétuo novo](claude/novos-paper.md) | 1 | 0/100 | — |
+| [Rompimento 48h](claude/continuacao-paper.md) · exceção | 0 | 0/300 | — |
 | [Monitoring Tag](claude/monitoring-paper.md) | 0 | 0/24 | — |
 | [Sábado](claude/sabado-paper.md) | 0 | 2/104 | +0.72% |
 | [Setup A/B](claude/estudos-avulsos.md#setups-ab--encerrado-em-25092026) · encerrado | — | 34 | -0.13R |
