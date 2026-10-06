@@ -19,6 +19,16 @@
   "ignorados_acao": 0,
   "barras": 3632
  },
+ "2026-09-14": {
+  "negocios_lidos": 6732760,
+  "ignorados_acao": 1,
+  "barras": 3140
+ },
+ "2026-09-15": {
+  "negocios_lidos": 6127143,
+  "ignorados_acao": 0,
+  "barras": 3067
+ },
  "2026-10-05": {
   "negocios_lidos": 10535812,
   "ignorados_acao": 2,
