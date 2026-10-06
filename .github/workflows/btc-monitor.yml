@@ -77,8 +77,10 @@ jobs:
           UNLOCK_PAPER_FAPI: ${{ secrets.UNLOCK_PAPER_FAPI }}   # fapi (com ticker/24hr) do proxy-vercel
         run: python monitor/continuacao_paper.py
 
-      - name: Atualizar painel (README.md; so le os estados gravados acima)
+      - name: Atualizar painel (README.md; le os estados gravados acima + preco atual dos abertos)
         continue-on-error: true   # falha aqui nunca bloqueia o commit do monitor
+        env:
+          UNLOCK_PAPER_FAPI: ${{ secrets.UNLOCK_PAPER_FAPI }}   # ticker/price via proxy-vercel; sem ele, so sem preco atual
         run: python monitor/painel.py
 
       - name: Commitar log/status/state atualizados

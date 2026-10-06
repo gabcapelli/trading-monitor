@@ -1,8 +1,9 @@
 """
 Painel do repositorio: reescreve o README.md da raiz com o resumo de cada
-estrategia, para ler direto no app do GitHub. So le os arquivos que os outros
-scripts ja gravam (banco do diario e estados JSON) -- nenhuma chamada de API,
-nenhuma conta nova. So biblioteca padrao do Python.
+estrategia, para ler direto no app do GitHub. Le os arquivos que os outros
+scripts ja gravam (banco do diario e estados JSON); a unica chamada de API e um
+ticker/price da fapi (via proxy) para marcar os abertos a mercado -- se falhar,
+o painel sai igual, so sem o preco atual. So biblioteca padrao do Python.
 
 Rode sem argumento (o workflow horario chama assim, depois dos registros).
 """
@@ -50,6 +51,88 @@ def diario(agora):
     limite = (agora - timedelta(hours=RECENTE_H)).strftime("%Y-%m-%d %H:%M")
     recentes = [x for x in cand if x[1] >= limite]
     return fech, abertos, cand, recentes
+
+
+def precos():
+    """Preco atual de todos os perpetuos numa chamada so; {} se a fapi/proxy falhar."""
+    r = U._json(f"{U.FAPI}/ticker/price") or []
+    return {x["symbol"]: float(x["price"]) for x in r if isinstance(x, dict) and "price" in x}
+
+
+def _hm(ms):
+    return datetime.fromtimestamp(ms / 1000, BRT).strftime("%d/%m %H:%M")
+
+
+def hoje_e_abertos(hoje, un, nv, mt, ct, sb_est, px):
+    """Linhas de 'Hoje' (o que abriu/fechou desde as 21h de Brasilia = dia UTC) e
+    'Abertos agora' (cada posicao aberta a preco de mercado, bruto)."""
+    dia_ms = lambda ms: ms // 86_400_000
+    curto = lambda s: s.replace("USDT", "")
+    ev = []
+    for t in un:
+        if t["status"] == "aberto" and t["entrada"] == hoje:
+            ev.append(f"Desbloqueio: vendeu {curto(t['par'])} a {t['px_in']:g} (desbloqueio {_data(t['t0'])})")
+        if t["status"] == "fechado" and t["t0"] == hoje:
+            ev.append(f"Desbloqueio: recomprou {curto(t['par'])}: puro {_pct(t['puro'])}, com hedge {_pct(t['hedge'])}"
+                      if "hedge" in t else f"Desbloqueio: recomprou {curto(t['par'])} (funding pendente)")
+    for t in nv:
+        if t["status"] == "aberto" and t["entrada"] == hoje:
+            ev.append(f"Perpétuo novo: vendeu {curto(t['par'])} a {t['px_in']:g} (stop {t['stop_px']:g})")
+        if t["status"] == "fechado" and t.get("dia_saida_stop") == hoje:
+            ev.append(f"Perpétuo novo: recomprou {curto(t['par'])}: com stop {_pct(t['com_stop'])}")
+    for nome, ts in (("Monitoring Tag", mt), ("Rompimento 48h", ct)):
+        for t in ts:
+            if t["status"] in ("aberto", "fechado") and dia_ms(t["entrada_ts"]) == hoje:
+                lado = "comprou" if t.get("lado", -1) > 0 else "vendeu"
+                ev.append(f"{nome}: {lado} {curto(t['sym'])} a {t['p_in']:g} ({_hm(t['entrada_ts'])})")
+            if t["status"] == "fechado" and dia_ms(t["saida_ts"]) == hoje:
+                ev.append(f"{nome}: fechou {curto(t['sym'])}: líquido {t['liq']:+.2f}%")
+    janela = sb_est.get("janela")
+    if janela and janela["dia"] == hoje:
+        ev.append("Sábado: comprou a cesta")
+    for s in sb_est.get("sabados", []):
+        if s["dia"] + 1 == hoje:
+            ev.append(f"Sábado: vendeu a cesta: {_pct(s['principal'])}")
+
+    linhas = []          # (estrategia, ativo, desde, entrada, retorno bruto ou None, obs)
+    ret = lambda sym, p0, lado: (lado * (px[sym] / p0 - 1)) if sym in px and p0 else None
+    for t in un:
+        if t["status"] != "aberto":
+            continue
+        r = ret(t["par"], t["px_in"], -1)
+        rc = [px[s] / p0 - 1 for s, p0 in t["cesta_in"].items() if s in px and p0]
+        obs = f"com hedge {_pct(r + sum(rc) / len(rc))}; " if r is not None and rc else ""
+        linhas.append(("Desbloqueio", t["par"], _data(t["entrada"]), t["px_in"], r,
+                       obs + f"recompra {_data(t['t0'])}"))
+    for t in nv:
+        if t["status"] == "aberto":
+            linhas.append(("Perpétuo novo", t["par"], _data(t["entrada"]), t["px_in"], ret(t["par"], t["px_in"], -1),
+                           f"stop {t['stop_px']:g}; saída {_data(t['entrada'] + 30)}"))
+    for nome, ts in (("Monitoring Tag", mt), ("Rompimento 48h", ct)):
+        for t in ts:
+            if t["status"] == "aberto":
+                lado = t.get("lado", -1)
+                linhas.append((nome, t["sym"], _hm(t["entrada_ts"]), t["p_in"], ret(t["sym"], t["p_in"], lado),
+                               f"{'comprado' if lado > 0 else 'vendido'}; saída {_hm(t['saida_ts'])}"))
+    if janela and janela.get("precos"):
+        rs = [px[s] / p0 - 1 for s, p0 in janela["precos"].items() if s in px and p0]
+        linhas.append(("Sábado", f"cesta ({len(janela['precos'])})", _data(janela["dia"] - 1) + " 21:00", None,
+                       sum(rs) / len(rs) if rs else None, "comprado; saída sábado 21h"))
+
+    L = ["", "## Hoje", "", "<sub>Desde o fechamento das 21h (Brasília).</sub>", ""]
+    L += [f"- {e}" for e in ev] if ev else ["_Nada abriu nem fechou._"]
+    if linhas:
+        L += ["", "## Abertos agora", "", "| Estratégia | Ativo | Desde | Entrada | Agora | Resultado | Obs. |",
+              "|---|---|---|---|---|---|---|"]
+        for est, sym, desde, p0, r, obs in sorted(linhas, key=lambda x: (x[0], -(x[4] or 0))):
+            agora_px = f"{px[sym]:g}" if sym in px else "—"
+            res = "—" if r is None else (f"**{_pct(r)}**" if abs(r) >= 0.10 else _pct(r))
+            L.append(f"| {est} | {curto(sym)} | {desde} | {'—' if p0 is None else f'{p0:g}'} | "
+                     f"{agora_px} | {res} | {obs} |")
+        L += ["", "<sub>Resultado a preço de mercado, bruto (sem custo nem funding), já no lado da posição: "
+                  "positivo = a favor. Em negrito, movimentos de 10% ou mais. Com hedge = venda + cesta dos majors.</sub>"
+              if px else "<sub>Sem preço atual: a fapi/proxy não respondeu nesta execução.</sub>"]
+    return L
 
 
 def main():
@@ -114,6 +197,9 @@ def main():
           "",
           "<sub>Média: Setup A/B em R por trade; desbloqueio com hedge; perpétuo novo com stop; "
           "Monitoring Tag líquida (fechados em anúncios); sábado por fim de semana. Fechados = amostra atual / amostra mínima para reavaliar.</sub>"]
+
+    hoje = int(agora.timestamp()) // 86400
+    L += hoje_e_abertos(hoje, list(un), list(nv), mt, ct, sb_est, precos())
 
     prox = []            # (dia, texto), os mais proximos primeiro
     for d in sorted({t["t0"] for t in un_ab}):
