@@ -7,3 +7,6 @@ monitor/fmz/indice*.json
 claude/fmz_download_1h*.log
 proxy/.wrangler/
 monitor/cache_vision/
+claude/_*_download.log
+monitor/cache_hl/
+monitor/cache_vol/
