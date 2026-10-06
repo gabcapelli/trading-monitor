@@ -1015,7 +1015,8 @@
 "d0": 20727,
 "dias_vistos": [
 20729,
-20730
+20730,
+20731
 ],
 "entrada": 20729,
 "motivo": null,
@@ -1376,5 +1377,5 @@
 "tipo": "EQUITY"
 }
 },
-"ultimo_scan": 20731
+"ultimo_scan": 20732
 }

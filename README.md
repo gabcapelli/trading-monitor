@@ -1,6 +1,6 @@
 # Painel de estratégias
 
-_Atualizado em 05/10 20:05 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
+_Atualizado em 05/10 21:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
 
 ## Precisa de você
 
@@ -10,7 +10,7 @@ _Nada pendente._
 
 | Estratégia | Abertos | Fechados | Média |
 |---|---|---|---|
-| [Desbloqueio](claude/unlock-paper.md) | 3 | 7/150 | +1.08% |
+| [Desbloqueio](claude/unlock-paper.md) | 5 | 7/150 | +1.08% |
 | [Perpétuo novo](claude/novos-paper.md) | 1 | 0/100 | — |
 | [Rompimento 48h](claude/continuacao-paper.md) · exceção | 0 | 0/300 | — |
 | [Monitoring Tag](claude/monitoring-paper.md) | 0 | 0/24 | — |
@@ -21,7 +21,7 @@ _Nada pendente._
 
 ## Próximos eventos
 
-- 06/10 · Desbloqueio: venda prevista de BB, PUMP
+- 07/10 · Desbloqueio: venda prevista de SEI
 - 09/10 · Sábado: entrada da cesta (21h)
 - 10/10 · Desbloqueio: recompra de MOVE
 - 11/10 · Desbloqueio: recompra de CARV

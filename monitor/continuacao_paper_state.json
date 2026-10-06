@@ -3,17 +3,17 @@
  "iniciado": 1791232470885,
  "top": [
   "TAOUSDT",
-  "ADAUSDT",
-  "LINKUSDT",
   "ARBUSDT",
+  "LINKUSDT",
+  "ADAUSDT",
   "PUMPUSDT",
   "WLDUSDT",
   "1000PEPEUSDT",
   "ENAUSDT",
   "QNTUSDT",
   "BNBUSDT",
-  "SUIUSDT",
   "UNIUSDT",
+  "SUIUSDT",
   "DOGEUSDT",
   "NEARUSDT",
   "HYPEUSDT",
@@ -23,6 +23,6 @@
   "ETHUSDT",
   "BTCUSDT"
  ],
- "dia_top": 1791158400000,
- "ultima_barra": 1791216000000
+ "dia_top": 1791244800000,
+ "ultima_barra": 1791230400000
 }
