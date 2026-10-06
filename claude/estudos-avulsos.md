@@ -1272,6 +1272,31 @@ Script: `monitor/replay_continuacao_top20.py` · log: `claude/continuacao_top20.
 - **Validação:** em 956 barras de 4 moedas, os sinais do papel (API, 4h) bateram 21 de 21 com os do estudo (histórico, 1h). O fechamento foi conferido à mão.
 - **Leitura:** só com **300 trades fechados** (~7 meses). Decide com líquido e excesso, ambos com IC95 > 0.
 
+## 47. Reversão do dólar depois da PTAX de fim de mês (B3) — 06/10/2026
+
+Script: `monitor/replay_ptax.py` · log: `claude/ptax.log`
+
+- **Por quê:** primeiro estudo fora de cripto. O Gabriel quer trading direcional numa corretora só, e as amostras de cripto estão gastas. A B3 dá dado nunca usado. A PTAX de venda do último dia útil do mês liquida o dólar futuro (DOL/WDO) que vence no dia seguinte, além de NDFs e contratos comerciais. Daí a hipótese de "briga pela PTAX": quem tem posição atrelada a ela empurra o dólar durante as quatro janelas (10h a 13h), e o preço devolve depois. É fluxo forçado com hora marcada, como o desbloqueio.
+- **Dados:** boletins da PTAX da API do Banco Central (dólar nas janelas das ~10h e ~13h), de jul/2011 a set/2026. Carrego ajustado por CDI (SGS 12) − Fed Funds (FRED). 179 fins de mês.
+- **Regra (sem parâmetro, amostra inteira decide):** no último dia útil do mês, opera contra o movimento entre as janelas das 10h e das 13h. Entra no boletim das 13h e sai (a) às 10h ou (b) às 13h do dia seguinte. Custo de 0.04% ida e volta.
+- **Critério:** líquido e excesso sobre o placebo (a mesma regra nos outros dias do mês) com IC 97.5% > 0 (Bonferroni para 2 saídas).
+
+| Saída | Líquido | IC97.5 | Excesso sobre placebo | IC97.5 |
+|---|---|---|---|---|
+| (a) 10h do dia seguinte | −0.05% | [−0.20, +0.09] | +0.01% | [−0.15, +0.15] |
+| (b) 13h do dia seguinte | −0.03% | [−0.20, +0.15] | +0.03% | [−0.15, +0.21] |
+
+**Veredito: NÃO PASSA.** O bruto fica em zero (−0.01% e +0.01%), com acerto de 50%. O fim de mês não se distingue dos outros dias.
+- **Metades:** 2011–18 negativa (−0.15%), 2019–26 levemente positiva (+0.05%), ambas com IC cruzando zero.
+- **Tercis de |m|:** não monotônicos (baixo −0.22%, médio +0.19%, alto −0.12%). É ruído e, pelo pré-registro, não vira filtro.
+- **Placebo** (3.581 dias): líquido de −0.05%. Também não há reversão do dólar depois das 13h em dia comum; o líquido negativo é o próprio custo.
+- **Validação do simulador:** em 300 sementes de passeio aleatório, z médio de ~0 e desvio de 1.04. A cauda é levemente otimista (~2.5% de falso positivo contra 1.25% nominal), o mesmo achado do estudo 37. Isso reforça o NÃO PASSA.
+- **Poder:** um efeito de ~0.15% líquido teria saído do zero. Se existir "briga pela PTAX" com efeito no preço depois das 13h, ele é menor que isso, ou o boletim não o captura.
+
+**Infra nova (reaproveitável):**
+- `monitor/cache_ptax/`: boletins da PTAX desde 2011, CDI e Fed Funds diários.
+- `monitor/arquivo_b3.py`: arquiva daqui para frente, a cada execução do workflow horário, o tick a tick de WIN, WDO, IND e DOL da B3 em candles de 1 minuto (`dados_b3/1min/`, ~50 KB por dia). A B3 só mantém ~4 semanas no ar. Conferido em 05/10/2026: o WDO acompanha o boletim do BC ×1000 mais o carrego, nos mesmos horários.
+
 ## Leitura conjunta
 
 Mesma direção do achado da auditoria v6 sobre o checklist mecânico dos Setups A/B. Nenhum dos dez setups de vídeo tem edge mecânico demonstrável nesses 20 pares (o 9.1 também não, fora da amostra, nos 80 pares do estudo 6):

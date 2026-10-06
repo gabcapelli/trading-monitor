@@ -1,0 +1,38 @@
+Estudo 47 -- reversao do dolar depois da PTAX de fim de mes
+Dias com boletim: 3831 | sem J10 ou J13 (fora): 27 | validos: 3804
+Eventos (ultimo dia util do mes): 179 (2011-07-29 a 2026-08-31)
+Carrego medio por trade: +0.0015%
+
+Saida a_J10 (decide)
+  liq (custo 0.04%)                n= 179 | media -0.049% | IC97.5 [-0.198, +0.092] | acerto 47%
+  excesso sobre placebo            n= 179 | media +0.007% | IC97.5 [-0.145, +0.150] | acerto 50%
+  -> nao passa nesta saida
+  Descritivo (IC95):
+  bruto                            n= 179 | media -0.011% | IC95.0 [-0.140, +0.117] | acerto 50%
+  liq com custo 0.08%              n= 179 | media -0.089% | IC95.0 [-0.217, +0.038] | acerto 45%
+  placebo (outros dias, liq)       n=3581 | media -0.054% | IC95.0 [-0.079, -0.028] | acerto 47%
+  liq 2011-2018                    n=  87 | media -0.149% | IC95.0 [-0.323, +0.021] | acerto 44%
+  liq 2019-2026                    n=  92 | media +0.045% | IC95.0 [-0.135, +0.230] | acerto 50%
+  liq |m| tercil baixo             n=  59 | media -0.218% | IC95.0 [-0.392, -0.053] | acerto 36%
+  liq |m| tercil medio             n=  59 | media +0.191% | IC95.0 [+0.001, +0.399] | acerto 58%
+  liq |m| tercil alto              n=  61 | media -0.117% | IC95.0 [-0.384, +0.143] | acerto 48%
+
+Saida b_J13 (decide)
+  liq (custo 0.04%)                n= 179 | media -0.029% | IC97.5 [-0.198, +0.147] | acerto 49%
+  excesso sobre placebo            n= 179 | media +0.030% | IC97.5 [-0.147, +0.211] | acerto 51%
+  -> nao passa nesta saida
+  Descritivo (IC95):
+  bruto                            n= 179 | media +0.010% | IC95.0 [-0.141, +0.167] | acerto 49%
+  liq com custo 0.08%              n= 179 | media -0.069% | IC95.0 [-0.218, +0.088] | acerto 47%
+  placebo (outros dias, liq)       n=3581 | media -0.055% | IC95.0 [-0.085, -0.024] | acerto 48%
+  liq 2011-2018                    n=  87 | media -0.142% | IC95.0 [-0.338, +0.044] | acerto 47%
+  liq 2019-2026                    n=  92 | media +0.078% | IC95.0 [-0.151, +0.318] | acerto 50%
+  liq |m| tercil baixo             n=  59 | media -0.269% | IC95.0 [-0.480, -0.054] | acerto 36%
+  liq |m| tercil medio             n=  59 | media +0.250% | IC95.0 [+0.019, +0.512] | acerto 58%
+  liq |m| tercil alto              n=  61 | media -0.067% | IC95.0 [-0.371, +0.246] | acerto 52%
+
+VEREDITO: NAO PASSA
+
+Validacao: passeio aleatorio, 20 sementes (bruto, IC97.5)
+  a_J10: media das medias +0.0246% | IC inteiro > 0 em 1 de 20
+  b_J13: media das medias +0.0102% | IC inteiro > 0 em 3 de 20

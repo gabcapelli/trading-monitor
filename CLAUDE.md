@@ -129,6 +129,10 @@ Rompimento de 7 dias com volume ≥ 2× em barras de 4h, segurando 48h, nos 50 p
 
 Mesma regra do 45, nas 20 de maior volume de cada dia entre 679 perpétuos (inclusive deslistados): líquido **+0.76%**, IC [−0.03, +1.60], falha por um fio; excesso +0.79%, IC > 0; metades e trades fora das majors positivos. **É o melhor resultado direcional do projeto.** "Só compras" (+1.36%, IC > 0) passaria, mas foi escolhido depois de ver o dado. **O Gabriel abriu uma exceção (05/10/2026): papel em `monitor/continuacao_paper.py` → `claude/continuacao-paper.md`, com leitura só com 300 trades fechados.** Os sinais do papel foram conferidos 21 de 21 contra o estudo.
 
+### Estudo 47 — PTAX de fim de mês na B3 (06/10/2026, não passou)
+
+Primeiro estudo fora de cripto: o Gabriel quer trading direcional numa corretora só, e o dado da B3 é novo. A regra opera contra o movimento do dólar entre as janelas das 10h e das 13h no último dia útil do mês (a PTAX liquida o WDO) e sai no dia seguinte. Com 179 meses (2011–2026), o bruto dá zero e o excesso sobre os outros dias do mês também (IC ±0.15%). **Não testar variações (outra janela, filtro por tamanho, só fim de trimestre) sobre esses boletins.** Infra: `monitor/cache_ptax/` (boletins do BC desde 2011) e `monitor/arquivo_b3.py`, que arquiva a cada hora o tick a tick de WIN/WDO/IND/DOL em 1 minuto (`dados_b3/1min/`), porque a B3 só guarda ~4 semanas. Esse arquivo é a amostra fora da amostra para estudos futuros na B3. Os candidatos levantados e não testados são o vencimento do WIN (diário, Ibovespa desde 2000) e o rebalanceamento do Ibovespa (exige reconstruir as prévias à mão; a literatura indica que o efeito enfraqueceu depois de 2015).
+
 **Leitura acumulada (37 estudos):** nenhuma regra direcional passou. Os fracassos têm três causas recorrentes: efeito rápido demais para latência horária, efeito que é do mercado inteiro (beta) e custo de carregar a posição (funding, squeeze). O que funcionou foi estrutural e sem previsão: cash-and-carry (estudo 20; prêmio secou), base trimestral (24) e desbloqueio de tokens (25, no papel).
 
 **Infra nova (reaproveitável):**
