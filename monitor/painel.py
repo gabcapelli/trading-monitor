@@ -2,7 +2,7 @@
 Painel do repositorio: reescreve o README.md da raiz com o resumo de cada
 estrategia, para ler direto no app do GitHub. Le os arquivos que os outros
 scripts ja gravam (banco do diario e estados JSON); a unica chamada de API e um
-ticker/price da fapi (via proxy) para marcar os abertos a mercado -- se falhar,
+ticker/24hr da fapi (via proxy) para marcar os abertos a mercado -- se falhar,
 o painel sai igual, so sem o preco atual. So biblioteca padrao do Python.
 
 Rode sem argumento (o workflow horario chama assim, depois dos registros).
@@ -54,9 +54,10 @@ def diario(agora):
 
 
 def precos():
-    """Preco atual de todos os perpetuos numa chamada so; {} se a fapi/proxy falhar."""
-    r = U._json(f"{U.FAPI}/ticker/price") or []
-    return {x["symbol"]: float(x["price"]) for x in r if isinstance(x, dict) and "price" in x}
+    """Preco atual de todos os perpetuos numa chamada so; {} se a fapi/proxy falhar.
+    ticker/24hr (e nao ticker/price) porque e o que o proxy-vercel ja libera."""
+    r = U._json(f"{U.FAPI}/ticker/24hr") or []
+    return {x["symbol"]: float(x["lastPrice"]) for x in r if isinstance(x, dict) and "lastPrice" in x}
 
 
 def _hm(ms):
