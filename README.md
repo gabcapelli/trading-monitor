@@ -1,6 +1,6 @@
 # Painel de estratégias
 
-_Atualizado em 06/10 09:05 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
+_Atualizado em 06/10 10:05 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
 
 ## Precisa de você
 
@@ -31,13 +31,13 @@ _Nada pendente._
 
 | Estratégia | Ativo | Desde | Entrada | Agora | Resultado | Obs. |
 |---|---|---|---|---|---|---|
-| Desbloqueio | BB | 06/10 | 0.009883 | 0.009692 | +1.93% | com hedge +2.10%; recompra 13/10 |
-| Desbloqueio | PUMP | 06/10 | 0.006463 | 0.006343 | +1.86% | com hedge +2.02%; recompra 13/10 |
-| Desbloqueio | MOVE | 03/10 | 0.009912 | 0.009802 | +1.11% | com hedge +4.57%; recompra 10/10 |
-| Desbloqueio | APT | 05/10 | 0.8008 | 0.8276 | -3.35% | com hedge -2.41%; recompra 12/10 |
-| Desbloqueio | CARV | 04/10 | 0.04427 | 0.04945 | **-11.70%** | com hedge -9.79%; recompra 11/10 |
-| Perpétuo novo | CT | 03/10 | 0.50286 | 0.38555 | **+23.33%** | stop 0.75429; saída 02/11 |
-| Rompimento 48h | ADA | 06/10 09:00 | 0.2791 | 0.2786 | -0.18% | comprado; saída 08/10 09:00 |
+| Desbloqueio | PUMP | 06/10 | 0.006463 | 0.006302 | +2.49% | com hedge +2.31%; recompra 13/10 |
+| Desbloqueio | MOVE | 03/10 | 0.009912 | 0.009719 | +1.95% | com hedge +5.04%; recompra 10/10 |
+| Desbloqueio | BB | 06/10 | 0.009883 | 0.009723 | +1.62% | com hedge +1.43%; recompra 13/10 |
+| Desbloqueio | APT | 05/10 | 0.8008 | 0.8236 | -2.85% | com hedge -2.37%; recompra 12/10 |
+| Desbloqueio | CARV | 04/10 | 0.04427 | 0.04926 | **-11.27%** | com hedge -9.72%; recompra 11/10 |
+| Perpétuo novo | CT | 03/10 | 0.50286 | 0.38419 | **+23.60%** | stop 0.75429; saída 02/11 |
+| Rompimento 48h | ADA | 06/10 09:00 | 0.2791 | 0.2769 | -0.79% | comprado; saída 08/10 09:00 |
 
 <sub>Resultado a preço de mercado, bruto (sem custo nem funding), já no lado da posição: positivo = a favor. Em negrito, movimentos de 10% ou mais. Com hedge = venda + cesta dos majors.</sub>
 
