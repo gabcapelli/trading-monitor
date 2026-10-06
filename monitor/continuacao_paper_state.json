@@ -1,5 +1,38 @@
 {
- "trades": [],
+ "trades": [
+  {
+   "sym": "ADAUSDT",
+   "lado": 1,
+   "barra": 1791273600000,
+   "entrada_ts": 1791288000000,
+   "detectado": 1791288300000,
+   "p_in": 0.2791,
+   "p_in_real": 0.2788,
+   "saida_ts": 1791460800000,
+   "top": [
+    "TAOUSDT",
+    "ARBUSDT",
+    "LINKUSDT",
+    "PUMPUSDT",
+    "WLDUSDT",
+    "1000PEPEUSDT",
+    "ENAUSDT",
+    "QNTUSDT",
+    "BNBUSDT",
+    "UNIUSDT",
+    "SUIUSDT",
+    "DOGEUSDT",
+    "NEARUSDT",
+    "HYPEUSDT",
+    "XRPUSDT",
+    "SOLUSDT",
+    "ZECUSDT",
+    "ETHUSDT",
+    "BTCUSDT"
+   ],
+   "status": "aberto"
+  }
+ ],
  "iniciado": 1791232470885,
  "top": [
   "TAOUSDT",
@@ -24,5 +57,5 @@
   "BTCUSDT"
  ],
  "dia_top": 1791244800000,
- "ultima_barra": 1791259200000
+ "ultima_barra": 1791273600000
 }
