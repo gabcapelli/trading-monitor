@@ -1,6 +1,6 @@
 # Painel de estratégias
 
-_Atualizado em 06/10 04:05 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
+_Atualizado em 06/10 05:05 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
 
 ## Precisa de você
 
