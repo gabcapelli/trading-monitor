@@ -153,6 +153,12 @@ Repo `../usdt-mints`. Emissão no terço superior → compra BTC por 24 h. Teste
 
 Repo `../ml-fatores`. Gradient boosting com 19 características em 675 perpétuos, long-short em quintis escalonado. Teste 2025–26: bruto +0.66%/semana com posto previsão × retorno de +0.19 (t≈6.7), **o maior poder preditivo do projeto**. O líquido fica em −0.01% porque a perna vendida paga ~1%/semana de funding (as moedas que caem são as de funding muito negativo). O carry anula o preço. Ideia nova, só para dado futuro e papel: ML com alvo líquido de funding. **O Gabriel decidiu não levar ao papel** (07/10/2026): a volatilidade de 6.5%/semana exigiria anos para ler o lucro.
 
+### Estudo 53 — prêmio coreano por moeda (07/10/2026, não passou)
+
+Repo `../kimchi-alts`. Prêmio da moeda na Upbit relativo ao do BTC. Vende os de prêmio alto e compra os de prêmio baixo, escalonado. Teste 2023–26: líquido +0.16%/semana, IC [−0.13, +0.46], bruto +0.50%, posto t≈2.7, na mesma direção do desenvolvimento. O funding come ~0.3%/semana. Os deslistados da Upbit não têm histórico (viés contra a hipótese).
+
+**Padrão dos estudos 49, 52 e 53:** o sinal bruto é real e aparece fora da amostra, mas custo ou funding nos perpétuos o anulam. Quem tem a informação já cobra por ela no carry.
+
 **Leitura acumulada (37 estudos):** nenhuma regra direcional passou. Os fracassos têm três causas recorrentes: efeito rápido demais para latência horária, efeito que é do mercado inteiro (beta) e custo de carregar a posição (funding, squeeze). O que funcionou foi estrutural e sem previsão: cash-and-carry (estudo 20; prêmio secou), base trimestral (24) e desbloqueio de tokens (25, no papel).
 
 **Infra nova (reaproveitável):**

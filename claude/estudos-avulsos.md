@@ -1361,6 +1361,17 @@ Repo `../ml-fatores`. São 675 perpétuos de moeda, inclusive deslistados, com 1
 
 **Veredito: NÃO PASSA.** É o **maior poder de ordenação do projeto**: o modelo sabe quais moedas vão cair. Mas elas são as de funding muito negativo, e a perna vendida paga ~1%/semana de funding, contra 0.04% da comprada. A queda de preço é a compensação pelo carry. O passeio deu 2.5% de falso PASSA. Não refazer o teste com outro alvo ou outra config. Fica como **hipótese nova, só em dado futuro**: ML com alvo líquido de funding.
 
+## 53. Prêmio coreano por moeda (Upbit × Binance) — 07/10/2026
+
+Repo `../kimchi-alts`. Ideia vinda da imprensa coreana, que publica o kimchi premium por moeda todo dia. O sinal é o prêmio da moeda na Upbit relativo ao do BTC, em média de 7 dias. Vendido no terço de maior prêmio e comprado no de menor, escalonado em 4 semanas, com custo de 0.18% mais funding; 59 moedas por semana. Só há mercados Upbit ativos, porque os deslistados dão 404, o que gera viés contra a hipótese.
+
+| | Líquido/semana | IC95 | Bruto | Posto (t) |
+|---|---|---|---|---|
+| Desenvolvimento 2020–22 | +0.21% | [−0.33, +0.83] | +0.42% | +0.045 (1.2) |
+| **Teste 2023–26** | **+0.16%** | [−0.13, +0.46] | +0.50% | +0.056 (2.7) |
+
+**Veredito: NÃO PASSA.** A direção prevista aparece nas duas amostras, mas o funding come ~0.3%/semana e o IC líquido cruza zero. O passeio deu 2.5% de falso PASSA. É o terceiro estudo seguido (49, 52, 53) com **sinal bruto real anulado por custo ou carry**.
+
 Checagem anterior, sem estudo: **airdrop/TGE como choque de oferta** não tem amostra limpa. Dos ~85 eventos operáveis da DefiLlama, 49 já foram o controle do token-unlocks e 22 caem na amostra de listagem.
 
 ## Leitura conjunta
