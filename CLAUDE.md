@@ -149,6 +149,10 @@ Carteiras ativas (4 semanas ÷ 12 anteriores), long-short escalonado de 4 semana
 
 Repo `../usdt-mints`. Emissão no terço superior → compra BTC por 24 h. Teste 2023–26: +0.07% por trade, IC [−0.15, +0.29], excesso sobre todos os dias de +0.04%, ou seja, beta. As metades se invertem.
 
+### Estudo 52 — ML multifator (07/10/2026, não passou no líquido)
+
+Repo `../ml-fatores`. Gradient boosting com 19 características em 675 perpétuos, long-short em quintis escalonado. Teste 2025–26: bruto +0.66%/semana com posto previsão × retorno de +0.19 (t≈6.7), **o maior poder preditivo do projeto**. O líquido fica em −0.01% porque a perna vendida paga ~1%/semana de funding (as moedas que caem são as de funding muito negativo). O carry anula o preço. Ideia nova, só para dado futuro e papel: ML com alvo líquido de funding. **O Gabriel decidiu não levar ao papel** (07/10/2026): a volatilidade de 6.5%/semana exigiria anos para ler o lucro.
+
 **Leitura acumulada (37 estudos):** nenhuma regra direcional passou. Os fracassos têm três causas recorrentes: efeito rápido demais para latência horária, efeito que é do mercado inteiro (beta) e custo de carregar a posição (funding, squeeze). O que funcionou foi estrutural e sem previsão: cash-and-carry (estudo 20; prêmio secou), base trimestral (24) e desbloqueio de tokens (25, no papel).
 
 **Infra nova (reaproveitável):**

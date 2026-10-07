@@ -1350,6 +1350,17 @@ Repo `../usdt-mints`. Griffin & Shams (2020). Usa a oferta diária de USDT da De
 
 **Veredito: NÃO PASSA.** O retorno é o beta do BTC. As metades do teste se invertem (+0.34% e −0.30%). O passeio deu 3% de falso PASSA. Não variar limiar, horizonte ou stablecoin.
 
+## 52. ML multifator (gradient boosting) no corte transversal — 07/10/2026
+
+Repo `../ml-fatores`. São 675 perpétuos de moeda, inclusive deslistados, com 19 características de preço, volume, risco e funding em posto semanal e alvo no posto do retorno de 4 semanas. Re-treino trimestral; long-short em quintis, escalonado em 4 semanas; custo de 0.18% mais funding. A fase de validação (até 02/12/2024) travou a config C entre 4 candidatas, e o teste de 2025–26 rodou uma vez.
+
+| | Líquido/semana | IC95 | Bruto | Posto previsão × retorno (t) |
+|---|---|---|---|---|
+| Validação 2024 (C) | +0.96% | [−0.64, +1.90] | +0.95% | +0.156 (3.3) |
+| **Teste 2025–26** | **−0.01%** | [−1.91, +1.08] | +0.66% | **+0.189 (6.7)** |
+
+**Veredito: NÃO PASSA.** É o **maior poder de ordenação do projeto**: o modelo sabe quais moedas vão cair. Mas elas são as de funding muito negativo, e a perna vendida paga ~1%/semana de funding, contra 0.04% da comprada. A queda de preço é a compensação pelo carry. O passeio deu 2.5% de falso PASSA. Não refazer o teste com outro alvo ou outra config. Fica como **hipótese nova, só em dado futuro**: ML com alvo líquido de funding.
+
 Checagem anterior, sem estudo: **airdrop/TGE como choque de oferta** não tem amostra limpa. Dos ~85 eventos operáveis da DefiLlama, 49 já foram o controle do token-unlocks e 22 caem na amostra de listagem.
 
 ## Leitura conjunta
