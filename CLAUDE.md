@@ -137,6 +137,14 @@ Primeiro estudo fora de cripto: o Gabriel quer trading direcional numa corretora
 
 Primeira ideia vinda de varredura de literatura (Lim 2025: o fluxo de T prevê T+1). Repo `../etf-flows`. A Farside foi lida via Wayback, e a latência medida dá publicação às ~05–07 h UTC, com entrada às 09 h UTC. Fora da amostra do artigo (mai/2025–out/2026): BTC +0.088% por trade, IC [−0.17, +0.36], sem bater a permutação do sinal. ETH com a direção invertida entre o desenvolvimento e o teste. O efeito é contemporâneo. Não variar hora, horizonte ou limiar. Antes disso, checado sem estudo: airdrop/TGE não tem amostra limpa (os eventos já foram controle do token-unlocks ou estão na amostra de listagem).
 
+### Estudo 49 — depósito anormal em corretoras (07/10/2026, não passou no líquido; sinal bruto real)
+
+Repo `../exchange-inflows`. Fonte: BigQuery (sandbox gratuito, projeto `etherum-510913`, cota de 1 TB/mês; o Dune gratuito não serve mais). Carteiras de corretora do Spellbook do Dune. Long-short semanal entre ~185 tokens. No teste de 2025–26, o líquido dá +0.31%/semana com IC [−0.41, +1.45], o bruto +0.84% com IC > 0, e a correlação de posto t ≈ 4, na mesma direção do desenvolvimento (t ≈ 3). O custo do giro (~0.5%/semana) come o efeito. **É o sinal mais consistente do projeto, mas não passou.** Não variar o desenho sobre 2023–26. Uma variante de giro menor só em dado não visto (2020–22).
+
+### Estudo 50 — crescimento da rede (07/10/2026, não passou)
+
+Carteiras ativas (4 semanas ÷ 12 anteriores), long-short escalonado de 4 semanas, mesmo universo do 49. Desenvolvimento ≈ 0. Teste −0.79%/semana, t do posto = −2.3, ou seja, o sentido oposto ao da literatura. Não inverter sobre estes dados. A cota do BigQuery de out/2026 está quase toda gasta (~900 GB de 1 TB).
+
 **Leitura acumulada (37 estudos):** nenhuma regra direcional passou. Os fracassos têm três causas recorrentes: efeito rápido demais para latência horária, efeito que é do mercado inteiro (beta) e custo de carregar a posição (funding, squeeze). O que funcionou foi estrutural e sem previsão: cash-and-carry (estudo 20; prêmio secou), base trimestral (24) e desbloqueio de tokens (25, no papel).
 
 **Infra nova (reaproveitável):**

@@ -1313,6 +1313,32 @@ Repo separado: `../etf-flows` (desenho, latência e resultado no README de lá).
 
 **Veredito: NÃO PASSA.** No BTC o centro é pequeno, e o sinal aleatório com a mesma proporção de compras e vendas faz quase o mesmo. No ETH a direção se inverte entre o desenvolvimento e o teste. O efeito do artigo é sobretudo contemporâneo e não sobra para quem entra depois da publicação. O passeio deu 1% de falso PASSA (o simulador não é otimista). **Não testar outras horas, horizontes ou limiares sobre esses dados.**
 
+## 49. Depósito anormal em corretoras (on-chain, transversal) — 07/10/2026
+
+Repo separado: `../exchange-inflows` (dados, carteiras e auditoria no README de lá).
+
+- **Origem:** segunda varredura de literatura. *"Does what happens on-chain stays on-chain?"* (JIMF 2025): fluxo para corretoras prevê retorno menor. É a família da oferta, a mesma do desbloqueio.
+- **Dado novo:** BigQuery (`crypto_ethereum.token_transfers`, sandbox gratuito) com ~5 mil carteiras de corretora do Spellbook do Dune. São 336 perpétuos com ERC-20, inclusive deslistados, e 106 a 185 elegíveis por semana.
+- **Regra:** toda segunda, depósito dos últimos 7 dias dividido pela média de 12 semanas. Vendido no terço maior, comprado no menor, por 1 semana. Custo de 0.18% × giro/2, mais funding. Direção fixada pelo artigo.
+
+| | Líquido/semana | IC95 | Bruto | Posto médio (t) |
+|---|---|---|---|---|
+| Desenvolvimento 2023–24 (100 sem.) | −0.06% | [−0.59, +0.50] | +0.25% | +0.036 (2.95) |
+| **Teste 2025–26 (90 sem.)** | **+0.31%** | **[−0.41, +1.45]** | +0.84% (IC > 0) | +0.039 (3.97) |
+
+**Veredito: NÃO PASSA** no critério líquido. É **o primeiro sinal direcional que aparece na direção prevista nas duas amostras**: correlação de posto positiva com t de 3 a 4, as duas pernas contribuindo e bruto do teste com IC > 0. Quem mata o resultado é o custo do giro semanal, ~0.5%/semana. O passeio deu 0% de falso PASSA. **Não variar o desenho sobre 2023–2026.** Uma variante de giro menor só vale em dado não visto (2020–2022 ainda não foi baixado).
+
+## 50. Crescimento da rede (carteiras ativas) — 07/10/2026
+
+Mesmo repo (`../exchange-inflows`, `estudo_rede.py`). Liu & Tsyvinski (RFS 2021): adoção prevê retorno. O sinal são as carteiras ativas nas últimas 4 semanas sobre as 12 anteriores, com long-short em terços e **4 carteiras escalonadas de 4 semanas** (giro baixo). O universo e o custo são os do estudo 49.
+
+| | Líquido/semana | IC95 | Posto 4 sem. (t) |
+|---|---|---|---|
+| Desenvolvimento 2023–24 | +0.11% | [−0.45, +0.55] | +0.006 (0.49) |
+| **Teste 2025–26** | **−0.79%** | [−2.21, +0.12] | −0.031 (−2.34) |
+
+**Veredito: NÃO PASSA.** O desenvolvimento dá zero, e o teste vai no sentido oposto: mais atividade, retorno menor. Não inverter a direção sobre estes dados. O custo ficou em 0.05%/semana, então o escalonamento resolveu o giro. O que falta aqui é sinal.
+
 Checagem anterior, sem estudo: **airdrop/TGE como choque de oferta** não tem amostra limpa. Dos ~85 eventos operáveis da DefiLlama, 49 já foram o controle do token-unlocks e 22 caem na amostra de listagem.
 
 ## Leitura conjunta
