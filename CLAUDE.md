@@ -133,6 +133,10 @@ Mesma regra do 45, nas 20 de maior volume de cada dia entre 679 perpétuos (incl
 
 Primeiro estudo fora de cripto: o Gabriel quer trading direcional numa corretora só, e o dado da B3 é novo. A regra opera contra o movimento do dólar entre as janelas das 10h e das 13h no último dia útil do mês (a PTAX liquida o WDO) e sai no dia seguinte. Com 179 meses (2011–2026), o bruto dá zero e o excesso sobre os outros dias do mês também (IC ±0.15%). **Não testar variações (outra janela, filtro por tamanho, só fim de trimestre) sobre esses boletins.** Infra: `monitor/cache_ptax/` (boletins do BC desde 2011) e `monitor/arquivo_b3.py`, que arquiva a cada hora o tick a tick de WIN/WDO/IND/DOL em 1 minuto (`dados_b3/1min/`), porque a B3 só guarda ~4 semanas. Esse arquivo é a amostra fora da amostra para estudos futuros na B3. Os candidatos levantados e não testados são o vencimento do WIN (diário, Ibovespa desde 2000) e o rebalanceamento do Ibovespa (exige reconstruir as prévias à mão; a literatura indica que o efeito enfraqueceu depois de 2015).
 
+### Estudo 48 — fluxo dos ETFs à vista (07/10/2026, não passou)
+
+Primeira ideia vinda de varredura de literatura (Lim 2025: o fluxo de T prevê T+1). Repo `../etf-flows`. A Farside foi lida via Wayback, e a latência medida dá publicação às ~05–07 h UTC, com entrada às 09 h UTC. Fora da amostra do artigo (mai/2025–out/2026): BTC +0.088% por trade, IC [−0.17, +0.36], sem bater a permutação do sinal. ETH com a direção invertida entre o desenvolvimento e o teste. O efeito é contemporâneo. Não variar hora, horizonte ou limiar. Antes disso, checado sem estudo: airdrop/TGE não tem amostra limpa (os eventos já foram controle do token-unlocks ou estão na amostra de listagem).
+
 **Leitura acumulada (37 estudos):** nenhuma regra direcional passou. Os fracassos têm três causas recorrentes: efeito rápido demais para latência horária, efeito que é do mercado inteiro (beta) e custo de carregar a posição (funding, squeeze). O que funcionou foi estrutural e sem previsão: cash-and-carry (estudo 20; prêmio secou), base trimestral (24) e desbloqueio de tokens (25, no papel).
 
 **Infra nova (reaproveitável):**

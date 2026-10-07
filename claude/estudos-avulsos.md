@@ -1297,6 +1297,24 @@ Script: `monitor/replay_ptax.py` · log: `claude/ptax.log`
 - `monitor/cache_ptax/`: boletins da PTAX desde 2011, CDI e Fed Funds diários.
 - `monitor/arquivo_b3.py`: arquiva daqui para frente, a cada execução do workflow horário, o tick a tick de WIN, WDO, IND e DOL da B3 em candles de 1 minuto (`dados_b3/1min/`, ~50 KB por dia). A B3 só mantém ~4 semanas no ar. Conferido em 05/10/2026: o WDO acompanha o boletim do BC ×1000 mais o carrego, nos mesmos horários.
 
+## 48. Fluxo dos ETFs à vista prevê o dia seguinte? (BTC e ETH) — 07/10/2026
+
+Repo separado: `../etf-flows` (desenho, latência e resultado no README de lá).
+
+- **Origem:** primeira ideia tirada de uma varredura de literatura (2023–2026), em vez de conhecimento prévio. Lim (2025, SSRN 6592830): o fluxo do dia T prevê o retorno de T+1 em jan/2024–abr/2025, e o mecanismo é a compra forçada do participante autorizado.
+- **Dado novo:** fluxo diário da Farside via Wayback. A latência foi medida em ~700 cópias: o total sai por volta das 05–07 h UTC, e a entrada ficou nas 09:00 UTC de T+1.
+- **Regra:** sinal do fluxo, 24 h, custo de 0.10% e funding real. O desenvolvimento usou o período do artigo e só escolheu a direção. O teste foi de mai/2025 a out/2026, fora da amostra do artigo.
+- **Critério:** líquido com IC97.5 > 0 e bruto acima do p97.5 de 5000 permutações do sinal (K = 2).
+
+| | Teste: líquido | IC97.5 | Bruto vs. permutação |
+|---|---|---|---|
+| BTC (continuação) | +0.088% (n=357) | [−0.174, +0.361] | +0.189% vs. +0.217% |
+| ETH (reversão, escolhida no dev) | −0.277% (n=353) | [−0.709, +0.179] | −0.180% vs. +0.357% |
+
+**Veredito: NÃO PASSA.** No BTC o centro é pequeno, e o sinal aleatório com a mesma proporção de compras e vendas faz quase o mesmo. No ETH a direção se inverte entre o desenvolvimento e o teste. O efeito do artigo é sobretudo contemporâneo e não sobra para quem entra depois da publicação. O passeio deu 1% de falso PASSA (o simulador não é otimista). **Não testar outras horas, horizontes ou limiares sobre esses dados.**
+
+Checagem anterior, sem estudo: **airdrop/TGE como choque de oferta** não tem amostra limpa. Dos ~85 eventos operáveis da DefiLlama, 49 já foram o controle do token-unlocks e 22 caem na amostra de listagem.
+
 ## Leitura conjunta
 
 Mesma direção do achado da auditoria v6 sobre o checklist mecânico dos Setups A/B. Nenhum dos dez setups de vídeo tem edge mecânico demonstrável nesses 20 pares (o 9.1 também não, fora da amostra, nos 80 pares do estudo 6):
