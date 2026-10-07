@@ -145,6 +145,10 @@ Repo `../exchange-inflows`. Fonte: BigQuery (sandbox gratuito, projeto `etherum-
 
 Carteiras ativas (4 semanas ÷ 12 anteriores), long-short escalonado de 4 semanas, mesmo universo do 49. Desenvolvimento ≈ 0. Teste −0.79%/semana, t do posto = −2.3, ou seja, o sentido oposto ao da literatura. Não inverter sobre estes dados. A cota do BigQuery de out/2026 está quase toda gasta (~900 GB de 1 TB).
 
+### Estudo 51 — emissão de USDT (07/10/2026, não passou)
+
+Repo `../usdt-mints`. Emissão no terço superior → compra BTC por 24 h. Teste 2023–26: +0.07% por trade, IC [−0.15, +0.29], excesso sobre todos os dias de +0.04%, ou seja, beta. As metades se invertem.
+
 **Leitura acumulada (37 estudos):** nenhuma regra direcional passou. Os fracassos têm três causas recorrentes: efeito rápido demais para latência horária, efeito que é do mercado inteiro (beta) e custo de carregar a posição (funding, squeeze). O que funcionou foi estrutural e sem previsão: cash-and-carry (estudo 20; prêmio secou), base trimestral (24) e desbloqueio de tokens (25, no papel).
 
 **Infra nova (reaproveitável):**

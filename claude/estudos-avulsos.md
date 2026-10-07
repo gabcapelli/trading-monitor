@@ -1339,6 +1339,17 @@ Mesmo repo (`../exchange-inflows`, `estudo_rede.py`). Liu & Tsyvinski (RFS 2021)
 
 **Veredito: NÃO PASSA.** O desenvolvimento dá zero, e o teste vai no sentido oposto: mais atividade, retorno menor. Não inverter a direção sobre estes dados. O custo ficou em 0.05%/semana, então o escalonamento resolveu o giro. O que falta aqui é sinal.
 
+## 51. Emissão grande de USDT → BTC em 24 h — 07/10/2026
+
+Repo `../usdt-mints`. Griffin & Shams (2020). Usa a oferta diária de USDT da DefiLlama. Em dia de variação no terço superior dos 365 dias anteriores, compra o BTC perpétuo das 01:00 UTC de D+1 por 24 h, com custo de 0.10%. Critério: líquido com IC95 > 0 e bruto acima do p95 de dias sorteados.
+
+| | Trades | Líquido | IC95 | Excesso sobre todos os dias |
+|---|---|---|---|---|
+| Desenvolvimento 2019–22 | 476 | +0.17% | [−0.27, +0.58] | +0.16% |
+| **Teste 2023–26** | 482 | **+0.07%** | [−0.15, +0.29] | **+0.04%** |
+
+**Veredito: NÃO PASSA.** O retorno é o beta do BTC. As metades do teste se invertem (+0.34% e −0.30%). O passeio deu 3% de falso PASSA. Não variar limiar, horizonte ou stablecoin.
+
 Checagem anterior, sem estudo: **airdrop/TGE como choque de oferta** não tem amostra limpa. Dos ~85 eventos operáveis da DefiLlama, 49 já foram o controle do token-unlocks e 22 caem na amostra de listagem.
 
 ## Leitura conjunta
