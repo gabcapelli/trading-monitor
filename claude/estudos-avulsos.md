@@ -1458,6 +1458,24 @@ Script: `monitor/replay_sfp.py` · log: `claude/sfp.log` · dados: cache de 1h d
 - **Estável e ruim:** o 4h é negativo em todos os anos, nas compras, nas vendas e fora das majors. Não há subgrupo escondido.
 - Os stops amontoados além das máximas e mínimas não deixam rastro operável no fechamento do candle.
 
+## 58 e 59. NR7 do Crabel e PFR — 08/10/2026
+
+Script: `monitor/replay_nr7_pfr.py` · log: `claude/nr7_pfr.log`. Universo, dados e régua iguais aos do estudo 57: as 50 maiores de cada dia, 1d e 4h, IC 97.5%, placebo com o mesmo risco %. Entrada por ordem stop válida só no candle seguinte; se o stop for tocado na hora da entrada, conta como stop.
+- **58, NR7 (Crabel, 1990, parâmetros do livro):** amplitude menor dos últimos 7 candles. No candle seguinte, compra stop na máxima e venda stop na mínima (OCO; se os dois forem tocados na mesma hora, não há trade). Stop no outro extremo, alvo 2R, saída no fechamento do candle de entrada.
+- **59, PFR:** faz nova mínima e fecha acima do fechamento anterior (espelho na venda). Compra stop na máxima, stop na mínima, alvo 2R, saída em 10 candles.
+
+| Célula | R líquido | IC97.5 | Excesso | IC97.5 | R bruto | n |
+|---|---|---|---|---|---|---|
+| **NR7 1d** | +0.01R | [−0.03, +0.04] | +0.07R | [+0.03, +0.10] | +0.05R | 19.382 |
+| **NR7 4h** | −0.08R | [−0.10, −0.07] | +0.06R | [+0.04, +0.07] | +0.03R | 102.089 |
+| **PFR 1d** | −0.01R | [−0.07, +0.05] | +0.00R | [−0.05, +0.06] | +0.02R | 11.059 |
+| **PFR 4h** | −0.08R | [−0.10, −0.06] | −0.01R | [−0.03, +0.01] | −0.01R | 68.704 |
+
+**Veredito: NÃO PASSA nos quatro.**
+- **O NR7 tem um efeito real, mas pequeno:** o rompimento da compressão rende +0.06R a mais que uma entrada qualquer do mesmo risco, com IC > 0 nos dois tempos gráficos. É a expansão de volatilidade descrita pelo Crabel. Só que vale ~+0.3% bruto por trade no diário, e o custo leva tudo. A 2ª metade do diário é negativa.
+- **O PFR é ruído:** bruto em zero e excesso em zero nos dois tempos gráficos.
+- **A fila de setups clássicos está fechada.** São 13 setups de gráfico testados (estudos 1–13, 22, 34, 57–59), e nenhum tem resultado bruto que pague o custo.
+
 ## Leitura conjunta
 
 Mesma direção do achado da auditoria v6 sobre o checklist mecânico dos Setups A/B. Nenhum dos dez setups de vídeo tem edge mecânico demonstrável nesses 20 pares (o 9.1 também não, fora da amostra, nos 80 pares do estudo 6):
