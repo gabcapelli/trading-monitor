@@ -4,16 +4,6 @@
 
 | Data/Hora (BRT) | Par | Close 1h | High/Low 1h | Close 4h | Swing 1h ref | ATR 1h | Funding | Zona ativa | Status checklist |
 |---|---|---|---|---|---|---|---|---|---|
-| 2026-10-04 18:05 | BTC-USDT-SWAP | 85793.4 | 85838.3/85352.0 | 85385.3 | res 85468.3 (ha 5 candles) | 227.33 | 0.0043% | A/compra@85468.3 (0t/0c) | zona_mapeada_setup_A |
-| 2026-10-04 18:05 | ETH-USDT-SWAP | 2704.8 | 2705.9/2698.2 | 2700.7 | — | 7.6750 | 0.0049% | — | invalidado_setup_B |
-| 2026-10-04 18:05 | SOL-USDT-SWAP | 121.22 | 121.36/120.55 | 121.06 | res 122.15 (ha 5 candles) | 0.55786 | 0.0100% | — | sem_zona |
-| 2026-10-04 18:05 | XRP-USDT-SWAP | 1.5053 | 1.5065/1.5014 | 1.5059 | — | 0.00618 | 0.0097% | — | sem_zona |
-| 2026-10-04 18:05 | DOGE-USDT-SWAP | 0.09581 | 0.09584/0.09525 | 0.09540 | res 0.09620 (ha 3 candles) | 0.00064 | 0.0100% | — | zona_expirada_setup_B |
-| 2026-10-04 18:05 | ARB-USDT-SWAP | 0.20337 | 0.20504/0.20314 | 0.20347 | sup 0.19734 (ha 9 candles) | 0.00192 | 0.0030% | — | sem_zona |
-| 2026-10-04 18:05 | WLD-USDT-SWAP | 0.57800 | 0.58020/0.57230 | 0.57750 | res 0.58930 (ha 5 candles) | 0.00816 | 0.0100% | — | sem_zona |
-| 2026-10-04 18:05 | SUI-USDT-SWAP | 1.2047 | 1.2142/1.1976 | 1.2139 | — | 0.01884 | 0.0068% | B/venda@1.2112 (1t/0c) | zona_mapeada_setup_B |
-| 2026-10-04 18:05 | UNI-USDT-SWAP | 9.0400 | 9.0620/9.0180 | 9.0290 | res 9.0670 (ha 5 candles) | 0.05650 | 0.0100% | — | sem_zona |
-| 2026-10-04 18:05 | LINK-USDT-SWAP | 14.15 | 14.17/14.10 | 14.13 | — | 0.08921 | 0.0032% | — | sem_zona |
 | 2026-10-04 19:05 | BTC-USDT-SWAP | 85826.5 | 86063.5/85740.1 | 85385.3 | res 85468.3 (ha 6 candles) | 236.44 | 0.0043% | A/compra@85468.3 (0t/1c) | zona_mapeada_setup_A |
 | 2026-10-04 19:05 | ETH-USDT-SWAP | 2701.5 | 2709.3/2700.2 | 2700.7 | — | 7.2007 | 0.0062% | B/venda@2706.4 (0t/0c) | zona_mapeada_setup_B |
 | 2026-10-04 19:05 | SOL-USDT-SWAP | 121.16 | 121.57/120.97 | 121.06 | res 122.15 (ha 6 candles) | 0.57071 | 0.0100% | — | sem_zona |
@@ -484,3 +474,13 @@
 | 2026-10-08 13:05 | SUI-USDT-SWAP | 1.0260 | 1.0999/1.0201 | 1.0260 | sup 1.1157 (ha 11 candles) | 0.02179 | 0.0081% | A/venda@1.1157 (0t/1c) | zona_mapeada_setup_A |
 | 2026-10-08 13:05 | UNI-USDT-SWAP | 7.3180 | 7.6200/7.1830 | 7.3180 | sup 7.6830 (ha 9 candles) | 0.14479 | 0.0100% | A/venda@7.6830 (0t/1c) | zona_mapeada_setup_A |
 | 2026-10-08 13:05 | LINK-USDT-SWAP | 12.35 | 12.96/12.30 | 12.35 | sup 12.93 (ha 11 candles) | 0.17300 | -0.0015% | A/venda@12.93 (0t/0c) | zona_mapeada_setup_A |
+| 2026-10-08 14:06 | BTC-USDT-SWAP | 80908.4 | 81413.9/80721.6 | 80991.9 | — | 650.78 | 0.0050% | — | sem_zona |
+| 2026-10-08 14:06 | ETH-USDT-SWAP | 2415.4 | 2440.8/2408.0 | 2434.3 | sup 2542.8 (ha 12 candles) | 27.91 | 0.0031% | A/venda@2542.8 (0t/2c) | zona_mapeada_setup_A |
+| 2026-10-08 14:06 | SOL-USDT-SWAP | 107.64 | 109.08/107.51 | 108.50 | sup 114.09 (ha 12 candles) | 1.3371 | -0.0024% | A/venda@114.09 (0t/1c) | zona_mapeada_setup_A |
+| 2026-10-08 14:06 | XRP-USDT-SWAP | 1.3431 | 1.3615/1.3359 | 1.3453 | — | 0.01861 | -0.0041% | — | sem_zona |
+| 2026-10-08 14:06 | DOGE-USDT-SWAP | 0.08217 | 0.08362/0.08202 | 0.08262 | sup 0.08502 (ha 12 candles) | 0.00138 | 0.0014% | A/venda@0.08502 (0t/1c) | zona_mapeada_setup_A |
+| 2026-10-08 14:06 | ARB-USDT-SWAP | 0.16633 | 0.16914/0.16518 | 0.16605 | sup 0.18036 (ha 12 candles) | 0.00440 | 0.0059% | A/venda@0.18036 (0t/1c) | zona_mapeada_setup_A |
+| 2026-10-08 14:06 | WLD-USDT-SWAP | 0.46950 | 0.48380/0.46750 | 0.47780 | sup 0.50780 (ha 12 candles) | 0.01309 | 0.0100% | A/venda@0.50780 (0t/1c) | zona_mapeada_setup_A |
+| 2026-10-08 14:06 | SUI-USDT-SWAP | 1.0242 | 1.0464/1.0183 | 1.0260 | sup 1.1157 (ha 12 candles) | 0.02239 | 0.0056% | A/venda@1.1157 (0t/2c) | zona_mapeada_setup_A |
+| 2026-10-08 14:06 | UNI-USDT-SWAP | 7.1450 | 7.3750/7.1260 | 7.3180 | sup 7.6830 (ha 10 candles) | 0.15600 | 0.0100% | A/venda@7.6830 (0t/2c) | zona_mapeada_setup_A |
+| 2026-10-08 14:06 | LINK-USDT-SWAP | 12.34 | 12.52/12.29 | 12.35 | sup 12.93 (ha 12 candles) | 0.18264 | -0.0055% | A/venda@12.93 (0t/1c) | zona_mapeada_setup_A |
