@@ -1372,7 +1372,51 @@ Repo `../kimchi-alts`. Ideia vinda da imprensa coreana, que publica o kimchi pre
 
 **Veredito: NÃO PASSA.** A direção prevista aparece nas duas amostras, mas o funding come ~0.3%/semana e o IC líquido cruza zero. O passeio deu 2.5% de falso PASSA. É o terceiro estudo seguido (49, 52, 53) com **sinal bruto real anulado por custo ou carry**.
 
+## Setup "Depósito Gigante" (trade a trade) — encerrado no desenvolvimento, 07/10/2026
+
+`../exchange-inflows/setup_deposito.py`, log `setup_dev.log`. O sinal do estudo 49 foi transformado em setup de trade, no formato do A/B:
+- **Gatilho:** depósito em corretoras ≥ K× a média de 90 dias e ≥ S do volume do perpétuo.
+- **Filtro:** funding ≥ 0.
+- **Trade:** vendido na abertura seguinte, stop de M×ATR, saída em H dias. Resultado em R, contra placebo (mesmo trade em dias sem gatilho).
+
+O desenvolvimento em 2023–26 (24 combinações) deu K=5 e K=10 negativos ou iguais ao placebo e K=20 em +0.01 a +0.08R. O melhor ficou em +0.04R com IC [−0.10, +0.18] e n=228. A checagem com K=40 deu −0.03R, ou seja, **sem dose-resposta**. Mesmo no melhor caso seriam ~+2.4R por ano. **Não segue para o teste de 2020–22.** O sinal do 49 só aparece agregado em carteira; trade a trade, não sustenta.
+
 Checagem anterior, sem estudo: **airdrop/TGE como choque de oferta** não tem amostra limpa. Dos ~85 eventos operáveis da DefiLlama, 49 já foram o controle do token-unlocks e 22 caem na amostra de listagem.
+
+## 54. Copiar os melhores traders da Hyperliquid — 08/10/2026
+
+Repo `../hl-copy` (`baixar_fills.py`, `trades.py`, `persistencia.py`). A base é Barber et al., que acham habilidade persistente em day traders. As posições da Hyperliquid são públicas e o leaderboard é gratuito, com 47 mil contas, inclusive as zeradas, o que reduz o viés de sobrevivência.
+- **Amostra:** carteiras sorteadas (seed 42) entre as 34 mil com volume total de US$10M a US$300M. A paginação por tempo da `userFillsByTime` devolve até ~26 mil execuções por carteira, então o histórico vai de meados de 2024 até hoje. O download parou em 299 carteiras (112 mil trades), porque deixar o PC ligado ~30 h para as 2.000 não compensava.
+- **Trade:** da posição zerada até zerar ou virar. Para a cópia, preço da 1ª execução contra o da execução que zera.
+- **Regra pré-registrada:** no fim do mês M, nota = t-stat do retorno por trade nos 6 meses anteriores (mínimo de 10 trades). Em M+1, copia com tamanho fixo os trades abertos pelas carteiras do decil de cima, com custo de 0.1% ida e volta. Passa se o líquido for > 0 com t > 2 (agrupado por mês) e os decis ficarem em ordem.
+
+| Ranking | Decil 10, cópia líquida | t | PnL real dos traders no mês seguinte |
+|---|---|---|---|
+| **t-stat do retorno (pré-registrado)** | **−0.20%** | **−2.7** | **−US$1.38M (o pior decil)** |
+| PnL em US$ (como o leaderboard) | +0.12% | 1.9 | −US$0.54M |
+| PnL / notional | +0.09% | 0.0 | −US$0.14M |
+
+**Veredito: NÃO PASSA.** 84 mil trades copiados de 257 carteiras, de dez/2024 a out/2026. Nos três rankings os decis não ficam em ordem, e as carteiras do decil de cima perdem dinheiro de verdade no mês seguinte. O +0.12% (t=1.9) é o melhor de três rankings, ainda sem o custo do atraso para copiar. Nessa faixa de atividade, o desempenho passado na Hyperliquid não prevê o futuro.
+
+## 55. Salto forte em 1h: puxado pelo spot ou pelo perpétuo? — 08/10/2026
+
+Script: `monitor/replay_fluxo_spot_perp.py` · log: `claude/fluxo_spot_perp.log` · cache novo: `monitor/cache_taker/` (candles de 1h do spot e do perpétuo com a compra agressiva, 10.860 arquivos do vision).
+- **Hipótese:** num salto forte de 1h, se o fluxo agressivo anormal veio do spot (dinheiro sem alavancagem), o movimento continua; se veio do perpétuo, devolve. Nenhum estudo anterior separou os dois fluxos. Setup ativo, de horas, com movimento grande por trade, escolhido para escapar do custo e do funding que derrubaram 49, 52 e 53.
+- **Universo:** point-in-time como o 46, mas com as 50 de maior volume de cada dia (489 perpétuos, inclusive deslistados), com spot USDT na Binance. 2020-01 a 2026-09.
+- **Evento:** |retorno de 1h| ≥ 4× o desvio das 168h anteriores e volume ≥ 3× a média. Fluxo líquido = 2×compra agressiva − volume, normalizado pela média de |fluxo| das 168h, em cada mercado. `lead` = direção × (z_spot − z_perp).
+- **Setups (pré-registrados, Bonferroni para 2):** S = lead > 0, a favor do salto; P = lead < 0, contra o salto. Entrada na abertura seguinte, 1R = amplitude da barra do evento, stop 1R, alvo 2R, saída em 24h. Custo de 0.18% mais funding real.
+- **Critério (todos juntos):** n ≥ 200; R líquido e excesso sobre placebo (mesmo símbolo, lado e risco, hora aleatória a até 7 dias e fora de eventos) com IC97.5 > 0; as duas metades > 0.
+
+| Setup | R líquido | IC97.5 | Excesso | IC97.5 | n |
+|---|---|---|---|---|---|
+| **S: puxado pelo spot, a favor** | **−0.02R** | [−0.07, +0.03] | +0.02R | [−0.03, +0.08] | 5.032 |
+| **P: puxado pelo perp, contra** | **−0.08R** | [−0.13, −0.02] | −0.02R | [−0.08, +0.03] | 7.059 |
+
+**Veredito: NÃO PASSA nos dois.**
+- **O mecanismo saiu ao contrário:** a continuação é **menor** quando o spot puxa (−0.02R) do que quando o perpétuo puxa (+0.03R). A permutação dos rótulos dá p = 0.996 na direção da hipótese, e os quintis de `lead` descem de +0.05R para −0.03R. A diferença é pequena demais para virar setup (o melhor quintil fica em +0.05R antes de qualquer seleção).
+- **Os anos:** S fica em zero em quase todos; P é negativo em 6 de 7.
+- **Risco médio de ~9% por trade:** saltos de 4 desvios nas 50 maiores são barras enormes. O alvo de 2R quase nunca chega em 24h, e a maioria sai no tempo.
+- Separar o fluxo do spot do fluxo do perpétuo não distingue continuação de devolução nesses saltos.
 
 ## Leitura conjunta
 
