@@ -4,13 +4,34 @@
 > Regra congelada em 05/10/2026 (estudo 46), aberta como **exceção** pelo Gabriel: o estudo falhou
 > o critério por um fio. Custo 0.18% e funding real. **Só reavaliar com 300 trades fechados.**
 
-_Atualizado em 08/10 12:06 (Brasília). Top 20 do dia: TAO, LINK, AVAX, ADA, PUMP, WLD, 1000PEPE, ENA, QNT, BNB, UNI, SUI, DOGE, NEAR, HYPE, XRP, SOL, ZEC, ETH, BTC._
+_Atualizado em 08/10 13:05 (Brasília). Top 20 do dia: TAO, LINK, AVAX, ADA, PUMP, WLD, 1000PEPE, ENA, QNT, BNB, UNI, SUI, DOGE, NEAR, HYPE, XRP, SOL, ZEC, ETH, BTC._
 
 **Trades fechados:** 1 de 300 (0%)
 
 **Média por trade:** líquido -10.75% · excesso -2.77% · com o preço real alcançável -12.23% · positivos 0/1
 
 _Referência do estudo 46: +0.76% líquido, +0.79% de excesso por trade._
+
+## Abertos
+
+| Par | Lado | Entrada | Preço | Saída |
+|---|---|---|---|---|
+| TAO | venda | 08/10 13:00 | 263.21 | 10/10 13:00 |
+| AVAX | venda | 08/10 13:00 | 9.992 | 10/10 13:00 |
+| ADA | venda | 08/10 13:00 | 0.2314 | 10/10 13:00 |
+| WLD | venda | 08/10 13:00 | 0.4778 | 10/10 13:00 |
+| 1000PEPE | venda | 08/10 13:00 | 0.0037461 | 10/10 13:00 |
+| ENA | venda | 08/10 13:00 | 0.20412 | 10/10 13:00 |
+| BNB | venda | 08/10 13:00 | 731.5 | 10/10 13:00 |
+| UNI | venda | 08/10 13:00 | 7.319 | 10/10 13:00 |
+| SUI | venda | 08/10 13:00 | 1.0261 | 10/10 13:00 |
+| DOGE | venda | 08/10 13:00 | 0.08261 | 10/10 13:00 |
+| HYPE | venda | 08/10 13:00 | 83.345 | 10/10 13:00 |
+| XRP | venda | 08/10 13:00 | 1.3455 | 10/10 13:00 |
+| SOL | venda | 08/10 13:00 | 108.5 | 10/10 13:00 |
+| ZEC | venda | 08/10 13:00 | 1115.1 | 10/10 13:00 |
+| ETH | venda | 08/10 13:00 | 2434.02 | 10/10 13:00 |
+| BTC | venda | 08/10 13:00 | 80990.7 | 10/10 13:00 |
 
 ## Fechados (mais recentes primeiro)
 
