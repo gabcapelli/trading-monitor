@@ -1534,6 +1534,8 @@ Script: `monitor/replay_nr7_46.py` · log: `claude/nr7_46.log`. Tentativa única
 
 **Descritivo importante para o papel (dentro da amostra que gerou a hipótese; não decide):** o 46 com stop no nível em **todos** os sinais dá **+0.03R, ou +0.30% por trade, menos que o 46 sem stop (+0.76%)**. O stop corta os ruins, mas também os rompimentos que tocam o nível e depois disparam (71% são stopados). A variante que entrou no papel em 08/10 provavelmente **não** vai superar a regra original.
 
+**Exceção aberta pelo Gabriel em 08/10/2026. Em papel desde então**, no mesmo `monitor/continuacao_paper.py`: cada sinal do 46 recebe a marca `nr7`, e o subconjunto é lido pelo `r_stop` da variante com stop. Leitura fixada antes do primeiro trade: com 100 trades fechados do subconjunto, `r_stop` com IC95 > 0. No ritmo do estudo (~180 trades por ano), isso leva cerca de 7 meses.
+
 Correção de rótulo junto deste estudo: em `replay_fluxo_spot_perp.fmt`, os intervalos pedidos com 95% (subgrupos descritivos dos estudos 57–60) eram impressos como "IC97.5%". Os números estavam certos; agora o rótulo segue o nível pedido.
 
 ## Leitura conjunta

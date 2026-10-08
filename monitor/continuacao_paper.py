@@ -56,6 +56,16 @@ trades, `liq_stop` com IC95 inteiro > 0 (bootstrap por semana) E media de
 `liq_stop - liq` > 0. Os trades abertos antes de 08/10/2026 recebem o nivel
 calculado dos candles anteriores ao sinal (dado que ja existia no sinal).
 
+SUBCONJUNTO DO ESTUDO 62 (acrescentado em 08/10/2026, excecao aberta pelo Gabriel)
+---------------------------------------------------------------------------------
+Estudo 62: o mesmo trade com stop no nivel rompido, so quando alguma das 3
+barras de 4h antes da barra do sinal e NR7 (amplitude menor que a das 6
+anteriores a ela). Deu +0.40R por trade, IC95 [-0.10, +1.16]: nao passou por
+pouco, com cauda gorda (acerto de 24%). Nao muda a regra nem a variante acima:
+so marca `nr7` em cada trade e le o `r_stop` desse subconjunto.
+Leitura (fixada antes do primeiro trade): com 100 trades fechados do
+subconjunto, `r_stop` com IC95 inteiro > 0 (bootstrap por semana).
+
 Rode sem argumento (o workflow horario chama assim).
 """
 
@@ -156,6 +166,15 @@ def nivel_rompido(sym, barra, lado):
     return max(float(x[2]) for x in k) if lado > 0 else min(float(x[3]) for x in k)
 
 
+def tem_nr7(sym, barra):
+    """Alguma das 3 barras de 4h antes de `barra` e NR7? None se faltar dado."""
+    k = klines(sym, "4h", endTime=barra - 1, limit=9)
+    if not k or len(k) < 9:
+        return None
+    a = [float(x[2]) - float(x[3]) for x in k]
+    return any(a[j] > 0 and a[j] < min(a[j - 6:j]) for j in (6, 7, 8))
+
+
 def com_stop(t):
     """Resultado da variante com stop no nivel rompido. None se faltar dado."""
     nivel = t.get("nivel")
@@ -207,13 +226,14 @@ def processa(estado, agora):
                 continue
             ent = b + B4
             nivel = nivel_rompido(s, b, lado)
+            nr7 = tem_nr7(s, b)
             p_regra = abertura(s, "1h", ent)
             p_real = abertura(s, "1m", minuto)
             if p_regra is None:
                 continue
             t = {"sym": s, "lado": lado, "barra": b, "entrada_ts": ent, "detectado": minuto,
                  "p_in": p_regra, "p_in_real": p_real, "saida_ts": ent + SAIDA_H * H,
-                 "top": [x for x in top if x != s], "status": "aberto", "nivel": nivel}
+                 "top": [x for x in top if x != s], "status": "aberto", "nivel": nivel, "nr7": nr7}
             estado["trades"].append(t)
             abertos.append(t)
         estado["ultima_barra"] = b
@@ -245,6 +265,8 @@ def processa(estado, agora):
             v = com_stop(t)
             if v:
                 t.update(v)
+        if t["status"] == "fechado" and t.get("nr7") is None:
+            t["nr7"] = tem_nr7(t["sym"], t["barra"])
     return abertos, fechados
 
 
@@ -309,6 +331,13 @@ def escreve_ledger(estado, agora):
         b = _boot(sem)
         if b:
             L.append(f"\n_IC95 da variante (ainda sem valor de decisão): [{b[1]:+.2f}, {b[2]:+.2f}]_")
+        v62 = [t for t in vs if t.get("nr7") and t.get("r_stop") is not None]
+        L.append(f"\n**Estudo 62 (só com NR7 antes do rompimento, stop no nível)**, exceção desde 08/10/2026: "
+                 f"{len(v62)} de 100 trades"
+                 + (f" · {sum(t['r_stop'] for t in v62) / len(v62):+.2f}R · "
+                    f"líquido {sum(t['liq_stop'] for t in v62) / len(v62):+.2f}% · "
+                    f"positivos {sum(t['r_stop'] > 0 for t in v62)}/{len(v62)}" if v62 else "")
+                 + " _(referência do estudo: +0.40R)_")
     L.append("")
     if ab:
         L += ["## Abertos", "", "| Par | Lado | Entrada | Preço | Saída |", "|---|---|---|---|---|"]
@@ -317,8 +346,8 @@ def escreve_ledger(estado, agora):
         L.append("")
     if fe:
         L += ["## Fechados (mais recentes primeiro)", "",
-              "| Par | Lado | Entrada | Bruto | Funding | Líquido | Excesso | Líquido real | Com stop no nível |",
-              "|---|---|---|---|---|---|---|---|---|"]
+              "| Par | Lado | Entrada | Bruto | Funding | Líquido | Excesso | Líquido real | Com stop no nível | NR7 antes |",
+              "|---|---|---|---|---|---|---|---|---|---|"]
         for t in sorted(fe, key=lambda t: -t["entrada_ts"])[:100]:
             exc = f"{t['excesso']:+.2f}%" if t.get("excesso") is not None else "—"
             lr = f"{t['liq_real']:+.2f}%" if t.get("liq_real") is not None else "—"
@@ -326,7 +355,8 @@ def escreve_ledger(estado, agora):
             if t.get("liq_stop") is not None:
                 ls = f"{t['liq_stop']:+.2f}%" + (" (stop)" if t.get("stop_ts") is not None else "")
             L.append(f"| {t['sym'].replace('USDT', '')} | {'compra' if t['lado'] > 0 else 'venda'} | {_h(t['entrada_ts'])} | "
-                     f"{t['bruto']:+.2f}% | {t['funding']:+.3f}% | {t['liq']:+.2f}% | {exc} | {lr} | {ls} |")
+                     f"{t['bruto']:+.2f}% | {t['funding']:+.3f}% | {t['liq']:+.2f}% | {exc} | {lr} | {ls} | "
+                     f"{'sim' if t.get('nr7') else ('não' if t.get('nr7') is False else '—')} |")
         L.append("")
     with open(LEDGER, "w", encoding="utf-8", newline="\n") as f:
         f.write("\n".join(L))
