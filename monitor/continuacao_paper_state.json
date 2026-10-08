@@ -36,7 +36,11 @@
    "bruto": -10.569688283769263,
    "liq": -10.748182283769264,
    "excesso": -2.7741115424442153,
-   "liq_real": -12.230143928263987
+   "liq_real": -12.230143928263987,
+   "nivel": 0.2768,
+   "stop_ts": 1791288000000,
+   "liq_stop": -1.0040773916159182,
+   "r_stop": -1.218426086956521
   },
   {
    "sym": "TAOUSDT",
@@ -549,6 +553,39 @@
     "ETHUSDT"
    ],
    "status": "aberto"
+  },
+  {
+   "sym": "NEARUSDT",
+   "lado": -1,
+   "barra": 1791475200000,
+   "entrada_ts": 1791489600000,
+   "detectado": 1791489900000,
+   "p_in": 4.573,
+   "p_in_real": 4.574,
+   "saida_ts": 1791662400000,
+   "top": [
+    "TAOUSDT",
+    "LINKUSDT",
+    "AVAXUSDT",
+    "ADAUSDT",
+    "PUMPUSDT",
+    "WLDUSDT",
+    "1000PEPEUSDT",
+    "ENAUSDT",
+    "QNTUSDT",
+    "BNBUSDT",
+    "UNIUSDT",
+    "SUIUSDT",
+    "DOGEUSDT",
+    "HYPEUSDT",
+    "XRPUSDT",
+    "SOLUSDT",
+    "ZECUSDT",
+    "ETHUSDT",
+    "BTCUSDT"
+   ],
+   "status": "aberto",
+   "nivel": 4.589
   }
  ],
  "iniciado": 1791232470885,
@@ -575,5 +612,5 @@
   "BTCUSDT"
  ],
  "dia_top": 1791417600000,
- "ultima_barra": 1791460800000
+ "ultima_barra": 1791475200000
 }

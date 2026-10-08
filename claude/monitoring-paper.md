@@ -5,7 +5,7 @@
 > é detectado (5–65 min depois) e recomprar 24h após o anúncio. Custo 0.5% e funding real;
 > excesso sobre vender o BTC nos mesmos minutos. **Só reavaliar com 24 anúncios fechados.**
 
-_Atualizado em 08/10/2026 16:05 (Brasília)._
+_Atualizado em 08/10/2026 17:05 (Brasília)._
 
 ## Monitoring Tag (decide)
 
