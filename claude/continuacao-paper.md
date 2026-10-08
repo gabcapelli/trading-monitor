@@ -4,7 +4,7 @@
 > Regra congelada em 05/10/2026 (estudo 46), aberta como **exceção** pelo Gabriel: o estudo falhou
 > o critério por um fio. Custo 0.18% e funding real. **Só reavaliar com 300 trades fechados.**
 
-_Atualizado em 08/10 17:05 (Brasília). Top 20 do dia: TAO, LINK, AVAX, ADA, PUMP, WLD, 1000PEPE, ENA, QNT, BNB, UNI, SUI, DOGE, NEAR, HYPE, XRP, SOL, ZEC, ETH, BTC._
+_Atualizado em 08/10 18:05 (Brasília). Top 20 do dia: TAO, LINK, AVAX, ADA, PUMP, WLD, 1000PEPE, ENA, QNT, BNB, UNI, SUI, DOGE, NEAR, HYPE, XRP, SOL, ZEC, ETH, BTC._
 
 **Trades fechados:** 1 de 300 (0%)
 
@@ -13,6 +13,8 @@ _Atualizado em 08/10 17:05 (Brasília). Top 20 do dia: TAO, LINK, AVAX, ADA, PUM
 _Referência do estudo 46: +0.76% líquido, +0.79% de excesso por trade._
 
 **Variante com stop no nível rompido** (hipótese do estudo 61, desde 08/10/2026; mesmos sinais): líquido -1.00% · -1.22R · diferença para a regra +9.74% · stopados 1/1
+
+**Estudo 62 (só com NR7 antes do rompimento, stop no nível)**, exceção desde 08/10/2026: 0 de 100 trades _(referência do estudo: +0.40R)_
 
 ## Abertos
 
@@ -38,6 +40,6 @@ _Referência do estudo 46: +0.76% líquido, +0.79% de excesso por trade._
 
 ## Fechados (mais recentes primeiro)
 
-| Par | Lado | Entrada | Bruto | Funding | Líquido | Excesso | Líquido real | Com stop no nível |
-|---|---|---|---|---|---|---|---|---|
-| ADA | compra | 06/10 09:00 | -10.57% | +0.002% | -10.75% | -2.77% | -12.23% | -1.00% (stop) |
+| Par | Lado | Entrada | Bruto | Funding | Líquido | Excesso | Líquido real | Com stop no nível | NR7 antes |
+|---|---|---|---|---|---|---|---|---|---|
+| ADA | compra | 06/10 09:00 | -10.57% | +0.002% | -10.75% | -2.77% | -12.23% | -1.00% (stop) | não |
