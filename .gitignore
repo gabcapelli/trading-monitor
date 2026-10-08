@@ -11,3 +11,4 @@ claude/_*_download.log
 monitor/cache_hl/
 monitor/cache_vol/
 monitor/cache_taker/
+monitor/cache_1m/

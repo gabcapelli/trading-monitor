@@ -1418,6 +1418,28 @@ Script: `monitor/replay_fluxo_spot_perp.py` · log: `claude/fluxo_spot_perp.log`
 - **Risco médio de ~9% por trade:** saltos de 4 desvios nas 50 maiores são barras enormes. O alvo de 2R quase nunca chega em 24h, e a maioria sai no tempo.
 - Separar o fluxo do spot do fluxo do perpétuo não distingue continuação de devolução nesses saltos.
 
+## 56. Embalo depois do dado macro (CPI, payroll, FOMC) em BTC e ETH — 08/10/2026
+
+Script: `monitor/replay_embalo_macro.py` · log: `claude/embalo_macro.log` · cache: `monitor/cache_1m/` (1 minuto de BTCUSDT e ETHUSDT, 2019-12 a 2026-09).
+- **Hipótese:** a reação dos primeiros 15 minutos depois de um dado macro grande continua nas horas seguintes. O estudo 32 testou a véspera do FOMC; aqui é o depois, nos três eventos de maior impacto.
+- **Eventos:** 80 CPI e 80 payroll, ambos às 8:30 de NY, com datas tiradas dos endereços de arquivo do BLS no Wayback Machine (o bls.gov bloqueia acesso automático). Limpeza fixada antes: só dias úteis; havendo duas datas no mês, fica a de maior volume do BTC às 8:30, regra cega para direção. Mais as 53 reuniões regulares do FOMC do estudo 32, às 14:00. 2020-01 a 2026-09.
+- **Setup:** direção da janela de 15 minutos; entrada na abertura do minuto 16; stop no extremo oposto da janela (mínimo de 0.3%); alvo 2R; saída em 4h. Custo de 0.18% mais funding. Resultado = média de BTC e ETH por evento.
+- **Critério (todos juntos):** n ≥ 150; R líquido e excesso sobre placebo (mesma hora do relógio nos 10 dias úteis anteriores sem evento) com IC95 > 0; as duas metades > 0.
+
+| | R por evento | IC95 |
+|---|---|---|
+| **R líquido (decide)** | **−0.19R** (n=212) | [−0.34, −0.03] |
+| Excesso sobre placebo | +0.36R | [+0.20, +0.52] (artefato, ver abaixo) |
+| R bruto (sem custo e funding) | +0.09R | |
+| CPI / payroll / FOMC, líquido | −0.31R / −0.27R / +0.14R | o FOMC cruza zero |
+| Metades | −0.28R / −0.09R | |
+
+**Veredito: NÃO PASSA.**
+- **O embalo bruto é pequeno:** +0.09R por evento, com stop médio de 1.07% no BTC. O custo de 0.18% vale ~0.2R e passa o resultado para negativo. Mesmo com custo de 0.08% (taxa mínima da Binance), sobraria ~+0.01R.
+- **O excesso positivo é artefato da medida em R:** nos dias calmos do placebo, a janela é estreita, o stop cai no mínimo de 0.3% e o custo vira ~0.4R por trade (placebo bruto: −0.04R). A comparação justa, antes do custo, dá +0.13R para o evento: pequena demais.
+- **Só o FOMC fica positivo** (+0.14R, n=53, IC cruzando zero), olhado depois de ver o resultado. Pela regra do projeto, não vira hipótese sem pré-registro novo.
+- **Lição de método:** quando o risco do placebo é muito menor que o do evento, comparar em R líquido distorce. Usar o excesso em R bruto ou em % nos próximos estudos.
+
 ## Leitura conjunta
 
 Mesma direção do achado da auditoria v6 sobre o checklist mecânico dos Setups A/B. Nenhum dos dez setups de vídeo tem edge mecânico demonstrável nesses 20 pares (o 9.1 também não, fora da amostra, nos 80 pares do estudo 6):
