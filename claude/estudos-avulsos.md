@@ -1487,6 +1487,28 @@ Script: `monitor/replay_sfp_volume.py` · log: `claude/sfp_volume.log`. Pedido d
 
 **Veredito: NÃO PASSA. O SFP está encerrado.** O volume não separa os trades bons: o bruto do diário piora (−0.04R → −0.08R), o excesso continua em zero e o acerto quase não muda (35% → 36–38%). Um pavio que fura a máxima ou a mínima com volume alto não reverte mais do que um sem volume.
 
+## 61. A regra do 46 com entrada por ordem limitada no reteste — 08/10/2026
+
+Script: `monitor/replay_46_limitada.py` · log: `claude/46_limitada.log`.
+- **Por quê:** o 46 é o único sinal direcional com bruto grande (+0.76% por trade) e ficou por um fio no líquido. Entrar por ordem limitada no nível rompido (o reteste clássico) paga taxa de maker e entra melhor. O risco era a seleção adversa: perder os rompimentos que não recuam.
+- **Regra:** sinal, universo e saída idênticos ao 46 (top 20 do dia, 4h, saída 48h depois da entrada a mercado do 46, sem stop). Ordem limitada no nível rompido (máxima das 42 barras anteriores; espelho na venda), válida por 24h. Custo de 0.11% ida e volta (maker na entrada) mais funding.
+- **Critério:** o mesmo do 46.
+
+| | Média por trade | IC95 |
+|---|---|---|
+| **Limitada, líquido (decide)** | **+0.13%** (n=2.084) | [−0.49, +0.76] |
+| Limitada, excesso | +0.82% | [+0.40, +1.25] |
+| Metades | 1ª +0.70% · 2ª −0.45% | |
+| Fora das 20 majors de hoje | −0.63% (n=812) | |
+| Preenchidas | 64% dos 3.253 sinais | |
+| 46 a mercado, sinais **preenchidos** | **−2.37%** | [−3.05, −1.70] |
+| 46 a mercado, sinais **não preenchidos** | **+6.32%** | [+4.83, +8.28] |
+
+**Veredito: NÃO PASSA.** É pior que entrar a mercado (+0.13% contra +0.76%).
+- **A seleção adversa é total:** todo o ganho do 46 está nos rompimentos que **nunca voltam ao nível** (+6.3% a mercado, 36% dos sinais). Os que retestam perdem −2.4% a mercado. A ordem limitada só é preenchida nos ruins.
+- **Leitura:** o rompimento do 46 funciona quando é forte de verdade. Voltar ao nível rompido indica que ele falhou.
+- **Hipótese nova, nascida deste dado (não decide nada aqui):** entrar a mercado como o 46, com **stop no nível rompido**. Como foi pensada depois de ver o resultado, ela só pode ser testada fora destes dados, por exemplo em papel.
+
 ## Leitura conjunta
 
 Mesma direção do achado da auditoria v6 sobre o checklist mecânico dos Setups A/B. Nenhum dos dez setups de vídeo tem edge mecânico demonstrável nesses 20 pares (o 9.1 também não, fora da amostra, nos 80 pares do estudo 6):

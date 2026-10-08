@@ -1,0 +1,21 @@
+simbolos 268 [183s]
+
+==========================================================================================
+ESTUDO 61: regra do 46 com ordem limitada no nivel rompido
+==========================================================================================
+  sinais 3253 | preenchidos 2084 (64.1%)
+  liq     n= 2084 media +0.126% IC95 [-0.487, +0.764]
+  excesso n= 2084 media +0.820% IC95 [+0.399, +1.247]
+  metades: 1a +0.697% | 2a -0.446%
+  fora das 20 majors de hoje: -0.634% (n=812)
+  so compras  n= 1506 media +0.412% IC95 [-0.331, +1.157]
+  so vendas   n=  578 media -0.622% IC95 [-1.743, +0.486]
+  por ano: 2020: +0.18% (329) | 2021: +1.44% (352) | 2022: +0.71% (219) | 2023: +0.40% (317) | 2024: -0.34% (359) | 2025: -1.72% (257) | 2026: -0.10% (251)
+
+  DESCRITIVO (selecao adversa e resultado por sinal)
+  46 a mercado, todos os sinais:        n= 3253 media +0.755% IC95 [-0.033, +1.602]
+  46 a mercado, sinais preenchidos:     n= 2084 media -2.369% IC95 [-3.045, -1.697]
+  46 a mercado, sinais NAO preenchidos: n= 1169 media +6.324% IC95 [+4.833, +8.277]
+  limitada por sinal (nao preench. = 0): n= 3253 media +0.080% IC95 [-0.317, +0.487]
+
+  DECISAO: NAO PASSA  [216s]
