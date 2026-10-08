@@ -1509,6 +1509,8 @@ Script: `monitor/replay_46_limitada.py` · log: `claude/46_limitada.log`.
 - **Leitura:** o rompimento do 46 funciona quando é forte de verdade. Voltar ao nível rompido indica que ele falhou.
 - **Hipótese nova, nascida deste dado (não decide nada aqui):** entrar a mercado como o 46, com **stop no nível rompido**. Como foi pensada depois de ver o resultado, ela só pode ser testada fora destes dados, por exemplo em papel.
 
+**Em papel desde 08/10/2026:** `monitor/continuacao_paper.py` registra a variante nos mesmos sinais do papel do 46 (colunas `liq_stop` e `r_stop`). A regra do 46 continua decidindo o papel dela. Leitura fixada antes do primeiro trade: com os mesmos 300 trades, `liq_stop` com IC95 > 0 e média de `liq_stop − liq` > 0. O único trade já fechado (ADA, −10.75%) teria saído no stop com −1.00%.
+
 ## Leitura conjunta
 
 Mesma direção do achado da auditoria v6 sobre o checklist mecânico dos Setups A/B. Nenhum dos dez setups de vídeo tem edge mecânico demonstrável nesses 20 pares (o 9.1 também não, fora da amostra, nos 80 pares do estudo 6):

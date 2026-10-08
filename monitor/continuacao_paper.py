@@ -40,6 +40,22 @@ So reavaliar com 300 TRADES FECHADOS (~7 meses no ritmo do estudo). Decide:
 `liq` e `excesso` com IC95 inteiro > 0, bootstrap por semana de entrada.
 Antes disso e ruido. Leitura sobre `liq_real` como confirmacao de execucao.
 
+VARIANTE COM STOP NO NIVEL ROMPIDO (acrescentada em 08/10/2026, estudo 61)
+--------------------------------------------------------------------------
+No estudo 61, todo o ganho do 46 veio dos rompimentos que nunca voltaram ao
+nivel rompido (+6.3% a mercado); os que voltaram perderam -2.4%. Hipotese
+nascida desse dado, por isso testada so daqui para frente, nos MESMOS sinais e
+sem mudar a regra acima (que continua decidindo o papel do 46):
+- nivel = maxima das 42 barras de 4h anteriores a barra do sinal (minima na venda);
+- stop: primeira hora (candles de 1h, da entrada ate a saida de 48h) cuja minima
+  toca o nivel (maxima na venda); sai a min(nivel, abertura da hora) na compra;
+- sem toque: sai igual ao 46. Custo 0.18% + funding ate a saida.
+- `liq_stop` em % e `r_stop` = liq_stop / risco, risco = |entrada - nivel| em %.
+Leitura (fixada agora, antes de qualquer trade da variante): com os mesmos 300
+trades, `liq_stop` com IC95 inteiro > 0 (bootstrap por semana) E media de
+`liq_stop - liq` > 0. Os trades abertos antes de 08/10/2026 recebem o nivel
+calculado dos candles anteriores ao sinal (dado que ja existia no sinal).
+
 Rode sem argumento (o workflow horario chama assim).
 """
 
@@ -133,6 +149,41 @@ def sinal(sym, barra):
     return 0
 
 
+def nivel_rompido(sym, barra, lado):
+    k = klines(sym, "4h", endTime=barra - 1, limit=JANELA_MAX)
+    if not k or len(k) < JANELA_MAX:
+        return None
+    return max(float(x[2]) for x in k) if lado > 0 else min(float(x[3]) for x in k)
+
+
+def com_stop(t):
+    """Resultado da variante com stop no nivel rompido. None se faltar dado."""
+    nivel = t.get("nivel")
+    if nivel is None:
+        nivel = nivel_rompido(t["sym"], t["barra"], t["lado"])
+        if nivel is None:
+            return None
+        t["nivel"] = nivel
+    k = klines(t["sym"], "1h", startTime=t["entrada_ts"], limit=SAIDA_H)
+    if not k or len(k) < SAIDA_H:
+        return None
+    lado, p_in = t["lado"], t["p_in"]
+    risco = lado * 100 * (p_in - nivel) / p_in
+    for x in k:
+        o, hi, lo = float(x[1]), float(x[2]), float(x[3])
+        if (lo <= nivel) if lado > 0 else (hi >= nivel):
+            p_out = min(nivel, o) if lado > 0 else max(nivel, o)
+            sai = int(x[0]) + H
+            f = funding(t["sym"], t["entrada_ts"], sai)
+            if f is None:
+                return None
+            liq = lado * 100 * (p_out / p_in - 1) - CUSTO - lado * f
+            return {"nivel": nivel, "stop_ts": int(x[0]), "liq_stop": liq,
+                    "r_stop": liq / risco if risco > 0 else None}
+    return {"nivel": nivel, "stop_ts": None, "liq_stop": t["liq"],
+            "r_stop": t["liq"] / risco if risco > 0 else None}
+
+
 def processa(estado, agora):
     abertos, fechados = [], []
     dia = agora // DIA * DIA
@@ -155,13 +206,14 @@ def processa(estado, agora):
             if not lado:
                 continue
             ent = b + B4
+            nivel = nivel_rompido(s, b, lado)
             p_regra = abertura(s, "1h", ent)
             p_real = abertura(s, "1m", minuto)
             if p_regra is None:
                 continue
             t = {"sym": s, "lado": lado, "barra": b, "entrada_ts": ent, "detectado": minuto,
                  "p_in": p_regra, "p_in_real": p_real, "saida_ts": ent + SAIDA_H * H,
-                 "top": [x for x in top if x != s], "status": "aberto"}
+                 "top": [x for x in top if x != s], "status": "aberto", "nivel": nivel}
             estado["trades"].append(t)
             abertos.append(t)
         estado["ultima_barra"] = b
@@ -188,6 +240,11 @@ def processa(estado, agora):
         if t.get("p_in_real") and p_out_real:
             t["liq_real"] = t["lado"] * 100 * (p_out_real / t["p_in_real"] - 1) - CUSTO + fl
         fechados.append(t)
+    for t in estado["trades"]:   # variante com stop (inclui fechados antes dela existir)
+        if t["status"] == "fechado" and "liq_stop" not in t:
+            v = com_stop(t)
+            if v:
+                t.update(v)
     return abertos, fechados
 
 
@@ -237,7 +294,22 @@ def escreve_ledger(estado, agora):
         b = _boot(sem)
         if b:
             L.append(f"\n_IC95 do líquido (ainda sem valor de decisão): [{b[1]:+.2f}, {b[2]:+.2f}]_")
-    L.append("\n_Referência do estudo 46: +0.76% líquido, +0.79% de excesso por trade._\n")
+    L.append("\n_Referência do estudo 46: +0.76% líquido, +0.79% de excesso por trade._")
+    vs = [t for t in fe if t.get("liq_stop") is not None]
+    if vs:
+        rs = [t["r_stop"] for t in vs if t.get("r_stop") is not None]
+        L.append(f"\n**Variante com stop no nível rompido** (hipótese do estudo 61, desde 08/10/2026; mesmos sinais): "
+                 f"líquido {sum(t['liq_stop'] for t in vs) / len(vs):+.2f}% · "
+                 f"{(sum(rs) / len(rs) if rs else float('nan')):+.2f}R · "
+                 f"diferença para a regra {sum(t['liq_stop'] - t['liq'] for t in vs) / len(vs):+.2f}% · "
+                 f"stopados {sum(t.get('stop_ts') is not None for t in vs)}/{len(vs)}")
+        sem = {}
+        for t in vs:
+            sem.setdefault(t["entrada_ts"] // (7 * DIA), []).append(t["liq_stop"])
+        b = _boot(sem)
+        if b:
+            L.append(f"\n_IC95 da variante (ainda sem valor de decisão): [{b[1]:+.2f}, {b[2]:+.2f}]_")
+    L.append("")
     if ab:
         L += ["## Abertos", "", "| Par | Lado | Entrada | Preço | Saída |", "|---|---|---|---|---|"]
         L += [f"| {t['sym'].replace('USDT', '')} | {'compra' if t['lado'] > 0 else 'venda'} | {_h(t['entrada_ts'])} | "
@@ -245,12 +317,16 @@ def escreve_ledger(estado, agora):
         L.append("")
     if fe:
         L += ["## Fechados (mais recentes primeiro)", "",
-              "| Par | Lado | Entrada | Bruto | Funding | Líquido | Excesso | Líquido real |", "|---|---|---|---|---|---|---|---|"]
+              "| Par | Lado | Entrada | Bruto | Funding | Líquido | Excesso | Líquido real | Com stop no nível |",
+              "|---|---|---|---|---|---|---|---|---|"]
         for t in sorted(fe, key=lambda t: -t["entrada_ts"])[:100]:
             exc = f"{t['excesso']:+.2f}%" if t.get("excesso") is not None else "—"
             lr = f"{t['liq_real']:+.2f}%" if t.get("liq_real") is not None else "—"
+            ls = "—"
+            if t.get("liq_stop") is not None:
+                ls = f"{t['liq_stop']:+.2f}%" + (" (stop)" if t.get("stop_ts") is not None else "")
             L.append(f"| {t['sym'].replace('USDT', '')} | {'compra' if t['lado'] > 0 else 'venda'} | {_h(t['entrada_ts'])} | "
-                     f"{t['bruto']:+.2f}% | {t['funding']:+.3f}% | {t['liq']:+.2f}% | {exc} | {lr} |")
+                     f"{t['bruto']:+.2f}% | {t['funding']:+.3f}% | {t['liq']:+.2f}% | {exc} | {lr} | {ls} |")
         L.append("")
     with open(LEDGER, "w", encoding="utf-8", newline="\n") as f:
         f.write("\n".join(L))
