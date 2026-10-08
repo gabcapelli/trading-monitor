@@ -1440,6 +1440,24 @@ Script: `monitor/replay_embalo_macro.py` · log: `claude/embalo_macro.log` · ca
 - **Só o FOMC fica positivo** (+0.14R, n=53, IC cruzando zero), olhado depois de ver o resultado. Pela regra do projeto, não vira hipótese sem pré-registro novo.
 - **Lição de método:** quando o risco do placebo é muito menor que o do evento, comparar em R líquido distorce. Usar o excesso em R bruto ou em % nos próximos estudos.
 
+## 57. SFP / Turtle Soup: o rompimento falso — 08/10/2026
+
+Script: `monitor/replay_sfp.py` · log: `claude/sfp.log` · dados: cache de 1h do estudo 55 (`monitor/cache_taker/`), completado com 26 dias de histórico.
+- **Hipótese:** em cripto, os stops se amontoam além das máximas e mínimas. O candle que fura a mínima (máxima) de 20 candles e fecha de volta para dentro consumiu esse estoque e tende a reverter. É a Turtle Soup da Linda Raschke, que em cripto se chama SFP. O estudo 46 olhou os rompimentos que fecham fora; os que falham nunca tinham sido testados.
+- **Universo:** point-in-time, as 50 de maior volume de cada dia (489 perpétuos, inclusive deslistados), 2020-01 a 2026-09.
+- **Sinal (parâmetros da Raschke, fixos):** fura a mínima de 20 candles feita há pelo menos 4 candles e fecha acima dela; venda no espelho. Entrada na abertura seguinte, stop no pavio (mínimo de 0.3%), alvo 2R, saída em 10 candles. Stop e alvo checados em 1h. Custo de 0.18% mais funding.
+- **Duas células (1d e 4h), IC 97.5%.** Critério por célula: n ≥ 200; R líquido e excesso sobre placebo com mesmo risco % e IC97.5 > 0; as duas metades > 0.
+
+| Célula | R líquido | IC97.5 | Excesso | R bruto | Acerto | n |
+|---|---|---|---|---|---|---|
+| **1d** | **−0.09R** | [−0.17, +0.01] | +0.07R [−0.01, +0.16] | −0.04R | 34.6% | 3.346 |
+| **4h** | **−0.15R** | [−0.18, −0.12] | +0.01R [−0.02, +0.05] | −0.03R | 35.2% | 22.801 |
+
+**Veredito: NÃO PASSA nos dois.**
+- **O bruto já é negativo** (−0.03 a −0.04R): o rompimento falso não reverte mais que um trade qualquer do mesmo tamanho. O excesso fica em zero.
+- **Estável e ruim:** o 4h é negativo em todos os anos, nas compras, nas vendas e fora das majors. Não há subgrupo escondido.
+- Os stops amontoados além das máximas e mínimas não deixam rastro operável no fechamento do candle.
+
 ## Leitura conjunta
 
 Mesma direção do achado da auditoria v6 sobre o checklist mecânico dos Setups A/B. Nenhum dos dez setups de vídeo tem edge mecânico demonstrável nesses 20 pares (o 9.1 também não, fora da amostra, nos 80 pares do estudo 6):
