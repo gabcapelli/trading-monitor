@@ -48,6 +48,7 @@
 "AIOUSDT": 20313,
 "AIUSDT": 19730,
 "AIXBTUSDT": 20077,
+"AKAMUSDT": 20732,
 "AKEUSDT": 20357,
 "AKROUSDT": 18646,
 "AKTUSDT": 20045,
@@ -490,6 +491,7 @@
 "MAVUSDT": 19537,
 "MBLUSDT": 19675,
 "MBOXUSDT": 19963,
+"MCDUSDT": 20732,
 "MDBUSDT": 20698,
 "MDTUSDT": 19538,
 "MEGAUSDT": 20483,
@@ -815,6 +817,7 @@
 "USARUSDT": 20579,
 "USDBRLUSDT": 20717,
 "USDCUSDT": 19428,
+"USDEXUSDT": 20732,
 "USELESSUSDT": 20315,
 "USTCUSDT": 19688,
 "USUALUSDT": 20075,
@@ -831,6 +834,7 @@
 "VIDTUSDT": 19958,
 "VINEUSDT": 20112,
 "VIRTUALUSDT": 20067,
+"VKTXUSDT": 20732,
 "VOXELUSDT": 19955,
 "VRTUSDT": 20644,
 "VSTUSDT": 20682,
@@ -929,6 +933,14 @@
 "stop_px": 276.255,
 "tipo": "EQUITY"
 },
+"AKAMUSDT": {
+"d0": 20732,
+"entrada": 20734,
+"motivo": "nao-cripto (EQUITY)",
+"par": "AKAMUSDT",
+"status": "descartado",
+"tipo": "EQUITY"
+},
 "BWETUSDT": {
 "cesta_in": {
 "ADAUSDT": 0.2466,
@@ -1016,7 +1028,9 @@
 "dias_vistos": [
 20729,
 20730,
-20731
+20731,
+20732,
+20733
 ],
 "entrada": 20729,
 "motivo": null,
@@ -1057,6 +1071,14 @@
 "px_in": 63.86,
 "status": "descartado",
 "stop_px": 95.78999999999999,
+"tipo": "EQUITY"
+},
+"MCDUSDT": {
+"d0": 20732,
+"entrada": 20734,
+"motivo": "nao-cripto (EQUITY)",
+"par": "MCDUSDT",
+"status": "descartado",
 "tipo": "EQUITY"
 },
 "MOONSHOTUSDT": {
@@ -1343,6 +1365,22 @@
 "status": "descartado",
 "tipo": "FX"
 },
+"USDEXUSDT": {
+"d0": 20732,
+"entrada": 20734,
+"motivo": "nao-cripto (EQUITY)",
+"par": "USDEXUSDT",
+"status": "descartado",
+"tipo": "EQUITY"
+},
+"VKTXUSDT": {
+"d0": 20732,
+"entrada": 20734,
+"motivo": "nao-cripto (EQUITY)",
+"par": "VKTXUSDT",
+"status": "descartado",
+"tipo": "EQUITY"
+},
 "XOMUSDT": {
 "cesta_in": {
 "ADAUSDT": 0.2443,
@@ -1377,5 +1415,5 @@
 "tipo": "EQUITY"
 }
 },
-"ultimo_scan": 20732
+"ultimo_scan": 20734
 }

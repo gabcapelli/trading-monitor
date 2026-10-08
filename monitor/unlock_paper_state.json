@@ -3,7 +3,7 @@
 "2ZUSDT|20728": {
 "first_seen": 20719,
 "frac": 0.9395740492809641,
-"last_seen": 20732,
+"last_seen": 20734,
 "par": "2ZUSDT",
 "pct": 47.822708723363974,
 "protocolo": "doublezero",
@@ -12,7 +12,7 @@
 "ALPHAUSDT|20757": {
 "first_seen": 20727,
 "frac": 0.0,
-"last_seen": 20732,
+"last_seen": 20734,
 "par": "ALPHAUSDT",
 "pct": 1.5516241912894113,
 "protocolo": "stella",
@@ -22,7 +22,7 @@
 "antes_do_inicio": true,
 "first_seen": 20719,
 "frac": 0.66090047035393,
-"last_seen": 20732,
+"last_seen": 20734,
 "par": "ALTUSDT",
 "pct": 3.375494409060642,
 "protocolo": "altlayer",
@@ -31,7 +31,7 @@
 "ALTUSDT|20753": {
 "first_seen": 20723,
 "frac": 0.66090047035393,
-"last_seen": 20732,
+"last_seen": 20734,
 "par": "ALTUSDT",
 "pct": 3.2652752263546003,
 "protocolo": "altlayer",
@@ -40,7 +40,7 @@
 "APRUSDT|20750": {
 "first_seen": 20720,
 "frac": 0.7795100222717148,
-"last_seen": 20732,
+"last_seen": 20734,
 "par": "APRUSDT",
 "pct": 47.213459516298634,
 "protocolo": "apriori",
@@ -59,9 +59,9 @@
 "APTUSDT|20738": {
 "first_seen": 20719,
 "frac": 0.5982700997102869,
-"last_seen": 20732,
+"last_seen": 20734,
 "par": "APTUSDT",
-"pct": 1.308144974606314,
+"pct": 1.3079789132762971,
 "protocolo": "aptos",
 "t0": 20738
 },
@@ -78,7 +78,7 @@
 "ARBUSDT|20742": {
 "first_seen": 20719,
 "frac": 0.9944895712840536,
-"last_seen": 20732,
+"last_seen": 20734,
 "par": "ARBUSDT",
 "pct": 1.3222293675962464,
 "protocolo": "arbitrum-foundation",
@@ -88,7 +88,7 @@
 "antes_do_inicio": true,
 "first_seen": 20719,
 "frac": 0.4462327861072337,
-"last_seen": 20732,
+"last_seen": 20734,
 "par": "B2USDT",
 "pct": 3.478856582956072,
 "protocolo": "b2-buzz",
@@ -97,7 +97,7 @@
 "B2USDT|20755": {
 "first_seen": 20725,
 "frac": 0.4462327861072337,
-"last_seen": 20732,
+"last_seen": 20734,
 "par": "B2USDT",
 "pct": 3.346984987443779,
 "protocolo": "b2-buzz",
@@ -116,7 +116,7 @@
 "BBUSDT|20739": {
 "first_seen": 20719,
 "frac": 0.804516426710056,
-"last_seen": 20732,
+"last_seen": 20734,
 "par": "BBUSDT",
 "pct": 2.873176096000841,
 "protocolo": "bouncebit",
@@ -135,7 +135,7 @@
 "CARVUSDT|20737": {
 "first_seen": 20719,
 "frac": 0.8786189534256427,
-"last_seen": 20732,
+"last_seen": 20734,
 "par": "CARVUSDT",
 "pct": 6.125475870281403,
 "protocolo": "carv",
@@ -144,7 +144,7 @@
 "EIGENUSDT|20728": {
 "first_seen": 20719,
 "frac": 0.9999567547382239,
-"last_seen": 20732,
+"last_seen": 20734,
 "par": "EIGENUSDT",
 "pct": 4.26396837181189,
 "protocolo": "eigencloud",
@@ -153,9 +153,9 @@
 "EIGENUSDT|20758": {
 "first_seen": 20728,
 "frac": 1.0,
-"last_seen": 20732,
+"last_seen": 20734,
 "par": "EIGENUSDT",
-"pct": 4.08908493188201,
+"pct": 4.0886008870909745,
 "protocolo": "eigencloud",
 "t0": 20758
 },
@@ -172,7 +172,7 @@
 "GMTUSDT|20735": {
 "first_seen": 20719,
 "frac": 0.34980340139277083,
-"last_seen": 20732,
+"last_seen": 20734,
 "par": "GMTUSDT",
 "pct": 1.0856112664119053,
 "protocolo": "stepn",
@@ -181,7 +181,7 @@
 "GUNUSDT|20727": {
 "first_seen": 20719,
 "frac": 0.7745439639270343,
-"last_seen": 20732,
+"last_seen": 20734,
 "par": "GUNUSDT",
 "pct": 7.020648967551622,
 "protocolo": "gunz",
@@ -190,7 +190,7 @@
 "GUNUSDT|20757": {
 "first_seen": 20727,
 "frac": 0.7745439639270343,
-"last_seen": 20732,
+"last_seen": 20734,
 "par": "GUNUSDT",
 "pct": 6.560088202866593,
 "protocolo": "gunz",
@@ -209,17 +209,26 @@
 "HFTUSDT|20734": {
 "first_seen": 20719,
 "frac": 0.44628715177490014,
-"last_seen": 20732,
+"last_seen": 20734,
 "par": "HFTUSDT",
 "pct": 1.9718478339415777,
 "protocolo": "hashflow",
 "t0": 20734
 },
+"HFTUSDT|20764": {
+"first_seen": 20734,
+"frac": 0.44628715177490014,
+"last_seen": 20734,
+"par": "HFTUSDT",
+"pct": 1.9327505955997955,
+"protocolo": "hashflow",
+"t0": 20764
+},
 "HUSDT|20720": {
 "antes_do_inicio": true,
 "first_seen": 20719,
 "frac": 0.5501355013550135,
-"last_seen": 20732,
+"last_seen": 20734,
 "par": "HUSDT",
 "pct": 7.918879768227912,
 "protocolo": "humanity",
@@ -228,7 +237,7 @@
 "HUSDT|20750": {
 "first_seen": 20720,
 "frac": 0.5501355013550137,
-"last_seen": 20732,
+"last_seen": 20734,
 "par": "HUSDT",
 "pct": 7.337807606263984,
 "protocolo": "humanity",
@@ -237,7 +246,7 @@
 "INITUSDT|20750": {
 "first_seen": 20720,
 "frac": 0.0,
-"last_seen": 20732,
+"last_seen": 20734,
 "par": "INITUSDT",
 "pct": 3.5624526660145843,
 "protocolo": "initia",
@@ -247,7 +256,7 @@
 "antes_do_inicio": true,
 "first_seen": 20719,
 "frac": 0.5256392910296304,
-"last_seen": 20732,
+"last_seen": 20734,
 "par": "KAITOUSDT",
 "pct": 3.828323690439811,
 "protocolo": "kaito",
@@ -256,7 +265,7 @@
 "KAITOUSDT|20746": {
 "first_seen": 20719,
 "frac": 0.5256392910296304,
-"last_seen": 20732,
+"last_seen": 20734,
 "par": "KAITOUSDT",
 "pct": 3.6871670025741845,
 "protocolo": "kaito",
@@ -266,7 +275,7 @@
 "antes_do_inicio": true,
 "first_seen": 20719,
 "frac": 0.75546774429708,
-"last_seen": 20732,
+"last_seen": 20734,
 "par": "LISTAUSDT",
 "pct": 5.230607497143599,
 "protocolo": "lista-dao",
@@ -275,7 +284,7 @@
 "MAVUSDT|20728": {
 "first_seen": 20719,
 "frac": 1.0,
-"last_seen": 20732,
+"last_seen": 20734,
 "par": "MAVUSDT",
 "pct": 3.428382809952552,
 "protocolo": "maverick-protocol",
@@ -284,7 +293,7 @@
 "MEGAUSDT|20726": {
 "first_seen": 20719,
 "frac": 0.0,
-"last_seen": 20732,
+"last_seen": 20734,
 "par": "MEGAUSDT",
 "pct": 1.2565989117694136,
 "protocolo": "megaeth-bridge",
@@ -293,9 +302,9 @@
 "MEGAUSDT|20756": {
 "first_seen": 20726,
 "frac": 0.0,
-"last_seen": 20732,
+"last_seen": 20734,
 "par": "MEGAUSDT",
-"pct": 1.2406311370597234,
+"pct": 1.2353819797928172,
 "protocolo": "megaeth-bridge",
 "t0": 20756
 },
@@ -312,7 +321,7 @@
 "MEUSDT|20737": {
 "first_seen": 20719,
 "frac": 0.3516687962236089,
-"last_seen": 20732,
+"last_seen": 20734,
 "par": "MEUSDT",
 "pct": 1.5105454683196577,
 "protocolo": "magic-eden",
@@ -331,7 +340,7 @@
 "MOVEUSDT|20736": {
 "first_seen": 20719,
 "frac": 0.6962025316455696,
-"last_seen": 20732,
+"last_seen": 20734,
 "par": "MOVEUSDT",
 "pct": 3.7019681349578257,
 "protocolo": "movement",
@@ -350,7 +359,7 @@
 "MUSDT|20729": {
 "first_seen": 20719,
 "frac": 0.3589108910891089,
-"last_seen": 20732,
+"last_seen": 20734,
 "par": "MUSDT",
 "pct": 2.8382745538850647,
 "protocolo": "memecore",
@@ -359,7 +368,7 @@
 "MUSDT|20759": {
 "first_seen": 20729,
 "frac": 0.3589108910891089,
-"last_seen": 20732,
+"last_seen": 20734,
 "par": "MUSDT",
 "pct": 2.75993988249761,
 "protocolo": "memecore",
@@ -368,7 +377,7 @@
 "OMNIUSDT|20744": {
 "first_seen": 20719,
 "frac": 1.0,
-"last_seen": 20732,
+"last_seen": 20734,
 "par": "OMNIUSDT",
 "pct": 20.619897325836273,
 "protocolo": "omni-network",
@@ -387,7 +396,7 @@
 "OPNUSDT|20730": {
 "first_seen": 20719,
 "frac": 0.0,
-"last_seen": 20732,
+"last_seen": 20734,
 "par": "OPNUSDT",
 "pct": 7.763421559800278,
 "protocolo": "opinion",
@@ -396,7 +405,7 @@
 "OPNUSDT|20760": {
 "first_seen": 20730,
 "frac": 0.0,
-"last_seen": 20732,
+"last_seen": 20734,
 "par": "OPNUSDT",
 "pct": 2.45802818484241,
 "protocolo": "opinion",
@@ -415,7 +424,7 @@
 "PUMPUSDT|20739": {
 "first_seen": 20719,
 "frac": 1.0,
-"last_seen": 20732,
+"last_seen": 20734,
 "par": "PUMPUSDT",
 "pct": 1.3064133016627077,
 "protocolo": "pump",
@@ -425,7 +434,7 @@
 "antes_do_inicio": true,
 "first_seen": 20719,
 "frac": 1.0,
-"last_seen": 20732,
+"last_seen": 20734,
 "par": "RESOLVUSDT",
 "pct": 3.6954056306917247,
 "protocolo": "resolv",
@@ -434,7 +443,7 @@
 "RESOLVUSDT|20754": {
 "first_seen": 20724,
 "frac": 1.0,
-"last_seen": 20732,
+"last_seen": 20734,
 "par": "RESOLVUSDT",
 "pct": 3.510444583039795,
 "protocolo": "resolv",
@@ -444,7 +453,7 @@
 "antes_do_inicio": true,
 "first_seen": 20719,
 "frac": 0.03654740435052289,
-"last_seen": 20732,
+"last_seen": 20734,
 "par": "RIVERUSDT",
 "pct": 4.476490902096067,
 "protocolo": "river",
@@ -463,7 +472,7 @@
 "SEIUSDT|20740": {
 "first_seen": 20719,
 "frac": 0.8852838923317162,
-"last_seen": 20732,
+"last_seen": 20734,
 "par": "SEIUSDT",
 "pct": 1.5813101148888167,
 "protocolo": "sei",
@@ -473,7 +482,7 @@
 "antes_do_inicio": true,
 "first_seen": 20719,
 "frac": 0.6779121964817852,
-"last_seen": 20732,
+"last_seen": 20734,
 "par": "SOLVUSDT",
 "pct": 3.49203158393039,
 "protocolo": "solv-protocol",
@@ -482,7 +491,7 @@
 "SOLVUSDT|20745": {
 "first_seen": 20719,
 "frac": 0.6779121964817852,
-"last_seen": 20732,
+"last_seen": 20734,
 "par": "SOLVUSDT",
 "pct": 3.3742033376728218,
 "protocolo": "solv-protocol",
@@ -501,7 +510,7 @@
 "STOUSDT|20729": {
 "first_seen": 20719,
 "frac": 0.614704325351104,
-"last_seen": 20732,
+"last_seen": 20734,
 "par": "STOUSDT",
 "pct": 4.894913738571092,
 "protocolo": "stakestone",
@@ -510,7 +519,7 @@
 "STOUSDT|20760": {
 "first_seen": 20730,
 "frac": 0.6147043253511036,
-"last_seen": 20732,
+"last_seen": 20734,
 "par": "STOUSDT",
 "pct": 4.666492934796299,
 "protocolo": "stakestone",
@@ -519,7 +528,7 @@
 "UXLINKUSDT|20744": {
 "first_seen": 20719,
 "frac": 1.0,
-"last_seen": 20732,
+"last_seen": 20734,
 "par": "UXLINKUSDT",
 "pct": 3.9408866995073892,
 "protocolo": "uxlink",
@@ -538,7 +547,7 @@
 "VANAUSDT|20743": {
 "first_seen": 20719,
 "frac": 0.780825445931938,
-"last_seen": 20732,
+"last_seen": 20734,
 "par": "VANAUSDT",
 "pct": 1.682909019570794,
 "protocolo": "vana",
@@ -548,7 +557,7 @@
 "antes_do_inicio": true,
 "first_seen": 20719,
 "frac": 0.22929936308069263,
-"last_seen": 20732,
+"last_seen": 20734,
 "par": "WALUSDT",
 "pct": 1.297413436813277,
 "protocolo": "walrus-protocol",
@@ -557,7 +566,7 @@
 "WALUSDT|20753": {
 "first_seen": 20723,
 "frac": 0.22929936308069263,
-"last_seen": 20732,
+"last_seen": 20734,
 "par": "WALUSDT",
 "pct": 1.2704321086671138,
 "protocolo": "walrus-protocol",
@@ -566,7 +575,7 @@
 "ZETAUSDT|20728": {
 "first_seen": 20719,
 "frac": 0.5057709660474411,
-"last_seen": 20732,
+"last_seen": 20734,
 "par": "ZETAUSDT",
 "pct": 2.764904249002895,
 "protocolo": "zetachain",
@@ -575,7 +584,7 @@
 "ZETAUSDT|20759": {
 "first_seen": 20729,
 "frac": 0.5057709660474411,
-"last_seen": 20732,
+"last_seen": 20734,
 "par": "ZETAUSDT",
 "pct": 2.6835025724020825,
 "protocolo": "zetachain",
@@ -594,7 +603,7 @@
 "ZKUSDT|20744": {
 "first_seen": 20719,
 "frac": 1.0,
-"last_seen": 20732,
+"last_seen": 20734,
 "par": "ZKUSDT",
 "pct": 2.457756265564642,
 "protocolo": "zksync-era",
@@ -603,7 +612,7 @@
 "ZORAUSDT|20726": {
 "first_seen": 20719,
 "frac": 0.7499999999999999,
-"last_seen": 20732,
+"last_seen": 20734,
 "par": "ZORAUSDT",
 "pct": 3.0303030303030307,
 "protocolo": "zora-protocol",
@@ -612,7 +621,7 @@
 "ZORAUSDT|20757": {
 "first_seen": 20727,
 "frac": 0.7500000000000002,
-"last_seen": 20732,
+"last_seen": 20734,
 "par": "ZORAUSDT",
 "pct": 2.941176470588234,
 "protocolo": "zora-protocol",
@@ -622,7 +631,7 @@
 "antes_do_inicio": true,
 "first_seen": 20719,
 "frac": 1.0,
-"last_seen": 20732,
+"last_seen": 20734,
 "par": "ZROUSDT",
 "pct": 3.7455410225921524,
 "protocolo": "layerzero",
@@ -631,7 +640,7 @@
 "ZROUSDT|20747": {
 "first_seen": 20719,
 "frac": 1.0,
-"last_seen": 20732,
+"last_seen": 20734,
 "par": "ZROUSDT",
 "pct": 3.6103151862464182,
 "protocolo": "layerzero",
@@ -1093,6 +1102,39 @@
 "status": "aberto",
 "t0": 20739
 },
+"SEIUSDT|20740": {
+"cesta_in": {
+"ADAUSDT": 0.2671,
+"ARBUSDT": 0.19962,
+"AVAXUSDT": 11.603,
+"BCHUSDT": 311.75,
+"BNBUSDT": 779.79,
+"BTCUSDT": 85507.6,
+"DOGEUSDT": 0.09363,
+"ETHUSDT": 2696.45,
+"HYPEUSDT": 91.928,
+"LINKUSDT": 13.952,
+"LTCUSDT": 68.95,
+"NEARUSDT": 5.064,
+"SOLUSDT": 120.66,
+"SUIUSDT": 1.1776,
+"TRXUSDT": 0.33516,
+"UNIUSDT": 8.557,
+"WLDUSDT": 0.5513,
+"XLMUSDT": 0.21191,
+"XRPUSDT": 1.496,
+"ZECUSDT": 1366.04
+},
+"entrada": 20733,
+"first_seen": 20719,
+"frac": 0.8852838923317162,
+"par": "SEIUSDT",
+"pct": 1.5813101148888167,
+"protocolo": "sei",
+"px_in": 0.07194,
+"status": "aberto",
+"t0": 20740
+},
 "STOUSDT|20729": {
 "cesta_in": {
 "ADAUSDT": 0.2586,
@@ -1220,5 +1262,5 @@
 "t0": 20726
 }
 },
-"ultimo_refresh": 20732
+"ultimo_refresh": 20734
 }
