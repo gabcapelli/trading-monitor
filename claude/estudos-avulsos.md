@@ -1435,7 +1435,7 @@ Script: `monitor/replay_embalo_macro.py` · log: `claude/embalo_macro.log` · ca
 | Metades | −0.28R / −0.09R | |
 
 **Veredito: NÃO PASSA.**
-- **O embalo bruto é pequeno:** +0.09R por evento, com stop médio de 1.07% no BTC. O custo de 0.18% vale ~0.2R e passa o resultado para negativo. Mesmo com custo de 0.08% (taxa mínima da Binance), sobraria ~+0.01R.
+- **O embalo bruto é pequeno:** +0.09R por evento, com stop médio de 1.07% no BTC. O custo de 0.18% vale ~0.2R e passa o resultado para negativo. Mesmo pagando só a taxa de taker, sem slippage (~0.10% ida e volta), o resultado ficaria em ~0R.
 - **O excesso positivo é artefato da medida em R:** nos dias calmos do placebo, a janela é estreita, o stop cai no mínimo de 0.3% e o custo vira ~0.4R por trade (placebo bruto: −0.04R). A comparação justa, antes do custo, dá +0.13R para o evento: pequena demais.
 - **Só o FOMC fica positivo** (+0.14R, n=53, IC cruzando zero), olhado depois de ver o resultado. Pela regra do projeto, não vira hipótese sem pré-registro novo.
 - **Lição de método:** quando o risco do placebo é muito menor que o do evento, comparar em R líquido distorce. Usar o excesso em R bruto ou em % nos próximos estudos.
