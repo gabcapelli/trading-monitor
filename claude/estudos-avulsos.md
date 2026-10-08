@@ -1511,6 +1511,31 @@ Script: `monitor/replay_46_limitada.py` · log: `claude/46_limitada.log`.
 
 **Em papel desde 08/10/2026:** `monitor/continuacao_paper.py` registra a variante nos mesmos sinais do papel do 46 (colunas `liq_stop` e `r_stop`). A regra do 46 continua decidindo o papel dela. Leitura fixada antes do primeiro trade: com os mesmos 300 trades, `liq_stop` com IC95 > 0 e média de `liq_stop − liq` > 0. O único trade já fechado (ADA, −10.75%) teria saído no stop com −1.00%.
 
+## 62. Compressão antes do rompimento: o sinal do 46 só depois de um NR7 — 08/10/2026
+
+Script: `monitor/replay_nr7_46.py` · log: `claude/nr7_46.log`. Tentativa única.
+- **Hipótese:** o 46 só ganha nos rompimentos fortes (estudo 61), e o NR7 é seguido de expansão (estudo 58). Um rompimento de 7 dias logo depois de compressão teria mais chance de ser forte. Ressalva fixada antes: as duas peças já tinham sido vistas nestes dados, então um PASSA só autorizaria papel.
+- **Regra:** o sinal do 46 (top 20 do dia, 4h), exigindo um NR7 em alguma das 3 barras antes do rompimento. Entrada a mercado na barra seguinte, stop no nível rompido (checado em 1h, mínimo de 0.3%), saída em 48h. Custo de 0.18% mais funding. Resultado em R.
+- **Critério (todos juntos):** n ≥ 200; R líquido e excesso sobre placebo (mesmo risco %) com IC95 > 0; metades e fora das majors > 0.
+
+| | R por trade | IC95 |
+|---|---|---|
+| **R líquido (decide)** | **+0.40R** (n=1.194) | **[−0.10, +1.16]** |
+| Excesso sobre placebo | +0.38R | [−0.14, +1.17] |
+| Em % | +1.13% por trade, risco médio 3.3%, 71% stopados, acerto 24% | |
+| Metades / fora das majors | +0.48R / +0.33R / +0.26R | |
+| Compras / vendas | +0.59R / −0.05R | |
+| Por ano | 2020 +0.02 · 2021 +1.50 · 2022 0.00 · 2023 +0.72 · 2024 −0.01 · 2025 +0.22 · 2026 +0.22 | |
+
+**Veredito: NÃO PASSA (o IC cruza zero).** É o maior resultado em R do projeto, mas não é robusto:
+- **Cauda gorda:** acerto de 24%, com stops pequenos e poucos ganhos grandes. A média depende de poucos trades e de 2021 (+1.50R); três dos sete anos ficam em zero.
+- **Só as compras carregam o resultado.**
+- **A compressão parece separar alguma coisa:** sem NR7, o mesmo trade dá −0.13R. Mas essa comparação é dentro da amostra.
+
+**Descritivo importante para o papel (dentro da amostra que gerou a hipótese; não decide):** o 46 com stop no nível em **todos** os sinais dá **+0.03R, ou +0.30% por trade, menos que o 46 sem stop (+0.76%)**. O stop corta os ruins, mas também os rompimentos que tocam o nível e depois disparam (71% são stopados). A variante que entrou no papel em 08/10 provavelmente **não** vai superar a regra original.
+
+Correção de rótulo junto deste estudo: em `replay_fluxo_spot_perp.fmt`, os intervalos pedidos com 95% (subgrupos descritivos dos estudos 57–60) eram impressos como "IC97.5%". Os números estavam certos; agora o rótulo segue o nível pedido.
+
 ## Leitura conjunta
 
 Mesma direção do achado da auditoria v6 sobre o checklist mecânico dos Setups A/B. Nenhum dos dez setups de vídeo tem edge mecânico demonstrável nesses 20 pares (o 9.1 também não, fora da amostra, nos 80 pares do estudo 6):

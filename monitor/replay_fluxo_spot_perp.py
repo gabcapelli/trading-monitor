@@ -216,11 +216,11 @@ def boot(xs, chave, conf=CONF):
         ms.append(s / k)
     ms.sort()
     a = (1 - conf) / 2
-    return sum(x[chave] for x in xs) / n, ms[int(a * N_BOOT)], ms[int((1 - a) * N_BOOT) - 1], n
+    return sum(x[chave] for x in xs) / n, ms[int(a * N_BOOT)], ms[int((1 - a) * N_BOOT) - 1], n, conf
 
 
 def fmt(b):
-    return "n/a" if b is None else f"{b[0]:+.3f}R  IC{int(CONF*1000)/10}% [{b[1]:+.3f}, {b[2]:+.3f}]  n={b[3]}"
+    return "n/a" if b is None else f"{b[0]:+.3f}R  IC{round(b[4] * 100, 1):g}% [{b[1]:+.3f}, {b[2]:+.3f}]  n={b[3]}"
 
 
 def main(argv):
