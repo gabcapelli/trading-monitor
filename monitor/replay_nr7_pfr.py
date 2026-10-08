@@ -223,7 +223,7 @@ def main(argv):
         ms = S.meses(s, rk)
         h1 = {}
         for mm in ms:
-            h1.update({ts: v[:4] for ts, v in F.klines_mes("futures/um", s, mm).items() if v[0] > 0})
+            h1.update({ts: v[:5] for ts, v in F.klines_mes("futures/um", s, mm).items() if v[0] > 0})
         if not h1:
             continue
         fund = []

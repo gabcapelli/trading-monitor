@@ -1476,6 +1476,17 @@ Script: `monitor/replay_nr7_pfr.py` · log: `claude/nr7_pfr.log`. Universo, dado
 - **O PFR é ruído:** bruto em zero e excesso em zero nos dois tempos gráficos.
 - **A fila de setups clássicos está fechada.** São 13 setups de gráfico testados (estudos 1–13, 22, 34, 57–59), e nenhum tem resultado bruto que pague o custo.
 
+## 60. SFP com filtro de volume (tentativa única) — 08/10/2026
+
+Script: `monitor/replay_sfp_volume.py` · log: `claude/sfp_volume.log`. Pedido do Gabriel: filtrar o SFP para melhorar o acerto. Combinamos **um** filtro, fixado antes, que testa o mecanismo da própria ideia: se o pavio consome os stops amontoados, o candle do sinal deve ter volume anormal. A regra é a do estudo 57 mais volume em dólar do candle do sinal ≥ 2× a média dos 20 anteriores. Critério idêntico ao 57. Tentativa única: se não passasse, o SFP ficaria encerrado.
+
+| Célula | R líquido | IC97.5 | Excesso | R bruto | Acerto | n |
+|---|---|---|---|---|---|---|
+| **1d** | **−0.11R** | [−0.23, +0.02] | +0.02R [−0.11, +0.16] | −0.08R | 36.4% | 599 |
+| **4h** | **−0.12R** | [−0.17, −0.06] | +0.01R [−0.05, +0.06] | −0.03R | 37.8% | 5.439 |
+
+**Veredito: NÃO PASSA. O SFP está encerrado.** O volume não separa os trades bons: o bruto do diário piora (−0.04R → −0.08R), o excesso continua em zero e o acerto quase não muda (35% → 36–38%). Um pavio que fura a máxima ou a mínima com volume alto não reverte mais do que um sem volume.
+
 ## Leitura conjunta
 
 Mesma direção do achado da auditoria v6 sobre o checklist mecânico dos Setups A/B. Nenhum dos dez setups de vídeo tem edge mecânico demonstrável nesses 20 pares (o 9.1 também não, fora da amostra, nos 80 pares do estudo 6):

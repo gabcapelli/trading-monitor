@@ -87,7 +87,7 @@ def barras(h1, horas):
         xs = g[t]
         if len(xs) < horas:
             continue
-        out.append((t, xs[0][0], max(x[1] for x in xs), min(x[2] for x in xs), xs[-1][3]))
+        out.append((t, xs[0][0], max(x[1] for x in xs), min(x[2] for x in xs), xs[-1][3], sum(x[4] for x in xs)))
     return out
 
 
@@ -101,7 +101,7 @@ def sinais(b):
         hi = max(x[2] for x in jan)
         k_lo = max(j for j, x in enumerate(jan) if x[3] == lo)
         k_hi = max(j for j, x in enumerate(jan) if x[2] == hi)
-        t, o, h, l, c = b[i]
+        t, o, h, l, c = b[i][:5]
         if l < lo and c > lo and N - k_lo >= IDADE:
             out.append((i, +1, l))
         elif h > hi and c < hi and N - k_hi >= IDADE:
@@ -156,7 +156,7 @@ def main(argv):
     for s in alguma:
         h1 = {}
         for m in meses(s, rk):
-            h1.update({ts: v[:4] for ts, v in F.klines_mes("futures/um", s, m).items() if v[0] > 0})
+            h1.update({ts: v[:5] for ts, v in F.klines_mes("futures/um", s, m).items() if v[0] > 0})
         if not h1:
             continue
         D.funding(s, F.INICIO - 40 * DIA, F.FIM)
