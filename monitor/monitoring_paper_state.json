@@ -42,7 +42,39 @@
   286016,
   286102,
   286150,
-  286189
+  286189,
+  286353
  ],
- "trades": {}
+ "trades": {
+  "principal|BICO|286353": {
+   "braco": "principal",
+   "token": "BICO",
+   "anuncio_id": 286353,
+   "titulo": "Binance Will Extend the Monitoring Tag to Include BICO & CVC on 2026-10-09",
+   "release": 1791529214078,
+   "detectado": 1791529500000,
+   "status": "aberto",
+   "sym": "BICOUSDT",
+   "entrada_ts": 1791529500000,
+   "p_in": 0.0194,
+   "btc_in": 82504.1,
+   "latencia_min": 5,
+   "saida_ts": 1791615600000
+  },
+  "principal|CVC|286353": {
+   "braco": "principal",
+   "token": "CVC",
+   "anuncio_id": 286353,
+   "titulo": "Binance Will Extend the Monitoring Tag to Include BICO & CVC on 2026-10-09",
+   "release": 1791529214078,
+   "detectado": 1791529500000,
+   "status": "aberto",
+   "sym": "CVCUSDT",
+   "entrada_ts": 1791529500000,
+   "p_in": 0.0244,
+   "btc_in": 82504.1,
+   "latencia_min": 5,
+   "saida_ts": 1791615600000
+  }
+ }
 }
