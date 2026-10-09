@@ -1,6 +1,6 @@
 # Painel de estratégias
 
-_Atualizado em 09/10 09:05 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
+_Atualizado em 09/10 10:07 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
 
 ## Precisa de você
 
@@ -31,33 +31,33 @@ _Nada pendente._
 
 | Estratégia | Ativo | Desde | Entrada | Agora | Resultado | Obs. |
 |---|---|---|---|---|---|---|
-| Desbloqueio | PUMP | 06/10 | 0.006463 | 0.005706 | **+11.71%** | com hedge +2.61%; recompra 13/10 |
-| Desbloqueio | MOVE | 03/10 | 0.009912 | 0.008837 | **+10.85%** | com hedge +4.72%; recompra 10/10 |
-| Desbloqueio | BB | 06/10 | 0.009883 | 0.008954 | +9.40% | com hedge +0.30%; recompra 13/10 |
-| Desbloqueio | SEI | 07/10 | 0.07194 | 0.0661 | +8.12% | com hedge +0.23%; recompra 14/10 |
-| Desbloqueio | CARV | 04/10 | 0.04427 | 0.04237 | +4.29% | com hedge -3.23%; recompra 11/10 |
-| Desbloqueio | APT | 05/10 | 0.8008 | 0.8111 | -1.29% | com hedge -9.74%; recompra 12/10 |
-| Desbloqueio | ARB | 09/10 | 0.17263 | 0.17932 | -3.88% | com hedge -1.50%; recompra 16/10 |
-| Monitoring Tag | BICO | 09/10 04:05 | 0.0194 | 0.01909 | +1.60% | vendido; saída 10/10 04:00 |
-| Monitoring Tag | CVC | 09/10 04:05 | 0.0244 | 0.02507 | -2.75% | vendido; saída 10/10 04:00 |
-| Perpétuo novo | CT | 03/10 | 0.50286 | 0.3021 | **+39.92%** | stop 0.75429; saída 02/11 |
-| Rompimento 48h | UNI | 08/10 13:00 | 7.319 | 7.373 | -0.74% | vendido; saída 10/10 13:00 |
-| Rompimento 48h | BNB | 08/10 13:00 | 731.5 | 742.42 | -1.49% | vendido; saída 10/10 13:00 |
-| Rompimento 48h | SOL | 08/10 13:00 | 108.5 | 111.02 | -2.32% | vendido; saída 10/10 13:00 |
-| Rompimento 48h | BTC | 08/10 13:00 | 80990.7 | 83215.4 | -2.75% | vendido; saída 10/10 13:00 |
-| Rompimento 48h | DOGE | 08/10 13:00 | 0.08261 | 0.08488 | -2.75% | vendido; saída 10/10 13:00 |
-| Rompimento 48h | ETH | 08/10 13:00 | 2434.02 | 2504.04 | -2.88% | vendido; saída 10/10 13:00 |
-| Rompimento 48h | HYPE | 08/10 13:00 | 83.345 | 86.088 | -3.29% | vendido; saída 10/10 13:00 |
-| Rompimento 48h | ADA | 08/10 13:00 | 0.2314 | 0.2391 | -3.33% | vendido; saída 10/10 13:00 |
-| Rompimento 48h | WLD | 08/10 13:00 | 0.4778 | 0.4958 | -3.77% | vendido; saída 10/10 13:00 |
-| Rompimento 48h | AVAX | 08/10 13:00 | 9.992 | 10.377 | -3.85% | vendido; saída 10/10 13:00 |
-| Rompimento 48h | XRP | 08/10 13:00 | 1.3455 | 1.3985 | -3.94% | vendido; saída 10/10 13:00 |
-| Rompimento 48h | SUI | 08/10 13:00 | 1.0261 | 1.0694 | -4.22% | vendido; saída 10/10 13:00 |
-| Rompimento 48h | TAO | 08/10 13:00 | 263.21 | 275.07 | -4.51% | vendido; saída 10/10 13:00 |
-| Rompimento 48h | 1000PEPE | 08/10 13:00 | 0.0037461 | 0.0039212 | -4.67% | vendido; saída 10/10 13:00 |
-| Rompimento 48h | NEAR | 08/10 17:00 | 4.573 | 4.857 | -6.21% | vendido; saída 10/10 17:00 |
-| Rompimento 48h | ENA | 08/10 13:00 | 0.20412 | 0.21823 | -6.91% | vendido; saída 10/10 13:00 |
-| Rompimento 48h | ZEC | 08/10 13:00 | 1115.1 | 1234.62 | **-10.72%** | vendido; saída 10/10 13:00 |
+| Desbloqueio | PUMP | 06/10 | 0.006463 | 0.005624 | **+12.98%** | com hedge +3.71%; recompra 13/10 |
+| Desbloqueio | MOVE | 03/10 | 0.009912 | 0.008857 | **+10.64%** | com hedge +4.34%; recompra 10/10 |
+| Desbloqueio | BB | 06/10 | 0.009883 | 0.00892 | +9.74% | com hedge +0.48%; recompra 13/10 |
+| Desbloqueio | SEI | 07/10 | 0.07194 | 0.0662 | +7.98% | com hedge -0.08%; recompra 14/10 |
+| Desbloqueio | CARV | 04/10 | 0.04427 | 0.04217 | +4.74% | com hedge -2.95%; recompra 11/10 |
+| Desbloqueio | APT | 05/10 | 0.8008 | 0.8098 | -1.12% | com hedge -9.70%; recompra 12/10 |
+| Desbloqueio | ARB | 09/10 | 0.17263 | 0.18087 | -4.77% | com hedge -2.64%; recompra 16/10 |
+| Monitoring Tag | BICO | 09/10 04:05 | 0.0194 | 0.01919 | +1.08% | vendido; saída 10/10 04:00 |
+| Monitoring Tag | CVC | 09/10 04:05 | 0.0244 | 0.02514 | -3.03% | vendido; saída 10/10 04:00 |
+| Perpétuo novo | CT | 03/10 | 0.50286 | 0.30104 | **+40.13%** | stop 0.75429; saída 02/11 |
+| Rompimento 48h | UNI | 08/10 13:00 | 7.319 | 7.365 | -0.63% | vendido; saída 10/10 13:00 |
+| Rompimento 48h | BNB | 08/10 13:00 | 731.5 | 742.98 | -1.57% | vendido; saída 10/10 13:00 |
+| Rompimento 48h | SOL | 08/10 13:00 | 108.5 | 110.61 | -1.94% | vendido; saída 10/10 13:00 |
+| Rompimento 48h | BTC | 08/10 13:00 | 80990.7 | 83126.7 | -2.64% | vendido; saída 10/10 13:00 |
+| Rompimento 48h | DOGE | 08/10 13:00 | 0.08261 | 0.0849 | -2.77% | vendido; saída 10/10 13:00 |
+| Rompimento 48h | ETH | 08/10 13:00 | 2434.02 | 2501.96 | -2.79% | vendido; saída 10/10 13:00 |
+| Rompimento 48h | HYPE | 08/10 13:00 | 83.345 | 85.762 | -2.90% | vendido; saída 10/10 13:00 |
+| Rompimento 48h | ADA | 08/10 13:00 | 0.2314 | 0.2386 | -3.11% | vendido; saída 10/10 13:00 |
+| Rompimento 48h | AVAX | 08/10 13:00 | 9.992 | 10.315 | -3.23% | vendido; saída 10/10 13:00 |
+| Rompimento 48h | XRP | 08/10 13:00 | 1.3455 | 1.3919 | -3.45% | vendido; saída 10/10 13:00 |
+| Rompimento 48h | WLD | 08/10 13:00 | 0.4778 | 0.4957 | -3.75% | vendido; saída 10/10 13:00 |
+| Rompimento 48h | SUI | 08/10 13:00 | 1.0261 | 1.065 | -3.79% | vendido; saída 10/10 13:00 |
+| Rompimento 48h | 1000PEPE | 08/10 13:00 | 0.0037461 | 0.003923 | -4.72% | vendido; saída 10/10 13:00 |
+| Rompimento 48h | TAO | 08/10 13:00 | 263.21 | 275.75 | -4.76% | vendido; saída 10/10 13:00 |
+| Rompimento 48h | NEAR | 08/10 17:00 | 4.573 | 4.839 | -5.82% | vendido; saída 10/10 17:00 |
+| Rompimento 48h | ENA | 08/10 13:00 | 0.20412 | 0.21659 | -6.11% | vendido; saída 10/10 13:00 |
+| Rompimento 48h | ZEC | 08/10 13:00 | 1115.1 | 1229.4 | **-10.25%** | vendido; saída 10/10 13:00 |
 
 <sub>Resultado a preço de mercado, bruto (sem custo nem funding), já no lado da posição: positivo = a favor. Em negrito, movimentos de 10% ou mais. Com hedge = venda + cesta dos majors.</sub>
 
