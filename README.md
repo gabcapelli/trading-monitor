@@ -1,6 +1,6 @@
 # Painel de estratégias
 
-_Atualizado em 10/10 13:14 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
+_Atualizado em 10/10 14:12 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
 
 ## Precisa de você
 
@@ -49,16 +49,16 @@ _Nada pendente._
 
 | Estratégia | Ativo | Desde | Entrada | Agora | Resultado | Obs. |
 |---|---|---|---|---|---|---|
-| Desbloqueio | PUMP | 06/10 | 0.006463 | 0.005717 | **+11.54%** | com hedge +4.66%; recompra 13/10 |
-| Desbloqueio | CARV | 04/10 | 0.04427 | 0.04082 | +7.79% | com hedge +2.55%; recompra 11/10 |
-| Desbloqueio | BB | 06/10 | 0.009883 | 0.00941 | +4.79% | com hedge -2.10%; recompra 13/10 |
-| Desbloqueio | SEI | 07/10 | 0.07194 | 0.06954 | +3.34% | com hedge -2.27%; recompra 14/10 |
-| Desbloqueio | VANA | 10/10 | 1.0484 | 1.0843 | -3.42% | com hedge -0.70%; recompra 17/10 |
-| Desbloqueio | APT | 05/10 | 0.8008 | 0.8441 | -5.41% | com hedge -10.98%; recompra 12/10 |
-| Desbloqueio | ARB | 09/10 | 0.17263 | 0.18644 | -8.00% | com hedge -3.09%; recompra 16/10 |
-| Perpétuo novo | CT | 03/10 | 0.50286 | 0.30186 | **+39.97%** | stop 0.75429; saída 02/11 |
-| Rompimento 48h | NEAR | 08/10 17:00 | 4.573 | 5.361 | **-17.23%** | vendido; saída 10/10 17:00 |
-| Sábado | cesta (20) | 09/10 21:00 | — | — | +2.73% | comprado; saída sábado 21h |
+| Desbloqueio | PUMP | 06/10 | 0.006463 | 0.005572 | **+13.79%** | com hedge +6.74%; recompra 13/10 |
+| Desbloqueio | CARV | 04/10 | 0.04427 | 0.04106 | +7.25% | com hedge +1.84%; recompra 11/10 |
+| Desbloqueio | SEI | 07/10 | 0.07194 | 0.06908 | +3.98% | com hedge -1.80%; recompra 14/10 |
+| Desbloqueio | BB | 06/10 | 0.009883 | 0.009585 | +3.02% | com hedge -4.03%; recompra 13/10 |
+| Desbloqueio | VANA | 10/10 | 1.0484 | 1.0815 | -3.16% | com hedge -0.61%; recompra 17/10 |
+| Desbloqueio | APT | 05/10 | 0.8008 | 0.8452 | -5.54% | com hedge -11.30%; recompra 12/10 |
+| Desbloqueio | ARB | 09/10 | 0.17263 | 0.18535 | -7.37% | com hedge -2.62%; recompra 16/10 |
+| Perpétuo novo | CT | 03/10 | 0.50286 | 0.30535 | **+39.28%** | stop 0.75429; saída 02/11 |
+| Rompimento 48h | NEAR | 08/10 17:00 | 4.573 | 5.375 | **-17.54%** | vendido; saída 10/10 17:00 |
+| Sábado | cesta (20) | 09/10 21:00 | — | — | +2.54% | comprado; saída sábado 21h |
 
 <sub>Resultado a preço de mercado, bruto (sem custo nem funding), já no lado da posição: positivo = a favor. Em negrito, movimentos de 10% ou mais. Com hedge = venda + cesta dos majors.</sub>
 
