@@ -73,7 +73,18 @@
     "ETHUSDT",
     "BTCUSDT"
    ],
-   "status": "aberto"
+   "status": "fechado",
+   "p_out": 284.13,
+   "funding": 0.0007109999999999999,
+   "bruto": -7.94802629079443,
+   "liq": -8.12731529079443,
+   "excesso": -1.1434113728471669,
+   "liq_real": -7.97968395670668,
+   "nivel": 278.0,
+   "stop_ts": 1791604800000,
+   "liq_stop": -5.803583420690704,
+   "r_stop": -1.0328338013252185,
+   "nr7": false
   },
   {
    "sym": "AVAXUSDT",
@@ -105,7 +116,18 @@
     "ETHUSDT",
     "BTCUSDT"
    ],
-   "status": "aberto"
+   "status": "fechado",
+   "p_out": 10.524,
+   "funding": -0.015078,
+   "bruto": -5.324259407526011,
+   "liq": -5.51933740752601,
+   "excesso": 1.6184485042774845,
+   "liq_real": -5.5515057132559065,
+   "nivel": 10.424,
+   "stop_ts": 1791532800000,
+   "liq_stop": -4.531315767013588,
+   "r_stop": -1.0480765542592576,
+   "nr7": false
   },
   {
    "sym": "ADAUSDT",
@@ -137,7 +159,18 @@
     "ETHUSDT",
     "BTCUSDT"
    ],
-   "status": "aberto"
+   "status": "fechado",
+   "p_out": 0.2546,
+   "funding": 0.010602,
+   "bruto": -10.025929127052713,
+   "liq": -10.195327127052712,
+   "excesso": -3.330677516276939,
+   "liq_real": -10.572518936280884,
+   "nivel": 0.2367,
+   "stop_ts": 1791522000000,
+   "liq_stop": -2.4792552229904823,
+   "r_stop": -1.0824521860377314,
+   "nr7": false
   },
   {
    "sym": "WLDUSDT",
@@ -169,7 +202,18 @@
     "ETHUSDT",
     "BTCUSDT"
    ],
-   "status": "aberto"
+   "status": "fechado",
+   "p_out": 0.559,
+   "funding": 0.007484000000000001,
+   "bruto": -16.994558392632907,
+   "liq": -17.167074392632905,
+   "excesso": -10.666076743203458,
+   "liq_real": -18.80983256184486,
+   "nivel": 0.4798,
+   "stop_ts": 1791475200000,
+   "liq_stop": -0.5963161820845521,
+   "r_stop": -1.4245993589999937,
+   "nr7": false
   },
   {
    "sym": "1000PEPEUSDT",
@@ -201,7 +245,18 @@
     "ETHUSDT",
     "BTCUSDT"
    ],
-   "status": "aberto"
+   "status": "fechado",
+   "p_out": 0.0040375,
+   "funding": -0.08786100000000001,
+   "bruto": -7.7787565735031095,
+   "liq": -8.04661757350311,
+   "excesso": -0.9652327230668298,
+   "liq_real": -8.200251147361667,
+   "nivel": 0.0039527,
+   "stop_ts": 1791522000000,
+   "liq_stop": -5.778370005098638,
+   "r_stop": -1.047742104361085,
+   "nr7": false
   },
   {
    "sym": "ENAUSDT",
@@ -233,7 +288,18 @@
     "ETHUSDT",
     "BTCUSDT"
    ],
-   "status": "aberto"
+   "status": "fechado",
+   "p_out": 0.22205,
+   "funding": 0.019594999999999998,
+   "bruto": -8.784048598863414,
+   "liq": -8.944453598863413,
+   "excesso": -2.0234348550250445,
+   "liq_real": -8.706285973321583,
+   "nivel": 0.2134,
+   "stop_ts": 1791507600000,
+   "liq_stop": -4.73056628708604,
+   "r_stop": -1.0405206794396566,
+   "nr7": false
   },
   {
    "sym": "BNBUSDT",
@@ -265,7 +331,18 @@
     "ETHUSDT",
     "BTCUSDT"
    ],
-   "status": "aberto"
+   "status": "fechado",
+   "p_out": 751.47,
+   "funding": 0.0,
+   "bruto": -2.7300068352700047,
+   "liq": -2.910006835270005,
+   "excesso": 4.349240685599597,
+   "liq_real": -3.0549880151762054,
+   "nivel": 758.18,
+   "stop_ts": null,
+   "liq_stop": -2.910006835270005,
+   "r_stop": -0.7978523238380856,
+   "nr7": false
   },
   {
    "sym": "UNIUSDT",
@@ -297,7 +374,18 @@
     "ETHUSDT",
     "BTCUSDT"
    ],
-   "status": "aberto"
+   "status": "fechado",
+   "p_out": 7.627,
+   "funding": 0.0007920000000000001,
+   "bruto": -4.208225167372581,
+   "liq": -4.387433167372581,
+   "excesso": 2.793221388649515,
+   "liq_real": -4.721524719591333,
+   "nivel": 7.672,
+   "stop_ts": 1791640800000,
+   "liq_stop": -5.002271260008187,
+   "r_stop": -1.0371564688951824,
+   "nr7": true
   },
   {
    "sym": "SUIUSDT",
@@ -329,7 +417,18 @@
     "ETHUSDT",
     "BTCUSDT"
    ],
-   "status": "aberto"
+   "status": "fechado",
+   "p_out": 1.1236,
+   "funding": 0.019098,
+   "bruto": -9.501997855959443,
+   "liq": -9.662899855959443,
+   "excesso": -2.7791709151261283,
+   "liq_real": -9.884206754481689,
+   "nivel": 1.1033,
+   "stop_ts": 1791608400000,
+   "liq_stop": -7.688456174154564,
+   "r_stop": -1.0219073679145083,
+   "nr7": false
   },
   {
    "sym": "DOGEUSDT",
@@ -361,7 +460,18 @@
     "ETHUSDT",
     "BTCUSDT"
    ],
-   "status": "aberto"
+   "status": "fechado",
+   "p_out": 0.08618,
+   "funding": 0.015837999999999998,
+   "bruto": -4.321510712988741,
+   "liq": -4.485672712988741,
+   "excesso": 2.6739734458956637,
+   "liq_real": -4.3671658759689915,
+   "nivel": 0.0851,
+   "stop_ts": 1791511200000,
+   "liq_stop": -3.19208393426946,
+   "r_stop": -1.0590283285542204,
+   "nr7": false
   },
   {
    "sym": "HYPEUSDT",
@@ -393,7 +503,18 @@
     "ETHUSDT",
     "BTCUSDT"
    ],
-   "status": "aberto"
+   "status": "fechado",
+   "p_out": 85.979,
+   "funding": 0.004158000000000001,
+   "bruto": -3.160357549943016,
+   "liq": -3.336199549943016,
+   "excesso": 3.8962399333122164,
+   "liq_real": -2.881745463125781,
+   "nivel": 85.324,
+   "stop_ts": 1791514800000,
+   "liq_stop": -2.5526205745395627,
+   "r_stop": -1.07502860932289,
+   "nr7": true
   },
   {
    "sym": "XRPUSDT",
@@ -425,7 +546,18 @@
     "ETHUSDT",
     "BTCUSDT"
    ],
-   "status": "aberto"
+   "status": "fechado",
+   "p_out": 1.4076,
+   "funding": -0.016054,
+   "bruto": -4.615384615384621,
+   "liq": -4.8114386153846205,
+   "excesso": 2.364632496005263,
+   "liq_real": -4.623001931367441,
+   "nivel": 1.3865,
+   "stop_ts": 1791500400000,
+   "liq_stop": -3.228974351542193,
+   "r_stop": -1.0596548756097572,
+   "nr7": true
   },
   {
    "sym": "SOLUSDT",
@@ -457,7 +589,18 @@
     "ETHUSDT",
     "BTCUSDT"
    ],
-   "status": "aberto"
+   "status": "fechado",
+   "p_out": 110.42,
+   "funding": 0.0035340000000000015,
+   "bruto": -1.7695852534562295,
+   "liq": -1.9460512534562295,
+   "excesso": 5.360210771719359,
+   "liq_real": -2.0514082739447796,
+   "nivel": 113.09,
+   "stop_ts": null,
+   "liq_stop": -1.9460512534562295,
+   "r_stop": -0.46001429411764866,
+   "nr7": true
   },
   {
    "sym": "ZECUSDT",
@@ -489,7 +632,18 @@
     "ETHUSDT",
     "BTCUSDT"
    ],
-   "status": "aberto"
+   "status": "fechado",
+   "p_out": 1231.86,
+   "funding": 0.036451000000000004,
+   "bruto": -10.470809792843694,
+   "liq": -10.614358792843694,
+   "excesso": -3.7989729539516555,
+   "liq_real": -9.872033567102092,
+   "nivel": 1192.0,
+   "stop_ts": 1791500400000,
+   "liq_stop": -7.066242489462834,
+   "r_stop": -1.024651105331599,
+   "nr7": false
   },
   {
    "sym": "ETHUSDT",
@@ -521,7 +675,18 @@
     "ZECUSDT",
     "BTCUSDT"
    ],
-   "status": "aberto"
+   "status": "fechado",
+   "p_out": 2510.71,
+   "funding": 0.007639000000000001,
+   "bruto": -3.150754718531479,
+   "liq": -3.323115718531479,
+   "excesso": 3.9063481769033084,
+   "liq_real": -3.486720616461826,
+   "nivel": 2525.6,
+   "stop_ts": null,
+   "liq_stop": -3.323115718531479,
+   "r_stop": -0.8832201486372567,
+   "nr7": false
   },
   {
    "sym": "BTCUSDT",
@@ -553,7 +718,18 @@
     "ZECUSDT",
     "ETHUSDT"
    ],
-   "status": "aberto"
+   "status": "fechado",
+   "p_out": 83008.3,
+   "funding": 0.016454999999999997,
+   "bruto": -2.4911502184818746,
+   "liq": -2.6546952184818746,
+   "excesso": 4.600668703271312,
+   "liq_real": -2.5686004794436075,
+   "nivel": 82150.0,
+   "stop_ts": 1791511200000,
+   "liq_stop": -1.6061869137024307,
+   "r_stop": -1.1221099152212468,
+   "nr7": false
   },
   {
    "sym": "NEARUSDT",
@@ -613,5 +789,5 @@
   "BTCUSDT"
  ],
  "dia_top": 1791590400000,
- "ultima_barra": 1791619200000
+ "ultima_barra": 1791633600000
 }
