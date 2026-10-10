@@ -1,4 +1,4 @@
-# Calibracao — registro mecanico de sinais (atualizado 2026-10-10 05:06 BRT)
+# Calibracao — registro mecanico de sinais (atualizado 2026-10-10 06:05 BRT)
 
 > **Nao edite este arquivo** — ele e reescrito a cada execucao a partir da tabela `sinais_mecanicos`. Diferente de `sinais.md`, aqui nao ha nenhuma decisao sua: e TODA confirmacao mecanica detectada, inclusive as descartadas por R:R baixo, com desfecho medido por geometria de preco (OHLC de 1h contra stop/alvo sugeridos).
 >
@@ -11,10 +11,10 @@ Regra de alvo em vigor agora: **proximo** (coluna `Regra` abaixo mostra qual dec
 | Grupo | Sinais | Resolvidos | Acertos | Soma (expectancia) |
 |---|---|---|---|---|
 | Aceitos (R:R >= 2) | 73 | 73 | 19 (26%) | -3.23R (-0.044R/sinal) |
-| Descartados por R:R baixo | 282 | 280 | 187 (67%) | +5.88R (+0.021R/sinal) |
-| TODOS | 355 | 353 | 206 (58%) | +2.65R (+0.008R/sinal) |
+| Descartados por R:R baixo | 282 | 281 | 188 (67%) | +5.89R (+0.021R/sinal) |
+| TODOS | 355 | 354 | 207 (58%) | +2.67R (+0.008R/sinal) |
 
-**MAE dos acertos** (quanto o preco foi CONTRA antes de dar certo) — n=206, mediana 0.35R, maximo 0.99R, 8% acima de 0.8R.
+**MAE dos acertos** (quanto o preco foi CONTRA antes de dar certo) — n=207, mediana 0.35R, maximo 0.99R, 8% acima de 0.8R.
 
 > Le-se assim: apertar `STOP_BUFFER_ATR_MULT` mata os acertos cujo MAE ja esta perto de 1R. Se essa cauda for gorda, nao ha folga pra apertar o stop.
 
@@ -26,7 +26,7 @@ Regra de alvo em vigor agora: **proximo** (coluna `Regra` abaixo mostra qual dec
 
 | Par | Setup | Direcao | Aceito | Regra | R:R (recente) | R:R (proximo) | Resultado | MAE | MFE | Candles | Quando |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| WLD/USDT | B | venda | nao | proximo | 4.59 | 0.01 | aberto | — | — | — | 2026-10-10 05:06 |
+| WLD/USDT | B | venda | nao | proximo | 4.59 | 0.01 | +0.01 | 0.143 | 0.271 | 1 | 2026-10-10 05:06 |
 | SOL/USDT | A | venda | nao | proximo | 0.68 | 0.68 | -1.00 | 1.262 | 1.293 | 1 | 2026-10-09 19:05 |
 | BTC/USDT | B | compra | nao | proximo | 0.85 | 0.85 | +0.85 | 0.488 | 2.598 | 8 | 2026-10-09 01:05 |
 | ETH/USDT | B | venda | nao | proximo | 0.49 | 0.10 | +0.10 | 0.237 | 0.229 | 1 | 2026-10-06 13:05 |
