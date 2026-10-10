@@ -54,13 +54,19 @@
    "titulo": "Binance Will Extend the Monitoring Tag to Include BICO & CVC on 2026-10-09",
    "release": 1791529214078,
    "detectado": 1791529500000,
-   "status": "aberto",
+   "status": "fechado",
    "sym": "BICOUSDT",
    "entrada_ts": 1791529500000,
    "p_in": 0.0194,
    "btc_in": 82504.1,
    "latencia_min": 5,
-   "saida_ts": 1791615600000
+   "saida_ts": 1791615600000,
+   "p_out": 0.01958,
+   "btc_out": 82700.0,
+   "funding": 0.030000000000000002,
+   "bruto": -0.9278350515463885,
+   "liq": -1.3978350515463884,
+   "excesso": -0.6903923062767658
   },
   "principal|CVC|286353": {
    "braco": "principal",
@@ -69,13 +75,19 @@
    "titulo": "Binance Will Extend the Monitoring Tag to Include BICO & CVC on 2026-10-09",
    "release": 1791529214078,
    "detectado": 1791529500000,
-   "status": "aberto",
+   "status": "fechado",
    "sym": "CVCUSDT",
    "entrada_ts": 1791529500000,
    "p_in": 0.0244,
    "btc_in": 82504.1,
    "latencia_min": 5,
-   "saida_ts": 1791615600000
+   "saida_ts": 1791615600000,
+   "p_out": 0.02598,
+   "btc_out": 82700.0,
+   "funding": -0.018578,
+   "bruto": -6.47540983606556,
+   "liq": -6.99398783606556,
+   "excesso": -6.237967090795937
   }
  }
 }
