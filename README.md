@@ -1,6 +1,6 @@
 # Painel de estratégias
 
-_Atualizado em 10/10 18:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
+_Atualizado em 10/10 19:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
 
 ## Precisa de você
 
@@ -50,15 +50,15 @@ _Nada pendente._
 
 | Estratégia | Ativo | Desde | Entrada | Agora | Resultado | Obs. |
 |---|---|---|---|---|---|---|
-| Desbloqueio | PUMP | 06/10 | 0.006463 | 0.005567 | **+13.86%** | com hedge +6.94%; recompra 13/10 |
-| Desbloqueio | CARV | 04/10 | 0.04427 | 0.04109 | +7.18% | com hedge +1.90%; recompra 11/10 |
-| Desbloqueio | SEI | 07/10 | 0.07194 | 0.06906 | +4.00% | com hedge -1.64%; recompra 14/10 |
-| Desbloqueio | BB | 06/10 | 0.009883 | 0.009818 | +0.66% | com hedge -6.27%; recompra 13/10 |
-| Desbloqueio | VANA | 10/10 | 1.0484 | 1.0795 | -2.97% | com hedge -0.28%; recompra 17/10 |
-| Desbloqueio | APT | 05/10 | 0.8008 | 0.867 | -8.27% | com hedge -13.84%; recompra 12/10 |
-| Desbloqueio | ARB | 09/10 | 0.17263 | 0.18808 | -8.95% | com hedge -4.13%; recompra 16/10 |
-| Perpétuo novo | CT | 03/10 | 0.50286 | 0.30831 | **+38.69%** | stop 0.75429; saída 02/11 |
-| Sábado | cesta (20) | 09/10 21:00 | — | — | +2.69% | comprado; saída sábado 21h |
+| Desbloqueio | PUMP | 06/10 | 0.006463 | 0.005481 | **+15.19%** | com hedge +8.11%; recompra 13/10 |
+| Desbloqueio | CARV | 04/10 | 0.04427 | 0.04161 | +6.01% | com hedge +0.56%; recompra 11/10 |
+| Desbloqueio | SEI | 07/10 | 0.07194 | 0.06855 | +4.71% | com hedge -1.09%; recompra 14/10 |
+| Desbloqueio | BB | 06/10 | 0.009883 | 0.009719 | +1.66% | com hedge -5.42%; recompra 13/10 |
+| Desbloqueio | VANA | 10/10 | 1.0484 | 1.0809 | -3.10% | com hedge -0.58%; recompra 17/10 |
+| Desbloqueio | APT | 05/10 | 0.8008 | 0.8573 | -7.06% | com hedge -12.85%; recompra 12/10 |
+| Desbloqueio | ARB | 09/10 | 0.17263 | 0.19037 | **-10.28%** | com hedge -5.71%; recompra 16/10 |
+| Perpétuo novo | CT | 03/10 | 0.50286 | 0.3092 | **+38.51%** | stop 0.75429; saída 02/11 |
+| Sábado | cesta (20) | 09/10 21:00 | — | — | +2.52% | comprado; saída sábado 21h |
 
 <sub>Resultado a preço de mercado, bruto (sem custo nem funding), já no lado da posição: positivo = a favor. Em negrito, movimentos de 10% ou mais. Com hedge = venda + cesta dos majors.</sub>
 
