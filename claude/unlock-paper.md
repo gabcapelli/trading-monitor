@@ -7,11 +7,11 @@
 > venda + compra da cesta dos 20 majors. Custo 0.18% por perna e funding real.
 > **Só reavaliar com 150 trades fechados.** Antes disso é ruído.
 
-_Atualizado em 2026-10-09 (calendário de 2026-10-09)._
+_Atualizado em 2026-10-10 (calendário de 2026-10-10)._
 
-**Trades fechados:** 7 de 150 (5%)
+**Trades fechados:** 8 de 150 (5%)
 
-**Média por trade:** puro +2.04% · com hedge +1.08% · hedge positivo em 4/7 (57%)
+**Média por trade:** puro +2.80% · com hedge +1.14% · hedge positivo em 5/8 (62%)
 
 _Referência do backtest (2025–2026): puro +2.9%, excesso sobre o universo +2.1%._
 
@@ -19,19 +19,18 @@ _Referência do backtest (2025–2026): puro +2.9%, excesso sobre o universo +2.
 
 | Token | Desbloqueio | % da oferta | Venda em (abertura) | Preço de entrada |
 |---|---|---|---|---|
-| MOVE | 2026-10-10 | 3.7% | 2026-10-03 | 0.009912 |
 | CARV | 2026-10-11 | 6.1% | 2026-10-04 | 0.04427 |
 | APT | 2026-10-12 | 1.3% | 2026-10-05 | 0.8008 |
 | BB | 2026-10-13 | 2.9% | 2026-10-06 | 0.009883 |
 | PUMP | 2026-10-13 | 1.3% | 2026-10-06 | 0.006463 |
 | SEI | 2026-10-14 | 1.6% | 2026-10-07 | 0.07194 |
 | ARB | 2026-10-16 | 1.3% | 2026-10-09 | 0.17263 |
+| VANA | 2026-10-17 | 1.7% | 2026-10-10 | 1.0484 |
 
 ## Próximas entradas (calendário atual)
 
 | Token | Desbloqueio | % da oferta | % insiders | Entrada prevista |
 |---|---|---|---|---|
-| VANA | 2026-10-17 | 1.7% | 78% | 2026-10-10 |
 | OMNI | 2026-10-18 | 20.6% | 100% | 2026-10-11 |
 | UXLINK | 2026-10-18 | 3.9% | 100% | 2026-10-11 |
 | ZK | 2026-10-18 | 2.5% | 100% | 2026-10-11 |
@@ -54,6 +53,7 @@ _Passa pelos filtros (perpétuo com ≥ 30 dias, mesmo token a ≥ 14 dias) só 
 
 | Token | Desbloqueio | % da oferta | Retorno do token | Cesta | Puro | Com hedge | Obs. |
 |---|---|---|---|---|---|---|---|
+| MOVE | 2026-10-10 | 3.7% | -8.44% | -6.35% | +8.09% | +1.52% |  |
 | STO | 2026-10-03 | 4.9% | -5.63% | -3.73% | +5.64% | +1.65% |  |
 | ZETA | 2026-10-02 | 2.8% | +0.69% | +0.45% | -0.64% | -0.46% |  |
 | MAV | 2026-10-02 | 3.4% | -1.46% | -0.63% | +1.49% | +0.59% |  |
