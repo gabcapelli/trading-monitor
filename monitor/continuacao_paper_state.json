@@ -761,8 +761,18 @@
     "ETHUSDT",
     "BTCUSDT"
    ],
-   "status": "aberto",
-   "nivel": 4.589
+   "status": "fechado",
+   "nivel": 4.589,
+   "p_out": 5.319,
+   "funding": 0.024924,
+   "bruto": -16.313142357314668,
+   "liq": -16.46821835731467,
+   "excesso": -11.50276098221706,
+   "liq_real": -16.814455099256676,
+   "stop_ts": 1791489600000,
+   "liq_stop": -0.5298797288432164,
+   "r_stop": -1.5144625000000167,
+   "nr7": false
   }
  ],
  "iniciado": 1791232470885,
@@ -789,5 +799,5 @@
   "BTCUSDT"
  ],
  "dia_top": 1791590400000,
- "ultima_barra": 1791633600000
+ "ultima_barra": 1791648000000
 }

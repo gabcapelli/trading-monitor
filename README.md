@@ -1,6 +1,6 @@
 # Painel de estratégias
 
-_Atualizado em 10/10 16:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
+_Atualizado em 10/10 17:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
 
 ## Precisa de você
 
@@ -12,7 +12,7 @@ _Nada pendente._
 |---|---|---|---|
 | [Desbloqueio](claude/unlock-paper.md) | 7 | 8/150 | +1.14% |
 | [Perpétuo novo](claude/novos-paper.md) | 1 | 0/100 | — |
-| [Rompimento 48h](claude/continuacao-paper.md) · exceção | 1 | 17/300 | -6.88% |
+| [Rompimento 48h](claude/continuacao-paper.md) · exceção | 0 | 18/300 | -7.41% |
 | [Monitoring Tag](claude/monitoring-paper.md) | 0 | 1/24 | -4.20% |
 | [Sábado](claude/sabado-paper.md) | 1 | 2/104 | +0.72% |
 | [Setup A/B](claude/estudos-avulsos.md#setups-ab--encerrado-em-25092026) · encerrado | — | 34 | -0.13R |
@@ -43,22 +43,22 @@ _Nada pendente._
 - Rompimento 48h: fechou ZEC: líquido -10.61%
 - Rompimento 48h: fechou ETH: líquido -3.32%
 - Rompimento 48h: fechou BTC: líquido -2.65%
+- Rompimento 48h: fechou NEAR: líquido -16.47%
 - Sábado: comprou a cesta
 
 ## Abertos agora
 
 | Estratégia | Ativo | Desde | Entrada | Agora | Resultado | Obs. |
 |---|---|---|---|---|---|---|
-| Desbloqueio | PUMP | 06/10 | 0.006463 | 0.005538 | **+14.31%** | com hedge +7.11%; recompra 13/10 |
-| Desbloqueio | CARV | 04/10 | 0.04427 | 0.04095 | +7.50% | com hedge +1.93%; recompra 11/10 |
-| Desbloqueio | SEI | 07/10 | 0.07194 | 0.06849 | +4.80% | com hedge -1.13%; recompra 14/10 |
-| Desbloqueio | BB | 06/10 | 0.009883 | 0.009637 | +2.49% | com hedge -4.71%; recompra 13/10 |
-| Desbloqueio | VANA | 10/10 | 1.0484 | 1.0775 | -2.78% | com hedge -0.40%; recompra 17/10 |
-| Desbloqueio | ARB | 09/10 | 0.17263 | 0.186 | -7.74% | com hedge -3.20%; recompra 16/10 |
-| Desbloqueio | APT | 05/10 | 0.8008 | 0.8657 | -8.10% | com hedge -13.95%; recompra 12/10 |
-| Perpétuo novo | CT | 03/10 | 0.50286 | 0.31054 | **+38.25%** | stop 0.75429; saída 02/11 |
-| Rompimento 48h | NEAR | 08/10 17:00 | 4.573 | 5.318 | **-16.29%** | vendido; saída 10/10 17:00 |
-| Sábado | cesta (20) | 09/10 21:00 | — | — | +2.37% | comprado; saída sábado 21h |
+| Desbloqueio | PUMP | 06/10 | 0.006463 | 0.00556 | **+13.97%** | com hedge +6.94%; recompra 13/10 |
+| Desbloqueio | CARV | 04/10 | 0.04427 | 0.04092 | +7.57% | com hedge +2.17%; recompra 11/10 |
+| Desbloqueio | SEI | 07/10 | 0.07194 | 0.06918 | +3.84% | com hedge -1.92%; recompra 14/10 |
+| Desbloqueio | BB | 06/10 | 0.009883 | 0.009702 | +1.83% | com hedge -5.20%; recompra 13/10 |
+| Desbloqueio | VANA | 10/10 | 1.0484 | 1.0792 | -2.94% | com hedge -0.38%; recompra 17/10 |
+| Desbloqueio | APT | 05/10 | 0.8008 | 0.8568 | -6.99% | com hedge -12.71%; recompra 12/10 |
+| Desbloqueio | ARB | 09/10 | 0.17263 | 0.18694 | -8.29% | com hedge -3.57%; recompra 16/10 |
+| Perpétuo novo | CT | 03/10 | 0.50286 | 0.3087 | **+38.61%** | stop 0.75429; saída 02/11 |
+| Sábado | cesta (20) | 09/10 21:00 | — | — | +2.56% | comprado; saída sábado 21h |
 
 <sub>Resultado a preço de mercado, bruto (sem custo nem funding), já no lado da posição: positivo = a favor. Em negrito, movimentos de 10% ou mais. Com hedge = venda + cesta dos majors.</sub>
 

@@ -4,28 +4,23 @@
 > Regra congelada em 05/10/2026 (estudo 46), aberta como **exceção** pelo Gabriel: o estudo falhou
 > o critério por um fio. Custo 0.18% e funding real. **Só reavaliar com 300 trades fechados.**
 
-_Atualizado em 10/10 16:06 (Brasília). Top 20 do dia: TAO, LINK, AVAX, ADA, PUMP, WLD, 1000PEPE, ENA, BNB, QNT, UNI, SUI, DOGE, HYPE, NEAR, XRP, SOL, ZEC, ETH, BTC._
+_Atualizado em 10/10 17:06 (Brasília). Top 20 do dia: TAO, LINK, AVAX, ADA, PUMP, WLD, 1000PEPE, ENA, BNB, QNT, UNI, SUI, DOGE, HYPE, NEAR, XRP, SOL, ZEC, ETH, BTC._
 
-**Trades fechados:** 17 de 300 (5%)
+**Trades fechados:** 18 de 300 (6%)
 
-**Média por trade:** líquido -6.88% · excesso +0.24% · com o preço real alcançável -7.03% · positivos 0/17
+**Média por trade:** líquido -7.41% · excesso -0.41% · com o preço real alcançável -7.58% · positivos 0/18
 
 _Referência do estudo 46: +0.76% líquido, +0.79% de excesso por trade._
 
-**Variante com stop no nível rompido** (hipótese do estudo 61, desde 08/10/2026; mesmos sinais): líquido -3.73% · -1.03R · diferença para a regra +3.14% · stopados 14/17
+**Variante com stop no nível rompido** (hipótese do estudo 61, desde 08/10/2026; mesmos sinais): líquido -3.55% · -1.05R · diferença para a regra +3.85% · stopados 15/18
 
 **Estudo 62 (só com NR7 antes do rompimento, stop no nível)**, exceção desde 08/10/2026: 4 de 100 trades · -0.91R · líquido -3.18% · positivos 0/4 _(referência do estudo: +0.40R)_
-
-## Abertos
-
-| Par | Lado | Entrada | Preço | Saída |
-|---|---|---|---|---|
-| NEAR | venda | 08/10 17:00 | 4.573 | 10/10 17:00 |
 
 ## Fechados (mais recentes primeiro)
 
 | Par | Lado | Entrada | Bruto | Funding | Líquido | Excesso | Líquido real | Com stop no nível | NR7 antes |
 |---|---|---|---|---|---|---|---|---|---|
+| NEAR | venda | 08/10 17:00 | -16.31% | +0.025% | -16.47% | -11.50% | -16.81% | -0.53% (stop) | não |
 | TAO | venda | 08/10 13:00 | -7.95% | +0.001% | -8.13% | -1.14% | -7.98% | -5.80% (stop) | não |
 | AVAX | venda | 08/10 13:00 | -5.32% | -0.015% | -5.52% | +1.62% | -5.55% | -4.53% (stop) | não |
 | ADA | venda | 08/10 13:00 | -10.03% | +0.011% | -10.20% | -3.33% | -10.57% | -2.48% (stop) | não |
