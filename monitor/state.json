@@ -2,9 +2,19 @@
   "posicoes_abertas": [],
   "pares": {
     "BTC-USDT-SWAP": {
-      "status": "sem_zona",
-      "zone": null,
-      "last_1h_ts": 1791738000000,
+      "status": "zona_mapeada_setup_B",
+      "zone": {
+        "setup": "B",
+        "direction": "venda",
+        "level": 83499.0,
+        "zone_low": 83436.35,
+        "zone_high": 83561.65,
+        "candles_since_creation": 0,
+        "touches": 0,
+        "created_at": 1791741600000,
+        "last_touch_ts": 1791741600000
+      },
+      "last_1h_ts": 1791741600000,
       "avisado_aberto_longo": false,
       "cooldowns": {
         "venda": {
@@ -20,7 +30,7 @@
     "ETH-USDT-SWAP": {
       "status": "sem_zona",
       "zone": null,
-      "last_1h_ts": 1791738000000,
+      "last_1h_ts": 1791741600000,
       "avisado_aberto_longo": false,
       "cooldowns": {
         "venda": {
@@ -36,7 +46,7 @@
     "SOL-USDT-SWAP": {
       "status": "sem_zona",
       "zone": null,
-      "last_1h_ts": 1791738000000,
+      "last_1h_ts": 1791741600000,
       "avisado_aberto_longo": false,
       "cooldowns": {
         "venda": {
@@ -57,12 +67,12 @@
         "level": 1.4084,
         "zone_low": 1.4064500000000002,
         "zone_high": 1.41035,
-        "candles_since_creation": 2,
-        "touches": 0,
+        "candles_since_creation": 0,
+        "touches": 1,
         "created_at": 1791730800000,
-        "last_touch_ts": 1791730800000
+        "last_touch_ts": 1791741600000
       },
-      "last_1h_ts": 1791738000000,
+      "last_1h_ts": 1791741600000,
       "avisado_aberto_longo": false,
       "cooldowns": {
         "compra": {
@@ -83,12 +93,12 @@
         "level": 0.08611,
         "zone_low": 0.08597375,
         "zone_high": 0.08624625000000001,
-        "candles_since_creation": 2,
+        "candles_since_creation": 3,
         "touches": 0,
         "created_at": 1791730800000,
         "last_touch_ts": 1791730800000
       },
-      "last_1h_ts": 1791738000000,
+      "last_1h_ts": 1791741600000,
       "avisado_aberto_longo": false,
       "cooldowns": {
         "venda": {
@@ -104,7 +114,7 @@
     "ARB-USDT-SWAP": {
       "status": "sem_zona",
       "zone": null,
-      "last_1h_ts": 1791738000000,
+      "last_1h_ts": 1791741600000,
       "avisado_aberto_longo": false,
       "cooldowns": {
         "venda": {
@@ -118,9 +128,9 @@
       }
     },
     "WLD-USDT-SWAP": {
-      "status": "invalidado_setup_A",
+      "status": "sem_zona",
       "zone": null,
-      "last_1h_ts": 1791738000000,
+      "last_1h_ts": 1791741600000,
       "avisado_aberto_longo": false,
       "cooldowns": {
         "compra": {
@@ -141,12 +151,12 @@
         "level": 1.138,
         "zone_low": 1.1352392857142857,
         "zone_high": 1.1407607142857141,
-        "candles_since_creation": 0,
+        "candles_since_creation": 1,
         "touches": 0,
         "created_at": 1791738000000,
         "last_touch_ts": 1791738000000
       },
-      "last_1h_ts": 1791738000000,
+      "last_1h_ts": 1791741600000,
       "avisado_aberto_longo": false,
       "cooldowns": {
         "venda": {
@@ -162,7 +172,7 @@
     "UNI-USDT-SWAP": {
       "status": "sem_zona",
       "zone": null,
-      "last_1h_ts": 1791738000000,
+      "last_1h_ts": 1791741600000,
       "avisado_aberto_longo": false,
       "cooldowns": {
         "venda": {
@@ -176,9 +186,19 @@
       }
     },
     "LINK-USDT-SWAP": {
-      "status": "sem_zona",
-      "zone": null,
-      "last_1h_ts": 1791738000000,
+      "status": "zona_mapeada_setup_B",
+      "zone": {
+        "setup": "B",
+        "direction": "compra",
+        "level": 13.229,
+        "zone_low": 13.20217857142857,
+        "zone_high": 13.255821428571428,
+        "candles_since_creation": 0,
+        "touches": 0,
+        "created_at": 1791741600000,
+        "last_touch_ts": 1791741600000
+      },
+      "last_1h_ts": 1791741600000,
       "avisado_aberto_longo": false,
       "cooldowns": {
         "venda": {
