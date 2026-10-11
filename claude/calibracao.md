@@ -1,4 +1,4 @@
-# Calibracao — registro mecanico de sinais (atualizado 2026-10-11 10:06 BRT)
+# Calibracao — registro mecanico de sinais (atualizado 2026-10-11 11:06 BRT)
 
 > **Nao edite este arquivo** — ele e reescrito a cada execucao a partir da tabela `sinais_mecanicos`. Diferente de `sinais.md`, aqui nao ha nenhuma decisao sua: e TODA confirmacao mecanica detectada, inclusive as descartadas por R:R baixo, com desfecho medido por geometria de preco (OHLC de 1h contra stop/alvo sugeridos).
 >
@@ -26,8 +26,8 @@ Regra de alvo em vigor agora: **proximo** (coluna `Regra` abaixo mostra qual dec
 
 | Par | Setup | Direcao | Aceito | Regra | R:R (recente) | R:R (proximo) | Resultado | MAE | MFE | Candles | Quando |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| WLD/USDT | B | compra | nao | proximo | 1.69 | 1.48 | aberto | — | — | — | 2026-10-11 10:06 |
-| SUI/USDT | B | compra | sim | proximo | 4.23 | 4.23 | aberto | — | — | — | 2026-10-11 10:06 |
+| WLD/USDT | B | compra | nao | proximo | 1.69 | 1.48 | aberto | 0.358 | 0.58 | — | 2026-10-11 10:06 |
+| SUI/USDT | B | compra | sim | proximo | 4.23 | 4.23 | aberto | 0.516 | 0.371 | — | 2026-10-11 10:06 |
 | WLD/USDT | B | venda | nao | proximo | 1.72 | 0.31 | +0.31 | 0.132 | 0.924 | 1 | 2026-10-11 07:06 |
 | SUI/USDT | B | compra | nao | proximo | 1.74 | 1.74 | -1.00 | 1.104 | 0.239 | 6 | 2026-10-11 02:06 |
 | WLD/USDT | B | compra | nao | proximo | 0.41 | 0.41 | -1.00 | 1.877 | 0.289 | 2 | 2026-10-10 23:06 |
