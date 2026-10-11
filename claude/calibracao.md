@@ -1,4 +1,4 @@
-# Calibracao — registro mecanico de sinais (atualizado 2026-10-11 12:06 BRT)
+# Calibracao — registro mecanico de sinais (atualizado 2026-10-11 13:06 BRT)
 
 > **Nao edite este arquivo** — ele e reescrito a cada execucao a partir da tabela `sinais_mecanicos`. Diferente de `sinais.md`, aqui nao ha nenhuma decisao sua: e TODA confirmacao mecanica detectada, inclusive as descartadas por R:R baixo, com desfecho medido por geometria de preco (OHLC de 1h contra stop/alvo sugeridos).
 >
@@ -10,11 +10,11 @@ Regra de alvo em vigor agora: **proximo** (coluna `Regra` abaixo mostra qual dec
 
 | Grupo | Sinais | Resolvidos | Acertos | Soma (expectancia) |
 |---|---|---|---|---|
-| Aceitos (R:R >= 2) | 74 | 73 | 19 (26%) | -3.23R (-0.044R/sinal) |
-| Descartados por R:R baixo | 289 | 287 | 191 (67%) | +4.81R (+0.017R/sinal) |
-| TODOS | 363 | 360 | 210 (58%) | +1.59R (+0.004R/sinal) |
+| Aceitos (R:R >= 2) | 74 | 74 | 20 (27%) | +1.00R (+0.014R/sinal) |
+| Descartados por R:R baixo | 289 | 288 | 192 (67%) | +6.58R (+0.023R/sinal) |
+| TODOS | 363 | 362 | 212 (59%) | +7.58R (+0.021R/sinal) |
 
-**MAE dos acertos** (quanto o preco foi CONTRA antes de dar certo) — n=210, mediana 0.35R, maximo 0.99R, 8% acima de 0.8R.
+**MAE dos acertos** (quanto o preco foi CONTRA antes de dar certo) — n=212, mediana 0.35R, maximo 0.99R, 8% acima de 0.8R.
 
 > Le-se assim: apertar `STOP_BUFFER_ATR_MULT` mata os acertos cujo MAE ja esta perto de 1R. Se essa cauda for gorda, nao ha folga pra apertar o stop.
 
@@ -26,9 +26,9 @@ Regra de alvo em vigor agora: **proximo** (coluna `Regra` abaixo mostra qual dec
 
 | Par | Setup | Direcao | Aceito | Regra | R:R (recente) | R:R (proximo) | Resultado | MAE | MFE | Candles | Quando |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| SUI/USDT | B | compra | nao | proximo | 1.76 | 1.76 | aberto | — | — | — | 2026-10-11 12:06 |
+| SUI/USDT | B | compra | nao | proximo | 1.76 | 1.76 | +1.76 | 0.396 | 2.305 | 1 | 2026-10-11 12:06 |
 | WLD/USDT | B | compra | nao | proximo | 1.69 | 1.48 | +1.48 | 0.75 | 2.661 | 2 | 2026-10-11 10:06 |
-| SUI/USDT | B | compra | sim | proximo | 4.23 | 4.23 | aberto | 0.791 | 1.259 | — | 2026-10-11 10:06 |
+| SUI/USDT | B | compra | sim | proximo | 4.23 | 4.23 | +4.23 | 0.791 | 5.246 | 3 | 2026-10-11 10:06 |
 | WLD/USDT | B | venda | nao | proximo | 1.72 | 0.31 | +0.31 | 0.132 | 0.924 | 1 | 2026-10-11 07:06 |
 | SUI/USDT | B | compra | nao | proximo | 1.74 | 1.74 | -1.00 | 1.104 | 0.239 | 6 | 2026-10-11 02:06 |
 | WLD/USDT | B | compra | nao | proximo | 0.41 | 0.41 | -1.00 | 1.877 | 0.289 | 2 | 2026-10-10 23:06 |

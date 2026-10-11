@@ -773,6 +773,40 @@
    "liq_stop": -0.5298797288432164,
    "r_stop": -1.5144625000000167,
    "nr7": false
+  },
+  {
+   "sym": "NEARUSDT",
+   "lado": 1,
+   "barra": 1791720000000,
+   "entrada_ts": 1791734400000,
+   "detectado": 1791734760000,
+   "p_in": 5.79,
+   "p_in_real": 5.713,
+   "saida_ts": 1791907200000,
+   "top": [
+    "TAOUSDT",
+    "LINKUSDT",
+    "AVAXUSDT",
+    "ADAUSDT",
+    "PUMPUSDT",
+    "WLDUSDT",
+    "1000PEPEUSDT",
+    "ENAUSDT",
+    "BNBUSDT",
+    "QNTUSDT",
+    "SUIUSDT",
+    "UNIUSDT",
+    "DOGEUSDT",
+    "HYPEUSDT",
+    "XRPUSDT",
+    "SOLUSDT",
+    "ZECUSDT",
+    "ETHUSDT",
+    "BTCUSDT"
+   ],
+   "status": "aberto",
+   "nivel": 5.632,
+   "nr7": true
   }
  ],
  "iniciado": 1791232470885,
@@ -799,5 +833,5 @@
   "BTCUSDT"
  ],
  "dia_top": 1791676800000,
- "ultima_barra": 1791705600000
+ "ultima_barra": 1791720000000
 }
