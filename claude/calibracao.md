@@ -1,4 +1,4 @@
-# Calibracao — registro mecanico de sinais (atualizado 2026-10-12 15:06 BRT)
+# Calibracao — registro mecanico de sinais (atualizado 2026-10-12 16:06 BRT)
 
 > **Nao edite este arquivo** — ele e reescrito a cada execucao a partir da tabela `sinais_mecanicos`. Diferente de `sinais.md`, aqui nao ha nenhuma decisao sua: e TODA confirmacao mecanica detectada, inclusive as descartadas por R:R baixo, com desfecho medido por geometria de preco (OHLC de 1h contra stop/alvo sugeridos).
 >
@@ -26,7 +26,7 @@ Regra de alvo em vigor agora: **proximo** (coluna `Regra` abaixo mostra qual dec
 
 | Par | Setup | Direcao | Aceito | Regra | R:R (recente) | R:R (proximo) | Resultado | MAE | MFE | Candles | Quando |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| ARB/USDT | B | venda | nao | proximo | 0.33 | 0.32 | aberto | 0.238 | 0.168 | — | 2026-10-12 14:06 |
+| ARB/USDT | B | venda | nao | proximo | 0.33 | 0.32 | aberto | 0.24 | 0.168 | — | 2026-10-12 14:06 |
 | ETH/USDT | B | compra | nao | proximo | 1.62 | 0.57 | -1.00 | 1.227 | 0.126 | 1 | 2026-10-12 11:06 |
 | SOL/USDT | B | venda | nao | proximo | 0.44 | 0.44 | +0.44 | 0.512 | 0.643 | 1 | 2026-10-12 10:06 |
 | BTC/USDT | B | venda | nao | proximo | 1.60 | 1.60 | +1.60 | 0.013 | 5.599 | 2 | 2026-10-12 08:06 |
