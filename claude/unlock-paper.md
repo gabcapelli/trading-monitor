@@ -7,11 +7,11 @@
 > venda + compra da cesta dos 20 majors. Custo 0.18% por perna e funding real.
 > **Só reavaliar com 150 trades fechados.** Antes disso é ruído.
 
-_Atualizado em 2026-10-11 (calendário de 2026-10-11)._
+_Atualizado em 2026-10-12 (calendário de 2026-10-12)._
 
-**Trades fechados:** 9 de 150 (6%)
+**Trades fechados:** 10 de 150 (7%)
 
-**Média por trade:** puro +2.73% · com hedge +0.59% · hedge positivo em 5/9 (56%)
+**Média por trade:** puro +1.20% · com hedge -1.09% · hedge positivo em 5/10 (50%)
 
 _Referência do backtest (2025–2026): puro +2.9%, excesso sobre o universo +2.1%._
 
@@ -19,7 +19,6 @@ _Referência do backtest (2025–2026): puro +2.9%, excesso sobre o universo +2.
 
 | Token | Desbloqueio | % da oferta | Venda em (abertura) | Preço de entrada |
 |---|---|---|---|---|
-| APT | 2026-10-12 | 1.3% | 2026-10-05 | 0.8008 |
 | BB | 2026-10-13 | 2.9% | 2026-10-06 | 0.009883 |
 | PUMP | 2026-10-13 | 1.3% | 2026-10-06 | 0.006463 |
 | SEI | 2026-10-14 | 1.6% | 2026-10-07 | 0.07194 |
@@ -28,12 +27,12 @@ _Referência do backtest (2025–2026): puro +2.9%, excesso sobre o universo +2.
 | OMNI | 2026-10-18 | 20.6% | 2026-10-11 | 4.274 |
 | UXLINK | 2026-10-18 | 3.9% | 2026-10-11 | 0.0729 |
 | ZK | 2026-10-18 | 2.5% | 2026-10-11 | 0.015167 |
+| SOLV | 2026-10-19 | 3.4% | 2026-10-12 | 0.004144 |
 
 ## Próximas entradas (calendário atual)
 
 | Token | Desbloqueio | % da oferta | % insiders | Entrada prevista |
 |---|---|---|---|---|
-| SOLV | 2026-10-19 | 3.4% | 68% | 2026-10-12 |
 | KAITO | 2026-10-20 | 3.7% | 53% | 2026-10-13 |
 | ZRO | 2026-10-21 | 3.6% | 100% | 2026-10-14 |
 | APR | 2026-10-24 | 47.2% | 78% | 2026-10-17 |
@@ -53,6 +52,7 @@ _Passa pelos filtros (perpétuo com ≥ 30 dias, mesmo token a ≥ 14 dias) só 
 
 | Token | Desbloqueio | % da oferta | Retorno do token | Cesta | Puro | Com hedge | Obs. |
 |---|---|---|---|---|---|---|---|
+| APT | 2026-10-12 | 1.3% | +12.46% | -3.45% | -12.53% | -16.21% |  |
 | CARV | 2026-10-11 | 6.1% | -6.44% | -5.76% | +2.18% | -3.80% |  |
 | MOVE | 2026-10-10 | 3.7% | -8.44% | -6.35% | +8.09% | +1.52% |  |
 | STO | 2026-10-03 | 4.9% | -5.63% | -3.73% | +5.64% | +1.65% |  |
