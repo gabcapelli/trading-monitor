@@ -1,6 +1,6 @@
 # Painel de estratégias
 
-_Atualizado em 12/10 04:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
+_Atualizado em 12/10 05:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
 
 ## Precisa de você
 
@@ -30,17 +30,17 @@ _Nada pendente._
 
 | Estratégia | Ativo | Desde | Entrada | Agora | Resultado | Obs. |
 |---|---|---|---|---|---|---|
-| Desbloqueio | PUMP | 06/10 | 0.006463 | 0.005839 | +9.65% | com hedge +4.83%; recompra 13/10 |
-| Desbloqueio | SEI | 07/10 | 0.07194 | 0.06977 | +3.02% | com hedge -0.51%; recompra 14/10 |
-| Desbloqueio | BB | 06/10 | 0.009883 | 0.009818 | +0.66% | com hedge -4.17%; recompra 13/10 |
+| Desbloqueio | PUMP | 06/10 | 0.006463 | 0.005804 | **+10.20%** | com hedge +5.13%; recompra 13/10 |
+| Desbloqueio | SEI | 07/10 | 0.07194 | 0.06979 | +2.99% | com hedge -0.78%; recompra 14/10 |
+| Desbloqueio | BB | 06/10 | 0.009883 | 0.009755 | +1.30% | com hedge -3.77%; recompra 13/10 |
+| Desbloqueio | SOLV | 12/10 | 0.004144 | 0.00412 | +0.58% | com hedge +0.63%; recompra 19/10 |
 | Desbloqueio | OMNI | 11/10 | 4.274 | — | — | recompra 18/10 |
 | Desbloqueio | UXLINK | 11/10 | 0.0729 | — | — | recompra 18/10 |
-| Desbloqueio | SOLV | 12/10 | 0.004144 | 0.00416 | -0.39% | com hedge -0.09%; recompra 19/10 |
-| Desbloqueio | ZK | 11/10 | 0.015167 | 0.01602 | -5.62% | com hedge -2.87%; recompra 18/10 |
-| Desbloqueio | VANA | 10/10 | 1.0484 | 1.1182 | -6.66% | com hedge -1.66%; recompra 17/10 |
-| Desbloqueio | ARB | 09/10 | 0.17263 | 0.19488 | **-12.89%** | com hedge -5.77%; recompra 16/10 |
-| Perpétuo novo | CT | 03/10 | 0.50286 | 0.31726 | **+36.91%** | stop 0.75429; saída 02/11 |
-| Rompimento 48h | NEAR | 11/10 13:00 | 5.79 | 5.808 | +0.31% | comprado; saída 13/10 13:00 |
+| Desbloqueio | ZK | 11/10 | 0.015167 | 0.015775 | -4.01% | com hedge -1.52%; recompra 18/10 |
+| Desbloqueio | VANA | 10/10 | 1.0484 | 1.1156 | -6.41% | com hedge -1.68%; recompra 17/10 |
+| Desbloqueio | ARB | 09/10 | 0.17263 | 0.19392 | **-12.33%** | com hedge -5.47%; recompra 16/10 |
+| Perpétuo novo | CT | 03/10 | 0.50286 | 0.31755 | **+36.85%** | stop 0.75429; saída 02/11 |
+| Rompimento 48h | NEAR | 11/10 13:00 | 5.79 | 5.817 | +0.47% | comprado; saída 13/10 13:00 |
 
 <sub>Resultado a preço de mercado, bruto (sem custo nem funding), já no lado da posição: positivo = a favor. Em negrito, movimentos de 10% ou mais. Com hedge = venda + cesta dos majors.</sub>
 
