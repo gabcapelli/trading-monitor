@@ -1,6 +1,6 @@
 # Painel de estratégias
 
-_Atualizado em 12/10 20:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
+_Atualizado em 12/10 21:07 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
 
 ## Precisa de você
 
@@ -10,7 +10,7 @@ _Nada pendente._
 
 | Estratégia | Abertos | Fechados | Média |
 |---|---|---|---|
-| [Desbloqueio](claude/unlock-paper.md) | 9 | 10/150 | -1.09% |
+| [Desbloqueio](claude/unlock-paper.md) | 8 | 12/150 | -0.24% |
 | [Perpétuo novo](claude/novos-paper.md) | 1 | 0/100 | — |
 | [Rompimento 48h](claude/continuacao-paper.md) · exceção | 1 | 18/300 | -7.41% |
 | [Monitoring Tag](claude/monitoring-paper.md) | 0 | 1/24 | -4.20% |
@@ -23,33 +23,33 @@ _Nada pendente._
 
 <sub>Desde o fechamento das 21h (Brasília).</sub>
 
-- Desbloqueio: recomprou APT: puro -12.53%, com hedge -16.21%
-- Desbloqueio: vendeu SOLV a 0.004144 (desbloqueio 19/10)
+- Desbloqueio: recomprou BB: puro +8.24%, com hedge -3.39%
+- Desbloqueio: vendeu KAITO a 0.3034 (desbloqueio 20/10)
+- Desbloqueio: recomprou PUMP: puro +23.10%, com hedge +11.46%
 
 ## Abertos agora
 
 | Estratégia | Ativo | Desde | Entrada | Agora | Resultado | Obs. |
 |---|---|---|---|---|---|---|
-| Desbloqueio | PUMP | 06/10 | 0.006463 | 0.004972 | **+23.07%** | com hedge +12.14%; recompra 13/10 |
-| Desbloqueio | SEI | 07/10 | 0.07194 | 0.06386 | **+11.23%** | com hedge +1.50%; recompra 14/10 |
-| Desbloqueio | BB | 06/10 | 0.009883 | 0.009099 | +7.93% | com hedge -2.99%; recompra 13/10 |
-| Desbloqueio | ZK | 11/10 | 0.015167 | 0.014542 | +4.12% | com hedge +0.28%; recompra 18/10 |
-| Desbloqueio | SOLV | 12/10 | 0.004144 | 0.003991 | +3.69% | com hedge -2.40%; recompra 19/10 |
+| Desbloqueio | SEI | 07/10 | 0.07194 | 0.06239 | **+13.27%** | com hedge +2.36%; recompra 14/10 |
+| Desbloqueio | SOLV | 12/10 | 0.004144 | 0.003912 | +5.60% | com hedge -1.75%; recompra 19/10 |
+| Desbloqueio | ZK | 11/10 | 0.015167 | 0.014388 | +5.14% | com hedge +0.01%; recompra 18/10 |
+| Desbloqueio | KAITO | 13/10 | 0.3034 | 0.2989 | +1.48% | com hedge +0.73%; recompra 20/10 |
+| Desbloqueio | VANA | 10/10 | 1.0484 | 1.0434 | +0.48% | com hedge -2.63%; recompra 17/10 |
 | Desbloqueio | OMNI | 11/10 | 4.274 | — | — | recompra 18/10 |
 | Desbloqueio | UXLINK | 11/10 | 0.0729 | — | — | recompra 18/10 |
-| Desbloqueio | VANA | 10/10 | 1.0484 | 1.059 | -1.01% | com hedge -2.80%; recompra 17/10 |
-| Desbloqueio | ARB | 09/10 | 0.17263 | 0.1808 | -4.73% | com hedge -4.55%; recompra 16/10 |
-| Perpétuo novo | CT | 03/10 | 0.50286 | 0.35998 | **+28.41%** | stop 0.75429; saída 02/11 |
-| Rompimento 48h | NEAR | 11/10 13:00 | 5.79 | 5.084 | **-12.19%** | comprado; saída 13/10 13:00 |
+| Desbloqueio | ARB | 09/10 | 0.17263 | 0.17805 | -3.14% | com hedge -4.28%; recompra 16/10 |
+| Perpétuo novo | CT | 03/10 | 0.50286 | 0.3632 | **+27.77%** | stop 0.75429; saída 02/11 |
+| Rompimento 48h | NEAR | 11/10 13:00 | 5.79 | 5.093 | **-12.04%** | comprado; saída 13/10 13:00 |
 
 <sub>Resultado a preço de mercado, bruto (sem custo nem funding), já no lado da posição: positivo = a favor. Em negrito, movimentos de 10% ou mais. Com hedge = venda + cesta dos majors.</sub>
 
 ## Próximos eventos
 
-- 13/10 · Desbloqueio: recompra de BB, PUMP
-- 13/10 · Desbloqueio: venda prevista de KAITO
 - 14/10 · Desbloqueio: recompra de SEI
+- 14/10 · Desbloqueio: venda prevista de ZRO
 - 16/10 · Desbloqueio: recompra de ARB
+- 16/10 · Sábado: entrada da cesta (21h)
 
 ## Outros
 

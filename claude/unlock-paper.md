@@ -7,11 +7,11 @@
 > venda + compra da cesta dos 20 majors. Custo 0.18% por perna e funding real.
 > **Só reavaliar com 150 trades fechados.** Antes disso é ruído.
 
-_Atualizado em 2026-10-12 (calendário de 2026-10-12)._
+_Atualizado em 2026-10-13 (calendário de 2026-10-13)._
 
-**Trades fechados:** 10 de 150 (7%)
+**Trades fechados:** 12 de 150 (8%)
 
-**Média por trade:** puro +1.20% · com hedge -1.09% · hedge positivo em 5/10 (50%)
+**Média por trade:** puro +3.61% · com hedge -0.24% · hedge positivo em 6/12 (50%)
 
 _Referência do backtest (2025–2026): puro +2.9%, excesso sobre o universo +2.1%._
 
@@ -19,8 +19,6 @@ _Referência do backtest (2025–2026): puro +2.9%, excesso sobre o universo +2.
 
 | Token | Desbloqueio | % da oferta | Venda em (abertura) | Preço de entrada |
 |---|---|---|---|---|
-| BB | 2026-10-13 | 2.9% | 2026-10-06 | 0.009883 |
-| PUMP | 2026-10-13 | 1.3% | 2026-10-06 | 0.006463 |
 | SEI | 2026-10-14 | 1.6% | 2026-10-07 | 0.07194 |
 | ARB | 2026-10-16 | 1.3% | 2026-10-09 | 0.17263 |
 | VANA | 2026-10-17 | 1.7% | 2026-10-10 | 1.0484 |
@@ -28,12 +26,12 @@ _Referência do backtest (2025–2026): puro +2.9%, excesso sobre o universo +2.
 | UXLINK | 2026-10-18 | 3.9% | 2026-10-11 | 0.0729 |
 | ZK | 2026-10-18 | 2.5% | 2026-10-11 | 0.015167 |
 | SOLV | 2026-10-19 | 3.4% | 2026-10-12 | 0.004144 |
+| KAITO | 2026-10-20 | 3.7% | 2026-10-13 | 0.3034 |
 
 ## Próximas entradas (calendário atual)
 
 | Token | Desbloqueio | % da oferta | % insiders | Entrada prevista |
 |---|---|---|---|---|
-| KAITO | 2026-10-20 | 3.7% | 53% | 2026-10-13 |
 | ZRO | 2026-10-21 | 3.6% | 100% | 2026-10-14 |
 | APR | 2026-10-24 | 47.2% | 78% | 2026-10-17 |
 | H | 2026-10-24 | 7.3% | 55% | 2026-10-17 |
@@ -45,6 +43,9 @@ _Referência do backtest (2025–2026): puro +2.9%, excesso sobre o universo +2.
 | ZETA | 2026-11-02 | 2.7% | 51% | 2026-10-26 |
 | STO | 2026-11-03 | 4.7% | 61% | 2026-10-27 |
 | MOVE | 2026-11-10 | 3.6% | 70% | 2026-11-03 |
+| BB | 2026-11-12 | 2.3% | 99% | 2026-11-05 |
+| PUMP | 2026-11-12 | 1.3% | 100% | 2026-11-05 |
+| APT | 2026-11-12 | 1.3% | 60% | 2026-11-05 |
 
 _Passa pelos filtros (perpétuo com ≥ 30 dias, mesmo token a ≥ 14 dias) só no dia da entrada._
 
@@ -52,6 +53,8 @@ _Passa pelos filtros (perpétuo com ≥ 30 dias, mesmo token a ≥ 14 dias) só 
 
 | Token | Desbloqueio | % da oferta | Retorno do token | Cesta | Puro | Com hedge | Obs. |
 |---|---|---|---|---|---|---|---|
+| PUMP | 2026-10-13 | 1.3% | -23.15% | -11.44% | +23.10% | +11.46% |  |
+| BB | 2026-10-13 | 2.9% | -8.22% | -11.44% | +8.24% | -3.39% |  |
 | APT | 2026-10-12 | 1.3% | +12.46% | -3.45% | -12.53% | -16.21% |  |
 | CARV | 2026-10-11 | 6.1% | -6.44% | -5.76% | +2.18% | -3.80% |  |
 | MOVE | 2026-10-10 | 3.7% | -8.44% | -6.35% | +8.09% | +1.52% |  |
