@@ -43,9 +43,9 @@ _Referência do backtest (2025–2026): puro +2.9%, excesso sobre o universo +2.
 | ZETA | 2026-11-02 | 2.7% | 51% | 2026-10-26 |
 | STO | 2026-11-03 | 4.7% | 61% | 2026-10-27 |
 | MOVE | 2026-11-10 | 3.6% | 70% | 2026-11-03 |
+| APT | 2026-11-12 | 1.3% | 60% | 2026-11-05 |
 | BB | 2026-11-12 | 2.3% | 99% | 2026-11-05 |
 | PUMP | 2026-11-12 | 1.3% | 100% | 2026-11-05 |
-| APT | 2026-11-12 | 1.3% | 60% | 2026-11-05 |
 
 _Passa pelos filtros (perpétuo com ≥ 30 dias, mesmo token a ≥ 14 dias) só no dia da entrada._
 

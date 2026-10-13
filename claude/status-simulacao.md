@@ -1,4 +1,4 @@
-# Situacao atual -- Multi-Par (script gratuito, sem LLM) -- atualizado 2026-10-12 21:06 BRT
+# Situacao atual -- Multi-Par (script gratuito, sem LLM) -- atualizado 2026-10-12 22:05 BRT
 
 > Gerado por `monitor/fetch_and_check.py` via GitHub Actions, sem chamar a API do Claude. Registra fatos objetivos; a interpretacao qualitativa fica a seu criterio (ou cole este arquivo + o log numa conversa do Claude).
 
@@ -8,13 +8,13 @@
 
 | Par | Tendencia 4h | Close 1h | Funding | Zona / setup candidato | Status |
 |---|---|---|---|---|---|
-| BTC/USDT | alta | 81808.0 | 0.0024% | Setup B (compra) 82741.7-82959.9 (0/3 toques, 2/8 candles) | zona_mapeada_setup_B |
-| ETH/USDT | alta | 2446.0 | 0.0015% | — | invalidado_setup_B |
-| SOL/USDT | alta | 105.71 | 0.0096% | Setup B (compra) 105.34-105.88 (1/3 toques, 0/8 candles) | zona_mapeada_setup_B |
-| XRP/USDT | alta | 1.3413 | -0.0026% | — | sem_zona |
-| DOGE/USDT | alta | 0.08220 | 0.0059% | — | sem_zona |
-| ARB/USDT | lateral | 0.17961 | 0.0096% | Setup B (compra) 0.17819-0.17981 (0/3 toques, 0/8 candles) | zona_mapeada_setup_B |
-| WLD/USDT | alta | 0.49830 | 0.0076% | — | sem_zona |
-| SUI/USDT | alta | 1.0282 | 0.0100% | — | zona_expirada_setup_B |
-| UNI/USDT | alta | 6.9690 | 0.0100% | Setup B (compra) 7.4288-7.4752 (0/3 toques, 4/8 candles) | zona_mapeada_setup_B |
-| LINK/USDT | alta | 12.62 | -0.0078% | — | sem_zona |
+| BTC/USDT | alta | 81403.4 | 0.0024% | Setup B (compra) 82741.7-82959.9 (0/3 toques, 3/8 candles) | zona_mapeada_setup_B |
+| ETH/USDT | alta | 2420.8 | -0.0007% | Setup B (compra) 2399.2-2410.8 (0/3 toques, 0/8 candles) | zona_mapeada_setup_B |
+| SOL/USDT | alta | 102.95 | 0.0076% | — | invalidado_setup_B |
+| XRP/USDT | alta | 1.3200 | -0.0039% | Setup B (compra) 1.3137-1.3215 (0/3 toques, 0/8 candles) | zona_mapeada_setup_B |
+| DOGE/USDT | alta | 0.08099 | 0.0062% | Setup B (compra) 0.08064-0.08120 (0/3 toques, 0/8 candles) | zona_mapeada_setup_B |
+| ARB/USDT | lateral | 0.17645 | 0.0094% | — | invalidado_setup_B |
+| WLD/USDT | alta | 0.48020 | 0.0069% | Setup B (compra) 0.47756-0.48264 (0/3 toques, 0/8 candles) | zona_mapeada_setup_B |
+| SUI/USDT | alta | 1.0069 | 0.0100% | Setup B (compra) 0.99243-1.0018 (0/3 toques, 0/8 candles) | zona_mapeada_setup_B |
+| UNI/USDT | alta | 6.8220 | 0.0100% | Setup B (compra) 7.4288-7.4752 (0/3 toques, 5/8 candles) | zona_mapeada_setup_B |
+| LINK/USDT | alta | 12.36 | -0.0079% | — | sem_zona |
