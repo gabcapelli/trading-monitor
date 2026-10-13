@@ -1,6 +1,6 @@
 # Painel de estratégias
 
-_Atualizado em 13/10 17:05 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
+_Atualizado em 13/10 18:05 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
 
 ## Precisa de você
 
@@ -32,15 +32,15 @@ _Nada pendente._
 
 | Estratégia | Ativo | Desde | Entrada | Agora | Resultado | Obs. |
 |---|---|---|---|---|---|---|
-| Desbloqueio | SEI | 07/10 | 0.07194 | 0.06396 | **+11.09%** | com hedge +3.02%; recompra 14/10 |
-| Desbloqueio | SOLV | 12/10 | 0.004144 | 0.003998 | +3.52% | com hedge -0.81%; recompra 19/10 |
+| Desbloqueio | SEI | 07/10 | 0.07194 | 0.06443 | **+10.44%** | com hedge +2.33%; recompra 14/10 |
+| Desbloqueio | SOLV | 12/10 | 0.004144 | 0.004004 | +3.38% | com hedge -1.00%; recompra 19/10 |
 | Desbloqueio | OMNI | 11/10 | 4.274 | — | — | recompra 18/10 |
 | Desbloqueio | UXLINK | 11/10 | 0.0729 | — | — | recompra 18/10 |
-| Desbloqueio | KAITO | 13/10 | 0.3034 | 0.3093 | -1.94% | com hedge +0.55%; recompra 20/10 |
-| Desbloqueio | VANA | 10/10 | 1.0484 | 1.0701 | -2.07% | com hedge -2.02%; recompra 17/10 |
-| Desbloqueio | ZK | 11/10 | 0.015167 | 0.016577 | -9.30% | com hedge -11.35%; recompra 18/10 |
-| Desbloqueio | ARB | 09/10 | 0.17263 | 0.18994 | **-10.03%** | com hedge -8.14%; recompra 16/10 |
-| Perpétuo novo | CT | 03/10 | 0.50286 | 0.35391 | **+29.62%** | stop 0.75429; saída 02/11 |
+| Desbloqueio | VANA | 10/10 | 1.0484 | 1.0647 | -1.55% | com hedge -1.55%; recompra 17/10 |
+| Desbloqueio | KAITO | 13/10 | 0.3034 | 0.3095 | -2.01% | com hedge +0.44%; recompra 20/10 |
+| Desbloqueio | ZK | 11/10 | 0.015167 | 0.016531 | -8.99% | com hedge -11.09%; recompra 18/10 |
+| Desbloqueio | ARB | 09/10 | 0.17263 | 0.19107 | **-10.68%** | com hedge -8.87%; recompra 16/10 |
+| Perpétuo novo | CT | 03/10 | 0.50286 | 0.36567 | **+27.28%** | stop 0.75429; saída 02/11 |
 
 <sub>Resultado a preço de mercado, bruto (sem custo nem funding), já no lado da posição: positivo = a favor. Em negrito, movimentos de 10% ou mais. Com hedge = venda + cesta dos majors.</sub>
 
