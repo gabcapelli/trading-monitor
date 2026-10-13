@@ -1589,6 +1589,27 @@ Script: `monitor/replay_pc_ichimoku.py` · log: `claude/pc_ichimoku.log`. Últim
 - **No 4h**, o bruto mal passa de zero e o custo deixa o líquido negativo. O excesso de +0.03R do Ponto Contínuo, com 41 mil trades, é real e irrelevante (~0.1% por trade).
 - **A fila combinada terminou: são 18 setups de gráfico testados** (estudos 1–13, 22, 34, 57–59, 63–67), e nenhum tem resultado bruto que pague o custo. Os que ficam levemente positivos no diário são compras de tendência (beta), não timing.
 
+## 68 e 69. Setups de fluxo de ordens: absorção e divergência de delta acumulado — 13/10/2026
+
+Script: `monitor/replay_fluxo_setups.py` · log: `claude/fluxo_setups.log`. Pedido do Gabriel: seguir buscando candidatos para o papel. Os dois setups vêm da leitura de fluxo (order flow) usada por traders de futuros, e é o primeiro uso do volume de compra agressiva (taker) do perpétuo **em formato de setup** (o 55 usou o mesmo dado para comparar spot e perp). Tentativa única cada, régua idêntica ao 63–67. Delta do candle = (compra agressiva − venda agressiva) / volume.
+- **68, absorção:** delta do candle com z-score ≤ −2 contra os 50 anteriores (venda agressiva anormal), mas o candle fecha em alta e na metade de cima. Compra stop na máxima, stop na mínima. Venda no espelho.
+- **69, divergência de CVD:** máxima de 20 candles com CVD da janela negativo (alta sem compra agressiva). Venda stop na mínima, stop na máxima. Compra no espelho.
+
+| Célula | R líquido | IC97.5 | Excesso | IC97.5 | R bruto | n |
+|---|---|---|---|---|---|---|
+| **Absorção 1d** | −0.07R | [−0.28, +0.15] | −0.14R | [−0.37, +0.11] | −0.03R | 363 |
+| **Absorção 4h** | −0.17R | [−0.24, −0.10] | −0.05R | [−0.12, +0.02] | −0.06R | 2.386 |
+| **CVD 1d** | −0.07R | [−0.19, +0.05] | +0.12R | [+0.02, +0.23] | −0.07R | 2.981 |
+| **CVD 4h** | −0.10R | [−0.14, −0.05] | −0.03R | [−0.07, +0.02] | −0.05R | 17.680 |
+| CVD ajustado (69b) 1d | −0.06R | [−0.19, +0.07] | +0.14R | [+0.01, +0.26] | −0.05R | 1.988 |
+| CVD ajustado (69b) 4h | −0.06R | [−0.11, −0.01] | +0.04R | [−0.00, +0.09] | −0.01R | 12.798 |
+
+**Veredito: NÃO PASSA em todas as células.**
+- **Absorção:** bruto negativo nos dois tempos gráficos e em quase todos os anos. Venda agressiva anormal num candle de alta não marca fundo.
+- **Viés de medida encontrado no 69:** o delta do perpétuo é negativo em média (−1% a −4%, pior nas altcoins). Por isso o CVD da janela quase sempre fica negativo, e o 69 virou "vender toda máxima de 20 candles" (95% vendas). O **69b** (rodada única, depois do resultado) desconta o delta médio dos 100 candles anteriores. Equilibra os lados, mas o bruto continua ≤ 0. O excesso positivo do diário vem de o placebo com o mesmo stop de ~12% perder mais, não de o sinal ganhar.
+- **Lição para quem usar o delta de novo:** normalizar pelo próprio histórico; o sinal cru carrega o viés vendedor do perpétuo.
+- **Funil para o papel** (proposto nesta rodada, descritivo: R bruto > 0, excesso com IC95 > 0, n ≥ 200): nenhuma célula entra.
+
 ## Leitura conjunta
 
 Mesma direção do achado da auditoria v6 sobre o checklist mecânico dos Setups A/B. Nenhum dos dez setups de vídeo tem edge mecânico demonstrável nesses 20 pares (o 9.1 também não, fora da amostra, nos 80 pares do estudo 6):
