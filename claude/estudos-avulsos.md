@@ -1610,6 +1610,25 @@ Script: `monitor/replay_fluxo_setups.py` · log: `claude/fluxo_setups.log`. Pedi
 - **Lição para quem usar o delta de novo:** normalizar pelo próprio histórico; o sinal cru carrega o viés vendedor do perpétuo.
 - **Funil para o papel** (proposto nesta rodada, descritivo: R bruto > 0, excesso com IC95 > 0, n ≥ 200): nenhuma célula entra.
 
+## 70 e 71. Proporção de comprados e vendidos da Binance: top traders contra o varejo e varejo extremo — 13/10/2026
+
+Script: `monitor/replay_ls_ratio.py` · log: `claude/ls_ratio.log` · dados: `monitor/baixar_metrics.py` → `monitor/cache_metrics/` (metrics diários da Binance Vision, 5 min, último registro de cada hora; 147.582 dias-símbolo, ~2h20 de download). Dado nunca usado no projeto: a API só guarda 30 dias, mas a Binance Vision tem o arquivo desde 2020-09. **Na prática, as proporções de contas só aparecem preenchidas a partir de 2022, e as dos top traders a partir de 2023** (os anos anteriores têm poucas dezenas de sinais; antes disso o arquivo só traz open interest). Regras congeladas antes de olhar os dados, tentativa única cada, régua idêntica ao 63–69.
+- **70, top traders contra o varejo:** X = ln(posições dos top traders) − ln(contas). Compra se o z-score contra os 30 dias anteriores ≥ +2; venda se ≤ −2.
+- **71, varejo extremo, contrário:** X = ln(contas). Venda se z ≥ +2; compra se z ≤ −2.
+
+| Célula | R líquido | IC97.5 | Excesso | IC97.5 | R bruto | n |
+|---|---|---|---|---|---|---|
+| **70 1d** | −0.03R | [−0.11, +0.06] | −0.09R | [−0.17, −0.01] | +0.00R | 2.253 |
+| **70 4h** | −0.08R | [−0.12, −0.04] | −0.02R | [−0.06, +0.02] | −0.00R | 7.604 |
+| **71 1d** | +0.03R | [−0.06, +0.11] | −0.02R | [−0.10, +0.07] | +0.05R | 2.634 |
+| **71 4h** | −0.06R | [−0.10, −0.02] | +0.02R | [−0.03, +0.06] | +0.01R | 8.604 |
+
+**Veredito: NÃO PASSA nos quatro; o funil também não aceita nenhuma célula.**
+- **Seguir os top traders contra o varejo não dá nada:** bruto zero nos dois tempos gráficos. No diário, o excesso é até negativo: o candle em que os grandes divergem do varejo é pior que uma entrada ao acaso.
+- **Apostar contra o varejo lotado também não:** bruto de +0.05R no diário, que o custo come, e a 2ª metade em zero.
+- **A proporção de comprados e vendidos não carrega informação de direção** que sobreviva a 10 candles. É o mesmo quadro de funding, prêmio e open interest (27, 31, 36): o posicionamento é público e já está no preço.
+- O cache fica disponível (`cache_metrics/`, no `.gitignore`) para hipóteses futuras sobre posicionamento ou open interest de 5 min.
+
 ## Leitura conjunta
 
 Mesma direção do achado da auditoria v6 sobre o checklist mecânico dos Setups A/B. Nenhum dos dez setups de vídeo tem edge mecânico demonstrável nesses 20 pares (o 9.1 também não, fora da amostra, nos 80 pares do estudo 6):
