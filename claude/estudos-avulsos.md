@@ -1556,6 +1556,21 @@ Script: `monitor/replay_div_engolfo.py` · log: `claude/div_engolfo.log`. Pedido
 - **Engolfo/martelo:** bruto em zero ou negativo nos dois tempos gráficos, estável e ruim em todos os anos de 2021 em diante; martelo pior que engolfo (descritivo: −0.11R contra −0.04R líquido no diário). O suporte não muda nada: rejeição no nível não deixa rastro operável.
 - **São 15 setups de gráfico testados**, e nenhum tem bruto que pague o custo. A conclusão da "Leitura conjunta" fica reforçada: o sinal de candle e indicador não carrega informação acima de ~1% por trade nestes dados.
 
+## 65. Barra elefante a favor da tendência — 13/10/2026
+
+Script: `monitor/replay_elefante.py` · log: `claude/elefante.log`. Próximo da fila combinada no 63–64, tentativa única, régua idêntica (top 50 do dia, 1d e 4h, IC 97.5%, placebo com o mesmo risco %, custo 0.18% mais funding).
+- **Regra:** candle de alta com amplitude ≥ 2× a média dos 20 anteriores e corpo ≥ 70% da amplitude, fechando acima da MM21 com a MM21 subindo. Compra stop na máxima, válida no candle seguinte; stop na mínima da barra; alvo 2R; saída em 10 candles. Venda no espelho.
+
+| Célula | R líquido | IC97.5 | Excesso | IC97.5 | R bruto | Acerto | n |
+|---|---|---|---|---|---|---|---|
+| **1d** | +0.10R | [−0.01, +0.22] | **−0.22R** | [−0.31, −0.12] | +0.12R | 44% | 1.224 |
+| **4h** | +0.01R | [−0.04, +0.07] | +0.00R | [−0.06, +0.06] | +0.04R | 43% | 8.027 |
+
+**Veredito: NÃO PASSA nos dois.**
+- **No diário o líquido é positivo, mas é beta, e a entrada atrapalha:** 3/4 dos trades são compras em moeda em alta, e uma compra num dia qualquer perto dele, com o mesmo risco, rende **mais** (+0.32R). O excesso negativo com IC < 0 diz que entrar no rompimento da barra elefante é pior que entrar ao acaso: compra-se o candle esticado. O stop médio de 28% (a mínima da barra) também torna o trade inviável na prática.
+- **No 4h, zero** em tudo, todos os anos.
+- São **16 setups de gráfico** testados.
+
 ## Leitura conjunta
 
 Mesma direção do achado da auditoria v6 sobre o checklist mecânico dos Setups A/B. Nenhum dos dez setups de vídeo tem edge mecânico demonstrável nesses 20 pares (o 9.1 também não, fora da amostra, nos 80 pares do estudo 6):
