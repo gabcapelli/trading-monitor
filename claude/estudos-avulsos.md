@@ -1538,6 +1538,24 @@ Script: `monitor/replay_nr7_46.py` · log: `claude/nr7_46.log`. Tentativa única
 
 Correção de rótulo junto deste estudo: em `replay_fluxo_spot_perp.fmt`, os intervalos pedidos com 95% (subgrupos descritivos dos estudos 57–60) eram impressos como "IC97.5%". Os números estavam certos; agora o rótulo segue o nível pedido.
 
+## 63 e 64. Divergência de IFR e engolfo/martelo em suporte — 13/10/2026
+
+Script: `monitor/replay_div_engolfo.py` · log: `claude/div_engolfo.log`. Pedido do Gabriel: voltar aos setups de gráfico depois do fechamento da fila no 59. Combinamos testar só os dois clássicos com lógica ainda não coberta. Ressalva fixada antes: depois de 13 setups com bruto em zero, a chance de um 14º passar é pequena e um PASSA só autorizaria papel. Regras congeladas no cabeçalho do script antes de rodar; tentativa única cada; universo, execução e régua iguais aos do estudo 59 (top 50 do dia, 1d e 4h, IC 97.5%, placebo com o mesmo risco %, entrada por stop no rompimento do candle do sinal, alvo 2R, saída em 10 candles, custo 0.18% mais funding).
+- **63, divergência regular de IFR(14):** o fundo confirmado (pivô de 2 candles de cada lado) é mais baixo que o fundo anterior de 5 a 30 candles antes, mas o IFR é mais alto, e o IFR do fundo anterior estava abaixo de 30. Venda no espelho (> 70). Stop no fundo da divergência.
+- **64, engolfo ou martelo em suporte:** engolfo de alta (corpo maior que o anterior) ou martelo (sombra inferior ≥ 2× o corpo e ≥ 60% da amplitude, superior ≤ 15%) com a mínima a até 0.5 ATR de um fundo de 10 a 100 candles antes, ainda não perdido em fechamento. Venda no espelho (estrela cadente, resistência). Stop no extremo do padrão.
+
+| Célula | R líquido | IC97.5 | Excesso | IC97.5 | R bruto | Acerto | n |
+|---|---|---|---|---|---|---|---|
+| **Divergência 1d** | +0.06R | [−0.11, +0.24] | +0.31R | [+0.16, +0.46] | +0.06R | 46% | 368 |
+| **Divergência 4h** | −0.02R | [−0.11, +0.07] | +0.08R | [−0.01, +0.17] | +0.01R | 45% | 2.278 |
+| **Engolfo/martelo 1d** | −0.07R | [−0.15, +0.03] | +0.04R | [−0.05, +0.13] | −0.04R | 38% | 2.477 |
+| **Engolfo/martelo 4h** | −0.07R | [−0.10, −0.04] | +0.01R | [−0.02, +0.05] | −0.01R | 39% | 18.948 |
+
+**Veredito: NÃO PASSA nos quatro.**
+- **Divergência no diário:** é a única célula com excesso > 0, mas o líquido fica em zero (+0.06R, IC cruzando zero) e a 2ª metade é negativa (+0.21R → −0.10R; 2023–2025 negativos). O excesso vem de o placebo com o mesmo risco perder muito, não de o sinal ganhar: o stop médio é de 24% (o fundo da divergência fica longe), e 3/4 dos trades são vendas. Ou seja, vender depois do topo é melhor que vender num dia qualquer perto dele, mas não paga nada por si. No 4h, ruído.
+- **Engolfo/martelo:** bruto em zero ou negativo nos dois tempos gráficos, estável e ruim em todos os anos de 2021 em diante; martelo pior que engolfo (descritivo: −0.11R contra −0.04R líquido no diário). O suporte não muda nada: rejeição no nível não deixa rastro operável.
+- **São 15 setups de gráfico testados**, e nenhum tem bruto que pague o custo. A conclusão da "Leitura conjunta" fica reforçada: o sinal de candle e indicador não carrega informação acima de ~1% por trade nestes dados.
+
 ## Leitura conjunta
 
 Mesma direção do achado da auditoria v6 sobre o checklist mecânico dos Setups A/B. Nenhum dos dez setups de vídeo tem edge mecânico demonstrável nesses 20 pares (o 9.1 também não, fora da amostra, nos 80 pares do estudo 6):
