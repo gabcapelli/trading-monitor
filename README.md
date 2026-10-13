@@ -1,6 +1,6 @@
 # Painel de estratégias
 
-_Atualizado em 13/10 06:05 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
+_Atualizado em 13/10 07:05 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
 
 ## Precisa de você
 
@@ -31,16 +31,16 @@ _Nada pendente._
 
 | Estratégia | Ativo | Desde | Entrada | Agora | Resultado | Obs. |
 |---|---|---|---|---|---|---|
-| Desbloqueio | SEI | 07/10 | 0.07194 | 0.0636 | **+11.59%** | com hedge +3.36%; recompra 14/10 |
-| Desbloqueio | SOLV | 12/10 | 0.004144 | 0.00391 | +5.65% | com hedge +1.12%; recompra 19/10 |
-| Desbloqueio | ZK | 11/10 | 0.015167 | 0.014871 | +1.95% | com hedge -0.29%; recompra 18/10 |
+| Desbloqueio | SEI | 07/10 | 0.07194 | 0.06339 | **+11.88%** | com hedge +3.49%; recompra 14/10 |
+| Desbloqueio | SOLV | 12/10 | 0.004144 | 0.003871 | +6.59% | com hedge +1.89%; recompra 19/10 |
+| Desbloqueio | ZK | 11/10 | 0.015167 | 0.015149 | +0.12% | com hedge -2.30%; recompra 18/10 |
 | Desbloqueio | OMNI | 11/10 | 4.274 | — | — | recompra 18/10 |
 | Desbloqueio | UXLINK | 11/10 | 0.0729 | — | — | recompra 18/10 |
-| Desbloqueio | KAITO | 13/10 | 0.3034 | 0.3082 | -1.58% | com hedge +0.70%; recompra 20/10 |
-| Desbloqueio | VANA | 10/10 | 1.0484 | 1.0726 | -2.31% | com hedge -2.46%; recompra 17/10 |
-| Desbloqueio | ARB | 09/10 | 0.17263 | 0.18657 | -8.08% | com hedge -6.29%; recompra 16/10 |
-| Perpétuo novo | CT | 03/10 | 0.50286 | 0.37702 | **+25.02%** | stop 0.75429; saída 02/11 |
-| Rompimento 48h | NEAR | 11/10 13:00 | 5.79 | 5.121 | **-11.55%** | comprado; saída 13/10 13:00 |
+| Desbloqueio | KAITO | 13/10 | 0.3034 | 0.3061 | -0.89% | com hedge +1.21%; recompra 20/10 |
+| Desbloqueio | VANA | 10/10 | 1.0484 | 1.0627 | -1.36% | com hedge -1.69%; recompra 17/10 |
+| Desbloqueio | ARB | 09/10 | 0.17263 | 0.1858 | -7.63% | com hedge -6.01%; recompra 16/10 |
+| Perpétuo novo | CT | 03/10 | 0.50286 | 0.36624 | **+27.17%** | stop 0.75429; saída 02/11 |
+| Rompimento 48h | NEAR | 11/10 13:00 | 5.79 | 5.132 | **-11.36%** | comprado; saída 13/10 13:00 |
 
 <sub>Resultado a preço de mercado, bruto (sem custo nem funding), já no lado da posição: positivo = a favor. Em negrito, movimentos de 10% ou mais. Com hedge = venda + cesta dos majors.</sub>
 
