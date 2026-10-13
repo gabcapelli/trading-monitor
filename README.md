@@ -1,6 +1,6 @@
 # Painel de estratégias
 
-_Atualizado em 13/10 13:05 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
+_Atualizado em 13/10 14:05 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
 
 ## Precisa de você
 
@@ -32,15 +32,15 @@ _Nada pendente._
 
 | Estratégia | Ativo | Desde | Entrada | Agora | Resultado | Obs. |
 |---|---|---|---|---|---|---|
-| Desbloqueio | SEI | 07/10 | 0.07194 | 0.06244 | **+13.21%** | com hedge +4.54%; recompra 14/10 |
-| Desbloqueio | SOLV | 12/10 | 0.004144 | 0.004028 | +2.80% | com hedge -2.14%; recompra 19/10 |
+| Desbloqueio | SEI | 07/10 | 0.07194 | 0.06277 | **+12.75%** | com hedge +4.11%; recompra 14/10 |
+| Desbloqueio | SOLV | 12/10 | 0.004144 | 0.004012 | +3.19% | com hedge -1.73%; recompra 19/10 |
 | Desbloqueio | OMNI | 11/10 | 4.274 | — | — | recompra 18/10 |
 | Desbloqueio | UXLINK | 11/10 | 0.0729 | — | — | recompra 18/10 |
-| Desbloqueio | VANA | 10/10 | 1.0484 | 1.0495 | -0.10% | com hedge -0.71%; recompra 17/10 |
-| Desbloqueio | KAITO | 13/10 | 0.3034 | 0.3062 | -0.92% | com hedge +0.90%; recompra 20/10 |
-| Desbloqueio | ARB | 09/10 | 0.17263 | 0.18564 | -7.54% | com hedge -6.23%; recompra 16/10 |
-| Desbloqueio | ZK | 11/10 | 0.015167 | 0.016542 | -9.07% | com hedge -11.74%; recompra 18/10 |
-| Perpétuo novo | CT | 03/10 | 0.50286 | 0.37827 | **+24.78%** | stop 0.75429; saída 02/11 |
+| Desbloqueio | VANA | 10/10 | 1.0484 | 1.0556 | -0.69% | com hedge -1.25%; recompra 17/10 |
+| Desbloqueio | KAITO | 13/10 | 0.3034 | 0.3065 | -1.02% | com hedge +0.84%; recompra 20/10 |
+| Desbloqueio | ZK | 11/10 | 0.015167 | 0.016071 | -5.96% | com hedge -8.61%; recompra 18/10 |
+| Desbloqueio | ARB | 09/10 | 0.17263 | 0.18696 | -8.30% | com hedge -6.99%; recompra 16/10 |
+| Perpétuo novo | CT | 03/10 | 0.50286 | 0.37813 | **+24.80%** | stop 0.75429; saída 02/11 |
 
 <sub>Resultado a preço de mercado, bruto (sem custo nem funding), já no lado da posição: positivo = a favor. Em negrito, movimentos de 10% ou mais. Com hedge = venda + cesta dos majors.</sub>
 
