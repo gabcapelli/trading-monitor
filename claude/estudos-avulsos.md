@@ -1571,6 +1571,24 @@ Script: `monitor/replay_elefante.py` · log: `claude/elefante.log`. Próximo da 
 - **No 4h, zero** em tudo, todos os anos.
 - São **16 setups de gráfico** testados.
 
+## 66 e 67. Ponto Contínuo e rompimento da nuvem do Ichimoku — 13/10/2026
+
+Script: `monitor/replay_pc_ichimoku.py` · log: `claude/pc_ichimoku.log`. Últimos dois da fila combinada no 63–64. Ressalva fixada antes: são parentes do Landry/9.1 e do Turtle, que deram zero. Tentativa única cada, régua idêntica ao 65 (entrada por stop no rompimento do candle do sinal, alvo 2R, saída em 10 candles).
+- **66, Ponto Contínuo:** MM21 subindo, o candle toca a média (mínima ≤ MM21) e fecha acima dela. Stop na mínima do candle. Venda no espelho.
+- **67, Ichimoku (9/26/52):** o fechamento cruza para cima do topo da nuvem, com Tenkan > Kijun e Chikou acima do preço de 26 candles antes. Stop na Kijun. Venda no espelho.
+
+| Célula | R líquido | IC97.5 | Excesso | IC97.5 | R bruto | Acerto | n |
+|---|---|---|---|---|---|---|---|
+| **Ponto Contínuo 1d** | +0.04R | [−0.03, +0.11] | −0.02R | [−0.09, +0.04] | +0.08R | 41% | 5.918 |
+| **Ponto Contínuo 4h** | −0.03R | [−0.06, −0.00] | +0.03R | [+0.00, +0.06] | +0.04R | 39% | 41.013 |
+| **Ichimoku 1d** | +0.07R | [−0.03, +0.17] | −0.04R | [−0.14, +0.05] | +0.09R | 47% | 1.355 |
+| **Ichimoku 4h** | −0.05R | [−0.09, −0.02] | +0.00R | [−0.04, +0.04] | +0.00R | 41% | 10.188 |
+
+**Veredito: NÃO PASSA nos quatro.** Mesmo quadro dos parentes:
+- **No diário**, o líquido levemente positivo é beta: o excesso sobre uma entrada ao acaso com o mesmo risco é zero ou negativo. O stop do Ichimoku na Kijun fica em 24% em média.
+- **No 4h**, o bruto mal passa de zero e o custo deixa o líquido negativo. O excesso de +0.03R do Ponto Contínuo, com 41 mil trades, é real e irrelevante (~0.1% por trade).
+- **A fila combinada terminou: são 18 setups de gráfico testados** (estudos 1–13, 22, 34, 57–59, 63–67), e nenhum tem resultado bruto que pague o custo. Os que ficam levemente positivos no diário são compras de tendência (beta), não timing.
+
 ## Leitura conjunta
 
 Mesma direção do achado da auditoria v6 sobre o checklist mecânico dos Setups A/B. Nenhum dos dez setups de vídeo tem edge mecânico demonstrável nesses 20 pares (o 9.1 também não, fora da amostra, nos 80 pares do estudo 6):
