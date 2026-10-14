@@ -1,6 +1,6 @@
 # Painel de estratégias
 
-_Atualizado em 14/10 05:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
+_Atualizado em 14/10 06:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
 
 ## Precisa de você
 
@@ -30,15 +30,15 @@ _Nada pendente._
 
 | Estratégia | Ativo | Desde | Entrada | Agora | Resultado | Obs. |
 |---|---|---|---|---|---|---|
-| Desbloqueio | SOLV | 12/10 | 0.004144 | 0.003904 | +5.79% | com hedge +1.97%; recompra 19/10 |
+| Desbloqueio | SOLV | 12/10 | 0.004144 | 0.003874 | +6.52% | com hedge +1.85%; recompra 19/10 |
 | Desbloqueio | OMNI | 11/10 | 4.274 | — | — | recompra 18/10 |
 | Desbloqueio | UXLINK | 11/10 | 0.0729 | — | — | recompra 18/10 |
-| Desbloqueio | KAITO | 13/10 | 0.3034 | 0.3094 | -1.98% | com hedge +1.06%; recompra 20/10 |
-| Desbloqueio | VANA | 10/10 | 1.0484 | 1.0717 | -2.22% | com hedge -1.64%; recompra 17/10 |
-| Desbloqueio | ZRO | 14/10 | 2.0104 | 2.0778 | -3.35% | com hedge -2.37%; recompra 21/10 |
-| Desbloqueio | ZK | 11/10 | 0.015167 | 0.016082 | -6.03% | com hedge -7.56%; recompra 18/10 |
-| Desbloqueio | ARB | 09/10 | 0.17263 | 0.19063 | **-10.43%** | com hedge -7.98%; recompra 16/10 |
-| Perpétuo novo | CT | 03/10 | 0.50286 | 0.39931 | **+20.59%** | stop 0.75429; saída 02/11 |
+| Desbloqueio | KAITO | 13/10 | 0.3034 | 0.3048 | -0.46% | com hedge +1.67%; recompra 20/10 |
+| Desbloqueio | VANA | 10/10 | 1.0484 | 1.0561 | -0.73% | com hedge -1.04%; recompra 17/10 |
+| Desbloqueio | ZRO | 14/10 | 2.0104 | 2.0449 | -1.72% | com hedge -1.63%; recompra 21/10 |
+| Desbloqueio | ZK | 11/10 | 0.015167 | 0.015981 | -5.37% | com hedge -7.76%; recompra 18/10 |
+| Desbloqueio | ARB | 09/10 | 0.17263 | 0.18824 | -9.04% | com hedge -7.49%; recompra 16/10 |
+| Perpétuo novo | CT | 03/10 | 0.50286 | 0.39122 | **+22.20%** | stop 0.75429; saída 02/11 |
 
 <sub>Resultado a preço de mercado, bruto (sem custo nem funding), já no lado da posição: positivo = a favor. Em negrito, movimentos de 10% ou mais. Com hedge = venda + cesta dos majors.</sub>
 
