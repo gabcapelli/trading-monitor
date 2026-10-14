@@ -526,6 +526,7 @@
 "MRVLUSDT": 20588,
 "MSFTUSDT": 20563,
 "MSTRUSDT": 20493,
+"MSTUUSDT": 20738,
 "MTLUSDT": 18717,
 "MUBARAKUSDT": 20164,
 "MUSDT": 20276,
@@ -647,6 +648,7 @@
 "RAYUSDT": 18859,
 "RDDTUSDT": 20671,
 "RDNTUSDT": 19452,
+"RDWUSDT": 20738,
 "RECALLUSDT": 20376,
 "REDUSDT": 20153,
 "REEFUSDT": 18680,
@@ -708,6 +710,7 @@
 "SMHUSDT": 20663,
 "SNDKUSDT": 20550,
 "SNOWUSDT": 20644,
+"SNPSUSDT": 20738,
 "SNTUSDT": 19663,
 "SNXUSDT": 18488,
 "SNXXUSDT": 20643,
@@ -882,6 +885,7 @@
 "YGGUSDT": 19574,
 "ZAMAUSDT": 20462,
 "ZBTUSDT": 20378,
+"ZCSHUSDT": 20738,
 "ZECUSDT": 18297,
 "ZENUSDT": 18590,
 "ZEREBROUSDT": 20090,
@@ -1035,7 +1039,8 @@
 20735,
 20736,
 20737,
-20738
+20738,
+20739
 ],
 "entrada": 20729,
 "motivo": null,
@@ -1130,6 +1135,14 @@
 "px_in": 47.47,
 "status": "descartado",
 "stop_px": 71.205,
+"tipo": "EQUITY"
+},
+"MSTUUSDT": {
+"d0": 20738,
+"entrada": 20740,
+"motivo": "nao-cripto (EQUITY)",
+"par": "MSTUUSDT",
+"status": "descartado",
 "tipo": "EQUITY"
 },
 "NKEUSDT": {
@@ -1228,6 +1241,14 @@
 "stop_px": 75.645,
 "tipo": "PREMARKET"
 },
+"RDWUSDT": {
+"d0": 20738,
+"entrada": 20740,
+"motivo": "nao-cripto (EQUITY)",
+"par": "RDWUSDT",
+"status": "descartado",
+"tipo": "EQUITY"
+},
 "RUMUSDT": {
 "cesta_in": {
 "ADAUSDT": 0.2443,
@@ -1289,6 +1310,14 @@
 "px_in": 14.64,
 "status": "descartado",
 "stop_px": 21.96,
+"tipo": "EQUITY"
+},
+"SNPSUSDT": {
+"d0": 20738,
+"entrada": 20740,
+"motivo": "nao-cripto (EQUITY)",
+"par": "SNPSUSDT",
+"status": "descartado",
 "tipo": "EQUITY"
 },
 "TWSTUSDT": {
@@ -1418,7 +1447,15 @@
 "status": "descartado",
 "stop_px": 242.37,
 "tipo": "EQUITY"
+},
+"ZCSHUSDT": {
+"d0": 20738,
+"entrada": 20740,
+"motivo": "nao-cripto (EQUITY)",
+"par": "ZCSHUSDT",
+"status": "descartado",
+"tipo": "EQUITY"
 }
 },
-"ultimo_scan": 20739
+"ultimo_scan": 20740
 }
