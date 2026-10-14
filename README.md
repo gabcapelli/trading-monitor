@@ -1,6 +1,6 @@
 # Painel de estratégias
 
-_Atualizado em 14/10 09:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
+_Atualizado em 14/10 10:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
 
 ## Precisa de você
 
@@ -30,15 +30,15 @@ _Nada pendente._
 
 | Estratégia | Ativo | Desde | Entrada | Agora | Resultado | Obs. |
 |---|---|---|---|---|---|---|
-| Desbloqueio | SOLV | 12/10 | 0.004144 | 0.003846 | +7.19% | com hedge +3.03%; recompra 19/10 |
-| Desbloqueio | VANA | 10/10 | 1.0484 | 1.0406 | +0.74% | com hedge +0.98%; recompra 17/10 |
-| Desbloqueio | ZRO | 14/10 | 2.0104 | 2.0011 | +0.46% | com hedge +1.09%; recompra 21/10 |
+| Desbloqueio | SOLV | 12/10 | 0.004144 | 0.003785 | +8.66% | com hedge +2.52%; recompra 19/10 |
+| Desbloqueio | ZRO | 14/10 | 2.0104 | 1.9567 | +2.67% | com hedge +1.20%; recompra 21/10 |
+| Desbloqueio | VANA | 10/10 | 1.0484 | 1.0216 | +2.56% | com hedge +0.69%; recompra 17/10 |
+| Desbloqueio | KAITO | 13/10 | 0.3034 | 0.2999 | +1.15% | com hedge +1.68%; recompra 20/10 |
 | Desbloqueio | OMNI | 11/10 | 4.274 | — | — | recompra 18/10 |
 | Desbloqueio | UXLINK | 11/10 | 0.0729 | — | — | recompra 18/10 |
-| Desbloqueio | KAITO | 13/10 | 0.3034 | 0.3064 | -0.99% | com hedge +1.69%; recompra 20/10 |
-| Desbloqueio | ZK | 11/10 | 0.015167 | 0.015731 | -3.72% | com hedge -5.58%; recompra 18/10 |
-| Desbloqueio | ARB | 09/10 | 0.17263 | 0.18961 | -9.84% | com hedge -7.73%; recompra 16/10 |
-| Perpétuo novo | CT | 03/10 | 0.50286 | 0.37673 | **+25.08%** | stop 0.75429; saída 02/11 |
+| Desbloqueio | ZK | 11/10 | 0.015167 | 0.015369 | -1.33% | com hedge -5.24%; recompra 18/10 |
+| Desbloqueio | ARB | 09/10 | 0.17263 | 0.18404 | -6.61% | com hedge -6.61%; recompra 16/10 |
+| Perpétuo novo | CT | 03/10 | 0.50286 | 0.38291 | **+23.85%** | stop 0.75429; saída 02/11 |
 
 <sub>Resultado a preço de mercado, bruto (sem custo nem funding), já no lado da posição: positivo = a favor. Em negrito, movimentos de 10% ou mais. Com hedge = venda + cesta dos majors.</sub>
 
