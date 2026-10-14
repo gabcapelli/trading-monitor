@@ -1,6 +1,6 @@
 # Painel de estratégias
 
-_Atualizado em 13/10 21:07 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
+_Atualizado em 13/10 22:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
 
 ## Precisa de você
 
@@ -30,15 +30,15 @@ _Nada pendente._
 
 | Estratégia | Ativo | Desde | Entrada | Agora | Resultado | Obs. |
 |---|---|---|---|---|---|---|
-| Desbloqueio | SOLV | 12/10 | 0.004144 | 0.004022 | +2.94% | com hedge -1.66%; recompra 19/10 |
+| Desbloqueio | SOLV | 12/10 | 0.004144 | 0.003991 | +3.69% | com hedge -0.65%; recompra 19/10 |
+| Desbloqueio | ZRO | 14/10 | 2.0104 | 2.0075 | +0.14% | com hedge +0.58%; recompra 21/10 |
 | Desbloqueio | OMNI | 11/10 | 4.274 | — | — | recompra 18/10 |
 | Desbloqueio | UXLINK | 11/10 | 0.0729 | — | — | recompra 18/10 |
-| Desbloqueio | ZRO | 14/10 | 2.0104 | 2.0174 | -0.35% | com hedge -0.19%; recompra 21/10 |
-| Desbloqueio | VANA | 10/10 | 1.0484 | 1.0628 | -1.37% | com hedge -1.60%; recompra 17/10 |
-| Desbloqueio | KAITO | 13/10 | 0.3034 | 0.3096 | -2.04% | com hedge +0.17%; recompra 20/10 |
-| Desbloqueio | ZK | 11/10 | 0.015167 | 0.016209 | -6.87% | com hedge -9.19%; recompra 18/10 |
-| Desbloqueio | ARB | 09/10 | 0.17263 | 0.1924 | **-11.45%** | com hedge -9.92%; recompra 16/10 |
-| Perpétuo novo | CT | 03/10 | 0.50286 | 0.36047 | **+28.32%** | stop 0.75429; saída 02/11 |
+| Desbloqueio | VANA | 10/10 | 1.0484 | 1.0592 | -1.03% | com hedge -0.97%; recompra 17/10 |
+| Desbloqueio | KAITO | 13/10 | 0.3034 | 0.3085 | -1.68% | com hedge +0.81%; recompra 20/10 |
+| Desbloqueio | ZK | 11/10 | 0.015167 | 0.016246 | -7.11% | com hedge -9.16%; recompra 18/10 |
+| Desbloqueio | ARB | 09/10 | 0.17263 | 0.19146 | **-10.91%** | com hedge -9.05%; recompra 16/10 |
+| Perpétuo novo | CT | 03/10 | 0.50286 | 0.36024 | **+28.36%** | stop 0.75429; saída 02/11 |
 
 <sub>Resultado a preço de mercado, bruto (sem custo nem funding), já no lado da posição: positivo = a favor. Em negrito, movimentos de 10% ou mais. Com hedge = venda + cesta dos majors.</sub>
 
