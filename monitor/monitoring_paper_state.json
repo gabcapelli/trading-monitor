@@ -51,6 +51,7 @@
   286624,
   286787,
   287538,
+  287557,
   287569
  ],
  "trades": {
@@ -95,6 +96,31 @@
    "bruto": -6.47540983606556,
    "liq": -6.99398783606556,
    "excesso": -6.237967090795937
+  },
+  "deslistagem|QUICK|287557": {
+   "braco": "deslistagem",
+   "token": "QUICK",
+   "anuncio_id": 287557,
+   "titulo": "Binance Will Delist EPIC, QUICK on 2026-10-28",
+   "release": 1791957608049,
+   "detectado": 1791957960000,
+   "status": "descartado",
+   "motivo": "perpetuo nao negociando"
+  },
+  "deslistagem|EPIC|287557": {
+   "braco": "deslistagem",
+   "token": "EPIC",
+   "anuncio_id": 287557,
+   "titulo": "Binance Will Delist EPIC, QUICK on 2026-10-28",
+   "release": 1791957608049,
+   "detectado": 1791957960000,
+   "status": "aberto",
+   "sym": "EPICUSDT",
+   "entrada_ts": 1791957960000,
+   "p_in": 0.3953,
+   "btc_in": 83321.9,
+   "latencia_min": 6,
+   "saida_ts": 1791972000000
   }
  }
 }

@@ -5,7 +5,7 @@
 > é detectado (5–65 min depois) e recomprar 24h após o anúncio. Custo 0.5% e funding real;
 > excesso sobre vender o BTC nos mesmos minutos. **Só reavaliar com 24 anúncios fechados.**
 
-_Atualizado em 14/10/2026 02:06 (Brasília)._
+_Atualizado em 14/10/2026 03:06 (Brasília)._
 
 ## Monitoring Tag (decide)
 
@@ -23,3 +23,13 @@ _Referência do estudo 38 (entrando com 60 min): +3.4% líquido._
 ## Deslistagem, saída em 4h (exploratório)
 
 **Anúncios fechados:** 0 · trades fechados: 0
+
+| Token | Anúncio | Venda | Preço | Recompra |
+|---|---|---|---|---|
+| EPICUSDT | 14/10/2026 03:00 | +6 min | 0.3953 | 14/10/2026 07:00 |
+
+<details><summary>Descartados (1)</summary>
+
+- QUICK (deslistagem, 14/10/2026 03:00): perpetuo nao negociando
+
+</details>

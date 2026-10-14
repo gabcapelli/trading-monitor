@@ -1,6 +1,6 @@
 # Painel de estratégias
 
-_Atualizado em 14/10 02:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
+_Atualizado em 14/10 03:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
 
 ## Precisa de você
 
@@ -30,15 +30,15 @@ _Nada pendente._
 
 | Estratégia | Ativo | Desde | Entrada | Agora | Resultado | Obs. |
 |---|---|---|---|---|---|---|
-| Desbloqueio | SOLV | 12/10 | 0.004144 | 0.003959 | +4.46% | com hedge +0.39%; recompra 19/10 |
+| Desbloqueio | SOLV | 12/10 | 0.004144 | 0.003921 | +5.38% | com hedge +0.62%; recompra 19/10 |
 | Desbloqueio | OMNI | 11/10 | 4.274 | — | — | recompra 18/10 |
 | Desbloqueio | UXLINK | 11/10 | 0.0729 | — | — | recompra 18/10 |
-| Desbloqueio | VANA | 10/10 | 1.0484 | 1.0665 | -1.73% | com hedge -1.40%; recompra 17/10 |
-| Desbloqueio | KAITO | 13/10 | 0.3034 | 0.3087 | -1.75% | com hedge +1.03%; recompra 20/10 |
-| Desbloqueio | ZRO | 14/10 | 2.0104 | 2.0493 | -1.93% | com hedge -1.22%; recompra 21/10 |
-| Desbloqueio | ZK | 11/10 | 0.015167 | 0.015999 | -5.49% | com hedge -7.26%; recompra 18/10 |
-| Desbloqueio | ARB | 09/10 | 0.17263 | 0.19104 | **-10.66%** | com hedge -8.51%; recompra 16/10 |
-| Perpétuo novo | CT | 03/10 | 0.50286 | 0.39731 | **+20.99%** | stop 0.75429; saída 02/11 |
+| Desbloqueio | KAITO | 13/10 | 0.3034 | 0.3064 | -0.99% | com hedge +1.03%; recompra 20/10 |
+| Desbloqueio | VANA | 10/10 | 1.0484 | 1.063 | -1.39% | com hedge -1.80%; recompra 17/10 |
+| Desbloqueio | ZRO | 14/10 | 2.0104 | 2.042 | -1.57% | com hedge -1.59%; recompra 21/10 |
+| Desbloqueio | ZK | 11/10 | 0.015167 | 0.015798 | -4.16% | com hedge -6.65%; recompra 18/10 |
+| Desbloqueio | ARB | 09/10 | 0.17263 | 0.189 | -9.48% | com hedge -8.06%; recompra 16/10 |
+| Perpétuo novo | CT | 03/10 | 0.50286 | 0.39538 | **+21.37%** | stop 0.75429; saída 02/11 |
 
 <sub>Resultado a preço de mercado, bruto (sem custo nem funding), já no lado da posição: positivo = a favor. Em negrito, movimentos de 10% ou mais. Com hedge = venda + cesta dos majors.</sub>
 
