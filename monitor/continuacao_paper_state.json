@@ -816,6 +816,40 @@
    "stop_ts": 1791741600000,
    "liq_stop": -2.91360083246978,
    "r_stop": -1.0677056215189866
+  },
+  {
+   "sym": "PUMPUSDT",
+   "lado": -1,
+   "barra": 1791979200000,
+   "entrada_ts": 1791993600000,
+   "detectado": 1791993960000,
+   "p_in": 0.004723,
+   "p_in_real": 0.00474,
+   "saida_ts": 1792166400000,
+   "top": [
+    "TAOUSDT",
+    "LINKUSDT",
+    "AVAXUSDT",
+    "ADAUSDT",
+    "WLDUSDT",
+    "1000PEPEUSDT",
+    "ENAUSDT",
+    "BNBUSDT",
+    "QNTUSDT",
+    "UNIUSDT",
+    "SUIUSDT",
+    "DOGEUSDT",
+    "HYPEUSDT",
+    "NEARUSDT",
+    "XRPUSDT",
+    "SOLUSDT",
+    "ZECUSDT",
+    "ETHUSDT",
+    "BTCUSDT"
+   ],
+   "status": "aberto",
+   "nivel": 0.004766,
+   "nr7": false
   }
  ],
  "iniciado": 1791232470885,
@@ -842,5 +876,5 @@
   "BTCUSDT"
  ],
  "dia_top": 1791936000000,
- "ultima_barra": 1791964800000
+ "ultima_barra": 1791979200000
 }
