@@ -4,16 +4,6 @@
 
 | Data/Hora (BRT) | Par | Close 1h | High/Low 1h | Close 4h | Swing 1h ref | ATR 1h | Funding | Zona ativa | Status checklist |
 |---|---|---|---|---|---|---|---|---|---|
-| 2026-10-12 21:06 | BTC-USDT-SWAP | 81808.0 | 82225.0/81710.6 | 81808.0 | res 83119.7 (ha 3 candles) | 463.44 | 0.0024% | B/compra@82850.8 (0t/2c) | zona_mapeada_setup_B |
-| 2026-10-12 21:06 | ETH-USDT-SWAP | 2446.0 | 2470.1/2441.7 | 2446.0 | res 2526.3 (ha 3 candles) | 20.71 | 0.0015% | — | invalidado_setup_B |
-| 2026-10-12 21:06 | SOL-USDT-SWAP | 105.71 | 106.58/105.33 | 105.71 | res 108.80 (ha 3 candles) | 1.1150 | 0.0096% | B/compra@105.61 (1t/0c) | zona_mapeada_setup_B |
-| 2026-10-12 21:06 | XRP-USDT-SWAP | 1.3413 | 1.3517/1.3368 | 1.3413 | res 1.3705 (ha 3 candles) | 0.01360 | -0.0026% | — | sem_zona |
-| 2026-10-12 21:06 | DOGE-USDT-SWAP | 0.08220 | 0.08359/0.08201 | 0.08220 | res 0.08544 (ha 3 candles) | 0.00099 | 0.0059% | — | sem_zona |
-| 2026-10-12 21:06 | ARB-USDT-SWAP | 0.17961 | 0.18278/0.17943 | 0.17961 | — | 0.00324 | 0.0096% | B/compra@0.17900 (0t/0c) | zona_mapeada_setup_B |
-| 2026-10-12 21:06 | WLD-USDT-SWAP | 0.49830 | 0.50670/0.49510 | 0.49830 | res 0.56280 (ha 19 candles) | 0.00865 | 0.0076% | — | sem_zona |
-| 2026-10-12 21:06 | SUI-USDT-SWAP | 1.0282 | 1.0474/1.0237 | 1.0282 | res 1.0781 (ha 3 candles) | 0.01658 | 0.0100% | — | zona_expirada_setup_B |
-| 2026-10-12 21:06 | UNI-USDT-SWAP | 6.9690 | 7.1720/6.9300 | 6.9690 | res 7.8320 (ha 18 candles) | 0.11414 | 0.0100% | B/compra@7.4520 (0t/4c) | zona_mapeada_setup_B |
-| 2026-10-12 21:06 | LINK-USDT-SWAP | 12.62 | 12.82/12.61 | 12.62 | res 13.10 (ha 3 candles) | 0.15979 | -0.0078% | — | sem_zona |
 | 2026-10-12 22:05 | BTC-USDT-SWAP | 81403.4 | 81915.0/80961.3 | 81808.0 | res 83119.7 (ha 4 candles) | 518.33 | 0.0024% | B/compra@82850.8 (0t/3c) | zona_mapeada_setup_B |
 | 2026-10-12 22:05 | ETH-USDT-SWAP | 2420.8 | 2449.9/2407.5 | 2446.0 | res 2526.3 (ha 4 candles) | 23.22 | -0.0007% | B/compra@2405.0 (0t/0c) | zona_mapeada_setup_B |
 | 2026-10-12 22:05 | SOL-USDT-SWAP | 102.95 | 105.94/101.58 | 105.71 | res 108.80 (ha 4 candles) | 1.3886 | 0.0076% | — | invalidado_setup_B |
@@ -484,3 +474,13 @@
 | 2026-10-14 20:06 | SUI-USDT-SWAP | 1.0257 | 1.0274/1.0191 | 1.0210 | — | 0.01630 | 0.0072% | B/compra@0.99710 (0t/7c) | zona_mapeada_setup_B |
 | 2026-10-14 20:06 | UNI-USDT-SWAP | 7.1460 | 7.1570/7.0930 | 7.1120 | sup 7.2520 (ha 17 candles) | 0.10950 | 0.0100% | A/venda@7.2520 (0t/5c) | zona_mapeada_setup_A |
 | 2026-10-14 20:06 | LINK-USDT-SWAP | 12.41 | 12.44/12.35 | 12.42 | sup 12.30 (ha 8 candles) | 0.16007 | 0.0042% | — | sem_zona |
+| 2026-10-14 21:06 | BTC-USDT-SWAP | 81641.4 | 81682.7/81440.0 | 81641.4 | — | 503.86 | 0.0038% | — | sem_zona |
+| 2026-10-14 21:06 | ETH-USDT-SWAP | 2420.7 | 2422.9/2414.0 | 2420.7 | sup 2416.0 (ha 9 candles) | 24.62 | 0.0084% | — | zona_expirada_setup_A |
+| 2026-10-14 21:06 | SOL-USDT-SWAP | 104.23 | 104.70/104.02 | 104.23 | sup 103.63 (ha 3 candles) | 1.2036 | 0.0012% | B/compra@105.61 (0t/2c) | zona_mapeada_setup_B |
+| 2026-10-14 21:06 | XRP-USDT-SWAP | 1.3308 | 1.3352/1.3291 | 1.3308 | — | 0.01356 | -0.0008% | A/venda@1.3617 (0t/2c) | zona_mapeada_setup_A |
+| 2026-10-14 21:06 | DOGE-USDT-SWAP | 0.08182 | 0.08214/0.08169 | 0.08182 | sup 0.08176 (ha 9 candles) | 0.00089 | 0.0077% | — | sem_zona |
+| 2026-10-14 21:06 | ARB-USDT-SWAP | 0.18176 | 0.18210/0.18073 | 0.18176 | — | 0.00295 | -0.0064% | B/compra@0.17900 (0t/3c) | zona_mapeada_setup_B |
+| 2026-10-14 21:06 | WLD-USDT-SWAP | 0.49460 | 0.49890/0.49290 | 0.49460 | sup 0.48580 (ha 4 candles) | 0.00856 | 0.0100% | — | sem_zona |
+| 2026-10-14 21:06 | SUI-USDT-SWAP | 1.0223 | 1.0305/1.0215 | 1.0223 | sup 1.0047 (ha 9 candles) | 0.01600 | 0.0060% | — | zona_expirada_setup_B |
+| 2026-10-14 21:06 | UNI-USDT-SWAP | 7.1900 | 7.1930/7.1320 | 7.1900 | sup 7.2520 (ha 18 candles) | 0.11029 | 0.0100% | A/venda@7.2520 (0t/6c) | zona_mapeada_setup_A |
+| 2026-10-14 21:06 | LINK-USDT-SWAP | 12.43 | 12.46/12.40 | 12.43 | sup 12.30 (ha 9 candles) | 0.15614 | 0.0049% | — | sem_zona |

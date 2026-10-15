@@ -864,8 +864,8 @@
   "ENAUSDT",
   "BNBUSDT",
   "QNTUSDT",
-  "UNIUSDT",
   "SUIUSDT",
+  "UNIUSDT",
   "DOGEUSDT",
   "HYPEUSDT",
   "NEARUSDT",
@@ -875,6 +875,6 @@
   "ETHUSDT",
   "BTCUSDT"
  ],
- "dia_top": 1791936000000,
- "ultima_barra": 1791993600000
+ "dia_top": 1792022400000,
+ "ultima_barra": 1792008000000
 }
