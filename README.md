@@ -1,6 +1,6 @@
 # Painel de estratégias
 
-_Atualizado em 15/10 20:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
+_Atualizado em 15/10 21:07 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
 
 ## Precisa de você
 
@@ -10,7 +10,7 @@ _Nada pendente._
 
 | Estratégia | Abertos | Fechados | Média |
 |---|---|---|---|
-| [Desbloqueio](claude/unlock-paper.md) | 8 | 13/150 | -0.09% |
+| [Desbloqueio](claude/unlock-paper.md) | 7 | 14/150 | -1.04% |
 | [Perpétuo novo](claude/novos-paper.md) | 1 | 0/100 | — |
 | [Rompimento 48h](claude/continuacao-paper.md) · exceção | 3 | 19/300 | -7.79% |
 | [Monitoring Tag](claude/monitoring-paper.md) | 0 | 1/24 | -4.20% |
@@ -23,34 +23,32 @@ _Nada pendente._
 
 <sub>Desde o fechamento das 21h (Brasília).</sub>
 
-- Rompimento 48h: vendeu BNB a 715.72 (15/10 01:00)
-- Rompimento 48h: vendeu ETH a 2358.46 (15/10 01:00)
+- Desbloqueio: recomprou ARB: puro -13.57%, com hedge -13.41%
 
 ## Abertos agora
 
 | Estratégia | Ativo | Desde | Entrada | Agora | Resultado | Obs. |
 |---|---|---|---|---|---|---|
-| Desbloqueio | VANA | 10/10 | 1.0484 | 1.0208 | +2.63% | com hedge +1.34%; recompra 17/10 |
-| Desbloqueio | KAITO | 13/10 | 0.3034 | 0.2988 | +1.52% | com hedge +2.61%; recompra 20/10 |
-| Desbloqueio | SOLV | 12/10 | 0.004144 | 0.004089 | +1.33% | com hedge -4.34%; recompra 19/10 |
+| Desbloqueio | VANA | 10/10 | 1.0484 | 1.0199 | +2.72% | com hedge +1.49%; recompra 17/10 |
+| Desbloqueio | KAITO | 13/10 | 0.3034 | 0.2988 | +1.52% | com hedge +2.68%; recompra 20/10 |
+| Desbloqueio | SOLV | 12/10 | 0.004144 | 0.004117 | +0.65% | com hedge -4.95%; recompra 19/10 |
 | Desbloqueio | OMNI | 11/10 | 4.274 | — | — | recompra 18/10 |
 | Desbloqueio | UXLINK | 11/10 | 0.0729 | — | — | recompra 18/10 |
-| Desbloqueio | ZRO | 14/10 | 2.0104 | 2.0794 | -3.43% | com hedge -4.37%; recompra 21/10 |
-| Desbloqueio | ZK | 11/10 | 0.015167 | 0.016986 | **-11.99%** | com hedge -15.38%; recompra 18/10 |
-| Desbloqueio | ARB | 09/10 | 0.17263 | 0.19472 | **-12.80%** | com hedge -12.47%; recompra 16/10 |
-| Perpétuo novo | CT | 03/10 | 0.50286 | 0.38804 | **+22.83%** | stop 0.75429; saída 02/11 |
-| Rompimento 48h | PUMP | 14/10 13:00 | 0.004723 | 0.004538 | +3.92% | vendido; saída 16/10 13:00 |
-| Rompimento 48h | BNB | 15/10 01:00 | 715.72 | 728.32 | -1.76% | vendido; saída 17/10 01:00 |
-| Rompimento 48h | ETH | 15/10 01:00 | 2358.46 | 2449.77 | -3.87% | vendido; saída 17/10 01:00 |
+| Desbloqueio | ZRO | 14/10 | 2.0104 | 2.0971 | -4.31% | com hedge -5.18%; recompra 21/10 |
+| Desbloqueio | ZK | 11/10 | 0.015167 | 0.017042 | **-12.36%** | com hedge -15.69%; recompra 18/10 |
+| Perpétuo novo | CT | 03/10 | 0.50286 | 0.38473 | **+23.49%** | stop 0.75429; saída 02/11 |
+| Rompimento 48h | PUMP | 14/10 13:00 | 0.004723 | 0.004531 | +4.07% | vendido; saída 16/10 13:00 |
+| Rompimento 48h | BNB | 15/10 01:00 | 715.72 | 730.17 | -2.02% | vendido; saída 17/10 01:00 |
+| Rompimento 48h | ETH | 15/10 01:00 | 2358.46 | 2444.6 | -3.65% | vendido; saída 17/10 01:00 |
 
 <sub>Resultado a preço de mercado, bruto (sem custo nem funding), já no lado da posição: positivo = a favor. Em negrito, movimentos de 10% ou mais. Com hedge = venda + cesta dos majors.</sub>
 
 ## Próximos eventos
 
-- 16/10 · Desbloqueio: recompra de ARB
 - 16/10 · Sábado: entrada da cesta (21h)
 - 17/10 · Desbloqueio: recompra de VANA
 - 17/10 · Desbloqueio: venda prevista de APR, H
+- 18/10 · Desbloqueio: recompra de OMNI, UXLINK, ZK
 
 ## Outros
 

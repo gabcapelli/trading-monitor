@@ -7,11 +7,11 @@
 > venda + compra da cesta dos 20 majors. Custo 0.18% por perna e funding real.
 > **Só reavaliar com 150 trades fechados.** Antes disso é ruído.
 
-_Atualizado em 2026-10-15 (calendário de 2026-10-15)._
+_Atualizado em 2026-10-16 (calendário de 2026-10-16)._
 
-**Trades fechados:** 13 de 150 (9%)
+**Trades fechados:** 14 de 150 (9%)
 
-**Média por trade:** puro +4.13% · com hedge -0.09% · hedge positivo em 7/13 (54%)
+**Média por trade:** puro +2.87% · com hedge -1.04% · hedge positivo em 7/14 (50%)
 
 _Referência do backtest (2025–2026): puro +2.9%, excesso sobre o universo +2.1%._
 
@@ -19,7 +19,6 @@ _Referência do backtest (2025–2026): puro +2.9%, excesso sobre o universo +2.
 
 | Token | Desbloqueio | % da oferta | Venda em (abertura) | Preço de entrada |
 |---|---|---|---|---|
-| ARB | 2026-10-16 | 1.3% | 2026-10-09 | 0.17263 |
 | VANA | 2026-10-17 | 1.7% | 2026-10-10 | 1.0484 |
 | OMNI | 2026-10-18 | 20.6% | 2026-10-11 | 4.274 |
 | UXLINK | 2026-10-18 | 3.9% | 2026-10-11 | 0.0729 |
@@ -53,6 +52,7 @@ _Passa pelos filtros (perpétuo com ≥ 30 dias, mesmo token a ≥ 14 dias) só 
 
 | Token | Desbloqueio | % da oferta | Retorno do token | Cesta | Puro | Com hedge | Obs. |
 |---|---|---|---|---|---|---|---|
+| ARB | 2026-10-16 | 1.3% | +13.29% | +0.36% | -13.57% | -13.41% |  |
 | SEI | 2026-10-14 | 1.6% | -10.44% | -8.46% | +10.34% | +1.70% |  |
 | PUMP | 2026-10-13 | 1.3% | -23.15% | -11.44% | +23.10% | +11.46% |  |
 | BB | 2026-10-13 | 2.9% | -8.22% | -11.44% | +8.24% | -3.39% |  |
@@ -66,3 +66,9 @@ _Passa pelos filtros (perpétuo com ≥ 30 dias, mesmo token a ≥ 14 dias) só 
 | 2Z | 2026-10-02 | 47.8% | +1.16% | -0.63% | -3.73% | -4.62% |  |
 | GUN | 2026-10-01 | 7.0% | +1.06% | +2.42% | -1.03% | +1.13% |  |
 | ZORA | 2026-09-30 | 3.0% | -15.97% | -2.09% | +16.00% | +13.64% |  |
+
+<details><summary>Descartados (1)</summary>
+
+- SPK 2026-10-15: conhecido tarde
+
+</details>
