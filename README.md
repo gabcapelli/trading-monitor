@@ -1,6 +1,6 @@
 # Painel de estratégias
 
-_Atualizado em 16/10 01:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
+_Atualizado em 16/10 02:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
 
 ## Precisa de você
 
@@ -29,17 +29,17 @@ _Nada pendente._
 
 | Estratégia | Ativo | Desde | Entrada | Agora | Resultado | Obs. |
 |---|---|---|---|---|---|---|
-| Desbloqueio | VANA | 10/10 | 1.0484 | 1.0055 | +4.09% | com hedge +2.30%; recompra 17/10 |
-| Desbloqueio | KAITO | 13/10 | 0.3034 | 0.2964 | +2.31% | com hedge +2.89%; recompra 20/10 |
-| Desbloqueio | SOLV | 12/10 | 0.004144 | 0.004061 | +2.00% | com hedge -4.12%; recompra 19/10 |
+| Desbloqueio | VANA | 10/10 | 1.0484 | 1.0195 | +2.76% | com hedge +1.98%; recompra 17/10 |
+| Desbloqueio | KAITO | 13/10 | 0.3034 | 0.2991 | +1.42% | com hedge +3.05%; recompra 20/10 |
+| Desbloqueio | SOLV | 12/10 | 0.004144 | 0.004104 | +0.97% | com hedge -4.20%; recompra 19/10 |
 | Desbloqueio | OMNI | 11/10 | 4.274 | — | — | recompra 18/10 |
 | Desbloqueio | UXLINK | 11/10 | 0.0729 | — | — | recompra 18/10 |
-| Desbloqueio | ZRO | 14/10 | 2.0104 | 2.1399 | -6.44% | com hedge -7.87%; recompra 21/10 |
-| Desbloqueio | ZK | 11/10 | 0.015167 | 0.016666 | -9.88% | com hedge -13.74%; recompra 18/10 |
-| Perpétuo novo | CT | 03/10 | 0.50286 | 0.37484 | **+25.46%** | stop 0.75429; saída 02/11 |
-| Rompimento 48h | PUMP | 14/10 13:00 | 0.004723 | 0.004498 | +4.76% | vendido; saída 16/10 13:00 |
-| Rompimento 48h | BNB | 15/10 01:00 | 715.72 | 728.76 | -1.82% | vendido; saída 17/10 01:00 |
-| Rompimento 48h | ETH | 15/10 01:00 | 2358.46 | 2436.3 | -3.30% | vendido; saída 17/10 01:00 |
+| Desbloqueio | ZRO | 14/10 | 2.0104 | 2.2011 | -9.49% | com hedge -9.90%; recompra 21/10 |
+| Desbloqueio | ZK | 11/10 | 0.015167 | 0.0173 | **-14.06%** | com hedge -16.94%; recompra 18/10 |
+| Perpétuo novo | CT | 03/10 | 0.50286 | 0.3862 | **+23.20%** | stop 0.75429; saída 02/11 |
+| Rompimento 48h | PUMP | 14/10 13:00 | 0.004723 | 0.004548 | +3.71% | vendido; saída 16/10 13:00 |
+| Rompimento 48h | BNB | 15/10 01:00 | 715.72 | 732 | -2.27% | vendido; saída 17/10 01:00 |
+| Rompimento 48h | ETH | 15/10 01:00 | 2358.46 | 2454.33 | -4.06% | vendido; saída 17/10 01:00 |
 
 <sub>Resultado a preço de mercado, bruto (sem custo nem funding), já no lado da posição: positivo = a favor. Em negrito, movimentos de 10% ou mais. Com hedge = venda + cesta dos majors.</sub>
 
