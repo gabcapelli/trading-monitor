@@ -847,9 +847,18 @@
     "ETHUSDT",
     "BTCUSDT"
    ],
-   "status": "aberto",
+   "status": "fechado",
    "nivel": 0.004766,
-   "nr7": false
+   "nr7": false,
+   "p_out": 0.004296,
+   "funding": 0.040731,
+   "bruto": 9.04086385771754,
+   "liq": 8.901594857717539,
+   "excesso": 9.777596348369872,
+   "liq_real": 9.122334375527426,
+   "stop_ts": 1791993600000,
+   "liq_stop": -1.085438280753767,
+   "r_stop": -1.1922151162790655
   },
   {
    "sym": "BNBUSDT",
@@ -944,5 +953,5 @@
   "BTCUSDT"
  ],
  "dia_top": 1792108800000,
- "ultima_barra": 1792137600000
+ "ultima_barra": 1792152000000
 }

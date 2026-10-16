@@ -4,15 +4,15 @@
 > Regra congelada em 05/10/2026 (estudo 46), aberta como **exceção** pelo Gabriel: o estudo falhou
 > o critério por um fio. Custo 0.18% e funding real. **Só reavaliar com 300 trades fechados.**
 
-_Atualizado em 16/10 12:06 (Brasília). Top 20 do dia: TAO, LINK, AVAX, ADA, PUMP, WLD, 1000PEPE, ENA, BNB, QNT, UNI, SUI, DOGE, HYPE, NEAR, XRP, SOL, ZEC, ETH, BTC._
+_Atualizado em 16/10 13:06 (Brasília). Top 20 do dia: TAO, LINK, AVAX, ADA, PUMP, WLD, 1000PEPE, ENA, BNB, QNT, UNI, SUI, DOGE, HYPE, NEAR, XRP, SOL, ZEC, ETH, BTC._
 
-**Trades fechados:** 19 de 300 (6%)
+**Trades fechados:** 20 de 300 (6%)
 
-**Média por trade:** líquido -7.79% · excesso -0.84% · com o preço real alcançável -7.88% · positivos 0/19
+**Média por trade:** líquido -6.96% · excesso -0.31% · com o preço real alcançável -7.03% · positivos 1/20
 
 _Referência do estudo 46: +0.76% líquido, +0.79% de excesso por trade._
 
-**Variante com stop no nível rompido** (hipótese do estudo 61, desde 08/10/2026; mesmos sinais): líquido -3.52% · -1.05R · diferença para a regra +4.27% · stopados 16/19
+**Variante com stop no nível rompido** (hipótese do estudo 61, desde 08/10/2026; mesmos sinais): líquido -3.40% · -1.06R · diferença para a regra +3.56% · stopados 17/20
 
 **Estudo 62 (só com NR7 antes do rompimento, stop no nível)**, exceção desde 08/10/2026: 5 de 100 trades · -0.94R · líquido -3.13% · positivos 0/5 _(referência do estudo: +0.40R)_
 
@@ -20,7 +20,6 @@ _Referência do estudo 46: +0.76% líquido, +0.79% de excesso por trade._
 
 | Par | Lado | Entrada | Preço | Saída |
 |---|---|---|---|---|
-| PUMP | venda | 14/10 13:00 | 0.004723 | 16/10 13:00 |
 | BNB | venda | 15/10 01:00 | 715.72 | 17/10 01:00 |
 | ETH | venda | 15/10 01:00 | 2358.46 | 17/10 01:00 |
 
@@ -28,6 +27,7 @@ _Referência do estudo 46: +0.76% líquido, +0.79% de excesso por trade._
 
 | Par | Lado | Entrada | Bruto | Funding | Líquido | Excesso | Líquido real | Com stop no nível | NR7 antes |
 |---|---|---|---|---|---|---|---|---|---|
+| PUMP | venda | 14/10 13:00 | +9.04% | +0.041% | +8.90% | +9.78% | +9.12% | -1.09% (stop) | não |
 | NEAR | compra | 11/10 13:00 | -14.49% | -0.019% | -14.69% | -8.61% | -13.43% | -2.91% (stop) | sim |
 | NEAR | venda | 08/10 17:00 | -16.31% | +0.025% | -16.47% | -11.50% | -16.81% | -0.53% (stop) | não |
 | TAO | venda | 08/10 13:00 | -7.95% | +0.001% | -8.13% | -1.14% | -7.98% | -5.80% (stop) | não |
