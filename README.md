@@ -1,6 +1,6 @@
 # Painel de estratégias
 
-_Atualizado em 17/10 11:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
+_Atualizado em 17/10 12:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
 
 ## Precisa de você
 
@@ -34,16 +34,16 @@ _Nada pendente._
 
 | Estratégia | Ativo | Desde | Entrada | Agora | Resultado | Obs. |
 |---|---|---|---|---|---|---|
-| Desbloqueio | APR | 17/10 | 0.04684 | 0.04067 | **+13.17%** | com hedge +11.98%; recompra 24/10 |
-| Desbloqueio | ZRO | 14/10 | 2.0104 | 1.9063 | +5.18% | com hedge +1.83%; recompra 21/10 |
-| Desbloqueio | KAITO | 13/10 | 0.3034 | 0.2882 | +5.01% | com hedge +3.63%; recompra 20/10 |
+| Desbloqueio | APR | 17/10 | 0.04684 | 0.041 | **+12.47%** | com hedge +11.27%; recompra 24/10 |
+| Desbloqueio | ZRO | 14/10 | 2.0104 | 1.9013 | +5.43% | com hedge +2.07%; recompra 21/10 |
+| Desbloqueio | KAITO | 13/10 | 0.3034 | 0.2874 | +5.27% | com hedge +3.88%; recompra 20/10 |
 | Desbloqueio | OMNI | 11/10 | 4.274 | — | — | recompra 18/10 |
 | Desbloqueio | UXLINK | 11/10 | 0.0729 | — | — | recompra 18/10 |
-| Desbloqueio | H | 17/10 | 0.05749 | 0.0586 | -1.93% | com hedge -3.12%; recompra 24/10 |
-| Desbloqueio | ZK | 11/10 | 0.015167 | 0.015777 | -4.02% | com hedge -9.76%; recompra 18/10 |
-| Desbloqueio | SOLV | 12/10 | 0.004144 | 0.004425 | -6.78% | com hedge -14.72%; recompra 19/10 |
-| Perpétuo novo | CT | 03/10 | 0.50286 | 0.32252 | **+35.86%** | stop 0.75429; saída 02/11 |
-| Sábado | cesta (20) | 16/10 21:00 | — | — | -1.19% | comprado; saída sábado 21h |
+| Desbloqueio | H | 17/10 | 0.05749 | 0.05844 | -1.65% | com hedge -2.85%; recompra 24/10 |
+| Desbloqueio | ZK | 11/10 | 0.015167 | 0.0159 | -4.83% | com hedge -10.58%; recompra 18/10 |
+| Desbloqueio | SOLV | 12/10 | 0.004144 | 0.004418 | -6.61% | com hedge -14.56%; recompra 19/10 |
+| Perpétuo novo | CT | 03/10 | 0.50286 | 0.32129 | **+36.11%** | stop 0.75429; saída 02/11 |
+| Sábado | cesta (20) | 16/10 21:00 | — | — | -1.20% | comprado; saída sábado 21h |
 
 <sub>Resultado a preço de mercado, bruto (sem custo nem funding), já no lado da posição: positivo = a favor. Em negrito, movimentos de 10% ou mais. Com hedge = venda + cesta dos majors.</sub>
 
