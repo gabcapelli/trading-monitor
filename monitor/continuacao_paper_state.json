@@ -936,8 +936,8 @@
   "AVAXUSDT",
   "ADAUSDT",
   "PUMPUSDT",
-  "WLDUSDT",
   "1000PEPEUSDT",
+  "WLDUSDT",
   "ENAUSDT",
   "BNBUSDT",
   "QNTUSDT",
@@ -947,11 +947,11 @@
   "HYPEUSDT",
   "NEARUSDT",
   "XRPUSDT",
-  "SOLUSDT",
   "ZECUSDT",
+  "SOLUSDT",
   "ETHUSDT",
   "BTCUSDT"
  ],
- "dia_top": 1792108800000,
- "ultima_barra": 1792166400000
+ "dia_top": 1792195200000,
+ "ultima_barra": 1792180800000
 }

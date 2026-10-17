@@ -7,11 +7,11 @@
 > venda + compra da cesta dos 20 majors. Custo 0.18% por perna e funding real.
 > **Só reavaliar com 150 trades fechados.** Antes disso é ruído.
 
-_Atualizado em 2026-10-16 (calendário de 2026-10-16)._
+_Atualizado em 2026-10-17 (calendário de 2026-10-17)._
 
-**Trades fechados:** 14 de 150 (9%)
+**Trades fechados:** 15 de 150 (10%)
 
-**Média por trade:** puro +2.87% · com hedge -1.04% · hedge positivo em 7/14 (50%)
+**Média por trade:** puro +2.98% · com hedge -0.85% · hedge positivo em 8/15 (53%)
 
 _Referência do backtest (2025–2026): puro +2.9%, excesso sobre o universo +2.1%._
 
@@ -19,20 +19,19 @@ _Referência do backtest (2025–2026): puro +2.9%, excesso sobre o universo +2.
 
 | Token | Desbloqueio | % da oferta | Venda em (abertura) | Preço de entrada |
 |---|---|---|---|---|
-| VANA | 2026-10-17 | 1.7% | 2026-10-10 | 1.0484 |
 | OMNI | 2026-10-18 | 20.6% | 2026-10-11 | 4.274 |
 | UXLINK | 2026-10-18 | 3.9% | 2026-10-11 | 0.0729 |
 | ZK | 2026-10-18 | 2.5% | 2026-10-11 | 0.015167 |
 | SOLV | 2026-10-19 | 3.4% | 2026-10-12 | 0.004144 |
 | KAITO | 2026-10-20 | 3.7% | 2026-10-13 | 0.3034 |
 | ZRO | 2026-10-21 | 3.6% | 2026-10-14 | 2.0104 |
+| APR | 2026-10-24 | 47.2% | 2026-10-17 | 0.04684 |
+| H | 2026-10-24 | 7.3% | 2026-10-17 | 0.05749 |
 
 ## Próximas entradas (calendário atual)
 
 | Token | Desbloqueio | % da oferta | % insiders | Entrada prevista |
 |---|---|---|---|---|
-| APR | 2026-10-24 | 47.2% | 78% | 2026-10-17 |
-| H | 2026-10-24 | 7.3% | 55% | 2026-10-17 |
 | ALT | 2026-10-27 | 3.3% | 66% | 2026-10-20 |
 | RESOLV | 2026-10-28 | 3.5% | 100% | 2026-10-21 |
 | GUN | 2026-10-31 | 6.6% | 77% | 2026-10-24 |
@@ -45,6 +44,7 @@ _Referência do backtest (2025–2026): puro +2.9%, excesso sobre o universo +2.
 | BB | 2026-11-12 | 2.3% | 99% | 2026-11-05 |
 | PUMP | 2026-11-12 | 1.3% | 100% | 2026-11-05 |
 | SEI | 2026-11-14 | 1.6% | 89% | 2026-11-07 |
+| ARB | 2026-11-16 | 1.3% | 99% | 2026-11-09 |
 
 _Passa pelos filtros (perpétuo com ≥ 30 dias, mesmo token a ≥ 14 dias) só no dia da entrada._
 
@@ -52,6 +52,7 @@ _Passa pelos filtros (perpétuo com ≥ 30 dias, mesmo token a ≥ 14 dias) só 
 
 | Token | Desbloqueio | % da oferta | Retorno do token | Cesta | Puro | Com hedge | Obs. |
 |---|---|---|---|---|---|---|---|
+| VANA | 2026-10-17 | 1.7% | -4.65% | -2.55% | +4.57% | +1.81% |  |
 | ARB | 2026-10-16 | 1.3% | +13.29% | +0.36% | -13.57% | -13.41% |  |
 | SEI | 2026-10-14 | 1.6% | -10.44% | -8.46% | +10.34% | +1.70% |  |
 | PUMP | 2026-10-13 | 1.3% | -23.15% | -11.44% | +23.10% | +11.46% |  |
