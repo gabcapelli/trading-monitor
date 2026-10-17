@@ -1,6 +1,6 @@
 # Painel de estratégias
 
-_Atualizado em 16/10 22:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
+_Atualizado em 16/10 23:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
 
 ## Precisa de você
 
@@ -32,18 +32,18 @@ _Nada pendente._
 
 | Estratégia | Ativo | Desde | Entrada | Agora | Resultado | Obs. |
 |---|---|---|---|---|---|---|
-| Desbloqueio | KAITO | 13/10 | 0.3034 | 0.2944 | +2.97% | com hedge +2.43%; recompra 20/10 |
-| Desbloqueio | ZRO | 14/10 | 2.0104 | 1.9729 | +1.87% | com hedge -0.66%; recompra 21/10 |
-| Desbloqueio | APR | 17/10 | 0.04684 | 0.04604 | +1.71% | com hedge +1.36%; recompra 24/10 |
-| Desbloqueio | H | 17/10 | 0.05749 | 0.05742 | +0.12% | com hedge -0.23%; recompra 24/10 |
+| Desbloqueio | KAITO | 13/10 | 0.3034 | 0.2951 | +2.74% | com hedge +2.43%; recompra 20/10 |
+| Desbloqueio | ZRO | 14/10 | 2.0104 | 1.9621 | +2.40% | com hedge +0.10%; recompra 21/10 |
+| Desbloqueio | APR | 17/10 | 0.04684 | 0.04584 | +2.13% | com hedge +2.01%; recompra 24/10 |
+| Desbloqueio | H | 17/10 | 0.05749 | 0.05736 | +0.23% | com hedge +0.10%; recompra 24/10 |
 | Desbloqueio | OMNI | 11/10 | 4.274 | — | — | recompra 18/10 |
 | Desbloqueio | UXLINK | 11/10 | 0.0729 | — | — | recompra 18/10 |
-| Desbloqueio | SOLV | 12/10 | 0.004144 | 0.004277 | -3.21% | com hedge -10.38%; recompra 19/10 |
-| Desbloqueio | ZK | 11/10 | 0.015167 | 0.016359 | -7.86% | com hedge -12.80%; recompra 18/10 |
-| Perpétuo novo | CT | 03/10 | 0.50286 | 0.38339 | **+23.76%** | stop 0.75429; saída 02/11 |
-| Rompimento 48h | BNB | 15/10 01:00 | 715.72 | 720.43 | -0.66% | vendido; saída 17/10 01:00 |
-| Rompimento 48h | ETH | 15/10 01:00 | 2358.46 | 2422.08 | -2.70% | vendido; saída 17/10 01:00 |
-| Sábado | cesta (20) | 16/10 21:00 | — | — | -0.35% | comprado; saída sábado 21h |
+| Desbloqueio | SOLV | 12/10 | 0.004144 | 0.004275 | -3.16% | com hedge -10.12%; recompra 19/10 |
+| Desbloqueio | ZK | 11/10 | 0.015167 | 0.01643 | -8.33% | com hedge -13.05%; recompra 18/10 |
+| Perpétuo novo | CT | 03/10 | 0.50286 | 0.3864 | **+23.16%** | stop 0.75429; saída 02/11 |
+| Rompimento 48h | BNB | 15/10 01:00 | 715.72 | 722 | -0.88% | vendido; saída 17/10 01:00 |
+| Rompimento 48h | ETH | 15/10 01:00 | 2358.46 | 2423.42 | -2.75% | vendido; saída 17/10 01:00 |
+| Sábado | cesta (20) | 16/10 21:00 | — | — | -0.12% | comprado; saída sábado 21h |
 
 <sub>Resultado a preço de mercado, bruto (sem custo nem funding), já no lado da posição: positivo = a favor. Em negrito, movimentos de 10% ou mais. Com hedge = venda + cesta dos majors.</sub>
 
