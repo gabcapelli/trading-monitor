@@ -4,16 +4,6 @@
 
 | Data/Hora (BRT) | Par | Close 1h | High/Low 1h | Close 4h | Swing 1h ref | ATR 1h | Funding | Zona ativa | Status checklist |
 |---|---|---|---|---|---|---|---|---|---|
-| 2026-10-16 12:06 | BTC-USDT-SWAP | 81937.6 | 82454.1/81821.9 | 82600.2 | sup 81640.9 (ha 11 candles) | 417.64 | 0.0027% | — | sem_zona |
-| 2026-10-16 12:06 | ETH-USDT-SWAP | 2458.5 | 2479.6/2453.5 | 2476.4 | sup 2443.7 (ha 4 candles) | 17.51 | 0.0012% | — | sem_zona |
-| 2026-10-16 12:06 | SOL-USDT-SWAP | 105.59 | 106.55/105.37 | 106.54 | sup 104.52 (ha 11 candles) | 0.90071 | 0.0022% | — | sem_zona |
-| 2026-10-16 12:06 | XRP-USDT-SWAP | 1.3276 | 1.3417/1.3271 | 1.3461 | sup 1.3226 (ha 11 candles) | 0.01009 | 0.0063% | — | sem_zona |
-| 2026-10-16 12:06 | DOGE-USDT-SWAP | 0.08144 | 0.08217/0.08125 | 0.08240 | sup 0.08081 (ha 15 candles) | 0.00066 | 0.0052% | — | sem_zona |
-| 2026-10-16 12:06 | ARB-USDT-SWAP | 0.19733 | 0.19962/0.19717 | 0.20121 | sup 0.19015 (ha 11 candles) | 0.00346 | -0.0082% | B/venda@0.20316 (0t/3c) | zona_mapeada_setup_B |
-| 2026-10-16 12:06 | WLD-USDT-SWAP | 0.52380 | 0.53480/0.52210 | 0.53870 | sup 0.49270 (ha 11 candles) | 0.01444 | 0.0100% | — | descartado_rr_baixo_setup_B |
-| 2026-10-16 12:06 | SUI-USDT-SWAP | 1.0429 | 1.0558/1.0379 | 1.0518 | sup 1.0366 (ha 4 candles) | 0.01314 | 0.0010% | — | sem_zona |
-| 2026-10-16 12:06 | UNI-USDT-SWAP | 7.3630 | 7.4580/7.3570 | 7.4710 | — | 0.10121 | 0.0066% | — | invalidado_setup_B |
-| 2026-10-16 12:06 | LINK-USDT-SWAP | 12.51 | 12.66/12.49 | 12.70 | sup 12.33 (ha 11 candles) | 0.11543 | 0.0038% | — | sem_zona |
 | 2026-10-16 13:06 | BTC-USDT-SWAP | 81330.0 | 81940.0/81307.2 | 81330.0 | sup 81640.9 (ha 12 candles) | 430.06 | 0.0054% | A/venda@81640.9 (0t/0c) | zona_mapeada_setup_A |
 | 2026-10-16 13:06 | ETH-USDT-SWAP | 2430.1 | 2458.9/2428.8 | 2430.1 | sup 2443.7 (ha 5 candles) | 18.28 | 0.0027% | A/venda@2443.7 (0t/0c) | zona_mapeada_setup_A |
 | 2026-10-16 13:06 | SOL-USDT-SWAP | 103.73 | 105.61/103.71 | 103.73 | sup 104.52 (ha 12 candles) | 0.98286 | 0.0033% | A/venda@104.52 (0t/0c) | zona_mapeada_setup_A |
@@ -484,3 +474,13 @@
 | 2026-10-18 11:05 | SUI-USDT-SWAP | 0.96790 | 0.98220/0.96230 | 0.98130 | sup 0.97040 (ha 8 candles) | 0.01007 | 0.0031% | A/venda@0.97040 (0t/0c) | zona_mapeada_setup_A |
 | 2026-10-18 11:05 | UNI-USDT-SWAP | 7.1260 | 7.2630/7.0900 | 7.2380 | sup 7.1600 (ha 8 candles) | 0.08150 | 0.0051% | A/venda@7.1600 (0t/0c) | zona_mapeada_setup_A |
 | 2026-10-18 11:06 | LINK-USDT-SWAP | 11.87 | 12.02/11.80 | 12.02 | — | 0.08729 | 0.0066% | B/compra@11.81 (0t/0c) | zona_mapeada_setup_B |
+| 2026-10-18 12:05 | BTC-USDT-SWAP | 81072.1 | 81529.3/81001.0 | 82024.9 | — | 289.02 | 0.0058% | B/compra@80961.3 (0t/0c) | zona_mapeada_setup_B |
+| 2026-10-18 12:05 | ETH-USDT-SWAP | 2375.9 | 2397.1/2366.7 | 2417.2 | sup 2405.4 (ha 7 candles) | 14.18 | 0.0055% | A/venda@2405.4 (0t/1c) | zona_mapeada_setup_A |
+| 2026-10-18 12:05 | SOL-USDT-SWAP | 102.07 | 103.00/101.82 | 103.94 | sup 102.92 (ha 6 candles) | 0.78786 | 0.0006% | — | descartado_rr_baixo_setup_A |
+| 2026-10-18 12:05 | XRP-USDT-SWAP | 1.2748 | 1.2828/1.2710 | 1.2973 | — | 0.00836 | 0.0007% | — | invalidado_setup_B |
+| 2026-10-18 12:05 | DOGE-USDT-SWAP | 0.07787 | 0.07834/0.07744 | 0.07940 | sup 0.07873 (ha 6 candles) | 0.00060 | 0.0006% | A/venda@0.07873 (0t/1c) | zona_mapeada_setup_A |
+| 2026-10-18 12:05 | ARB-USDT-SWAP | 0.17967 | 0.18080/0.17775 | 0.18269 | res 0.18468 (ha 4 candles) | 0.00263 | -0.0022% | B/compra@0.17900 (1t/0c) | zona_mapeada_setup_B |
+| 2026-10-18 12:05 | WLD-USDT-SWAP | 0.47780 | 0.48520/0.47430 | 0.49880 | sup 0.48360 (ha 9 candles) | 0.00909 | 0.0073% | A/venda@0.48360 (0t/0c) | zona_mapeada_setup_A |
+| 2026-10-18 12:05 | SUI-USDT-SWAP | 0.96030 | 0.96940/0.95270 | 0.98130 | sup 0.97040 (ha 9 candles) | 0.01085 | -0.0005% | A/venda@0.97040 (1t/0c) | zona_mapeada_setup_A |
+| 2026-10-18 12:05 | UNI-USDT-SWAP | 7.0250 | 7.1420/6.9910 | 7.2380 | sup 7.1600 (ha 9 candles) | 0.08807 | 0.0037% | — | descartado_rr_baixo_setup_A |
+| 2026-10-18 12:05 | LINK-USDT-SWAP | 11.78 | 11.88/11.74 | 12.02 | — | 0.09364 | 0.0047% | — | invalidado_setup_B |
