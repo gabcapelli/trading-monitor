@@ -7,11 +7,11 @@
 > venda + compra da cesta dos 20 majors. Custo 0.18% por perna e funding real.
 > **Só reavaliar com 150 trades fechados.** Antes disso é ruído.
 
-_Atualizado em 2026-10-17 (calendário de 2026-10-17)._
+_Atualizado em 2026-10-18 (calendário de 2026-10-18)._
 
-**Trades fechados:** 15 de 150 (10%)
+**Trades fechados:** 18 de 150 (12%)
 
-**Média por trade:** puro +2.98% · com hedge -0.85% · hedge positivo em 8/15 (53%)
+**Média por trade:** puro +2.49% · com hedge -1.85% · hedge positivo em 8/18 (44%)
 
 _Referência do backtest (2025–2026): puro +2.9%, excesso sobre o universo +2.1%._
 
@@ -19,9 +19,6 @@ _Referência do backtest (2025–2026): puro +2.9%, excesso sobre o universo +2.
 
 | Token | Desbloqueio | % da oferta | Venda em (abertura) | Preço de entrada |
 |---|---|---|---|---|
-| OMNI | 2026-10-18 | 20.6% | 2026-10-11 | 4.274 |
-| UXLINK | 2026-10-18 | 3.9% | 2026-10-11 | 0.0729 |
-| ZK | 2026-10-18 | 2.5% | 2026-10-11 | 0.015167 |
 | SOLV | 2026-10-19 | 3.4% | 2026-10-12 | 0.004144 |
 | KAITO | 2026-10-20 | 3.7% | 2026-10-13 | 0.3034 |
 | ZRO | 2026-10-21 | 3.6% | 2026-10-14 | 2.0104 |
@@ -45,6 +42,8 @@ _Referência do backtest (2025–2026): puro +2.9%, excesso sobre o universo +2.
 | PUMP | 2026-11-12 | 1.3% | 100% | 2026-11-05 |
 | SEI | 2026-11-14 | 1.6% | 89% | 2026-11-07 |
 | ARB | 2026-11-16 | 1.3% | 99% | 2026-11-09 |
+| VANA | 2026-11-17 | 1.7% | 78% | 2026-11-10 |
+| ZK | 2026-11-17 | 2.4% | 100% | 2026-11-10 |
 
 _Passa pelos filtros (perpétuo com ≥ 30 dias, mesmo token a ≥ 14 dias) só no dia da entrada._
 
@@ -52,6 +51,9 @@ _Passa pelos filtros (perpétuo com ≥ 30 dias, mesmo token a ≥ 14 dias) só 
 
 | Token | Desbloqueio | % da oferta | Retorno do token | Cesta | Puro | Com hedge | Obs. |
 |---|---|---|---|---|---|---|---|
+| ZK | 2026-10-18 | 2.5% | -0.59% | -6.70% | +0.51% | -6.41% |  |
+| UXLINK | 2026-10-18 | 3.9% | +0.00% | -6.70% | -0.18% | -7.10% |  |
+| OMNI | 2026-10-18 | 20.6% | +0.00% | -6.70% | -0.18% | -7.10% |  |
 | VANA | 2026-10-17 | 1.7% | -4.65% | -2.55% | +4.57% | +1.81% |  |
 | ARB | 2026-10-16 | 1.3% | +13.29% | +0.36% | -13.57% | -13.41% |  |
 | SEI | 2026-10-14 | 1.6% | -10.44% | -8.46% | +10.34% | +1.70% |  |

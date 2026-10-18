@@ -21,31 +21,13 @@
    "principal": 0.02114180766012985,
    "secundaria": 0.005388827890255349,
    "funding_pendente": false
+  },
+  {
+   "dia": 20743,
+   "data": "17/10/2026",
+   "principal": -0.02268835491181221,
+   "secundaria": -0.011102295321743588,
+   "funding_pendente": false
   }
- ],
- "janela": {
-  "dia": 20743,
-  "precos": {
-   "BTCUSDT": 81578.3,
-   "ETHUSDT": 2422.49,
-   "SOLUSDT": 104.4,
-   "XRPUSDT": 1.3108,
-   "DOGEUSDT": 0.08089,
-   "ARBUSDT": 0.19124,
-   "WLDUSDT": 0.5167,
-   "SUIUSDT": 1.0207,
-   "UNIUSDT": 7.33,
-   "LINKUSDT": 12.341,
-   "BNBUSDT": 721.88,
-   "TRXUSDT": 0.33543,
-   "ZECUSDT": 1148.14,
-   "HYPEUSDT": 80.338,
-   "ADAUSDT": 0.2255,
-   "XLMUSDT": 0.18128,
-   "NEARUSDT": 5.067,
-   "AVAXUSDT": 9.953,
-   "LTCUSDT": 59.69,
-   "BCHUSDT": 277.24
-  }
- }
+ ]
 }
