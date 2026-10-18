@@ -1,4 +1,4 @@
-# Situacao atual -- Multi-Par (script gratuito, sem LLM) -- atualizado 2026-10-18 03:05 BRT
+# Situacao atual -- Multi-Par (script gratuito, sem LLM) -- atualizado 2026-10-18 04:06 BRT
 
 > Gerado por `monitor/fetch_and_check.py` via GitHub Actions, sem chamar a API do Claude. Registra fatos objetivos; a interpretacao qualitativa fica a seu criterio (ou cole este arquivo + o log numa conversa do Claude).
 
@@ -8,13 +8,13 @@
 
 | Par | Tendencia 4h | Close 1h | Funding | Zona / setup candidato | Status |
 |---|---|---|---|---|---|
-| BTC/USDT | alta | 81698.4 | 0.0023% | — | zona_expirada_setup_B |
-| ETH/USDT | lateral | 2410.5 | 0.0079% | Setup B (compra) 2403.5-2411.5 (0/3 toques, 0/8 candles) | zona_mapeada_setup_B |
-| SOL/USDT | lateral | 103.47 | 0.0015% | — | sem_zona |
-| XRP/USDT | alta | 1.2937 | -0.0024% | — | zona_expirada_setup_B |
-| DOGE/USDT | lateral | 0.07905 | 0.0100% | — | sem_zona |
-| ARB/USDT | lateral | 0.18141 | -0.0057% | — | sem_zona |
-| WLD/USDT | lateral | 0.48700 | -0.0080% | — | sem_zona |
-| SUI/USDT | lateral | 0.97480 | -0.0017% | Setup B (compra) 0.99399-1.0002 (0/3 toques, 2/8 candles) | zona_mapeada_setup_B |
-| UNI/USDT | lateral | 7.1940 | -0.0015% | — | sem_zona |
-| LINK/USDT | alta | 11.96 | 0.0084% | — | zona_expirada_setup_B |
+| BTC/USDT | alta | 81688.4 | 0.0023% | — | sem_zona |
+| ETH/USDT | lateral | 2410.8 | 0.0082% | Setup B (compra) 2403.5-2411.5 (1/3 toques, 0/8 candles) | zona_mapeada_setup_B |
+| SOL/USDT | lateral | 103.63 | 0.0029% | — | sem_zona |
+| XRP/USDT | alta | 1.2956 | -0.0036% | — | sem_zona |
+| DOGE/USDT | lateral | 0.07926 | 0.0100% | — | sem_zona |
+| ARB/USDT | lateral | 0.18329 | -0.0045% | — | sem_zona |
+| WLD/USDT | lateral | 0.49170 | -0.0061% | — | sem_zona |
+| SUI/USDT | lateral | 0.98030 | 0.0001% | Setup B (compra) 0.99399-1.0002 (0/3 toques, 3/8 candles) | zona_mapeada_setup_B |
+| UNI/USDT | lateral | 7.2440 | -0.0001% | Setup B (compra) 7.2065-7.2475 (0/3 toques, 0/8 candles) | zona_mapeada_setup_B |
+| LINK/USDT | alta | 12.01 | 0.0069% | Setup B (compra) 12.03-12.09 (0/3 toques, 0/8 candles) | zona_mapeada_setup_B |
