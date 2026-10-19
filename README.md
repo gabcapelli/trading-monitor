@@ -1,6 +1,6 @@
 # Painel de estratégias
 
-_Atualizado em 19/10 00:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
+_Atualizado em 19/10 01:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
 
 ## Precisa de você
 
@@ -29,11 +29,11 @@ _Nada pendente._
 
 | Estratégia | Ativo | Desde | Entrada | Agora | Resultado | Obs. |
 |---|---|---|---|---|---|---|
-| Desbloqueio | APR | 17/10 | 0.04684 | 0.02921 | **+37.64%** | com hedge +37.12%; recompra 24/10 |
-| Desbloqueio | KAITO | 13/10 | 0.3034 | 0.2769 | +8.73% | com hedge +8.03%; recompra 20/10 |
-| Desbloqueio | ZRO | 14/10 | 2.0104 | 1.8886 | +6.06% | com hedge +3.36%; recompra 21/10 |
-| Desbloqueio | H | 17/10 | 0.05749 | 0.05772 | -0.40% | com hedge -0.92%; recompra 24/10 |
-| Perpétuo novo | CT | 03/10 | 0.50286 | 0.30549 | **+39.25%** | stop 0.75429; saída 02/11 |
+| Desbloqueio | APR | 17/10 | 0.04684 | 0.02896 | **+38.17%** | com hedge +37.38%; recompra 24/10 |
+| Desbloqueio | KAITO | 13/10 | 0.3034 | 0.2755 | +9.20% | com hedge +8.22%; recompra 20/10 |
+| Desbloqueio | ZRO | 14/10 | 2.0104 | 1.9084 | +5.07% | com hedge +2.11%; recompra 21/10 |
+| Desbloqueio | H | 17/10 | 0.05749 | 0.05731 | +0.31% | com hedge -0.48%; recompra 24/10 |
+| Perpétuo novo | CT | 03/10 | 0.50286 | 0.30796 | **+38.76%** | stop 0.75429; saída 02/11 |
 
 <sub>Resultado a preço de mercado, bruto (sem custo nem funding), já no lado da posição: positivo = a favor. Em negrito, movimentos de 10% ou mais. Com hedge = venda + cesta dos majors.</sub>
 
