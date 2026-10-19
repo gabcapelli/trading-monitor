@@ -1,6 +1,6 @@
 # Painel de estratégias
 
-_Atualizado em 18/10 20:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
+_Atualizado em 18/10 21:07 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
 
 ## Precisa de você
 
@@ -10,7 +10,7 @@ _Nada pendente._
 
 | Estratégia | Abertos | Fechados | Média |
 |---|---|---|---|
-| [Desbloqueio](claude/unlock-paper.md) | 5 | 18/150 | -1.85% |
+| [Desbloqueio](claude/unlock-paper.md) | 4 | 19/150 | -2.71% |
 | [Perpétuo novo](claude/novos-paper.md) | 1 | 0/100 | — |
 | [Rompimento 48h](claude/continuacao-paper.md) · exceção | 0 | 22/300 | -6.52% |
 | [Monitoring Tag](claude/monitoring-paper.md) | 0 | 1/24 | -4.20% |
@@ -23,30 +23,26 @@ _Nada pendente._
 
 <sub>Desde o fechamento das 21h (Brasília).</sub>
 
-- Desbloqueio: recomprou OMNI: puro -0.18%, com hedge -7.10%
-- Desbloqueio: recomprou UXLINK: puro -0.18%, com hedge -7.10%
-- Desbloqueio: recomprou ZK: puro +0.51%, com hedge -6.41%
-- Sábado: vendeu a cesta: -2.27%
+- Desbloqueio: recomprou SOLV: puro -9.72%, com hedge -18.11%
 
 ## Abertos agora
 
 | Estratégia | Ativo | Desde | Entrada | Agora | Resultado | Obs. |
 |---|---|---|---|---|---|---|
-| Desbloqueio | APR | 17/10 | 0.04684 | 0.02822 | **+39.75%** | com hedge +37.58%; recompra 24/10 |
-| Desbloqueio | KAITO | 13/10 | 0.3034 | 0.2722 | **+10.28%** | com hedge +7.92%; recompra 20/10 |
-| Desbloqueio | ZRO | 14/10 | 2.0104 | 1.8388 | +8.54% | com hedge +4.23%; recompra 21/10 |
-| Desbloqueio | H | 17/10 | 0.05749 | 0.05711 | +0.66% | com hedge -1.51%; recompra 24/10 |
-| Desbloqueio | SOLV | 12/10 | 0.004144 | 0.004489 | -8.33% | com hedge -17.17%; recompra 19/10 |
-| Perpétuo novo | CT | 03/10 | 0.50286 | 0.29774 | **+40.79%** | stop 0.75429; saída 02/11 |
+| Desbloqueio | APR | 17/10 | 0.04684 | 0.02948 | **+37.06%** | com hedge +35.73%; recompra 24/10 |
+| Desbloqueio | KAITO | 13/10 | 0.3034 | 0.2759 | +9.06% | com hedge +7.53%; recompra 20/10 |
+| Desbloqueio | ZRO | 14/10 | 2.0104 | 1.8742 | +6.77% | com hedge +3.28%; recompra 21/10 |
+| Desbloqueio | H | 17/10 | 0.05749 | 0.05777 | -0.49% | com hedge -1.82%; recompra 24/10 |
+| Perpétuo novo | CT | 03/10 | 0.50286 | 0.30136 | **+40.07%** | stop 0.75429; saída 02/11 |
 
 <sub>Resultado a preço de mercado, bruto (sem custo nem funding), já no lado da posição: positivo = a favor. Em negrito, movimentos de 10% ou mais. Com hedge = venda + cesta dos majors.</sub>
 
 ## Próximos eventos
 
-- 19/10 · Desbloqueio: recompra de SOLV
 - 20/10 · Desbloqueio: recompra de KAITO
 - 20/10 · Desbloqueio: venda prevista de ALT
 - 21/10 · Desbloqueio: recompra de ZRO
+- 23/10 · Sábado: entrada da cesta (21h)
 
 ## Outros
 
