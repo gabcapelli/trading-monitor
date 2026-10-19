@@ -1,4 +1,4 @@
-# Calibracao — registro mecanico de sinais (atualizado 2026-10-19 10:05 BRT)
+# Calibracao — registro mecanico de sinais (atualizado 2026-10-19 11:05 BRT)
 
 > **Nao edite este arquivo** — ele e reescrito a cada execucao a partir da tabela `sinais_mecanicos`. Diferente de `sinais.md`, aqui nao ha nenhuma decisao sua: e TODA confirmacao mecanica detectada, inclusive as descartadas por R:R baixo, com desfecho medido por geometria de preco (OHLC de 1h contra stop/alvo sugeridos).
 >
@@ -11,14 +11,14 @@ Regra de alvo em vigor agora: **proximo** (coluna `Regra` abaixo mostra qual dec
 | Grupo | Sinais | Resolvidos | Acertos | Soma (expectancia) |
 |---|---|---|---|---|
 | Aceitos (R:R >= 2) | 85 | 85 | 21 (25%) | -6.84R (-0.080R/sinal) |
-| Descartados por R:R baixo | 368 | 365 | 238 (65%) | +1.17R (+0.003R/sinal) |
-| TODOS | 453 | 450 | 259 (58%) | -5.67R (-0.013R/sinal) |
+| Descartados por R:R baixo | 369 | 366 | 238 (65%) | +0.17R (+0.000R/sinal) |
+| TODOS | 454 | 451 | 259 (57%) | -6.67R (-0.015R/sinal) |
 
 **MAE dos acertos** (quanto o preco foi CONTRA antes de dar certo) — n=259, mediana 0.35R, maximo 0.99R, 8% acima de 0.8R.
 
 > Le-se assim: apertar `STOP_BUFFER_ATR_MULT` mata os acertos cujo MAE ja esta perto de 1R. Se essa cauda for gorda, nao ha folga pra apertar o stop.
 
-**MFE dos erros** (quanto o preco foi A FAVOR antes de bater stop) — n=191, mediana 0.42R, 22% chegaram a 1R a favor.
+**MFE dos erros** (quanto o preco foi A FAVOR antes de bater stop) — n=192, mediana 0.42R, 22% chegaram a 1R a favor.
 
 > Le-se assim: se muitos erros chegaram perto de 1R antes de virar, o problema esta no ALVO/saida, nao na entrada. Se a mediana for baixa, o problema esta na entrada e mexer no alvo nao resolve.
 
@@ -26,9 +26,10 @@ Regra de alvo em vigor agora: **proximo** (coluna `Regra` abaixo mostra qual dec
 
 | Par | Setup | Direcao | Aceito | Regra | R:R (recente) | R:R (proximo) | Resultado | MAE | MFE | Candles | Quando |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| LINK/USDT | B | compra | nao | proximo | 1.43 | 0.13 | aberto | — | — | — | 2026-10-19 10:05 |
+| SOL/USDT | B | venda | nao | proximo | 2.80 | 0.44 | aberto | — | — | — | 2026-10-19 11:05 |
+| LINK/USDT | B | compra | nao | proximo | 1.43 | 0.13 | -1.00 | 1.316 | 0.331 | 1 | 2026-10-19 10:05 |
 | UNI/USDT | B | venda | nao | proximo | 11.44 | 0.36 | +0.36 | 0.571 | 0.438 | 1 | 2026-10-19 06:05 |
-| BTC/USDT | B | venda | nao | proximo | 4.15 | 1.57 | aberto | 0.757 | 1.22 | — | 2026-10-19 05:05 |
+| BTC/USDT | B | venda | nao | proximo | 4.15 | 1.57 | aberto | 0.757 | 1.358 | — | 2026-10-19 05:05 |
 | ETH/USDT | B | venda | nao | proximo | 5.46 | 0.36 | +0.36 | 0.867 | 0.823 | 3 | 2026-10-19 05:05 |
 | XRP/USDT | B | compra | nao | proximo | 0.53 | 0.53 | +0.53 | 0.257 | 1.349 | 2 | 2026-10-19 03:05 |
 | LINK/USDT | B | compra | nao | proximo | 1.11 | 1.11 | -1.00 | 1.626 | 1.103 | 5 | 2026-10-19 03:05 |
@@ -50,4 +51,3 @@ Regra de alvo em vigor agora: **proximo** (coluna `Regra` abaixo mostra qual dec
 | ARB/USDT | B | venda | nao | proximo | 8.57 | 1.90 | +1.90 | 0.655 | 2.059 | 4 | 2026-10-17 07:06 |
 | WLD/USDT | B | venda | nao | proximo | 4.00 | 1.99 | +1.99 | 0.398 | 2.982 | 7 | 2026-10-17 03:06 |
 | ARB/USDT | B | compra | nao | proximo | 6.13 | 0.14 | +0.14 | 0.31 | 1.011 | 1 | 2026-10-17 01:06 |
-| UNI/USDT | B | compra | nao | proximo | 0.15 | 0.03 | +0.03 | 0.5 | 0.272 | 1 | 2026-10-17 01:06 |
