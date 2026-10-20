@@ -945,6 +945,74 @@
    "stop_ts": 1792076400000,
    "liq_stop": -1.9992175795222142,
    "r_stop": -1.0988288726637094
+  },
+  {
+   "sym": "1000PEPEUSDT",
+   "lado": 1,
+   "barra": 1792497600000,
+   "entrada_ts": 1792512000000,
+   "detectado": 1792512360000,
+   "p_in": 0.004539,
+   "p_in_real": 0.0045508,
+   "saida_ts": 1792684800000,
+   "top": [
+    "LINKUSDT",
+    "TAOUSDT",
+    "AVAXUSDT",
+    "ADAUSDT",
+    "PUMPUSDT",
+    "WLDUSDT",
+    "ENAUSDT",
+    "BNBUSDT",
+    "UNIUSDT",
+    "SUIUSDT",
+    "QNTUSDT",
+    "DOGEUSDT",
+    "HYPEUSDT",
+    "NEARUSDT",
+    "XRPUSDT",
+    "ZECUSDT",
+    "SOLUSDT",
+    "ETHUSDT",
+    "BTCUSDT"
+   ],
+   "status": "aberto",
+   "nivel": 0.0042666,
+   "nr7": false
+  },
+  {
+   "sym": "WLDUSDT",
+   "lado": 1,
+   "barra": 1792497600000,
+   "entrada_ts": 1792512000000,
+   "detectado": 1792512360000,
+   "p_in": 0.5628,
+   "p_in_real": 0.5641,
+   "saida_ts": 1792684800000,
+   "top": [
+    "LINKUSDT",
+    "TAOUSDT",
+    "AVAXUSDT",
+    "ADAUSDT",
+    "PUMPUSDT",
+    "1000PEPEUSDT",
+    "ENAUSDT",
+    "BNBUSDT",
+    "UNIUSDT",
+    "SUIUSDT",
+    "QNTUSDT",
+    "DOGEUSDT",
+    "HYPEUSDT",
+    "NEARUSDT",
+    "XRPUSDT",
+    "ZECUSDT",
+    "SOLUSDT",
+    "ETHUSDT",
+    "BTCUSDT"
+   ],
+   "status": "aberto",
+   "nivel": 0.5546,
+   "nr7": true
   }
  ],
  "iniciado": 1791232470885,
@@ -971,5 +1039,5 @@
   "BTCUSDT"
  ],
  "dia_top": 1792454400000,
- "ultima_barra": 1792483200000
+ "ultima_barra": 1792497600000
 }

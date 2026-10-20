@@ -4,7 +4,7 @@
 > Regra congelada em 05/10/2026 (estudo 46), aberta como **exceção** pelo Gabriel: o estudo falhou
 > o critério por um fio. Custo 0.18% e funding real. **Só reavaliar com 300 trades fechados.**
 
-_Atualizado em 20/10 12:06 (Brasília). Top 20 do dia: LINK, TAO, AVAX, ADA, PUMP, 1000PEPE, WLD, ENA, BNB, UNI, SUI, QNT, DOGE, HYPE, NEAR, XRP, ZEC, SOL, ETH, BTC._
+_Atualizado em 20/10 13:06 (Brasília). Top 20 do dia: LINK, TAO, AVAX, ADA, PUMP, 1000PEPE, WLD, ENA, BNB, UNI, SUI, QNT, DOGE, HYPE, NEAR, XRP, ZEC, SOL, ETH, BTC._
 
 **Trades fechados:** 22 de 300 (7%)
 
@@ -15,6 +15,13 @@ _Referência do estudo 46: +0.76% líquido, +0.79% de excesso por trade._
 **Variante com stop no nível rompido** (hipótese do estudo 61, desde 08/10/2026; mesmos sinais): líquido -3.20% · -1.11R · diferença para a regra +3.32% · stopados 19/22
 
 **Estudo 62 (só com NR7 antes do rompimento, stop no nível)**, exceção desde 08/10/2026: 5 de 100 trades · -0.94R · líquido -3.13% · positivos 0/5 _(referência do estudo: +0.40R)_
+
+## Abertos
+
+| Par | Lado | Entrada | Preço | Saída |
+|---|---|---|---|---|
+| 1000PEPE | compra | 20/10 13:00 | 0.004539 | 22/10 13:00 |
+| WLD | compra | 20/10 13:00 | 0.5628 | 22/10 13:00 |
 
 ## Fechados (mais recentes primeiro)
 
