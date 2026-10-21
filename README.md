@@ -1,6 +1,6 @@
 # Painel de estratégias
 
-_Atualizado em 20/10 20:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
+_Atualizado em 20/10 21:07 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
 
 ## Precisa de você
 
@@ -10,7 +10,7 @@ _Nada pendente._
 
 | Estratégia | Abertos | Fechados | Média |
 |---|---|---|---|
-| [Desbloqueio](claude/unlock-paper.md) | 4 | 20/150 | -2.19% |
+| [Desbloqueio](claude/unlock-paper.md) | 4 | 21/150 | -2.13% |
 | [Perpétuo novo](claude/novos-paper.md) | 1 | 0/100 | — |
 | [Rompimento 48h](claude/continuacao-paper.md) · exceção | 2 | 22/300 | -6.52% |
 | [Monitoring Tag](claude/monitoring-paper.md) | 0 | 1/24 | -4.20% |
@@ -23,31 +23,29 @@ _Nada pendente._
 
 <sub>Desde o fechamento das 21h (Brasília).</sub>
 
-- Desbloqueio: vendeu ALT a 0.009214 (desbloqueio 27/10)
-- Desbloqueio: recomprou KAITO: puro +8.70%, com hedge +7.75%
-- Rompimento 48h: comprou 1000PEPE a 0.004539 (20/10 13:00)
-- Rompimento 48h: comprou WLD a 0.5628 (20/10 13:00)
+- Desbloqueio: vendeu RESOLV a 0.01646 (desbloqueio 28/10)
+- Desbloqueio: recomprou ZRO: puro -0.15%, com hedge -0.96%
 
 ## Abertos agora
 
 | Estratégia | Ativo | Desde | Entrada | Agora | Resultado | Obs. |
 |---|---|---|---|---|---|---|
-| Desbloqueio | APR | 17/10 | 0.04684 | 0.03255 | **+30.51%** | com hedge +32.23%; recompra 24/10 |
-| Desbloqueio | H | 17/10 | 0.05749 | 0.05697 | +0.90% | com hedge +2.63%; recompra 24/10 |
-| Desbloqueio | ZRO | 14/10 | 2.0104 | 2.0313 | -1.04% | com hedge -1.55%; recompra 21/10 |
-| Desbloqueio | ALT | 20/10 | 0.009214 | 0.009805 | -6.41% | com hedge -4.11%; recompra 27/10 |
-| Perpétuo novo | CT | 03/10 | 0.50286 | 0.31402 | **+37.55%** | stop 0.75429; saída 02/11 |
-| Rompimento 48h | WLD | 20/10 13:00 | 0.5628 | 0.5901 | +4.85% | comprado; saída 22/10 13:00 |
-| Rompimento 48h | 1000PEPE | 20/10 13:00 | 0.004539 | 0.0045836 | +0.98% | comprado; saída 22/10 13:00 |
+| Desbloqueio | APR | 17/10 | 0.04684 | 0.03209 | **+31.49%** | com hedge +33.20%; recompra 24/10 |
+| Desbloqueio | H | 17/10 | 0.05749 | 0.05721 | +0.49% | com hedge +2.19%; recompra 24/10 |
+| Desbloqueio | RESOLV | 21/10 | 0.01646 | 0.01648 | -0.12% | com hedge -0.07%; recompra 28/10 |
+| Desbloqueio | ALT | 20/10 | 0.009214 | 0.010024 | -8.79% | com hedge -6.50%; recompra 27/10 |
+| Perpétuo novo | CT | 03/10 | 0.50286 | 0.31812 | **+36.74%** | stop 0.75429; saída 02/11 |
+| Rompimento 48h | WLD | 20/10 13:00 | 0.5628 | 0.5884 | +4.55% | comprado; saída 22/10 13:00 |
+| Rompimento 48h | 1000PEPE | 20/10 13:00 | 0.004539 | 0.0045778 | +0.85% | comprado; saída 22/10 13:00 |
 
 <sub>Resultado a preço de mercado, bruto (sem custo nem funding), já no lado da posição: positivo = a favor. Em negrito, movimentos de 10% ou mais. Com hedge = venda + cesta dos majors.</sub>
 
 ## Próximos eventos
 
-- 21/10 · Desbloqueio: recompra de ZRO
-- 21/10 · Desbloqueio: venda prevista de RESOLV
 - 23/10 · Sábado: entrada da cesta (21h)
 - 24/10 · Desbloqueio: recompra de APR, H
+- 24/10 · Desbloqueio: venda prevista de GUN, ZORA
+- 27/10 · Desbloqueio: recompra de ALT
 
 ## Outros
 
