@@ -1,6 +1,6 @@
 # Painel de estratégias
 
-_Atualizado em 21/10 16:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
+_Atualizado em 21/10 17:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
 
 ## Precisa de você
 
@@ -32,15 +32,15 @@ _Nada pendente._
 
 | Estratégia | Ativo | Desde | Entrada | Agora | Resultado | Obs. |
 |---|---|---|---|---|---|---|
-| Desbloqueio | APR | 17/10 | 0.04684 | 0.02791 | **+40.41%** | com hedge +43.82%; recompra 24/10 |
-| Desbloqueio | H | 17/10 | 0.05749 | 0.05852 | -1.79% | com hedge +1.62%; recompra 24/10 |
-| Desbloqueio | RESOLV | 21/10 | 0.01646 | 0.01733 | -5.29% | com hedge -3.54%; recompra 28/10 |
-| Desbloqueio | ALT | 20/10 | 0.009214 | 0.013026 | **-41.37%** | com hedge -37.36%; recompra 27/10 |
-| Perpétuo novo | CT | 03/10 | 0.50286 | 0.27928 | **+44.46%** | stop 0.75429; saída 02/11 |
-| Rompimento 48h | 1000PEPE | 20/10 13:00 | 0.004539 | 0.0046592 | +2.65% | comprado; saída 22/10 13:00 |
-| Rompimento 48h | WLD | 20/10 13:00 | 0.5628 | 0.568 | +0.92% | comprado; saída 22/10 13:00 |
-| Rompimento 48h | ZEC | 21/10 13:00 | 1340.91 | 1337.38 | -0.26% | comprado; saída 23/10 13:00 |
-| Rompimento 48h | BTC | 21/10 13:00 | 84499 | 84255.2 | -0.29% | comprado; saída 23/10 13:00 |
+| Desbloqueio | APR | 17/10 | 0.04684 | 0.02782 | **+40.61%** | com hedge +44.31%; recompra 24/10 |
+| Desbloqueio | H | 17/10 | 0.05749 | 0.05983 | -4.07% | com hedge -0.37%; recompra 24/10 |
+| Desbloqueio | RESOLV | 21/10 | 0.01646 | 0.01756 | -6.68% | com hedge -4.65%; recompra 28/10 |
+| Desbloqueio | ALT | 20/10 | 0.009214 | 0.012745 | **-38.32%** | com hedge -34.02%; recompra 27/10 |
+| Perpétuo novo | CT | 03/10 | 0.50286 | 0.27768 | **+44.78%** | stop 0.75429; saída 02/11 |
+| Rompimento 48h | 1000PEPE | 20/10 13:00 | 0.004539 | 0.0046506 | +2.46% | comprado; saída 22/10 13:00 |
+| Rompimento 48h | WLD | 20/10 13:00 | 0.5628 | 0.5693 | +1.15% | comprado; saída 22/10 13:00 |
+| Rompimento 48h | ZEC | 21/10 13:00 | 1340.91 | 1355.25 | +1.07% | comprado; saída 23/10 13:00 |
+| Rompimento 48h | BTC | 21/10 13:00 | 84499 | 84497.8 | -0.00% | comprado; saída 23/10 13:00 |
 
 <sub>Resultado a preço de mercado, bruto (sem custo nem funding), já no lado da posição: positivo = a favor. Em negrito, movimentos de 10% ou mais. Com hedge = venda + cesta dos majors.</sub>
 
