@@ -4,7 +4,7 @@
 > Regra congelada em 05/10/2026 (estudo 46), aberta como **exceção** pelo Gabriel: o estudo falhou
 > o critério por um fio. Custo 0.18% e funding real. **Só reavaliar com 300 trades fechados.**
 
-_Atualizado em 21/10 12:06 (Brasília). Top 20 do dia: TAO, STRK, AVAX, ADA, PUMP, 1000PEPE, ENA, WLD, BNB, UNI, SUI, QNT, DOGE, HYPE, NEAR, XRP, ZEC, SOL, ETH, BTC._
+_Atualizado em 21/10 13:06 (Brasília). Top 20 do dia: TAO, STRK, AVAX, ADA, PUMP, 1000PEPE, ENA, WLD, BNB, UNI, SUI, QNT, DOGE, HYPE, NEAR, XRP, ZEC, SOL, ETH, BTC._
 
 **Trades fechados:** 22 de 300 (7%)
 
@@ -22,6 +22,8 @@ _Referência do estudo 46: +0.76% líquido, +0.79% de excesso por trade._
 |---|---|---|---|---|
 | 1000PEPE | compra | 20/10 13:00 | 0.004539 | 22/10 13:00 |
 | WLD | compra | 20/10 13:00 | 0.5628 | 22/10 13:00 |
+| ZEC | compra | 21/10 13:00 | 1340.91 | 23/10 13:00 |
+| BTC | compra | 21/10 13:00 | 84499 | 23/10 13:00 |
 
 ## Fechados (mais recentes primeiro)
 
