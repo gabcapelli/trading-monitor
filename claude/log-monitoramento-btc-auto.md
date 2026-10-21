@@ -4,16 +4,6 @@
 
 | Data/Hora (BRT) | Par | Close 1h | High/Low 1h | Close 4h | Swing 1h ref | ATR 1h | Funding | Zona ativa | Status checklist |
 |---|---|---|---|---|---|---|---|---|---|
-| 2026-10-19 05:05 | BTC-USDT-SWAP | 82690.5 | 83149.8/82639.3 | 82690.5 | sup 80621.4 (ha 11 candles) | 387.26 | 0.0061% | — | descartado_rr_baixo_setup_B |
-| 2026-10-19 05:05 | ETH-USDT-SWAP | 2429.3 | 2446.0/2428.3 | 2429.3 | sup 2328.0 (ha 12 candles) | 18.80 | 0.0063% | — | descartado_rr_baixo_setup_B |
-| 2026-10-19 05:05 | SOL-USDT-SWAP | 105.59 | 106.18/105.53 | 105.59 | sup 100.34 (ha 12 candles) | 0.92071 | 0.0029% | — | sem_zona |
-| 2026-10-19 05:05 | XRP-USDT-SWAP | 1.3129 | 1.3212/1.3127 | 1.3129 | — | 0.01034 | 0.0062% | — | invalidado_setup_B |
-| 2026-10-19 05:05 | DOGE-USDT-SWAP | 0.07973 | 0.08016/0.07969 | 0.07973 | sup 0.07603 (ha 12 candles) | 0.00074 | 0.0097% | — | sem_zona |
-| 2026-10-19 05:05 | ARB-USDT-SWAP | 0.19800 | 0.19868/0.19544 | 0.19800 | — | 0.00353 | 0.0020% | A/compra@0.18141 (0t/3c) | zona_mapeada_setup_A |
-| 2026-10-19 05:05 | WLD-USDT-SWAP | 0.50740 | 0.51050/0.49550 | 0.50740 | sup 0.45610 (ha 11 candles) | 0.00912 | 0.0081% | B/venda@0.51160 (0t/0c) | zona_mapeada_setup_B |
-| 2026-10-19 05:05 | SUI-USDT-SWAP | 1.0119 | 1.0171/1.0087 | 1.0119 | sup 0.93640 (ha 12 candles) | 0.01283 | 0.0026% | — | sem_zona |
-| 2026-10-19 05:05 | UNI-USDT-SWAP | 7.4370 | 7.4830/7.3860 | 7.4370 | sup 6.8030 (ha 12 candles) | 0.10443 | -0.0004% | B/venda@7.4530 (1t/0c) | zona_mapeada_setup_B |
-| 2026-10-19 05:05 | LINK-USDT-SWAP | 12.19 | 12.26/12.18 | 12.19 | — | 0.11986 | 0.0077% | — | invalidado_setup_B |
 | 2026-10-19 06:05 | BTC-USDT-SWAP | 82788.1 | 82940.0/82550.0 | 82690.5 | sup 80621.4 (ha 12 candles) | 400.95 | 0.0084% | B/venda@82624.9 (0t/0c) | zona_mapeada_setup_B |
 | 2026-10-19 06:05 | ETH-USDT-SWAP | 2434.3 | 2439.0/2425.8 | 2429.3 | sup 2328.0 (ha 13 candles) | 18.89 | 0.0055% | — | sem_zona |
 | 2026-10-19 06:05 | SOL-USDT-SWAP | 105.63 | 105.93/105.38 | 105.59 | sup 100.34 (ha 13 candles) | 0.92786 | 0.0036% | — | sem_zona |
@@ -484,3 +474,13 @@
 | 2026-10-21 04:06 | SUI-USDT-SWAP | 1.0227 | 1.0250/1.0167 | 1.0256 | res 1.0408 (ha 5 candles) | 0.00960 | 0.0100% | — | sem_zona |
 | 2026-10-21 04:06 | UNI-USDT-SWAP | 7.4610 | 7.4910/7.3900 | 7.5370 | res 7.7850 (ha 5 candles) | 0.12629 | 0.0018% | — | descartado_rr_baixo_setup_B |
 | 2026-10-21 04:06 | LINK-USDT-SWAP | 12.30 | 12.35/12.26 | 12.32 | res 12.46 (ha 5 candles) | 0.08886 | -0.0010% | B/compra@12.25 (2t/0c) | zona_mapeada_setup_B |
+| 2026-10-21 05:06 | BTC-USDT-SWAP | 83114.0 | 83238.8/82725.8 | 83114.0 | res 83188.8 (ha 7 candles) | 300.59 | 0.0075% | — | descartado_rr_baixo_setup_B |
+| 2026-10-21 05:06 | ETH-USDT-SWAP | 2455.5 | 2458.7/2438.2 | 2455.5 | res 2464.5 (ha 6 candles) | 13.65 | 0.0075% | — | sem_zona |
+| 2026-10-21 05:06 | SOL-USDT-SWAP | 106.77 | 106.95/105.90 | 106.77 | res 107.17 (ha 9 candles) | 0.72786 | 0.0041% | — | sem_zona |
+| 2026-10-21 05:06 | XRP-USDT-SWAP | 1.3459 | 1.3494/1.3325 | 1.3459 | res 1.3441 (ha 9 candles) | 0.00855 | 0.0100% | A/compra@1.3441 (0t/0c) | zona_mapeada_setup_A |
+| 2026-10-21 05:06 | DOGE-USDT-SWAP | 0.08206 | 0.08224/0.08142 | 0.08206 | — | 0.00052 | 0.0100% | B/compra@0.08092 (0t/4c) | zona_mapeada_setup_B |
+| 2026-10-21 05:06 | ARB-USDT-SWAP | 0.19060 | 0.19240/0.18928 | 0.19060 | res 0.19682 (ha 6 candles) | 0.00326 | -0.0098% | B/venda@0.19508 (0t/6c) | zona_mapeada_setup_B |
+| 2026-10-21 05:06 | WLD-USDT-SWAP | 0.58350 | 0.58790/0.57910 | 0.58350 | sup 0.57920 (ha 6 candles) | 0.01001 | 0.0100% | B/venda@0.58590 (0t/0c) | zona_mapeada_setup_B |
+| 2026-10-21 05:06 | SUI-USDT-SWAP | 1.0344 | 1.0379/1.0214 | 1.0344 | res 1.0408 (ha 6 candles) | 0.01012 | 0.0100% | — | sem_zona |
+| 2026-10-21 05:06 | UNI-USDT-SWAP | 7.5470 | 7.5870/7.4470 | 7.5470 | res 7.7850 (ha 6 candles) | 0.12807 | 0.0050% | — | sem_zona |
+| 2026-10-21 05:06 | LINK-USDT-SWAP | 12.41 | 12.44/12.29 | 12.41 | res 12.46 (ha 6 candles) | 0.09350 | -0.0003% | B/compra@12.25 (2t/1c) | zona_mapeada_setup_B |
