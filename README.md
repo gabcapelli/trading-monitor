@@ -1,6 +1,6 @@
 # Painel de estratégias
 
-_Atualizado em 22/10 10:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
+_Atualizado em 22/10 11:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
 
 ## Precisa de você
 
@@ -29,15 +29,15 @@ _Nada abriu nem fechou._
 
 | Estratégia | Ativo | Desde | Entrada | Agora | Resultado | Obs. |
 |---|---|---|---|---|---|---|
-| Desbloqueio | APR | 17/10 | 0.04684 | 0.02725 | **+41.82%** | com hedge +40.72%; recompra 24/10 |
-| Desbloqueio | ALT | 20/10 | 0.009214 | 0.008555 | +7.15% | com hedge +6.63%; recompra 27/10 |
-| Desbloqueio | H | 17/10 | 0.05749 | 0.05681 | +1.18% | com hedge +0.08%; recompra 24/10 |
-| Desbloqueio | RESOLV | 21/10 | 0.01646 | 0.01652 | -0.36% | com hedge -3.04%; recompra 28/10 |
-| Perpétuo novo | CT | 03/10 | 0.50286 | 0.23758 | **+52.75%** | stop 0.75429; saída 02/11 |
-| Rompimento 48h | 1000PEPE | 20/10 13:00 | 0.004539 | 0.0045064 | -0.72% | comprado; saída 22/10 13:00 |
-| Rompimento 48h | BTC | 21/10 13:00 | 84499 | 81666.3 | -3.35% | comprado; saída 23/10 13:00 |
-| Rompimento 48h | WLD | 20/10 13:00 | 0.5628 | 0.5401 | -4.03% | comprado; saída 22/10 13:00 |
-| Rompimento 48h | ZEC | 21/10 13:00 | 1340.91 | 1246.29 | -7.06% | comprado; saída 23/10 13:00 |
+| Desbloqueio | APR | 17/10 | 0.04684 | 0.02732 | **+41.67%** | com hedge +41.01%; recompra 24/10 |
+| Desbloqueio | ALT | 20/10 | 0.009214 | 0.008351 | +9.37% | com hedge +9.28%; recompra 27/10 |
+| Desbloqueio | H | 17/10 | 0.05749 | 0.05682 | +1.17% | com hedge +0.50%; recompra 24/10 |
+| Desbloqueio | RESOLV | 21/10 | 0.01646 | 0.01662 | -0.97% | com hedge -3.23%; recompra 28/10 |
+| Perpétuo novo | CT | 03/10 | 0.50286 | 0.23746 | **+52.78%** | stop 0.75429; saída 02/11 |
+| Rompimento 48h | 1000PEPE | 20/10 13:00 | 0.004539 | 0.0044544 | -1.86% | comprado; saída 22/10 13:00 |
+| Rompimento 48h | WLD | 20/10 13:00 | 0.5628 | 0.5471 | -2.79% | comprado; saída 22/10 13:00 |
+| Rompimento 48h | BTC | 21/10 13:00 | 84499 | 81666.4 | -3.35% | comprado; saída 23/10 13:00 |
+| Rompimento 48h | ZEC | 21/10 13:00 | 1340.91 | 1256.15 | -6.32% | comprado; saída 23/10 13:00 |
 
 <sub>Resultado a preço de mercado, bruto (sem custo nem funding), já no lado da posição: positivo = a favor. Em negrito, movimentos de 10% ou mais. Com hedge = venda + cesta dos majors.</sub>
 
