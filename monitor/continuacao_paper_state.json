@@ -1085,15 +1085,15 @@
  ],
  "iniciado": 1791232470885,
  "top": [
-  "TAOUSDT",
-  "STRKUSDT",
   "AVAXUSDT",
+  "BTWUSDT",
+  "STRKUSDT",
   "ADAUSDT",
-  "PUMPUSDT",
   "1000PEPEUSDT",
+  "PUMPUSDT",
   "ENAUSDT",
-  "WLDUSDT",
   "BNBUSDT",
+  "WLDUSDT",
   "UNIUSDT",
   "SUIUSDT",
   "QNTUSDT",
@@ -1106,6 +1106,6 @@
   "ETHUSDT",
   "BTCUSDT"
  ],
- "dia_top": 1792540800000,
- "ultima_barra": 1792598400000
+ "dia_top": 1792627200000,
+ "ultima_barra": 1792612800000
 }
