@@ -4,24 +4,22 @@
 > Regra congelada em 05/10/2026 (estudo 46), aberta como **exceção** pelo Gabriel: o estudo falhou
 > o critério por um fio. Custo 0.18% e funding real. **Só reavaliar com 300 trades fechados.**
 
-_Atualizado em 22/10 12:06 (Brasília). Top 20 do dia: AVAX, BTW, STRK, ADA, 1000PEPE, PUMP, ENA, BNB, WLD, UNI, SUI, QNT, DOGE, HYPE, NEAR, XRP, ZEC, SOL, ETH, BTC._
+_Atualizado em 22/10 13:06 (Brasília). Top 20 do dia: AVAX, BTW, STRK, ADA, 1000PEPE, PUMP, ENA, BNB, WLD, UNI, SUI, QNT, DOGE, HYPE, NEAR, XRP, ZEC, SOL, ETH, BTC._
 
-**Trades fechados:** 22 de 300 (7%)
+**Trades fechados:** 24 de 300 (8%)
 
-**Média por trade:** líquido -6.52% · excesso -0.09% · com o preço real alcançável -6.57% · positivos 1/22
+**Média por trade:** líquido -6.32% · excesso -0.31% · com o preço real alcançável -6.38% · positivos 1/24
 
 _Referência do estudo 46: +0.76% líquido, +0.79% de excesso por trade._
 
-**Variante com stop no nível rompido** (hipótese do estudo 61, desde 08/10/2026; mesmos sinais): líquido -3.20% · -1.11R · diferença para a regra +3.32% · stopados 19/22
+**Variante com stop no nível rompido** (hipótese do estudo 61, desde 08/10/2026; mesmos sinais): líquido -3.10% · -1.08R · diferença para a regra +3.21% · stopados 20/24
 
-**Estudo 62 (só com NR7 antes do rompimento, stop no nível)**, exceção desde 08/10/2026: 5 de 100 trades · -0.94R · líquido -3.13% · positivos 0/5 _(referência do estudo: +0.40R)_
+**Estudo 62 (só com NR7 antes do rompimento, stop no nível)**, exceção desde 08/10/2026: 6 de 100 trades · -0.97R · líquido -2.89% · positivos 0/6 _(referência do estudo: +0.40R)_
 
 ## Abertos
 
 | Par | Lado | Entrada | Preço | Saída |
 |---|---|---|---|---|
-| 1000PEPE | compra | 20/10 13:00 | 0.004539 | 22/10 13:00 |
-| WLD | compra | 20/10 13:00 | 0.5628 | 22/10 13:00 |
 | ZEC | compra | 21/10 13:00 | 1340.91 | 23/10 13:00 |
 | BTC | compra | 21/10 13:00 | 84499 | 23/10 13:00 |
 
@@ -29,6 +27,8 @@ _Referência do estudo 46: +0.76% líquido, +0.79% de excesso por trade._
 
 | Par | Lado | Entrada | Bruto | Funding | Líquido | Excesso | Líquido real | Com stop no nível | NR7 antes |
 |---|---|---|---|---|---|---|---|---|---|
+| 1000PEPE | compra | 20/10 13:00 | -2.28% | -0.063% | -2.53% | -1.11% | -2.80% | -2.53% | não |
+| WLD | compra | 20/10 13:00 | -5.45% | -0.044% | -5.68% | -4.45% | -5.74% | -1.67% (stop) | sim |
 | BNB | venda | 15/10 01:00 | -1.01% | +0.003% | -1.19% | +3.16% | -1.04% | -0.34% (stop) | não |
 | ETH | venda | 15/10 01:00 | -2.89% | +0.027% | -3.04% | +1.18% | -2.87% | -2.00% (stop) | não |
 | PUMP | venda | 14/10 13:00 | +9.04% | +0.041% | +8.90% | +9.78% | +9.12% | -1.09% (stop) | não |
