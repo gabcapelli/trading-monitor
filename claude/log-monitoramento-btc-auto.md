@@ -4,16 +4,6 @@
 
 | Data/Hora (BRT) | Par | Close 1h | High/Low 1h | Close 4h | Swing 1h ref | ATR 1h | Funding | Zona ativa | Status checklist |
 |---|---|---|---|---|---|---|---|---|---|
-| 2026-10-20 01:06 | BTC-USDT-SWAP | 82098.8 | 82099.0/81741.9 | 82098.8 | — | 401.90 | 0.0100% | B/venda@82267.7 (0t/0c) | zona_mapeada_setup_B |
-| 2026-10-20 01:06 | ETH-USDT-SWAP | 2414.0 | 2414.8/2398.9 | 2414.0 | — | 18.59 | 0.0059% | B/compra@2407.5 (0t/0c) | zona_mapeada_setup_B |
-| 2026-10-20 01:06 | SOL-USDT-SWAP | 105.28 | 105.35/104.82 | 105.28 | res 105.64 (ha 5 candles) | 0.88857 | 0.0074% | — | zona_expirada_setup_B |
-| 2026-10-20 01:06 | XRP-USDT-SWAP | 1.3060 | 1.3066/1.2996 | 1.3060 | sup 1.2925 (ha 13 candles) | 0.00970 | 0.0100% | — | sem_zona |
-| 2026-10-20 01:06 | DOGE-USDT-SWAP | 0.07980 | 0.07980/0.07936 | 0.07980 | sup 0.07870 (ha 9 candles) | 0.00064 | 0.0100% | — | sem_zona |
-| 2026-10-20 01:06 | ARB-USDT-SWAP | 0.20212 | 0.20249/0.19812 | 0.20212 | — | 0.00432 | -0.0166% | — | descartado_rr_baixo_setup_B |
-| 2026-10-20 01:06 | WLD-USDT-SWAP | 0.54390 | 0.54890/0.53750 | 0.54390 | sup 0.50120 (ha 9 candles) | 0.01220 | 0.0100% | B/venda@0.51160 (0t/6c) | zona_mapeada_setup_B |
-| 2026-10-20 01:06 | SUI-USDT-SWAP | 1.0026 | 1.0026/0.99260 | 1.0026 | sup 0.98020 (ha 9 candles) | 0.01308 | 0.0100% | — | sem_zona |
-| 2026-10-20 01:06 | UNI-USDT-SWAP | 7.3110 | 7.3110/7.2460 | 7.3110 | — | 0.09343 | 0.0100% | B/venda@7.3540 (1t/4c) | zona_mapeada_setup_B |
-| 2026-10-20 01:06 | LINK-USDT-SWAP | 12.10 | 12.11/11.99 | 12.10 | sup 11.83 (ha 9 candles) | 0.12243 | 0.0100% | — | sem_zona |
 | 2026-10-20 02:06 | BTC-USDT-SWAP | 82058.3 | 82240.0/82010.0 | 82098.8 | — | 359.46 | 0.0100% | — | descartado_rr_baixo_setup_B |
 | 2026-10-20 02:06 | ETH-USDT-SWAP | 2411.6 | 2416.8/2408.8 | 2414.0 | — | 16.32 | 0.0053% | B/compra@2407.5 (1t/0c) | zona_mapeada_setup_B |
 | 2026-10-20 02:06 | SOL-USDT-SWAP | 105.18 | 105.47/105.08 | 105.28 | res 105.64 (ha 6 candles) | 0.80000 | 0.0067% | B/compra@105.61 (0t/0c) | zona_mapeada_setup_B |
@@ -484,3 +474,13 @@
 | 2026-10-22 00:06 | SUI-USDT-SWAP | 1.0078 | 1.0171/1.0033 | 1.0285 | res 1.0560 (ha 8 candles) | 0.01292 | -0.0059% | B/compra@1.0002 (0t/0c) | zona_mapeada_setup_B |
 | 2026-10-22 00:06 | UNI-USDT-SWAP | 7.2850 | 7.4220/7.2530 | 7.4480 | res 7.7300 (ha 8 candles) | 0.13100 | -0.0078% | B/compra@7.2270 (0t/0c) | zona_mapeada_setup_B |
 | 2026-10-22 00:06 | LINK-USDT-SWAP | 12.32 | 12.45/12.29 | 12.50 | res 12.80 (ha 8 candles) | 0.14343 | 0.0020% | B/compra@12.25 (0t/0c) | zona_mapeada_setup_B |
+| 2026-10-22 01:06 | BTC-USDT-SWAP | 82900.1 | 83001.7/82650.0 | 82900.1 | res 84876.0 (ha 11 candles) | 502.34 | 0.0046% | — | descartado_rr_baixo_setup_B |
+| 2026-10-22 01:06 | ETH-USDT-SWAP | 2443.8 | 2444.8/2433.0 | 2443.8 | res 2527.6 (ha 11 candles) | 18.96 | 0.0079% | — | sem_zona |
+| 2026-10-22 01:06 | SOL-USDT-SWAP | 105.47 | 105.74/104.93 | 105.47 | res 109.17 (ha 9 candles) | 0.98714 | 0.0008% | B/compra@105.61 (2t/0c) | zona_mapeada_setup_B |
+| 2026-10-22 01:06 | XRP-USDT-SWAP | 1.3448 | 1.3478/1.3362 | 1.3448 | res 1.3985 (ha 9 candles) | 0.01314 | 0.0054% | — | sem_zona |
+| 2026-10-22 01:06 | DOGE-USDT-SWAP | 0.08033 | 0.08054/0.07992 | 0.08033 | — | 0.00073 | 0.0100% | B/venda@0.08009 (0t/0c) | zona_mapeada_setup_B |
+| 2026-10-22 01:06 | ARB-USDT-SWAP | 0.18582 | 0.18612/0.18435 | 0.18582 | — | 0.00362 | -0.0154% | — | sem_zona |
+| 2026-10-22 01:06 | WLD-USDT-SWAP | 0.57150 | 0.57650/0.56660 | 0.57150 | res 0.58920 (ha 3 candles) | 0.00860 | 0.0033% | B/venda@0.57610 (1t/0c) | zona_mapeada_setup_B |
+| 2026-10-22 01:06 | SUI-USDT-SWAP | 1.0053 | 1.0112/0.99800 | 1.0053 | res 1.0560 (ha 9 candles) | 0.01262 | -0.0070% | B/compra@1.0002 (1t/0c) | zona_mapeada_setup_B |
+| 2026-10-22 01:06 | UNI-USDT-SWAP | 7.2390 | 7.3150/7.1770 | 7.2390 | res 7.7300 (ha 9 candles) | 0.12564 | -0.0030% | B/compra@7.2270 (1t/0c) | zona_mapeada_setup_B |
+| 2026-10-22 01:06 | LINK-USDT-SWAP | 12.26 | 12.35/12.18 | 12.26 | res 12.80 (ha 9 candles) | 0.14143 | 0.0054% | B/compra@12.25 (1t/0c) | zona_mapeada_setup_B |
