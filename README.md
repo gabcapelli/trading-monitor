@@ -1,6 +1,6 @@
 # Painel de estratégias
 
-_Atualizado em 22/10 23:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
+_Atualizado em 23/10 00:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
 
 ## Precisa de você
 
@@ -29,13 +29,13 @@ _Nada abriu nem fechou._
 
 | Estratégia | Ativo | Desde | Entrada | Agora | Resultado | Obs. |
 |---|---|---|---|---|---|---|
-| Desbloqueio | APR | 17/10 | 0.04684 | 0.02578 | **+44.96%** | com hedge +43.29%; recompra 24/10 |
-| Desbloqueio | ALT | 20/10 | 0.009214 | 0.007637 | **+17.12%** | com hedge +16.01%; recompra 27/10 |
-| Desbloqueio | H | 17/10 | 0.05749 | 0.05523 | +3.93% | com hedge +2.26%; recompra 24/10 |
-| Desbloqueio | RESOLV | 21/10 | 0.01646 | 0.01701 | -3.34% | com hedge -6.59%; recompra 28/10 |
-| Perpétuo novo | CT | 03/10 | 0.50286 | 0.21921 | **+56.41%** | stop 0.75429; saída 02/11 |
-| Rompimento 48h | BTC | 21/10 13:00 | 84499 | 81210.1 | -3.89% | comprado; saída 23/10 13:00 |
-| Rompimento 48h | ZEC | 21/10 13:00 | 1340.91 | 1211.7 | -9.64% | comprado; saída 23/10 13:00 |
+| Desbloqueio | APR | 17/10 | 0.04684 | 0.02619 | **+44.09%** | com hedge +43.40%; recompra 24/10 |
+| Desbloqueio | ALT | 20/10 | 0.009214 | 0.007666 | **+16.80%** | com hedge +16.69%; recompra 27/10 |
+| Desbloqueio | H | 17/10 | 0.05749 | 0.05599 | +2.61% | com hedge +1.92%; recompra 24/10 |
+| Desbloqueio | RESOLV | 21/10 | 0.01646 | 0.01722 | -4.62% | com hedge -6.90%; recompra 28/10 |
+| Perpétuo novo | CT | 03/10 | 0.50286 | 0.21676 | **+56.89%** | stop 0.75429; saída 02/11 |
+| Rompimento 48h | BTC | 21/10 13:00 | 84499 | 81875 | -3.11% | comprado; saída 23/10 13:00 |
+| Rompimento 48h | ZEC | 21/10 13:00 | 1340.91 | 1229.91 | -8.28% | comprado; saída 23/10 13:00 |
 
 <sub>Resultado a preço de mercado, bruto (sem custo nem funding), já no lado da posição: positivo = a favor. Em negrito, movimentos de 10% ou mais. Com hedge = venda + cesta dos majors.</sub>
 
