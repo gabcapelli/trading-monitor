@@ -114,6 +114,7 @@
 "B3USDT": 20132,
 "BABAUSDT": 20563,
 "BABYUSDT": 20183,
+"BACUSDT": 20747,
 "BADGERUSDT": 19670,
 "BAKEUSDT": 18766,
 "BALUSDT": 18506,
@@ -189,6 +190,7 @@
 "CATUSDT": 20636,
 "CBRSUSDT": 20592,
 "CCUSDT": 20392,
+"CEGUSDT": 20747,
 "CELOUSDT": 18897,
 "CELRUSDT": 18715,
 "CETUSUSDT": 20033,
@@ -395,6 +397,7 @@
 "HYPERUSDT": 20200,
 "HYPEUSDT": 20238,
 "HYUNDAIUSDT": 20606,
+"IBKRUSDT": 20747,
 "IBMUSDT": 20607,
 "ICNTUSDT": 20272,
 "ICPUSDT": 18758,
@@ -945,6 +948,14 @@
 "status": "descartado",
 "tipo": "EQUITY"
 },
+"BACUSDT": {
+"d0": 20747,
+"entrada": 20749,
+"motivo": "nao-cripto (EQUITY)",
+"par": "BACUSDT",
+"status": "descartado",
+"tipo": "EQUITY"
+},
 "BWETUSDT": {
 "cesta_in": {
 "ADAUSDT": 0.2466,
@@ -973,6 +984,14 @@
 "px_in": 793.21,
 "status": "descartado",
 "stop_px": 1189.815,
+"tipo": "EQUITY"
+},
+"CEGUSDT": {
+"d0": 20747,
+"entrada": 20749,
+"motivo": "nao-cripto (EQUITY)",
+"par": "CEGUSDT",
+"status": "descartado",
 "tipo": "EQUITY"
 },
 "CRMLUSDT": {
@@ -1048,7 +1067,8 @@
 20744,
 20745,
 20746,
-20747
+20747,
+20748
 ],
 "entrada": 20729,
 "motivo": null,
@@ -1089,6 +1109,14 @@
 "px_in": 63.86,
 "status": "descartado",
 "stop_px": 95.78999999999999,
+"tipo": "EQUITY"
+},
+"IBKRUSDT": {
+"d0": 20747,
+"entrada": 20749,
+"motivo": "nao-cripto (EQUITY)",
+"par": "IBKRUSDT",
+"status": "descartado",
 "tipo": "EQUITY"
 },
 "MCDUSDT": {
@@ -1465,5 +1493,5 @@
 "tipo": "EQUITY"
 }
 },
-"ultimo_scan": 20748
+"ultimo_scan": 20749
 }
