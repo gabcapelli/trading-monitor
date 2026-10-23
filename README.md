@@ -1,6 +1,6 @@
 # Painel de estratégias
 
-_Atualizado em 23/10 09:15 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
+_Atualizado em 23/10 10:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
 
 ## Precisa de você
 
@@ -29,14 +29,14 @@ _Nada pendente._
 
 | Estratégia | Ativo | Desde | Entrada | Agora | Resultado | Obs. |
 |---|---|---|---|---|---|---|
-| Desbloqueio | APR | 17/10 | 0.04684 | 0.02594 | **+44.62%** | com hedge +43.41%; recompra 24/10 |
-| Desbloqueio | ALT | 20/10 | 0.009214 | 0.007449 | **+19.16%** | com hedge +18.52%; recompra 27/10 |
-| Desbloqueio | H | 17/10 | 0.05749 | 0.05653 | +1.67% | com hedge +0.46%; recompra 24/10 |
-| Desbloqueio | RESOLV | 21/10 | 0.01646 | 0.01746 | -6.08% | com hedge -8.86%; recompra 28/10 |
-| Perpétuo novo | CT | 03/10 | 0.50286 | 0.20784 | **+58.67%** | stop 0.75429; saída 02/11 |
-| Rompimento 48h | 1000PEPE | 23/10 09:00 | 0.0050637 | 0.0050467 | -0.34% | comprado; saída 25/10 09:00 |
-| Rompimento 48h | BTC | 21/10 13:00 | 84499 | 81444.5 | -3.61% | comprado; saída 23/10 13:00 |
-| Rompimento 48h | ZEC | 21/10 13:00 | 1340.91 | 1223.34 | -8.77% | comprado; saída 23/10 13:00 |
+| Desbloqueio | APR | 17/10 | 0.04684 | 0.02574 | **+45.05%** | com hedge +43.98%; recompra 24/10 |
+| Desbloqueio | ALT | 20/10 | 0.009214 | 0.007409 | **+19.59%** | com hedge +19.10%; recompra 27/10 |
+| Desbloqueio | H | 17/10 | 0.05749 | 0.05659 | +1.57% | com hedge +0.50%; recompra 24/10 |
+| Desbloqueio | RESOLV | 21/10 | 0.01646 | 0.01751 | -6.38% | com hedge -9.02%; recompra 28/10 |
+| Perpétuo novo | CT | 03/10 | 0.50286 | 0.20825 | **+58.59%** | stop 0.75429; saída 02/11 |
+| Rompimento 48h | 1000PEPE | 23/10 09:00 | 0.0050637 | 0.0050562 | -0.15% | comprado; saída 25/10 09:00 |
+| Rompimento 48h | BTC | 21/10 13:00 | 84499 | 81665.4 | -3.35% | comprado; saída 23/10 13:00 |
+| Rompimento 48h | ZEC | 21/10 13:00 | 1340.91 | 1229.04 | -8.34% | comprado; saída 23/10 13:00 |
 
 <sub>Resultado a preço de mercado, bruto (sem custo nem funding), já no lado da posição: positivo = a favor. Em negrito, movimentos de 10% ou mais. Com hedge = venda + cesta dos majors.</sub>
 
