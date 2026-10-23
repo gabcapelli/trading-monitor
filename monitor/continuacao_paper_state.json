@@ -1099,6 +1099,40 @@
    "status": "aberto",
    "nivel": 83930.1,
    "nr7": false
+  },
+  {
+   "sym": "1000PEPEUSDT",
+   "lado": 1,
+   "barra": 1792742400000,
+   "entrada_ts": 1792756800000,
+   "detectado": 1792757700000,
+   "p_in": 0.0050637,
+   "p_in_real": 0.0050269,
+   "saida_ts": 1792929600000,
+   "top": [
+    "AVAXUSDT",
+    "STRKUSDT",
+    "BTWUSDT",
+    "ADAUSDT",
+    "PUMPUSDT",
+    "ENAUSDT",
+    "BNBUSDT",
+    "UNIUSDT",
+    "WLDUSDT",
+    "SUIUSDT",
+    "QNTUSDT",
+    "DOGEUSDT",
+    "HYPEUSDT",
+    "NEARUSDT",
+    "XRPUSDT",
+    "ZECUSDT",
+    "SOLUSDT",
+    "ETHUSDT",
+    "BTCUSDT"
+   ],
+   "status": "aberto",
+   "nivel": 0.0047985,
+   "nr7": true
   }
  ],
  "iniciado": 1791232470885,
@@ -1125,5 +1159,5 @@
   "BTCUSDT"
  ],
  "dia_top": 1792713600000,
- "ultima_barra": 1792728000000
+ "ultima_barra": 1792742400000
 }
