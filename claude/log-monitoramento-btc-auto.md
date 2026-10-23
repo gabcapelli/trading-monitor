@@ -4,16 +4,6 @@
 
 | Data/Hora (BRT) | Par | Close 1h | High/Low 1h | Close 4h | Swing 1h ref | ATR 1h | Funding | Zona ativa | Status checklist |
 |---|---|---|---|---|---|---|---|---|---|
-| 2026-10-21 12:06 | BTC-USDT-SWAP | 84545.9 | 84735.2/83571.2 | 83456.7 | res 83681.8 (ha 6 candles) | 416.73 | 0.0029% | A/compra@83681.8 (0t/0c) | zona_mapeada_setup_A |
-| 2026-10-21 12:06 | ETH-USDT-SWAP | 2495.7 | 2503.0/2462.8 | 2468.1 | res 2464.5 (ha 13 candles) | 17.38 | 0.0052% | — | descartado_rr_baixo_setup_A |
-| 2026-10-21 12:06 | SOL-USDT-SWAP | 107.64 | 108.03/106.23 | 106.81 | res 107.23 (ha 6 candles) | 0.78929 | 0.0007% | A/compra@107.23 (0t/0c) | zona_mapeada_setup_A |
-| 2026-10-21 12:06 | XRP-USDT-SWAP | 1.3827 | 1.3877/1.3540 | 1.3551 | res 1.3683 (ha 5 candles) | 0.01128 | 0.0003% | A/compra@1.3441 (1t/6c) | zona_mapeada_setup_A |
-| 2026-10-21 12:06 | DOGE-USDT-SWAP | 0.08312 | 0.08339/0.08179 | 0.08203 | — | 0.00058 | 0.0029% | B/venda@0.08286 (0t/0c) | zona_mapeada_setup_B |
-| 2026-10-21 12:06 | ARB-USDT-SWAP | 0.19394 | 0.19443/0.19025 | 0.19238 | res 0.19682 (ha 13 candles) | 0.00340 | -0.0040% | — | sem_zona |
-| 2026-10-21 12:06 | WLD-USDT-SWAP | 0.57750 | 0.57940/0.56530 | 0.59350 | sup 0.57860 (ha 8 candles) | 0.01063 | 0.0062% | — | sem_zona |
-| 2026-10-21 12:06 | SUI-USDT-SWAP | 1.0435 | 1.0463/1.0222 | 1.0331 | res 1.0379 (ha 7 candles) | 0.01065 | 0.0088% | A/compra@1.0379 (0t/0c) | zona_mapeada_setup_A |
-| 2026-10-21 12:06 | UNI-USDT-SWAP | 7.5340 | 7.5480/7.3750 | 7.4990 | res 7.5900 (ha 6 candles) | 0.12271 | -0.0060% | B/compra@7.4520 (0t/0c) | zona_mapeada_setup_B |
-| 2026-10-21 12:06 | LINK-USDT-SWAP | 12.54 | 12.57/12.31 | 12.38 | res 12.44 (ha 7 candles) | 0.10621 | -0.0048% | A/compra@12.44 (0t/0c) | zona_mapeada_setup_A |
 | 2026-10-21 13:06 | BTC-USDT-SWAP | 84502.1 | 84799.9/84339.2 | 84502.1 | res 83681.8 (ha 7 candles) | 417.26 | 0.0035% | A/compra@83681.8 (0t/1c) | zona_mapeada_setup_A |
 | 2026-10-21 13:06 | ETH-USDT-SWAP | 2511.2 | 2514.5/2495.0 | 2511.2 | res 2464.5 (ha 14 candles) | 17.12 | 0.0029% | — | sem_zona |
 | 2026-10-21 13:06 | SOL-USDT-SWAP | 108.44 | 108.88/107.50 | 108.44 | res 107.23 (ha 7 candles) | 0.82214 | 0.0021% | A/compra@107.23 (0t/1c) | zona_mapeada_setup_A |
@@ -484,3 +474,13 @@
 | 2026-10-23 11:06 | SUI-USDT-SWAP | 0.99880 | 1.0002/0.98960 | 0.99370 | — | 0.00989 | 0.0036% | — | descartado_rr_baixo_setup_B |
 | 2026-10-23 11:06 | UNI-USDT-SWAP | 7.1520 | 7.1840/7.0720 | 7.1920 | sup 6.9690 (ha 14 candles) | 0.08986 | 0.0069% | — | sem_zona |
 | 2026-10-23 11:06 | LINK-USDT-SWAP | 12.07 | 12.09/11.98 | 12.09 | — | 0.10729 | 0.0100% | B/compra@12.15 (0t/2c) | zona_mapeada_setup_B |
+| 2026-10-23 12:06 | BTC-USDT-SWAP | 81743.0 | 82020.0/81050.0 | 81701.1 | — | 419.09 | 0.0080% | — | sem_zona |
+| 2026-10-23 12:06 | ETH-USDT-SWAP | 2407.9 | 2417.0/2377.3 | 2401.8 | — | 18.00 | 0.0048% | — | sem_zona |
+| 2026-10-23 12:06 | SOL-USDT-SWAP | 104.74 | 105.20/103.42 | 104.47 | — | 0.79000 | 0.0044% | B/venda@104.76 (1t/0c) | zona_mapeada_setup_B |
+| 2026-10-23 12:06 | XRP-USDT-SWAP | 1.3140 | 1.3238/1.3015 | 1.3200 | res 1.3300 (ha 7 candles) | 0.01001 | 0.0100% | B/compra@1.3102 (0t/0c) | zona_mapeada_setup_B |
+| 2026-10-23 12:06 | DOGE-USDT-SWAP | 0.07999 | 0.08047/0.07889 | 0.08022 | — | 0.00067 | 0.0041% | B/compra@0.07996 (0t/0c) | zona_mapeada_setup_B |
+| 2026-10-23 12:06 | ARB-USDT-SWAP | 0.17939 | 0.18204/0.17568 | 0.18035 | sup 0.17743 (ha 15 candles) | 0.00274 | -0.0009% | — | sem_zona |
+| 2026-10-23 12:06 | WLD-USDT-SWAP | 0.53230 | 0.54160/0.52480 | 0.54170 | — | 0.01021 | 0.0100% | B/venda@0.53940 (2t/0c) | zona_mapeada_setup_B |
+| 2026-10-23 12:06 | SUI-USDT-SWAP | 0.98990 | 1.0003/0.97440 | 0.99370 | — | 0.01113 | 0.0026% | B/compra@0.99300 (0t/0c) | zona_mapeada_setup_B |
+| 2026-10-23 12:06 | UNI-USDT-SWAP | 7.1140 | 7.1940/6.9910 | 7.1920 | sup 6.9690 (ha 15 candles) | 0.10043 | 0.0070% | — | sem_zona |
+| 2026-10-23 12:06 | LINK-USDT-SWAP | 12.03 | 12.10/11.85 | 12.09 | — | 0.11986 | 0.0100% | B/compra@12.15 (0t/3c) | zona_mapeada_setup_B |
