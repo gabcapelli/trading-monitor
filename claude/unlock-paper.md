@@ -7,11 +7,11 @@
 > venda + compra da cesta dos 20 majors. Custo 0.18% por perna e funding real.
 > **Só reavaliar com 150 trades fechados.** Antes disso é ruído.
 
-_Atualizado em 2026-10-23 (calendário de 2026-10-23)._
+_Atualizado em 2026-10-24 (calendário de 2026-10-24)._
 
-**Trades fechados:** 21 de 150 (14%)
+**Trades fechados:** 23 de 150 (15%)
 
-**Média por trade:** puro +2.08% · com hedge -2.13% · hedge positivo em 9/21 (43%)
+**Média por trade:** puro +3.99% · com hedge -0.18% · hedge positivo em 10/23 (43%)
 
 _Referência do backtest (2025–2026): puro +2.9%, excesso sobre o universo +2.1%._
 
@@ -19,17 +19,15 @@ _Referência do backtest (2025–2026): puro +2.9%, excesso sobre o universo +2.
 
 | Token | Desbloqueio | % da oferta | Venda em (abertura) | Preço de entrada |
 |---|---|---|---|---|
-| APR | 2026-10-24 | 47.2% | 2026-10-17 | 0.04684 |
-| H | 2026-10-24 | 7.3% | 2026-10-17 | 0.05749 |
 | ALT | 2026-10-27 | 3.3% | 2026-10-20 | 0.009214 |
 | RESOLV | 2026-10-28 | 3.5% | 2026-10-21 | 0.01646 |
+| GUN | 2026-10-31 | 6.6% | 2026-10-24 | 0.002115 |
+| ZORA | 2026-10-31 | 2.9% | 2026-10-24 | 0.006474 |
 
 ## Próximas entradas (calendário atual)
 
 | Token | Desbloqueio | % da oferta | % insiders | Entrada prevista |
 |---|---|---|---|---|
-| GUN | 2026-10-31 | 6.6% | 77% | 2026-10-24 |
-| ZORA | 2026-10-31 | 2.9% | 75% | 2026-10-24 |
 | EIGEN | 2026-11-01 | 4.1% | 100% | 2026-10-25 |
 | ZETA | 2026-11-02 | 2.7% | 51% | 2026-10-26 |
 | STO | 2026-11-03 | 4.7% | 61% | 2026-10-27 |
@@ -51,6 +49,8 @@ _Passa pelos filtros (perpétuo com ≥ 30 dias, mesmo token a ≥ 14 dias) só 
 
 | Token | Desbloqueio | % da oferta | Retorno do token | Cesta | Puro | Com hedge | Obs. |
 |---|---|---|---|---|---|---|---|
+| H | 2026-10-24 | 7.3% | -0.90% | -3.48% | +0.96% | -2.76% |  |
+| APR | 2026-10-24 | 47.2% | -46.90% | -3.48% | +47.07% | +43.35% |  |
 | ZRO | 2026-10-21 | 3.6% | +0.10% | -0.57% | -0.15% | -0.96% |  |
 | KAITO | 2026-10-20 | 3.7% | -8.70% | -0.73% | +8.70% | +7.75% |  |
 | SOLV | 2026-10-19 | 3.4% | +9.75% | -8.17% | -9.72% | -18.11% |  |
