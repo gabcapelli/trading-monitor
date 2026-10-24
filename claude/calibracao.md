@@ -1,4 +1,4 @@
-# Calibracao — registro mecanico de sinais (atualizado 2026-10-24 00:06 BRT)
+# Calibracao — registro mecanico de sinais (atualizado 2026-10-24 01:06 BRT)
 
 > **Nao edite este arquivo** — ele e reescrito a cada execucao a partir da tabela `sinais_mecanicos`. Diferente de `sinais.md`, aqui nao ha nenhuma decisao sua: e TODA confirmacao mecanica detectada, inclusive as descartadas por R:R baixo, com desfecho medido por geometria de preco (OHLC de 1h contra stop/alvo sugeridos).
 >
@@ -26,12 +26,12 @@ Regra de alvo em vigor agora: **proximo** (coluna `Regra` abaixo mostra qual dec
 
 | Par | Setup | Direcao | Aceito | Regra | R:R (recente) | R:R (proximo) | Resultado | MAE | MFE | Candles | Quando |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| WLD/USDT | B | compra | sim | proximo | 6.96 | 2.20 | aberto | — | — | — | 2026-10-24 00:06 |
-| SOL/USDT | B | compra | sim | proximo | 5.21 | 3.46 | aberto | 0.315 | 0.354 | — | 2026-10-23 23:06 |
-| XRP/USDT | B | compra | nao | proximo | 5.07 | 1.95 | aberto | 0.185 | 0.4 | — | 2026-10-23 23:06 |
+| WLD/USDT | B | compra | sim | proximo | 6.96 | 2.20 | aberto | 0.483 | 0.326 | — | 2026-10-24 00:06 |
+| SOL/USDT | B | compra | sim | proximo | 5.21 | 3.46 | aberto | 0.315 | 1.062 | — | 2026-10-23 23:06 |
+| XRP/USDT | B | compra | nao | proximo | 5.07 | 1.95 | aberto | 0.415 | 0.753 | — | 2026-10-23 23:06 |
 | UNI/USDT | A | venda | nao | proximo | 0.05 | 0.05 | -1.00 | 1.309 | 0.01 | 2 | 2026-10-23 22:06 |
 | LINK/USDT | A | venda | nao | proximo | 2.10 | 0.40 | -1.00 | 1.158 | 0.0 | 2 | 2026-10-23 22:06 |
-| XRP/USDT | B | compra | nao | proximo | 2.16 | 0.66 | aberto | 0.899 | 0.022 | — | 2026-10-23 21:06 |
+| XRP/USDT | B | compra | nao | proximo | 2.16 | 0.66 | aberto | 0.899 | 0.088 | — | 2026-10-23 21:06 |
 | ETH/USDT | B | compra | nao | proximo | 1.68 | 0.15 | +0.15 | 0.495 | 0.436 | 1 | 2026-10-23 18:06 |
 | DOGE/USDT | B | compra | nao | proximo | 4.09 | 1.31 | -1.00 | 5.544 | 0.846 | 2 | 2026-10-23 18:06 |
 | SOL/USDT | B | venda | nao | proximo | 3.02 | 1.96 | +1.96 | 0.0 | 2.875 | 2 | 2026-10-23 15:06 |
