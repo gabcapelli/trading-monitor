@@ -4,16 +4,6 @@
 
 | Data/Hora (BRT) | Par | Close 1h | High/Low 1h | Close 4h | Swing 1h ref | ATR 1h | Funding | Zona ativa | Status checklist |
 |---|---|---|---|---|---|---|---|---|---|
-| 2026-10-22 12:06 | BTC-USDT-SWAP | 81840.1 | 81907.3/81545.9 | 81712.1 | res 84876.0 (ha 22 candles) | 441.39 | 0.0079% | — | sem_zona |
-| 2026-10-22 12:06 | ETH-USDT-SWAP | 2412.0 | 2416.9/2398.9 | 2399.2 | res 2527.6 (ha 22 candles) | 15.84 | 0.0038% | B/compra@2407.5 (0t/0c) | zona_mapeada_setup_B |
-| 2026-10-22 12:06 | SOL-USDT-SWAP | 104.64 | 105.23/104.21 | 104.40 | res 109.17 (ha 20 candles) | 0.80571 | 0.0030% | — | sem_zona |
-| 2026-10-22 12:06 | XRP-USDT-SWAP | 1.3236 | 1.3284/1.3200 | 1.3255 | res 1.3985 (ha 20 candles) | 0.00988 | 0.0037% | B/compra@1.3176 (1t/1c) | zona_mapeada_setup_B |
-| 2026-10-22 12:06 | DOGE-USDT-SWAP | 0.07938 | 0.07984/0.07919 | 0.07927 | res 0.08379 (ha 20 candles) | 0.00064 | -0.0035% | — | invalidado_setup_B |
-| 2026-10-22 12:06 | ARB-USDT-SWAP | 0.18393 | 0.18588/0.18314 | 0.18377 | — | 0.00296 | -0.0125% | — | sem_zona |
-| 2026-10-22 12:06 | WLD-USDT-SWAP | 0.54690 | 0.55060/0.54280 | 0.54590 | res 0.55290 (ha 4 candles) | 0.01123 | -0.0025% | — | sem_zona |
-| 2026-10-22 12:06 | SUI-USDT-SWAP | 0.98220 | 0.98920/0.97870 | 0.98620 | res 1.0560 (ha 20 candles) | 0.01061 | -0.0078% | — | sem_zona |
-| 2026-10-22 12:06 | UNI-USDT-SWAP | 7.1330 | 7.1880/7.0830 | 7.0790 | — | 0.09871 | 0.0009% | — | sem_zona |
-| 2026-10-22 12:06 | LINK-USDT-SWAP | 12.04 | 12.09/12.00 | 12.04 | res 12.80 (ha 20 candles) | 0.11293 | -0.0016% | B/compra@12.15 (0t/1c) | zona_mapeada_setup_B |
 | 2026-10-22 13:06 | BTC-USDT-SWAP | 81649.9 | 81855.0/81257.4 | 81649.9 | res 84876.0 (ha 23 candles) | 415.78 | 0.0080% | — | sem_zona |
 | 2026-10-22 13:06 | ETH-USDT-SWAP | 2397.6 | 2413.6/2384.0 | 2397.6 | res 2527.6 (ha 23 candles) | 15.71 | 0.0044% | — | invalidado_setup_B |
 | 2026-10-22 13:06 | SOL-USDT-SWAP | 104.57 | 104.74/103.88 | 104.57 | res 109.17 (ha 21 candles) | 0.75571 | 0.0037% | — | sem_zona |
@@ -484,3 +474,13 @@
 | 2026-10-24 11:06 | SUI-USDT-SWAP | 0.94420 | 0.95040/0.94180 | 0.94760 | sup 0.93880 (ha 4 candles) | 0.00762 | 0.0063% | — | sem_zona |
 | 2026-10-24 11:06 | UNI-USDT-SWAP | 6.8480 | 6.8560/6.8050 | 6.8100 | sup 6.7820 (ha 4 candles) | 0.07029 | 0.0043% | — | sem_zona |
 | 2026-10-24 11:06 | LINK-USDT-SWAP | 11.58 | 11.65/11.57 | 11.60 | sup 11.52 (ha 4 candles) | 0.08186 | 0.0028% | — | sem_zona |
+| 2026-10-24 12:06 | BTC-USDT-SWAP | 80168.7 | 80730.2/79758.0 | 80563.3 | sup 80390.5 (ha 5 candles) | 277.79 | 0.0079% | A/venda@80390.5 (0t/0c) | zona_mapeada_setup_A |
+| 2026-10-24 12:06 | ETH-USDT-SWAP | 2341.2 | 2369.1/2326.8 | 2364.6 | sup 2356.1 (ha 5 candles) | 11.43 | 0.0061% | A/venda@2356.1 (0t/0c) | zona_mapeada_setup_A |
+| 2026-10-24 12:06 | SOL-USDT-SWAP | 100.33 | 101.45/99.58 | 101.48 | sup 101.08 (ha 5 candles) | 0.61214 | 0.0020% | A/venda@101.08 (0t/0c) | zona_mapeada_setup_A |
+| 2026-10-24 12:06 | XRP-USDT-SWAP | 1.2732 | 1.2854/1.2644 | 1.2808 | — | 0.00749 | -0.0028% | — | invalidado_setup_B |
+| 2026-10-24 12:06 | DOGE-USDT-SWAP | 0.07615 | 0.07760/0.07546 | 0.07755 | sup 0.07682 (ha 5 candles) | 0.00058 | -0.0025% | A/venda@0.07682 (0t/0c) | zona_mapeada_setup_A |
+| 2026-10-24 12:06 | ARB-USDT-SWAP | 0.16714 | 0.16902/0.16433 | 0.16893 | sup 0.16813 (ha 4 candles) | 0.00201 | -0.0017% | A/venda@0.16813 (0t/0c) | zona_mapeada_setup_A |
+| 2026-10-24 12:06 | WLD-USDT-SWAP | 0.46350 | 0.47000/0.45720 | 0.47210 | — | 0.00661 | -0.0108% | B/compra@0.46070 (1t/0c) | zona_mapeada_setup_B |
+| 2026-10-24 12:06 | SUI-USDT-SWAP | 0.92760 | 0.94570/0.91440 | 0.94760 | sup 0.93880 (ha 5 candles) | 0.00892 | 0.0037% | A/venda@0.93880 (0t/0c) | zona_mapeada_setup_A |
+| 2026-10-24 12:06 | UNI-USDT-SWAP | 6.6980 | 6.8600/6.5990 | 6.8100 | sup 6.7820 (ha 5 candles) | 0.08057 | 0.0032% | A/venda@6.7820 (0t/0c) | zona_mapeada_setup_A |
+| 2026-10-24 12:06 | LINK-USDT-SWAP | 11.46 | 11.61/11.35 | 11.60 | sup 11.52 (ha 5 candles) | 0.09086 | 0.0021% | A/venda@11.52 (0t/0c) | zona_mapeada_setup_A |
