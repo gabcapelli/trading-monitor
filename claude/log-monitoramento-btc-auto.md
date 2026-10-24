@@ -4,16 +4,6 @@
 
 | Data/Hora (BRT) | Par | Close 1h | High/Low 1h | Close 4h | Swing 1h ref | ATR 1h | Funding | Zona ativa | Status checklist |
 |---|---|---|---|---|---|---|---|---|---|
-| 2026-10-22 18:06 | BTC-USDT-SWAP | 81239.6 | 81474.5/81160.0 | 81467.3 | res 84876.0 (ha 28 candles) | 416.16 | 0.0091% | B/compra@80961.3 (0t/0c) | zona_mapeada_setup_B |
-| 2026-10-22 18:06 | ETH-USDT-SWAP | 2381.9 | 2387.3/2376.5 | 2385.8 | res 2417.3 (ha 7 candles) | 17.63 | 0.0018% | B/compra@2369.0 (0t/4c) | zona_mapeada_setup_B |
-| 2026-10-22 18:06 | SOL-USDT-SWAP | 103.32 | 103.72/102.97 | 103.58 | res 105.24 (ha 7 candles) | 0.81643 | 0.0045% | — | sem_zona |
-| 2026-10-22 18:06 | XRP-USDT-SWAP | 1.3003 | 1.3068/1.2943 | 1.3048 | res 1.3985 (ha 26 candles) | 0.01012 | 0.0085% | — | sem_zona |
-| 2026-10-22 18:06 | DOGE-USDT-SWAP | 0.07833 | 0.07873/0.07812 | 0.07866 | res 0.07986 (ha 7 candles) | 0.00064 | 0.0045% | — | sem_zona |
-| 2026-10-22 18:06 | ARB-USDT-SWAP | 0.17930 | 0.18072/0.17829 | 0.18055 | — | 0.00279 | -0.0120% | — | sem_zona |
-| 2026-10-22 18:06 | WLD-USDT-SWAP | 0.54410 | 0.55660/0.54010 | 0.55380 | res 0.55290 (ha 10 candles) | 0.01324 | 0.0100% | — | invalidado_setup_A |
-| 2026-10-22 18:06 | SUI-USDT-SWAP | 0.97170 | 0.97630/0.96770 | 0.97560 | res 1.0560 (ha 26 candles) | 0.00957 | -0.0080% | — | sem_zona |
-| 2026-10-22 18:06 | UNI-USDT-SWAP | 6.9990 | 7.0450/6.9770 | 7.0330 | — | 0.08843 | -0.0104% | B/compra@7.0920 (0t/1c) | zona_mapeada_setup_B |
-| 2026-10-22 18:06 | LINK-USDT-SWAP | 11.90 | 11.98/11.86 | 11.95 | res 12.11 (ha 7 candles) | 0.10764 | -0.0045% | B/compra@12.15 (0t/7c) | zona_mapeada_setup_B |
 | 2026-10-22 19:06 | BTC-USDT-SWAP | 81442.5 | 81535.9/81214.4 | 81467.3 | res 84876.0 (ha 29 candles) | 409.71 | 0.0081% | B/compra@80961.3 (0t/1c) | zona_mapeada_setup_B |
 | 2026-10-22 19:06 | ETH-USDT-SWAP | 2392.5 | 2401.9/2380.0 | 2385.8 | res 2417.3 (ha 8 candles) | 18.52 | 0.0036% | B/compra@2369.0 (0t/5c) | zona_mapeada_setup_B |
 | 2026-10-22 19:06 | SOL-USDT-SWAP | 103.66 | 104.04/103.24 | 103.58 | res 105.24 (ha 8 candles) | 0.83929 | 0.0057% | — | sem_zona |
@@ -484,3 +474,13 @@
 | 2026-10-24 17:06 | SUI-USDT-SWAP | 0.93500 | 0.93730/0.93320 | 0.93500 | sup 0.91080 (ha 4 candles) | 0.01079 | -0.0013% | A/venda@0.93880 (2t/0c) | zona_mapeada_setup_A |
 | 2026-10-24 17:06 | UNI-USDT-SWAP | 6.7690 | 6.7800/6.7470 | 6.7690 | sup 6.5130 (ha 4 candles) | 0.09243 | -0.0014% | A/venda@6.7820 (2t/0c) | zona_mapeada_setup_A |
 | 2026-10-24 17:06 | LINK-USDT-SWAP | 11.54 | 11.55/11.51 | 11.54 | sup 11.23 (ha 4 candles) | 0.11200 | 0.0015% | A/venda@11.52 (2t/0c) | zona_mapeada_setup_A |
+| 2026-10-24 18:06 | BTC-USDT-SWAP | 80480.5 | 80588.0/80443.8 | 80443.8 | sup 79168.0 (ha 5 candles) | 370.64 | 0.0002% | — | sem_zona |
+| 2026-10-24 18:06 | ETH-USDT-SWAP | 2346.0 | 2349.0/2338.4 | 2338.4 | sup 2281.0 (ha 5 candles) | 17.85 | -0.0028% | A/venda@2356.1 (0t/6c) | zona_mapeada_setup_A |
+| 2026-10-24 18:06 | SOL-USDT-SWAP | 101.54 | 101.65/101.11 | 101.10 | sup 98.54 (ha 5 candles) | 0.80357 | 0.0032% | — | sem_zona |
+| 2026-10-24 18:06 | XRP-USDT-SWAP | 1.2908 | 1.2944/1.2882 | 1.2882 | — | 0.01006 | -0.0005% | — | invalidado_setup_B |
+| 2026-10-24 18:06 | DOGE-USDT-SWAP | 0.07724 | 0.07747/0.07706 | 0.07707 | sup 0.07469 (ha 5 candles) | 0.00073 | -0.0004% | — | sem_zona |
+| 2026-10-24 18:06 | ARB-USDT-SWAP | 0.16759 | 0.16886/0.16734 | 0.16735 | sup 0.16332 (ha 5 candles) | 0.00235 | 0.0032% | — | zona_expirada_setup_A |
+| 2026-10-24 18:06 | WLD-USDT-SWAP | 0.46620 | 0.46980/0.46400 | 0.46390 | — | 0.00734 | -0.0140% | B/compra@0.45610 (0t/3c) | zona_mapeada_setup_B |
+| 2026-10-24 18:06 | SUI-USDT-SWAP | 0.93660 | 0.94060/0.93500 | 0.93500 | sup 0.91080 (ha 5 candles) | 0.01083 | -0.0029% | — | zona_expirada_setup_A |
+| 2026-10-24 18:06 | UNI-USDT-SWAP | 6.8000 | 6.8270/6.7700 | 6.7690 | sup 6.5130 (ha 5 candles) | 0.09357 | 0.0003% | — | zona_expirada_setup_A |
+| 2026-10-24 18:06 | LINK-USDT-SWAP | 11.57 | 11.61/11.54 | 11.54 | sup 11.23 (ha 5 candles) | 0.11414 | 0.0027% | — | invalidado_setup_A |
