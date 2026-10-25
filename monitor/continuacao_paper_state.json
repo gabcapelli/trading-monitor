@@ -1148,9 +1148,18 @@
     "ETHUSDT",
     "BTCUSDT"
    ],
-   "status": "aberto",
+   "status": "fechado",
    "nivel": 0.0047985,
-   "nr7": true
+   "nr7": true,
+   "p_out": 0.0044616,
+   "funding": -0.036187000000000004,
+   "bruto": -11.890514840926603,
+   "liq": -12.106701840926602,
+   "excesso": -6.991759340402889,
+   "liq_real": -11.537279522230403,
+   "stop_ts": 1792774800000,
+   "liq_stop": -5.427277089874991,
+   "r_stop": -1.0362783936651574
   },
   {
    "sym": "DOGEUSDT",
@@ -1279,5 +1288,5 @@
   "BTCUSDT"
  ],
  "dia_top": 1792886400000,
- "ultima_barra": 1792900800000
+ "ultima_barra": 1792915200000
 }

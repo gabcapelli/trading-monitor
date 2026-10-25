@@ -1,6 +1,6 @@
 # Painel de estratégias
 
-_Atualizado em 25/10 08:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
+_Atualizado em 25/10 09:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
 
 ## Precisa de você
 
@@ -12,7 +12,7 @@ _Nada pendente._
 |---|---|---|---|
 | [Desbloqueio](claude/unlock-paper.md) | 5 | 23/150 | -0.18% |
 | [Perpétuo novo](claude/novos-paper.md) | 1 | 0/100 | — |
-| [Rompimento 48h](claude/continuacao-paper.md) · exceção | 4 | 26/300 | -6.26% |
+| [Rompimento 48h](claude/continuacao-paper.md) · exceção | 3 | 27/300 | -6.48% |
 | [Monitoring Tag](claude/monitoring-paper.md) | 0 | 1/24 | -4.20% |
 | [Sábado](claude/sabado-paper.md) | 0 | 5/104 | +0.04% |
 | [Setup A/B](claude/estudos-avulsos.md#setups-ab--encerrado-em-25092026) · encerrado | — | 34 | -0.13R |
@@ -24,22 +24,22 @@ _Nada pendente._
 <sub>Desde o fechamento das 21h (Brasília).</sub>
 
 - Desbloqueio: vendeu EIGEN a 0.2038 (desbloqueio 01/11)
+- Rompimento 48h: fechou 1000PEPE: líquido -12.11%
 - Sábado: vendeu a cesta: -1.09%
 
 ## Abertos agora
 
 | Estratégia | Ativo | Desde | Entrada | Agora | Resultado | Obs. |
 |---|---|---|---|---|---|---|
-| Desbloqueio | ALT | 20/10 | 0.009214 | 0.006427 | **+30.25%** | com hedge +24.77%; recompra 27/10 |
-| Desbloqueio | EIGEN | 25/10 | 0.2038 | 0.1969 | +3.39% | com hedge +1.69%; recompra 01/11 |
-| Desbloqueio | GUN | 24/10 | 0.002115 | 0.002069 | +2.17% | com hedge -0.53%; recompra 31/10 |
-| Desbloqueio | ZORA | 24/10 | 0.006474 | 0.006466 | +0.12% | com hedge -2.58%; recompra 31/10 |
-| Desbloqueio | RESOLV | 21/10 | 0.01646 | 0.0167 | -1.46% | com hedge -8.95%; recompra 28/10 |
-| Perpétuo novo | CT | 03/10 | 0.50286 | 0.16246 | **+67.69%** | stop 0.75429; saída 02/11 |
-| Rompimento 48h | BTC | 24/10 13:00 | 79761.8 | 80352 | -0.74% | vendido; saída 26/10 13:00 |
-| Rompimento 48h | ETH | 24/10 13:00 | 2304.74 | 2330.2 | -1.10% | vendido; saída 26/10 13:00 |
-| Rompimento 48h | DOGE | 24/10 13:00 | 0.07565 | 0.07654 | -1.18% | vendido; saída 26/10 13:00 |
-| Rompimento 48h | 1000PEPE | 23/10 09:00 | 0.0050637 | 0.004407 | **-12.97%** | comprado; saída 25/10 09:00 |
+| Desbloqueio | ALT | 20/10 | 0.009214 | 0.006392 | **+30.63%** | com hedge +25.80%; recompra 27/10 |
+| Desbloqueio | EIGEN | 25/10 | 0.2038 | 0.199 | +2.36% | com hedge +1.34%; recompra 01/11 |
+| Desbloqueio | GUN | 24/10 | 0.002115 | 0.00208 | +1.65% | com hedge -0.37%; recompra 31/10 |
+| Desbloqueio | ZORA | 24/10 | 0.006474 | 0.006456 | +0.28% | com hedge -1.75%; recompra 31/10 |
+| Desbloqueio | RESOLV | 21/10 | 0.01646 | 0.01664 | -1.09% | com hedge -7.96%; recompra 28/10 |
+| Perpétuo novo | CT | 03/10 | 0.50286 | 0.15939 | **+68.30%** | stop 0.75429; saída 02/11 |
+| Rompimento 48h | BTC | 24/10 13:00 | 79761.8 | 80503.8 | -0.93% | vendido; saída 26/10 13:00 |
+| Rompimento 48h | DOGE | 24/10 13:00 | 0.07565 | 0.0767 | -1.39% | vendido; saída 26/10 13:00 |
+| Rompimento 48h | ETH | 24/10 13:00 | 2304.74 | 2336.95 | -1.40% | vendido; saída 26/10 13:00 |
 
 <sub>Resultado a preço de mercado, bruto (sem custo nem funding), já no lado da posição: positivo = a favor. Em negrito, movimentos de 10% ou mais. Com hedge = venda + cesta dos majors.</sub>
 
