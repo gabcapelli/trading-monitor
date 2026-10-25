@@ -7,7 +7,7 @@
 > venda + compra da cesta dos 20 majors. Custo 0.18% por perna e funding real.
 > **Só reavaliar com 150 trades fechados.** Antes disso é ruído.
 
-_Atualizado em 2026-10-24 (calendário de 2026-10-24)._
+_Atualizado em 2026-10-25 (calendário de 2026-10-25)._
 
 **Trades fechados:** 23 de 150 (15%)
 
@@ -23,12 +23,12 @@ _Referência do backtest (2025–2026): puro +2.9%, excesso sobre o universo +2.
 | RESOLV | 2026-10-28 | 3.5% | 2026-10-21 | 0.01646 |
 | GUN | 2026-10-31 | 6.6% | 2026-10-24 | 0.002115 |
 | ZORA | 2026-10-31 | 2.9% | 2026-10-24 | 0.006474 |
+| EIGEN | 2026-11-01 | 4.1% | 2026-10-25 | 0.2038 |
 
 ## Próximas entradas (calendário atual)
 
 | Token | Desbloqueio | % da oferta | % insiders | Entrada prevista |
 |---|---|---|---|---|
-| EIGEN | 2026-11-01 | 4.1% | 100% | 2026-10-25 |
 | ZETA | 2026-11-02 | 2.7% | 51% | 2026-10-26 |
 | STO | 2026-11-03 | 4.7% | 61% | 2026-10-27 |
 | MOVE | 2026-11-10 | 3.6% | 70% | 2026-11-03 |
@@ -42,6 +42,7 @@ _Referência do backtest (2025–2026): puro +2.9%, excesso sobre o universo +2.
 | SOLV | 2026-11-18 | 3.3% | 68% | 2026-11-11 |
 | KAITO | 2026-11-20 | 3.6% | 53% | 2026-11-13 |
 | ZRO | 2026-11-20 | 3.5% | 100% | 2026-11-13 |
+| H | 2026-11-24 | 6.8% | 55% | 2026-11-17 |
 
 _Passa pelos filtros (perpétuo com ≥ 30 dias, mesmo token a ≥ 14 dias) só no dia da entrada._
 
