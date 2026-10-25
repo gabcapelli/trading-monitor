@@ -1,6 +1,6 @@
 # Painel de estratégias
 
-_Atualizado em 25/10 11:07 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
+_Atualizado em 25/10 12:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
 
 ## Precisa de você
 
@@ -31,15 +31,15 @@ _Nada pendente._
 
 | Estratégia | Ativo | Desde | Entrada | Agora | Resultado | Obs. |
 |---|---|---|---|---|---|---|
-| Desbloqueio | ALT | 20/10 | 0.009214 | 0.006595 | **+28.42%** | com hedge +23.11%; recompra 27/10 |
-| Desbloqueio | EIGEN | 25/10 | 0.2038 | 0.1976 | +3.04% | com hedge +1.53%; recompra 01/11 |
-| Desbloqueio | ZORA | 24/10 | 0.006474 | 0.006337 | +2.12% | com hedge -0.41%; recompra 31/10 |
-| Desbloqueio | GUN | 24/10 | 0.002115 | 0.002074 | +1.94% | com hedge -0.59%; recompra 31/10 |
-| Desbloqueio | RESOLV | 21/10 | 0.01646 | 0.01649 | -0.18% | com hedge -7.51%; recompra 28/10 |
-| Perpétuo novo | CT | 03/10 | 0.50286 | 0.17098 | **+66.00%** | stop 0.75429; saída 02/11 |
-| Rompimento 48h | BTC | 24/10 13:00 | 79761.8 | 80313.4 | -0.69% | vendido; saída 26/10 13:00 |
-| Rompimento 48h | ETH | 24/10 13:00 | 2304.74 | 2332.53 | -1.21% | vendido; saída 26/10 13:00 |
-| Rompimento 48h | DOGE | 24/10 13:00 | 0.07565 | 0.07672 | -1.41% | vendido; saída 26/10 13:00 |
+| Desbloqueio | ALT | 20/10 | 0.009214 | 0.006576 | **+28.63%** | com hedge +24.02%; recompra 27/10 |
+| Desbloqueio | ZORA | 24/10 | 0.006474 | 0.006317 | +2.43% | com hedge +0.63%; recompra 31/10 |
+| Desbloqueio | EIGEN | 25/10 | 0.2038 | 0.1991 | +2.31% | com hedge +1.53%; recompra 01/11 |
+| Desbloqueio | GUN | 24/10 | 0.002115 | 0.002083 | +1.51% | com hedge -0.28%; recompra 31/10 |
+| Desbloqueio | RESOLV | 21/10 | 0.01646 | 0.01647 | -0.06% | com hedge -6.71%; recompra 28/10 |
+| Perpétuo novo | CT | 03/10 | 0.50286 | 0.17331 | **+65.54%** | stop 0.75429; saída 02/11 |
+| Rompimento 48h | BTC | 24/10 13:00 | 79761.8 | 80651 | -1.11% | vendido; saída 26/10 13:00 |
+| Rompimento 48h | ETH | 24/10 13:00 | 2304.74 | 2342.98 | -1.66% | vendido; saída 26/10 13:00 |
+| Rompimento 48h | DOGE | 24/10 13:00 | 0.07565 | 0.07718 | -2.02% | vendido; saída 26/10 13:00 |
 
 <sub>Resultado a preço de mercado, bruto (sem custo nem funding), já no lado da posição: positivo = a favor. Em negrito, movimentos de 10% ou mais. Com hedge = venda + cesta dos majors.</sub>
 
