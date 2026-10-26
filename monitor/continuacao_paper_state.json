@@ -1268,13 +1268,13 @@
  "top": [
   "QUSDT",
   "ADAUSDT",
-  "STRKUSDT",
   "BTWUSDT",
+  "STRKUSDT",
   "1000PEPEUSDT",
   "UNIUSDT",
+  "ENAUSDT",
   "PUMPUSDT",
   "BNBUSDT",
-  "ENAUSDT",
   "WLDUSDT",
   "SUIUSDT",
   "DOGEUSDT",
@@ -1282,11 +1282,11 @@
   "HYPEUSDT",
   "NEARUSDT",
   "XRPUSDT",
-  "ZECUSDT",
   "SOLUSDT",
+  "ZECUSDT",
   "ETHUSDT",
   "BTCUSDT"
  ],
- "dia_top": 1792886400000,
- "ultima_barra": 1792944000000
+ "dia_top": 1792972800000,
+ "ultima_barra": 1792958400000
 }
