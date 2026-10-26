@@ -1,6 +1,6 @@
 # Painel de estratégias
 
-_Atualizado em 26/10 18:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
+_Atualizado em 26/10 19:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
 
 ## Precisa de você
 
@@ -33,14 +33,14 @@ _Nada pendente._
 
 | Estratégia | Ativo | Desde | Entrada | Agora | Resultado | Obs. |
 |---|---|---|---|---|---|---|
-| Desbloqueio | ALT | 20/10 | 0.009214 | 0.006309 | **+31.53%** | com hedge +26.55%; recompra 27/10 |
-| Desbloqueio | ZORA | 24/10 | 0.006474 | 0.006117 | +5.51% | com hedge +3.33%; recompra 31/10 |
-| Desbloqueio | EIGEN | 25/10 | 0.2038 | 0.196 | +3.83% | com hedge +2.65%; recompra 01/11 |
-| Desbloqueio | GUN | 24/10 | 0.002115 | 0.002052 | +2.98% | com hedge +0.79%; recompra 31/10 |
-| Desbloqueio | ZETA | 26/10 | 0.03931 | 0.03873 | +1.48% | com hedge +0.96%; recompra 02/11 |
-| Desbloqueio | RESOLV | 21/10 | 0.01646 | 0.01674 | -1.70% | com hedge -8.70%; recompra 28/10 |
-| Perpétuo novo | CT | 03/10 | 0.50286 | 0.15128 | **+69.92%** | stop 0.75429; saída 02/11 |
-| Rompimento 48h | BTW | 26/10 13:00 | 1.1952 | 1.1399 | +4.63% | vendido; saída 28/10 13:00 |
+| Desbloqueio | ALT | 20/10 | 0.009214 | 0.006393 | **+30.62%** | com hedge +26.05%; recompra 27/10 |
+| Desbloqueio | ZORA | 24/10 | 0.006474 | 0.006141 | +5.14% | com hedge +3.38%; recompra 31/10 |
+| Desbloqueio | EIGEN | 25/10 | 0.2038 | 0.1978 | +2.94% | com hedge +2.19%; recompra 01/11 |
+| Desbloqueio | GUN | 24/10 | 0.002115 | 0.002068 | +2.22% | com hedge +0.46%; recompra 31/10 |
+| Desbloqueio | ZETA | 26/10 | 0.03931 | 0.03897 | +0.86% | com hedge +0.78%; recompra 02/11 |
+| Desbloqueio | RESOLV | 21/10 | 0.01646 | 0.01672 | -1.58% | com hedge -8.18%; recompra 28/10 |
+| Perpétuo novo | CT | 03/10 | 0.50286 | 0.1524 | **+69.69%** | stop 0.75429; saída 02/11 |
+| Rompimento 48h | BTW | 26/10 13:00 | 1.1952 | 1.1713 | +2.00% | vendido; saída 28/10 13:00 |
 
 <sub>Resultado a preço de mercado, bruto (sem custo nem funding), já no lado da posição: positivo = a favor. Em negrito, movimentos de 10% ou mais. Com hedge = venda + cesta dos majors.</sub>
 
