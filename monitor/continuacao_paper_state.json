@@ -1323,13 +1323,47 @@
    "status": "aberto",
    "nivel": 1.2569,
    "nr7": false
+  },
+  {
+   "sym": "QUSDT",
+   "lado": 1,
+   "barra": 1793044800000,
+   "entrada_ts": 1793059200000,
+   "detectado": 1793059620000,
+   "p_in": 0.199393,
+   "p_in_real": 0.19979,
+   "saida_ts": 1793232000000,
+   "top": [
+    "ADAUSDT",
+    "BTWUSDT",
+    "STRKUSDT",
+    "1000PEPEUSDT",
+    "UNIUSDT",
+    "ENAUSDT",
+    "PUMPUSDT",
+    "BNBUSDT",
+    "WLDUSDT",
+    "SUIUSDT",
+    "DOGEUSDT",
+    "QNTUSDT",
+    "HYPEUSDT",
+    "XRPUSDT",
+    "NEARUSDT",
+    "SOLUSDT",
+    "ZECUSDT",
+    "ETHUSDT",
+    "BTCUSDT"
+   ],
+   "status": "aberto",
+   "nivel": 0.146969,
+   "nr7": false
   }
  ],
  "iniciado": 1791232470885,
  "top": [
-  "QUSDT",
   "ADAUSDT",
   "BTWUSDT",
+  "QUSDT",
   "STRKUSDT",
   "1000PEPEUSDT",
   "UNIUSDT",
@@ -1341,13 +1375,13 @@
   "DOGEUSDT",
   "QNTUSDT",
   "HYPEUSDT",
-  "NEARUSDT",
   "XRPUSDT",
+  "NEARUSDT",
   "SOLUSDT",
   "ZECUSDT",
   "ETHUSDT",
   "BTCUSDT"
  ],
- "dia_top": 1792972800000,
- "ultima_barra": 1793030400000
+ "dia_top": 1793059200000,
+ "ultima_barra": 1793044800000
 }

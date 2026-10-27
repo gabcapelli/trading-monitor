@@ -625,6 +625,7 @@
 "PORTALUSDT": 19782,
 "POWERUSDT": 20428,
 "POWRUSDT": 19657,
+"PREDICTUSDT": 20751,
 "PRLUSDT": 20544,
 "PROMPTUSDT": 20189,
 "PROMUSDT": 20103,
@@ -1071,7 +1072,8 @@
 20748,
 20749,
 20750,
-20751
+20751,
+20752
 ],
 "entrada": 20729,
 "motivo": null,
@@ -1278,6 +1280,14 @@
 "px_in": 50.43,
 "status": "descartado",
 "stop_px": 75.645,
+"tipo": "PREMARKET"
+},
+"PREDICTUSDT": {
+"d0": 20751,
+"entrada": 20753,
+"motivo": "nao-cripto (PREMARKET)",
+"par": "PREDICTUSDT",
+"status": "descartado",
 "tipo": "PREMARKET"
 },
 "RDWUSDT": {
@@ -1496,5 +1506,5 @@
 "tipo": "EQUITY"
 }
 },
-"ultimo_scan": 20752
+"ultimo_scan": 20753
 }

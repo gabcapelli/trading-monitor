@@ -6,7 +6,7 @@
 > em paralelo a venda **sem stop** (a regra do estudo, que não passou). Custo 0.18% e funding real.
 > **Só reavaliar com 100 trades fechados.** Antes disso é ruído.
 
-_Atualizado em 2026-10-26._
+_Atualizado em 2026-10-27._
 
 ## Abertos
 
@@ -18,7 +18,7 @@ _Atualizado em 2026-10-26._
 
 _Nenhum ainda._
 
-<details><summary>Descartados (26)</summary>
+<details><summary>Descartados (27)</summary>
 
 - USDBRLUSDT (2026-09-21): nao-cripto (FX)
 - MOONSHOTUSDT (2026-09-22): nao-cripto (PREMARKET)
@@ -46,5 +46,6 @@ _Nenhum ainda._
 - BACUSDT (2026-10-21): nao-cripto (EQUITY)
 - CEGUSDT (2026-10-21): nao-cripto (EQUITY)
 - IBKRUSDT (2026-10-21): nao-cripto (EQUITY)
+- PREDICTUSDT (2026-10-25): nao-cripto (PREMARKET)
 
 </details>

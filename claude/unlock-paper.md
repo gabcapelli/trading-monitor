@@ -7,11 +7,11 @@
 > venda + compra da cesta dos 20 majors. Custo 0.18% por perna e funding real.
 > **Só reavaliar com 150 trades fechados.** Antes disso é ruído.
 
-_Atualizado em 2026-10-26 (calendário de 2026-10-26)._
+_Atualizado em 2026-10-27 (calendário de 2026-10-27)._
 
-**Trades fechados:** 23 de 150 (15%)
+**Trades fechados:** 24 de 150 (16%)
 
-**Média por trade:** puro +3.99% · com hedge -0.18% · hedge positivo em 10/23 (43%)
+**Média por trade:** puro +4.68% · com hedge +0.51% · hedge positivo em 11/24 (46%)
 
 _Referência do backtest (2025–2026): puro +2.9%, excesso sobre o universo +2.1%._
 
@@ -19,18 +19,17 @@ _Referência do backtest (2025–2026): puro +2.9%, excesso sobre o universo +2.
 
 | Token | Desbloqueio | % da oferta | Venda em (abertura) | Preço de entrada |
 |---|---|---|---|---|
-| ALT | 2026-10-27 | 3.3% | 2026-10-20 | 0.009214 |
 | RESOLV | 2026-10-28 | 3.5% | 2026-10-21 | 0.01646 |
 | GUN | 2026-10-31 | 6.6% | 2026-10-24 | 0.002115 |
 | ZORA | 2026-10-31 | 2.9% | 2026-10-24 | 0.006474 |
 | EIGEN | 2026-11-01 | 4.1% | 2026-10-25 | 0.2038 |
 | ZETA | 2026-11-02 | 2.7% | 2026-10-26 | 0.03931 |
+| STO | 2026-11-03 | 4.7% | 2026-10-27 | 0.03171 |
 
 ## Próximas entradas (calendário atual)
 
 | Token | Desbloqueio | % da oferta | % insiders | Entrada prevista |
 |---|---|---|---|---|
-| STO | 2026-11-03 | 4.7% | 61% | 2026-10-27 |
 | MOVE | 2026-11-10 | 3.6% | 70% | 2026-11-03 |
 | APT | 2026-11-12 | 1.3% | 60% | 2026-11-05 |
 | BB | 2026-11-12 | 2.3% | 99% | 2026-11-05 |
@@ -43,6 +42,7 @@ _Referência do backtest (2025–2026): puro +2.9%, excesso sobre o universo +2.
 | KAITO | 2026-11-20 | 3.6% | 53% | 2026-11-13 |
 | ZRO | 2026-11-20 | 3.5% | 100% | 2026-11-13 |
 | H | 2026-11-24 | 6.8% | 55% | 2026-11-17 |
+| ALT | 2026-11-26 | 3.2% | 66% | 2026-11-19 |
 
 _Passa pelos filtros (perpétuo com ≥ 30 dias, mesmo token a ≥ 14 dias) só no dia da entrada._
 
@@ -50,6 +50,7 @@ _Passa pelos filtros (perpétuo com ≥ 30 dias, mesmo token a ≥ 14 dias) só 
 
 | Token | Desbloqueio | % da oferta | Retorno do token | Cesta | Puro | Com hedge | Obs. |
 |---|---|---|---|---|---|---|---|
+| ALT | 2026-10-27 | 3.3% | -30.46% | -4.06% | +20.67% | +16.37% |  |
 | H | 2026-10-24 | 7.3% | -0.90% | -3.48% | +0.96% | -2.76% |  |
 | APR | 2026-10-24 | 47.2% | -46.90% | -3.48% | +47.07% | +43.35% |  |
 | ZRO | 2026-10-21 | 3.6% | +0.10% | -0.57% | -0.15% | -0.96% |  |
