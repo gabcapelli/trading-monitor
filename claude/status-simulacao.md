@@ -1,4 +1,4 @@
-# Situacao atual -- Multi-Par (script gratuito, sem LLM) -- atualizado 2026-10-26 23:06 BRT
+# Situacao atual -- Multi-Par (script gratuito, sem LLM) -- atualizado 2026-10-27 00:06 BRT
 
 > Gerado por `monitor/fetch_and_check.py` via GitHub Actions, sem chamar a API do Claude. Registra fatos objetivos; a interpretacao qualitativa fica a seu criterio (ou cole este arquivo + o log numa conversa do Claude).
 
@@ -8,13 +8,13 @@
 
 | Par | Tendencia 4h | Close 1h | Funding | Zona / setup candidato | Status |
 |---|---|---|---|---|---|
-| BTC/USDT | lateral | 80039.7 | 0.0100% | — | sem_zona |
-| ETH/USDT | lateral | 2322.7 | 0.0100% | — | invalidado_setup_B |
-| SOL/USDT | baixa | 100.60 | 0.0100% | — | sem_zona |
-| XRP/USDT | lateral | 1.3010 | 0.0089% | Setup B (venda) 1.3124-1.3182 (0/3 toques, 1/8 candles) | zona_mapeada_setup_B |
-| DOGE/USDT | lateral | 0.07773 | -0.0017% | — | descartado_rr_baixo_setup_B |
-| ARB/USDT | baixa | 0.16761 | -0.0032% | — | sem_zona |
-| WLD/USDT | lateral | 0.43980 | -0.0069% | — | sem_zona |
-| SUI/USDT | baixa | 0.91400 | 0.0054% | — | sem_zona |
-| UNI/USDT | lateral | 7.1190 | 0.0100% | Setup B (compra) 6.9552-7.0068 (0/3 toques, 7/8 candles) | zona_mapeada_setup_B |
-| LINK/USDT | lateral | 11.33 | 0.0100% | — | sem_zona |
+| BTC/USDT | lateral | 79796.5 | 0.0100% | — | sem_zona |
+| ETH/USDT | lateral | 2312.9 | 0.0100% | Setup B (compra) 2310.9-2319.6 (0/3 toques, 0/8 candles) | zona_mapeada_setup_B |
+| SOL/USDT | baixa | 100.23 | 0.0100% | — | sem_zona |
+| XRP/USDT | lateral | 1.2991 | 0.0100% | Setup B (venda) 1.3124-1.3182 (0/3 toques, 2/8 candles) | zona_mapeada_setup_B |
+| DOGE/USDT | lateral | 0.07752 | -0.0025% | Setup B (compra) 0.07765-0.07795 (0/3 toques, 0/8 candles) | zona_mapeada_setup_B |
+| ARB/USDT | baixa | 0.16739 | -0.0027% | — | sem_zona |
+| WLD/USDT | lateral | 0.43880 | -0.0046% | — | sem_zona |
+| SUI/USDT | baixa | 0.90980 | 0.0079% | — | sem_zona |
+| UNI/USDT | lateral | 7.0440 | 0.0100% | — | zona_expirada_setup_B |
+| LINK/USDT | lateral | 11.31 | 0.0065% | — | sem_zona |

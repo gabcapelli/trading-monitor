@@ -1,6 +1,6 @@
 # Painel de estratégias
 
-_Atualizado em 26/10 23:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
+_Atualizado em 27/10 00:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
 
 ## Precisa de você
 
@@ -31,15 +31,15 @@ _Nada pendente._
 
 | Estratégia | Ativo | Desde | Entrada | Agora | Resultado | Obs. |
 |---|---|---|---|---|---|---|
-| Desbloqueio | ZORA | 24/10 | 0.006474 | 0.006112 | +5.59% | com hedge +3.90%; recompra 31/10 |
-| Desbloqueio | EIGEN | 25/10 | 0.2038 | 0.1958 | +3.93% | com hedge +3.24%; recompra 01/11 |
-| Desbloqueio | GUN | 24/10 | 0.002115 | 0.002057 | +2.74% | com hedge +1.05%; recompra 31/10 |
-| Desbloqueio | STO | 27/10 | 0.03171 | 0.03138 | +1.04% | com hedge +0.57%; recompra 03/11 |
-| Desbloqueio | ZETA | 26/10 | 0.03931 | 0.03896 | +0.89% | com hedge +0.88%; recompra 02/11 |
-| Desbloqueio | RESOLV | 21/10 | 0.01646 | 0.01673 | -1.64% | com hedge -8.17%; recompra 28/10 |
-| Perpétuo novo | CT | 03/10 | 0.50286 | 0.15545 | **+69.09%** | stop 0.75429; saída 02/11 |
-| Rompimento 48h | BTW | 26/10 13:00 | 1.1952 | 1.1916 | +0.30% | vendido; saída 28/10 13:00 |
-| Rompimento 48h | Q | 26/10 21:00 | 0.199393 | 0.198993 | -0.20% | comprado; saída 28/10 21:00 |
+| Desbloqueio | ZORA | 24/10 | 0.006474 | 0.006071 | +6.22% | com hedge +4.08%; recompra 31/10 |
+| Desbloqueio | EIGEN | 25/10 | 0.2038 | 0.1941 | +4.76% | com hedge +3.62%; recompra 01/11 |
+| Desbloqueio | GUN | 24/10 | 0.002115 | 0.00205 | +3.07% | com hedge +0.92%; recompra 31/10 |
+| Desbloqueio | STO | 27/10 | 0.03171 | 0.03122 | +1.55% | com hedge +0.61%; recompra 03/11 |
+| Desbloqueio | ZETA | 26/10 | 0.03931 | 0.03885 | +1.17% | com hedge +0.69%; recompra 02/11 |
+| Desbloqueio | RESOLV | 21/10 | 0.01646 | 0.01671 | -1.52% | com hedge -8.48%; recompra 28/10 |
+| Perpétuo novo | CT | 03/10 | 0.50286 | 0.16085 | **+68.01%** | stop 0.75429; saída 02/11 |
+| Rompimento 48h | Q | 26/10 21:00 | 0.199393 | 0.208009 | +4.32% | comprado; saída 28/10 21:00 |
+| Rompimento 48h | BTW | 26/10 13:00 | 1.1952 | 1.2633 | -5.70% | vendido; saída 28/10 13:00 |
 
 <sub>Resultado a preço de mercado, bruto (sem custo nem funding), já no lado da posição: positivo = a favor. Em negrito, movimentos de 10% ou mais. Com hedge = venda + cesta dos majors.</sub>
 
