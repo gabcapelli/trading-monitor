@@ -1,6 +1,6 @@
 # Painel de estratégias
 
-_Atualizado em 27/10 10:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
+_Atualizado em 27/10 11:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
 
 ## Precisa de você
 
@@ -31,15 +31,15 @@ _Nada pendente._
 
 | Estratégia | Ativo | Desde | Entrada | Agora | Resultado | Obs. |
 |---|---|---|---|---|---|---|
-| Desbloqueio | EIGEN | 25/10 | 0.2038 | 0.1955 | +4.07% | com hedge +3.63%; recompra 01/11 |
-| Desbloqueio | GUN | 24/10 | 0.002115 | 0.002067 | +2.27% | com hedge +0.81%; recompra 31/10 |
-| Desbloqueio | ZETA | 26/10 | 0.03931 | 0.0387 | +1.55% | com hedge +1.77%; recompra 02/11 |
-| Desbloqueio | ZORA | 24/10 | 0.006474 | 0.00639 | +1.30% | com hedge -0.16%; recompra 31/10 |
-| Desbloqueio | STO | 27/10 | 0.03171 | 0.03148 | +0.73% | com hedge +0.49%; recompra 03/11 |
-| Desbloqueio | RESOLV | 21/10 | 0.01646 | 0.01659 | -0.79% | com hedge -7.08%; recompra 28/10 |
-| Perpétuo novo | CT | 03/10 | 0.50286 | 0.17014 | **+66.17%** | stop 0.75429; saída 02/11 |
-| Rompimento 48h | BTW | 26/10 13:00 | 1.1952 | 1.4674 | **-22.77%** | vendido; saída 28/10 13:00 |
-| Rompimento 48h | Q | 26/10 21:00 | 0.199393 | 0.069712 | **-65.04%** | comprado; saída 28/10 21:00 |
+| Desbloqueio | EIGEN | 25/10 | 0.2038 | 0.1947 | +4.47% | com hedge +3.89%; recompra 01/11 |
+| Desbloqueio | GUN | 24/10 | 0.002115 | 0.002077 | +1.80% | com hedge +0.21%; recompra 31/10 |
+| Desbloqueio | ZETA | 26/10 | 0.03931 | 0.03864 | +1.70% | com hedge +1.79%; recompra 02/11 |
+| Desbloqueio | ZORA | 24/10 | 0.006474 | 0.006393 | +1.25% | com hedge -0.34%; recompra 31/10 |
+| Desbloqueio | STO | 27/10 | 0.03171 | 0.03162 | +0.28% | com hedge -0.10%; recompra 03/11 |
+| Desbloqueio | RESOLV | 21/10 | 0.01646 | 0.01664 | -1.09% | com hedge -7.50%; recompra 28/10 |
+| Perpétuo novo | CT | 03/10 | 0.50286 | 0.17115 | **+65.96%** | stop 0.75429; saída 02/11 |
+| Rompimento 48h | BTW | 26/10 13:00 | 1.1952 | 1.5119 | **-26.50%** | vendido; saída 28/10 13:00 |
+| Rompimento 48h | Q | 26/10 21:00 | 0.199393 | 0.07093 | **-64.43%** | comprado; saída 28/10 21:00 |
 
 <sub>Resultado a preço de mercado, bruto (sem custo nem funding), já no lado da posição: positivo = a favor. Em negrito, movimentos de 10% ou mais. Com hedge = venda + cesta dos majors.</sub>
 
