@@ -25,6 +25,7 @@
 "AAOIUSDT": 20612,
 "AAPLUSDT": 20549,
 "AAVEUSDT": 18551,
+"ABBVUSDT": 20752,
 "ACEUSDT": 19709,
 "ACHUSDT": 19410,
 "ACNUSDT": 20725,
@@ -284,6 +285,7 @@
 "EDGEUSDT": 20531,
 "EDUUSDT": 19477,
 "EGLDUSDT": 18519,
+"EIDOUSDT": 20752,
 "EIGENUSDT": 19997,
 "ELSAUSDT": 20475,
 "ENAUSDT": 19815,
@@ -293,6 +295,7 @@
 "EOSUSDT": 18269,
 "EPICUSDT": 20160,
 "EPTUSDT": 20199,
+"EQTUSDT": 20752,
 "ERAUSDT": 20286,
 "ESPORTSUSDT": 20298,
 "ESPUSDT": 20494,
@@ -744,6 +747,7 @@
 "STBLUSDT": 20348,
 "STEEMUSDT": 19669,
 "STGUSDT": 19229,
+"STMUSDT": 20752,
 "STMXUSDT": 18708,
 "STORJUSDT": 18521,
 "STOUSDT": 20190,
@@ -911,6 +915,14 @@
 },
 "inicio": 20719,
 "trades": {
+"ABBVUSDT": {
+"d0": 20752,
+"entrada": 20754,
+"motivo": "nao-cripto (EQUITY)",
+"par": "ABBVUSDT",
+"status": "descartado",
+"tipo": "EQUITY"
+},
 "ACNUSDT": {
 "cesta_in": {
 "ADAUSDT": 0.2466,
@@ -1073,7 +1085,8 @@
 20749,
 20750,
 20751,
-20752
+20752,
+20753
 ],
 "entrada": 20729,
 "motivo": null,
@@ -1114,6 +1127,22 @@
 "px_in": 63.86,
 "status": "descartado",
 "stop_px": 95.78999999999999,
+"tipo": "EQUITY"
+},
+"EIDOUSDT": {
+"d0": 20752,
+"entrada": 20754,
+"motivo": "nao-cripto (EQUITY)",
+"par": "EIDOUSDT",
+"status": "descartado",
+"tipo": "EQUITY"
+},
+"EQTUSDT": {
+"d0": 20752,
+"entrada": 20754,
+"motivo": "nao-cripto (EQUITY)",
+"par": "EQTUSDT",
+"status": "descartado",
 "tipo": "EQUITY"
 },
 "IBKRUSDT": {
@@ -1369,6 +1398,14 @@
 "status": "descartado",
 "tipo": "EQUITY"
 },
+"STMUSDT": {
+"d0": 20752,
+"entrada": 20754,
+"motivo": "nao-cripto (EQUITY)",
+"par": "STMUSDT",
+"status": "descartado",
+"tipo": "EQUITY"
+},
 "TWSTUSDT": {
 "cesta_in": {
 "ADAUSDT": 0.2443,
@@ -1506,5 +1543,5 @@
 "tipo": "EQUITY"
 }
 },
-"ultimo_scan": 20753
+"ultimo_scan": 20754
 }
