@@ -1,4 +1,4 @@
-# Calibracao — registro mecanico de sinais (atualizado 2026-10-28 10:06 BRT)
+# Calibracao — registro mecanico de sinais (atualizado 2026-10-28 11:06 BRT)
 
 > **Nao edite este arquivo** — ele e reescrito a cada execucao a partir da tabela `sinais_mecanicos`. Diferente de `sinais.md`, aqui nao ha nenhuma decisao sua: e TODA confirmacao mecanica detectada, inclusive as descartadas por R:R baixo, com desfecho medido por geometria de preco (OHLC de 1h contra stop/alvo sugeridos).
 >
@@ -26,7 +26,7 @@ Regra de alvo em vigor agora: **proximo** (coluna `Regra` abaixo mostra qual dec
 
 | Par | Setup | Direcao | Aceito | Regra | R:R (recente) | R:R (proximo) | Resultado | MAE | MFE | Candles | Quando |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| XRP/USDT | B | venda | nao | proximo | 2.66 | 1.51 | aberto | — | — | — | 2026-10-28 10:06 |
+| XRP/USDT | B | venda | nao | proximo | 2.66 | 1.51 | aberto | 0.657 | 0.292 | — | 2026-10-28 10:06 |
 | XRP/USDT | B | venda | nao | proximo | 1.00 | 1.00 | +1.00 | 0.0 | 3.119 | 2 | 2026-10-28 08:06 |
 | LINK/USDT | B | compra | nao | proximo | 0.38 | 0.38 | -1.00 | 1.203 | 0.098 | 2 | 2026-10-28 07:06 |
 | BTC/USDT | B | compra | nao | proximo | 0.59 | 0.01 | +0.01 | 0.012 | 3.032 | 1 | 2026-10-28 05:06 |
