@@ -1,6 +1,6 @@
 # Painel de estratégias
 
-_Atualizado em 28/10 20:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
+_Atualizado em 28/10 21:07 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
 
 ## Precisa de você
 
@@ -12,7 +12,7 @@ _Nada pendente._
 |---|---|---|---|
 | [Desbloqueio](claude/unlock-paper.md) | 5 | 25/150 | +0.22% |
 | [Perpétuo novo](claude/novos-paper.md) | 1 | 0/100 | — |
-| [Rompimento 48h](claude/continuacao-paper.md) · exceção | 2 | 31/300 | -7.33% |
+| [Rompimento 48h](claude/continuacao-paper.md) · exceção | 1 | 32/300 | -9.14% |
 | [Monitoring Tag](claude/monitoring-paper.md) | 0 | 1/24 | -4.20% |
 | [Sábado](claude/sabado-paper.md) | 0 | 5/104 | +0.04% |
 | [Setup A/B](claude/estudos-avulsos.md#setups-ab--encerrado-em-25092026) · encerrado | — | 34 | -0.13R |
@@ -23,22 +23,19 @@ _Nada pendente._
 
 <sub>Desde o fechamento das 21h (Brasília).</sub>
 
-- Desbloqueio: recomprou RESOLV: puro -1.85%, com hedge -6.90%
-- Rompimento 48h: fechou BTW: líquido -47.37%
-- Rompimento 48h: comprou BNB a 761.41 (28/10 09:00)
+- Rompimento 48h: fechou Q: líquido -65.21%
 
 ## Abertos agora
 
 | Estratégia | Ativo | Desde | Entrada | Agora | Resultado | Obs. |
 |---|---|---|---|---|---|---|
-| Desbloqueio | EIGEN | 25/10 | 0.2038 | 0.2019 | +0.93% | com hedge +2.84%; recompra 01/11 |
-| Desbloqueio | ZORA | 24/10 | 0.006474 | 0.006444 | +0.46% | com hedge +1.33%; recompra 31/10 |
-| Desbloqueio | ZETA | 26/10 | 0.03931 | 0.04032 | -2.57% | com hedge +0.01%; recompra 02/11 |
-| Desbloqueio | STO | 27/10 | 0.03171 | 0.03265 | -2.96% | com hedge -0.85%; recompra 03/11 |
-| Desbloqueio | GUN | 24/10 | 0.002115 | 0.002195 | -3.78% | com hedge -2.91%; recompra 31/10 |
-| Perpétuo novo | CT | 03/10 | 0.50286 | 0.15866 | **+68.45%** | stop 0.75429; saída 02/11 |
-| Rompimento 48h | BNB | 28/10 09:00 | 761.41 | 757 | -0.58% | comprado; saída 30/10 09:00 |
-| Rompimento 48h | Q | 26/10 21:00 | 0.199393 | 0.06899 | **-65.40%** | comprado; saída 28/10 21:00 |
+| Desbloqueio | EIGEN | 25/10 | 0.2038 | 0.2023 | +0.74% | com hedge +2.68%; recompra 01/11 |
+| Desbloqueio | ZORA | 24/10 | 0.006474 | 0.006477 | -0.05% | com hedge +0.86%; recompra 31/10 |
+| Desbloqueio | ZETA | 26/10 | 0.03931 | 0.04022 | -2.31% | com hedge +0.30%; recompra 02/11 |
+| Desbloqueio | STO | 27/10 | 0.03171 | 0.03275 | -3.28% | com hedge -1.14%; recompra 03/11 |
+| Desbloqueio | GUN | 24/10 | 0.002115 | 0.002224 | -5.15% | com hedge -4.25%; recompra 31/10 |
+| Perpétuo novo | CT | 03/10 | 0.50286 | 0.15844 | **+68.49%** | stop 0.75429; saída 02/11 |
+| Rompimento 48h | BNB | 28/10 09:00 | 761.41 | 761.12 | -0.04% | comprado; saída 30/10 09:00 |
 
 <sub>Resultado a preço de mercado, bruto (sem custo nem funding), já no lado da posição: positivo = a favor. Em negrito, movimentos de 10% ou mais. Com hedge = venda + cesta dos majors.</sub>
 

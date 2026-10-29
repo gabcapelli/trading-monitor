@@ -1363,9 +1363,18 @@
     "ETHUSDT",
     "BTCUSDT"
    ],
-   "status": "aberto",
+   "status": "fechado",
    "nivel": 0.146969,
-   "nr7": false
+   "nr7": false,
+   "p_out": 0.06882,
+   "funding": 0.45447200000000004,
+   "bruto": -65.48524772685099,
+   "liq": -65.210775726851,
+   "excesso": -70.40286620614133,
+   "liq_real": -65.90001120736775,
+   "stop_ts": 1793080800000,
+   "liq_stop": -26.472445599644917,
+   "r_stop": -1.0068709647203569
   },
   {
    "sym": "BNBUSDT",
@@ -1408,14 +1417,14 @@
   "BTWUSDT",
   "STRKUSDT",
   "QUSDT",
-  "1000PEPEUSDT",
   "UNIUSDT",
-  "ENAUSDT",
+  "1000PEPEUSDT",
   "PUMPUSDT",
-  "BNBUSDT",
-  "WLDUSDT",
+  "ENAUSDT",
   "SUIUSDT",
   "QNTUSDT",
+  "WLDUSDT",
+  "BNBUSDT",
   "DOGEUSDT",
   "HYPEUSDT",
   "XRPUSDT",
@@ -1425,6 +1434,6 @@
   "ETHUSDT",
   "BTCUSDT"
  ],
- "dia_top": 1793145600000,
- "ultima_barra": 1793203200000
+ "dia_top": 1793232000000,
+ "ultima_barra": 1793217600000
 }

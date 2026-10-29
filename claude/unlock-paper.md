@@ -7,7 +7,7 @@
 > venda + compra da cesta dos 20 majors. Custo 0.18% por perna e funding real.
 > **Só reavaliar com 150 trades fechados.** Antes disso é ruído.
 
-_Atualizado em 2026-10-28 (calendário de 2026-10-28)._
+_Atualizado em 2026-10-29 (calendário de 2026-10-29)._
 
 **Trades fechados:** 25 de 150 (17%)
 
