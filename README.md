@@ -1,6 +1,6 @@
 # Painel de estratégias
 
-_Atualizado em 29/10 16:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
+_Atualizado em 29/10 17:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
 
 ## Precisa de você
 
@@ -33,17 +33,17 @@ _Nada pendente._
 
 | Estratégia | Ativo | Desde | Entrada | Agora | Resultado | Obs. |
 |---|---|---|---|---|---|---|
-| Desbloqueio | EIGEN | 25/10 | 0.2038 | 0.1998 | +1.96% | com hedge +2.97%; recompra 01/11 |
-| Desbloqueio | GUN | 24/10 | 0.002115 | 0.00212 | -0.24% | com hedge -0.24%; recompra 31/10 |
-| Desbloqueio | ZORA | 24/10 | 0.006474 | 0.006508 | -0.53% | com hedge -0.53%; recompra 31/10 |
-| Desbloqueio | STO | 27/10 | 0.03171 | 0.03213 | -1.32% | com hedge -0.15%; recompra 03/11 |
-| Desbloqueio | ZETA | 26/10 | 0.03931 | 0.04003 | -1.83% | com hedge -0.16%; recompra 02/11 |
-| Perpétuo novo | CT | 03/10 | 0.50286 | 0.13518 | **+73.12%** | stop 0.75429; saída 02/11 |
-| Rompimento 48h | Q | 29/10 05:00 | 0.0414 | 0.03635 | **+12.20%** | vendido; saída 31/10 05:00 |
-| Rompimento 48h | HYPE | 29/10 09:00 | 87.973 | 94.409 | +7.32% | comprado; saída 31/10 09:00 |
-| Rompimento 48h | BNB | 28/10 09:00 | 761.41 | 744.18 | -2.26% | comprado; saída 30/10 09:00 |
-| Rompimento 48h | ZEC | 29/10 13:00 | 1357.41 | 1320.01 | -2.76% | comprado; saída 31/10 13:00 |
-| Rompimento 48h | 1000PEPE | 29/10 13:00 | 0.0054991 | 0.0052826 | -3.94% | comprado; saída 31/10 13:00 |
+| Desbloqueio | EIGEN | 25/10 | 0.2038 | 0.1956 | +4.02% | com hedge +3.63%; recompra 01/11 |
+| Desbloqueio | GUN | 24/10 | 0.002115 | 0.002084 | +1.47% | com hedge +0.08%; recompra 31/10 |
+| Desbloqueio | ZORA | 24/10 | 0.006474 | 0.006408 | +1.02% | com hedge -0.37%; recompra 31/10 |
+| Desbloqueio | STO | 27/10 | 0.03171 | 0.03158 | +0.41% | com hedge +0.19%; recompra 03/11 |
+| Desbloqueio | ZETA | 26/10 | 0.03931 | 0.03922 | +0.23% | com hedge +0.50%; recompra 02/11 |
+| Perpétuo novo | CT | 03/10 | 0.50286 | 0.13391 | **+73.37%** | stop 0.75429; saída 02/11 |
+| Rompimento 48h | Q | 29/10 05:00 | 0.0414 | 0.03535 | **+14.61%** | vendido; saída 31/10 05:00 |
+| Rompimento 48h | HYPE | 29/10 09:00 | 87.973 | 92.904 | +5.61% | comprado; saída 31/10 09:00 |
+| Rompimento 48h | BNB | 28/10 09:00 | 761.41 | 738.72 | -2.98% | comprado; saída 30/10 09:00 |
+| Rompimento 48h | ZEC | 29/10 13:00 | 1357.41 | 1298.09 | -4.37% | comprado; saída 31/10 13:00 |
+| Rompimento 48h | 1000PEPE | 29/10 13:00 | 0.0054991 | 0.0051678 | -6.02% | comprado; saída 31/10 13:00 |
 
 <sub>Resultado a preço de mercado, bruto (sem custo nem funding), já no lado da posição: positivo = a favor. Em negrito, movimentos de 10% ou mais. Com hedge = venda + cesta dos majors.</sub>
 
