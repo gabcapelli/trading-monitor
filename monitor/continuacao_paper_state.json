@@ -1477,6 +1477,74 @@
    "status": "aberto",
    "nivel": 82.48,
    "nr7": false
+  },
+  {
+   "sym": "1000PEPEUSDT",
+   "lado": 1,
+   "barra": 1793275200000,
+   "entrada_ts": 1793289600000,
+   "detectado": 1793289960000,
+   "p_in": 0.0054991,
+   "p_in_real": 0.0056029,
+   "saida_ts": 1793462400000,
+   "top": [
+    "ADAUSDT",
+    "BTWUSDT",
+    "STRKUSDT",
+    "QUSDT",
+    "UNIUSDT",
+    "PUMPUSDT",
+    "ENAUSDT",
+    "SUIUSDT",
+    "QNTUSDT",
+    "WLDUSDT",
+    "BNBUSDT",
+    "DOGEUSDT",
+    "HYPEUSDT",
+    "XRPUSDT",
+    "NEARUSDT",
+    "SOLUSDT",
+    "ZECUSDT",
+    "ETHUSDT",
+    "BTCUSDT"
+   ],
+   "status": "aberto",
+   "nivel": 0.0052434,
+   "nr7": false
+  },
+  {
+   "sym": "ZECUSDT",
+   "lado": 1,
+   "barra": 1793275200000,
+   "entrada_ts": 1793289600000,
+   "detectado": 1793289960000,
+   "p_in": 1357.41,
+   "p_in_real": 1367.17,
+   "saida_ts": 1793462400000,
+   "top": [
+    "ADAUSDT",
+    "BTWUSDT",
+    "STRKUSDT",
+    "QUSDT",
+    "UNIUSDT",
+    "1000PEPEUSDT",
+    "PUMPUSDT",
+    "ENAUSDT",
+    "SUIUSDT",
+    "QNTUSDT",
+    "WLDUSDT",
+    "BNBUSDT",
+    "DOGEUSDT",
+    "HYPEUSDT",
+    "XRPUSDT",
+    "NEARUSDT",
+    "SOLUSDT",
+    "ETHUSDT",
+    "BTCUSDT"
+   ],
+   "status": "aberto",
+   "nivel": 1329.75,
+   "nr7": true
   }
  ],
  "iniciado": 1791232470885,
@@ -1503,5 +1571,5 @@
   "BTCUSDT"
  ],
  "dia_top": 1793232000000,
- "ultima_barra": 1793260800000
+ "ultima_barra": 1793275200000
 }
