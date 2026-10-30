@@ -4,6 +4,8 @@
 > Regra congelada em 05/10/2026 (estudo 46), aberta como **exceção** pelo Gabriel: o estudo falhou
 > o critério por um fio. Custo 0.18% e funding real. **Só reavaliar com 300 trades fechados.**
 
+> **ENCERRADO em 30/10/2026 por decisão do Gabriel.** 33 de 300 trades fechados, 1 positivo, -9.12% líquido por trade (regra do 46), -1.11R na variante com stop e -1.03R no subconjunto NR7 (10 trades, 0 positivos). O workflow deixou de rodar `continuacao_paper.py`; os 15 trades abertos nesta data não foram acompanhados. Registro abaixo congelado.
+
 _Atualizado em 30/10 09:06 (Brasília). Top 20 do dia: ADA, BTW, STRK, UNI, Q, QNT, PUMP, ENA, SUI, 1000PEPE, WLD, BNB, DOGE, HYPE, XRP, NEAR, SOL, ZEC, ETH, BTC._
 
 **Trades fechados:** 33 de 300 (11%)

@@ -1,6 +1,6 @@
 # Painel de estratégias
 
-_Atualizado em 30/10 09:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
+_Atualizado em 30/10 09:24 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
 
 ## Precisa de você
 
@@ -12,7 +12,7 @@ _Nada pendente._
 |---|---|---|---|
 | [Desbloqueio](claude/unlock-paper.md) | 5 | 25/150 | +0.22% |
 | [Perpétuo novo](claude/novos-paper.md) | 1 | 0/100 | — |
-| [Rompimento 48h](claude/continuacao-paper.md) · exceção | 15 | 33/300 | -9.12% |
+| [Rompimento 48h](claude/continuacao-paper.md) · encerrado em 30/10/2026 | — | 33 | -9.12% |
 | [Monitoring Tag](claude/monitoring-paper.md) | 0 | 1/24 | -4.20% |
 | [Sábado](claude/sabado-paper.md) | 0 | 5/104 | +0.04% |
 | [Setup A/B](claude/estudos-avulsos.md#setups-ab--encerrado-em-25092026) · encerrado | — | 34 | -0.13R |
@@ -23,44 +23,18 @@ _Nada pendente._
 
 <sub>Desde o fechamento das 21h (Brasília).</sub>
 
-- Rompimento 48h: fechou BNB: líquido -8.27%
-- Rompimento 48h: vendeu ADA a 0.1903 (29/10 21:00)
-- Rompimento 48h: vendeu UNI a 6.466 (29/10 21:00)
-- Rompimento 48h: vendeu PUMP a 0.003947 (29/10 21:00)
-- Rompimento 48h: vendeu ENA a 0.17538 (29/10 21:00)
-- Rompimento 48h: vendeu SUI a 0.8693 (29/10 21:00)
-- Rompimento 48h: vendeu WLD a 0.382 (29/10 21:00)
-- Rompimento 48h: vendeu XRP a 1.237 (29/10 21:00)
-- Rompimento 48h: vendeu NEAR a 4.058 (29/10 21:00)
-- Rompimento 48h: vendeu SOL a 95.62 (29/10 21:00)
-- Rompimento 48h: vendeu ETH a 2252.35 (29/10 21:00)
-- Rompimento 48h: vendeu BTC a 77962.6 (29/10 21:00)
+_Nada abriu nem fechou._
 
 ## Abertos agora
 
 | Estratégia | Ativo | Desde | Entrada | Agora | Resultado | Obs. |
 |---|---|---|---|---|---|---|
-| Desbloqueio | EIGEN | 25/10 | 0.2038 | 0.1734 | **+14.92%** | com hedge +12.32%; recompra 01/11 |
-| Desbloqueio | GUN | 24/10 | 0.002115 | 0.001947 | +7.94% | com hedge +4.37%; recompra 31/10 |
-| Desbloqueio | ZORA | 24/10 | 0.006474 | 0.006079 | +6.10% | com hedge +2.53%; recompra 31/10 |
-| Desbloqueio | ZETA | 26/10 | 0.03931 | 0.03693 | +6.05% | com hedge +4.10%; recompra 02/11 |
-| Desbloqueio | STO | 27/10 | 0.03171 | 0.03008 | +5.14% | com hedge +2.71%; recompra 03/11 |
-| Perpétuo novo | CT | 03/10 | 0.50286 | 0.13995 | **+72.17%** | stop 0.75429; saída 02/11 |
-| Rompimento 48h | HYPE | 29/10 09:00 | 87.973 | 91.664 | +4.20% | comprado; saída 31/10 09:00 |
-| Rompimento 48h | ETH | 29/10 21:00 | 2252.35 | 2234.04 | +0.81% | vendido; saída 31/10 21:00 |
-| Rompimento 48h | BTC | 29/10 21:00 | 77962.6 | 77414.9 | +0.70% | vendido; saída 31/10 21:00 |
-| Rompimento 48h | XRP | 29/10 21:00 | 1.237 | 1.2458 | -0.71% | vendido; saída 31/10 21:00 |
-| Rompimento 48h | SOL | 29/10 21:00 | 95.62 | 96.58 | -1.00% | vendido; saída 31/10 21:00 |
-| Rompimento 48h | ADA | 29/10 21:00 | 0.1903 | 0.193 | -1.42% | vendido; saída 31/10 21:00 |
-| Rompimento 48h | SUI | 29/10 21:00 | 0.8693 | 0.8844 | -1.74% | vendido; saída 31/10 21:00 |
-| Rompimento 48h | PUMP | 29/10 21:00 | 0.003947 | 0.004063 | -2.94% | vendido; saída 31/10 21:00 |
-| Rompimento 48h | ENA | 29/10 21:00 | 0.17538 | 0.18374 | -4.77% | vendido; saída 31/10 21:00 |
-| Rompimento 48h | WLD | 29/10 21:00 | 0.382 | 0.4013 | -5.05% | vendido; saída 31/10 21:00 |
-| Rompimento 48h | 1000PEPE | 29/10 13:00 | 0.0054991 | 0.005201 | -5.42% | comprado; saída 31/10 13:00 |
-| Rompimento 48h | NEAR | 29/10 21:00 | 4.058 | 4.301 | -5.99% | vendido; saída 31/10 21:00 |
-| Rompimento 48h | UNI | 29/10 21:00 | 6.466 | 6.897 | -6.67% | vendido; saída 31/10 21:00 |
-| Rompimento 48h | ZEC | 29/10 13:00 | 1357.41 | 1234.6 | -9.05% | comprado; saída 31/10 13:00 |
-| Rompimento 48h | Q | 29/10 05:00 | 0.0414 | 0.04837 | **-16.84%** | vendido; saída 31/10 05:00 |
+| Desbloqueio | EIGEN | 25/10 | 0.2038 | 0.1734 | **+14.92%** | com hedge +12.38%; recompra 01/11 |
+| Desbloqueio | GUN | 24/10 | 0.002115 | 0.001946 | +7.99% | com hedge +4.48%; recompra 31/10 |
+| Desbloqueio | ZETA | 26/10 | 0.03931 | 0.0369 | +6.13% | com hedge +4.23%; recompra 02/11 |
+| Desbloqueio | ZORA | 24/10 | 0.006474 | 0.006097 | +5.82% | com hedge +2.31%; recompra 31/10 |
+| Desbloqueio | STO | 27/10 | 0.03171 | 0.03013 | +4.98% | com hedge +2.61%; recompra 03/11 |
+| Perpétuo novo | CT | 03/10 | 0.50286 | 0.1399 | **+72.18%** | stop 0.75429; saída 02/11 |
 
 <sub>Resultado a preço de mercado, bruto (sem custo nem funding), já no lado da posição: positivo = a favor. Em negrito, movimentos de 10% ou mais. Com hedge = venda + cesta dos majors.</sub>
 

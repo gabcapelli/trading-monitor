@@ -81,7 +81,7 @@ def hoje_e_abertos(hoje, un, nv, mt, ct, sb_est, px):
             ev.append(f"Perpétuo novo: vendeu {curto(t['par'])} a {t['px_in']:g} (stop {t['stop_px']:g})")
         if t["status"] == "fechado" and t.get("dia_saida_stop") == hoje:
             ev.append(f"Perpétuo novo: recomprou {curto(t['par'])}: com stop {_pct(t['com_stop'])}")
-    for nome, ts in (("Monitoring Tag", mt), ("Rompimento 48h", ct)):
+    for nome, ts in (("Monitoring Tag", mt),):   # Rompimento 48h encerrado em 30/10/2026
         for t in ts:
             if t["status"] in ("aberto", "fechado") and dia_ms(t["entrada_ts"]) == hoje:
                 lado = "comprou" if t.get("lado", -1) > 0 else "vendeu"
@@ -109,7 +109,7 @@ def hoje_e_abertos(hoje, un, nv, mt, ct, sb_est, px):
         if t["status"] == "aberto":
             linhas.append(("Perpétuo novo", t["par"], _data(t["entrada"]), t["px_in"], ret(t["par"], t["px_in"], -1),
                            f"stop {t['stop_px']:g}; saída {_data(t['entrada'] + 30)}"))
-    for nome, ts in (("Monitoring Tag", mt), ("Rompimento 48h", ct)):
+    for nome, ts in (("Monitoring Tag", mt),):   # Rompimento 48h encerrado em 30/10/2026
         for t in ts:
             if t["status"] == "aberto":
                 lado = t.get("lado", -1)
@@ -186,7 +186,7 @@ def main():
           f"{'—' if m_un is None else _pct(m_un)} |",
           f"| [Perpétuo novo](claude/novos-paper.md) | {len(nv_ab)} | {len(nv_fe)}/100 | "
           f"{'—' if m_nv is None else _pct(m_nv)} |",
-          f"| [Rompimento 48h](claude/continuacao-paper.md) · exceção | {len(ct_ab)} | {len(ct_fe)}/300 | "
+          f"| [Rompimento 48h](claude/continuacao-paper.md) · encerrado em 30/10/2026 | — | {len(ct_fe)} | "
           f"{'—' if m_ct is None else _pct(m_ct / 100)} |",
           f"| [Monitoring Tag](claude/monitoring-paper.md) | {len(mt_ab)} | {len({t['anuncio_id'] for t in mt_fe})}/24 | "
           f"{'—' if m_mt is None else _pct(m_mt / 100)} |",

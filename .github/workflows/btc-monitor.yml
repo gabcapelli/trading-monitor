@@ -69,14 +69,6 @@ jobs:
           UNLOCK_PAPER_FAPI: ${{ secrets.UNLOCK_PAPER_FAPI }}   # fapi e rota /cms do proxy-vercel
         run: python monitor/monitoring_paper.py
 
-      - name: Registrar rompimento 48h no top 20 em papel (estudo 46; barras de 4h)
-        continue-on-error: true   # falha aqui nunca bloqueia o commit do monitor
-        timeout-minutes: 10
-        env:
-          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
-          UNLOCK_PAPER_FAPI: ${{ secrets.UNLOCK_PAPER_FAPI }}   # fapi (com ticker/24hr) do proxy-vercel
-        run: python monitor/continuacao_paper.py
-
       - name: Arquivar negocios de WIN/WDO da B3 em 1 minuto (B3 so guarda ~4 semanas)
         continue-on-error: true   # falha aqui nunca bloqueia o commit do monitor
         timeout-minutes: 15

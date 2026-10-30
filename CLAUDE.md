@@ -127,7 +127,7 @@ Rompimento de 7 dias com volume ≥ 2× em barras de 4h, segurando 48h, nos 50 p
 
 ### Estudo 46 — rompimento de 48h no top 20 de volume de cada dia (05/10/2026, NÃO PASSA por um fio)
 
-Mesma regra do 45, nas 20 de maior volume de cada dia entre 679 perpétuos (inclusive deslistados): líquido **+0.76%**, IC [−0.03, +1.60], falha por um fio; excesso +0.79%, IC > 0; metades e trades fora das majors positivos. **É o melhor resultado direcional do projeto.** "Só compras" (+1.36%, IC > 0) passaria, mas foi escolhido depois de ver o dado. **O Gabriel abriu uma exceção (05/10/2026): papel em `monitor/continuacao_paper.py` → `claude/continuacao-paper.md`, com leitura só com 300 trades fechados.** Os sinais do papel foram conferidos 21 de 21 contra o estudo.
+Mesma regra do 45, nas 20 de maior volume de cada dia entre 679 perpétuos (inclusive deslistados): líquido **+0.76%**, IC [−0.03, +1.60], falha por um fio; excesso +0.79%, IC > 0; metades e trades fora das majors positivos. **É o melhor resultado direcional do projeto.** "Só compras" (+1.36%, IC > 0) passaria, mas foi escolhido depois de ver o dado. **O Gabriel abriu uma exceção (05/10/2026): papel em `monitor/continuacao_paper.py` → `claude/continuacao-paper.md`. Encerrada em 30/10/2026 com 33 trades fechados (1 positivo, -9.12% líquido por trade); o workflow não roda mais o script.** Os sinais do papel foram conferidos 21 de 21 contra o estudo.
 
 ### Estudo 47 — PTAX de fim de mês na B3 (06/10/2026, não passou)
 
