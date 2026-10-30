@@ -4,23 +4,22 @@
 > Regra congelada em 05/10/2026 (estudo 46), aberta como **exceção** pelo Gabriel: o estudo falhou
 > o critério por um fio. Custo 0.18% e funding real. **Só reavaliar com 300 trades fechados.**
 
-_Atualizado em 30/10 08:06 (Brasília). Top 20 do dia: ADA, BTW, STRK, UNI, Q, QNT, PUMP, ENA, SUI, 1000PEPE, WLD, BNB, DOGE, HYPE, XRP, NEAR, SOL, ZEC, ETH, BTC._
+_Atualizado em 30/10 09:06 (Brasília). Top 20 do dia: ADA, BTW, STRK, UNI, Q, QNT, PUMP, ENA, SUI, 1000PEPE, WLD, BNB, DOGE, HYPE, XRP, NEAR, SOL, ZEC, ETH, BTC._
 
-**Trades fechados:** 32 de 300 (10%)
+**Trades fechados:** 33 de 300 (11%)
 
-**Média por trade:** líquido -9.14% · excesso -4.13% · com o preço real alcançável -9.45% · positivos 1/32
+**Média por trade:** líquido -9.12% · excesso -4.07% · com o preço real alcançável -9.41% · positivos 1/33
 
 _Referência do estudo 46: +0.76% líquido, +0.79% de excesso por trade._
 
-**Variante com stop no nível rompido** (hipótese do estudo 61, desde 08/10/2026; mesmos sinais): líquido -3.77% · -1.11R · diferença para a regra +5.37% · stopados 28/32
+**Variante com stop no nível rompido** (hipótese do estudo 61, desde 08/10/2026; mesmos sinais): líquido -3.69% · -1.11R · diferença para a regra +5.43% · stopados 29/33
 
-**Estudo 62 (só com NR7 antes do rompimento, stop no nível)**, exceção desde 08/10/2026: 9 de 100 trades · -1.01R · líquido -3.05% · positivos 0/9 _(referência do estudo: +0.40R)_
+**Estudo 62 (só com NR7 antes do rompimento, stop no nível)**, exceção desde 08/10/2026: 10 de 100 trades · -1.03R · líquido -2.85% · positivos 0/10 _(referência do estudo: +0.40R)_
 
 ## Abertos
 
 | Par | Lado | Entrada | Preço | Saída |
 |---|---|---|---|---|
-| BNB | compra | 28/10 09:00 | 761.41 | 30/10 09:00 |
 | Q | venda | 29/10 05:00 | 0.0414 | 31/10 05:00 |
 | HYPE | compra | 29/10 09:00 | 87.973 | 31/10 09:00 |
 | 1000PEPE | compra | 29/10 13:00 | 0.0054991 | 31/10 13:00 |
@@ -41,6 +40,7 @@ _Referência do estudo 46: +0.76% líquido, +0.79% de excesso por trade._
 
 | Par | Lado | Entrada | Bruto | Funding | Líquido | Excesso | Líquido real | Com stop no nível | NR7 antes |
 |---|---|---|---|---|---|---|---|---|---|
+| BNB | compra | 28/10 09:00 | -8.07% | -0.025% | -8.27% | -2.38% | -8.08% | -1.04% (stop) | sim |
 | Q | compra | 26/10 21:00 | -65.49% | +0.454% | -65.21% | -70.40% | -65.90% | -26.47% (stop) | não |
 | BTW | venda | 26/10 13:00 | -45.51% | -1.683% | -47.37% | -45.28% | -56.57% | -7.08% (stop) | não |
 | DOGE | venda | 24/10 13:00 | -2.78% | +0.008% | -2.95% | -2.12% | -2.89% | -0.70% (stop) | não |
