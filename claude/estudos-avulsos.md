@@ -1724,6 +1724,15 @@ Pedido do Gabriel depois dos 77 e 78. Motivo: nos majors com horizonte curto o b
 - **Descritivo, não decide:** fração stopada, perda média dos stopados, perda máxima (gap), resultado por ano.
 - **Não passa:** qualquer critério falhar. Ressalva fixa: moedas pequenas têm spread e profundidade piores que o custo assumido, e os squeezes do estudo 37 (até -233%) são exatamente a cauda que este stop tenta limitar.
 
+**Resultado do 79 (30/10/2026): NÃO PASSA.** Script `monitor/replay_pump_short.py` · log `claude/pump_short.log`. Regra rodada como pré-registrada, tentativa única (carga de dados de 679 símbolos: 75 min).
+- **1458 trades.** Líquido médio **-0.695%**, IC95 [-2.103, +0.775]; excesso sobre o placebo **+0.257%**, IC95 [-1.082, +1.652]. R médio -0.023R.
+- **Bruto +0.95%, placebo -0.95%:** vender qualquer altcoin líquida nas mesmas horas, com o mesmo stop, perde ~1% em 72 h; o pump perde menos, mas não o bastante para pagar os 0.5% de custo.
+- **Períodos:** A (2020-23) +0.18% (n = 315), B (2024-26) **-0.94%** (n = 1143). Por ano: 2021 -0.82%, 2022 +1.02%, 2023 +1.81%, 2024 -1.01%, 2025 -1.24%, 2026 -0.67%. O setup é mais frequente no período recente e pior nele.
+- **Cauda:** 36% stopados (perda média -31.2%), pior trade -50.7% (gap limitado), melhor +93.9%. Sem os 3 melhores: -0.885%.
+- **Leitura:** o stop de +30% limitou a cauda (o -233% do estudo 37 não se repetiu), mas o ganho médio do pump que esgota (+0.95% bruto) não paga custo e stops. Falham os critérios (a), (b) e (c). Encerrado, sem variantes.
+
+**Total da rodada de 30/10/2026 (76–79):** 79 estudos, nenhum aprovado. O quadro é o mesmo de 27, 31, 56 e 77–78: há informação, mas pequena demais para o custo.
+
 ## Leitura conjunta
 
 Mesma direção do achado da auditoria v6 sobre o checklist mecânico dos Setups A/B. Nenhum dos dez setups de vídeo tem edge mecânico demonstrável nesses 20 pares (o 9.1 também não, fora da amostra, nos 80 pares do estudo 6):
