@@ -1710,6 +1710,20 @@ Pedido do Gabriel: mais estudos de setups cripto ativos, com mecanismo próprio 
 
 **Rodada de 30/10/2026 (76–78):** a auditoria do 46 não achou erro de método, e os dois setups novos (momentum da abertura dos EUA e prêmio da Coinbase) têm bruto positivo de ~0.09%, metade do custo. Total: 78 estudos, nenhum aprovado.
 
+## 79. PRÉ-REGISTRO (30/10/2026, antes de qualquer conta): venda de pump parabólico em altcoins, com stop
+
+Pedido do Gabriel depois dos 77 e 78. Motivo: nos majors com horizonte curto o bruto fica em ~+0.1%, metade do custo; este setup procura um movimento grande por trade. **Nada abaixo foi calculado.** Tentativa única: se falhar, não há variante.
+- **Mecanismo:** uma alta de 50% ou mais em 24h com volume extremo costuma esgotar (compradores atrasados, pump organizado). Contrário do 45/46, que testou continuação só nas 20 maiores.
+- **Universo:** todos os perpétuos USDT-M de cripto da Binance (`simbolos()` do estudo 46, inclusive os deslistados depois), candles de 1h do data.binance.vision, de 2020-01-01 a 2026-09-30.
+- **Sinal (fecho da barra de 1h aberta em `t`):** (i) fechamento em `t` ÷ fechamento 24 barras antes - 1 >= +50%; (ii) volume em dólar das últimas 24 barras (volume × fechamento) >= 3× a média diária dos 30 dias anteriores a essas 24 horas; (iii) volume em dólar das últimas 24 barras >= US$ 5 milhões (para ser operável).
+- **Trade:** venda na abertura da barra seguinte. **Stop:** a primeira barra cuja máxima toca +30% sobre a entrada fecha em max(preço do stop, abertura da barra) (o gap pior que o stop conta). **Saída por tempo:** abertura 72 horas depois da entrada. Um trade por símbolo por vez.
+- **Custo:** 0.5% ida e volta (moedas pequenas, como no estudo 38) mais funding real (vendido recebe quando o funding é positivo). Medida em R = líquido ÷ 30.
+- **Placebo (mesmo risco %, lição do 56):** para cada trade, a venda na mesma hora de até 30 outros símbolos do universo com volume em dólar de 24h >= US$ 5 milhões, sem exigir o sinal, com o mesmo stop de +30%, a mesma saída em 72 horas e o mesmo custo. Excesso = líquido do trade - média do placebo.
+- **Janelas:** A de 2020-01-01 a 2023-12-31, B de 2024-01-01 a 2026-09-30.
+- **Passa se (todos juntos):** (a) líquido médio > 0 com IC95 inteiro > 0 (bootstrap por semana de entrada); (b) excesso médio > 0 com IC95 inteiro > 0; (c) líquido médio > 0 em A e em B; (d) pelo menos 150 trades; (e) líquido médio > 0 mesmo sem os 3 melhores trades.
+- **Descritivo, não decide:** fração stopada, perda média dos stopados, perda máxima (gap), resultado por ano.
+- **Não passa:** qualquer critério falhar. Ressalva fixa: moedas pequenas têm spread e profundidade piores que o custo assumido, e os squeezes do estudo 37 (até -233%) são exatamente a cauda que este stop tenta limitar.
+
 ## Leitura conjunta
 
 Mesma direção do achado da auditoria v6 sobre o checklist mecânico dos Setups A/B. Nenhum dos dez setups de vídeo tem edge mecânico demonstrável nesses 20 pares (o 9.1 também não, fora da amostra, nos 80 pares do estudo 6):
