@@ -1,6 +1,6 @@
 # Painel de estratégias
 
-_Atualizado em 30/10 03:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
+_Atualizado em 30/10 04:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
 
 ## Precisa de você
 
@@ -39,28 +39,28 @@ _Nada pendente._
 
 | Estratégia | Ativo | Desde | Entrada | Agora | Resultado | Obs. |
 |---|---|---|---|---|---|---|
-| Desbloqueio | EIGEN | 25/10 | 0.2038 | 0.1713 | **+15.95%** | com hedge +13.79%; recompra 01/11 |
-| Desbloqueio | GUN | 24/10 | 0.002115 | 0.001907 | +9.83% | com hedge +6.70%; recompra 31/10 |
-| Desbloqueio | ZETA | 26/10 | 0.03931 | 0.03638 | +7.45% | com hedge +5.94%; recompra 02/11 |
-| Desbloqueio | ZORA | 24/10 | 0.006474 | 0.006011 | +7.15% | com hedge +4.02%; recompra 31/10 |
-| Desbloqueio | STO | 27/10 | 0.03171 | 0.02992 | +5.64% | com hedge +3.65%; recompra 03/11 |
-| Perpétuo novo | CT | 03/10 | 0.50286 | 0.12746 | **+74.65%** | stop 0.75429; saída 02/11 |
-| Rompimento 48h | HYPE | 29/10 09:00 | 87.973 | 92.985 | +5.70% | comprado; saída 31/10 09:00 |
-| Rompimento 48h | ETH | 29/10 21:00 | 2252.35 | 2238.61 | +0.61% | vendido; saída 31/10 21:00 |
-| Rompimento 48h | BTC | 29/10 21:00 | 77962.6 | 78514.7 | -0.71% | vendido; saída 31/10 21:00 |
-| Rompimento 48h | XRP | 29/10 21:00 | 1.237 | 1.2558 | -1.52% | vendido; saída 31/10 21:00 |
-| Rompimento 48h | ADA | 29/10 21:00 | 0.1903 | 0.1933 | -1.58% | vendido; saída 31/10 21:00 |
-| Rompimento 48h | SUI | 29/10 21:00 | 0.8693 | 0.8886 | -2.22% | vendido; saída 31/10 21:00 |
-| Rompimento 48h | SOL | 29/10 21:00 | 95.62 | 97.79 | -2.27% | vendido; saída 31/10 21:00 |
-| Rompimento 48h | NEAR | 29/10 21:00 | 4.058 | 4.188 | -3.20% | vendido; saída 31/10 21:00 |
-| Rompimento 48h | PUMP | 29/10 21:00 | 0.003947 | 0.004098 | -3.83% | vendido; saída 31/10 21:00 |
-| Rompimento 48h | WLD | 29/10 21:00 | 0.382 | 0.3981 | -4.21% | vendido; saída 31/10 21:00 |
-| Rompimento 48h | UNI | 29/10 21:00 | 6.466 | 6.764 | -4.61% | vendido; saída 31/10 21:00 |
-| Rompimento 48h | BNB | 28/10 09:00 | 761.41 | 716.18 | -5.94% | comprado; saída 30/10 09:00 |
-| Rompimento 48h | ENA | 29/10 21:00 | 0.17538 | 0.18655 | -6.37% | vendido; saída 31/10 21:00 |
-| Rompimento 48h | ZEC | 29/10 13:00 | 1357.41 | 1268.29 | -6.57% | comprado; saída 31/10 13:00 |
-| Rompimento 48h | 1000PEPE | 29/10 13:00 | 0.0054991 | 0.0049991 | -9.09% | comprado; saída 31/10 13:00 |
-| Rompimento 48h | Q | 29/10 05:00 | 0.0414 | 0.05777 | **-39.54%** | vendido; saída 31/10 05:00 |
+| Desbloqueio | EIGEN | 25/10 | 0.2038 | 0.1729 | **+15.16%** | com hedge +13.47%; recompra 01/11 |
+| Desbloqueio | GUN | 24/10 | 0.002115 | 0.001934 | +8.56% | com hedge +5.89%; recompra 31/10 |
+| Desbloqueio | ZETA | 26/10 | 0.03931 | 0.03674 | +6.54% | com hedge +5.49%; recompra 02/11 |
+| Desbloqueio | ZORA | 24/10 | 0.006474 | 0.006077 | +6.13% | com hedge +3.46%; recompra 31/10 |
+| Desbloqueio | STO | 27/10 | 0.03171 | 0.03028 | +4.51% | com hedge +2.98%; recompra 03/11 |
+| Perpétuo novo | CT | 03/10 | 0.50286 | 0.12967 | **+74.21%** | stop 0.75429; saída 02/11 |
+| Rompimento 48h | HYPE | 29/10 09:00 | 87.973 | 93.792 | +6.61% | comprado; saída 31/10 09:00 |
+| Rompimento 48h | ETH | 29/10 21:00 | 2252.35 | 2253.12 | -0.03% | vendido; saída 31/10 21:00 |
+| Rompimento 48h | BTC | 29/10 21:00 | 77962.6 | 78560 | -0.77% | vendido; saída 31/10 21:00 |
+| Rompimento 48h | ADA | 29/10 21:00 | 0.1903 | 0.1941 | -2.00% | vendido; saída 31/10 21:00 |
+| Rompimento 48h | XRP | 29/10 21:00 | 1.237 | 1.2646 | -2.23% | vendido; saída 31/10 21:00 |
+| Rompimento 48h | SOL | 29/10 21:00 | 95.62 | 98.18 | -2.68% | vendido; saída 31/10 21:00 |
+| Rompimento 48h | SUI | 29/10 21:00 | 0.8693 | 0.8935 | -2.78% | vendido; saída 31/10 21:00 |
+| Rompimento 48h | WLD | 29/10 21:00 | 0.382 | 0.396 | -3.66% | vendido; saída 31/10 21:00 |
+| Rompimento 48h | PUMP | 29/10 21:00 | 0.003947 | 0.004115 | -4.26% | vendido; saída 31/10 21:00 |
+| Rompimento 48h | UNI | 29/10 21:00 | 6.466 | 6.794 | -5.07% | vendido; saída 31/10 21:00 |
+| Rompimento 48h | BNB | 28/10 09:00 | 761.41 | 715.54 | -6.02% | comprado; saída 30/10 09:00 |
+| Rompimento 48h | NEAR | 29/10 21:00 | 4.058 | 4.313 | -6.28% | vendido; saída 31/10 21:00 |
+| Rompimento 48h | ZEC | 29/10 13:00 | 1357.41 | 1271.74 | -6.31% | comprado; saída 31/10 13:00 |
+| Rompimento 48h | ENA | 29/10 21:00 | 0.17538 | 0.19037 | -8.55% | vendido; saída 31/10 21:00 |
+| Rompimento 48h | 1000PEPE | 29/10 13:00 | 0.0054991 | 0.0049772 | -9.49% | comprado; saída 31/10 13:00 |
+| Rompimento 48h | Q | 29/10 05:00 | 0.0414 | 0.0576 | **-39.13%** | vendido; saída 31/10 05:00 |
 
 <sub>Resultado a preço de mercado, bruto (sem custo nem funding), já no lado da posição: positivo = a favor. Em negrito, movimentos de 10% ou mais. Com hedge = venda + cesta dos majors.</sub>
 
