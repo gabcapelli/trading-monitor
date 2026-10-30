@@ -1696,6 +1696,11 @@ Pedido do Gabriel: mais estudos de setups cripto ativos, com mecanismo próprio 
 - **Passa se (todos juntos):** (a) líquido médio > 0 com IC95 inteiro > 0 na amostra toda; (b) líquido médio > 0 em A e em B; (c) líquido médio > 0 em BTC e em ETH; (d) pelo menos 400 trades por ativo; (e) o líquido do lado comprado e o do lado vendido não são ambos <= 0.
 - **Não passa:** qualquer um falhar.
 
+**Resultado do 77 (30/10/2026): NÃO PASSA.** Script `monitor/replay_momentum_ny.py` · log `claude/momentum_ny.log`. Regra rodada exatamente como pré-registrada, tentativa única.
+- **BTC:** n = 831, líquido -0.086% (IC95 [-0.230, +0.055]), bruto +0.094%. **ETH:** n = 832, líquido -0.088% (IC95 [-0.256, +0.080]), bruto +0.093%.
+- **Amostra toda:** n = 1663, líquido -0.087%, IC95 [-0.236, +0.057]. Amostra A (2020-23) -0.116%, amostra B (2024-26) -0.050%.
+- **Leitura:** há um bruto positivo e consistente (+0.09% em ambos os ativos), mas é metade do custo de 0.18%. O sinal da meia hora carrega algo, só que pequeno demais para pagar o custo: mesmo quadro do 56 (embalo pós-dado macro, bruto +0.09R). Falham o IC e o critério de líquido positivo em A e B. Encerrado, sem variantes.
+
 **Ordem de execução:** 77 primeiro (dado já na máquina), depois 78 (precisa baixar a Coinbase, ~180 chamadas). Cada resultado entra aqui com o veredito e o commit.
 
 ## Leitura conjunta
