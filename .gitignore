@@ -13,3 +13,4 @@ monitor/cache_vol/
 monitor/cache_taker/
 monitor/cache_1m/
 monitor/cache_metrics/
+monitor/cache_coinbase/

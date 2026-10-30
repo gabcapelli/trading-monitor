@@ -1703,6 +1703,13 @@ Pedido do Gabriel: mais estudos de setups cripto ativos, com mecanismo próprio 
 
 **Ordem de execução:** 77 primeiro (dado já na máquina), depois 78 (precisa baixar a Coinbase, ~180 chamadas). Cada resultado entra aqui com o veredito e o commit.
 
+**Resultado do 78 (30/10/2026): NÃO PASSA.** Script `monitor/replay_premio_coinbase.py` · log `claude/premio_coinbase.log` · cache da Coinbase em `monitor/cache_coinbase/` (no `.gitignore`; 59.865 horas por ativo, cobertura completa). Regra rodada como pré-registrada, tentativa única.
+- **BTC:** n = 3244, líquido -0.092%, IC95 [-0.147, -0.033], bruto +0.088%. **ETH:** n = 3182, líquido -0.051%, IC95 [-0.122, +0.028], bruto +0.130%.
+- **Amostra toda:** n = 6426, líquido -0.072%, IC95 [-0.128, -0.010] (inteiro **negativo**). Amostra A (2020-23) -0.034%, B (2024-26) -0.123%. Compras -0.040%, vendas -0.098%.
+- **Leitura:** o desvio do prêmio da Coinbase tem um bruto positivo pequeno (+0.09% a +0.13% em 4h), abaixo do custo de 0.18%, e a segunda metade é pior que a primeira. Mesmo quadro do 77 e do 56: há informação, mas o custo a come. Encerrado, sem variantes.
+
+**Rodada de 30/10/2026 (76–78):** a auditoria do 46 não achou erro de método, e os dois setups novos (momentum da abertura dos EUA e prêmio da Coinbase) têm bruto positivo de ~0.09%, metade do custo. Total: 78 estudos, nenhum aprovado.
+
 ## Leitura conjunta
 
 Mesma direção do achado da auditoria v6 sobre o checklist mecânico dos Setups A/B. Nenhum dos dez setups de vídeo tem edge mecânico demonstrável nesses 20 pares (o 9.1 também não, fora da amostra, nos 80 pares do estudo 6):
