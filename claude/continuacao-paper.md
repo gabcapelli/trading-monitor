@@ -4,7 +4,7 @@
 > Regra congelada em 05/10/2026 (estudo 46), aberta como **exceção** pelo Gabriel: o estudo falhou
 > o critério por um fio. Custo 0.18% e funding real. **Só reavaliar com 300 trades fechados.**
 
-_Atualizado em 29/10 20:06 (Brasília). Top 20 do dia: ADA, BTW, STRK, Q, UNI, 1000PEPE, PUMP, ENA, SUI, QNT, WLD, BNB, DOGE, HYPE, XRP, NEAR, SOL, ZEC, ETH, BTC._
+_Atualizado em 29/10 21:06 (Brasília). Top 20 do dia: ADA, BTW, STRK, UNI, Q, QNT, PUMP, ENA, SUI, 1000PEPE, WLD, BNB, DOGE, HYPE, XRP, NEAR, SOL, ZEC, ETH, BTC._
 
 **Trades fechados:** 32 de 300 (10%)
 
@@ -25,6 +25,17 @@ _Referência do estudo 46: +0.76% líquido, +0.79% de excesso por trade._
 | HYPE | compra | 29/10 09:00 | 87.973 | 31/10 09:00 |
 | 1000PEPE | compra | 29/10 13:00 | 0.0054991 | 31/10 13:00 |
 | ZEC | compra | 29/10 13:00 | 1357.41 | 31/10 13:00 |
+| ADA | venda | 29/10 21:00 | 0.1903 | 31/10 21:00 |
+| UNI | venda | 29/10 21:00 | 6.466 | 31/10 21:00 |
+| PUMP | venda | 29/10 21:00 | 0.003947 | 31/10 21:00 |
+| ENA | venda | 29/10 21:00 | 0.17538 | 31/10 21:00 |
+| SUI | venda | 29/10 21:00 | 0.8693 | 31/10 21:00 |
+| WLD | venda | 29/10 21:00 | 0.382 | 31/10 21:00 |
+| XRP | venda | 29/10 21:00 | 1.237 | 31/10 21:00 |
+| NEAR | venda | 29/10 21:00 | 4.058 | 31/10 21:00 |
+| SOL | venda | 29/10 21:00 | 95.62 | 31/10 21:00 |
+| ETH | venda | 29/10 21:00 | 2252.35 | 31/10 21:00 |
+| BTC | venda | 29/10 21:00 | 77962.6 | 31/10 21:00 |
 
 ## Fechados (mais recentes primeiro)
 
