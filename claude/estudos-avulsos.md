@@ -1629,6 +1629,39 @@ Script: `monitor/replay_ls_ratio.py` · log: `claude/ls_ratio.log` · dados: `mo
 - **A proporção de comprados e vendidos não carrega informação de direção** que sobreviva a 10 candles. É o mesmo quadro de funding, prêmio e open interest (27, 31, 36): o posicionamento é público e já está no preço.
 - O cache fica disponível (`cache_metrics/`, no `.gitignore`) para hipóteses futuras sobre posicionamento ou open interest de 5 min.
 
+## 72 e 73. Números redondos: cruzamento a favor e rejeição no primeiro toque — 19/10/2026
+
+Script: `monitor/replay_numero_redondo.py` · log: `claude/numero_redondo.log`. Pedido do Gabriel: seguir buscando setups. Mecanismo de Osler (2003, câmbio): stops e take profits se acumulam em números redondos. O take profit faz o preço voltar no toque, e os stops disparados aceleram o cruzamento. Primeiro setup do projeto que olha o **nível de preço em si**, não o formato do candle. Número redondo = múltiplo de 5×10^(k−1), com k = ordem de grandeza da abertura (BTC 70k/100k, SOL 150/200, DOGE 0.15/0.20). Régua idêntica ao 63–71, tentativa única cada.
+- **72, cruzamento:** o candle abre de um lado do nível e fecha do outro. Entrada stop no extremo a favor, stop no outro extremo.
+- **73, rejeição:** o candle toca o nível e fecha de volta do mesmo lado em que abriu. Entrada contra o toque.
+
+| Célula | R líquido | IC97.5 | Excesso | IC97.5 | R bruto | n |
+|---|---|---|---|---|---|---|
+| **72 1d** | −0.01R | [−0.06, +0.05] | −0.07R | [−0.12, −0.02] | +0.02R | 11.506 |
+| **72 4h** | −0.05R | [−0.07, −0.03] | −0.02R | [−0.05, +0.00] | −0.00R | 38.676 |
+| **73 1d** | −0.00R | [−0.05, +0.05] | +0.01R | [−0.04, +0.05] | +0.03R | 10.718 |
+| **73 4h** | −0.09R | [−0.11, −0.06] | −0.02R | [−0.04, +0.00] | −0.03R | 36.447 |
+
+**Veredito: NÃO PASSA nas quatro células; o funil também não aceita nenhuma.** Com n de 10 a 38 mil, o bruto fica entre −0.03R e +0.03R, e a 2ª metade é negativa nos dois tempos gráficos. No diário, cruzar o número é até pior que entrar ao acaso (excesso −0.07R). Se o acúmulo de ordens existe em cripto, o efeito é pequeno demais para candles de 4h e 1d.
+
+## 74 e 75. Rompimento do 46 com open interest subindo (a favor) e caindo (contra) — 19/10/2026
+
+Script: `monitor/replay_oi_46.py` · log: `claude/oi_46.log`. Mecanismo: um rompimento feito por posição nova (open interest subindo) tem combustível; um feito por recompra de vendidos (open interest caindo) se esgota. Primeiro uso do open interest de 5 min (`cache_metrics/`) como filtro de setup. Sinais do 46 (top 20, 4h), 2020-10 a 2026-09. Contratos = valor do open interest no fim da barra / fechamento. Critério do 62 (IC95), tentativa única. **Ressalva fixa:** os sinais do 46 já foram usados no 45, 46, 61 e 62.
+- **74:** open interest subiu na barra do rompimento. Trade do 62: entrada na abertura seguinte, stop no nível rompido, 48h.
+- **75:** open interest caiu. Entra **contra** o rompimento, com stop no extremo da barra e saída em 48h.
+
+5.024 sinais no período: 1.188 sem open interest (quase todos em 2020–21), 2.572 com open interest subindo e 1.264 caindo (mediana de +1.9%).
+
+| Estudo | R líquido | IC95 | Excesso | IC95 | R bruto | n |
+|---|---|---|---|---|---|---|
+| **74 subindo, a favor** | −0.06R | [−0.24, +0.14] | −0.08R | [−0.27, +0.12] | +0.10R | 1.965 |
+| **75 caindo, contra** | −0.35R | [−0.58, −0.06] | −0.11R | [−0.34, +0.18] | −0.14R | 1.264 |
+
+**Veredito: NÃO PASSA nos dois.**
+- **74:** bruto de +0.10R (+0.22% por trade), mas o custo leva o líquido para baixo de zero e o excesso é negativo. A 1ª metade dá −0.13R. Com acerto de 21% e 75% dos trades stopados, é a cauda gorda de sempre do 46, sem melhora visível pelo open interest.
+- **75:** operar contra o rompimento sem combustível perde com confiança (IC inteiro negativo). O rompimento com open interest caindo não reverte; só não é melhor que o outro.
+- Mesmo quadro do 27, 31 e 70–71: **o posicionamento (funding, open interest, proporção de comprados) não carrega direção** que sobreviva ao custo.
+
 ## Leitura conjunta
 
 Mesma direção do achado da auditoria v6 sobre o checklist mecânico dos Setups A/B. Nenhum dos dez setups de vídeo tem edge mecânico demonstrável nesses 20 pares (o 9.1 também não, fora da amostra, nos 80 pares do estudo 6):

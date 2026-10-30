@@ -1,0 +1,32 @@
+simbolos 264 [442s]
+sinais do 46 no periodo: 5024 | sem open interest: 1188 | dOI subindo 2572 caindo 1264 | mediana dOI +1.91%
+
+==========================================================================================
+ESTUDO 74: rompimento do 46 com open interest subindo, a favor, stop no nivel, 48h
+==========================================================================================
+  R liquido  -0.057R  IC95% [-0.241, +0.140]  n=1965
+  excesso    -0.080R  IC95% [-0.268, +0.119]  n=1965
+  R bruto +0.102R | liquido em % +0.222% | risco medio 3.29% | stopados 75% | acerto 21.0%
+  metades: 1a -0.129R | 2a +0.015R | fora das majors +0.055R
+  compras  +0.003R  IC95% [-0.220, +0.246]  n=1469
+  vendas   -0.236R  IC95% [-0.529, +0.115]  n=496
+  por ano: 2020 +0.10 (8) | 2021 -0.62 (38) | 2022 -0.21 (343) | 2023 +0.00 (414) | 2024 -0.11 (459) | 2025 +0.05 (376) | 2026 +0.04 (327)
+  DECISAO: NAO PASSA
+
+==========================================================================================
+ESTUDO 75: rompimento do 46 com open interest caindo, contra, stop no extremo, 48h
+==========================================================================================
+  R liquido  -0.347R  IC95% [-0.581, -0.056]  n=1264
+  excesso    -0.110R  IC95% [-0.335, +0.175]  n=1264
+  R bruto -0.140R | liquido em % -0.853% | risco medio 4.45% | stopados 74% | acerto 20.7%
+  metades: 1a -0.410R | 2a -0.285R | fora das majors -0.301R
+  compras  -0.149R  IC95% [-0.529, +0.387]  n=637
+  vendas   -0.549R  IC95% [-0.793, -0.256]  n=627
+  por ano: 2020 -1.03 (13) | 2021 +0.69 (38) | 2022 -0.60 (186) | 2023 -0.39 (301) | 2024 +0.16 (283) | 2025 -0.25 (224) | 2026 -0.97 (219)
+  DECISAO: NAO PASSA
+
+Funil para o papel (descritivo; R bruto > 0, excesso IC95 > 0, n >= 200):
+  74: excesso -0.080R  IC95% [-0.268, +0.119]  n=1965 | bruto +0.102R -> nao
+  75: excesso -0.110R  IC95% [-0.335, +0.175]  n=1264 | bruto -0.140R -> nao
+
+[554s]
