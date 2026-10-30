@@ -1662,6 +1662,42 @@ Script: `monitor/replay_oi_46.py` · log: `claude/oi_46.log`. Mecanismo: um romp
 - **75:** operar contra o rompimento sem combustível perde com confiança (IC inteiro negativo). O rompimento com open interest caindo não reverte; só não é melhor que o outro.
 - Mesmo quadro do 27, 31 e 70–71: **o posicionamento (funding, open interest, proporção de comprados) não carrega direção** que sobreviva ao custo.
 
+## 76. Auditoria: por que o papel do 46 divergiu do backtest — 30/10/2026
+
+Descritivo, sem critério de passar. Script de captura dos trades do backtest na pasta temporária da sessão (chama `replay_continuacao_top20.py` sem alterá-lo). O Gabriel encerrou o papel do 46 em 30/10/2026 (commit `c1db9d1`): 33 de 300 trades, 1 positivo, -9.12% líquido por trade; stop no nível -1.11R; subconjunto NR7 -1.03R (10 trades, 0 positivos).
+- **Reprodução:** o backtest refeito dá +0.755% líquido, IC95 [-0.033, +1.602], n = 3253, idêntico ao estudo 46.
+- **Sem comparação sinal a sinal:** o backtest termina em 29/09/2026 (atraso do data.binance.vision) e o papel começa em 06/10. Nenhum dos 48 sinais do papel existe no backtest.
+- **Poucos dias independentes:** os 33 trades fechados vêm de 12 dias de entrada; 17 são do dia 08/10 (vendas abertas juntas numa alta do mercado, todas negativas, média ~-7%).
+- **Cauda:** BTW (-47.4%) e Q (-65.2%), moedas pequenas que entraram no top 20 do dia. Sem os dois, a média é -6.07% (mediana -4.81%). O backtest tem perdas ainda piores (até -152%).
+- **Lados:** compras -14.5% (9), vendas -7.1% (24). No backtest, compras +1.36% e vendas -0.55%.
+- **Quão raro:** com os 33 trades como independentes, P(média <= -9.12%) = 0.02%; sorteando 12 dias de sinal do backtest, 0.4%. Em janelas de 33 trades consecutivos do backtest, 0.1% têm média <= -9.12% (a pior é -9.5%).
+- **Execução:** nada indica bug. A diferença entre o preço da regra e o alcançável foi de 0.5 a 1.5 ponto nos casos olhados (BTW maior, por baixa liquidez).
+- **Leitura:** com 12 dias, o papel sozinho não prova nada. Junto de um backtest que já falhava por um fio (IC cruzando zero) e de 2024 negativo (-0.45%), a explicação mais plausível é que o edge era frágil e vinha de 2021 e das compras. O encerramento está apoiado.
+
+## 77 e 78. PRÉ-REGISTRO (30/10/2026, antes de qualquer conta): momentum da abertura dos EUA e prêmio da Coinbase
+
+Pedido do Gabriel: mais estudos de setups cripto ativos, com mecanismo próprio e dado ainda não usado. **Nada abaixo foi calculado.** Tentativa única cada: se falhar, não há variante (janela, limiar, ativo ou horário diferentes só como estudo novo, pré-registrado à parte). Régua do 63–75: custo 0.18% ida e volta mais funding real, bootstrap por semana de entrada, IC95. Ressalva fixa: depois de 75 estudos sem aprovação, a probabilidade a priori de passar é baixa; o objetivo é fechar a hipótese com rigor.
+
+**77. Momentum da primeira meia hora da sessão dos EUA (BTC e ETH, perpétuo).**
+- **Mecanismo:** o fluxo institucional na abertura da bolsa americana continua nas horas seguintes (efeito de momentum intradiário em índices de ações).
+- **Dado:** candles de 1 minuto do perpétuo USDT-M de BTC e ETH, `monitor/cache_1m/` (2019-12 a 2026-09).
+- **Sinal:** `r` = fechamento das 10:00 em Nova York ÷ abertura das 09:30 em Nova York - 1 (horário de Nova York com horário de verão). Só dias úteis. Opera só quando `|r|` >= mediana dos `|r|` dos 90 dias úteis anteriores (ponto no tempo).
+- **Trade:** entrada na abertura do minuto seguinte às 10:00 de NY, na direção de `r`; saída na abertura do minuto das 16:00 de NY (6 horas). Um trade por dia por ativo. Sem stop.
+- **Janelas:** amostra A de 2020-01-01 a 2023-12-31; amostra B de 2024-01-01 a 2026-09-30.
+- **Passa se (todos juntos):** (a) líquido médio > 0 com IC95 inteiro > 0 na amostra toda; (b) líquido médio > 0 em A e em B; (c) líquido médio > 0 em BTC e em ETH; (d) pelo menos 600 trades por ativo.
+- **Não passa:** qualquer um falhar. Sem retestes.
+
+**78. Prêmio da Coinbase sobre a Binance (BTC e ETH, horário).**
+- **Mecanismo:** pressão de compra de investidores dos EUA aparece primeiro como prêmio da Coinbase (USD) sobre a Binance (USDT) e antecede o movimento do preço global.
+- **Dado:** candles de 1h da Coinbase (`api.exchange.coinbase.com`, BTC-USD e ETH-USD, 2020-01 a 2026-09; rota pública testada em 30/10/2026) e candles de 1h do spot BTCUSDT/ETHUSDT da Binance (data.binance.vision, mesmo carregador dos outros estudos). O perpétuo é a ferramenta de execução (cache do estudo 46).
+- **Sinal:** `prem` = fechamento da Coinbase ÷ fechamento da Binance spot - 1, por hora. Como o par USDT/USD embute um nível lento, usa-se o desvio: `z = (prem - mediana das 168 horas anteriores) / (1.4826 × MAD das 168 horas anteriores)`, só com dados anteriores à hora.
+- **Trade:** compra se `z` >= 2 e venda se `z` <= -2, na abertura da hora seguinte; saída 4 horas depois. Um trade por vez por ativo. Sem stop.
+- **Janelas:** as mesmas do 77.
+- **Passa se (todos juntos):** (a) líquido médio > 0 com IC95 inteiro > 0 na amostra toda; (b) líquido médio > 0 em A e em B; (c) líquido médio > 0 em BTC e em ETH; (d) pelo menos 400 trades por ativo; (e) o líquido do lado comprado e o do lado vendido não são ambos <= 0.
+- **Não passa:** qualquer um falhar.
+
+**Ordem de execução:** 77 primeiro (dado já na máquina), depois 78 (precisa baixar a Coinbase, ~180 chamadas). Cada resultado entra aqui com o veredito e o commit.
+
 ## Leitura conjunta
 
 Mesma direção do achado da auditoria v6 sobre o checklist mecânico dos Setups A/B. Nenhum dos dez setups de vídeo tem edge mecânico demonstrável nesses 20 pares (o 9.1 também não, fora da amostra, nos 80 pares do estudo 6):
