@@ -41,8 +41,8 @@ _Referência do backtest (2025–2026): puro +2.9%, excesso sobre o universo +2.
 | H | 2026-11-24 | 6.8% | 55% | 2026-11-17 |
 | ALT | 2026-11-26 | 3.2% | 66% | 2026-11-19 |
 | RESOLV | 2026-11-27 | 3.7% | 90% | 2026-11-20 |
-| ZORA | 2026-11-30 | 2.9% | 75% | 2026-11-23 |
 | GUN | 2026-11-30 | 6.2% | 77% | 2026-11-23 |
+| ZORA | 2026-11-30 | 2.9% | 75% | 2026-11-23 |
 
 _Passa pelos filtros (perpétuo com ≥ 30 dias, mesmo token a ≥ 14 dias) só no dia da entrada._
 
