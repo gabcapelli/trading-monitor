@@ -36,5 +36,30 @@
    "secundaria": -0.006507840017962891,
    "funding_pendente": false
   }
- ]
+ ],
+ "janela": {
+  "dia": 20757,
+  "precos": {
+   "BTCUSDT": 77312.5,
+   "ETHUSDT": 2243.6,
+   "SOLUSDT": 96.29,
+   "XRPUSDT": 1.2559,
+   "DOGEUSDT": 0.07593,
+   "ARBUSDT": 0.16292,
+   "WLDUSDT": 0.4073,
+   "SUIUSDT": 0.9048,
+   "UNIUSDT": 7.149,
+   "LINKUSDT": 11.449,
+   "BNBUSDT": 704.37,
+   "TRXUSDT": 0.32881,
+   "ZECUSDT": 1269.43,
+   "HYPEUSDT": 90.001,
+   "ADAUSDT": 0.1952,
+   "XLMUSDT": 0.17081,
+   "NEARUSDT": 4.292,
+   "AVAXUSDT": 8.54,
+   "LTCUSDT": 55.96,
+   "BCHUSDT": 293.79
+  }
+ }
 }

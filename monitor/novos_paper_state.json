@@ -67,6 +67,7 @@
 "AMBUSDT": 19446,
 "AMCUSDT": 20714,
 "AMDUSDT": 20579,
+"AMGNUSDT": 20755,
 "AMZNUSDT": 20493,
 "ANCUSDT": 19059,
 "ANETUSDT": 20714,
@@ -308,6 +309,7 @@
 "EWJUSDT": 20531,
 "EWTUSDT": 20605,
 "EWYUSDT": 20528,
+"EWZSUSDT": 20755,
 "EWZUSDT": 20614,
 "FARTCOINUSDT": 20077,
 "FETUSDT": 19374,
@@ -503,6 +505,7 @@
 "MEGAUSDT": 20483,
 "MEITUANUSDT": 20676,
 "MELANIAUSDT": 20108,
+"MELIUSDT": 20755,
 "MEMEFIUSDT": 20203,
 "MEMEUSDT": 19664,
 "MERLUSDT": 20237,
@@ -597,6 +600,7 @@
 "OURAUSDT": 20719,
 "OUSDT": 20628,
 "OXTUSDT": 19580,
+"OXYUSDT": 20755,
 "PANWUSDT": 20655,
 "PARTIUSDT": 20172,
 "PATHUSDT": 20714,
@@ -608,6 +612,7 @@
 "PENGUUSDT": 20074,
 "PEOPLEUSDT": 18985,
 "PERPUSDT": 19422,
+"PFEUSDT": 20755,
 "PHAROSUSDT": 20587,
 "PHAUSDT": 20087,
 "PHBUSDT": 19404,
@@ -715,6 +720,7 @@
 "SLXUSDT": 20605,
 "SMCIUSDT": 20626,
 "SMHUSDT": 20663,
+"SMRUSDT": 20755,
 "SNDKUSDT": 20550,
 "SNOWUSDT": 20644,
 "SNPSUSDT": 20738,
@@ -961,6 +967,14 @@
 "status": "descartado",
 "tipo": "EQUITY"
 },
+"AMGNUSDT": {
+"d0": 20755,
+"entrada": 20757,
+"motivo": "nao-cripto (EQUITY)",
+"par": "AMGNUSDT",
+"status": "descartado",
+"tipo": "EQUITY"
+},
 "BACUSDT": {
 "d0": 20747,
 "entrada": 20749,
@@ -1088,7 +1102,8 @@
 20752,
 20753,
 20754,
-20755
+20755,
+20756
 ],
 "entrada": 20729,
 "motivo": null,
@@ -1147,6 +1162,14 @@
 "status": "descartado",
 "tipo": "EQUITY"
 },
+"EWZSUSDT": {
+"d0": 20755,
+"entrada": 20757,
+"motivo": "nao-cripto (EQUITY)",
+"par": "EWZSUSDT",
+"status": "descartado",
+"tipo": "EQUITY"
+},
 "IBKRUSDT": {
 "d0": 20747,
 "entrada": 20749,
@@ -1160,6 +1183,14 @@
 "entrada": 20734,
 "motivo": "nao-cripto (EQUITY)",
 "par": "MCDUSDT",
+"status": "descartado",
+"tipo": "EQUITY"
+},
+"MELIUSDT": {
+"d0": 20755,
+"entrada": 20757,
+"motivo": "nao-cripto (EQUITY)",
+"par": "MELIUSDT",
 "status": "descartado",
 "tipo": "EQUITY"
 },
@@ -1313,6 +1344,22 @@
 "stop_px": 75.645,
 "tipo": "PREMARKET"
 },
+"OXYUSDT": {
+"d0": 20755,
+"entrada": 20757,
+"motivo": "nao-cripto (EQUITY)",
+"par": "OXYUSDT",
+"status": "descartado",
+"tipo": "EQUITY"
+},
+"PFEUSDT": {
+"d0": 20755,
+"entrada": 20757,
+"motivo": "nao-cripto (EQUITY)",
+"par": "PFEUSDT",
+"status": "descartado",
+"tipo": "EQUITY"
+},
 "PREDICTUSDT": {
 "d0": 20751,
 "entrada": 20753,
@@ -1390,6 +1437,14 @@
 "px_in": 14.64,
 "status": "descartado",
 "stop_px": 21.96,
+"tipo": "EQUITY"
+},
+"SMRUSDT": {
+"d0": 20755,
+"entrada": 20757,
+"motivo": "nao-cripto (EQUITY)",
+"par": "SMRUSDT",
+"status": "descartado",
 "tipo": "EQUITY"
 },
 "SNPSUSDT": {
@@ -1545,5 +1600,5 @@
 "tipo": "EQUITY"
 }
 },
-"ultimo_scan": 20756
+"ultimo_scan": 20757
 }
