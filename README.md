@@ -1,6 +1,6 @@
 # Painel de estratégias
 
-_Atualizado em 31/10 16:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
+_Atualizado em 31/10 17:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
 
 ## Precisa de você
 
@@ -31,11 +31,11 @@ _Nada pendente._
 
 | Estratégia | Ativo | Desde | Entrada | Agora | Resultado | Obs. |
 |---|---|---|---|---|---|---|
-| Desbloqueio | EIGEN | 25/10 | 0.2038 | 0.1896 | +6.97% | com hedge +5.11%; recompra 01/11 |
-| Desbloqueio | ZETA | 26/10 | 0.03931 | 0.03677 | +6.46% | com hedge +5.24%; recompra 02/11 |
-| Desbloqueio | STO | 27/10 | 0.03171 | 0.03228 | -1.80% | com hedge -3.49%; recompra 03/11 |
-| Perpétuo novo | CT | 03/10 | 0.50286 | 0.14076 | **+72.01%** | stop 0.75429; saída 02/11 |
-| Sábado | cesta (20) | 30/10 21:00 | — | — | -0.21% | comprado; saída sábado 21h |
+| Desbloqueio | EIGEN | 25/10 | 0.2038 | 0.1881 | +7.70% | com hedge +5.65%; recompra 01/11 |
+| Desbloqueio | ZETA | 26/10 | 0.03931 | 0.03665 | +6.77% | com hedge +5.35%; recompra 02/11 |
+| Desbloqueio | STO | 27/10 | 0.03171 | 0.03173 | -0.06% | com hedge -1.95%; recompra 03/11 |
+| Perpétuo novo | CT | 03/10 | 0.50286 | 0.1422 | **+71.72%** | stop 0.75429; saída 02/11 |
+| Sábado | cesta (20) | 30/10 21:00 | — | — | -0.41% | comprado; saída sábado 21h |
 
 <sub>Resultado a preço de mercado, bruto (sem custo nem funding), já no lado da posição: positivo = a favor. Em negrito, movimentos de 10% ou mais. Com hedge = venda + cesta dos majors.</sub>
 
