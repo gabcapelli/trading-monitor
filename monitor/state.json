@@ -4,7 +4,7 @@
     "BTC-USDT-SWAP": {
       "status": "sem_zona",
       "zone": null,
-      "last_1h_ts": 1793545200000,
+      "last_1h_ts": 1793548800000,
       "avisado_aberto_longo": false,
       "cooldowns": {
         "venda": {
@@ -20,7 +20,7 @@
     "ETH-USDT-SWAP": {
       "status": "sem_zona",
       "zone": null,
-      "last_1h_ts": 1793545200000,
+      "last_1h_ts": 1793548800000,
       "avisado_aberto_longo": false,
       "cooldowns": {
         "venda": {
@@ -36,7 +36,7 @@
     "SOL-USDT-SWAP": {
       "status": "sem_zona",
       "zone": null,
-      "last_1h_ts": 1793545200000,
+      "last_1h_ts": 1793548800000,
       "avisado_aberto_longo": false,
       "cooldowns": {
         "venda": {
@@ -52,7 +52,7 @@
     "XRP-USDT-SWAP": {
       "status": "sem_zona",
       "zone": null,
-      "last_1h_ts": 1793545200000,
+      "last_1h_ts": 1793548800000,
       "avisado_aberto_longo": false,
       "cooldowns": {
         "compra": {
@@ -73,12 +73,12 @@
         "level": 0.07603,
         "zone_low": 0.07594232142857144,
         "zone_high": 0.07611767857142857,
-        "candles_since_creation": 5,
+        "candles_since_creation": 6,
         "touches": 0,
         "created_at": 1793527200000,
         "last_touch_ts": 1793527200000
       },
-      "last_1h_ts": 1793545200000,
+      "last_1h_ts": 1793548800000,
       "avisado_aberto_longo": false,
       "cooldowns": {
         "venda": {
@@ -92,9 +92,9 @@
       }
     },
     "ARB-USDT-SWAP": {
-      "status": "descartado_rr_baixo_setup_B",
+      "status": "sem_zona",
       "zone": null,
-      "last_1h_ts": 1793545200000,
+      "last_1h_ts": 1793548800000,
       "avisado_aberto_longo": false,
       "cooldowns": {
         "venda": {
@@ -110,7 +110,7 @@
     "WLD-USDT-SWAP": {
       "status": "sem_zona",
       "zone": null,
-      "last_1h_ts": 1793545200000,
+      "last_1h_ts": 1793548800000,
       "avisado_aberto_longo": false,
       "cooldowns": {
         "compra": {
@@ -124,19 +124,9 @@
       }
     },
     "SUI-USDT-SWAP": {
-      "status": "zona_mapeada_setup_B",
-      "zone": {
-        "setup": "B",
-        "direction": "compra",
-        "level": 0.8979,
-        "zone_low": 0.8966357142857143,
-        "zone_high": 0.8991642857142857,
-        "candles_since_creation": 0,
-        "touches": 0,
-        "created_at": 1793545200000,
-        "last_touch_ts": 1793545200000
-      },
-      "last_1h_ts": 1793545200000,
+      "status": "descartado_rr_baixo_setup_B",
+      "zone": null,
+      "last_1h_ts": 1793548800000,
       "avisado_aberto_longo": false,
       "cooldowns": {
         "venda": {
@@ -144,15 +134,25 @@
           "until_ts": 1793332800000
         },
         "compra": {
-          "level": 0.9,
-          "until_ts": 1793570400000
+          "level": 0.8979,
+          "until_ts": 1793577600000
         }
       }
     },
     "UNI-USDT-SWAP": {
-      "status": "descartado_rr_baixo_setup_B",
-      "zone": null,
-      "last_1h_ts": 1793545200000,
+      "status": "zona_mapeada_setup_B",
+      "zone": {
+        "setup": "B",
+        "direction": "venda",
+        "level": 7.208,
+        "zone_low": 7.184089285714286,
+        "zone_high": 7.231910714285714,
+        "candles_since_creation": 0,
+        "touches": 0,
+        "created_at": 1793548800000,
+        "last_touch_ts": 1793548800000
+      },
+      "last_1h_ts": 1793548800000,
       "avisado_aberto_longo": false,
       "cooldowns": {
         "venda": {
@@ -173,12 +173,12 @@
         "level": 11.768,
         "zone_low": 11.740267857142857,
         "zone_high": 11.795732142857144,
-        "candles_since_creation": 4,
+        "candles_since_creation": 5,
         "touches": 0,
         "created_at": 1793530800000,
         "last_touch_ts": 1793530800000
       },
-      "last_1h_ts": 1793545200000,
+      "last_1h_ts": 1793548800000,
       "avisado_aberto_longo": false,
       "cooldowns": {
         "venda": {
@@ -193,6 +193,6 @@
     }
   },
   "contadores": {
-    "descartes_rr_baixo_total": 526
+    "descartes_rr_baixo_total": 527
   }
 }
