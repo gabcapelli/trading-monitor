@@ -4,7 +4,7 @@
     "BTC-USDT-SWAP": {
       "status": "sem_zona",
       "zone": null,
-      "last_1h_ts": 1793563200000,
+      "last_1h_ts": 1793566800000,
       "avisado_aberto_longo": false,
       "cooldowns": {
         "venda": {
@@ -18,9 +18,19 @@
       }
     },
     "ETH-USDT-SWAP": {
-      "status": "sem_zona",
-      "zone": null,
-      "last_1h_ts": 1793563200000,
+      "status": "zona_mapeada_setup_B",
+      "zone": {
+        "setup": "B",
+        "direction": "venda",
+        "level": 2261.63,
+        "zone_low": 2259.5998214285714,
+        "zone_high": 2263.660178571429,
+        "candles_since_creation": 0,
+        "touches": 0,
+        "created_at": 1793566800000,
+        "last_touch_ts": 1793566800000
+      },
+      "last_1h_ts": 1793566800000,
       "avisado_aberto_longo": false,
       "cooldowns": {
         "venda": {
@@ -36,7 +46,7 @@
     "SOL-USDT-SWAP": {
       "status": "sem_zona",
       "zone": null,
-      "last_1h_ts": 1793563200000,
+      "last_1h_ts": 1793566800000,
       "avisado_aberto_longo": false,
       "cooldowns": {
         "venda": {
@@ -52,7 +62,7 @@
     "XRP-USDT-SWAP": {
       "status": "sem_zona",
       "zone": null,
-      "last_1h_ts": 1793563200000,
+      "last_1h_ts": 1793566800000,
       "avisado_aberto_longo": false,
       "cooldowns": {
         "compra": {
@@ -68,7 +78,7 @@
     "DOGE-USDT-SWAP": {
       "status": "sem_zona",
       "zone": null,
-      "last_1h_ts": 1793563200000,
+      "last_1h_ts": 1793566800000,
       "avisado_aberto_longo": false,
       "cooldowns": {
         "venda": {
@@ -82,9 +92,19 @@
       }
     },
     "ARB-USDT-SWAP": {
-      "status": "descartado_rr_baixo_setup_B",
-      "zone": null,
-      "last_1h_ts": 1793563200000,
+      "status": "zona_mapeada_setup_B",
+      "zone": {
+        "setup": "B",
+        "direction": "compra",
+        "level": 0.16325,
+        "zone_low": 0.16287000000000001,
+        "zone_high": 0.16363,
+        "candles_since_creation": 0,
+        "touches": 0,
+        "created_at": 1793566800000,
+        "last_touch_ts": 1793566800000
+      },
+      "last_1h_ts": 1793566800000,
       "avisado_aberto_longo": false,
       "cooldowns": {
         "venda": {
@@ -100,7 +120,7 @@
     "WLD-USDT-SWAP": {
       "status": "sem_zona",
       "zone": null,
-      "last_1h_ts": 1793563200000,
+      "last_1h_ts": 1793566800000,
       "avisado_aberto_longo": false,
       "cooldowns": {
         "compra": {
@@ -114,19 +134,9 @@
       }
     },
     "SUI-USDT-SWAP": {
-      "status": "zona_mapeada_setup_B",
-      "zone": {
-        "setup": "B",
-        "direction": "compra",
-        "level": 0.8979,
-        "zone_low": 0.8964946428571429,
-        "zone_high": 0.8993053571428572,
-        "candles_since_creation": 0,
-        "touches": 0,
-        "created_at": 1793563200000,
-        "last_touch_ts": 1793563200000
-      },
-      "last_1h_ts": 1793563200000,
+      "status": "invalidado_setup_B",
+      "zone": null,
+      "last_1h_ts": 1793566800000,
       "avisado_aberto_longo": false,
       "cooldowns": {
         "venda": {
@@ -134,8 +144,8 @@
           "until_ts": 1793332800000
         },
         "compra": {
-          "level": 0.9,
-          "until_ts": 1793584800000
+          "level": 0.8979,
+          "until_ts": 1793595600000
         }
       }
     },
@@ -148,11 +158,11 @@
         "zone_low": 7.141517857142857,
         "zone_high": 7.186482142857143,
         "candles_since_creation": 0,
-        "touches": 1,
+        "touches": 2,
         "created_at": 1793556000000,
-        "last_touch_ts": 1793563200000
+        "last_touch_ts": 1793566800000
       },
-      "last_1h_ts": 1793563200000,
+      "last_1h_ts": 1793566800000,
       "avisado_aberto_longo": false,
       "cooldowns": {
         "venda": {
@@ -168,7 +178,7 @@
     "LINK-USDT-SWAP": {
       "status": "sem_zona",
       "zone": null,
-      "last_1h_ts": 1793563200000,
+      "last_1h_ts": 1793566800000,
       "avisado_aberto_longo": false,
       "cooldowns": {
         "venda": {
