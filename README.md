@@ -1,6 +1,6 @@
 # Painel de estratégias
 
-_Atualizado em 01/11 14:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
+_Atualizado em 01/11 15:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
 
 ## Precisa de você
 
@@ -30,9 +30,9 @@ _Nada pendente._
 
 | Estratégia | Ativo | Desde | Entrada | Agora | Resultado | Obs. |
 |---|---|---|---|---|---|---|
-| Desbloqueio | ZETA | 26/10 | 0.03931 | 0.03773 | +4.02% | com hedge +2.37%; recompra 02/11 |
-| Desbloqueio | STO | 27/10 | 0.03171 | 0.03055 | +3.66% | com hedge +1.53%; recompra 03/11 |
-| Perpétuo novo | CT | 03/10 | 0.50286 | 0.14354 | **+71.46%** | stop 0.75429; saída 02/11 |
+| Desbloqueio | ZETA | 26/10 | 0.03931 | 0.03742 | +4.81% | com hedge +2.91%; recompra 02/11 |
+| Desbloqueio | STO | 27/10 | 0.03171 | 0.03066 | +3.31% | com hedge +0.93%; recompra 03/11 |
+| Perpétuo novo | CT | 03/10 | 0.50286 | 0.14356 | **+71.45%** | stop 0.75429; saída 02/11 |
 
 <sub>Resultado a preço de mercado, bruto (sem custo nem funding), já no lado da posição: positivo = a favor. Em negrito, movimentos de 10% ou mais. Com hedge = venda + cesta dos majors.</sub>
 
