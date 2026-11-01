@@ -7,11 +7,11 @@
 > venda + compra da cesta dos 20 majors. Custo 0.18% por perna e funding real.
 > **Só reavaliar com 150 trades fechados.** Antes disso é ruído.
 
-_Atualizado em 2026-10-31 (calendário de 2026-10-31)._
+_Atualizado em 2026-11-01 (calendário de 2026-11-01)._
 
-**Trades fechados:** 27 de 150 (18%)
+**Trades fechados:** 28 de 150 (19%)
 
-**Média por trade:** puro +4.44% · com hedge +0.34% · hedge positivo em 13/27 (48%)
+**Média por trade:** puro +4.49% · com hedge +0.44% · hedge positivo em 14/28 (50%)
 
 _Referência do backtest (2025–2026): puro +2.9%, excesso sobre o universo +2.1%._
 
@@ -19,7 +19,6 @@ _Referência do backtest (2025–2026): puro +2.9%, excesso sobre o universo +2.
 
 | Token | Desbloqueio | % da oferta | Venda em (abertura) | Preço de entrada |
 |---|---|---|---|---|
-| EIGEN | 2026-11-01 | 4.1% | 2026-10-25 | 0.2038 |
 | ZETA | 2026-11-02 | 2.7% | 2026-10-26 | 0.03931 |
 | STO | 2026-11-03 | 4.7% | 2026-10-27 | 0.03171 |
 
@@ -43,6 +42,7 @@ _Referência do backtest (2025–2026): puro +2.9%, excesso sobre o universo +2.
 | RESOLV | 2026-11-27 | 3.7% | 90% | 2026-11-20 |
 | GUN | 2026-11-30 | 6.2% | 77% | 2026-11-23 |
 | ZORA | 2026-11-30 | 2.9% | 75% | 2026-11-23 |
+| EIGEN | 2026-12-01 | 3.9% | 100% | 2026-11-24 |
 
 _Passa pelos filtros (perpétuo com ≥ 30 dias, mesmo token a ≥ 14 dias) só no dia da entrada._
 
@@ -50,6 +50,7 @@ _Passa pelos filtros (perpétuo com ≥ 30 dias, mesmo token a ≥ 14 dias) só 
 
 | Token | Desbloqueio | % da oferta | Retorno do token | Cesta | Puro | Com hedge | Obs. |
 |---|---|---|---|---|---|---|---|
+| EIGEN | 2026-11-01 | 4.1% | -6.08% | -2.43% | +5.84% | +3.16% |  |
 | ZORA | 2026-10-31 | 2.9% | -5.16% | -2.62% | +4.46% | +1.60% |  |
 | GUN | 2026-10-31 | 6.6% | -4.96% | -2.62% | +4.97% | +2.11% |  |
 | RESOLV | 2026-10-28 | 3.5% | +1.88% | -4.81% | -1.85% | -6.90% |  |
