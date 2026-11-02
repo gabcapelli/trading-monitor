@@ -1,6 +1,6 @@
 # Painel de estratégias
 
-_Atualizado em 02/11 14:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
+_Atualizado em 02/11 15:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
 
 ## Precisa de você
 
@@ -30,7 +30,7 @@ _Nada pendente._
 
 | Estratégia | Ativo | Desde | Entrada | Agora | Resultado | Obs. |
 |---|---|---|---|---|---|---|
-| Desbloqueio | STO | 27/10 | 0.03171 | 0.02974 | +6.21% | com hedge +2.30%; recompra 03/11 |
+| Desbloqueio | STO | 27/10 | 0.03171 | 0.0295 | +6.97% | com hedge +2.26%; recompra 03/11 |
 
 <sub>Resultado a preço de mercado, bruto (sem custo nem funding), já no lado da posição: positivo = a favor. Em negrito, movimentos de 10% ou mais. Com hedge = venda + cesta dos majors.</sub>
 
