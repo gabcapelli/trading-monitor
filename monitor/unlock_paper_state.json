@@ -12,7 +12,7 @@
 "ALPHAUSDT|20757": {
 "first_seen": 20727,
 "frac": 0.0,
-"last_seen": 20758,
+"last_seen": 20759,
 "par": "ALPHAUSDT",
 "pct": 1.5516241912894113,
 "protocolo": "stella",
@@ -31,7 +31,7 @@
 "ALTUSDT|20753": {
 "first_seen": 20723,
 "frac": 0.66090047035393,
-"last_seen": 20758,
+"last_seen": 20759,
 "par": "ALTUSDT",
 "pct": 3.2652752263546003,
 "protocolo": "altlayer",
@@ -40,7 +40,7 @@
 "ALTUSDT|20783": {
 "first_seen": 20753,
 "frac": 0.66090047035393,
-"last_seen": 20758,
+"last_seen": 20759,
 "par": "ALTUSDT",
 "pct": 3.1620263628767833,
 "protocolo": "altlayer",
@@ -49,7 +49,7 @@
 "APRUSDT|20750": {
 "first_seen": 20720,
 "frac": 0.7795100222717148,
-"last_seen": 20758,
+"last_seen": 20759,
 "par": "APRUSDT",
 "pct": 47.213459516298634,
 "protocolo": "apriori",
@@ -67,16 +67,16 @@
 "APTUSDT|20769": {
 "first_seen": 20739,
 "frac": 0.5982700997102869,
-"last_seen": 20758,
+"last_seen": 20759,
 "par": "APTUSDT",
-"pct": 1.2894944559341028,
+"pct": 1.2894219068963535,
 "protocolo": "aptos",
 "t0": 20769
 },
 "ARBUSDT|20742": {
 "first_seen": 20719,
 "frac": 0.9944895712840536,
-"last_seen": 20758,
+"last_seen": 20759,
 "par": "ARBUSDT",
 "pct": 1.3222293675962464,
 "protocolo": "arbitrum-foundation",
@@ -85,7 +85,7 @@
 "ARBUSDT|20773": {
 "first_seen": 20743,
 "frac": 0.9944895712840536,
-"last_seen": 20758,
+"last_seen": 20759,
 "par": "ARBUSDT",
 "pct": 1.3021654604040713,
 "protocolo": "arbitrum-foundation",
@@ -104,7 +104,7 @@
 "B2USDT|20755": {
 "first_seen": 20725,
 "frac": 0.4462327861072337,
-"last_seen": 20758,
+"last_seen": 20759,
 "par": "B2USDT",
 "pct": 3.346984987443779,
 "protocolo": "b2-buzz",
@@ -113,7 +113,7 @@
 "B2USDT|20786": {
 "first_seen": 20756,
 "frac": 0.44623278610723366,
-"last_seen": 20758,
+"last_seen": 20759,
 "par": "B2USDT",
 "pct": 3.2242705943349277,
 "protocolo": "b2-buzz",
@@ -122,7 +122,7 @@
 "BBUSDT|20739": {
 "first_seen": 20719,
 "frac": 0.804516426710056,
-"last_seen": 20758,
+"last_seen": 20759,
 "par": "BBUSDT",
 "pct": 2.873176096000841,
 "protocolo": "bouncebit",
@@ -131,7 +131,7 @@
 "BBUSDT|20769": {
 "first_seen": 20739,
 "frac": 0.9933195389766133,
-"last_seen": 20758,
+"last_seen": 20759,
 "par": "BBUSDT",
 "pct": 2.2521999617103994,
 "protocolo": "bouncebit",
@@ -149,7 +149,7 @@
 "CARVUSDT|20767": {
 "first_seen": 20737,
 "frac": 0.0,
-"last_seen": 20758,
+"last_seen": 20759,
 "par": "CARVUSDT",
 "pct": 1.275385774329354,
 "protocolo": "carv",
@@ -166,19 +166,19 @@
 },
 "EIGENUSDT|20758": {
 "first_seen": 20728,
-"frac": 1.0,
-"last_seen": 20758,
+"frac": 0.9996968326733693,
+"last_seen": 20759,
 "par": "EIGENUSDT",
-"pct": 4.080297884126193,
+"pct": 4.081535258020296,
 "protocolo": "eigencloud",
 "t0": 20758
 },
 "EIGENUSDT|20788": {
 "first_seen": 20758,
 "frac": 1.0,
-"last_seen": 20758,
+"last_seen": 20759,
 "par": "EIGENUSDT",
-"pct": 3.9203364777729948,
+"pct": 3.920289857151347,
 "protocolo": "eigencloud",
 "t0": 20788
 },
@@ -194,7 +194,7 @@
 "GMTUSDT|20765": {
 "first_seen": 20735,
 "frac": 0.34980340139277083,
-"last_seen": 20758,
+"last_seen": 20759,
 "par": "GMTUSDT",
 "pct": 1.0739523190405096,
 "protocolo": "stepn",
@@ -203,7 +203,7 @@
 "GRVTUSDT|20787": {
 "first_seen": 20757,
 "frac": 0.0,
-"last_seen": 20758,
+"last_seen": 20759,
 "par": "GRVTUSDT",
 "pct": 41.31763544438968,
 "protocolo": "grvt",
@@ -221,7 +221,7 @@
 "GUNUSDT|20757": {
 "first_seen": 20727,
 "frac": 0.7745439639270343,
-"last_seen": 20758,
+"last_seen": 20759,
 "par": "GUNUSDT",
 "pct": 6.560088202866593,
 "protocolo": "gunz",
@@ -230,7 +230,7 @@
 "GUNUSDT|20787": {
 "first_seen": 20757,
 "frac": 0.7745439639270343,
-"last_seen": 20758,
+"last_seen": 20759,
 "par": "GUNUSDT",
 "pct": 6.156233833419555,
 "protocolo": "gunz",
@@ -248,7 +248,7 @@
 "HFTUSDT|20764": {
 "first_seen": 20734,
 "frac": 0.44628715177490014,
-"last_seen": 20758,
+"last_seen": 20759,
 "par": "HFTUSDT",
 "pct": 1.9327505955997955,
 "protocolo": "hashflow",
@@ -267,7 +267,7 @@
 "HUSDT|20750": {
 "first_seen": 20720,
 "frac": 0.5501355013550137,
-"last_seen": 20758,
+"last_seen": 20759,
 "par": "HUSDT",
 "pct": 7.337807606263984,
 "protocolo": "humanity",
@@ -276,7 +276,7 @@
 "HUSDT|20781": {
 "first_seen": 20751,
 "frac": 0.5501355013550137,
-"last_seen": 20758,
+"last_seen": 20759,
 "par": "HUSDT",
 "pct": 6.836181742392666,
 "protocolo": "humanity",
@@ -285,7 +285,7 @@
 "INITUSDT|20750": {
 "first_seen": 20720,
 "frac": 0.0,
-"last_seen": 20758,
+"last_seen": 20759,
 "par": "INITUSDT",
 "pct": 3.5624526660145843,
 "protocolo": "initia",
@@ -294,7 +294,7 @@
 "KAITOUSDT|20746": {
 "first_seen": 20719,
 "frac": 0.5256392910296304,
-"last_seen": 20758,
+"last_seen": 20759,
 "par": "KAITOUSDT",
 "pct": 3.6871670025741845,
 "protocolo": "kaito",
@@ -303,7 +303,7 @@
 "KAITOUSDT|20777": {
 "first_seen": 20747,
 "frac": 0.5256392910296304,
-"last_seen": 20758,
+"last_seen": 20759,
 "par": "KAITOUSDT",
 "pct": 3.5560495181459104,
 "protocolo": "kaito",
@@ -330,7 +330,7 @@
 "MEGAUSDT|20756": {
 "first_seen": 20726,
 "frac": 0.0,
-"last_seen": 20758,
+"last_seen": 20759,
 "par": "MEGAUSDT",
 "pct": 1.6697863433864981,
 "protocolo": "megaeth-bridge",
@@ -348,7 +348,7 @@
 "MEUSDT|20768": {
 "first_seen": 20738,
 "frac": 0.3516687962236089,
-"last_seen": 20758,
+"last_seen": 20759,
 "par": "MEUSDT",
 "pct": 1.4880675316547116,
 "protocolo": "magic-eden",
@@ -366,7 +366,7 @@
 "MOVEUSDT|20767": {
 "first_seen": 20737,
 "frac": 0.6962025316455696,
-"last_seen": 20758,
+"last_seen": 20759,
 "par": "MOVEUSDT",
 "pct": 3.569814731134207,
 "protocolo": "movement",
@@ -384,7 +384,7 @@
 "MUSDT|20759": {
 "first_seen": 20729,
 "frac": 0.3589108910891089,
-"last_seen": 20758,
+"last_seen": 20759,
 "par": "MUSDT",
 "pct": 2.75993988249761,
 "protocolo": "memecore",
@@ -393,7 +393,7 @@
 "OMNIUSDT|20744": {
 "first_seen": 20719,
 "frac": 1.0,
-"last_seen": 20758,
+"last_seen": 20759,
 "par": "OMNIUSDT",
 "pct": 20.619897325836273,
 "protocolo": "omni-network",
@@ -411,7 +411,7 @@
 "OPNUSDT|20760": {
 "first_seen": 20730,
 "frac": 0.0,
-"last_seen": 20758,
+"last_seen": 20759,
 "par": "OPNUSDT",
 "pct": 2.45802818484241,
 "protocolo": "opinion",
@@ -420,7 +420,7 @@
 "PUMPUSDT|20739": {
 "first_seen": 20719,
 "frac": 1.0,
-"last_seen": 20758,
+"last_seen": 20759,
 "par": "PUMPUSDT",
 "pct": 1.3064133016627077,
 "protocolo": "pump",
@@ -429,7 +429,7 @@
 "PUMPUSDT|20769": {
 "first_seen": 20739,
 "frac": 1.0,
-"last_seen": 20758,
+"last_seen": 20759,
 "par": "PUMPUSDT",
 "pct": 1.2895662368112544,
 "protocolo": "pump",
@@ -448,7 +448,7 @@
 "RESOLVUSDT|20754": {
 "first_seen": 20724,
 "frac": 1.0,
-"last_seen": 20758,
+"last_seen": 20759,
 "par": "RESOLVUSDT",
 "pct": 3.510444583039795,
 "protocolo": "resolv",
@@ -457,7 +457,7 @@
 "RESOLVUSDT|20784": {
 "first_seen": 20754,
 "frac": 0.9037931288993695,
-"last_seen": 20758,
+"last_seen": 20759,
 "par": "RESOLVUSDT",
 "pct": 3.6989838563974162,
 "protocolo": "resolv",
@@ -476,7 +476,7 @@
 "SEIUSDT|20740": {
 "first_seen": 20719,
 "frac": 0.8852838923317162,
-"last_seen": 20758,
+"last_seen": 20759,
 "par": "SEIUSDT",
 "pct": 1.5813101148888167,
 "protocolo": "sei",
@@ -485,7 +485,7 @@
 "SEIUSDT|20771": {
 "first_seen": 20741,
 "frac": 0.8852838923317162,
-"last_seen": 20758,
+"last_seen": 20759,
 "par": "SEIUSDT",
 "pct": 1.556693955906209,
 "protocolo": "sei",
@@ -494,7 +494,7 @@
 "SIGNUSDT|20773": {
 "first_seen": 20743,
 "frac": 0.0,
-"last_seen": 20758,
+"last_seen": 20759,
 "par": "SIGNUSDT",
 "pct": 10.42852245457662,
 "protocolo": "sign",
@@ -503,7 +503,7 @@
 "SOLVUSDT|20745": {
 "first_seen": 20719,
 "frac": 0.6779121964817852,
-"last_seen": 20758,
+"last_seen": 20759,
 "par": "SOLVUSDT",
 "pct": 3.3742033376728218,
 "protocolo": "solv-protocol",
@@ -512,7 +512,7 @@
 "SOLVUSDT|20775": {
 "first_seen": 20745,
 "frac": 0.6779121964817854,
-"last_seen": 20758,
+"last_seen": 20759,
 "par": "SOLVUSDT",
 "pct": 3.264067077403204,
 "protocolo": "solv-protocol",
@@ -521,7 +521,7 @@
 "SPKUSDT|20741": {
 "first_seen": 20742,
 "frac": 0.002220505136155128,
-"last_seen": 20758,
+"last_seen": 20759,
 "par": "SPKUSDT",
 "pct": 9.145561454552647,
 "protocolo": "spark",
@@ -539,7 +539,7 @@
 "STOUSDT|20760": {
 "first_seen": 20730,
 "frac": 0.6147043253511036,
-"last_seen": 20758,
+"last_seen": 20759,
 "par": "STOUSDT",
 "pct": 4.666492934796299,
 "protocolo": "stakestone",
@@ -548,7 +548,7 @@
 "UXLINKUSDT|20744": {
 "first_seen": 20719,
 "frac": 1.0,
-"last_seen": 20758,
+"last_seen": 20759,
 "par": "UXLINKUSDT",
 "pct": 3.9408866995073892,
 "protocolo": "uxlink",
@@ -557,7 +557,7 @@
 "VANAUSDT|20743": {
 "first_seen": 20719,
 "frac": 0.780825445931938,
-"last_seen": 20758,
+"last_seen": 20759,
 "par": "VANAUSDT",
 "pct": 1.682909019570794,
 "protocolo": "vana",
@@ -566,7 +566,7 @@
 "VANAUSDT|20774": {
 "first_seen": 20744,
 "frac": 0.7808254459319381,
-"last_seen": 20758,
+"last_seen": 20759,
 "par": "VANAUSDT",
 "pct": 1.655055933978922,
 "protocolo": "vana",
@@ -585,7 +585,7 @@
 "WALUSDT|20753": {
 "first_seen": 20723,
 "frac": 0.22929936308069263,
-"last_seen": 20758,
+"last_seen": 20759,
 "par": "WALUSDT",
 "pct": 1.2704321086671138,
 "protocolo": "walrus-protocol",
@@ -594,7 +594,7 @@
 "WALUSDT|20783": {
 "first_seen": 20753,
 "frac": 0.22929936308069263,
-"last_seen": 20758,
+"last_seen": 20759,
 "par": "WALUSDT",
 "pct": 1.2445501386395292,
 "protocolo": "walrus-protocol",
@@ -603,7 +603,7 @@
 "ZESTUSDT|20774": {
 "first_seen": 20744,
 "frac": 0.0,
-"last_seen": 20758,
+"last_seen": 20759,
 "par": "ZESTUSDT",
 "pct": 3.6711701956110017,
 "protocolo": "zest",
@@ -621,16 +621,25 @@
 "ZETAUSDT|20759": {
 "first_seen": 20729,
 "frac": 0.5057709660474411,
-"last_seen": 20758,
+"last_seen": 20759,
 "par": "ZETAUSDT",
 "pct": 2.6835025724020825,
 "protocolo": "zetachain",
 "t0": 20759
 },
+"ZETAUSDT|20789": {
+"first_seen": 20759,
+"frac": 0.5057709660474411,
+"last_seen": 20759,
+"par": "ZETAUSDT",
+"pct": 2.6069769035032953,
+"protocolo": "zetachain",
+"t0": 20789
+},
 "ZKUSDT|20744": {
 "first_seen": 20719,
 "frac": 1.0,
-"last_seen": 20758,
+"last_seen": 20759,
 "par": "ZKUSDT",
 "pct": 2.457756265564642,
 "protocolo": "zksync-era",
@@ -639,7 +648,7 @@
 "ZKUSDT|20774": {
 "first_seen": 20744,
 "frac": 1.0,
-"last_seen": 20758,
+"last_seen": 20759,
 "par": "ZKUSDT",
 "pct": 2.3987996176631845,
 "protocolo": "zksync-era",
@@ -657,7 +666,7 @@
 "ZORAUSDT|20757": {
 "first_seen": 20727,
 "frac": 0.7500000000000002,
-"last_seen": 20758,
+"last_seen": 20759,
 "par": "ZORAUSDT",
 "pct": 2.941176470588234,
 "protocolo": "zora-protocol",
@@ -666,7 +675,7 @@
 "ZORAUSDT|20787": {
 "first_seen": 20757,
 "frac": 0.7500000000000002,
-"last_seen": 20758,
+"last_seen": 20759,
 "par": "ZORAUSDT",
 "pct": 2.8571428571428563,
 "protocolo": "zora-protocol",
@@ -675,7 +684,7 @@
 "ZROUSDT|20747": {
 "first_seen": 20719,
 "frac": 1.0,
-"last_seen": 20758,
+"last_seen": 20759,
 "par": "ZROUSDT",
 "pct": 3.6103151862464182,
 "protocolo": "layerzero",
@@ -684,7 +693,7 @@
 "ZROUSDT|20777": {
 "first_seen": 20747,
 "frac": 1.0,
-"last_seen": 20758,
+"last_seen": 20759,
 "par": "ZROUSDT",
 "pct": 3.484513274336283,
 "protocolo": "layerzero",
@@ -1887,14 +1896,23 @@
 "XRPUSDT": 1.2957,
 "ZECUSDT": 1213.11
 },
+"confirmado": true,
 "entrada": 20752,
 "first_seen": 20729,
 "frac": 0.5057709660474411,
+"fund": 0.0021000000000000003,
+"fund_cesta": 0.000775568,
+"funding": "ok",
+"hedge": 0.03854030632068629,
 "par": "ZETAUSDT",
 "pct": 2.6835025724020825,
 "protocolo": "zetachain",
+"puro": 0.05957244975833123,
 "px_in": 0.03931,
-"status": "aberto",
+"px_out": 0.03698,
+"ret": -0.059272449758331236,
+"ret_cesta": -0.018456575437644944,
+"status": "fechado",
 "t0": 20759
 },
 "ZKUSDT|20744": {
@@ -2066,5 +2084,5 @@
 "t0": 20747
 }
 },
-"ultimo_refresh": 20758
+"ultimo_refresh": 20759
 }

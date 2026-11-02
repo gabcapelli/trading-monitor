@@ -1074,7 +1074,10 @@
 "XRPUSDT": 1.484,
 "ZECUSDT": 1301.27
 },
+"com_stop": 0.6420356946235533,
 "d0": 20727,
+"dia_fim": 20759,
+"dia_saida_stop": 20759,
 "dias_vistos": [
 20729,
 20730,
@@ -1104,13 +1107,21 @@
 20754,
 20755,
 20756,
-20757
+20757,
+20758
 ],
 "entrada": 20729,
+"excesso": 0.5687061749265371,
+"funding": "ok",
 "motivo": null,
 "par": "CTUSDT",
+"px_fim": 0.14121,
 "px_in": 0.50286,
-"status": "aberto",
+"ret_cesta": -0.15048007969701618,
+"ret_com_stop": -0.7191862546235532,
+"ret_sem_stop": -0.7191862546235532,
+"sem_stop": 0.6420356946235533,
+"status": "fechado",
 "stop_px": 0.7542899999999999,
 "tipo": "COIN"
 },
@@ -1601,5 +1612,5 @@
 "tipo": "EQUITY"
 }
 },
-"ultimo_scan": 20758
+"ultimo_scan": 20759
 }

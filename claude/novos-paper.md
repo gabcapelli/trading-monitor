@@ -6,17 +6,21 @@
 > em paralelo a venda **sem stop** (a regra do estudo, que não passou). Custo 0.18% e funding real.
 > **Só reavaliar com 100 trades fechados.** Antes disso é ruído.
 
-_Atualizado em 2026-11-01._
+_Atualizado em 2026-11-02._
+
+**Trades fechados:** 1 de 100 (1%)
+
+**Média por trade:** com stop +64.20% · sem stop +64.20% · stop acionado em 0/1 · positivos (com stop) 1/1
 
 ## Abertos
 
-| Token | Lançado | Venda em | Entrada | Stop (+50%) | Saída prevista |
-|---|---|---|---|---|---|
-| CT | 2026-10-01 | 2026-10-03 | 0.50286 | 0.75429 | 2026-11-02 |
+_Nenhum._
 
 ## Fechados
 
-_Nenhum ainda._
+| Token | Venda | Token no período | Com stop | Sem stop | Excesso s/ cesta | Obs. |
+|---|---|---|---|---|---|---|
+| CT | 2026-10-03 | -71.9% | +64.20% | +64.20% | +56.87% |  |
 
 <details><summary>Descartados (37)</summary>
 
