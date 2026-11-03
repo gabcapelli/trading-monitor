@@ -4,7 +4,7 @@
     "BTC-USDT-SWAP": {
       "status": "sem_zona",
       "zone": null,
-      "last_1h_ts": 1793736000000,
+      "last_1h_ts": 1793739600000,
       "avisado_aberto_longo": false,
       "cooldowns": {
         "venda": {
@@ -18,9 +18,19 @@
       }
     },
     "ETH-USDT-SWAP": {
-      "status": "descartado_rr_baixo_setup_B",
-      "zone": null,
-      "last_1h_ts": 1793736000000,
+      "status": "zona_mapeada_setup_B",
+      "zone": {
+        "setup": "B",
+        "direction": "compra",
+        "level": 2296.45,
+        "zone_low": 2292.7662499999997,
+        "zone_high": 2300.13375,
+        "candles_since_creation": 0,
+        "touches": 0,
+        "created_at": 1793739600000,
+        "last_touch_ts": 1793739600000
+      },
+      "last_1h_ts": 1793739600000,
       "avisado_aberto_longo": false,
       "cooldowns": {
         "venda": {
@@ -36,7 +46,7 @@
     "SOL-USDT-SWAP": {
       "status": "sem_zona",
       "zone": null,
-      "last_1h_ts": 1793736000000,
+      "last_1h_ts": 1793739600000,
       "avisado_aberto_longo": false,
       "cooldowns": {
         "venda": {
@@ -50,9 +60,19 @@
       }
     },
     "XRP-USDT-SWAP": {
-      "status": "descartado_rr_baixo_setup_B",
-      "zone": null,
-      "last_1h_ts": 1793736000000,
+      "status": "zona_mapeada_setup_B",
+      "zone": {
+        "setup": "B",
+        "direction": "compra",
+        "level": 1.2856,
+        "zone_low": 1.2831821428571428,
+        "zone_high": 1.2880178571428573,
+        "candles_since_creation": 0,
+        "touches": 0,
+        "created_at": 1793739600000,
+        "last_touch_ts": 1793739600000
+      },
+      "last_1h_ts": 1793739600000,
       "avisado_aberto_longo": false,
       "cooldowns": {
         "compra": {
@@ -66,9 +86,19 @@
       }
     },
     "DOGE-USDT-SWAP": {
-      "status": "sem_zona",
-      "zone": null,
-      "last_1h_ts": 1793736000000,
+      "status": "zona_mapeada_setup_B",
+      "zone": {
+        "setup": "B",
+        "direction": "compra",
+        "level": 0.07592,
+        "zone_low": 0.07579910714285715,
+        "zone_high": 0.07604089285714286,
+        "candles_since_creation": 0,
+        "touches": 0,
+        "created_at": 1793739600000,
+        "last_touch_ts": 1793739600000
+      },
+      "last_1h_ts": 1793739600000,
       "avisado_aberto_longo": false,
       "cooldowns": {
         "venda": {
@@ -84,7 +114,7 @@
     "ARB-USDT-SWAP": {
       "status": "sem_zona",
       "zone": null,
-      "last_1h_ts": 1793736000000,
+      "last_1h_ts": 1793739600000,
       "avisado_aberto_longo": false,
       "cooldowns": {
         "venda": {
@@ -100,7 +130,7 @@
     "WLD-USDT-SWAP": {
       "status": "sem_zona",
       "zone": null,
-      "last_1h_ts": 1793736000000,
+      "last_1h_ts": 1793739600000,
       "avisado_aberto_longo": false,
       "cooldowns": {
         "compra": {
@@ -121,12 +151,12 @@
         "level": 0.8799,
         "zone_low": 0.8776428571428572,
         "zone_high": 0.8821571428571429,
-        "candles_since_creation": 5,
+        "candles_since_creation": 6,
         "touches": 0,
         "created_at": 1793718000000,
         "last_touch_ts": 1793718000000
       },
-      "last_1h_ts": 1793736000000,
+      "last_1h_ts": 1793739600000,
       "avisado_aberto_longo": false,
       "cooldowns": {
         "venda": {
@@ -147,12 +177,12 @@
         "level": 7.411,
         "zone_low": 7.381714285714286,
         "zone_high": 7.4402857142857135,
-        "candles_since_creation": 5,
+        "candles_since_creation": 6,
         "touches": 2,
         "created_at": 1793710800000,
         "last_touch_ts": 1793718000000
       },
-      "last_1h_ts": 1793736000000,
+      "last_1h_ts": 1793739600000,
       "avisado_aberto_longo": false,
       "cooldowns": {
         "venda": {
@@ -168,7 +198,7 @@
     "LINK-USDT-SWAP": {
       "status": "sem_zona",
       "zone": null,
-      "last_1h_ts": 1793736000000,
+      "last_1h_ts": 1793739600000,
       "avisado_aberto_longo": false,
       "cooldowns": {
         "venda": {
