@@ -1,4 +1,4 @@
-# Calibracao — registro mecanico de sinais (atualizado 2026-11-03 14:06 BRT)
+# Calibracao — registro mecanico de sinais (atualizado 2026-11-03 15:06 BRT)
 
 > **Nao edite este arquivo** — ele e reescrito a cada execucao a partir da tabela `sinais_mecanicos`. Diferente de `sinais.md`, aqui nao ha nenhuma decisao sua: e TODA confirmacao mecanica detectada, inclusive as descartadas por R:R baixo, com desfecho medido por geometria de preco (OHLC de 1h contra stop/alvo sugeridos).
 >
@@ -11,10 +11,10 @@ Regra de alvo em vigor agora: **proximo** (coluna `Regra` abaixo mostra qual dec
 | Grupo | Sinais | Resolvidos | Acertos | Soma (expectancia) |
 |---|---|---|---|---|
 | Aceitos (R:R >= 2) | 102 | 102 | 27 (26%) | -2.57R (-0.025R/sinal) |
-| Descartados por R:R baixo | 548 | 543 | 345 (64%) | -19.41R (-0.036R/sinal) |
-| TODOS | 650 | 645 | 372 (58%) | -21.98R (-0.034R/sinal) |
+| Descartados por R:R baixo | 548 | 544 | 346 (64%) | -19.37R (-0.036R/sinal) |
+| TODOS | 650 | 646 | 373 (58%) | -21.94R (-0.034R/sinal) |
 
-**MAE dos acertos** (quanto o preco foi CONTRA antes de dar certo) — n=372, mediana 0.33R, maximo 0.99R, 7% acima de 0.8R.
+**MAE dos acertos** (quanto o preco foi CONTRA antes de dar certo) — n=373, mediana 0.32R, maximo 0.99R, 7% acima de 0.8R.
 
 > Le-se assim: apertar `STOP_BUFFER_ATR_MULT` mata os acertos cujo MAE ja esta perto de 1R. Se essa cauda for gorda, nao ha folga pra apertar o stop.
 
@@ -26,7 +26,7 @@ Regra de alvo em vigor agora: **proximo** (coluna `Regra` abaixo mostra qual dec
 
 | Par | Setup | Direcao | Aceito | Regra | R:R (recente) | R:R (proximo) | Resultado | MAE | MFE | Candles | Quando |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| BTC/USDT | B | compra | nao | proximo | 0.37 | 0.04 | aberto | — | — | — | 2026-11-03 14:06 |
+| BTC/USDT | B | compra | nao | proximo | 0.37 | 0.04 | +0.04 | 0.291 | 0.181 | 1 | 2026-11-03 14:06 |
 | DOGE/USDT | B | compra | nao | proximo | 1.40 | 1.40 | aberto | 0.624 | 0.924 | — | 2026-11-03 12:06 |
 | SUI/USDT | B | compra | nao | proximo | 1.14 | 0.73 | aberto | 0.736 | 0.393 | — | 2026-11-03 12:06 |
 | LINK/USDT | B | compra | nao | proximo | 1.25 | 0.19 | -1.00 | 1.403 | 0.104 | 2 | 2026-11-03 11:06 |
