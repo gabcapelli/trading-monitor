@@ -7,11 +7,11 @@
 > venda + compra da cesta dos 20 majors. Custo 0.18% por perna e funding real.
 > **Só reavaliar com 150 trades fechados.** Antes disso é ruído.
 
-_Atualizado em 2026-11-02 (calendário de 2026-11-02)._
+_Atualizado em 2026-11-03 (calendário de 2026-11-03)._
 
-**Trades fechados:** 29 de 150 (19%)
+**Trades fechados:** 30 de 150 (20%)
 
-**Média por trade:** puro +4.54% · com hedge +0.56% · hedge positivo em 15/29 (52%)
+**Média por trade:** puro +4.63% · com hedge +0.59% · hedge positivo em 16/30 (53%)
 
 _Referência do backtest (2025–2026): puro +2.9%, excesso sobre o universo +2.1%._
 
@@ -19,13 +19,12 @@ _Referência do backtest (2025–2026): puro +2.9%, excesso sobre o universo +2.
 
 | Token | Desbloqueio | % da oferta | Venda em (abertura) | Preço de entrada |
 |---|---|---|---|---|
-| STO | 2026-11-03 | 4.7% | 2026-10-27 | 0.03171 |
+| MOVE | 2026-11-10 | 3.6% | 2026-11-03 | 0.006003 |
 
 ## Próximas entradas (calendário atual)
 
 | Token | Desbloqueio | % da oferta | % insiders | Entrada prevista |
 |---|---|---|---|---|
-| MOVE | 2026-11-10 | 3.6% | 70% | 2026-11-03 |
 | APT | 2026-11-12 | 1.3% | 60% | 2026-11-05 |
 | BB | 2026-11-12 | 2.3% | 99% | 2026-11-05 |
 | PUMP | 2026-11-12 | 1.3% | 100% | 2026-11-05 |
@@ -43,6 +42,7 @@ _Referência do backtest (2025–2026): puro +2.9%, excesso sobre o universo +2.
 | ZORA | 2026-11-30 | 2.9% | 75% | 2026-11-23 |
 | EIGEN | 2026-12-01 | 3.9% | 100% | 2026-11-24 |
 | ZETA | 2026-12-02 | 2.6% | 51% | 2026-11-25 |
+| STO | 2026-12-03 | 4.5% | 61% | 2026-11-26 |
 
 _Passa pelos filtros (perpétuo com ≥ 30 dias, mesmo token a ≥ 14 dias) só no dia da entrada._
 
@@ -50,6 +50,7 @@ _Passa pelos filtros (perpétuo com ≥ 30 dias, mesmo token a ≥ 14 dias) só 
 
 | Token | Desbloqueio | % da oferta | Retorno do token | Cesta | Puro | Com hedge | Obs. |
 |---|---|---|---|---|---|---|---|
+| STO | 2026-11-03 | 4.7% | -7.25% | -5.29% | +7.26% | +1.71% |  |
 | ZETA | 2026-11-02 | 2.7% | -5.93% | -1.85% | +5.96% | +3.85% |  |
 | EIGEN | 2026-11-01 | 4.1% | -6.08% | -2.43% | +5.84% | +3.16% |  |
 | ZORA | 2026-10-31 | 2.9% | -5.16% | -2.62% | +4.46% | +1.60% |  |

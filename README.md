@@ -1,6 +1,6 @@
 # Painel de estratégias
 
-_Atualizado em 02/11 20:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
+_Atualizado em 02/11 21:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
 
 ## Precisa de você
 
@@ -10,7 +10,7 @@ _Nada pendente._
 
 | Estratégia | Abertos | Fechados | Média |
 |---|---|---|---|
-| [Desbloqueio](claude/unlock-paper.md) | 1 | 29/150 | +0.56% |
+| [Desbloqueio](claude/unlock-paper.md) | 1 | 30/150 | +0.59% |
 | [Perpétuo novo](claude/novos-paper.md) | 0 | 1/100 | +64.20% |
 | [Rompimento 48h](claude/continuacao-paper.md) · encerrado em 30/10/2026 | — | 33 | -9.12% |
 | [Monitoring Tag](claude/monitoring-paper.md) | 0 | 1/24 | -4.20% |
@@ -23,22 +23,22 @@ _Nada pendente._
 
 <sub>Desde o fechamento das 21h (Brasília).</sub>
 
-- Desbloqueio: recomprou ZETA: puro +5.96%, com hedge +3.85%
-- Perpétuo novo: recomprou CT: com stop +64.20%
+- Desbloqueio: vendeu MOVE a 0.006003 (desbloqueio 10/11)
+- Desbloqueio: recomprou STO: puro +7.26%, com hedge +1.71%
 
 ## Abertos agora
 
 | Estratégia | Ativo | Desde | Entrada | Agora | Resultado | Obs. |
 |---|---|---|---|---|---|---|
-| Desbloqueio | STO | 27/10 | 0.03171 | 0.02935 | +7.44% | com hedge +2.26%; recompra 03/11 |
+| Desbloqueio | MOVE | 03/11 | 0.006003 | 0.00602 | -0.28% | com hedge -0.27%; recompra 10/11 |
 
 <sub>Resultado a preço de mercado, bruto (sem custo nem funding), já no lado da posição: positivo = a favor. Em negrito, movimentos de 10% ou mais. Com hedge = venda + cesta dos majors.</sub>
 
 ## Próximos eventos
 
-- 03/11 · Desbloqueio: recompra de STO
-- 03/11 · Desbloqueio: venda prevista de MOVE
+- 05/11 · Desbloqueio: venda prevista de APT, BB, PUMP
 - 06/11 · Sábado: entrada da cesta (21h)
+- 10/11 · Desbloqueio: recompra de MOVE
 
 ## Outros
 
