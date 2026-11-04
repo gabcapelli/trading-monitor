@@ -7,7 +7,7 @@
 > venda + compra da cesta dos 20 majors. Custo 0.18% por perna e funding real.
 > **Só reavaliar com 150 trades fechados.** Antes disso é ruído.
 
-_Atualizado em 2026-11-03 (calendário de 2026-11-03)._
+_Atualizado em 2026-11-04 (calendário de 2026-11-04)._
 
 **Trades fechados:** 30 de 150 (20%)
 
@@ -43,6 +43,7 @@ _Referência do backtest (2025–2026): puro +2.9%, excesso sobre o universo +2.
 | EIGEN | 2026-12-01 | 3.9% | 100% | 2026-11-24 |
 | ZETA | 2026-12-02 | 2.6% | 51% | 2026-11-25 |
 | STO | 2026-12-03 | 4.5% | 61% | 2026-11-26 |
+| WET | 2026-12-04 | 45.6% | 74% | 2026-11-27 |
 
 _Passa pelos filtros (perpétuo com ≥ 30 dias, mesmo token a ≥ 14 dias) só no dia da entrada._
 

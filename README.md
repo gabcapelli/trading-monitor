@@ -1,6 +1,6 @@
 # Painel de estratégias
 
-_Atualizado em 03/11 20:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
+_Atualizado em 03/11 21:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
 
 ## Precisa de você
 
@@ -23,14 +23,13 @@ _Nada pendente._
 
 <sub>Desde o fechamento das 21h (Brasília).</sub>
 
-- Desbloqueio: vendeu MOVE a 0.006003 (desbloqueio 10/11)
-- Desbloqueio: recomprou STO: puro +7.26%, com hedge +1.71%
+_Nada abriu nem fechou._
 
 ## Abertos agora
 
 | Estratégia | Ativo | Desde | Entrada | Agora | Resultado | Obs. |
 |---|---|---|---|---|---|---|
-| Desbloqueio | MOVE | 03/11 | 0.006003 | 0.006154 | -2.52% | com hedge -1.11%; recompra 10/11 |
+| Desbloqueio | MOVE | 03/11 | 0.006003 | 0.006126 | -2.05% | com hedge -0.91%; recompra 10/11 |
 
 <sub>Resultado a preço de mercado, bruto (sem custo nem funding), já no lado da posição: positivo = a favor. Em negrito, movimentos de 10% ou mais. Com hedge = venda + cesta dos majors.</sub>
 
