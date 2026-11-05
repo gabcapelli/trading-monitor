@@ -7,7 +7,7 @@
 > venda + compra da cesta dos 20 majors. Custo 0.18% por perna e funding real.
 > **Só reavaliar com 150 trades fechados.** Antes disso é ruído.
 
-_Atualizado em 2026-11-04 (calendário de 2026-11-04)._
+_Atualizado em 2026-11-05 (calendário de 2026-11-05)._
 
 **Trades fechados:** 30 de 150 (20%)
 
@@ -20,14 +20,14 @@ _Referência do backtest (2025–2026): puro +2.9%, excesso sobre o universo +2.
 | Token | Desbloqueio | % da oferta | Venda em (abertura) | Preço de entrada |
 |---|---|---|---|---|
 | MOVE | 2026-11-10 | 3.6% | 2026-11-03 | 0.006003 |
+| APT | 2026-11-12 | 1.3% | 2026-11-05 | 0.6411 |
+| BB | 2026-11-12 | 2.3% | 2026-11-05 | 0.006959 |
+| PUMP | 2026-11-12 | 1.3% | 2026-11-05 | 0.004245 |
 
 ## Próximas entradas (calendário atual)
 
 | Token | Desbloqueio | % da oferta | % insiders | Entrada prevista |
 |---|---|---|---|---|
-| APT | 2026-11-12 | 1.3% | 60% | 2026-11-05 |
-| BB | 2026-11-12 | 2.3% | 99% | 2026-11-05 |
-| PUMP | 2026-11-12 | 1.3% | 100% | 2026-11-05 |
 | SEI | 2026-11-14 | 1.6% | 89% | 2026-11-07 |
 | ARB | 2026-11-16 | 1.3% | 99% | 2026-11-09 |
 | VANA | 2026-11-17 | 1.7% | 78% | 2026-11-10 |

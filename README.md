@@ -1,6 +1,6 @@
 # Painel de estratégias
 
-_Atualizado em 04/11 20:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
+_Atualizado em 04/11 21:07 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
 
 ## Precisa de você
 
@@ -10,7 +10,7 @@ _Nada pendente._
 
 | Estratégia | Abertos | Fechados | Média |
 |---|---|---|---|
-| [Desbloqueio](claude/unlock-paper.md) | 1 | 30/150 | +0.59% |
+| [Desbloqueio](claude/unlock-paper.md) | 4 | 30/150 | +0.59% |
 | [Perpétuo novo](claude/novos-paper.md) | 0 | 1/100 | +64.20% |
 | [Rompimento 48h](claude/continuacao-paper.md) · encerrado em 30/10/2026 | — | 33 | -9.12% |
 | [Monitoring Tag](claude/monitoring-paper.md) | 0 | 1/24 | -4.20% |
@@ -23,21 +23,27 @@ _Nada pendente._
 
 <sub>Desde o fechamento das 21h (Brasília).</sub>
 
-_Nada abriu nem fechou._
+- Desbloqueio: vendeu APT a 0.6411 (desbloqueio 12/11)
+- Desbloqueio: vendeu BB a 0.006959 (desbloqueio 12/11)
+- Desbloqueio: vendeu PUMP a 0.004245 (desbloqueio 12/11)
 
 ## Abertos agora
 
 | Estratégia | Ativo | Desde | Entrada | Agora | Resultado | Obs. |
 |---|---|---|---|---|---|---|
-| Desbloqueio | MOVE | 03/11 | 0.006003 | 0.006199 | -3.27% | com hedge +1.64%; recompra 10/11 |
+| Desbloqueio | APT | 05/11 | 0.6411 | 0.638 | +0.48% | com hedge +0.32%; recompra 12/11 |
+| Desbloqueio | BB | 05/11 | 0.006959 | 0.006952 | +0.10% | com hedge -0.06%; recompra 12/11 |
+| Desbloqueio | PUMP | 05/11 | 0.004245 | 0.004241 | +0.09% | com hedge -0.07%; recompra 12/11 |
+| Desbloqueio | MOVE | 03/11 | 0.006003 | 0.006124 | -2.02% | com hedge +2.01%; recompra 10/11 |
 
 <sub>Resultado a preço de mercado, bruto (sem custo nem funding), já no lado da posição: positivo = a favor. Em negrito, movimentos de 10% ou mais. Com hedge = venda + cesta dos majors.</sub>
 
 ## Próximos eventos
 
-- 05/11 · Desbloqueio: venda prevista de APT, BB, PUMP
 - 06/11 · Sábado: entrada da cesta (21h)
+- 07/11 · Desbloqueio: venda prevista de SEI
 - 10/11 · Desbloqueio: recompra de MOVE
+- 12/11 · Desbloqueio: recompra de APT, BB, PUMP
 
 ## Outros
 

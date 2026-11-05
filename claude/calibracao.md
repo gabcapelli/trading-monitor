@@ -1,4 +1,4 @@
-# Calibracao — registro mecanico de sinais (atualizado 2026-11-04 20:06 BRT)
+# Calibracao — registro mecanico de sinais (atualizado 2026-11-04 21:06 BRT)
 
 > **Nao edite este arquivo** — ele e reescrito a cada execucao a partir da tabela `sinais_mecanicos`. Diferente de `sinais.md`, aqui nao ha nenhuma decisao sua: e TODA confirmacao mecanica detectada, inclusive as descartadas por R:R baixo, com desfecho medido por geometria de preco (OHLC de 1h contra stop/alvo sugeridos).
 >
@@ -11,8 +11,8 @@ Regra de alvo em vigor agora: **proximo** (coluna `Regra` abaixo mostra qual dec
 | Grupo | Sinais | Resolvidos | Acertos | Soma (expectancia) |
 |---|---|---|---|---|
 | Aceitos (R:R >= 2) | 103 | 103 | 27 (26%) | -3.57R (-0.035R/sinal) |
-| Descartados por R:R baixo | 564 | 564 | 358 (63%) | -22.21R (-0.039R/sinal) |
-| TODOS | 667 | 667 | 385 (58%) | -25.78R (-0.039R/sinal) |
+| Descartados por R:R baixo | 565 | 564 | 358 (63%) | -22.21R (-0.039R/sinal) |
+| TODOS | 668 | 667 | 385 (58%) | -25.78R (-0.039R/sinal) |
 
 **MAE dos acertos** (quanto o preco foi CONTRA antes de dar certo) — n=385, mediana 0.32R, maximo 0.99R, 7% acima de 0.8R.
 
@@ -26,6 +26,7 @@ Regra de alvo em vigor agora: **proximo** (coluna `Regra` abaixo mostra qual dec
 
 | Par | Setup | Direcao | Aceito | Regra | R:R (recente) | R:R (proximo) | Resultado | MAE | MFE | Candles | Quando |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| SOL/USDT | B | venda | nao | proximo | 2.22 | 0.07 | aberto | — | — | — | 2026-11-04 21:06 |
 | ARB/USDT | B | compra | nao | proximo | 3.22 | 0.05 | +0.05 | 0.29 | 0.19 | 1 | 2026-11-04 18:06 |
 | UNI/USDT | A | compra | nao | proximo | 1.93 | 1.93 | +1.93 | 0.636 | 2.211 | 2 | 2026-11-04 18:06 |
 | LINK/USDT | B | venda | nao | proximo | 1.62 | 0.23 | -1.00 | 1.337 | 0.118 | 3 | 2026-11-04 17:06 |
@@ -50,4 +51,3 @@ Regra de alvo em vigor agora: **proximo** (coluna `Regra` abaixo mostra qual dec
 | DOGE/USDT | B | compra | nao | proximo | 0.63 | 0.63 | -1.00 | 1.447 | 0.57 | 12 | 2026-11-03 10:06 |
 | ARB/USDT | B | compra | nao | proximo | 0.87 | 0.44 | -1.00 | 1.044 | 0.169 | 3 | 2026-11-03 10:06 |
 | SUI/USDT | A | compra | nao | proximo | 0.04 | 0.04 | +0.04 | 0.455 | 0.485 | 1 | 2026-11-03 10:06 |
-| BTC/USDT | B | compra | nao | proximo | 3.06 | 1.56 | -1.00 | 1.264 | 0.502 | 3 | 2026-11-03 01:06 |
