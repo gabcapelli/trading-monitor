@@ -1,4 +1,4 @@
-# Situacao atual -- Multi-Par (script gratuito, sem LLM) -- atualizado 2026-11-07 14:06 BRT
+# Situacao atual -- Multi-Par (script gratuito, sem LLM) -- atualizado 2026-11-07 15:06 BRT
 
 > Gerado por `monitor/fetch_and_check.py` via GitHub Actions, sem chamar a API do Claude. Registra fatos objetivos; a interpretacao qualitativa fica a seu criterio (ou cole este arquivo + o log numa conversa do Claude).
 
@@ -8,13 +8,13 @@
 
 | Par | Tendencia 4h | Close 1h | Funding | Zona / setup candidato | Status |
 |---|---|---|---|---|---|
-| BTC/USDT | lateral | 75711.3 | 0.0069% | — | sem_zona |
-| ETH/USDT | lateral | 2232.7 | 0.0066% | — | invalidado_setup_B |
-| SOL/USDT | baixa | 89.47 | 0.0039% | — | sem_zona |
-| XRP/USDT | baixa | 1.1597 | 0.0061% | — | sem_zona |
-| DOGE/USDT | baixa | 0.07161 | 0.0098% | Setup A (venda) 0.07154-0.07170 (1/3 toques, 0/8 candles) | zona_mapeada_setup_A |
-| ARB/USDT | lateral | 0.16623 | 0.0039% | — | sem_zona |
-| WLD/USDT | baixa | 0.33430 | -0.0111% | Setup A (venda) 0.33379-0.33521 (0/3 toques, 0/8 candles) | zona_mapeada_setup_A |
-| SUI/USDT | baixa | 0.85760 | 0.0047% | — | sem_zona |
-| UNI/USDT | baixa | 7.0310 | 0.0037% | — | sem_zona |
-| LINK/USDT | lateral | 10.85 | 0.0053% | — | sem_zona |
+| BTC/USDT | lateral | 75804.4 | 0.0064% | — | sem_zona |
+| ETH/USDT | lateral | 2235.0 | 0.0072% | — | sem_zona |
+| SOL/USDT | baixa | 89.70 | 0.0055% | — | sem_zona |
+| XRP/USDT | baixa | 1.1617 | 0.0062% | — | sem_zona |
+| DOGE/USDT | baixa | 0.07181 | 0.0081% | — | invalidado_setup_A |
+| ARB/USDT | lateral | 0.16710 | 0.0025% | — | sem_zona |
+| WLD/USDT | baixa | 0.33500 | -0.0070% | Setup A (venda) 0.33379-0.33521 (1/3 toques, 0/8 candles) | zona_mapeada_setup_A |
+| SUI/USDT | baixa | 0.85940 | 0.0034% | — | sem_zona |
+| UNI/USDT | baixa | 7.1020 | 0.0043% | — | sem_zona |
+| LINK/USDT | lateral | 10.89 | 0.0075% | — | sem_zona |
