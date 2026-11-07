@@ -1,6 +1,6 @@
 # Painel de estratégias
 
-_Atualizado em 07/11 10:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
+_Atualizado em 07/11 11:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
 
 ## Precisa de você
 
@@ -30,12 +30,12 @@ _Nada pendente._
 
 | Estratégia | Ativo | Desde | Entrada | Agora | Resultado | Obs. |
 |---|---|---|---|---|---|---|
-| Desbloqueio | PUMP | 05/11 | 0.004245 | 0.003789 | **+10.74%** | com hedge +4.64%; recompra 12/11 |
-| Desbloqueio | APT | 05/11 | 0.6411 | 0.6009 | +6.27% | com hedge +0.17%; recompra 12/11 |
-| Desbloqueio | BB | 05/11 | 0.006959 | 0.00665 | +4.44% | com hedge -1.66%; recompra 12/11 |
-| Desbloqueio | SEI | 07/11 | 0.04685 | 0.04575 | +2.35% | com hedge +1.80%; recompra 14/11 |
-| Desbloqueio | MOVE | 03/11 | 0.006003 | 0.005888 | +1.92% | com hedge -0.23%; recompra 10/11 |
-| Sábado | cesta (20) | 06/11 21:00 | — | — | -0.55% | comprado; saída sábado 21h |
+| Desbloqueio | PUMP | 05/11 | 0.004245 | 0.003775 | **+11.07%** | com hedge +5.05%; recompra 12/11 |
+| Desbloqueio | APT | 05/11 | 0.6411 | 0.604 | +5.79% | com hedge -0.23%; recompra 12/11 |
+| Desbloqueio | BB | 05/11 | 0.006959 | 0.006711 | +3.56% | com hedge -2.46%; recompra 12/11 |
+| Desbloqueio | SEI | 07/11 | 0.04685 | 0.04596 | +1.90% | com hedge +1.44%; recompra 14/11 |
+| Desbloqueio | MOVE | 03/11 | 0.006003 | 0.005896 | +1.78% | com hedge -0.28%; recompra 10/11 |
+| Sábado | cesta (20) | 06/11 21:00 | — | — | -0.46% | comprado; saída sábado 21h |
 
 <sub>Resultado a preço de mercado, bruto (sem custo nem funding), já no lado da posição: positivo = a favor. Em negrito, movimentos de 10% ou mais. Com hedge = venda + cesta dos majors.</sub>
 
