@@ -1,4 +1,4 @@
-# Calibracao — registro mecanico de sinais (atualizado 2026-11-08 13:06 BRT)
+# Calibracao — registro mecanico de sinais (atualizado 2026-11-08 14:06 BRT)
 
 > **Nao edite este arquivo** — ele e reescrito a cada execucao a partir da tabela `sinais_mecanicos`. Diferente de `sinais.md`, aqui nao ha nenhuma decisao sua: e TODA confirmacao mecanica detectada, inclusive as descartadas por R:R baixo, com desfecho medido por geometria de preco (OHLC de 1h contra stop/alvo sugeridos).
 >
@@ -30,7 +30,7 @@ Regra de alvo em vigor agora: **proximo** (coluna `Regra` abaixo mostra qual dec
 | UNI/USDT | B | venda | nao | proximo | 0.70 | 0.70 | +0.70 | 0.511 | 0.974 | 9 | 2026-11-07 22:06 |
 | ETH/USDT | B | compra | nao | proximo | 1.44 | 1.26 | -1.00 | 1.321 | 0.0 | 3 | 2026-11-07 21:06 |
 | BTC/USDT | B | compra | nao | proximo | 2.44 | 1.66 | +1.66 | 0.466 | 2.157 | 16 | 2026-11-07 19:06 |
-| ETH/USDT | B | compra | nao | proximo | 1.62 | 1.50 | aberto | 0.278 | 1.154 | — | 2026-11-07 19:06 |
+| ETH/USDT | B | compra | nao | proximo | 1.62 | 1.50 | aberto | 0.514 | 1.154 | — | 2026-11-07 19:06 |
 | WLD/USDT | A | venda | nao | proximo | — | — | -1.00 | 1.139 | 0.28 | 3 | 2026-11-07 18:06 |
 | SUI/USDT | A | venda | nao | proximo | 1.12 | 0.52 | +0.52 | 0.091 | 1.851 | 1 | 2026-11-07 12:06 |
 | ETH/USDT | B | compra | nao | proximo | 0.65 | 0.53 | -1.00 | 1.47 | 0.392 | 2 | 2026-11-07 08:06 |
