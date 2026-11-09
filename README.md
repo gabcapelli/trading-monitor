@@ -1,6 +1,6 @@
 # Painel de estratégias
 
-_Atualizado em 08/11 20:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
+_Atualizado em 08/11 21:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
 
 ## Precisa de você
 
@@ -10,7 +10,7 @@ _Nada pendente._
 
 | Estratégia | Abertos | Fechados | Média |
 |---|---|---|---|
-| [Desbloqueio](claude/unlock-paper.md) | 5 | 30/150 | +0.59% |
+| [Desbloqueio](claude/unlock-paper.md) | 6 | 30/150 | +0.59% |
 | [Perpétuo novo](claude/novos-paper.md) | 0 | 1/100 | +64.20% |
 | [Rompimento 48h](claude/continuacao-paper.md) · encerrado em 30/10/2026 | — | 33 | -9.12% |
 | [Monitoring Tag](claude/monitoring-paper.md) | 0 | 1/24 | -4.20% |
@@ -23,24 +23,25 @@ _Nada pendente._
 
 <sub>Desde o fechamento das 21h (Brasília).</sub>
 
-- Sábado: vendeu a cesta: -0.75%
+- Desbloqueio: vendeu ARB a 0.1661 (desbloqueio 16/11)
 
 ## Abertos agora
 
 | Estratégia | Ativo | Desde | Entrada | Agora | Resultado | Obs. |
 |---|---|---|---|---|---|---|
-| Desbloqueio | PUMP | 05/11 | 0.004245 | 0.003576 | **+15.76%** | com hedge +6.45%; recompra 12/11 |
-| Desbloqueio | BB | 05/11 | 0.006959 | 0.006033 | **+13.31%** | com hedge +4.00%; recompra 12/11 |
-| Desbloqueio | APT | 05/11 | 0.6411 | 0.5733 | **+10.58%** | com hedge +1.27%; recompra 12/11 |
-| Desbloqueio | SEI | 07/11 | 0.04685 | 0.04313 | +7.94% | com hedge +3.98%; recompra 14/11 |
-| Desbloqueio | MOVE | 03/11 | 0.006003 | 0.005594 | +6.81% | com hedge +1.33%; recompra 10/11 |
+| Desbloqueio | PUMP | 05/11 | 0.004245 | 0.003504 | **+17.46%** | com hedge +7.62%; recompra 12/11 |
+| Desbloqueio | BB | 05/11 | 0.006959 | 0.006036 | **+13.26%** | com hedge +3.43%; recompra 12/11 |
+| Desbloqueio | APT | 05/11 | 0.6411 | 0.5689 | **+11.26%** | com hedge +1.43%; recompra 12/11 |
+| Desbloqueio | SEI | 07/11 | 0.04685 | 0.04291 | +8.41% | com hedge +3.88%; recompra 14/11 |
+| Desbloqueio | MOVE | 03/11 | 0.006003 | 0.005588 | +6.91% | com hedge +0.88%; recompra 10/11 |
+| Desbloqueio | ARB | 09/11 | 0.1661 | 0.16656 | -0.28% | com hedge -0.53%; recompra 16/11 |
 
 <sub>Resultado a preço de mercado, bruto (sem custo nem funding), já no lado da posição: positivo = a favor. Em negrito, movimentos de 10% ou mais. Com hedge = venda + cesta dos majors.</sub>
 
 ## Próximos eventos
 
-- 09/11 · Desbloqueio: venda prevista de ARB
 - 10/11 · Desbloqueio: recompra de MOVE
+- 10/11 · Desbloqueio: venda prevista de VANA, ZK
 - 12/11 · Desbloqueio: recompra de APT, BB, PUMP
 - 13/11 · Sábado: entrada da cesta (21h)
 
