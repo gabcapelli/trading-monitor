@@ -1,4 +1,4 @@
-# Calibracao — registro mecanico de sinais (atualizado 2026-11-09 18:06 BRT)
+# Calibracao — registro mecanico de sinais (atualizado 2026-11-09 19:06 BRT)
 
 > **Nao edite este arquivo** — ele e reescrito a cada execucao a partir da tabela `sinais_mecanicos`. Diferente de `sinais.md`, aqui nao ha nenhuma decisao sua: e TODA confirmacao mecanica detectada, inclusive as descartadas por R:R baixo, com desfecho medido por geometria de preco (OHLC de 1h contra stop/alvo sugeridos).
 >
@@ -11,10 +11,10 @@ Regra de alvo em vigor agora: **proximo** (coluna `Regra` abaixo mostra qual dec
 | Grupo | Sinais | Resolvidos | Acertos | Soma (expectancia) |
 |---|---|---|---|---|
 | Aceitos (R:R >= 2) | 112 | 112 | 31 (28%) | +5.90R (+0.053R/sinal) |
-| Descartados por R:R baixo | 615 | 614 | 386 (63%) | -29.34R (-0.048R/sinal) |
-| TODOS | 727 | 726 | 417 (57%) | -23.44R (-0.032R/sinal) |
+| Descartados por R:R baixo | 615 | 615 | 387 (63%) | -29.13R (-0.047R/sinal) |
+| TODOS | 727 | 727 | 418 (57%) | -23.23R (-0.032R/sinal) |
 
-**MAE dos acertos** (quanto o preco foi CONTRA antes de dar certo) — n=417, mediana 0.33R, maximo 0.99R, 7% acima de 0.8R.
+**MAE dos acertos** (quanto o preco foi CONTRA antes de dar certo) — n=418, mediana 0.33R, maximo 0.99R, 7% acima de 0.8R.
 
 > Le-se assim: apertar `STOP_BUFFER_ATR_MULT` mata os acertos cujo MAE ja esta perto de 1R. Se essa cauda for gorda, nao ha folga pra apertar o stop.
 
@@ -26,7 +26,7 @@ Regra de alvo em vigor agora: **proximo** (coluna `Regra` abaixo mostra qual dec
 
 | Par | Setup | Direcao | Aceito | Regra | R:R (recente) | R:R (proximo) | Resultado | MAE | MFE | Candles | Quando |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| UNI/USDT | A | compra | nao | proximo | 1.89 | 0.21 | aberto | 0.656 | 0.078 | — | 2026-11-09 17:06 |
+| UNI/USDT | A | compra | nao | proximo | 1.89 | 0.21 | +0.21 | 0.656 | 0.4 | 2 | 2026-11-09 17:06 |
 | UNI/USDT | B | compra | nao | proximo | 0.11 | 0.06 | +0.06 | 0.391 | 1.062 | 1 | 2026-11-09 15:06 |
 | UNI/USDT | B | compra | nao | proximo | 0.03 | 0.03 | -1.00 | 1.073 | 0.034 | 1 | 2026-11-09 13:06 |
 | UNI/USDT | B | compra | nao | proximo | 1.78 | 1.74 | +1.74 | 0.312 | 1.892 | 7 | 2026-11-09 06:06 |
