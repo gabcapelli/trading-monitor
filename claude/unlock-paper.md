@@ -7,11 +7,11 @@
 > venda + compra da cesta dos 20 majors. Custo 0.18% por perna e funding real.
 > **Só reavaliar com 150 trades fechados.** Antes disso é ruído.
 
-_Atualizado em 2026-11-09 (calendário de 2026-11-09)._
+_Atualizado em 2026-11-10 (calendário de 2026-11-10)._
 
-**Trades fechados:** 30 de 150 (20%)
+**Trades fechados:** 31 de 150 (21%)
 
-**Média por trade:** puro +4.63% · com hedge +0.59% · hedge positivo em 16/30 (53%)
+**Média por trade:** puro +4.68% · com hedge +0.62% · hedge positivo em 17/31 (55%)
 
 _Referência do backtest (2025–2026): puro +2.9%, excesso sobre o universo +2.1%._
 
@@ -19,19 +19,18 @@ _Referência do backtest (2025–2026): puro +2.9%, excesso sobre o universo +2.
 
 | Token | Desbloqueio | % da oferta | Venda em (abertura) | Preço de entrada |
 |---|---|---|---|---|
-| MOVE | 2026-11-10 | 3.6% | 2026-11-03 | 0.006003 |
 | APT | 2026-11-12 | 1.3% | 2026-11-05 | 0.6411 |
 | BB | 2026-11-12 | 2.3% | 2026-11-05 | 0.006959 |
 | PUMP | 2026-11-12 | 1.3% | 2026-11-05 | 0.004245 |
 | SEI | 2026-11-14 | 1.6% | 2026-11-07 | 0.04685 |
 | ARB | 2026-11-16 | 1.3% | 2026-11-09 | 0.1661 |
+| VANA | 2026-11-17 | 1.7% | 2026-11-10 | 0.7347 |
+| ZK | 2026-11-17 | 2.4% | 2026-11-10 | 0.009021 |
 
 ## Próximas entradas (calendário atual)
 
 | Token | Desbloqueio | % da oferta | % insiders | Entrada prevista |
 |---|---|---|---|---|
-| VANA | 2026-11-17 | 1.7% | 78% | 2026-11-10 |
-| ZK | 2026-11-17 | 2.4% | 100% | 2026-11-10 |
 | SOLV | 2026-11-18 | 3.3% | 68% | 2026-11-11 |
 | KAITO | 2026-11-20 | 3.6% | 53% | 2026-11-13 |
 | ZRO | 2026-11-20 | 3.5% | 100% | 2026-11-13 |
@@ -44,6 +43,7 @@ _Referência do backtest (2025–2026): puro +2.9%, excesso sobre o universo +2.
 | ZETA | 2026-12-02 | 2.6% | 51% | 2026-11-25 |
 | STO | 2026-12-03 | 4.5% | 61% | 2026-11-26 |
 | WET | 2026-12-04 | 45.6% | 74% | 2026-11-27 |
+| MOVE | 2026-12-10 | 3.4% | 70% | 2026-12-03 |
 
 _Passa pelos filtros (perpétuo com ≥ 30 dias, mesmo token a ≥ 14 dias) só no dia da entrada._
 
@@ -51,6 +51,7 @@ _Passa pelos filtros (perpétuo com ≥ 30 dias, mesmo token a ≥ 14 dias) só 
 
 | Token | Desbloqueio | % da oferta | Retorno do token | Cesta | Puro | Com hedge | Obs. |
 |---|---|---|---|---|---|---|---|
+| MOVE | 2026-11-10 | 3.6% | -6.25% | -4.46% | +6.17% | +1.42% |  |
 | STO | 2026-11-03 | 4.7% | -7.25% | -5.29% | +7.26% | +1.71% |  |
 | ZETA | 2026-11-02 | 2.7% | -5.93% | -1.85% | +5.96% | +3.85% |  |
 | EIGEN | 2026-11-01 | 4.1% | -6.08% | -2.43% | +5.84% | +3.16% |  |
