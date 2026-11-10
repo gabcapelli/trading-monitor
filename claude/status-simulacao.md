@@ -1,4 +1,4 @@
-# Situacao atual -- Multi-Par (script gratuito, sem LLM) -- atualizado 2026-11-10 13:06 BRT
+# Situacao atual -- Multi-Par (script gratuito, sem LLM) -- atualizado 2026-11-10 14:06 BRT
 
 > Gerado por `monitor/fetch_and_check.py` via GitHub Actions, sem chamar a API do Claude. Registra fatos objetivos; a interpretacao qualitativa fica a seu criterio (ou cole este arquivo + o log numa conversa do Claude).
 
@@ -8,13 +8,13 @@
 
 | Par | Tendencia 4h | Close 1h | Funding | Zona / setup candidato | Status |
 |---|---|---|---|---|---|
-| BTC/USDT | baixa | 73177.4 | 0.0050% | — | sem_zona |
-| ETH/USDT | baixa | 2022.4 | -0.0041% | — | sem_zona |
-| SOL/USDT | baixa | 82.24 | 0.0001% | Setup A (venda) 85.29-85.61 (0/3 toques, 5/8 candles) | zona_mapeada_setup_A |
-| XRP/USDT | baixa | 1.0414 | 0.0059% | — | sem_zona |
-| DOGE/USDT | baixa | 0.06756 | -0.0003% | — | sem_zona |
-| ARB/USDT | lateral | 0.16133 | -0.0097% | — | descartado_rr_baixo_setup_B |
-| WLD/USDT | lateral | 0.30770 | 0.0046% | — | sem_zona |
-| SUI/USDT | lateral | 0.81300 | 0.0014% | — | sem_zona |
-| UNI/USDT | alta | 6.8280 | 0.0060% | — | invalidado_setup_B |
-| LINK/USDT | baixa | 10.25 | 0.0100% | — | sem_zona |
+| BTC/USDT | baixa | 72850.0 | 0.0066% | — | sem_zona |
+| ETH/USDT | baixa | 2017.2 | -0.0058% | — | sem_zona |
+| SOL/USDT | baixa | 81.88 | -0.0038% | Setup A (venda) 85.29-85.61 (0/3 toques, 6/8 candles) | zona_mapeada_setup_A |
+| XRP/USDT | baixa | 1.0440 | 0.0063% | — | sem_zona |
+| DOGE/USDT | baixa | 0.06704 | -0.0043% | — | sem_zona |
+| ARB/USDT | lateral | 0.15704 | -0.0111% | — | sem_zona |
+| WLD/USDT | lateral | 0.30540 | 0.0045% | Setup B (compra) 0.30137-0.30423 (0/3 toques, 0/8 candles) | zona_mapeada_setup_B |
+| SUI/USDT | lateral | 0.80560 | -0.0012% | Setup B (compra) 0.79706-0.80334 (0/3 toques, 0/8 candles) | zona_mapeada_setup_B |
+| UNI/USDT | alta | 6.6920 | -0.0009% | Setup B (compra) 6.5811-6.6509 (0/3 toques, 0/8 candles) | zona_mapeada_setup_B |
+| LINK/USDT | baixa | 10.18 | 0.0072% | — | sem_zona |
