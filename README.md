@@ -1,6 +1,6 @@
 # Painel de estratégias
 
-_Atualizado em 11/11 07:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
+_Atualizado em 11/11 08:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
 
 ## Precisa de você
 
@@ -29,14 +29,14 @@ _Nada pendente._
 
 | Estratégia | Ativo | Desde | Entrada | Agora | Resultado | Obs. |
 |---|---|---|---|---|---|---|
-| Desbloqueio | PUMP | 05/11 | 0.004245 | 0.003526 | **+16.94%** | com hedge +5.43%; recompra 12/11 |
-| Desbloqueio | BB | 05/11 | 0.006959 | 0.006073 | **+12.73%** | com hedge +1.23%; recompra 12/11 |
-| Desbloqueio | APT | 05/11 | 0.6411 | 0.5706 | **+11.00%** | com hedge -0.51%; recompra 12/11 |
-| Desbloqueio | SEI | 07/11 | 0.04685 | 0.04387 | +6.36% | com hedge +0.12%; recompra 14/11 |
-| Desbloqueio | ARB | 09/11 | 0.1661 | 0.15876 | +4.42% | com hedge +2.51%; recompra 16/11 |
-| Desbloqueio | VANA | 10/11 | 0.7347 | 0.7204 | +1.95% | com hedge -1.53%; recompra 17/11 |
-| Desbloqueio | ZK | 10/11 | 0.009021 | 0.009212 | -2.12% | com hedge -5.59%; recompra 17/11 |
-| Desbloqueio | SOLV | 11/11 | 0.004292 | 0.004404 | -2.61% | com hedge -2.82%; recompra 18/11 |
+| Desbloqueio | PUMP | 05/11 | 0.004245 | 0.003581 | **+15.64%** | com hedge +4.43%; recompra 12/11 |
+| Desbloqueio | BB | 05/11 | 0.006959 | 0.006083 | **+12.59%** | com hedge +1.37%; recompra 12/11 |
+| Desbloqueio | APT | 05/11 | 0.6411 | 0.5725 | **+10.70%** | com hedge -0.52%; recompra 12/11 |
+| Desbloqueio | SEI | 07/11 | 0.04685 | 0.04395 | +6.19% | com hedge +0.26%; recompra 14/11 |
+| Desbloqueio | ARB | 09/11 | 0.1661 | 0.15906 | +4.24% | com hedge +2.66%; recompra 16/11 |
+| Desbloqueio | VANA | 10/11 | 0.7347 | 0.7259 | +1.20% | com hedge -1.96%; recompra 17/11 |
+| Desbloqueio | ZK | 10/11 | 0.009021 | 0.009189 | -1.86% | com hedge -5.02%; recompra 17/11 |
+| Desbloqueio | SOLV | 11/11 | 0.004292 | 0.004437 | -3.38% | com hedge -3.25%; recompra 18/11 |
 
 <sub>Resultado a preço de mercado, bruto (sem custo nem funding), já no lado da posição: positivo = a favor. Em negrito, movimentos de 10% ou mais. Com hedge = venda + cesta dos majors.</sub>
 
