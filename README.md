@@ -1,6 +1,6 @@
 # Painel de estratégias
 
-_Atualizado em 11/11 12:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
+_Atualizado em 11/11 13:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
 
 ## Precisa de você
 
@@ -29,14 +29,14 @@ _Nada pendente._
 
 | Estratégia | Ativo | Desde | Entrada | Agora | Resultado | Obs. |
 |---|---|---|---|---|---|---|
-| Desbloqueio | PUMP | 05/11 | 0.004245 | 0.00359 | **+15.43%** | com hedge +4.35%; recompra 12/11 |
-| Desbloqueio | BB | 05/11 | 0.006959 | 0.006178 | **+11.22%** | com hedge +0.14%; recompra 12/11 |
-| Desbloqueio | APT | 05/11 | 0.6411 | 0.5752 | **+10.28%** | com hedge -0.80%; recompra 12/11 |
-| Desbloqueio | SEI | 07/11 | 0.04685 | 0.04426 | +5.53% | com hedge -0.25%; recompra 14/11 |
-| Desbloqueio | ARB | 09/11 | 0.1661 | 0.15949 | +3.98% | com hedge +2.56%; recompra 16/11 |
-| Desbloqueio | VANA | 10/11 | 0.7347 | 0.7292 | +0.75% | com hedge -2.24%; recompra 17/11 |
-| Desbloqueio | ZK | 10/11 | 0.009021 | 0.009237 | -2.39% | com hedge -5.39%; recompra 17/11 |
-| Desbloqueio | SOLV | 11/11 | 0.004292 | 0.004413 | -2.82% | com hedge -2.54%; recompra 18/11 |
+| Desbloqueio | PUMP | 05/11 | 0.004245 | 0.00361 | **+14.96%** | com hedge +4.55%; recompra 12/11 |
+| Desbloqueio | BB | 05/11 | 0.006959 | 0.006199 | **+10.92%** | com hedge +0.51%; recompra 12/11 |
+| Desbloqueio | APT | 05/11 | 0.6411 | 0.5799 | +9.55% | com hedge -0.86%; recompra 12/11 |
+| Desbloqueio | SEI | 07/11 | 0.04685 | 0.04469 | +4.61% | com hedge -0.45%; recompra 14/11 |
+| Desbloqueio | ARB | 09/11 | 0.1661 | 0.16152 | +2.76% | com hedge +2.06%; recompra 16/11 |
+| Desbloqueio | VANA | 10/11 | 0.7347 | 0.7346 | +0.01% | com hedge -2.24%; recompra 17/11 |
+| Desbloqueio | SOLV | 11/11 | 0.004292 | 0.004393 | -2.35% | com hedge -1.30%; recompra 18/11 |
+| Desbloqueio | ZK | 10/11 | 0.009021 | 0.009342 | -3.56% | com hedge -5.81%; recompra 17/11 |
 
 <sub>Resultado a preço de mercado, bruto (sem custo nem funding), já no lado da posição: positivo = a favor. Em negrito, movimentos de 10% ou mais. Com hedge = venda + cesta dos majors.</sub>
 
