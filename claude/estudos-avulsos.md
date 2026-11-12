@@ -1733,6 +1733,17 @@ Pedido do Gabriel depois dos 77 e 78. Motivo: nos majors com horizonte curto o b
 
 **Total da rodada de 30/10/2026 (76–79):** 79 estudos, nenhum aprovado. O quadro é o mesmo de 27, 31, 56 e 77–78: há informação, mas pequena demais para o custo.
 
+## 80 a 84. PRÉ-REGISTRO (12/11/2026, antes de qualquer conta): 9.2, 9.3, 9.4, rompimento de volatilidade e Bollinger "fechou fora, fechou dentro"
+
+Script: `monitor/replay_lw_bollinger.py` · log: `claude/lw_bollinger.log`. Pedido do Gabriel: mais setups da família do 9.1. Ressalva fixada antes: são parentes do 9.1, do Ponto Contínuo, do NR7 e da divergência de IFR, que deram bruto perto de zero, e os dados já foram muito reusados. Tentativa única cada, régua idêntica ao 59 e ao 63–67: top 50 de volume do dia, 2020-01 a 2026-09, 1d e 4h, custo de 0.18% + funding, placebo com o mesmo risco %, IC 97.5%. Nos estudos 80–82 e 84, entrada por stop no rompimento do candle do sinal (válida só no candle seguinte), alvo 2R, saída em 10 candles. MME9 "subindo" = maior que a do candle anterior. Venda sempre no espelho.
+- **80, 9.2:** MME9 subindo e o candle fecha abaixo da mínima do anterior. Stop na mínima do candle.
+- **81, 9.3:** MME9 subindo e dois fechamentos seguidos abaixo do fechamento de referência (o de dois candles antes). Stop na menor mínima dos dois.
+- **82, 9.4:** a MME9 vira para baixo, nenhum candle perde a mínima do candle que a virou, e a média vira para cima de novo. Stop na mínima do candle da virada para baixo.
+- **83, rompimento de volatilidade (Larry Williams), k = 0.5:** compra stop em abertura + 0.5 × amplitude do candle anterior e venda stop no espelho (o primeiro tocado vale). Stop na abertura, alvo 2R, saída na abertura do candle seguinte. Como todo candle é sinal, o placebo é a entrada a mercado em candles ao acaso.
+- **84, Bollinger (20, 2):** um fechamento abaixo da banda inferior seguido de um fechamento de volta para dentro. Stop na menor mínima dos dois.
+
+**Critério (por célula, 1d e 4h):** n ≥ 200; R líquido com IC97.5 > 0; excesso sobre o placebo com IC97.5 > 0; R líquido > 0 nas duas metades.
+
 ## Leitura conjunta
 
 Mesma direção do achado da auditoria v6 sobre o checklist mecânico dos Setups A/B. Nenhum dos dez setups de vídeo tem edge mecânico demonstrável nesses 20 pares (o 9.1 também não, fora da amostra, nos 80 pares do estudo 6):
