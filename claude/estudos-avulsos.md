@@ -1733,7 +1733,7 @@ Pedido do Gabriel depois dos 77 e 78. Motivo: nos majors com horizonte curto o b
 
 **Total da rodada de 30/10/2026 (76–79):** 79 estudos, nenhum aprovado. O quadro é o mesmo de 27, 31, 56 e 77–78: há informação, mas pequena demais para o custo.
 
-## 80 a 84. PRÉ-REGISTRO (12/11/2026, antes de qualquer conta): 9.2, 9.3, 9.4, rompimento de volatilidade e Bollinger "fechou fora, fechou dentro"
+## 80 a 84. Pré-registro (12/11/2026, antes de qualquer conta) e resultado: 9.2, 9.3, 9.4, rompimento de volatilidade e Bollinger "fechou fora, fechou dentro"
 
 Script: `monitor/replay_lw_bollinger.py` · log: `claude/lw_bollinger.log`. Pedido do Gabriel: mais setups da família do 9.1. Ressalva fixada antes: são parentes do 9.1, do Ponto Contínuo, do NR7 e da divergência de IFR, que deram bruto perto de zero, e os dados já foram muito reusados. Tentativa única cada, régua idêntica ao 59 e ao 63–67: top 50 de volume do dia, 2020-01 a 2026-09, 1d e 4h, custo de 0.18% + funding, placebo com o mesmo risco %, IC 97.5%. Nos estudos 80–82 e 84, entrada por stop no rompimento do candle do sinal (válida só no candle seguinte), alvo 2R, saída em 10 candles. MME9 "subindo" = maior que a do candle anterior. Venda sempre no espelho.
 - **80, 9.2:** MME9 subindo e o candle fecha abaixo da mínima do anterior. Stop na mínima do candle.
@@ -1743,6 +1743,28 @@ Script: `monitor/replay_lw_bollinger.py` · log: `claude/lw_bollinger.log`. Pedi
 - **84, Bollinger (20, 2):** um fechamento abaixo da banda inferior seguido de um fechamento de volta para dentro. Stop na menor mínima dos dois.
 
 **Critério (por célula, 1d e 4h):** n ≥ 200; R líquido com IC97.5 > 0; excesso sobre o placebo com IC97.5 > 0; R líquido > 0 nas duas metades.
+
+### Resultado (12/11/2026)
+
+| Célula | R líquido | IC97.5 | Excesso | IC97.5 | R bruto | Acerto | n |
+|---|---|---|---|---|---|---|---|
+| **9.2 1d** | −0.01R | [−0.14, +0.13] | −0.19R | [−0.33, −0.04] | +0.03R | 37% | 1.604 |
+| **9.2 4h** | −0.13R | [−0.19, −0.06] | −0.06R | [−0.12, +0.01] | −0.04R | 34% | 10.265 |
+| **9.3 1d** | +0.01R | [−0.07, +0.08] | −0.10R | [−0.18, −0.03] | +0.05R | 38% | 7.806 |
+| **9.3 4h** | −0.10R | [−0.13, −0.07] | −0.03R | [−0.06, +0.01] | −0.01R | 35% | 53.251 |
+| **9.4 1d** | +0.06R | [−0.03, +0.14] | −0.02R | [−0.10, +0.06] | +0.09R | 43% | 3.037 |
+| **9.4 4h** | +0.00R | [−0.03, +0.03] | +0.05R | [+0.02, +0.08] | +0.06R | 41% | 20.734 |
+| **Rompimento de volatilidade 1d** | −0.17R | [−0.19, −0.14] | −0.09R | [−0.12, −0.07] | −0.11R | 36% | 84.638 |
+| **Rompimento de volatilidade 4h** | −0.74R | [−0.75, −0.73] | −0.53R | [−0.53, −0.52] | −0.58R | 16% | 503.082 |
+| **Bollinger FFFD 1d** | −0.05R | [−0.14, +0.04] | +0.17R | [+0.08, +0.26] | −0.03R | 42% | 3.852 |
+| **Bollinger FFFD 4h** | −0.07R | [−0.11, −0.04] | +0.02R | [−0.02, +0.06] | −0.02R | 40% | 25.744 |
+
+**Veredito: NÃO PASSA nos dez.** Nenhuma célula tem R líquido com IC acima de zero.
+- **9.2 e 9.3:** bruto em zero, e no diário perdem para a entrada ao acaso com o mesmo risco (excesso com IC negativo). Comprar o recuo dentro da MME9 subindo é pior do que entrar em qualquer candle.
+- **9.4:** o melhor dos cinco. No 4h o excesso é real (+0.05R, 20 mil trades), mas é do tamanho do custo e o líquido fica em zero. Mesmo quadro do Ponto Contínuo 4h (estudo 66): real e irrelevante. No diário, +0.06R com IC cruzando zero, excesso nulo e 2ª metade em +0.01R.
+- **Bollinger FFFD:** bruto negativo nas duas células. O excesso de +0.17R no diário não é vantagem: o stop médio é de 17% e o placebo com esse risco perde mais (mesmo efeito da divergência de IFR no estudo 63).
+- **Rompimento de volatilidade:** os números pré-registrados estão pessimistas por um viés de execução. Com o stop na abertura do candle, a regra conservadora da régua (toque no stop na hora da entrada = stop) estopa quase toda entrada feita na primeira hora (acerto de 16% no 4h). Sensibilidade acrescentada depois do resultado, só descritiva (`--vol-otimista`, log `claude/lw_bollinger_vol_otimista.log`): com o stop valendo só a partir da hora seguinte, que é o limite oposto, o 1d dá líquido −0.04R [−0.06, −0.01] com bruto +0.03R, e o 4h dá −0.14R [−0.15, −0.12] com bruto +0.02R. **Nem o limite otimista paga o custo**; o veredito não depende do viés.
+- **São 23 setups de gráfico testados, nenhum com bruto que pague o custo.** A família 9.x de Larry Williams está fechada (9.1, 9.2, 9.3, 9.4). Não variar parâmetros (k do rompimento, período das bandas, média) sobre estes dados.
 
 ## Leitura conjunta
 

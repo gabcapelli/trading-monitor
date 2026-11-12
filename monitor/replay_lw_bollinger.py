@@ -174,6 +174,38 @@ def rodar(fn, h1, fund, s, rk, rng, res):
             livre = y["sai"]
 
 
+def resultado_otimista(h1, fund, ts, e, lado, stop_px, fim):
+    """Igual a P.resultado, mas o stop so vale a partir da hora seguinte a da entrada.
+
+    Sensibilidade do estudo 83 (--vol-otimista), acrescentada DEPOIS do resultado e
+    so descritiva: com o stop na abertura do candle, a regra conservadora da regua
+    (toque no stop na hora da entrada = stop) estopa quase toda entrada feita na
+    primeira hora. Esta versao e o limite oposto; a verdade fica entre as duas."""
+    risco = max(lado * (e - stop_px) / e, P.MIN_RISCO)
+    stop, alvo = e * (1 - lado * risco), e * (1 + lado * P.ALVO_R * risco)
+    bruto, sai = None, fim
+    for k, t in enumerate(range(ts, fim, H)):
+        x = h1.get(t)
+        if x is None:
+            return None
+        if k > 0 and ((x[2] <= stop) if lado > 0 else (x[1] >= stop)):
+            bruto, sai = -risco * 100, t + H
+            break
+        if k > 0 and ((x[1] >= alvo) if lado > 0 else (x[2] <= alvo)):
+            bruto, sai = P.ALVO_R * risco * 100, t + H
+            break
+    if bruto is None:
+        x = h1.get(fim)
+        if x is None:
+            return None
+        bruto = lado * 100 * (x[0] / e - 1)
+    f = -lado * 100 * sum(r for t, r in fund if ts <= t < sai)
+    return {"r": (bruto - P.CUSTO + f) / (risco * 100), "r_bruto": bruto / (risco * 100), "risco": risco, "sai": sai}
+
+
+RESULTADO_VOL = P.resultado
+
+
 def rodar_vol(h1, fund, s, rk, rng, res):
     for tf, horas in S.TFS.items():
         b = S.barras(h1, horas)
@@ -191,7 +223,7 @@ def rodar_vol(h1, fund, s, rk, rng, res):
             if o is None:
                 continue
             lado, ts, e = o
-            y = P.resultado(h1, fund, ts, e, lado, ab, t1)
+            y = RESULTADO_VOL(h1, fund, ts, e, lado, ab, t1)
             if y is None:
                 continue
             exc = P.placebo(h1, fund, b, i, lado, y["risco"], t1 - ts, (), rng, horas)
@@ -201,7 +233,11 @@ def rodar_vol(h1, fund, s, rk, rng, res):
 
 
 def main(argv):
+    global RESULTADO_VOL
     t0 = time.time()
+    otimista = "--vol-otimista" in argv
+    if otimista:
+        RESULTADO_VOL = resultado_otimista
     syms = T.simbolos()
     with ThreadPoolExecutor(16) as ex:
         vols = dict(zip(syms, ex.map(T.diario, syms)))
@@ -224,9 +260,16 @@ def main(argv):
             if os.path.exists(fp):
                 fund += [tuple(x) for x in json.load(open(fp))]
         fund.sort()
+        if otimista:
+            rodar_vol(h1, fund, s, rk, rng, res["VOL"])
+            continue
         for e, fn in ESTUDOS.items():
             rodar(fn, h1, fund, s, rk, rng, res[e])
         rodar_vol(h1, fund, s, rk, rng, res["VOL"])
+    if otimista:
+        P.relatorio("ESTUDO 83 (SENSIBILIDADE: STOP SO APOS A HORA DA ENTRADA)", res["VOL"])
+        print(f"\n[{time.time()-t0:.0f}s]")
+        return
     P.relatorio("ESTUDO 80 9.2", res["92"])
     P.relatorio("ESTUDO 81 9.3", res["93"])
     P.relatorio("ESTUDO 82 9.4", res["94"])
