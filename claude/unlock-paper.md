@@ -7,11 +7,11 @@
 > venda + compra da cesta dos 20 majors. Custo 0.18% por perna e funding real.
 > **Só reavaliar com 150 trades fechados.** Antes disso é ruído.
 
-_Atualizado em 2026-11-11 (calendário de 2026-11-11)._
+_Atualizado em 2026-11-12 (calendário de 2026-11-12)._
 
-**Trades fechados:** 31 de 150 (21%)
+**Trades fechados:** 34 de 150 (23%)
 
-**Média por trade:** puro +4.68% · com hedge +0.62% · hedge positivo em 17/31 (55%)
+**Média por trade:** puro +5.55% · com hedge +0.74% · hedge positivo em 19/34 (56%)
 
 _Referência do backtest (2025–2026): puro +2.9%, excesso sobre o universo +2.1%._
 
@@ -19,9 +19,6 @@ _Referência do backtest (2025–2026): puro +2.9%, excesso sobre o universo +2.
 
 | Token | Desbloqueio | % da oferta | Venda em (abertura) | Preço de entrada |
 |---|---|---|---|---|
-| APT | 2026-11-12 | 1.3% | 2026-11-05 | 0.6411 |
-| BB | 2026-11-12 | 2.3% | 2026-11-05 | 0.006959 |
-| PUMP | 2026-11-12 | 1.3% | 2026-11-05 | 0.004245 |
 | SEI | 2026-11-14 | 1.6% | 2026-11-07 | 0.04685 |
 | ARB | 2026-11-16 | 1.3% | 2026-11-09 | 0.1661 |
 | VANA | 2026-11-17 | 1.7% | 2026-11-10 | 0.7347 |
@@ -44,6 +41,8 @@ _Referência do backtest (2025–2026): puro +2.9%, excesso sobre o universo +2.
 | STO | 2026-12-03 | 4.5% | 61% | 2026-11-26 |
 | WET | 2026-12-04 | 45.6% | 74% | 2026-11-27 |
 | MOVE | 2026-12-10 | 3.4% | 70% | 2026-12-03 |
+| BB | 2026-12-12 | 2.2% | 99% | 2026-12-05 |
+| PUMP | 2026-12-12 | 1.3% | 100% | 2026-12-05 |
 
 _Passa pelos filtros (perpétuo com ≥ 30 dias, mesmo token a ≥ 14 dias) só no dia da entrada._
 
@@ -51,6 +50,9 @@ _Passa pelos filtros (perpétuo com ≥ 30 dias, mesmo token a ≥ 14 dias) só 
 
 | Token | Desbloqueio | % da oferta | Retorno do token | Cesta | Puro | Com hedge | Obs. |
 |---|---|---|---|---|---|---|---|
+| PUMP | 2026-11-12 | 1.3% | -18.37% | -12.34% | +18.29% | +5.68% |  |
+| BB | 2026-11-12 | 2.3% | -13.31% | -12.34% | +13.34% | +0.73% |  |
+| APT | 2026-11-12 | 1.3% | -12.17% | -12.34% | +12.07% | -0.54% |  |
 | MOVE | 2026-11-10 | 3.6% | -6.25% | -4.46% | +6.17% | +1.42% |  |
 | STO | 2026-11-03 | 4.7% | -7.25% | -5.29% | +7.26% | +1.71% |  |
 | ZETA | 2026-11-02 | 2.7% | -5.93% | -1.85% | +5.96% | +3.85% |  |
