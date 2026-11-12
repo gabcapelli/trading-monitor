@@ -9,9 +9,9 @@
 
 _Atualizado em 2026-11-12 (calendário de 2026-11-12)._
 
-**Trades fechados:** 34 de 150 (23%)
+**Trades fechados:** 32 de 150 (21%)
 
-**Média por trade:** puro +5.55% · com hedge +0.74% · hedge positivo em 19/34 (56%)
+**Média por trade:** puro +5.91% · com hedge +1.23% · hedge positivo em 19/32 (59%)
 
 _Referência do backtest (2025–2026): puro +2.9%, excesso sobre o universo +2.1%._
 
@@ -67,8 +67,6 @@ _Passa pelos filtros (perpétuo com ≥ 30 dias, mesmo token a ≥ 14 dias) só 
 | KAITO | 2026-10-20 | 3.7% | -8.70% | -0.73% | +8.70% | +7.75% |  |
 | SOLV | 2026-10-19 | 3.4% | +9.75% | -8.17% | -9.72% | -18.11% |  |
 | ZK | 2026-10-18 | 2.5% | -0.59% | -6.70% | +0.51% | -6.41% |  |
-| UXLINK | 2026-10-18 | 3.9% | +0.00% | -6.70% | -0.18% | -7.10% |  |
-| OMNI | 2026-10-18 | 20.6% | +0.00% | -6.70% | -0.18% | -7.10% |  |
 | VANA | 2026-10-17 | 1.7% | -4.65% | -2.55% | +4.57% | +1.81% |  |
 | ARB | 2026-10-16 | 1.3% | +13.29% | +0.36% | -13.57% | -13.41% |  |
 | SEI | 2026-10-14 | 1.6% | -10.44% | -8.46% | +10.34% | +1.70% |  |
@@ -85,9 +83,11 @@ _Passa pelos filtros (perpétuo com ≥ 30 dias, mesmo token a ≥ 14 dias) só 
 | GUN | 2026-10-01 | 7.0% | +1.06% | +2.42% | -1.03% | +1.13% |  |
 | ZORA | 2026-09-30 | 3.0% | -15.97% | -2.09% | +16.00% | +13.64% |  |
 
-<details><summary>Descartados (2)</summary>
+<details><summary>Descartados (4)</summary>
 
 - SPK 2026-10-15: conhecido tarde
+- OMNI 2026-10-18: perpetuo inativo (contrato liquidado; corrigido em 12/11/2026)
+- UXLINK 2026-10-18: perpetuo inativo (contrato liquidado; corrigido em 12/11/2026)
 - SPK 2026-11-06: conhecido tarde
 
 </details>

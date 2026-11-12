@@ -212,12 +212,20 @@ def todos_os_perpetuos():
 
 
 def ativo(sym, hoje):
-    """Perpetuo negociando agora: candle de ha <= 3 dias no vision ou na API."""
+    """Perpetuo negociando agora: candle de ha <= 3 dias COM VOLUME no vision ou na API.
+
+    Contrato liquidado (status SETTLING) continua devolvendo candles congelados
+    de volume zero; sem a checagem de volume ele entrava como trade de retorno 0
+    (OMNI e UXLINK em 18/10/2026, descartados em 12/11/2026)."""
     for d in range(hoje - 1, hoje - 4, -1):
-        if _bytes(f"{VISION}/daily/klines/{sym}/1d/{sym}-1d-{_data(d)}.zip.CHECKSUM"):
-            return True
-    r = _json(f"{FAPI}/klines?symbol={sym}&interval=1d&limit=1")
-    return bool(r)
+        rows = _csv_do_zip(f"{VISION}/daily/klines/{sym}/1d/{sym}-1d-{_data(d)}.zip")
+        for r in rows or []:
+            if r and r[0].isdigit() and float(r[5]) > 0:
+                return True
+    r = _json(f"{FAPI}/klines?symbol={sym}&interval=1d&limit=3")
+    if not isinstance(r, list):
+        return False
+    return any(int(x[0]) >= (hoje - 3) * MS_DIA and float(x[5]) > 0 for x in r)
 
 
 # ---------------------------------------------------------------------------
