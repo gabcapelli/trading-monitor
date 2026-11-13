@@ -1766,6 +1766,14 @@ Script: `monitor/replay_lw_bollinger.py` · log: `claude/lw_bollinger.log`. Pedi
 - **Rompimento de volatilidade:** os números pré-registrados estão pessimistas por um viés de execução. Com o stop na abertura do candle, a regra conservadora da régua (toque no stop na hora da entrada = stop) estopa quase toda entrada feita na primeira hora (acerto de 16% no 4h). Sensibilidade acrescentada depois do resultado, só descritiva (`--vol-otimista`, log `claude/lw_bollinger_vol_otimista.log`): com o stop valendo só a partir da hora seguinte, que é o limite oposto, o 1d dá líquido −0.04R [−0.06, −0.01] com bruto +0.03R, e o 4h dá −0.14R [−0.15, −0.12] com bruto +0.02R. **Nem o limite otimista paga o custo**; o veredito não depende do viés.
 - **São 23 setups de gráfico testados, nenhum com bruto que pague o custo.** A família 9.x de Larry Williams está fechada (9.1, 9.2, 9.3, 9.4). Não variar parâmetros (k do rompimento, período das bandas, média) sobre estes dados.
 
+## 85 e 86. PRÉ-REGISTRO (13/11/2026, antes de qualquer preço): suspensão de depósito/saque na Upbit e remoção de pares à vista na Binance
+
+Script: `monitor/replay_suspensao_pares.py` · log: `claude/suspensao_pares.log`. Pedido do Gabriel: seguir buscando, fora da família de setups de candle (esgotada no 80–84). Os dois são eventos com data e hora, em dado ainda não usado. A regra de operação é a do papel da Monitoring Tag (estudo 38) e da réplica 39: entrada 60 min depois do aviso, saída 24h depois do aviso, sem stop, custo de 0.5% + funding, excesso sobre o BTC nos mesmos minutos, bootstrap por aviso. Tentativa única cada.
+- **85, suspensão na Upbit (compra):** com a carteira travada, a arbitragem fecha e o varejo coreano puxa o preço ("bombeamento de cercado"); a pergunta é se o perpétuo da Binance acompanha. Evento = cada token de um aviso de suspensão de depósito/saque (feed `wallet` da Upbit, horário da primeira publicação). Fora: token com alerta/fim de suporte da Upbit ou anúncio da Binance colado (−2 a +1 dia) e repetição do mesmo token em menos de 14 dias.
+- **86, remoção de pares na Binance (venda):** a Binance remove pares de pouca liquidez; para o token-base seria um aviso antecipado de fraqueza. Evento = token-base de par removido com cotação em BTC, ETH ou BNB (pares em stablecoin ou moeda fiduciária refletem a cotação e ficam de fora). Fora: anúncio de Monitoring Tag ou deslistagem colado e repetição em menos de 30 dias.
+
+**Critério (por estudo):** líquido E excesso com IC95 inteiro acima de zero; menos de 15 avisos com trade = sem amostra. Descritivos que não decidem: entrada com 2 min, placebo 30 dias antes, movimento entre o aviso e a entrada, saída em 7 dias, só 2025–26.
+
 ## Leitura conjunta
 
 Mesma direção do achado da auditoria v6 sobre o checklist mecânico dos Setups A/B. Nenhum dos dez setups de vídeo tem edge mecânico demonstrável nesses 20 pares (o 9.1 também não, fora da amostra, nos 80 pares do estudo 6):
