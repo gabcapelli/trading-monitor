@@ -1790,6 +1790,15 @@ Universo: 1009 eventos na Upbit (325 sem perpétuo na Binance, 27 sem volume ou 
 - **Descritivo do 86 em 7 dias:** excesso de +2.11% [+0.70, +3.50], mediana +3.26%. É o número mais interessante da rodada, mas **não decide e não autoriza estudo novo sobre estes eventos**: a saída em 7 dias não era a regra, o placebo de 7 dias não foi medido (o de 24h já mostra viés), e é uma venda de moeda fraca contra o BTC, que é perna de long-short e paga funding. Só valeria como hipótese em avisos futuros, com regra fixada antes.
 - Com estes dois, a família "anúncios de corretora" fica com oito estudos (28, 29, 37 a 41, 85, 86); só a Monitoring Tag segue no papel.
 
+## 87. PRÉ-REGISTRO (13/11/2026, antes de qualquer preço): BNB depois do anúncio de Launchpool
+
+Script: `monitor/replay_launchpool.py` · log: `claude/launchpool.log`. Pedido do Gabriel: seguir buscando. O BNB nunca foi usado como ativo de evento. Tentativa única.
+- **Hipótese:** para "farmar" o token novo é preciso travar BNB; o anúncio cria demanda de compra até o farming começar. Fluxo forçado, comprador.
+- **Eventos:** avisos "Introducing ... Launchpool" do feed já em cache; o início do farming vem da frase "farming starting from" do corpo do aviso. Fora: os 3 de Megadrop (sem farming), aviso no mesmo minuto de outro (1) e menos de 60 min entre a entrada e o farming. Contagem antes dos preços: **63 eventos** (2020: 6, 2021: 14, 2022: 3, 2023: 10, 2024: 21, 2025: 8, 2026: 1); mediana de 15 h entre a entrada e o farming (mínimo 7 h, máximo 248 h).
+- **Operação:** comprado em BNBUSDT perpétuo, entrada 60 min depois do aviso, saída no início do farming, sem stop. Custo de 0.5% + funding real; excesso sobre o BTC nos mesmos minutos; bootstrap por evento.
+- **Critério:** líquido E excesso com IC95 inteiro acima de zero; menos de 15 eventos = sem amostra.
+- **Descritivos que não decidem:** entrada com 2 min; movimento entre o aviso e a entrada; placebo 30 dias antes; líquido com custo de 0.18%; saída 24h depois do aviso; saída no fim do farming; só 2024–26.
+
 ## Leitura conjunta
 
 Mesma direção do achado da auditoria v6 sobre o checklist mecânico dos Setups A/B. Nenhum dos dez setups de vídeo tem edge mecânico demonstrável nesses 20 pares (o 9.1 também não, fora da amostra, nos 80 pares do estudo 6):
