@@ -1828,6 +1828,15 @@ O que sustenta: o placebo dá zero; o efeito não é corrida de robô (entrar co
 
 **Em papel desde 13/11/2026** (decisão do Gabriel): `monitor/launchpool_paper.py` → `claude/launchpool-paper.md`, regra congelada no docstring, leitura com 20 anúncios fechados. A simulação de dois anúncios antigos reproduziu o estudo (ETHFI: líquido +15.50%, excesso +14.76%; OPN: +2.13% e −2.31%).
 
+## 88 a 90. PRÉ-REGISTRO (13/11/2026, antes de qualquer conta): Holy Grail, Double 7s e TTM Squeeze
+
+Script: `monitor/replay_classicos3.py` · log: `claude/classicos3.log`. Pedido do Gabriel: algo mais parecido com o 9.1. São os três clássicos que restavam da lista proposta em 12/11; com eles a lista de clássicos de gráfico fica fechada. Tentativa única cada, mesma régua do 80–84 (top 50 de volume do dia, inclusive deslistados, 2020-01 a 2026-09, 4h e 1d, custo 0.18% + funding, placebo com o mesmo risco %, IC 97.5%). Execução comum: compra stop na máxima do candle do sinal, válida no candle seguinte, stop na mínima do candle do sinal, alvo 2R, saída na abertura do 11º candle (espelho na venda). As saídas originais dos autores não são usadas.
+- **88, Holy Grail (Raschke):** ADX(14) > 30, +DI > −DI, a mínima toca a MME20 depois de um candle inteiro acima dela. Venda no espelho.
+- **89, Double 7s (Connors):** fechamento acima da média simples de 200 e o menor dos últimos 7 fechamentos. Venda no espelho (abaixo da média, maior dos 7). Para a média existir, o script carrega até 230 dias antes da entrada no top 50.
+- **90, TTM Squeeze (Carter):** Bollinger (20, 2) dentro do Keltner (20, 1.5 ATR) no candle anterior e fora no atual; lado pelo sinal de fechamento − média de (ponto médio do canal de 20, MM20).
+
+**Critério (por estudo e célula):** n ≥ 200; R líquido com IC97.5 > 0; excesso sobre o placebo com IC97.5 > 0; R líquido > 0 nas duas metades.
+
 ## Leitura conjunta
 
 Mesma direção do achado da auditoria v6 sobre o checklist mecânico dos Setups A/B. Nenhum dos dez setups de vídeo tem edge mecânico demonstrável nesses 20 pares (o 9.1 também não, fora da amostra, nos 80 pares do estudo 6):
