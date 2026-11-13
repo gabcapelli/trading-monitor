@@ -1790,7 +1790,7 @@ Universo: 1009 eventos na Upbit (325 sem perpétuo na Binance, 27 sem volume ou 
 - **Descritivo do 86 em 7 dias:** excesso de +2.11% [+0.70, +3.50], mediana +3.26%. É o número mais interessante da rodada, mas **não decide e não autoriza estudo novo sobre estes eventos**: a saída em 7 dias não era a regra, o placebo de 7 dias não foi medido (o de 24h já mostra viés), e é uma venda de moeda fraca contra o BTC, que é perna de long-short e paga funding. Só valeria como hipótese em avisos futuros, com regra fixada antes.
 - Com estes dois, a família "anúncios de corretora" fica com oito estudos (28, 29, 37 a 41, 85, 86); só a Monitoring Tag segue no papel.
 
-## 87. PRÉ-REGISTRO (13/11/2026, antes de qualquer preço): BNB depois do anúncio de Launchpool
+## 87. Pré-registro (13/11/2026, antes de qualquer preço) e resultado: BNB depois do anúncio de Launchpool — **PASSA**, com fragilidade
 
 Script: `monitor/replay_launchpool.py` · log: `claude/launchpool.log`. Pedido do Gabriel: seguir buscando. O BNB nunca foi usado como ativo de evento. Tentativa única.
 - **Hipótese:** para "farmar" o token novo é preciso travar BNB; o anúncio cria demanda de compra até o farming começar. Fluxo forçado, comprador.
@@ -1798,6 +1798,33 @@ Script: `monitor/replay_launchpool.py` · log: `claude/launchpool.log`. Pedido d
 - **Operação:** comprado em BNBUSDT perpétuo, entrada 60 min depois do aviso, saída no início do farming, sem stop. Custo de 0.5% + funding real; excesso sobre o BTC nos mesmos minutos; bootstrap por evento.
 - **Critério:** líquido E excesso com IC95 inteiro acima de zero; menos de 15 eventos = sem amostra.
 - **Descritivos que não decidem:** entrada com 2 min; movimento entre o aviso e a entrada; placebo 30 dias antes; líquido com custo de 0.18%; saída 24h depois do aviso; saída no fim do farming; só 2024–26.
+
+### Resultado (13/11/2026)
+
+Pré-registro no commit `d727ee4a`, antes dos preços. Rodada única, 63 trades, 368 s.
+
+| Medida | Média | IC95 | Mediana |
+|---|---|---|---|
+| **Líquido (decide)** | **+1.23%** | **[+0.30, +2.22]** | +0.22% |
+| **Excesso sobre o BTC (decide)** | **+1.31%** | **[+0.44, +2.25]** | +0.85% |
+| Bruto | +1.73% | [+0.80, +2.72] | +0.77% |
+| Líquido com entrada em 2 min | +1.24% | [+0.20, +2.39] | +0.48% |
+| Movimento entre o aviso e a entrada | +0.97% | [+0.54, +1.43] | +0.59% |
+| Placebo −30d, excesso | −0.01% | [−0.66, +0.76] | −0.51% |
+| Excesso, saída 24h depois do aviso | +0.95% | [−0.29, +2.48] | +0.48% |
+| Excesso, saída no fim do farming | +6.51% | [−2.88, +21.04] | −1.39% |
+| Líquido, só 2024–26 (n=30) | +1.34% | [+0.00, +2.94] | +0.38% |
+
+**DECISÃO: PASSA** no critério pré-registrado. É a primeira regra direcional do projeto a passar. Líquido positivo em 34 de 63.
+
+O que sustenta: o placebo dá zero; o efeito não é corrida de robô (entrar com 2 min ou com 60 min dá o mesmo, apesar de o BNB já subir +0.97% na primeira hora); as duas metades são positivas (líquido +0.80% e +1.64%).
+
+**Fragilidades** (robustez descritiva feita depois do resultado, `monitor/replay_launchpool_robustez.py`, log `claude/launchpool_robustez.log`; não decide):
+- **Cauda:** os 5 maiores trades somam +54.3% dos +77.2% do total (AI, ETHFI, AEVO, HMSTR, ALICE). Sem os 3 maiores o líquido cai para +0.66% [−0.07, +1.39]; sem os 5, +0.39% [−0.27, +1.03]. A mediana do líquido é só +0.22%. Lembrete do estudo 37: com cauda pesada o IC do bootstrap é otimista.
+- **O efeito está nos eventos de espera longa:** com mais de 24 h entre a entrada e o farming (n=11) o líquido é +4.61% [+1.34, +8.12]; com até 24 h (n=52), +0.51% [−0.23, +1.27]. O HMSTR (248 h, líquido +9.56%, excesso −0.58%) é quase todo beta.
+- **Pode ter acabado:** em 2025–26 (n=9) o líquido é +0.27% [−0.50, +1.19] e o excesso +0.24%. E a Binance quase parou de fazer Launchpool: 8 em 2025, 1 em 2026 (o programa foi trocado pelo HODLer Airdrops, retroativo, que não cria compra de BNB).
+
+**Leitura:** o mecanismo existiu e era operável com latência horária, sobretudo em 2021 e em dez/2023–mar/2024. Não variar a regra sobre estes 63 eventos (por exemplo, "só espera longa" seria escolha depois de ver o dado). O que resta é teste adiante em papel, sabendo que no ritmo atual (1 a 8 eventos por ano) a leitura leva anos.
 
 ## Leitura conjunta
 

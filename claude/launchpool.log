@@ -1,0 +1,25 @@
+﻿ESTUDO 87 BNB DEPOIS DO ANUNCIO DE LAUNCHPOOL
+Eventos: 63 | fora: {'mesmo minuto de outro aviso': 1, 'sem inicio de farming (Megadrop)': 3}
+Por ano: {2020: 6, 2021: 14, 2022: 3, 2023: 10, 2024: 21, 2025: 8, 2026: 1}
+Horas entre a entrada e o farming: mediana 15.0, min 7.0, max 248.0
+Montagem: {'ok': 63}
+
+COMPRADO em BNBUSDT, entrada +60 min, saida no inicio do farming (positivo = ganhou)
+  LIQUIDO, custo 0.5% + funding (decide)     n=  63 an= 63 media   +1.23% IC95 [  +0.30,   +2.22] mediana  +0.22%
+  EXCESSO sobre o BTC (decide)               n=  63 an= 63 media   +1.31% IC95 [  +0.44,   +2.25] mediana  +0.85%
+  bruto                                      n=  63 an= 63 media   +1.73% IC95 [  +0.80,   +2.72] mediana  +0.77%
+  liquido, custo 0.18% + funding             n=  63 an= 63 media   +1.55% IC95 [  +0.62,   +2.54] mediana  +0.54%
+  liquido, entrada +2 min                    n=  63 an= 63 media   +1.24% IC95 [  +0.20,   +2.39] mediana  +0.48%
+  excesso, entrada +2 min                    n=  63 an= 63 media   +1.35% IC95 [  +0.34,   +2.46] mediana  +0.80%
+  movimento entre o aviso e a entrada        n=  63 an= 63 media   +0.97% IC95 [  +0.54,   +1.43] mediana  +0.59%
+  PLACEBO -30d: excesso                      n=  63 an= 63 media   -0.01% IC95 [  -0.66,   +0.76] mediana  -0.51%
+  PLACEBO -30d: bruto                        n=  63 an= 63 media   +0.49% IC95 [  -0.40,   +1.46] mediana  -0.05%
+  excesso, saida 24h depois do aviso         n=  63 an= 63 media   +0.95% IC95 [  -0.29,   +2.48] mediana  +0.48%
+  excesso, saida no fim do farming           n=  63 an= 63 media   +6.51% IC95 [  -2.88,  +21.04] mediana  -1.39%
+  excesso, so 2024-26                        n=  30 an= 30 media   +1.52% IC95 [  +0.43,   +2.94] mediana  +0.75%
+  liquido, so 2024-26                        n=  30 an= 30 media   +1.34% IC95 [  +0.00,   +2.94] mediana  +0.38%
+  liquido positivo em 34/63
+
+  DECISAO ESTUDO 87: PASSA
+
+[368s]
