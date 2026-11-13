@@ -1,0 +1,46 @@
+﻿
+====================================================================================================
+ESTUDO 85 SUSPENSAO NA UPBIT
+====================================================================================================
+Eventos (token x aviso): 1009 em 938 avisos | fora: {'repetido': 92, 'anuncio colado': 17}
+Montagem: {'sem perpetuo': 325, 'sem volume ou listado ha menos de 30 dias': 27, 'ok': 657}
+Trades validos: 657 em 636 avisos
+Por ano: {2020: 10, 2021: 92, 2022: 104, 2023: 95, 2024: 89, 2025: 149, 2026: 118}
+
+COMPRADO, entrada +60 min, saida +24h (positivo = ganhou)
+  LIQUIDO, custo 0.5% + funding (decide)     n= 657 an=636 media   -0.31% IC95 [  -0.83,   +0.25] mediana  -0.83%
+  EXCESSO sobre o BTC (decide)               n= 657 an=636 media   +0.06% IC95 [  -0.38,   +0.57] mediana  -0.33%
+  bruto                                      n= 657 an=636 media   +0.13% IC95 [  -0.38,   +0.69] mediana  -0.31%
+  liquido, entrada +2 min                    n= 657 an=636 media   -0.34% IC95 [  -0.88,   +0.25] mediana  -0.96%
+  excesso, entrada +2 min                    n= 657 an=636 media   +0.05% IC95 [  -0.42,   +0.57] mediana  -0.40%
+  PLACEBO -30d: excesso                      n= 657 an=636 media   -0.27% IC95 [  -0.64,   +0.11] mediana  -0.53%
+  movimento entre o aviso e a entrada        n= 657 an=636 media   +0.38% IC95 [  +0.23,   +0.54] mediana  +0.19%
+  excesso, saida em 7 dias                   n= 657 an=636 media   -0.92% IC95 [  -1.90,   +0.08] mediana  -2.29%
+  excesso, so 2025-26                        n= 267 an=254 media   +0.33% IC95 [  -0.46,   +1.32] mediana  -0.51%
+  liquido positivo em 283/657
+
+  DECISAO ESTUDO 85 SUSPENSAO NA UPBIT: NAO PASSA
+
+====================================================================================================
+ESTUDO 86 REMOCAO DE PARES NA BINANCE
+====================================================================================================
+Eventos (token x aviso): 607 em 158 avisos | fora: {'repetido': 29, 'anuncio colado': 3}
+Montagem: {'sem perpetuo': 153, 'ok': 436, 'sem volume ou listado ha menos de 30 dias': 18}
+Trades validos: 436 em 135 avisos
+Por ano: {2022: 21, 2023: 52, 2024: 68, 2025: 93, 2026: 202}
+
+VENDIDO, entrada +60 min, saida +24h (positivo = ganhou)
+  LIQUIDO, custo 0.5% + funding (decide)     n= 436 an=135 media   +0.17% IC95 [  -0.68,   +1.08] mediana  -0.05%
+  EXCESSO sobre o BTC (decide)               n= 436 an=135 media   +0.55% IC95 [  +0.05,   +1.09] mediana  +0.69%
+  bruto                                      n= 436 an=135 media   +0.70% IC95 [  -0.16,   +1.61] mediana  +0.43%
+  liquido, entrada +2 min                    n= 436 an=135 media   +0.28% IC95 [  -0.59,   +1.19] mediana  +0.04%
+  excesso, entrada +2 min                    n= 436 an=135 media   +0.67% IC95 [  +0.15,   +1.21] mediana  +0.91%
+  PLACEBO -30d: excesso                      n= 436 an=135 media   +0.33% IC95 [  -0.17,   +0.80] mediana  +0.49%
+  movimento entre o aviso e a entrada        n= 436 an=135 media   +0.12% IC95 [  -0.01,   +0.24] mediana  +0.12%
+  excesso, saida em 7 dias                   n= 436 an=135 media   +2.11% IC95 [  +0.70,   +3.50] mediana  +3.26%
+  excesso, so 2025-26                        n= 295 an= 72 media   +0.55% IC95 [  +0.03,   +1.14] mediana  +0.79%
+  liquido positivo em 215/436
+
+  DECISAO ESTUDO 86 REMOCAO DE PARES NA BINANCE: NAO PASSA
+
+[5890s]

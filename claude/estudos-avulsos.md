@@ -1766,13 +1766,29 @@ Script: `monitor/replay_lw_bollinger.py` · log: `claude/lw_bollinger.log`. Pedi
 - **Rompimento de volatilidade:** os números pré-registrados estão pessimistas por um viés de execução. Com o stop na abertura do candle, a regra conservadora da régua (toque no stop na hora da entrada = stop) estopa quase toda entrada feita na primeira hora (acerto de 16% no 4h). Sensibilidade acrescentada depois do resultado, só descritiva (`--vol-otimista`, log `claude/lw_bollinger_vol_otimista.log`): com o stop valendo só a partir da hora seguinte, que é o limite oposto, o 1d dá líquido −0.04R [−0.06, −0.01] com bruto +0.03R, e o 4h dá −0.14R [−0.15, −0.12] com bruto +0.02R. **Nem o limite otimista paga o custo**; o veredito não depende do viés.
 - **São 23 setups de gráfico testados, nenhum com bruto que pague o custo.** A família 9.x de Larry Williams está fechada (9.1, 9.2, 9.3, 9.4). Não variar parâmetros (k do rompimento, período das bandas, média) sobre estes dados.
 
-## 85 e 86. PRÉ-REGISTRO (13/11/2026, antes de qualquer preço): suspensão de depósito/saque na Upbit e remoção de pares à vista na Binance
+## 85 e 86. Pré-registro (13/11/2026, antes de qualquer preço) e resultado: suspensão de depósito/saque na Upbit e remoção de pares à vista na Binance — NÃO PASSA nos dois
 
 Script: `monitor/replay_suspensao_pares.py` · log: `claude/suspensao_pares.log`. Pedido do Gabriel: seguir buscando, fora da família de setups de candle (esgotada no 80–84). Os dois são eventos com data e hora, em dado ainda não usado. A regra de operação é a do papel da Monitoring Tag (estudo 38) e da réplica 39: entrada 60 min depois do aviso, saída 24h depois do aviso, sem stop, custo de 0.5% + funding, excesso sobre o BTC nos mesmos minutos, bootstrap por aviso. Tentativa única cada.
 - **85, suspensão na Upbit (compra):** com a carteira travada, a arbitragem fecha e o varejo coreano puxa o preço ("bombeamento de cercado"); a pergunta é se o perpétuo da Binance acompanha. Evento = cada token de um aviso de suspensão de depósito/saque (feed `wallet` da Upbit, horário da primeira publicação). Fora: token com alerta/fim de suporte da Upbit ou anúncio da Binance colado (−2 a +1 dia) e repetição do mesmo token em menos de 14 dias.
 - **86, remoção de pares na Binance (venda):** a Binance remove pares de pouca liquidez; para o token-base seria um aviso antecipado de fraqueza. Evento = token-base de par removido com cotação em BTC, ETH ou BNB (pares em stablecoin ou moeda fiduciária refletem a cotação e ficam de fora). Fora: anúncio de Monitoring Tag ou deslistagem colado e repetição em menos de 30 dias.
 
 **Critério (por estudo):** líquido E excesso com IC95 inteiro acima de zero; menos de 15 avisos com trade = sem amostra. Descritivos que não decidem: entrada com 2 min, placebo 30 dias antes, movimento entre o aviso e a entrada, saída em 7 dias, só 2025–26.
+
+### Resultado (13/11/2026)
+
+Pré-registro no commit `957cbfc1`, antes dos preços. Rodada única, 5890 s.
+
+| Estudo | Trades (avisos) | Bruto | Líquido (decide) | Excesso sobre o BTC (decide) | Placebo −30d | Veredito |
+|---|---|---|---|---|---|---|
+| 85 Upbit, comprado | 657 (636) | +0.13% [−0.38, +0.69] | −0.31% [−0.83, +0.25] | +0.06% [−0.38, +0.57] | −0.27% [−0.64, +0.11] | NÃO PASSA |
+| 86 pares, vendido | 436 (135) | +0.70% [−0.16, +1.61] | +0.17% [−0.68, +1.08] | +0.55% [+0.05, +1.09] | +0.33% [−0.17, +0.80] | NÃO PASSA |
+
+Universo: 1009 eventos na Upbit (325 sem perpétuo na Binance, 27 sem volume ou recém-listados) e 607 na Binance (153 sem perpétuo, 18 sem volume).
+
+- **85:** não há efeito no perpétuo. Bruto de +0.13% com 657 trades, mediana negativa, acerto de 283/657. O preço anda +0.38% [+0.23, +0.54] entre o aviso e a entrada, e depois nada; entrar com 2 min dá o mesmo zero. Em 7 dias o excesso é −0.92%. O "bombeamento de cercado", se existe, fica no preço em won da Upbit e não chega à Binance.
+- **86:** o excesso passa (+0.55%, IC > 0, igual em 2025–26 e com entrada em 2 min), mas o líquido não: o efeito é do tamanho do custo de 0.5%. O placebo de 30 dias antes dá +0.33% com IC encostado em zero, então parte do excesso é característica permanente desses tokens (moedas fracas que perdem para o BTC em qualquer dia), não do aviso.
+- **Descritivo do 86 em 7 dias:** excesso de +2.11% [+0.70, +3.50], mediana +3.26%. É o número mais interessante da rodada, mas **não decide e não autoriza estudo novo sobre estes eventos**: a saída em 7 dias não era a regra, o placebo de 7 dias não foi medido (o de 24h já mostra viés), e é uma venda de moeda fraca contra o BTC, que é perna de long-short e paga funding. Só valeria como hipótese em avisos futuros, com regra fixada antes.
+- Com estes dois, a família "anúncios de corretora" fica com oito estudos (28, 29, 37 a 41, 85, 86); só a Monitoring Tag segue no papel.
 
 ## Leitura conjunta
 

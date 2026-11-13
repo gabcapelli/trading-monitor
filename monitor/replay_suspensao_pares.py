@@ -152,18 +152,24 @@ def pares_removidos():
             cache = json.load(f)
     with open(os.path.join(D.DIR_ANUNCIOS, "cat161.json")) as f:
         arts = [a for a in json.load(f) if re.match(r"(Updated )?Notice of Removal of (Spot )?Trading Pairs", a["title"])]
-    novo = False
+    url = "https://www.binance.com/bapi/composite/v1/public/cms/article/detail/query?articleCode="
     for a in arts:
         if a["code"] in cache:
             continue
-        raw = D._get("https://www.binance.com/bapi/composite/v1/public/cms/article/detail/query?articleCode=" + a["code"])
-        corpo = (json.loads(raw)["data"] or {}).get("body") or "" if raw else ""
+        for tentativa in range(8):                       # a Binance responde 429 em rajada: espera e insiste
+            try:
+                req = urllib.request.Request(url + a["code"], headers={"User-Agent": "Mozilla/5.0"})
+                raw = urllib.request.urlopen(req, timeout=30).read()
+                break
+            except urllib.error.HTTPError as e:
+                if e.code != 429 or tentativa == 7:
+                    raise
+                time.sleep(30 * (tentativa + 1))
+        corpo = (json.loads(raw)["data"] or {}).get("body") or ""
         cache[a["code"]] = sorted(set(re.findall(r"\b([A-Z0-9]{2,12}/[A-Z]{3,6})\b", corpo)))
-        novo = True
-        time.sleep(0.3)
-    if novo:
         with open(ARQ_PARES, "w") as f:
             json.dump(cache, f)
+        time.sleep(2)
     return arts, cache
 
 
