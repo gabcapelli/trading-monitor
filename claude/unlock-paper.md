@@ -7,7 +7,7 @@
 > venda + compra da cesta dos 20 majors. Custo 0.18% por perna e funding real.
 > **Só reavaliar com 150 trades fechados.** Antes disso é ruído.
 
-_Atualizado em 2026-11-12 (calendário de 2026-11-12)._
+_Atualizado em 2026-11-13 (calendário de 2026-11-13)._
 
 **Trades fechados:** 32 de 150 (21%)
 
@@ -24,13 +24,13 @@ _Referência do backtest (2025–2026): puro +2.9%, excesso sobre o universo +2.
 | VANA | 2026-11-17 | 1.7% | 2026-11-10 | 0.7347 |
 | ZK | 2026-11-17 | 2.4% | 2026-11-10 | 0.009021 |
 | SOLV | 2026-11-18 | 3.3% | 2026-11-11 | 0.004292 |
+| KAITO | 2026-11-20 | 3.6% | 2026-11-13 | 0.2049 |
+| ZRO | 2026-11-20 | 3.5% | 2026-11-13 | 1.5508 |
 
 ## Próximas entradas (calendário atual)
 
 | Token | Desbloqueio | % da oferta | % insiders | Entrada prevista |
 |---|---|---|---|---|
-| KAITO | 2026-11-20 | 3.6% | 53% | 2026-11-13 |
-| ZRO | 2026-11-20 | 3.5% | 100% | 2026-11-13 |
 | H | 2026-11-24 | 6.8% | 55% | 2026-11-17 |
 | ALT | 2026-11-26 | 3.2% | 66% | 2026-11-19 |
 | RESOLV | 2026-11-27 | 3.7% | 90% | 2026-11-20 |

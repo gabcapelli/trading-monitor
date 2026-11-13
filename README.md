@@ -1,6 +1,6 @@
 # Painel de estratégias
 
-_Atualizado em 12/11 20:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
+_Atualizado em 12/11 21:07 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
 
 ## Precisa de você
 
@@ -10,7 +10,7 @@ _Nada pendente._
 
 | Estratégia | Abertos | Fechados | Média |
 |---|---|---|---|
-| [Desbloqueio](claude/unlock-paper.md) | 5 | 32/150 | +1.23% |
+| [Desbloqueio](claude/unlock-paper.md) | 7 | 32/150 | +1.23% |
 | [Perpétuo novo](claude/novos-paper.md) | 0 | 1/100 | +64.20% |
 | [Rompimento 48h](claude/continuacao-paper.md) · encerrado em 30/10/2026 | — | 33 | -9.12% |
 | [Monitoring Tag](claude/monitoring-paper.md) | 0 | 1/24 | -4.20% |
@@ -23,28 +23,29 @@ _Nada pendente._
 
 <sub>Desde o fechamento das 21h (Brasília).</sub>
 
-- Desbloqueio: recomprou APT: puro +12.07%, com hedge -0.54%
-- Desbloqueio: recomprou BB: puro +13.34%, com hedge +0.73%
-- Desbloqueio: recomprou PUMP: puro +18.29%, com hedge +5.68%
+- Desbloqueio: vendeu KAITO a 0.2049 (desbloqueio 20/11)
+- Desbloqueio: vendeu ZRO a 1.5508 (desbloqueio 20/11)
 
 ## Abertos agora
 
 | Estratégia | Ativo | Desde | Entrada | Agora | Resultado | Obs. |
 |---|---|---|---|---|---|---|
-| Desbloqueio | ARB | 09/11 | 0.1661 | 0.15051 | +9.39% | com hedge +5.16%; recompra 16/11 |
-| Desbloqueio | SEI | 07/11 | 0.04685 | 0.04316 | +7.88% | com hedge -0.71%; recompra 14/11 |
-| Desbloqueio | VANA | 10/11 | 0.7347 | 0.7022 | +4.42% | com hedge -1.44%; recompra 17/11 |
-| Desbloqueio | SOLV | 11/11 | 0.004292 | 0.004337 | -1.05% | com hedge -3.74%; recompra 18/11 |
-| Desbloqueio | ZK | 10/11 | 0.009021 | 0.009283 | -2.90% | com hedge -8.77%; recompra 17/11 |
+| Desbloqueio | ARB | 09/11 | 0.1661 | 0.15119 | +8.98% | com hedge +5.03%; recompra 16/11 |
+| Desbloqueio | SEI | 07/11 | 0.04685 | 0.04314 | +7.92% | com hedge -0.40%; recompra 14/11 |
+| Desbloqueio | VANA | 10/11 | 0.7347 | 0.6999 | +4.74% | com hedge -0.85%; recompra 17/11 |
+| Desbloqueio | KAITO | 13/11 | 0.2049 | 0.2048 | +0.05% | com hedge +0.15%; recompra 20/11 |
+| Desbloqueio | ZRO | 13/11 | 1.5508 | 1.5545 | -0.24% | com hedge -0.14%; recompra 20/11 |
+| Desbloqueio | SOLV | 11/11 | 0.004292 | 0.00436 | -1.58% | com hedge -3.99%; recompra 18/11 |
+| Desbloqueio | ZK | 10/11 | 0.009021 | 0.009399 | -4.19% | com hedge -9.78%; recompra 17/11 |
 
 <sub>Resultado a preço de mercado, bruto (sem custo nem funding), já no lado da posição: positivo = a favor. Em negrito, movimentos de 10% ou mais. Com hedge = venda + cesta dos majors.</sub>
 
 ## Próximos eventos
 
-- 13/11 · Desbloqueio: venda prevista de KAITO, ZRO
 - 13/11 · Sábado: entrada da cesta (21h)
 - 14/11 · Desbloqueio: recompra de SEI
 - 16/11 · Desbloqueio: recompra de ARB
+- 17/11 · Desbloqueio: recompra de VANA, ZK
 
 ## Outros
 
