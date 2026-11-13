@@ -1776,7 +1776,7 @@ Script: `monitor/replay_suspensao_pares.py` · log: `claude/suspensao_pares.log`
 
 ### Resultado (13/11/2026)
 
-Pré-registro no commit `957cbfc1`, antes dos preços. Rodada única, 5890 s.
+Pré-registro no commit `c064114d`, antes dos preços. Rodada única, 5890 s.
 
 | Estudo | Trades (avisos) | Bruto | Líquido (decide) | Excesso sobre o BTC (decide) | Placebo −30d | Veredito |
 |---|---|---|---|---|---|---|
