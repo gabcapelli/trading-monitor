@@ -64,7 +64,7 @@ def _hm(ms):
     return datetime.fromtimestamp(ms / 1000, BRT).strftime("%d/%m %H:%M")
 
 
-def hoje_e_abertos(hoje, un, nv, mt, ct, sb_est, px):
+def hoje_e_abertos(hoje, un, nv, mt, ct, sb_est, px, lp=()):
     """Linhas de 'Hoje' (o que abriu/fechou desde as 21h de Brasilia = dia UTC) e
     'Abertos agora' (cada posicao aberta a preco de mercado, bruto)."""
     dia_ms = lambda ms: ms // 86_400_000
@@ -81,7 +81,7 @@ def hoje_e_abertos(hoje, un, nv, mt, ct, sb_est, px):
             ev.append(f"Perpétuo novo: vendeu {curto(t['par'])} a {t['px_in']:g} (stop {t['stop_px']:g})")
         if t["status"] == "fechado" and t.get("dia_saida_stop") == hoje:
             ev.append(f"Perpétuo novo: recomprou {curto(t['par'])}: com stop {_pct(t['com_stop'])}")
-    for nome, ts in (("Monitoring Tag", mt),):   # Rompimento 48h encerrado em 30/10/2026
+    for nome, ts in (("Monitoring Tag", mt), ("Launchpool", lp)):   # Rompimento 48h encerrado em 30/10/2026
         for t in ts:
             if t["status"] in ("aberto", "fechado") and dia_ms(t["entrada_ts"]) == hoje:
                 lado = "comprou" if t.get("lado", -1) > 0 else "vendeu"
@@ -109,7 +109,7 @@ def hoje_e_abertos(hoje, un, nv, mt, ct, sb_est, px):
         if t["status"] == "aberto":
             linhas.append(("Perpétuo novo", t["par"], _data(t["entrada"]), t["px_in"], ret(t["par"], t["px_in"], -1),
                            f"stop {t['stop_px']:g}; saída {_data(t['entrada'] + 30)}"))
-    for nome, ts in (("Monitoring Tag", mt),):   # Rompimento 48h encerrado em 30/10/2026
+    for nome, ts in (("Monitoring Tag", mt), ("Launchpool", lp)):   # Rompimento 48h encerrado em 30/10/2026
         for t in ts:
             if t["status"] == "aberto":
                 lado = t.get("lado", -1)
@@ -148,6 +148,10 @@ def main():
     mt = [t for t in _json("monitoring_paper_state.json").get("trades", {}).values() if t["braco"] == "principal"]
     mt_ab = [t for t in mt if t["status"] == "aberto"]
     mt_fe = [t for t in mt if t["status"] == "fechado"]
+    lp = list(_json("launchpool_paper_state.json").get("trades", {}).values())
+    lp_ab = [t for t in lp if t["status"] == "aberto"]
+    lp_fe = [t for t in lp if t["status"] == "fechado"]
+    m_lp = (sum(t["liq"] for t in lp_fe) / len(lp_fe)) if lp_fe else None
     ct = _json("continuacao_paper_state.json").get("trades", [])
     ct_ab = [t for t in ct if t["status"] == "aberto"]
     ct_fe = [t for t in ct if t["status"] == "fechado"]
@@ -190,6 +194,8 @@ def main():
           f"{'—' if m_ct is None else _pct(m_ct / 100)} |",
           f"| [Monitoring Tag](claude/monitoring-paper.md) | {len(mt_ab)} | {len({t['anuncio_id'] for t in mt_fe})}/24 | "
           f"{'—' if m_mt is None else _pct(m_mt / 100)} |",
+          f"| [Launchpool](claude/launchpool-paper.md) | {len(lp_ab)} | {len(lp_fe)}/20 | "
+          f"{'—' if m_lp is None else _pct(m_lp / 100)} |",
           f"| [Sábado](claude/sabado-paper.md) | {1 if janela else 0} | {len(sab)}/104 | {'—' if m_sb is None else _pct(m_sb)} |",
           (f"| [Setup A/B](claude/estudos-avulsos.md#setups-ab--encerrado-em-25092026) · encerrado | — | {len(fech)} | "
            f"{'—' if m_d is None else f'{m_d:+.2f}R'} |" if M.SETUP_AB_ENCERRADO else
@@ -197,10 +203,10 @@ def main():
            f"{'—' if m_d is None else f'{m_d:+.2f}R'} |"),
           "",
           "<sub>Média: Setup A/B em R por trade; desbloqueio com hedge; perpétuo novo com stop; "
-          "Monitoring Tag líquida (fechados em anúncios); sábado por fim de semana. Fechados = amostra atual / amostra mínima para reavaliar.</sub>"]
+          "Monitoring Tag e Launchpool líquidos (fechados em anúncios); sábado por fim de semana. Fechados = amostra atual / amostra mínima para reavaliar.</sub>"]
 
     hoje = int(agora.timestamp()) // 86400
-    L += hoje_e_abertos(hoje, list(un), list(nv), mt, ct, sb_est, precos())
+    L += hoje_e_abertos(hoje, list(un), list(nv), mt, ct, sb_est, precos(), lp)
 
     prox = []            # (dia, texto), os mais proximos primeiro
     for d in sorted({t["t0"] for t in un_ab}):

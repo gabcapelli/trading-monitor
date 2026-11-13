@@ -19,6 +19,17 @@ export default async function handler(req, res) {
   const token = process.env.PROXY_TOKEN;
   if (!token || partes[0] !== token) return res.status(404).send("nao");
   url.searchParams.delete("p");
+  if (partes.length === 2 && partes[1] === "cms" && url.searchParams.has("articleCode")) {
+    // corpo de um anuncio (launchpool_paper.py, desde 13/11/2026): /cms?articleCode=<32 hex>
+    const code = url.searchParams.get("articleCode");
+    if (!/^[0-9a-f]{32}$/.test(code)) return res.status(400).send("parametro");
+    const r = await fetch(`https://www.binance.com/bapi/composite/v1/public/cms/article/detail/query?articleCode=${code}`, {
+      headers: { "User-Agent": "Mozilla/5.0 trading-monitor-proxy" },
+    });
+    res.status(r.status);
+    res.setHeader("Content-Type", r.headers.get("Content-Type") || "application/json");
+    return res.send(Buffer.from(await r.arrayBuffer()));
+  }
   if (partes.length === 2 && partes[1] === "cms") {
     const q = new URLSearchParams({ type: "1" });
     for (const k of ["catalogId", "pageNo", "pageSize"]) {

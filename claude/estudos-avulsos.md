@@ -1826,6 +1826,8 @@ O que sustenta: o placebo dá zero; o efeito não é corrida de robô (entrar co
 
 **Leitura:** o mecanismo existiu e era operável com latência horária, sobretudo em 2021 e em dez/2023–mar/2024. Não variar a regra sobre estes 63 eventos (por exemplo, "só espera longa" seria escolha depois de ver o dado). O que resta é teste adiante em papel, sabendo que no ritmo atual (1 a 8 eventos por ano) a leitura leva anos.
 
+**Em papel desde 13/11/2026** (decisão do Gabriel): `monitor/launchpool_paper.py` → `claude/launchpool-paper.md`, regra congelada no docstring, leitura com 20 anúncios fechados. A simulação de dois anúncios antigos reproduziu o estudo (ETHFI: líquido +15.50%, excesso +14.76%; OPN: +2.13% e −2.31%).
+
 ## Leitura conjunta
 
 Mesma direção do achado da auditoria v6 sobre o checklist mecânico dos Setups A/B. Nenhum dos dez setups de vídeo tem edge mecânico demonstrável nesses 20 pares (o 9.1 também não, fora da amostra, nos 80 pares do estudo 6):
