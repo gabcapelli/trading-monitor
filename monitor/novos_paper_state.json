@@ -333,6 +333,7 @@
 "FORMUSDT": 20166,
 "FORTHUSDT": 20186,
 "FRAXUSDT": 20468,
+"FRHCUSDT": 20769,
 "FRONTUSDT": 19622,
 "FTMUSDT": 18529,
 "FTTUSDT": 19097,
@@ -1182,6 +1183,14 @@
 "status": "descartado",
 "tipo": "EQUITY"
 },
+"FRHCUSDT": {
+"d0": 20769,
+"entrada": 20771,
+"motivo": "nao-cripto (EQUITY)",
+"par": "FRHCUSDT",
+"status": "descartado",
+"tipo": "EQUITY"
+},
 "IBKRUSDT": {
 "d0": 20747,
 "entrada": 20749,
@@ -1612,5 +1621,5 @@
 "tipo": "EQUITY"
 }
 },
-"ultimo_scan": 20770
+"ultimo_scan": 20771
 }
