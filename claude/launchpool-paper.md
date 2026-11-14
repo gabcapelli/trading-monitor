@@ -5,7 +5,7 @@
 > detectado (5–65 min depois) e vender quando o farming começa. Custo 0.5% e funding real;
 > excesso sobre comprar o BTC nos mesmos minutos. **Só reavaliar com 20 anúncios fechados.**
 
-_Atualizado em 14/11/2026 01:06 (Brasília)._
+_Atualizado em 14/11/2026 02:06 (Brasília)._
 
 **Anúncios fechados:** 0 de 20 (0%)
 
