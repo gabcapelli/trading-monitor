@@ -6,42 +6,11 @@
 > fechamento de sábado. Custo de 0.06% e funding já descontados.
 > **Só reavaliar com 104 sábados novos (~2 anos).** Antes disso é ruído.
 
-## Aberto agora
+**Sábados registrados:** 8 de 104 necessários (8%)
 
-Cesta comprada no fechamento de sexta (13/11, 21h em Brasília); saída no fechamento de sábado (21h de 14/11 em Brasília).
+**Acumulado (20 majors):** -11.40% | positivos: 2/8 (25%)
 
-| Par | Entrada |
-|---|---|
-| BTC ★ | 68279.9 |
-| ETH ★ | 1929.21 |
-| SOL ★ | 78.17 |
-| XRP ★ | 1.0105 |
-| DOGE ★ | 0.06451 |
-| ARB | 0.14504 |
-| WLD | 0.2948 |
-| SUI | 0.7958 |
-| UNI | 5.745 |
-| LINK | 9.853 |
-| BNB | 630.67 |
-| TRX | 0.31179 |
-| ZEC | 933.9 |
-| HYPE | 71.701 |
-| ADA | 0.1685 |
-| XLM | 0.1461 |
-| NEAR | 3.444 |
-| AVAX | 8.23 |
-| LTC | 49.34 |
-| BCH | 221.43 |
-
-<sub>★ = cesta secundária (5 maiores). Abertura diária da Binance (UTC).</sub>
-
-## Registrados
-
-**Sábados registrados:** 7 de 104 necessários (7%)
-
-**Acumulado (20 majors):** -1.39% | positivos: 2/7 (29%)
-
-**Acumulado (5 maiores):** -2.87%
+**Acumulado (5 maiores):** -11.98%
 
 | Sábado | 20 majors | 5 maiores | acum. 20 majors |
 |---|---|---|---|
@@ -52,3 +21,4 @@ Cesta comprada no fechamento de sexta (13/11, 21h em Brasília); saída no fecha
 | 24/10/2026 | -1.09% | -0.65% | +0.20% |
 | 31/10/2026 | -0.84% | -0.26% | -0.64% |
 | 07/11/2026 | -0.75% | -0.60% | -1.39% |
+| 14/11/2026 | -10.01% | -9.12% | -11.40% |
