@@ -4,16 +4,6 @@
 
 | Data/Hora (BRT) | Par | Close 1h | High/Low 1h | Close 4h | Swing 1h ref | ATR 1h | Funding | Zona ativa | Status checklist |
 |---|---|---|---|---|---|---|---|---|---|
-| 2026-11-13 00:06 | BTC-USDT-SWAP | 70207.5 | 70945.6/69805.7 | 71428.4 | sup 71200.0 (ha 11 candles) | 597.59 | 0.0100% | A/venda@71200.0 (1t/1c) | zona_mapeada_setup_A |
-| 2026-11-13 00:06 | ETH-USDT-SWAP | 1989.1 | 2011.7/1973.2 | 2018.8 | sup 1982.3 (ha 12 candles) | 20.14 | 0.0054% | — | sem_zona |
-| 2026-11-13 00:06 | SOL-USDT-SWAP | 80.15 | 81.28/79.53 | 81.69 | sup 80.41 (ha 12 candles) | 0.90286 | 0.0100% | A/venda@80.41 (0t/0c) | zona_mapeada_setup_A |
-| 2026-11-13 00:06 | XRP-USDT-SWAP | 1.0200 | 1.0316/1.0135 | 1.0409 | sup 1.0157 (ha 11 candles) | 0.01166 | 0.0100% | — | sem_zona |
-| 2026-11-13 00:06 | DOGE-USDT-SWAP | 0.06527 | 0.06639/0.06487 | 0.06648 | sup 0.06442 (ha 13 candles) | 0.00078 | 0.0053% | — | sem_zona |
-| 2026-11-13 00:06 | ARB-USDT-SWAP | 0.14742 | 0.14990/0.14630 | 0.15078 | sup 0.14222 (ha 13 candles) | 0.00244 | 0.0033% | — | sem_zona |
-| 2026-11-13 00:06 | WLD-USDT-SWAP | 0.29610 | 0.30010/0.29300 | 0.30090 | sup 0.29460 (ha 13 candles) | 0.00486 | 0.0100% | — | sem_zona |
-| 2026-11-13 00:06 | SUI-USDT-SWAP | 0.78940 | 0.80290/0.78430 | 0.80500 | — | 0.00978 | 0.0054% | — | sem_zona |
-| 2026-11-13 00:06 | UNI-USDT-SWAP | 5.8940 | 6.0550/5.8420 | 6.0670 | — | 0.09007 | 0.0064% | — | sem_zona |
-| 2026-11-13 00:06 | LINK-USDT-SWAP | 9.9280 | 10.10/9.8610 | 10.14 | sup 9.7650 (ha 12 candles) | 0.11886 | 0.0099% | — | sem_zona |
 | 2026-11-13 01:06 | BTC-USDT-SWAP | 68927.1 | 70286.1/68450.0 | 68927.1 | sup 71200.0 (ha 12 candles) | 673.07 | 0.0063% | A/venda@71200.0 (1t/2c) | zona_mapeada_setup_A |
 | 2026-11-13 01:06 | ETH-USDT-SWAP | 1933.2 | 1992.7/1915.1 | 1933.2 | sup 1982.3 (ha 13 candles) | 22.98 | 0.0011% | A/venda@1982.3 (0t/0c) | zona_mapeada_setup_A |
 | 2026-11-13 01:06 | SOL-USDT-SWAP | 78.41 | 80.37/77.83 | 78.41 | sup 80.41 (ha 13 candles) | 0.95071 | 0.0100% | — | descartado_rr_baixo_setup_A |
@@ -484,3 +474,13 @@
 | 2026-11-14 23:06 | SUI-USDT-SWAP | 0.68280 | 0.69440/0.67520 | 0.70040 | sup 0.67470 (ha 3 candles) | 0.01780 | -0.0205% | A/venda@0.76420 (0t/3c) | zona_mapeada_setup_A |
 | 2026-11-14 23:06 | UNI-USDT-SWAP | 4.7410 | 4.7890/4.6760 | 4.8820 | sup 4.6100 (ha 4 candles) | 0.15500 | -0.0013% | — | sem_zona |
 | 2026-11-14 23:06 | LINK-USDT-SWAP | 8.7050 | 8.8310/8.6150 | 8.8780 | sup 8.5670 (ha 3 candles) | 0.20171 | -0.0030% | — | sem_zona |
+| 2026-11-15 00:06 | BTC-USDT-SWAP | 64866.4 | 65117.9/62455.9 | 64124.8 | sup 64956.5 (ha 10 candles) | 1107.3 | -0.0006% | A/venda@64956.5 (1t/0c) | zona_mapeada_setup_A |
+| 2026-11-15 00:06 | ETH-USDT-SWAP | 1814.4 | 1822.8/1725.0 | 1768.4 | sup 1809.0 (ha 10 candles) | 42.28 | -0.0062% | A/venda@1809.0 (1t/0c) | zona_mapeada_setup_A |
+| 2026-11-15 00:06 | SOL-USDT-SWAP | 71.26 | 71.54/67.47 | 70.23 | sup 74.77 (ha 22 candles) | 1.7521 | -0.0210% | — | sem_zona |
+| 2026-11-15 00:06 | XRP-USDT-SWAP | 0.95320 | 0.95620/0.90350 | 0.91370 | sup 0.89220 (ha 3 candles) | 0.02422 | -0.0026% | — | sem_zona |
+| 2026-11-15 00:06 | DOGE-USDT-SWAP | 0.05852 | 0.05870/0.05589 | 0.05733 | sup 0.05534 (ha 4 candles) | 0.00154 | -0.0075% | — | sem_zona |
+| 2026-11-15 00:06 | ARB-USDT-SWAP | 0.13016 | 0.13067/0.12389 | 0.12794 | sup 0.13800 (ha 18 candles) | 0.00391 | 0.0100% | A/venda@0.13800 (0t/2c) | zona_mapeada_setup_A |
+| 2026-11-15 00:06 | WLD-USDT-SWAP | 0.26240 | 0.26320/0.24880 | 0.25500 | sup 0.24230 (ha 5 candles) | 0.00871 | -0.0613% | A/venda@0.28120 (0t/6c) | zona_mapeada_setup_A |
+| 2026-11-15 00:06 | SUI-USDT-SWAP | 0.71770 | 0.71970/0.68010 | 0.70040 | sup 0.67470 (ha 4 candles) | 0.02001 | -0.0217% | A/venda@0.76420 (0t/4c) | zona_mapeada_setup_A |
+| 2026-11-15 00:06 | UNI-USDT-SWAP | 5.0080 | 5.0320/4.7360 | 4.8820 | sup 4.6100 (ha 5 candles) | 0.16921 | -0.0076% | — | sem_zona |
+| 2026-11-15 00:06 | LINK-USDT-SWAP | 9.0960 | 9.1240/8.6670 | 8.8780 | sup 8.5670 (ha 4 candles) | 0.22764 | -0.0032% | — | sem_zona |
