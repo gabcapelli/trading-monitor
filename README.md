@@ -1,6 +1,6 @@
 # Painel de estratégias
 
-_Atualizado em 15/11 23:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
+_Atualizado em 16/11 00:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
 
 ## Precisa de você
 
@@ -30,11 +30,11 @@ _Nada pendente._
 
 | Estratégia | Ativo | Desde | Entrada | Agora | Resultado | Obs. |
 |---|---|---|---|---|---|---|
-| Desbloqueio | KAITO | 13/11 | 0.2049 | 0.1727 | **+15.71%** | com hedge +5.82%; recompra 20/11 |
-| Desbloqueio | VANA | 10/11 | 0.7347 | 0.6329 | **+13.86%** | com hedge -1.13%; recompra 17/11 |
-| Desbloqueio | ZK | 10/11 | 0.009021 | 0.007916 | **+12.25%** | com hedge -2.74%; recompra 17/11 |
-| Desbloqueio | ZRO | 13/11 | 1.5508 | 1.3693 | **+11.70%** | com hedge +1.81%; recompra 20/11 |
-| Desbloqueio | SOLV | 11/11 | 0.004292 | 0.004441 | -3.47% | com hedge -15.60%; recompra 18/11 |
+| Desbloqueio | KAITO | 13/11 | 0.2049 | 0.1748 | **+14.69%** | com hedge +5.50%; recompra 20/11 |
+| Desbloqueio | VANA | 10/11 | 0.7347 | 0.6383 | **+13.12%** | com hedge -1.21%; recompra 17/11 |
+| Desbloqueio | ZK | 10/11 | 0.009021 | 0.008052 | **+10.74%** | com hedge -3.59%; recompra 17/11 |
+| Desbloqueio | ZRO | 13/11 | 1.5508 | 1.3889 | **+10.44%** | com hedge +1.25%; recompra 20/11 |
+| Desbloqueio | SOLV | 11/11 | 0.004292 | 0.004588 | -6.90% | com hedge -18.34%; recompra 18/11 |
 
 <sub>Resultado a preço de mercado, bruto (sem custo nem funding), já no lado da posição: positivo = a favor. Em negrito, movimentos de 10% ou mais. Com hedge = venda + cesta dos majors.</sub>
 
