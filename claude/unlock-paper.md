@@ -7,11 +7,11 @@
 > venda + compra da cesta dos 20 majors. Custo 0.18% por perna e funding real.
 > **Só reavaliar com 150 trades fechados.** Antes disso é ruído.
 
-_Atualizado em 2026-11-15 (calendário de 2026-11-15)._
+_Atualizado em 2026-11-16 (calendário de 2026-11-16)._
 
-**Trades fechados:** 33 de 150 (22%)
+**Trades fechados:** 34 de 150 (23%)
 
-**Média por trade:** puro +6.00% · com hedge +1.12% · hedge positivo em 19/33 (58%)
+**Média por trade:** puro +6.37% · com hedge +1.28% · hedge positivo em 20/34 (59%)
 
 _Referência do backtest (2025–2026): puro +2.9%, excesso sobre o universo +2.1%._
 
@@ -19,7 +19,6 @@ _Referência do backtest (2025–2026): puro +2.9%, excesso sobre o universo +2.
 
 | Token | Desbloqueio | % da oferta | Venda em (abertura) | Preço de entrada |
 |---|---|---|---|---|
-| ARB | 2026-11-16 | 1.3% | 2026-11-09 | 0.1661 |
 | VANA | 2026-11-17 | 1.7% | 2026-11-10 | 0.7347 |
 | ZK | 2026-11-17 | 2.4% | 2026-11-10 | 0.009021 |
 | SOLV | 2026-11-18 | 3.3% | 2026-11-11 | 0.004292 |
@@ -43,6 +42,7 @@ _Referência do backtest (2025–2026): puro +2.9%, excesso sobre o universo +2.
 | BB | 2026-12-12 | 2.2% | 99% | 2026-12-05 |
 | PUMP | 2026-12-12 | 1.3% | 100% | 2026-12-05 |
 | SEI | 2026-12-14 | 1.5% | 89% | 2026-12-07 |
+| ARB | 2026-12-16 | 1.3% | 99% | 2026-12-09 |
 
 _Passa pelos filtros (perpétuo com ≥ 30 dias, mesmo token a ≥ 14 dias) só no dia da entrada._
 
@@ -50,6 +50,7 @@ _Passa pelos filtros (perpétuo com ≥ 30 dias, mesmo token a ≥ 14 dias) só 
 
 | Token | Desbloqueio | % da oferta | Retorno do token | Cesta | Puro | Com hedge | Obs. |
 |---|---|---|---|---|---|---|---|
+| ARB | 2026-11-16 | 1.3% | -18.92% | -12.11% | +18.69% | +6.36% |  |
 | SEI | 2026-11-14 | 1.6% | -8.86% | -10.78% | +8.71% | -2.32% |  |
 | PUMP | 2026-11-12 | 1.3% | -18.37% | -12.34% | +18.29% | +5.68% |  |
 | BB | 2026-11-12 | 2.3% | -13.31% | -12.34% | +13.34% | +0.73% |  |
