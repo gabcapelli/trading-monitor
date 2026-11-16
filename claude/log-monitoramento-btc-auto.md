@@ -4,16 +4,6 @@
 
 | Data/Hora (BRT) | Par | Close 1h | High/Low 1h | Close 4h | Swing 1h ref | ATR 1h | Funding | Zona ativa | Status checklist |
 |---|---|---|---|---|---|---|---|---|---|
-| 2026-11-14 20:06 | BTC-USDT-SWAP | 63509.2 | 64422.1/63272.2 | 65692.6 | sup 64956.5 (ha 6 candles) | 770.49 | -0.0044% | — | zona_expirada_setup_A |
-| 2026-11-14 20:06 | ETH-USDT-SWAP | 1744.1 | 1772.4/1727.8 | 1834.1 | sup 1809.0 (ha 6 candles) | 31.40 | -0.0105% | — | zona_expirada_setup_A |
-| 2026-11-14 20:06 | SOL-USDT-SWAP | 69.06 | 70.00/68.51 | 72.19 | sup 74.77 (ha 18 candles) | 1.2764 | -0.0114% | A/venda@74.77 (0t/7c) | zona_mapeada_setup_A |
-| 2026-11-14 20:06 | XRP-USDT-SWAP | 0.89810 | 0.91410/0.89260 | 0.95280 | sup 0.97870 (ha 15 candles) | 0.01753 | 0.0014% | A/venda@0.97870 (0t/7c) | zona_mapeada_setup_A |
-| 2026-11-14 20:06 | DOGE-USDT-SWAP | 0.05610 | 0.05688/0.05534 | 0.05970 | sup 0.06222 (ha 15 candles) | 0.00121 | -0.0031% | — | zona_expirada_setup_A |
-| 2026-11-14 20:06 | ARB-USDT-SWAP | 0.12605 | 0.12745/0.12393 | 0.13123 | sup 0.13800 (ha 14 candles) | 0.00326 | 0.0100% | — | sem_zona |
-| 2026-11-14 20:06 | WLD-USDT-SWAP | 0.24630 | 0.25260/0.24500 | 0.25940 | sup 0.28120 (ha 20 candles) | 0.00720 | -0.0403% | A/venda@0.28120 (0t/2c) | zona_mapeada_setup_A |
-| 2026-11-14 20:06 | SUI-USDT-SWAP | 0.68340 | 0.69340/0.67470 | 0.72500 | sup 0.76420 (ha 15 candles) | 0.01554 | -0.0180% | A/venda@0.76420 (0t/0c) | zona_mapeada_setup_A |
-| 2026-11-14 20:06 | UNI-USDT-SWAP | 4.7270 | 4.8130/4.6610 | 4.9150 | sup 5.4760 (ha 15 candles) | 0.13521 | 0.0021% | — | sem_zona |
-| 2026-11-14 20:06 | LINK-USDT-SWAP | 8.6770 | 8.7920/8.5670 | 9.0630 | sup 9.5030 (ha 15 candles) | 0.17629 | -0.0091% | — | zona_expirada_setup_A |
 | 2026-11-14 21:06 | BTC-USDT-SWAP | 64124.8 | 64183.5/63299.9 | 64124.8 | sup 64956.5 (ha 7 candles) | 795.42 | -0.0037% | A/venda@64956.5 (0t/0c) | zona_mapeada_setup_A |
 | 2026-11-14 21:06 | ETH-USDT-SWAP | 1768.4 | 1771.5/1734.1 | 1768.4 | sup 1809.0 (ha 7 candles) | 32.26 | -0.0095% | A/venda@1809.0 (0t/0c) | zona_mapeada_setup_A |
 | 2026-11-14 21:06 | SOL-USDT-SWAP | 70.23 | 70.29/68.78 | 70.23 | sup 74.77 (ha 19 candles) | 1.3129 | -0.0120% | — | zona_expirada_setup_A |
@@ -484,3 +474,13 @@
 | 2026-11-16 19:06 | SUI-USDT-SWAP | 0.72290 | 0.72540/0.71690 | 0.72400 | sup 0.70750 (ha 6 candles) | 0.01031 | -0.0054% | — | sem_zona |
 | 2026-11-16 19:06 | UNI-USDT-SWAP | 5.1610 | 5.1960/5.1210 | 5.1440 | sup 5.0280 (ha 6 candles) | 0.07943 | -0.0012% | — | sem_zona |
 | 2026-11-16 19:06 | LINK-USDT-SWAP | 9.1510 | 9.1880/9.0980 | 9.1980 | sup 9.0030 (ha 6 candles) | 0.11800 | 0.0017% | — | sem_zona |
+| 2026-11-16 20:06 | BTC-USDT-SWAP | 65294.7 | 65511.6/65259.1 | 65036.3 | sup 63877.2 (ha 10 candles) | 560.18 | 0.0048% | — | sem_zona |
+| 2026-11-16 20:06 | ETH-USDT-SWAP | 1827.2 | 1837.6/1827.1 | 1823.0 | sup 1786.0 (ha 10 candles) | 20.76 | -0.0012% | — | sem_zona |
+| 2026-11-16 20:06 | SOL-USDT-SWAP | 71.66 | 72.22/71.65 | 71.50 | sup 69.87 (ha 7 candles) | 0.94429 | -0.0083% | — | sem_zona |
+| 2026-11-16 20:06 | XRP-USDT-SWAP | 0.95810 | 0.96430/0.95780 | 0.95950 | sup 0.94170 (ha 7 candles) | 0.01174 | -0.0064% | — | sem_zona |
+| 2026-11-16 20:06 | DOGE-USDT-SWAP | 0.05916 | 0.05966/0.05916 | 0.05956 | sup 0.05794 (ha 10 candles) | 0.00074 | -0.0046% | — | sem_zona |
+| 2026-11-16 20:06 | ARB-USDT-SWAP | 0.13035 | 0.13243/0.13028 | 0.13246 | sup 0.13087 (ha 7 candles) | 0.00191 | 0.0024% | A/venda@0.13087 (0t/0c) | zona_mapeada_setup_A |
+| 2026-11-16 20:06 | WLD-USDT-SWAP | 0.26260 | 0.26510/0.26220 | 0.26420 | sup 0.25870 (ha 7 candles) | 0.00376 | -0.0190% | — | sem_zona |
+| 2026-11-16 20:06 | SUI-USDT-SWAP | 0.71970 | 0.72650/0.71960 | 0.72400 | sup 0.70750 (ha 7 candles) | 0.01024 | -0.0059% | — | sem_zona |
+| 2026-11-16 20:06 | UNI-USDT-SWAP | 5.1460 | 5.1920/5.1410 | 5.1440 | sup 5.0690 (ha 3 candles) | 0.07829 | 0.0019% | — | sem_zona |
+| 2026-11-16 20:06 | LINK-USDT-SWAP | 9.1460 | 9.2110/9.1450 | 9.1980 | sup 9.0030 (ha 7 candles) | 0.11664 | 0.0017% | — | sem_zona |
