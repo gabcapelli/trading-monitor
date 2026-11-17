@@ -1,6 +1,6 @@
 # Painel de estratégias
 
-_Atualizado em 16/11 20:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
+_Atualizado em 16/11 21:07 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
 
 ## Precisa de você
 
@@ -10,7 +10,7 @@ _Nada pendente._
 
 | Estratégia | Abertos | Fechados | Média |
 |---|---|---|---|
-| [Desbloqueio](claude/unlock-paper.md) | 5 | 34/150 | +1.28% |
+| [Desbloqueio](claude/unlock-paper.md) | 4 | 36/150 | +1.10% |
 | [Perpétuo novo](claude/novos-paper.md) | 0 | 1/100 | +64.20% |
 | [Rompimento 48h](claude/continuacao-paper.md) · encerrado em 30/10/2026 | — | 33 | -9.12% |
 | [Monitoring Tag](claude/monitoring-paper.md) | 0 | 1/24 | -4.20% |
@@ -24,26 +24,27 @@ _Nada pendente._
 
 <sub>Desde o fechamento das 21h (Brasília).</sub>
 
-- Desbloqueio: recomprou ARB: puro +18.69%, com hedge +6.36%
+- Desbloqueio: vendeu H a 0.01583 (desbloqueio 24/11)
+- Desbloqueio: recomprou VANA: puro +13.35%, com hedge -1.74%
+- Desbloqueio: recomprou ZK: puro +13.02%, com hedge -2.07%
 
 ## Abertos agora
 
 | Estratégia | Ativo | Desde | Entrada | Agora | Resultado | Obs. |
 |---|---|---|---|---|---|---|
-| Desbloqueio | VANA | 10/11 | 0.7347 | 0.6359 | **+13.45%** | com hedge -1.31%; recompra 17/11 |
-| Desbloqueio | ZK | 10/11 | 0.009021 | 0.007854 | **+12.94%** | com hedge -1.82%; recompra 17/11 |
-| Desbloqueio | KAITO | 13/11 | 0.2049 | 0.1791 | **+12.59%** | com hedge +2.94%; recompra 20/11 |
-| Desbloqueio | ZRO | 13/11 | 1.5508 | 1.4571 | +6.04% | com hedge -3.61%; recompra 20/11 |
-| Desbloqueio | SOLV | 11/11 | 0.004292 | 0.004498 | -4.80% | com hedge -16.69%; recompra 18/11 |
+| Desbloqueio | KAITO | 13/11 | 0.2049 | 0.1789 | **+12.69%** | com hedge +2.70%; recompra 20/11 |
+| Desbloqueio | ZRO | 13/11 | 1.5508 | 1.4595 | +5.89% | com hedge -4.10%; recompra 20/11 |
+| Desbloqueio | H | 17/11 | 0.01583 | 0.01581 | +0.13% | com hedge -0.09%; recompra 24/11 |
+| Desbloqueio | SOLV | 11/11 | 0.004292 | 0.00447 | -4.15% | com hedge -16.37%; recompra 18/11 |
 
 <sub>Resultado a preço de mercado, bruto (sem custo nem funding), já no lado da posição: positivo = a favor. Em negrito, movimentos de 10% ou mais. Com hedge = venda + cesta dos majors.</sub>
 
 ## Próximos eventos
 
-- 17/11 · Desbloqueio: recompra de VANA, ZK
-- 17/11 · Desbloqueio: venda prevista de H
 - 18/11 · Desbloqueio: recompra de SOLV
+- 19/11 · Desbloqueio: venda prevista de ALT
 - 20/11 · Desbloqueio: recompra de KAITO, ZRO
+- 20/11 · Sábado: entrada da cesta (21h)
 
 ## Outros
 

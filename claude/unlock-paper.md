@@ -7,11 +7,11 @@
 > venda + compra da cesta dos 20 majors. Custo 0.18% por perna e funding real.
 > **Só reavaliar com 150 trades fechados.** Antes disso é ruído.
 
-_Atualizado em 2026-11-16 (calendário de 2026-11-16)._
+_Atualizado em 2026-11-17 (calendário de 2026-11-17)._
 
-**Trades fechados:** 34 de 150 (23%)
+**Trades fechados:** 36 de 150 (24%)
 
-**Média por trade:** puro +6.37% · com hedge +1.28% · hedge positivo em 20/34 (59%)
+**Média por trade:** puro +6.75% · com hedge +1.10% · hedge positivo em 20/36 (56%)
 
 _Referência do backtest (2025–2026): puro +2.9%, excesso sobre o universo +2.1%._
 
@@ -19,17 +19,15 @@ _Referência do backtest (2025–2026): puro +2.9%, excesso sobre o universo +2.
 
 | Token | Desbloqueio | % da oferta | Venda em (abertura) | Preço de entrada |
 |---|---|---|---|---|
-| VANA | 2026-11-17 | 1.7% | 2026-11-10 | 0.7347 |
-| ZK | 2026-11-17 | 2.4% | 2026-11-10 | 0.009021 |
 | SOLV | 2026-11-18 | 3.3% | 2026-11-11 | 0.004292 |
 | KAITO | 2026-11-20 | 3.6% | 2026-11-13 | 0.2049 |
 | ZRO | 2026-11-20 | 3.5% | 2026-11-13 | 1.5508 |
+| H | 2026-11-24 | 6.8% | 2026-11-17 | 0.01583 |
 
 ## Próximas entradas (calendário atual)
 
 | Token | Desbloqueio | % da oferta | % insiders | Entrada prevista |
 |---|---|---|---|---|
-| H | 2026-11-24 | 6.8% | 55% | 2026-11-17 |
 | ALT | 2026-11-26 | 3.2% | 66% | 2026-11-19 |
 | RESOLV | 2026-11-27 | 3.7% | 90% | 2026-11-20 |
 | GUN | 2026-11-30 | 6.2% | 77% | 2026-11-23 |
@@ -43,6 +41,7 @@ _Referência do backtest (2025–2026): puro +2.9%, excesso sobre o universo +2.
 | PUMP | 2026-12-12 | 1.3% | 100% | 2026-12-05 |
 | SEI | 2026-12-14 | 1.5% | 89% | 2026-12-07 |
 | ARB | 2026-12-16 | 1.3% | 99% | 2026-12-09 |
+| IR | 2026-12-17 | 12.1% | 79% | 2026-12-10 |
 
 _Passa pelos filtros (perpétuo com ≥ 30 dias, mesmo token a ≥ 14 dias) só no dia da entrada._
 
@@ -50,6 +49,8 @@ _Passa pelos filtros (perpétuo com ≥ 30 dias, mesmo token a ≥ 14 dias) só 
 
 | Token | Desbloqueio | % da oferta | Retorno do token | Cesta | Puro | Com hedge | Obs. |
 |---|---|---|---|---|---|---|---|
+| ZK | 2026-11-17 | 2.4% | -13.11% | -14.90% | +13.02% | -2.07% |  |
+| VANA | 2026-11-17 | 1.7% | -13.37% | -14.90% | +13.35% | -1.74% |  |
 | ARB | 2026-11-16 | 1.3% | -18.92% | -12.11% | +18.69% | +6.36% |  |
 | SEI | 2026-11-14 | 1.6% | -8.86% | -10.78% | +8.71% | -2.32% |  |
 | PUMP | 2026-11-12 | 1.3% | -18.37% | -12.34% | +18.29% | +5.68% |  |
@@ -85,11 +86,12 @@ _Passa pelos filtros (perpétuo com ≥ 30 dias, mesmo token a ≥ 14 dias) só 
 | GUN | 2026-10-01 | 7.0% | +1.06% | +2.42% | -1.03% | +1.13% |  |
 | ZORA | 2026-09-30 | 3.0% | -15.97% | -2.09% | +16.00% | +13.64% |  |
 
-<details><summary>Descartados (4)</summary>
+<details><summary>Descartados (5)</summary>
 
 - SPK 2026-10-15: conhecido tarde
 - OMNI 2026-10-18: perpetuo inativo (contrato liquidado; corrigido em 12/11/2026)
 - UXLINK 2026-10-18: perpetuo inativo (contrato liquidado; corrigido em 12/11/2026)
 - SPK 2026-11-06: conhecido tarde
+- ZEST 2026-11-20: conhecido tarde
 
 </details>
