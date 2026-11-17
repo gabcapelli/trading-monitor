@@ -1,6 +1,6 @@
 # Painel de estratégias
 
-_Atualizado em 16/11 21:07 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
+_Atualizado em 16/11 22:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
 
 ## Precisa de você
 
@@ -32,10 +32,10 @@ _Nada pendente._
 
 | Estratégia | Ativo | Desde | Entrada | Agora | Resultado | Obs. |
 |---|---|---|---|---|---|---|
-| Desbloqueio | KAITO | 13/11 | 0.2049 | 0.1789 | **+12.69%** | com hedge +2.70%; recompra 20/11 |
-| Desbloqueio | ZRO | 13/11 | 1.5508 | 1.4595 | +5.89% | com hedge -4.10%; recompra 20/11 |
-| Desbloqueio | H | 17/11 | 0.01583 | 0.01581 | +0.13% | com hedge -0.09%; recompra 24/11 |
-| Desbloqueio | SOLV | 11/11 | 0.004292 | 0.00447 | -4.15% | com hedge -16.37%; recompra 18/11 |
+| Desbloqueio | KAITO | 13/11 | 0.2049 | 0.1773 | **+13.47%** | com hedge +3.25%; recompra 20/11 |
+| Desbloqueio | ZRO | 13/11 | 1.5508 | 1.4639 | +5.60% | com hedge -4.61%; recompra 20/11 |
+| Desbloqueio | H | 17/11 | 0.01583 | 0.0159 | -0.44% | com hedge -0.91%; recompra 24/11 |
+| Desbloqueio | SOLV | 11/11 | 0.004292 | 0.004472 | -4.19% | com hedge -16.63%; recompra 18/11 |
 
 <sub>Resultado a preço de mercado, bruto (sem custo nem funding), já no lado da posição: positivo = a favor. Em negrito, movimentos de 10% ou mais. Com hedge = venda + cesta dos majors.</sub>
 
