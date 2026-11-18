@@ -1,4 +1,4 @@
-# Situacao atual -- Multi-Par (script gratuito, sem LLM) -- atualizado 2026-11-17 22:06 BRT
+# Situacao atual -- Multi-Par (script gratuito, sem LLM) -- atualizado 2026-11-17 23:06 BRT
 
 > Gerado por `monitor/fetch_and_check.py` via GitHub Actions, sem chamar a API do Claude. Registra fatos objetivos; a interpretacao qualitativa fica a seu criterio (ou cole este arquivo + o log numa conversa do Claude).
 
@@ -8,13 +8,13 @@
 
 | Par | Tendencia 4h | Close 1h | Funding | Zona / setup candidato | Status |
 |---|---|---|---|---|---|
-| BTC/USDT | lateral | 64766.4 | -0.0005% | — | sem_zona |
-| ETH/USDT | lateral | 1819.9 | 0.0037% | — | sem_zona |
-| SOL/USDT | lateral | 74.92 | -0.0010% | — | sem_zona |
-| XRP/USDT | lateral | 0.97770 | 0.0054% | — | sem_zona |
-| DOGE/USDT | lateral | 0.05972 | 0.0009% | — | confirmado_calibracao_setup_B |
-| ARB/USDT | lateral | 0.13191 | 0.0055% | — | sem_zona |
-| WLD/USDT | lateral | 0.26590 | -0.0057% | Setup B (venda) 0.27023-0.27277 (0/3 toques, 1/8 candles) | zona_mapeada_setup_B |
-| SUI/USDT | lateral | 0.73370 | 0.0046% | — | confirmado_calibracao_setup_B |
-| UNI/USDT | lateral | 5.2470 | -0.0021% | — | descartado_rr_baixo_setup_B |
-| LINK/USDT | lateral | 9.2500 | 0.0100% | Setup B (venda) 9.3350-9.4010 (0/3 toques, 1/8 candles) | zona_mapeada_setup_B |
+| BTC/USDT | lateral | 64275.4 | 0.0001% | — | sem_zona |
+| ETH/USDT | lateral | 1802.2 | 0.0044% | — | sem_zona |
+| SOL/USDT | lateral | 74.17 | -0.0010% | — | sem_zona |
+| XRP/USDT | lateral | 0.97310 | 0.0062% | — | sem_zona |
+| DOGE/USDT | lateral | 0.05918 | 0.0014% | — | sem_zona |
+| ARB/USDT | lateral | 0.13078 | 0.0067% | — | sem_zona |
+| WLD/USDT | lateral | 0.26330 | -0.0073% | Setup B (venda) 0.27023-0.27277 (0/3 toques, 2/8 candles) | zona_mapeada_setup_B |
+| SUI/USDT | lateral | 0.72590 | 0.0036% | — | sem_zona |
+| UNI/USDT | lateral | 5.2000 | -0.0047% | — | sem_zona |
+| LINK/USDT | lateral | 9.1610 | 0.0100% | Setup B (venda) 9.3350-9.4010 (0/3 toques, 2/8 candles) | zona_mapeada_setup_B |
