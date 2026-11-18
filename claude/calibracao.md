@@ -1,4 +1,4 @@
-# Calibracao — registro mecanico de sinais (atualizado 2026-11-18 06:06 BRT)
+# Calibracao — registro mecanico de sinais (atualizado 2026-11-18 07:06 BRT)
 
 > **Nao edite este arquivo** — ele e reescrito a cada execucao a partir da tabela `sinais_mecanicos`. Diferente de `sinais.md`, aqui nao ha nenhuma decisao sua: e TODA confirmacao mecanica detectada, inclusive as descartadas por R:R baixo, com desfecho medido por geometria de preco (OHLC de 1h contra stop/alvo sugeridos).
 >
@@ -10,9 +10,9 @@ Regra de alvo em vigor agora: **proximo** (coluna `Regra` abaixo mostra qual dec
 
 | Grupo | Sinais | Resolvidos | Acertos | Soma (expectancia) |
 |---|---|---|---|---|
-| Aceitos (R:R >= 2) | 124 | 122 | 36 (30%) | +13.77R (+0.113R/sinal) |
+| Aceitos (R:R >= 2) | 125 | 122 | 36 (30%) | +13.77R (+0.113R/sinal) |
 | Descartados por R:R baixo | 657 | 652 | 414 (63%) | -25.48R (-0.039R/sinal) |
-| TODOS | 781 | 774 | 450 (58%) | -11.71R (-0.015R/sinal) |
+| TODOS | 782 | 774 | 450 (58%) | -11.71R (-0.015R/sinal) |
 
 **MAE dos acertos** (quanto o preco foi CONTRA antes de dar certo) — n=450, mediana 0.32R, maximo 0.99R, 7% acima de 0.8R.
 
@@ -26,6 +26,7 @@ Regra de alvo em vigor agora: **proximo** (coluna `Regra` abaixo mostra qual dec
 
 | Par | Setup | Direcao | Aceito | Regra | R:R (recente) | R:R (proximo) | Resultado | MAE | MFE | Candles | Quando |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| XRP/USDT | B | compra | sim | proximo | 4.94 | 4.94 | aberto | — | — | — | 2026-11-18 07:06 |
 | DOGE/USDT | B | venda | sim | proximo | 5.11 | 2.60 | aberto | 0.306 | 1.616 | — | 2026-11-17 22:06 |
 | SUI/USDT | B | venda | sim | proximo | 4.53 | 2.39 | aberto | 0.478 | 1.594 | — | 2026-11-17 22:06 |
 | UNI/USDT | B | venda | nao | proximo | 0.92 | 0.59 | +0.59 | 0.013 | 0.652 | 1 | 2026-11-17 22:06 |
@@ -50,4 +51,3 @@ Regra de alvo em vigor agora: **proximo** (coluna `Regra` abaixo mostra qual dec
 | SUI/USDT | B | compra | sim | proximo | 2.94 | 2.94 | -1.00 | 1.113 | 0.609 | 1 | 2026-11-12 21:06 |
 | SOL/USDT | A | venda | nao | proximo | 0.06 | 0.06 | +0.06 | 0.284 | 2.509 | 1 | 2026-11-12 10:06 |
 | DOGE/USDT | A | venda | nao | proximo | 0.15 | 0.15 | +0.15 | 0.212 | 4.076 | 1 | 2026-11-12 10:06 |
-| WLD/USDT | A | venda | nao | proximo | 0.18 | 0.18 | +0.18 | 0.613 | 1.354 | 1 | 2026-11-12 10:06 |
