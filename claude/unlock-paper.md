@@ -7,11 +7,11 @@
 > venda + compra da cesta dos 20 majors. Custo 0.18% por perna e funding real.
 > **Só reavaliar com 150 trades fechados.** Antes disso é ruído.
 
-_Atualizado em 2026-11-17 (calendário de 2026-11-17)._
+_Atualizado em 2026-11-18 (calendário de 2026-11-18)._
 
-**Trades fechados:** 36 de 150 (24%)
+**Trades fechados:** 37 de 150 (25%)
 
-**Média por trade:** puro +6.75% · com hedge +1.10% · hedge positivo em 20/36 (56%)
+**Média por trade:** puro +6.50% · com hedge +0.73% · hedge positivo em 20/37 (54%)
 
 _Referência do backtest (2025–2026): puro +2.9%, excesso sobre o universo +2.1%._
 
@@ -19,7 +19,6 @@ _Referência do backtest (2025–2026): puro +2.9%, excesso sobre o universo +2.
 
 | Token | Desbloqueio | % da oferta | Venda em (abertura) | Preço de entrada |
 |---|---|---|---|---|
-| SOLV | 2026-11-18 | 3.3% | 2026-11-11 | 0.004292 |
 | KAITO | 2026-11-20 | 3.6% | 2026-11-13 | 0.2049 |
 | ZRO | 2026-11-20 | 3.5% | 2026-11-13 | 1.5508 |
 | H | 2026-11-24 | 6.8% | 2026-11-17 | 0.01583 |
@@ -42,6 +41,7 @@ _Referência do backtest (2025–2026): puro +2.9%, excesso sobre o universo +2.
 | SEI | 2026-12-14 | 1.5% | 89% | 2026-12-07 |
 | ARB | 2026-12-16 | 1.3% | 99% | 2026-12-09 |
 | IR | 2026-12-17 | 12.1% | 79% | 2026-12-10 |
+| ZK | 2026-12-18 | 2.3% | 100% | 2026-12-11 |
 
 _Passa pelos filtros (perpétuo com ≥ 30 dias, mesmo token a ≥ 14 dias) só no dia da entrada._
 
@@ -49,6 +49,7 @@ _Passa pelos filtros (perpétuo com ≥ 30 dias, mesmo token a ≥ 14 dias) só 
 
 | Token | Desbloqueio | % da oferta | Retorno do token | Cesta | Puro | Com hedge | Obs. |
 |---|---|---|---|---|---|---|---|
+| SOLV | 2026-11-18 | 3.3% | +2.45% | -9.83% | -2.42% | -12.42% | adiado? |
 | ZK | 2026-11-17 | 2.4% | -13.11% | -14.90% | +13.02% | -2.07% |  |
 | VANA | 2026-11-17 | 1.7% | -13.37% | -14.90% | +13.35% | -1.74% |  |
 | ARB | 2026-11-16 | 1.3% | -18.92% | -12.11% | +18.69% | +6.36% |  |
