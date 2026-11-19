@@ -1,6 +1,6 @@
 # Painel de estratégias
 
-_Atualizado em 18/11 20:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
+_Atualizado em 18/11 21:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
 
 ## Precisa de você
 
@@ -10,7 +10,7 @@ _Nada pendente._
 
 | Estratégia | Abertos | Fechados | Média |
 |---|---|---|---|
-| [Desbloqueio](claude/unlock-paper.md) | 3 | 37/150 | +0.73% |
+| [Desbloqueio](claude/unlock-paper.md) | 4 | 37/150 | +0.73% |
 | [Perpétuo novo](claude/novos-paper.md) | 0 | 1/100 | +64.20% |
 | [Rompimento 48h](claude/continuacao-paper.md) · encerrado em 30/10/2026 | — | 33 | -9.12% |
 | [Monitoring Tag](claude/monitoring-paper.md) | 0 | 1/24 | -4.20% |
@@ -24,22 +24,23 @@ _Nada pendente._
 
 <sub>Desde o fechamento das 21h (Brasília).</sub>
 
-- Desbloqueio: recomprou SOLV: puro -2.42%, com hedge -12.42%
+- Desbloqueio: vendeu ALT a 0.004597 (desbloqueio 26/11)
 
 ## Abertos agora
 
 | Estratégia | Ativo | Desde | Entrada | Agora | Resultado | Obs. |
 |---|---|---|---|---|---|---|
-| Desbloqueio | KAITO | 13/11 | 0.2049 | 0.1754 | **+14.40%** | com hedge +3.54%; recompra 20/11 |
-| Desbloqueio | ZRO | 13/11 | 1.5508 | 1.3623 | **+12.16%** | com hedge +1.29%; recompra 20/11 |
-| Desbloqueio | H | 17/11 | 0.01583 | 0.0152 | +3.98% | com hedge +2.79%; recompra 24/11 |
+| Desbloqueio | KAITO | 13/11 | 0.2049 | 0.1768 | **+13.71%** | com hedge +3.40%; recompra 20/11 |
+| Desbloqueio | ZRO | 13/11 | 1.5508 | 1.4044 | +9.44% | com hedge -0.87%; recompra 20/11 |
+| Desbloqueio | H | 17/11 | 0.01583 | 0.01511 | +4.55% | com hedge +3.97%; recompra 24/11 |
+| Desbloqueio | ALT | 19/11 | 0.004597 | 0.004589 | +0.17% | com hedge -0.06%; recompra 26/11 |
 
 <sub>Resultado a preço de mercado, bruto (sem custo nem funding), já no lado da posição: positivo = a favor. Em negrito, movimentos de 10% ou mais. Com hedge = venda + cesta dos majors.</sub>
 
 ## Próximos eventos
 
-- 19/11 · Desbloqueio: venda prevista de ALT
 - 20/11 · Desbloqueio: recompra de KAITO, ZRO
+- 20/11 · Desbloqueio: venda prevista de RESOLV
 - 20/11 · Sábado: entrada da cesta (21h)
 - 24/11 · Desbloqueio: recompra de H
 
