@@ -5,7 +5,7 @@
 > é detectado (5–65 min depois) e recomprar 24h após o anúncio. Custo 0.5% e funding real;
 > excesso sobre vender o BTC nos mesmos minutos. **Só reavaliar com 24 anúncios fechados.**
 
-_Atualizado em 20/11/2026 02:06 (Brasília)._
+_Atualizado em 20/11/2026 03:06 (Brasília)._
 
 ## Monitoring Tag (decide)
 
@@ -14,6 +14,14 @@ _Atualizado em 20/11/2026 02:06 (Brasília)._
 **Média por trade:** líquido -4.20% · excesso -3.46% · líquido positivo em 0/2
 
 _Referência do estudo 38 (entrando com 60 min): +3.4% líquido._
+
+| Token | Anúncio | Venda | Preço | Recompra |
+|---|---|---|---|---|
+| BANKUSDT | 20/11/2026 03:00 | +6 min | 0.01773 | 21/11/2026 03:00 |
+| INITUSDT | 20/11/2026 03:00 | +6 min | 0.09788 | 21/11/2026 03:00 |
+| ONEUSDT | 20/11/2026 03:00 | +6 min | 0.0010965 | 21/11/2026 03:00 |
+| THEUSDT | 20/11/2026 03:00 | +6 min | 0.02795 | 21/11/2026 03:00 |
+| ZILUSDT | 20/11/2026 03:00 | +6 min | 0.000885 | 21/11/2026 03:00 |
 
 | Token | Anúncio | Latência | Bruto | Funding | Líquido | Excesso |
 |---|---|---|---|---|---|---|
@@ -30,8 +38,9 @@ _Referência do estudo 38 (entrando com 60 min): +3.4% líquido._
 |---|---|---|---|---|---|---|
 | EPICUSDT | 14/10/2026 03:00 | 6 min | +8.85% | +0.005% | +8.36% | +8.73% |
 
-<details><summary>Descartados (1)</summary>
+<details><summary>Descartados (2)</summary>
 
+- MITO (principal, 20/11/2026 03:00): perpetuo nao negociando
 - QUICK (deslistagem, 14/10/2026 03:00): perpetuo nao negociando
 
 </details>

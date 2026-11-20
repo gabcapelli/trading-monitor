@@ -127,7 +127,8 @@
   290584,
   290649,
   290674,
-  290719
+  290719,
+  290737
  ],
  "trades": {
   "principal|BICO|286353": {
@@ -202,6 +203,91 @@
    "bruto": 8.854034910194786,
    "liq": 8.359034910194787,
    "excesso": 8.731618114610429
+  },
+  "principal|MITO|290737": {
+   "braco": "principal",
+   "token": "MITO",
+   "anuncio_id": 290737,
+   "titulo": "Binance Will Extend the Monitoring Tag to Include BANK, INIT, MITO, ONE, THE & ZIL, Remove the Seed Tag for MORPHO & HYPE on 2026-11-20",
+   "release": 1795154412166,
+   "detectado": 1795154760000,
+   "status": "descartado",
+   "motivo": "perpetuo nao negociando"
+  },
+  "principal|BANK|290737": {
+   "braco": "principal",
+   "token": "BANK",
+   "anuncio_id": 290737,
+   "titulo": "Binance Will Extend the Monitoring Tag to Include BANK, INIT, MITO, ONE, THE & ZIL, Remove the Seed Tag for MORPHO & HYPE on 2026-11-20",
+   "release": 1795154412166,
+   "detectado": 1795154760000,
+   "status": "aberto",
+   "sym": "BANKUSDT",
+   "entrada_ts": 1795154760000,
+   "p_in": 0.01773,
+   "btc_in": 61813.1,
+   "latencia_min": 6,
+   "saida_ts": 1795240800000
+  },
+  "principal|INIT|290737": {
+   "braco": "principal",
+   "token": "INIT",
+   "anuncio_id": 290737,
+   "titulo": "Binance Will Extend the Monitoring Tag to Include BANK, INIT, MITO, ONE, THE & ZIL, Remove the Seed Tag for MORPHO & HYPE on 2026-11-20",
+   "release": 1795154412166,
+   "detectado": 1795154760000,
+   "status": "aberto",
+   "sym": "INITUSDT",
+   "entrada_ts": 1795154760000,
+   "p_in": 0.09788,
+   "btc_in": 61813.1,
+   "latencia_min": 6,
+   "saida_ts": 1795240800000
+  },
+  "principal|ONE|290737": {
+   "braco": "principal",
+   "token": "ONE",
+   "anuncio_id": 290737,
+   "titulo": "Binance Will Extend the Monitoring Tag to Include BANK, INIT, MITO, ONE, THE & ZIL, Remove the Seed Tag for MORPHO & HYPE on 2026-11-20",
+   "release": 1795154412166,
+   "detectado": 1795154760000,
+   "status": "aberto",
+   "sym": "ONEUSDT",
+   "entrada_ts": 1795154760000,
+   "p_in": 0.0010965,
+   "btc_in": 61813.1,
+   "latencia_min": 6,
+   "saida_ts": 1795240800000
+  },
+  "principal|THE|290737": {
+   "braco": "principal",
+   "token": "THE",
+   "anuncio_id": 290737,
+   "titulo": "Binance Will Extend the Monitoring Tag to Include BANK, INIT, MITO, ONE, THE & ZIL, Remove the Seed Tag for MORPHO & HYPE on 2026-11-20",
+   "release": 1795154412166,
+   "detectado": 1795154760000,
+   "status": "aberto",
+   "sym": "THEUSDT",
+   "entrada_ts": 1795154760000,
+   "p_in": 0.02795,
+   "btc_in": 61813.1,
+   "latencia_min": 6,
+   "saida_ts": 1795240800000
+  },
+  "principal|ZIL|290737": {
+   "braco": "principal",
+   "token": "ZIL",
+   "anuncio_id": 290737,
+   "titulo": "Binance Will Extend the Monitoring Tag to Include BANK, INIT, MITO, ONE, THE & ZIL, Remove the Seed Tag for MORPHO & HYPE on 2026-11-20",
+   "release": 1795154412166,
+   "detectado": 1795154760000,
+   "status": "aberto",
+   "sym": "ZILUSDT",
+   "entrada_ts": 1795154760000,
+   "p_in": 0.000885,
+   "btc_in": 61813.1,
+   "latencia_min": 6,
+   "saida_ts": 1795240800000
   }
  }
 }
