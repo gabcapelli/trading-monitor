@@ -1,4 +1,4 @@
-# Situacao atual -- Multi-Par (script gratuito, sem LLM) -- atualizado 2026-11-20 09:06 BRT
+# Situacao atual -- Multi-Par (script gratuito, sem LLM) -- atualizado 2026-11-20 10:06 BRT
 
 > Gerado por `monitor/fetch_and_check.py` via GitHub Actions, sem chamar a API do Claude. Registra fatos objetivos; a interpretacao qualitativa fica a seu criterio (ou cole este arquivo + o log numa conversa do Claude).
 
@@ -8,13 +8,13 @@
 
 | Par | Tendencia 4h | Close 1h | Funding | Zona / setup candidato | Status |
 |---|---|---|---|---|---|
-| BTC/USDT | baixa | 61782.1 | -0.0013% | — | sem_zona |
-| ETH/USDT | baixa | 1748.1 | 0.0015% | — | sem_zona |
-| SOL/USDT | lateral | 71.73 | -0.0009% | Setup B (venda) 72.96-73.50 (0/3 toques, 6/8 candles) | zona_mapeada_setup_B |
-| XRP/USDT | lateral | 0.95180 | -0.0044% | Setup B (venda) 0.97345-0.97955 (0/3 toques, 6/8 candles) | zona_mapeada_setup_B |
-| DOGE/USDT | lateral | 0.05685 | 0.0034% | — | zona_expirada_setup_B |
-| ARB/USDT | baixa | 0.11839 | 0.0086% | — | sem_zona |
-| WLD/USDT | baixa | 0.24650 | -0.0380% | — | zona_expirada_setup_A |
-| SUI/USDT | baixa | 0.68600 | -0.0177% | Setup A (venda) 0.68448-0.68912 (0/3 toques, 0/8 candles) | zona_mapeada_setup_A |
-| UNI/USDT | baixa | 4.7950 | -0.0015% | — | sem_zona |
-| LINK/USDT | baixa | 8.7790 | 0.0006% | — | sem_zona |
+| BTC/USDT | baixa | 61536.7 | 0.0001% | — | sem_zona |
+| ETH/USDT | baixa | 1738.6 | 0.0017% | — | sem_zona |
+| SOL/USDT | lateral | 71.06 | -0.0035% | Setup B (venda) 72.96-73.50 (0/3 toques, 7/8 candles) | zona_mapeada_setup_B |
+| XRP/USDT | lateral | 0.94460 | -0.0064% | Setup B (venda) 0.97345-0.97955 (0/3 toques, 7/8 candles) | zona_mapeada_setup_B |
+| DOGE/USDT | lateral | 0.05652 | 0.0008% | — | sem_zona |
+| ARB/USDT | baixa | 0.11740 | 0.0077% | — | sem_zona |
+| WLD/USDT | baixa | 0.24270 | -0.0394% | — | sem_zona |
+| SUI/USDT | baixa | 0.68340 | -0.0182% | Setup A (venda) 0.68448-0.68912 (1/3 toques, 0/8 candles) | zona_mapeada_setup_A |
+| UNI/USDT | baixa | 4.7330 | -0.0033% | — | sem_zona |
+| LINK/USDT | baixa | 8.7590 | -0.0040% | — | sem_zona |

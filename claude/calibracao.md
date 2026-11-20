@@ -1,4 +1,4 @@
-# Calibracao — registro mecanico de sinais (atualizado 2026-11-20 09:06 BRT)
+# Calibracao — registro mecanico de sinais (atualizado 2026-11-20 10:06 BRT)
 
 > **Nao edite este arquivo** — ele e reescrito a cada execucao a partir da tabela `sinais_mecanicos`. Diferente de `sinais.md`, aqui nao ha nenhuma decisao sua: e TODA confirmacao mecanica detectada, inclusive as descartadas por R:R baixo, com desfecho medido por geometria de preco (OHLC de 1h contra stop/alvo sugeridos).
 >
@@ -26,12 +26,12 @@ Regra de alvo em vigor agora: **proximo** (coluna `Regra` abaixo mostra qual dec
 
 | Par | Setup | Direcao | Aceito | Regra | R:R (recente) | R:R (proximo) | Resultado | MAE | MFE | Candles | Quando |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| ARB/USDT | A | venda | sim | proximo | 2.77 | 2.77 | aberto | 0.088 | 1.475 | — | 2026-11-20 06:06 |
+| ARB/USDT | A | venda | sim | proximo | 2.77 | 2.77 | aberto | 0.088 | 2.151 | — | 2026-11-20 06:06 |
 | SOL/USDT | B | venda | nao | proximo | 0.04 | 0.04 | +0.04 | 0.885 | 0.288 | 1 | 2026-11-20 02:06 |
 | UNI/USDT | A | venda | sim | proximo | 2.14 | 2.14 | aberto | 0.884 | 0.873 | — | 2026-11-20 01:06 |
 | XRP/USDT | B | compra | nao | proximo | 2.79 | 0.37 | +0.37 | 0.706 | 0.448 | 1 | 2026-11-20 00:06 |
 | DOGE/USDT | B | compra | nao | proximo | 2.03 | 1.29 | -1.00 | 1.02 | 0.143 | 2 | 2026-11-20 00:06 |
-| WLD/USDT | B | compra | sim | proximo | 4.90 | 3.62 | aberto | 0.795 | 0.817 | — | 2026-11-20 00:06 |
+| WLD/USDT | B | compra | sim | proximo | 4.90 | 3.62 | aberto | 0.839 | 0.817 | — | 2026-11-20 00:06 |
 | LINK/USDT | B | compra | nao | proximo | 4.06 | 1.84 | -1.00 | 3.158 | 1.127 | 2 | 2026-11-19 21:06 |
 | DOGE/USDT | A | compra | nao | proximo | 0.14 | 0.14 | +0.14 | 0.218 | 0.233 | 1 | 2026-11-19 10:06 |
 | XRP/USDT | A | compra | nao | proximo | 2.04 | 0.62 | +0.62 | 0.473 | 0.843 | 5 | 2026-11-19 04:06 |
