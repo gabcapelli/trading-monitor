@@ -1,6 +1,6 @@
 # Painel de estratégias
 
-_Atualizado em 20/11 04:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
+_Atualizado em 20/11 05:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
 
 ## Precisa de você
 
@@ -37,14 +37,14 @@ _Nada pendente._
 
 | Estratégia | Ativo | Desde | Entrada | Agora | Resultado | Obs. |
 |---|---|---|---|---|---|---|
-| Desbloqueio | H | 17/11 | 0.01583 | 0.01338 | **+15.48%** | com hedge +11.96%; recompra 24/11 |
-| Desbloqueio | ALT | 19/11 | 0.004597 | 0.004434 | +3.55% | com hedge +0.37%; recompra 26/11 |
-| Desbloqueio | RESOLV | 20/11 | 0.01404 | 0.0139 | +1.00% | com hedge -0.55%; recompra 27/11 |
-| Monitoring Tag | INIT | 20/11 03:06 | 0.09788 | 0.09611 | +1.81% | vendido; saída 21/11 03:00 |
-| Monitoring Tag | THE | 20/11 03:06 | 0.02795 | 0.02832 | -1.32% | vendido; saída 21/11 03:00 |
-| Monitoring Tag | BANK | 20/11 03:06 | 0.01773 | 0.01799 | -1.47% | vendido; saída 21/11 03:00 |
-| Monitoring Tag | ONE | 20/11 03:06 | 0.0010965 | 0.001122 | -2.33% | vendido; saída 21/11 03:00 |
-| Monitoring Tag | ZIL | 20/11 03:06 | 0.000885 | 0.000914 | -3.28% | vendido; saída 21/11 03:00 |
+| Desbloqueio | H | 17/11 | 0.01583 | 0.0136 | **+14.09%** | com hedge +10.81%; recompra 24/11 |
+| Desbloqueio | ALT | 19/11 | 0.004597 | 0.004464 | +2.89% | com hedge -0.03%; recompra 26/11 |
+| Desbloqueio | RESOLV | 20/11 | 0.01404 | 0.01386 | +1.28% | com hedge -0.01%; recompra 27/11 |
+| Monitoring Tag | INIT | 20/11 03:06 | 0.09788 | 0.09579 | +2.14% | vendido; saída 21/11 03:00 |
+| Monitoring Tag | BANK | 20/11 03:06 | 0.01773 | 0.01794 | -1.18% | vendido; saída 21/11 03:00 |
+| Monitoring Tag | THE | 20/11 03:06 | 0.02795 | 0.02862 | -2.40% | vendido; saída 21/11 03:00 |
+| Monitoring Tag | ONE | 20/11 03:06 | 0.0010965 | 0.0011299 | -3.05% | vendido; saída 21/11 03:00 |
+| Monitoring Tag | ZIL | 20/11 03:06 | 0.000885 | 0.000912 | -3.05% | vendido; saída 21/11 03:00 |
 
 <sub>Resultado a preço de mercado, bruto (sem custo nem funding), já no lado da posição: positivo = a favor. Em negrito, movimentos de 10% ou mais. Com hedge = venda + cesta dos majors.</sub>
 
