@@ -88,6 +88,7 @@
 "ARKUSDT": 19619,
 "ARMUSDT": 20599,
 "ARPAUSDT": 18919,
+"ARTYUSDT": 20775,
 "ARUSDT": 18898,
 "ARXUSDT": 20627,
 "ASMLUSDT": 20615,
@@ -191,6 +192,7 @@
 "CATIUSDT": 19986,
 "CATUSDT": 20636,
 "CBRSUSDT": 20592,
+"CCJUSDT": 20775,
 "CCUSDT": 20392,
 "CEGUSDT": 20747,
 "CELOUSDT": 18897,
@@ -304,6 +306,7 @@
 "ETHFIUSDT": 19800,
 "ETHUSDT": 18261,
 "ETHWUSDT": 19689,
+"ETNUSDT": 20775,
 "EULUSDT": 20374,
 "EVAAUSDT": 20364,
 "EWJUSDT": 20531,
@@ -403,6 +406,7 @@
 "HYPERUSDT": 20200,
 "HYPEUSDT": 20238,
 "HYUNDAIUSDT": 20606,
+"IBITUSDT": 20775,
 "IBKRUSDT": 20747,
 "IBMUSDT": 20607,
 "ICNTUSDT": 20272,
@@ -411,6 +415,7 @@
 "IDEXUSDT": 19480,
 "IDOLUSDT": 20273,
 "IDUSDT": 19439,
+"IGVUSDT": 20775,
 "ILVUSDT": 19671,
 "IMXUSDT": 19034,
 "INITUSDT": 20194,
@@ -738,6 +743,7 @@
 "SOPHUSDT": 20236,
 "SOXLUSDT": 20588,
 "SOXSUSDT": 20650,
+"SOXXUSDT": 20775,
 "SPACEUSDT": 20476,
 "SPCXUSDT": 20594,
 "SPELLUSDT": 19241,
@@ -976,6 +982,14 @@
 "status": "descartado",
 "tipo": "EQUITY"
 },
+"ARTYUSDT": {
+"d0": 20775,
+"entrada": 20777,
+"motivo": "nao-cripto (EQUITY)",
+"par": "ARTYUSDT",
+"status": "descartado",
+"tipo": "EQUITY"
+},
 "BACUSDT": {
 "d0": 20747,
 "entrada": 20749,
@@ -1012,6 +1026,14 @@
 "px_in": 793.21,
 "status": "descartado",
 "stop_px": 1189.815,
+"tipo": "EQUITY"
+},
+"CCJUSDT": {
+"d0": 20775,
+"entrada": 20777,
+"motivo": "nao-cripto (EQUITY)",
+"par": "CCJUSDT",
+"status": "descartado",
 "tipo": "EQUITY"
 },
 "CEGUSDT": {
@@ -1175,6 +1197,14 @@
 "status": "descartado",
 "tipo": "EQUITY"
 },
+"ETNUSDT": {
+"d0": 20775,
+"entrada": 20777,
+"motivo": "nao-cripto (EQUITY)",
+"par": "ETNUSDT",
+"status": "descartado",
+"tipo": "EQUITY"
+},
 "EWZSUSDT": {
 "d0": 20755,
 "entrada": 20757,
@@ -1191,11 +1221,27 @@
 "status": "descartado",
 "tipo": "EQUITY"
 },
+"IBITUSDT": {
+"d0": 20775,
+"entrada": 20777,
+"motivo": "nao-cripto (EQUITY)",
+"par": "IBITUSDT",
+"status": "descartado",
+"tipo": "EQUITY"
+},
 "IBKRUSDT": {
 "d0": 20747,
 "entrada": 20749,
 "motivo": "nao-cripto (EQUITY)",
 "par": "IBKRUSDT",
+"status": "descartado",
+"tipo": "EQUITY"
+},
+"IGVUSDT": {
+"d0": 20775,
+"entrada": 20777,
+"motivo": "nao-cripto (EQUITY)",
+"par": "IGVUSDT",
 "status": "descartado",
 "tipo": "EQUITY"
 },
@@ -1476,6 +1522,14 @@
 "status": "descartado",
 "tipo": "EQUITY"
 },
+"SOXXUSDT": {
+"d0": 20775,
+"entrada": 20777,
+"motivo": "nao-cripto (EQUITY)",
+"par": "SOXXUSDT",
+"status": "descartado",
+"tipo": "EQUITY"
+},
 "STMUSDT": {
 "d0": 20752,
 "entrada": 20754,
@@ -1621,5 +1675,5 @@
 "tipo": "EQUITY"
 }
 },
-"ultimo_scan": 20776
+"ultimo_scan": 20777
 }

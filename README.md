@@ -1,6 +1,6 @@
 # Painel de estratégias
 
-_Atualizado em 19/11 20:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
+_Atualizado em 19/11 21:07 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
 
 ## Precisa de você
 
@@ -10,7 +10,7 @@ _Nada pendente._
 
 | Estratégia | Abertos | Fechados | Média |
 |---|---|---|---|
-| [Desbloqueio](claude/unlock-paper.md) | 4 | 37/150 | +0.73% |
+| [Desbloqueio](claude/unlock-paper.md) | 3 | 39/150 | +0.88% |
 | [Perpétuo novo](claude/novos-paper.md) | 0 | 1/100 | +64.20% |
 | [Rompimento 48h](claude/continuacao-paper.md) · encerrado em 30/10/2026 | — | 33 | -9.12% |
 | [Monitoring Tag](claude/monitoring-paper.md) | 0 | 1/24 | -4.20% |
@@ -24,25 +24,26 @@ _Nada pendente._
 
 <sub>Desde o fechamento das 21h (Brasília).</sub>
 
-- Desbloqueio: vendeu ALT a 0.004597 (desbloqueio 26/11)
+- Desbloqueio: recomprou KAITO: puro +15.00%, com hedge +3.26%
+- Desbloqueio: vendeu RESOLV a 0.01404 (desbloqueio 27/11)
+- Desbloqueio: recomprou ZRO: puro +15.53%, com hedge +3.78%
 
 ## Abertos agora
 
 | Estratégia | Ativo | Desde | Entrada | Agora | Resultado | Obs. |
 |---|---|---|---|---|---|---|
-| Desbloqueio | KAITO | 13/11 | 0.2049 | 0.1723 | **+15.91%** | com hedge +4.28%; recompra 20/11 |
-| Desbloqueio | ZRO | 13/11 | 1.5508 | 1.3097 | **+15.55%** | com hedge +3.92%; recompra 20/11 |
-| Desbloqueio | ALT | 19/11 | 0.004597 | 0.004503 | +2.04% | com hedge +0.34%; recompra 26/11 |
-| Desbloqueio | H | 17/11 | 0.01583 | 0.01567 | +1.01% | com hedge -1.04%; recompra 24/11 |
+| Desbloqueio | ALT | 19/11 | 0.004597 | 0.004536 | +1.33% | com hedge -0.29%; recompra 26/11 |
+| Desbloqueio | H | 17/11 | 0.01583 | 0.01572 | +0.69% | com hedge -1.26%; recompra 24/11 |
+| Desbloqueio | RESOLV | 20/11 | 0.01404 | 0.01406 | -0.14% | com hedge -0.10%; recompra 27/11 |
 
 <sub>Resultado a preço de mercado, bruto (sem custo nem funding), já no lado da posição: positivo = a favor. Em negrito, movimentos de 10% ou mais. Com hedge = venda + cesta dos majors.</sub>
 
 ## Próximos eventos
 
-- 20/11 · Desbloqueio: recompra de KAITO, ZRO
-- 20/11 · Desbloqueio: venda prevista de RESOLV
 - 20/11 · Sábado: entrada da cesta (21h)
+- 23/11 · Desbloqueio: venda prevista de GUN, ZORA
 - 24/11 · Desbloqueio: recompra de H
+- 26/11 · Desbloqueio: recompra de ALT
 
 ## Outros
 
