@@ -1,6 +1,6 @@
 # Painel de estratégias
 
-_Atualizado em 21/11 02:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
+_Atualizado em 21/11 03:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
 
 ## Precisa de você
 
@@ -13,7 +13,7 @@ _Nada pendente._
 | [Desbloqueio](claude/unlock-paper.md) | 3 | 39/150 | +0.88% |
 | [Perpétuo novo](claude/novos-paper.md) | 0 | 1/100 | +64.20% |
 | [Rompimento 48h](claude/continuacao-paper.md) · encerrado em 30/10/2026 | — | 33 | -9.12% |
-| [Monitoring Tag](claude/monitoring-paper.md) | 5 | 1/24 | -4.20% |
+| [Monitoring Tag](claude/monitoring-paper.md) | 0 | 2/24 | +6.19% |
 | [Launchpool](claude/launchpool-paper.md) | 0 | 0/20 | — |
 | [Sábado](claude/sabado-paper.md) | 1 | 8/104 | -1.43% |
 | [Setup A/B](claude/estudos-avulsos.md#setups-ab--encerrado-em-25092026) · encerrado | — | 34 | -0.13R |
@@ -24,21 +24,21 @@ _Nada pendente._
 
 <sub>Desde o fechamento das 21h (Brasília).</sub>
 
+- Monitoring Tag: fechou BANK: líquido +11.09%
+- Monitoring Tag: fechou INIT: líquido +10.34%
+- Monitoring Tag: fechou ONE: líquido +8.21%
+- Monitoring Tag: fechou THE: líquido +11.33%
+- Monitoring Tag: fechou ZIL: líquido +10.75%
 - Sábado: comprou a cesta
 
 ## Abertos agora
 
 | Estratégia | Ativo | Desde | Entrada | Agora | Resultado | Obs. |
 |---|---|---|---|---|---|---|
-| Desbloqueio | H | 17/11 | 0.01583 | 0.01038 | **+34.43%** | com hedge +20.71%; recompra 24/11 |
-| Desbloqueio | ALT | 19/11 | 0.004597 | 0.004095 | **+10.92%** | com hedge -2.48%; recompra 26/11 |
-| Desbloqueio | RESOLV | 20/11 | 0.01404 | 0.01384 | +1.42% | com hedge -10.54%; recompra 27/11 |
-| Monitoring Tag | INIT | 20/11 03:06 | 0.09788 | 0.08483 | **+13.33%** | vendido; saída 21/11 03:00 |
-| Monitoring Tag | ZIL | 20/11 03:06 | 0.000885 | 0.000778 | **+12.09%** | vendido; saída 21/11 03:00 |
-| Monitoring Tag | THE | 20/11 03:06 | 0.02795 | 0.02475 | **+11.45%** | vendido; saída 21/11 03:00 |
-| Monitoring Tag | BANK | 20/11 03:06 | 0.01773 | 0.0158 | **+10.89%** | vendido; saída 21/11 03:00 |
-| Monitoring Tag | ONE | 20/11 03:06 | 0.0010965 | 0.0009943 | +9.32% | vendido; saída 21/11 03:00 |
-| Sábado | cesta (20) | 20/11 21:00 | — | — | -5.42% | comprado; saída sábado 21h |
+| Desbloqueio | H | 17/11 | 0.01583 | 0.01027 | **+35.12%** | com hedge +20.82%; recompra 24/11 |
+| Desbloqueio | ALT | 19/11 | 0.004597 | 0.004051 | **+11.88%** | com hedge -2.12%; recompra 26/11 |
+| Desbloqueio | RESOLV | 20/11 | 0.01404 | 0.01378 | +1.85% | com hedge -10.71%; recompra 27/11 |
+| Sábado | cesta (20) | 20/11 21:00 | — | — | -6.07% | comprado; saída sábado 21h |
 
 <sub>Resultado a preço de mercado, bruto (sem custo nem funding), já no lado da posição: positivo = a favor. Em negrito, movimentos de 10% ou mais. Com hedge = venda + cesta dos majors.</sub>
 

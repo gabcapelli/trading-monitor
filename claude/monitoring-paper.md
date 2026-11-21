@@ -5,26 +5,23 @@
 > é detectado (5–65 min depois) e recomprar 24h após o anúncio. Custo 0.5% e funding real;
 > excesso sobre vender o BTC nos mesmos minutos. **Só reavaliar com 24 anúncios fechados.**
 
-_Atualizado em 21/11/2026 02:06 (Brasília)._
+_Atualizado em 21/11/2026 03:06 (Brasília)._
 
 ## Monitoring Tag (decide)
 
-**Anúncios fechados:** 1 de 24 (4%) · trades fechados: 2
+**Anúncios fechados:** 2 de 24 (8%) · trades fechados: 7
 
-**Média por trade:** líquido -4.20% · excesso -3.46% · líquido positivo em 0/2
+**Média por trade:** líquido +6.19% · excesso -0.04% · líquido positivo em 5/7
 
 _Referência do estudo 38 (entrando com 60 min): +3.4% líquido._
 
-| Token | Anúncio | Venda | Preço | Recompra |
-|---|---|---|---|---|
-| BANKUSDT | 20/11/2026 03:00 | +6 min | 0.01773 | 21/11/2026 03:00 |
-| INITUSDT | 20/11/2026 03:00 | +6 min | 0.09788 | 21/11/2026 03:00 |
-| ONEUSDT | 20/11/2026 03:00 | +6 min | 0.0010965 | 21/11/2026 03:00 |
-| THEUSDT | 20/11/2026 03:00 | +6 min | 0.02795 | 21/11/2026 03:00 |
-| ZILUSDT | 20/11/2026 03:00 | +6 min | 0.000885 | 21/11/2026 03:00 |
-
 | Token | Anúncio | Latência | Bruto | Funding | Líquido | Excesso |
 |---|---|---|---|---|---|---|
+| BANKUSDT | 20/11/2026 03:00 | 6 min | +11.56% | +0.030% | +11.09% | +1.80% |
+| INITUSDT | 20/11/2026 03:00 | 6 min | +12.18% | -1.336% | +10.34% | +2.42% |
+| ONEUSDT | 20/11/2026 03:00 | 6 min | +8.70% | +0.011% | +8.21% | -1.06% |
+| THEUSDT | 20/11/2026 03:00 | 6 min | +11.74% | +0.093% | +11.33% | +1.97% |
+| ZILUSDT | 20/11/2026 03:00 | 6 min | +11.30% | -0.046% | +10.75% | +1.54% |
 | BICOUSDT | 09/10/2026 04:00 | 5 min | -0.93% | +0.030% | -1.40% | -0.69% |
 | CVCUSDT | 09/10/2026 04:00 | 5 min | -6.48% | -0.019% | -6.99% | -6.24% |
 
