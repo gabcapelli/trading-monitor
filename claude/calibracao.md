@@ -1,4 +1,4 @@
-# Calibracao — registro mecanico de sinais (atualizado 2026-11-21 06:06 BRT)
+# Calibracao — registro mecanico de sinais (atualizado 2026-11-21 07:06 BRT)
 
 > **Nao edite este arquivo** — ele e reescrito a cada execucao a partir da tabela `sinais_mecanicos`. Diferente de `sinais.md`, aqui nao ha nenhuma decisao sua: e TODA confirmacao mecanica detectada, inclusive as descartadas por R:R baixo, com desfecho medido por geometria de preco (OHLC de 1h contra stop/alvo sugeridos).
 >
@@ -11,8 +11,8 @@ Regra de alvo em vigor agora: **proximo** (coluna `Regra` abaixo mostra qual dec
 | Grupo | Sinais | Resolvidos | Acertos | Soma (expectancia) |
 |---|---|---|---|---|
 | Aceitos (R:R >= 2) | 128 | 128 | 40 (31%) | +21.67R (+0.169R/sinal) |
-| Descartados por R:R baixo | 671 | 665 | 424 (64%) | -25.84R (-0.039R/sinal) |
-| TODOS | 799 | 793 | 464 (59%) | -4.17R (-0.005R/sinal) |
+| Descartados por R:R baixo | 672 | 665 | 424 (64%) | -25.84R (-0.039R/sinal) |
+| TODOS | 800 | 793 | 464 (59%) | -4.17R (-0.005R/sinal) |
 
 **MAE dos acertos** (quanto o preco foi CONTRA antes de dar certo) — n=464, mediana 0.32R, maximo 0.99R, 7% acima de 0.8R.
 
@@ -26,6 +26,7 @@ Regra de alvo em vigor agora: **proximo** (coluna `Regra` abaixo mostra qual dec
 
 | Par | Setup | Direcao | Aceito | Regra | R:R (recente) | R:R (proximo) | Resultado | MAE | MFE | Candles | Quando |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| SOL/USDT | B | compra | nao | proximo | 1.50 | 1.50 | aberto | — | — | — | 2026-11-21 07:06 |
 | WLD/USDT | A | venda | nao | proximo | — | — | aberto | 0.832 | 0.555 | — | 2026-11-21 01:06 |
 | SOL/USDT | B | compra | nao | proximo | 2.17 | 1.43 | -1.00 | 1.6 | 0.266 | 6 | 2026-11-20 19:06 |
 | ARB/USDT | A | venda | sim | proximo | 2.77 | 2.77 | +2.77 | 0.088 | 5.026 | 7 | 2026-11-20 06:06 |
@@ -50,4 +51,3 @@ Regra de alvo em vigor agora: **proximo** (coluna `Regra` abaixo mostra qual dec
 | XRP/USDT | B | venda | sim | proximo | 2.64 | 2.24 | +2.24 | 0.317 | 3.579 | 1 | 2026-11-17 12:06 |
 | LINK/USDT | B | venda | nao | proximo | 2.39 | 1.91 | +1.91 | 0.221 | 4.015 | 1 | 2026-11-17 12:06 |
 | ARB/USDT | A | venda | sim | proximo | 2.74 | 2.74 | -1.00 | 2.726 | 0.049 | 1 | 2026-11-15 23:06 |
-| BTC/USDT | A | venda | nao | proximo | — | — | -1.00 | 1.516 | 1.197 | 6 | 2026-11-15 01:06 |
