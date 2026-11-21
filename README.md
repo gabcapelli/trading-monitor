@@ -1,6 +1,6 @@
 # Painel de estratégias
 
-_Atualizado em 20/11 20:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
+_Atualizado em 20/11 21:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
 
 ## Precisa de você
 
@@ -15,7 +15,7 @@ _Nada pendente._
 | [Rompimento 48h](claude/continuacao-paper.md) · encerrado em 30/10/2026 | — | 33 | -9.12% |
 | [Monitoring Tag](claude/monitoring-paper.md) | 5 | 1/24 | -4.20% |
 | [Launchpool](claude/launchpool-paper.md) | 0 | 0/20 | — |
-| [Sábado](claude/sabado-paper.md) | 0 | 8/104 | -1.43% |
+| [Sábado](claude/sabado-paper.md) | 1 | 8/104 | -1.43% |
 | [Setup A/B](claude/estudos-avulsos.md#setups-ab--encerrado-em-25092026) · encerrado | — | 34 | -0.13R |
 
 <sub>Média: Setup A/B em R por trade; desbloqueio com hedge; perpétuo novo com stop; Monitoring Tag e Launchpool líquidos (fechados em anúncios); sábado por fim de semana. Fechados = amostra atual / amostra mínima para reavaliar.</sub>
@@ -24,33 +24,27 @@ _Nada pendente._
 
 <sub>Desde o fechamento das 21h (Brasília).</sub>
 
-- Desbloqueio: recomprou KAITO: puro +15.00%, com hedge +3.26%
-- Desbloqueio: vendeu RESOLV a 0.01404 (desbloqueio 27/11)
-- Desbloqueio: recomprou ZRO: puro +15.53%, com hedge +3.78%
-- Monitoring Tag: vendeu BANK a 0.01773 (20/11 03:06)
-- Monitoring Tag: vendeu INIT a 0.09788 (20/11 03:06)
-- Monitoring Tag: vendeu ONE a 0.0010965 (20/11 03:06)
-- Monitoring Tag: vendeu THE a 0.02795 (20/11 03:06)
-- Monitoring Tag: vendeu ZIL a 0.000885 (20/11 03:06)
+- Sábado: comprou a cesta
 
 ## Abertos agora
 
 | Estratégia | Ativo | Desde | Entrada | Agora | Resultado | Obs. |
 |---|---|---|---|---|---|---|
-| Desbloqueio | H | 17/11 | 0.01583 | 0.01131 | **+28.55%** | com hedge +20.18%; recompra 24/11 |
-| Desbloqueio | ALT | 19/11 | 0.004597 | 0.004316 | +6.11% | com hedge -1.93%; recompra 26/11 |
-| Desbloqueio | RESOLV | 20/11 | 0.01404 | 0.01399 | +0.36% | com hedge -6.15%; recompra 27/11 |
-| Monitoring Tag | THE | 20/11 03:06 | 0.02795 | 0.02593 | +7.23% | vendido; saída 21/11 03:00 |
-| Monitoring Tag | INIT | 20/11 03:06 | 0.09788 | 0.09138 | +6.64% | vendido; saída 21/11 03:00 |
-| Monitoring Tag | BANK | 20/11 03:06 | 0.01773 | 0.0166 | +6.37% | vendido; saída 21/11 03:00 |
-| Monitoring Tag | ZIL | 20/11 03:06 | 0.000885 | 0.00084 | +5.08% | vendido; saída 21/11 03:00 |
-| Monitoring Tag | ONE | 20/11 03:06 | 0.0010965 | 0.0010603 | +3.30% | vendido; saída 21/11 03:00 |
+| Desbloqueio | H | 17/11 | 0.01583 | 0.01092 | **+31.02%** | com hedge +22.08%; recompra 24/11 |
+| Desbloqueio | ALT | 19/11 | 0.004597 | 0.004283 | +6.83% | com hedge -1.78%; recompra 26/11 |
+| Desbloqueio | RESOLV | 20/11 | 0.01404 | 0.01389 | +1.07% | com hedge -6.01%; recompra 27/11 |
+| Monitoring Tag | INIT | 20/11 03:06 | 0.09788 | 0.08888 | +9.19% | vendido; saída 21/11 03:00 |
+| Monitoring Tag | ZIL | 20/11 03:06 | 0.000885 | 0.00081 | +8.47% | vendido; saída 21/11 03:00 |
+| Monitoring Tag | THE | 20/11 03:06 | 0.02795 | 0.0258 | +7.69% | vendido; saída 21/11 03:00 |
+| Monitoring Tag | BANK | 20/11 03:06 | 0.01773 | 0.01646 | +7.16% | vendido; saída 21/11 03:00 |
+| Monitoring Tag | ONE | 20/11 03:06 | 0.0010965 | 0.0010514 | +4.11% | vendido; saída 21/11 03:00 |
+| Sábado | cesta (20) | 20/11 21:00 | — | — | -0.14% | comprado; saída sábado 21h |
 
 <sub>Resultado a preço de mercado, bruto (sem custo nem funding), já no lado da posição: positivo = a favor. Em negrito, movimentos de 10% ou mais. Com hedge = venda + cesta dos majors.</sub>
 
 ## Próximos eventos
 
-- 20/11 · Sábado: entrada da cesta (21h)
+- 21/11 · Sábado: saída da cesta (21h) e resultado
 - 23/11 · Desbloqueio: venda prevista de GUN, ZORA
 - 24/11 · Desbloqueio: recompra de H
 - 26/11 · Desbloqueio: recompra de ALT
