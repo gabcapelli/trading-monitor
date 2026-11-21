@@ -1,6 +1,6 @@
 # Painel de estratégias
 
-_Atualizado em 21/11 07:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
+_Atualizado em 21/11 08:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
 
 ## Precisa de você
 
@@ -35,10 +35,10 @@ _Nada pendente._
 
 | Estratégia | Ativo | Desde | Entrada | Agora | Resultado | Obs. |
 |---|---|---|---|---|---|---|
-| Desbloqueio | H | 17/11 | 0.01583 | 0.01123 | **+29.06%** | com hedge +17.96%; recompra 24/11 |
-| Desbloqueio | ALT | 19/11 | 0.004597 | 0.004123 | **+10.31%** | com hedge -0.47%; recompra 26/11 |
-| Desbloqueio | RESOLV | 20/11 | 0.01404 | 0.01372 | +2.28% | com hedge -7.02%; recompra 27/11 |
-| Sábado | cesta (20) | 20/11 21:00 | — | — | -2.52% | comprado; saída sábado 21h |
+| Desbloqueio | H | 17/11 | 0.01583 | 0.01137 | **+28.17%** | com hedge +17.17%; recompra 24/11 |
+| Desbloqueio | ALT | 19/11 | 0.004597 | 0.004098 | **+10.85%** | com hedge +0.17%; recompra 26/11 |
+| Desbloqueio | RESOLV | 20/11 | 0.01404 | 0.01364 | +2.85% | com hedge -6.35%; recompra 27/11 |
+| Sábado | cesta (20) | 20/11 21:00 | — | — | -2.42% | comprado; saída sábado 21h |
 
 <sub>Resultado a preço de mercado, bruto (sem custo nem funding), já no lado da posição: positivo = a favor. Em negrito, movimentos de 10% ou mais. Com hedge = venda + cesta dos majors.</sub>
 
