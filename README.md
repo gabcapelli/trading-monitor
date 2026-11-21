@@ -1,6 +1,6 @@
 # Painel de estratégias
 
-_Atualizado em 20/11 22:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
+_Atualizado em 20/11 23:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
 
 ## Precisa de você
 
@@ -30,15 +30,15 @@ _Nada pendente._
 
 | Estratégia | Ativo | Desde | Entrada | Agora | Resultado | Obs. |
 |---|---|---|---|---|---|---|
-| Desbloqueio | H | 17/11 | 0.01583 | 0.01091 | **+31.08%** | com hedge +21.92%; recompra 24/11 |
-| Desbloqueio | ALT | 19/11 | 0.004597 | 0.004273 | +7.05% | com hedge -1.78%; recompra 26/11 |
-| Desbloqueio | RESOLV | 20/11 | 0.01404 | 0.01381 | +1.64% | com hedge -5.66%; recompra 27/11 |
-| Monitoring Tag | INIT | 20/11 03:06 | 0.09788 | 0.08807 | **+10.02%** | vendido; saída 21/11 03:00 |
-| Monitoring Tag | ZIL | 20/11 03:06 | 0.000885 | 0.000813 | +8.14% | vendido; saída 21/11 03:00 |
-| Monitoring Tag | BANK | 20/11 03:06 | 0.01773 | 0.01633 | +7.90% | vendido; saída 21/11 03:00 |
-| Monitoring Tag | THE | 20/11 03:06 | 0.02795 | 0.02578 | +7.76% | vendido; saída 21/11 03:00 |
-| Monitoring Tag | ONE | 20/11 03:06 | 0.0010965 | 0.0010429 | +4.89% | vendido; saída 21/11 03:00 |
-| Sábado | cesta (20) | 20/11 21:00 | — | — | -0.38% | comprado; saída sábado 21h |
+| Desbloqueio | H | 17/11 | 0.01583 | 0.01092 | **+31.02%** | com hedge +21.92%; recompra 24/11 |
+| Desbloqueio | ALT | 19/11 | 0.004597 | 0.004294 | +6.59% | com hedge -2.17%; recompra 26/11 |
+| Desbloqueio | RESOLV | 20/11 | 0.01404 | 0.01393 | +0.78% | com hedge -6.46%; recompra 27/11 |
+| Monitoring Tag | INIT | 20/11 03:06 | 0.09788 | 0.08883 | +9.25% | vendido; saída 21/11 03:00 |
+| Monitoring Tag | BANK | 20/11 03:06 | 0.01773 | 0.01639 | +7.56% | vendido; saída 21/11 03:00 |
+| Monitoring Tag | THE | 20/11 03:06 | 0.02795 | 0.02588 | +7.41% | vendido; saída 21/11 03:00 |
+| Monitoring Tag | ZIL | 20/11 03:06 | 0.000885 | 0.000821 | +7.23% | vendido; saída 21/11 03:00 |
+| Monitoring Tag | ONE | 20/11 03:06 | 0.0010965 | 0.0010348 | +5.63% | vendido; saída 21/11 03:00 |
+| Sábado | cesta (20) | 20/11 21:00 | — | — | -0.32% | comprado; saída sábado 21h |
 
 <sub>Resultado a preço de mercado, bruto (sem custo nem funding), já no lado da posição: positivo = a favor. Em negrito, movimentos de 10% ou mais. Com hedge = venda + cesta dos majors.</sub>
 
