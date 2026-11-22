@@ -66,6 +66,7 @@
 "AMATUSDT": 20612,
 "AMBUSDT": 19446,
 "AMCUSDT": 20714,
+"AMDLUSDT": 20777,
 "AMDUSDT": 20579,
 "AMGNUSDT": 20755,
 "AMZNUSDT": 20493,
@@ -437,6 +438,7 @@
 "JASMYUSDT": 19102,
 "JCTUSDT": 20402,
 "JELLYJELLYUSDT": 20173,
+"JNJUSDT": 20777,
 "JOEUSDT": 19445,
 "JPMUSDT": 20591,
 "JSTUSDT": 20206,
@@ -564,6 +566,7 @@
 "NFPUSDT": 19718,
 "NIGHTUSDT": 20432,
 "NILUSDT": 20171,
+"NIOUSDT": 20777,
 "NKEUSDT": 20725,
 "NKNUSDT": 18726,
 "NMRUSDT": 19530,
@@ -974,6 +977,14 @@
 "status": "descartado",
 "tipo": "EQUITY"
 },
+"AMDLUSDT": {
+"d0": 20777,
+"entrada": 20779,
+"motivo": "nao-cripto (EQUITY)",
+"par": "AMDLUSDT",
+"status": "descartado",
+"tipo": "EQUITY"
+},
 "AMGNUSDT": {
 "d0": 20755,
 "entrada": 20757,
@@ -1245,6 +1256,14 @@
 "status": "descartado",
 "tipo": "EQUITY"
 },
+"JNJUSDT": {
+"d0": 20777,
+"entrada": 20779,
+"motivo": "nao-cripto (EQUITY)",
+"par": "JNJUSDT",
+"status": "descartado",
+"tipo": "EQUITY"
+},
 "MCDUSDT": {
 "d0": 20732,
 "entrada": 20734,
@@ -1312,6 +1331,14 @@
 "entrada": 20740,
 "motivo": "nao-cripto (EQUITY)",
 "par": "MSTUUSDT",
+"status": "descartado",
+"tipo": "EQUITY"
+},
+"NIOUSDT": {
+"d0": 20777,
+"entrada": 20779,
+"motivo": "nao-cripto (EQUITY)",
+"par": "NIOUSDT",
 "status": "descartado",
 "tipo": "EQUITY"
 },
@@ -1675,5 +1702,5 @@
 "tipo": "EQUITY"
 }
 },
-"ultimo_scan": 20778
+"ultimo_scan": 20779
 }
