@@ -1,6 +1,6 @@
 # Painel de estratégias
 
-_Atualizado em 22/11 20:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
+_Atualizado em 22/11 21:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
 
 ## Precisa de você
 
@@ -10,7 +10,7 @@ _Nada pendente._
 
 | Estratégia | Abertos | Fechados | Média |
 |---|---|---|---|
-| [Desbloqueio](claude/unlock-paper.md) | 3 | 39/150 | +0.88% |
+| [Desbloqueio](claude/unlock-paper.md) | 5 | 39/150 | +0.88% |
 | [Perpétuo novo](claude/novos-paper.md) | 0 | 1/100 | +64.20% |
 | [Rompimento 48h](claude/continuacao-paper.md) · encerrado em 30/10/2026 | — | 33 | -9.12% |
 | [Monitoring Tag](claude/monitoring-paper.md) | 0 | 2/24 | +6.19% |
@@ -24,22 +24,25 @@ _Nada pendente._
 
 <sub>Desde o fechamento das 21h (Brasília).</sub>
 
-- Sábado: vendeu a cesta: +1.35%
+- Desbloqueio: vendeu GUN a 0.001378 (desbloqueio 30/11)
+- Desbloqueio: vendeu ZORA a 0.00434 (desbloqueio 30/11)
 
 ## Abertos agora
 
 | Estratégia | Ativo | Desde | Entrada | Agora | Resultado | Obs. |
 |---|---|---|---|---|---|---|
-| Desbloqueio | H | 17/11 | 0.01583 | 0.01192 | **+24.70%** | com hedge +18.02%; recompra 24/11 |
-| Desbloqueio | ALT | 19/11 | 0.004597 | 0.004261 | +7.31% | com hedge +0.96%; recompra 26/11 |
-| Desbloqueio | RESOLV | 20/11 | 0.01404 | 0.01368 | +2.56% | com hedge -2.22%; recompra 27/11 |
+| Desbloqueio | H | 17/11 | 0.01583 | 0.01196 | **+24.45%** | com hedge +17.82%; recompra 24/11 |
+| Desbloqueio | ALT | 19/11 | 0.004597 | 0.004263 | +7.27% | com hedge +0.97%; recompra 26/11 |
+| Desbloqueio | RESOLV | 20/11 | 0.01404 | 0.01365 | +2.78% | com hedge -1.95%; recompra 27/11 |
+| Desbloqueio | GUN | 23/11 | 0.001378 | 0.00137 | +0.58% | com hedge +0.42%; recompra 30/11 |
+| Desbloqueio | ZORA | 23/11 | 0.00434 | 0.004331 | +0.21% | com hedge +0.05%; recompra 30/11 |
 
 <sub>Resultado a preço de mercado, bruto (sem custo nem funding), já no lado da posição: positivo = a favor. Em negrito, movimentos de 10% ou mais. Com hedge = venda + cesta dos majors.</sub>
 
 ## Próximos eventos
 
-- 23/11 · Desbloqueio: venda prevista de GUN, ZORA
 - 24/11 · Desbloqueio: recompra de H
+- 24/11 · Desbloqueio: venda prevista de EIGEN
 - 26/11 · Desbloqueio: recompra de ALT
 - 27/11 · Desbloqueio: recompra de RESOLV
 
