@@ -1,4 +1,4 @@
-# Calibracao — registro mecanico de sinais (atualizado 2026-11-23 10:06 BRT)
+# Calibracao — registro mecanico de sinais (atualizado 2026-11-23 11:06 BRT)
 
 > **Nao edite este arquivo** — ele e reescrito a cada execucao a partir da tabela `sinais_mecanicos`. Diferente de `sinais.md`, aqui nao ha nenhuma decisao sua: e TODA confirmacao mecanica detectada, inclusive as descartadas por R:R baixo, com desfecho medido por geometria de preco (OHLC de 1h contra stop/alvo sugeridos).
 >
@@ -10,11 +10,11 @@ Regra de alvo em vigor agora: **proximo** (coluna `Regra` abaixo mostra qual dec
 
 | Grupo | Sinais | Resolvidos | Acertos | Soma (expectancia) |
 |---|---|---|---|---|
-| Aceitos (R:R >= 2) | 132 | 131 | 40 (31%) | +18.67R (+0.143R/sinal) |
-| Descartados por R:R baixo | 680 | 674 | 430 (64%) | -24.50R (-0.036R/sinal) |
-| TODOS | 812 | 805 | 470 (58%) | -5.83R (-0.007R/sinal) |
+| Aceitos (R:R >= 2) | 132 | 132 | 41 (31%) | +22.92R (+0.174R/sinal) |
+| Descartados por R:R baixo | 682 | 675 | 431 (64%) | -24.04R (-0.036R/sinal) |
+| TODOS | 814 | 807 | 472 (58%) | -1.12R (-0.001R/sinal) |
 
-**MAE dos acertos** (quanto o preco foi CONTRA antes de dar certo) — n=470, mediana 0.32R, maximo 0.99R, 7% acima de 0.8R.
+**MAE dos acertos** (quanto o preco foi CONTRA antes de dar certo) — n=472, mediana 0.32R, maximo 0.99R, 7% acima de 0.8R.
 
 > Le-se assim: apertar `STOP_BUFFER_ATR_MULT` mata os acertos cujo MAE ja esta perto de 1R. Se essa cauda for gorda, nao ha folga pra apertar o stop.
 
@@ -26,11 +26,13 @@ Regra de alvo em vigor agora: **proximo** (coluna `Regra` abaixo mostra qual dec
 
 | Par | Setup | Direcao | Aceito | Regra | R:R (recente) | R:R (proximo) | Resultado | MAE | MFE | Candles | Quando |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| ETH/USDT | B | compra | nao | proximo | 0.08 | 0.08 | aberto | — | — | — | 2026-11-23 11:06 |
+| XRP/USDT | B | compra | nao | proximo | 0.18 | 0.06 | aberto | — | — | — | 2026-11-23 11:06 |
 | LINK/USDT | B | compra | nao | proximo | 1.32 | 1.32 | +1.32 | 0.331 | 1.546 | 1 | 2026-11-23 08:06 |
 | UNI/USDT | B | venda | nao | proximo | 2.30 | 0.41 | +0.41 | 0.696 | 0.58 | 3 | 2026-11-23 07:06 |
-| XRP/USDT | B | compra | sim | proximo | 4.81 | 4.25 | aberto | 0.79 | 0.387 | — | 2026-11-23 06:06 |
+| XRP/USDT | B | compra | sim | proximo | 4.81 | 4.25 | +4.25 | 0.79 | 7.346 | 5 | 2026-11-23 06:06 |
 | SUI/USDT | A | compra | nao | proximo | 0.46 | 0.46 | +0.46 | 0.675 | 0.82 | 1 | 2026-11-23 05:06 |
-| DOGE/USDT | B | compra | nao | proximo | 0.46 | 0.46 | aberto | 0.838 | 0.279 | — | 2026-11-23 03:06 |
+| DOGE/USDT | B | compra | nao | proximo | 0.46 | 0.46 | +0.46 | 0.838 | 5.544 | 8 | 2026-11-23 03:06 |
 | LINK/USDT | B | compra | nao | proximo | 0.26 | 0.26 | +0.26 | 0.1 | 0.415 | 1 | 2026-11-23 01:06 |
 | ARB/USDT | A | venda | sim | proximo | 6.64 | 3.04 | -1.00 | 3.637 | 2.159 | 3 | 2026-11-22 22:06 |
 | ETH/USDT | B | compra | nao | proximo | 0.39 | 0.39 | +0.39 | 0.182 | 0.903 | 1 | 2026-11-22 18:06 |
@@ -49,5 +51,3 @@ Regra de alvo em vigor agora: **proximo** (coluna `Regra` abaixo mostra qual dec
 | WLD/USDT | B | compra | sim | proximo | 4.90 | 3.62 | -1.00 | 1.789 | 0.817 | 11 | 2026-11-20 00:06 |
 | LINK/USDT | B | compra | nao | proximo | 4.06 | 1.84 | -1.00 | 3.158 | 1.127 | 2 | 2026-11-19 21:06 |
 | DOGE/USDT | A | compra | nao | proximo | 0.14 | 0.14 | +0.14 | 0.218 | 0.233 | 1 | 2026-11-19 10:06 |
-| XRP/USDT | A | compra | nao | proximo | 2.04 | 0.62 | +0.62 | 0.473 | 0.843 | 5 | 2026-11-19 04:06 |
-| WLD/USDT | B | compra | nao | proximo | 0.04 | 0.04 | +0.04 | 0.112 | 0.356 | 1 | 2026-11-19 01:06 |
