@@ -1,4 +1,4 @@
-# Calibracao — registro mecanico de sinais (atualizado 2026-11-23 08:06 BRT)
+# Calibracao — registro mecanico de sinais (atualizado 2026-11-23 09:06 BRT)
 
 > **Nao edite este arquivo** — ele e reescrito a cada execucao a partir da tabela `sinais_mecanicos`. Diferente de `sinais.md`, aqui nao ha nenhuma decisao sua: e TODA confirmacao mecanica detectada, inclusive as descartadas por R:R baixo, com desfecho medido por geometria de preco (OHLC de 1h contra stop/alvo sugeridos).
 >
@@ -11,10 +11,10 @@ Regra de alvo em vigor agora: **proximo** (coluna `Regra` abaixo mostra qual dec
 | Grupo | Sinais | Resolvidos | Acertos | Soma (expectancia) |
 |---|---|---|---|---|
 | Aceitos (R:R >= 2) | 132 | 131 | 40 (31%) | +18.67R (+0.143R/sinal) |
-| Descartados por R:R baixo | 680 | 672 | 428 (64%) | -26.23R (-0.039R/sinal) |
-| TODOS | 812 | 803 | 468 (58%) | -7.56R (-0.009R/sinal) |
+| Descartados por R:R baixo | 680 | 673 | 429 (64%) | -24.91R (-0.037R/sinal) |
+| TODOS | 812 | 804 | 469 (58%) | -6.23R (-0.008R/sinal) |
 
-**MAE dos acertos** (quanto o preco foi CONTRA antes de dar certo) — n=468, mediana 0.32R, maximo 0.99R, 7% acima de 0.8R.
+**MAE dos acertos** (quanto o preco foi CONTRA antes de dar certo) — n=469, mediana 0.32R, maximo 0.99R, 7% acima de 0.8R.
 
 > Le-se assim: apertar `STOP_BUFFER_ATR_MULT` mata os acertos cujo MAE ja esta perto de 1R. Se essa cauda for gorda, nao ha folga pra apertar o stop.
 
@@ -26,7 +26,7 @@ Regra de alvo em vigor agora: **proximo** (coluna `Regra` abaixo mostra qual dec
 
 | Par | Setup | Direcao | Aceito | Regra | R:R (recente) | R:R (proximo) | Resultado | MAE | MFE | Candles | Quando |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| LINK/USDT | B | compra | nao | proximo | 1.32 | 1.32 | aberto | — | — | — | 2026-11-23 08:06 |
+| LINK/USDT | B | compra | nao | proximo | 1.32 | 1.32 | +1.32 | 0.331 | 1.546 | 1 | 2026-11-23 08:06 |
 | UNI/USDT | B | venda | nao | proximo | 2.30 | 0.41 | aberto | 0.638 | 0.213 | — | 2026-11-23 07:06 |
 | XRP/USDT | B | compra | sim | proximo | 4.81 | 4.25 | aberto | 0.79 | 0.387 | — | 2026-11-23 06:06 |
 | SUI/USDT | A | compra | nao | proximo | 0.46 | 0.46 | +0.46 | 0.675 | 0.82 | 1 | 2026-11-23 05:06 |
