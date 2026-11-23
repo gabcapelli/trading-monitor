@@ -1,6 +1,6 @@
 # Painel de estratégias
 
-_Atualizado em 23/11 04:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
+_Atualizado em 23/11 05:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
 
 ## Precisa de você
 
@@ -31,11 +31,11 @@ _Nada pendente._
 
 | Estratégia | Ativo | Desde | Entrada | Agora | Resultado | Obs. |
 |---|---|---|---|---|---|---|
-| Desbloqueio | H | 17/11 | 0.01583 | 0.0126 | **+20.40%** | com hedge +14.47%; recompra 24/11 |
-| Desbloqueio | ALT | 19/11 | 0.004597 | 0.004305 | +6.35% | com hedge +0.75%; recompra 26/11 |
-| Desbloqueio | RESOLV | 20/11 | 0.01404 | 0.01335 | +4.91% | com hedge +0.90%; recompra 27/11 |
-| Desbloqueio | GUN | 23/11 | 0.001378 | 0.001383 | -0.36% | com hedge +0.22%; recompra 30/11 |
-| Desbloqueio | ZORA | 23/11 | 0.00434 | 0.004384 | -1.01% | com hedge -0.43%; recompra 30/11 |
+| Desbloqueio | H | 17/11 | 0.01583 | 0.01311 | **+17.18%** | com hedge +11.34%; recompra 24/11 |
+| Desbloqueio | ALT | 19/11 | 0.004597 | 0.004295 | +6.57% | com hedge +1.06%; recompra 26/11 |
+| Desbloqueio | RESOLV | 20/11 | 0.01404 | 0.01333 | +5.06% | com hedge +1.13%; recompra 27/11 |
+| Desbloqueio | GUN | 23/11 | 0.001378 | 0.001383 | -0.36% | com hedge +0.32%; recompra 30/11 |
+| Desbloqueio | ZORA | 23/11 | 0.00434 | 0.004373 | -0.76% | com hedge -0.08%; recompra 30/11 |
 
 <sub>Resultado a preço de mercado, bruto (sem custo nem funding), já no lado da posição: positivo = a favor. Em negrito, movimentos de 10% ou mais. Com hedge = venda + cesta dos majors.</sub>
 
