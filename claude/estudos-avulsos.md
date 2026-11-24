@@ -1946,3 +1946,9 @@ Leitura: o efeito do 91 não se replica fora da Binance e **2026 é negativo nas
 `monitor/replay_corte_alavancagem.py` (pré-registro no docstring). 229 anúncios "Leverage & Margin Tiers" do catálogo 49 (corpos em `cache_anuncios/alavancagem_corpos.json`), 703 contrato-eventos, 232 com corte da alavancagem máxima. Medidos 280 (139 cortes em 39 anúncios; os demais sem 1h entre entrada e efetivo ou sem candle). Mediana de 70h até o efetivo.
 
 liq +2.8% IC95 [−0.2, +5.5]; excesso +2.1% [−0.3, +4.4]. **O controle sem corte dá quase o mesmo** (liq +2.1%, excesso +1.7%), e o placebo −30d dá zero: o que existe é um viés geral dos contratos que recebem atualização de faixas (altcoins em queda), não o corte forçando venda. Corte ≥ 50%: +2.9% [−0.8, +6.2]. Saída 24h depois do efetivo: +1.9%.
+
+## Estudo 95 (24/11/2026) — operar contra o lado lotado quando a Binance aumenta a frequência do funding — NÃO PASSA
+
+`monitor/replay_funding_frequencia.py`. 43 anúncios "Settlement Frequency" do catálogo 49 (sem os de volta ao normal), 39 trades em 37 anúncios; em 36 o funding era negativo (vendidos lotados) → compra. 3 dias, custo 0.18% + funding.
+
+liq +14.9% IC95 [−4.0, +44.7], **mediana −0.7%**; excesso +1.6% [−15.1, +27.6], **mediana −10.5%**. A média vem de um trade de +475% e do funding recebido pelo comprado; o preço em si não reverte. 2023 −10.0% (IC < 0), 2025 +29.3% (IC cruza zero). Placebo −30d +2.5%. Amostra pequena e dominada por cauda.
