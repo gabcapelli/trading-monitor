@@ -1923,3 +1923,11 @@ Ressalvas:
 - **Não é amostra limpa:** pelo menos 34 dos 69 tokens já estavam nos estudos 29/30 (vender o perpétuo na abertura do spot). É o mesmo mecanismo do 30, com outro recorte (só tokens distribuídos de graça) e entrada na abertura do perpétuo.
 - **2026 ficou de fora:** os 8 eventos de 2026 tiveram o perpétuo listado 6 a 60 dias **antes** do aviso (pré-mercado), e a regra exclui esses casos. O regime atual não está medido, e uma regra para o papel precisa de outro gatilho (abertura do spot / distribuição).
 - Cauda de squeeze de −100% ou mais em 3 de 69: com 1% de risco, o tamanho tem de ser pequeno.
+
+## Estudo 92 (24/11/2026) — vender o token distribuído de graça na Bybit e na OKX — SEM AMOSTRA
+
+`monitor/replay_airdrop_outras.py`, mesma regra do papel do 91 (entrada na mais tardia entre anúncio + 1h e abertura do perpétuo da Binance + 1h; 7 dias; vendido no perpétuo da Binance). Eventos: Bybit Launchpool (42), Launchpad (20), Token Splash (40) e OKX Jumpstart (8), sem os tokens do 91. Só 27 de 110 têm perpétuo da Binance na janela.
+
+liq +9.7% IC95 [−7.2, +22.4]; excesso +11.2% [−5.9, +23.8]; mediana +6.8%; pior −163%. Menos de 30 eventos: **SEM AMOSTRA** (o centro aponta na mesma direção do 91). Descritivos: entrada pela abertura do perpétuo +18.7% [+5.1, +32.7] (n=12); entrada no anúncio com o perpétuo já negociando +2.5% [−25, +22] (n=15); 2025 +21.5% (n=13); 2026 −6.2% (n=8, com o −163%).
+
+Ressalva para o papel do 91: o caminho "token já negocia, vende no anúncio" — o mais comum em 2026 — é o mais fraco aqui.
