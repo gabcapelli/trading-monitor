@@ -1889,3 +1889,11 @@ Não é setup de terceiro, mas o veredito fica registrado aqui junto dos outros.
 - Quase todos os airdrops acontecem no lançamento (sem perpétuo), daí o n baixo. Não somar com o desbloqueio: seria garimpo.
 
 Estudo A (fim de unbonding de staking): não rodado. Não há série histórica pública de unbonding (Cosmos só expõe o estado atual; reconstruir exige nó de arquivo por altura de bloco).
+
+## Estudo 89 (24/11/2026) — vender o perpétuo quando a Binance anuncia a retirada só do perpétuo — NÃO PASSA
+
+`monitor/replay_delist_perp.py`, pré-registrado (mesma régua do 28): vende na 2ª hora cheia após o aviso, recompra 2h antes do fim do contrato; fora BUSD, COIN-M e tokens com retirada do spot a ±7 dias. 75 trades em 30 anúncios (2022–26).
+- abs +6.73% IC95 [−2.72, +15.21]; excesso +6.49% [−2.46, +14.46]; placebo −30d +2.74% (n.s.); reação perdida até a entrada +6.2%.
+- Saída 24h antes (descritivo): abs +5.80% [−1.14, +12.64], excesso +6.35% [+0.22, +12.23].
+- Mediana +6.6%, 48/75 positivos, mas a cauda de squeeze decide: PUMPBTC −91%, 1000000BOB −89%, SRM −64%, XEM −59%; alta máxima contra a venda acima de 100% em 7 trades (ZKJ +217%, DAM +210%), ou seja, liquidação mesmo a 1x — o abs acima ainda é otimista.
+- Mesmo filme do 28 e do 37: o trade típico ganha, os squeezes destroem. Não testar "com stop" ou "sem os squeezes" sobre estes 30 anúncios.
