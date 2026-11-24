@@ -1897,3 +1897,5 @@ Estudo A (fim de unbonding de staking): não rodado. Não há série histórica 
 - Saída 24h antes (descritivo): abs +5.80% [−1.14, +12.64], excesso +6.35% [+0.22, +12.23].
 - Mediana +6.6%, 48/75 positivos, mas a cauda de squeeze decide: PUMPBTC −91%, 1000000BOB −89%, SRM −64%, XEM −59%; alta máxima contra a venda acima de 100% em 7 trades (ZKJ +217%, DAM +210%), ou seja, liquidação mesmo a 1x — o abs acima ainda é otimista.
 - Mesmo filme do 28 e do 37: o trade típico ganha, os squeezes destroem. Não testar "com stop" ou "sem os squeezes" sobre estes 30 anúncios.
+
+Estudo C (comprar antes de queima/recompra programada, 24/11/2026): não rodado. A queima do BNB não tem data anunciada antes (sai o post depois de feita, dia variando de 15 a 1º do mês seguinte), e só 12 datas confiáveis (queimas 26–37, 2024–26) foram encontradas no blog da BNB Chain. Recompras de HYPE/JUP/PUMP são contínuas, sem data discreta. Sem evento pré-datado nem amostra, não há teste.
