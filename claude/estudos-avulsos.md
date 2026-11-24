@@ -1940,3 +1940,9 @@ liq **+1.9%** IC95 [−11.6, +14.1]; excesso +6.8% [−6.6, +18.5]; mediana +7.7
 Descritivos: via abertura do perpétuo liq +7.2% / excesso +12.9% (n=24, IC cruza zero); via anúncio com token já negociando liq −3.6% (n=23). Por ano: 2024 +2.8% (n=20), **2025 +23.4%** [+11.8, +36.1] (n=14), **2026 −25.9%** [−63, +5] (n=11).
 
 Leitura: o efeito do 91 não se replica fora da Binance e **2026 é negativo nas duas réplicas (92 e 93)**. Reforça a suspeita de que o regime mudou (airdrops retroativos, perpétuo em pré-mercado). O papel do 91 segue como está, com a separação por gatilho no registro.
+
+## Estudo 94 (24/11/2026) — vender o perpétuo do anúncio de corte de alavancagem até o horário efetivo — NÃO PASSA
+
+`monitor/replay_corte_alavancagem.py` (pré-registro no docstring). 229 anúncios "Leverage & Margin Tiers" do catálogo 49 (corpos em `cache_anuncios/alavancagem_corpos.json`), 703 contrato-eventos, 232 com corte da alavancagem máxima. Medidos 280 (139 cortes em 39 anúncios; os demais sem 1h entre entrada e efetivo ou sem candle). Mediana de 70h até o efetivo.
+
+liq +2.8% IC95 [−0.2, +5.5]; excesso +2.1% [−0.3, +4.4]. **O controle sem corte dá quase o mesmo** (liq +2.1%, excesso +1.7%), e o placebo −30d dá zero: o que existe é um viés geral dos contratos que recebem atualização de faixas (altcoins em queda), não o corte forçando venda. Corte ≥ 50%: +2.9% [−0.8, +6.2]. Saída 24h depois do efetivo: +1.9%.
