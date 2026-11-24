@@ -1931,3 +1931,12 @@ Ressalvas:
 liq +9.7% IC95 [−7.2, +22.4]; excesso +11.2% [−5.9, +23.8]; mediana +6.8%; pior −163%. Menos de 30 eventos: **SEM AMOSTRA** (o centro aponta na mesma direção do 91). Descritivos: entrada pela abertura do perpétuo +18.7% [+5.1, +32.7] (n=12); entrada no anúncio com o perpétuo já negociando +2.5% [−25, +22] (n=15); 2025 +21.5% (n=13); 2026 −6.2% (n=8, com o −163%).
 
 Ressalva para o papel do 91: o caminho "token já negocia, vende no anúncio" — o mais comum em 2026 — é o mais fraco aqui.
+
+## Estudo 93 (24/11/2026) — o 92 medido no perpétuo da Bybit — NÃO PASSA
+
+`monitor/replay_airdrop_bybit.py`, mesmos 110 eventos e mesma regra do 92, preços e funding do perpétuo linear da Bybit (API não tem contratos removidos: viés contra a hipótese). 47 trades.
+
+liq **+1.9%** IC95 [−11.6, +14.1]; excesso +6.8% [−6.6, +18.5]; mediana +7.7%; acerto 64%; sem os 5 maiores −4.5%; pior −165%.
+Descritivos: via abertura do perpétuo liq +7.2% / excesso +12.9% (n=24, IC cruza zero); via anúncio com token já negociando liq −3.6% (n=23). Por ano: 2024 +2.8% (n=20), **2025 +23.4%** [+11.8, +36.1] (n=14), **2026 −25.9%** [−63, +5] (n=11).
+
+Leitura: o efeito do 91 não se replica fora da Binance e **2026 é negativo nas duas réplicas (92 e 93)**. Reforça a suspeita de que o regime mudou (airdrops retroativos, perpétuo em pré-mercado). O papel do 91 segue como está, com a separação por gatilho no registro.

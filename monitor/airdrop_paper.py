@@ -241,7 +241,13 @@ def escreve_ledger(estado, agora):
         L.append(f"\n**Média por trade:** líquido {MP._media([t['liq'] for t in fe]):+.2f}% · "
                  f"excesso {MP._media([t['excesso'] for t in fe]):+.2f}% · "
                  f"líquido positivo em {sum(t['liq'] > 0 for t in fe)}/{len(fe)}")
-    L += ["\n_Referência do estudo 91: +12.0% líquido, +15.3% de excesso (gatilho na abertura do perpétuo)._", ""]
+        L += ["", "| Gatilho (só leitura, não decide) | Fechados | Líquido médio | Excesso médio |", "|---|---|---|---|"]
+        for g in ("data no anuncio", "anuncio de listagem", "ja negociando"):
+            sub = [t for t in fe if t.get("gatilho") == g]
+            L.append(f"| {g} | {len(sub)} | " + (" | ".join(f"{MP._media([t[k] for t in sub]):+.2f}%" for k in ("liq", "excesso"))
+                                                  if sub else "— | —") + " |")
+    L += ["\n_Referência do estudo 91: +12.0% líquido, +15.3% de excesso (gatilho na abertura do perpétuo)._",
+          "_Estudo 92 (Bybit/OKX, descritivo): pela abertura do perpétuo +18.7% (n=12); token já negociando +2.5% (n=15)._", ""]
     if ab:
         L += ["| Token | Status | Venda em | Preço | Recompra em |", "|---|---|---|---|---|"]
         L += [f"| {t['token']} | {t['status']} | {MP._h(t['entrada_ts']) if 'entrada_ts' in t else '—'} | {t.get('p_in', '—')} | {MP._h(t['saida_ts']) if 'saida_ts' in t else '—'} |"
