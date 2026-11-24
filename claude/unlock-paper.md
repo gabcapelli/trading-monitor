@@ -7,11 +7,11 @@
 > venda + compra da cesta dos 20 majors. Custo 0.18% por perna e funding real.
 > **Só reavaliar com 150 trades fechados.** Antes disso é ruído.
 
-_Atualizado em 2026-11-23 (calendário de 2026-11-23)._
+_Atualizado em 2026-11-24 (calendário de 2026-11-24)._
 
-**Trades fechados:** 39 de 150 (26%)
+**Trades fechados:** 40 de 150 (27%)
 
-**Média por trade:** puro +6.95% · com hedge +0.88% · hedge positivo em 22/39 (56%)
+**Média por trade:** puro +7.16% · com hedge +1.10% · hedge positivo em 23/40 (58%)
 
 _Referência do backtest (2025–2026): puro +2.9%, excesso sobre o universo +2.1%._
 
@@ -19,17 +19,16 @@ _Referência do backtest (2025–2026): puro +2.9%, excesso sobre o universo +2.
 
 | Token | Desbloqueio | % da oferta | Venda em (abertura) | Preço de entrada |
 |---|---|---|---|---|
-| H | 2026-11-24 | 6.8% | 2026-11-17 | 0.01583 |
 | ALT | 2026-11-26 | 3.2% | 2026-11-19 | 0.004597 |
 | RESOLV | 2026-11-27 | 3.7% | 2026-11-20 | 0.01404 |
 | GUN | 2026-11-30 | 6.2% | 2026-11-23 | 0.001378 |
 | ZORA | 2026-11-30 | 2.9% | 2026-11-23 | 0.00434 |
+| EIGEN | 2026-12-01 | 3.9% | 2026-11-24 | 0.1145 |
 
 ## Próximas entradas (calendário atual)
 
 | Token | Desbloqueio | % da oferta | % insiders | Entrada prevista |
 |---|---|---|---|---|
-| EIGEN | 2026-12-01 | 3.9% | 100% | 2026-11-24 |
 | ZETA | 2026-12-02 | 2.6% | 51% | 2026-11-25 |
 | STO | 2026-12-03 | 4.5% | 61% | 2026-11-26 |
 | WET | 2026-12-04 | 45.6% | 74% | 2026-11-27 |
@@ -43,6 +42,7 @@ _Referência do backtest (2025–2026): puro +2.9%, excesso sobre o universo +2.
 | KAITO | 2026-12-20 | 3.4% | 53% | 2026-12-13 |
 | LISTA | 2026-12-21 | 4.9% | 76% | 2026-12-14 |
 | ZRO | 2026-12-21 | 3.4% | 100% | 2026-12-14 |
+| H | 2026-12-24 | 6.4% | 55% | 2026-12-17 |
 
 _Passa pelos filtros (perpétuo com ≥ 30 dias, mesmo token a ≥ 14 dias) só no dia da entrada._
 
@@ -50,6 +50,7 @@ _Passa pelos filtros (perpétuo com ≥ 30 dias, mesmo token a ≥ 14 dias) só 
 
 | Token | Desbloqueio | % da oferta | Retorno do token | Cesta | Puro | Com hedge | Obs. |
 |---|---|---|---|---|---|---|---|
+| H | 2026-11-24 | 6.8% | -15.29% | -5.52% | +15.34% | +9.69% |  |
 | ZRO | 2026-11-20 | 3.5% | -15.55% | -11.58% | +15.53% | +3.78% |  |
 | KAITO | 2026-11-20 | 3.6% | -15.03% | -11.58% | +15.00% | +3.26% |  |
 | SOLV | 2026-11-18 | 3.3% | +2.45% | -9.83% | -2.42% | -12.42% | adiado? |

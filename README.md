@@ -1,6 +1,6 @@
 # Painel de estratégias
 
-_Atualizado em 23/11 20:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
+_Atualizado em 23/11 21:07 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
 
 ## Precisa de você
 
@@ -10,7 +10,7 @@ _Nada pendente._
 
 | Estratégia | Abertos | Fechados | Média |
 |---|---|---|---|
-| [Desbloqueio](claude/unlock-paper.md) | 5 | 39/150 | +0.88% |
+| [Desbloqueio](claude/unlock-paper.md) | 5 | 40/150 | +1.10% |
 | [Perpétuo novo](claude/novos-paper.md) | 0 | 1/100 | +64.20% |
 | [Rompimento 48h](claude/continuacao-paper.md) · encerrado em 30/10/2026 | — | 33 | -9.12% |
 | [Monitoring Tag](claude/monitoring-paper.md) | 0 | 2/24 | +6.19% |
@@ -24,27 +24,27 @@ _Nada pendente._
 
 <sub>Desde o fechamento das 21h (Brasília).</sub>
 
-- Desbloqueio: vendeu GUN a 0.001378 (desbloqueio 30/11)
-- Desbloqueio: vendeu ZORA a 0.00434 (desbloqueio 30/11)
+- Desbloqueio: vendeu EIGEN a 0.1145 (desbloqueio 01/12)
+- Desbloqueio: recomprou H: puro +15.34%, com hedge +9.69%
 
 ## Abertos agora
 
 | Estratégia | Ativo | Desde | Entrada | Agora | Resultado | Obs. |
 |---|---|---|---|---|---|---|
-| Desbloqueio | H | 17/11 | 0.01583 | 0.01343 | **+15.16%** | com hedge +9.36%; recompra 24/11 |
-| Desbloqueio | ALT | 19/11 | 0.004597 | 0.004317 | +6.09% | com hedge +0.62%; recompra 26/11 |
-| Desbloqueio | RESOLV | 20/11 | 0.01404 | 0.01355 | +3.49% | com hedge -0.40%; recompra 27/11 |
-| Desbloqueio | GUN | 23/11 | 0.001378 | 0.00134 | +2.76% | com hedge +3.46%; recompra 30/11 |
-| Desbloqueio | ZORA | 23/11 | 0.00434 | 0.004299 | +0.94% | com hedge +1.65%; recompra 30/11 |
+| Desbloqueio | ALT | 19/11 | 0.004597 | 0.00434 | +5.59% | com hedge +0.37%; recompra 26/11 |
+| Desbloqueio | RESOLV | 20/11 | 0.01404 | 0.0136 | +3.13% | com hedge -0.50%; recompra 27/11 |
+| Desbloqueio | GUN | 23/11 | 0.001378 | 0.001352 | +1.89% | com hedge +2.86%; recompra 30/11 |
+| Desbloqueio | ZORA | 23/11 | 0.00434 | 0.004302 | +0.88% | com hedge +1.85%; recompra 30/11 |
+| Desbloqueio | EIGEN | 24/11 | 0.1145 | 0.1146 | -0.09% | com hedge -0.13%; recompra 01/12 |
 
 <sub>Resultado a preço de mercado, bruto (sem custo nem funding), já no lado da posição: positivo = a favor. Em negrito, movimentos de 10% ou mais. Com hedge = venda + cesta dos majors.</sub>
 
 ## Próximos eventos
 
-- 24/11 · Desbloqueio: recompra de H
-- 24/11 · Desbloqueio: venda prevista de EIGEN
+- 25/11 · Desbloqueio: venda prevista de ZETA
 - 26/11 · Desbloqueio: recompra de ALT
 - 27/11 · Desbloqueio: recompra de RESOLV
+- 27/11 · Sábado: entrada da cesta (21h)
 
 ## Outros
 
