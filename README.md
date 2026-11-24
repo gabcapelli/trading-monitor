@@ -1,6 +1,6 @@
 # Painel de estratégias
 
-_Atualizado em 24/11 16:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
+_Atualizado em 24/11 17:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
 
 ## Precisa de você
 
@@ -15,6 +15,7 @@ _Nada pendente._
 | [Rompimento 48h](claude/continuacao-paper.md) · encerrado em 30/10/2026 | — | 33 | -9.12% |
 | [Monitoring Tag](claude/monitoring-paper.md) | 0 | 2/24 | +6.19% |
 | [Launchpool](claude/launchpool-paper.md) | 0 | 0/20 | — |
+| [Airdrop / token novo](claude/airdrop-paper.md) | 0 | 0/30 | — |
 | [Sábado](claude/sabado-paper.md) | 0 | 9/104 | -1.12% |
 | [Setup A/B](claude/estudos-avulsos.md#setups-ab--encerrado-em-25092026) · encerrado | — | 34 | -0.13R |
 
@@ -31,11 +32,11 @@ _Nada pendente._
 
 | Estratégia | Ativo | Desde | Entrada | Agora | Resultado | Obs. |
 |---|---|---|---|---|---|---|
-| Desbloqueio | ALT | 19/11 | 0.004597 | 0.004308 | +6.29% | com hedge -1.59%; recompra 26/11 |
-| Desbloqueio | EIGEN | 24/11 | 0.1145 | 0.1095 | +4.37% | com hedge +1.49%; recompra 01/12 |
-| Desbloqueio | GUN | 23/11 | 0.001378 | 0.001327 | +3.70% | com hedge +1.82%; recompra 30/11 |
-| Desbloqueio | ZORA | 23/11 | 0.00434 | 0.004239 | +2.33% | com hedge +0.44%; recompra 30/11 |
-| Desbloqueio | RESOLV | 20/11 | 0.01404 | 0.01374 | +2.14% | com hedge -4.20%; recompra 27/11 |
+| Desbloqueio | ALT | 19/11 | 0.004597 | 0.004287 | +6.74% | com hedge -1.46%; recompra 26/11 |
+| Desbloqueio | EIGEN | 24/11 | 0.1145 | 0.1083 | +5.41% | com hedge +2.19%; recompra 01/12 |
+| Desbloqueio | GUN | 23/11 | 0.001378 | 0.001311 | +4.86% | com hedge +2.63%; recompra 30/11 |
+| Desbloqueio | RESOLV | 20/11 | 0.01404 | 0.01358 | +3.28% | com hedge -3.40%; recompra 27/11 |
+| Desbloqueio | ZORA | 23/11 | 0.00434 | 0.004215 | +2.88% | com hedge +0.65%; recompra 30/11 |
 
 <sub>Resultado a preço de mercado, bruto (sem custo nem funding), já no lado da posição: positivo = a favor. Em negrito, movimentos de 10% ou mais. Com hedge = venda + cesta dos majors.</sub>
 
