@@ -1880,3 +1880,12 @@ Não é setup de terceiro, mas o veredito fica registrado aqui junto dos outros.
 - O filtro humano (checks de correlação, regime e qualidade) nunca foi preenchido nos 34 trades, então não foi testado. O Gabriel decidiu não testá-lo: o objetivo do projeto é uma regra 100% mecânica.
 
 **O que muda no código:** `SETUP_AB_ENCERRADO = True` em `fetch_and_check.py`. Toda confirmação continua indo para `sinais_mecanicos`, com o desfecho mecânico medido como antes (calibração). A que passa no R:R deixa de virar candidato no diário e não gera push. Os 13 candidatos pendentes (17/09 a 24/09) foram marcados como descartados em `sinais.md`.
+
+## Estudo 88 (24/11/2026) — etapas de airdrop, venda de D−7 a D0 — NÃO PASSA
+
+`token-unlocks/estudo_airdrop.py`, pré-registrado: salto ≥ 1% da oferta com ≥ 50% na categoria `airdrop` da DefiLlama, perpétuo listado há ≥ 30 dias, regra única igual à do desbloqueio, critério IC95 > 0 no excesso e no absoluto (amostra toda, n pequeno demais para dev/teste). 44 eventos, 17 tokens.
+- pre7 venda: excesso +2.50% IC95 [−1.62, +6.66]; absoluto +3.14% [−1.08, +7.37]. Mesmo sinal do desbloqueio, sem poder.
+- pre14 +1.42% / +5.72%; pos7 +0.60% / −0.66%; pos14 ≈ 0.
+- Quase todos os airdrops acontecem no lançamento (sem perpétuo), daí o n baixo. Não somar com o desbloqueio: seria garimpo.
+
+Estudo A (fim de unbonding de staking): não rodado. Não há série histórica pública de unbonding (Cosmos só expõe o estado atual; reconstruir exige nó de arquivo por altura de bloco).
