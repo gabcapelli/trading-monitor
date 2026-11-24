@@ -1899,3 +1899,27 @@ Estudo A (fim de unbonding de staking): não rodado. Não há série histórica 
 - Mesmo filme do 28 e do 37: o trade típico ganha, os squeezes destroem. Não testar "com stop" ou "sem os squeezes" sobre estes 30 anúncios.
 
 Estudo C (comprar antes de queima/recompra programada, 24/11/2026): não rodado. A queima do BNB não tem data anunciada antes (sai o post depois de feita, dia variando de 15 a 1º do mês seguinte), e só 12 datas confiáveis (queimas 26–37, 2024–26) foram encontradas no blog da BNB Chain. Recompras de HYPE/JUP/PUMP são contínuas, sem data discreta. Sem evento pré-datado nem amostra, não há teste.
+
+## Estudo 90 (24/11/2026) — comprar de D+1 a D+7 depois do desbloqueio — NÃO PASSA
+
+`token-unlocks/estudo_pos.py`, comprado com direção fixa, mesmos eventos e mesma linha de base do estudo 25. Todo o período: excesso +0.00% IC95 [−0.75, +0.81], n=676; teste 2025–26: excesso −0.18%, absoluto −1.11% [−3.12, +0.91]. A queda antes do desbloqueio não é devolvida. Confirma a janela pos7 do estudo original.
+
+## Estudo 91 (24/11/2026) — vender o token novo do HODLer Airdrop / Launchpool / Megadrop — PASSA, com ressalvas sérias
+
+`monitor/replay_airdrop_listagem.py` (pré-registro no docstring). Vendido no perpétuo 1h depois da primeira hora negociada, saída em 7 dias, custo 0.18% + funding real. 119 avisos com ticker, 69 com perpétuo listado de −2 a +30 dias do aviso.
+
+| | n | média | IC95 | mediana |
+|---|---|---|---|---|
+| **liq 7d (decide)** | 69 | **+12.0%** | **[+2.7, +20.6]** | +18.4% |
+| **excesso vs. 20 majors (decide)** | 69 | **+15.3%** | **[+6.1, +23.5]** | +23.0% |
+| só HODLer (liq) | 31 | +10.9% | [−5.7, +25.1] | +21.9% |
+| só Launchpool/Megadrop (liq) | 38 | +12.9% | [+1.7, +22.8] | |
+| entrada +24h (liq, descritivo) | 69 | +13.4% | [+7.1, +19.4] | |
+| saída 3d / 14d (liq) | 69 | +6.9% / +15.3% | IC > 0 nos dois | |
+
+Acerto de 74%; sem os 5 maiores, +8.3%. Piores: KAITO −127%, PROVE −119%, ENA −101% (squeeze, sem stop). Por ano: 2023 +17% (n=10), **2024 +0.2% (n=17)**, 2025 +12% (n=37).
+
+Ressalvas:
+- **Não é amostra limpa:** pelo menos 34 dos 69 tokens já estavam nos estudos 29/30 (vender o perpétuo na abertura do spot). É o mesmo mecanismo do 30, com outro recorte (só tokens distribuídos de graça) e entrada na abertura do perpétuo.
+- **2026 ficou de fora:** os 8 eventos de 2026 tiveram o perpétuo listado 6 a 60 dias **antes** do aviso (pré-mercado), e a regra exclui esses casos. O regime atual não está medido, e uma regra para o papel precisa de outro gatilho (abertura do spot / distribuição).
+- Cauda de squeeze de −100% ou mais em 3 de 69: com 1% de risco, o tamanho tem de ser pequeno.

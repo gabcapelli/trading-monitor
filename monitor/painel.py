@@ -152,6 +152,10 @@ def main():
     lp_ab = [t for t in lp if t["status"] == "aberto"]
     lp_fe = [t for t in lp if t["status"] == "fechado"]
     m_lp = (sum(t["liq"] for t in lp_fe) / len(lp_fe)) if lp_fe else None
+    ad = list(_json("airdrop_paper_state.json").get("trades", {}).values())
+    ad_ab = [t for t in ad if t["status"] == "aberto"]
+    ad_fe = [t for t in ad if t["status"] == "fechado"]
+    m_ad = (sum(t["liq"] for t in ad_fe) / len(ad_fe)) if ad_fe else None
     ct = _json("continuacao_paper_state.json").get("trades", [])
     ct_ab = [t for t in ct if t["status"] == "aberto"]
     ct_fe = [t for t in ct if t["status"] == "fechado"]
@@ -196,6 +200,8 @@ def main():
           f"{'—' if m_mt is None else _pct(m_mt / 100)} |",
           f"| [Launchpool](claude/launchpool-paper.md) | {len(lp_ab)} | {len(lp_fe)}/20 | "
           f"{'—' if m_lp is None else _pct(m_lp / 100)} |",
+          f"| [Airdrop / token novo](claude/airdrop-paper.md) | {len(ad_ab)} | {len(ad_fe)}/30 | "
+          f"{'—' if m_ad is None else _pct(m_ad / 100)} |",
           f"| [Sábado](claude/sabado-paper.md) | {1 if janela else 0} | {len(sab)}/104 | {'—' if m_sb is None else _pct(m_sb)} |",
           (f"| [Setup A/B](claude/estudos-avulsos.md#setups-ab--encerrado-em-25092026) · encerrado | — | {len(fech)} | "
            f"{'—' if m_d is None else f'{m_d:+.2f}R'} |" if M.SETUP_AB_ENCERRADO else
