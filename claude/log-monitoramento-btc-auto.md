@@ -4,16 +4,6 @@
 
 | Data/Hora (BRT) | Par | Close 1h | High/Low 1h | Close 4h | Swing 1h ref | ATR 1h | Funding | Zona ativa | Status checklist |
 |---|---|---|---|---|---|---|---|---|---|
-| 2026-11-23 17:06 | BTC-USDT-SWAP | 61233.1 | 61758.4/60726.7 | 61233.1 | — | 870.46 | 0.0052% | — | sem_zona |
-| 2026-11-23 17:06 | ETH-USDT-SWAP | 1730.8 | 1748.8/1714.0 | 1730.8 | — | 28.43 | -0.0046% | B/compra@1731.5 (1t/0c) | zona_mapeada_setup_B |
-| 2026-11-23 17:06 | SOL-USDT-SWAP | 73.05 | 73.64/72.32 | 73.05 | — | 1.3964 | 0.0001% | B/compra@72.16 (0t/0c) | zona_mapeada_setup_B |
-| 2026-11-23 17:06 | XRP-USDT-SWAP | 0.94340 | 0.95480/0.93910 | 0.94340 | — | 0.01753 | -0.0022% | B/venda@0.99730 (1t/4c) | zona_mapeada_setup_B |
-| 2026-11-23 17:06 | DOGE-USDT-SWAP | 0.05682 | 0.05746/0.05631 | 0.05682 | res 0.06022 (ha 5 candles) | 0.00098 | 0.0052% | A/compra@0.05588 (0t/6c) | zona_mapeada_setup_A |
-| 2026-11-23 17:06 | ARB-USDT-SWAP | 0.11284 | 0.11456/0.11171 | 0.11284 | res 0.12339 (ha 5 candles) | 0.00270 | -0.0126% | — | sem_zona |
-| 2026-11-23 17:06 | WLD-USDT-SWAP | 0.24000 | 0.24380/0.23690 | 0.24000 | res 0.25980 (ha 5 candles) | 0.00561 | -0.0426% | A/compra@0.23920 (1t/0c) | zona_mapeada_setup_A |
-| 2026-11-23 17:06 | SUI-USDT-SWAP | 0.67970 | 0.68720/0.67290 | 0.67970 | res 0.73320 (ha 5 candles) | 0.01441 | -0.0078% | A/compra@0.66150 (0t/6c) | zona_mapeada_setup_A |
-| 2026-11-23 17:06 | UNI-USDT-SWAP | 4.9010 | 4.9550/4.8450 | 4.9010 | — | 0.11479 | -0.0002% | — | sem_zona |
-| 2026-11-23 17:06 | LINK-USDT-SWAP | 9.0040 | 9.1020/8.9200 | 9.0040 | — | 0.14650 | 0.0060% | B/venda@9.3590 (0t/4c) | zona_mapeada_setup_B |
 | 2026-11-23 18:06 | BTC-USDT-SWAP | 61208.4 | 61444.0/61026.2 | 61233.1 | — | 868.59 | 0.0059% | — | sem_zona |
 | 2026-11-23 18:06 | ETH-USDT-SWAP | 1724.3 | 1735.3/1718.8 | 1730.8 | — | 28.51 | -0.0068% | — | invalidado_setup_B |
 | 2026-11-23 18:06 | SOL-USDT-SWAP | 72.80 | 73.38/72.52 | 73.05 | — | 1.4164 | -0.0025% | B/compra@72.16 (0t/1c) | zona_mapeada_setup_B |
@@ -484,3 +474,13 @@
 | 2026-11-25 16:06 | SUI-USDT-SWAP | 0.65490 | 0.65780/0.64680 | 0.62590 | — | 0.01018 | -0.0159% | B/venda@0.65460 (1t/0c) | zona_mapeada_setup_B |
 | 2026-11-25 16:06 | UNI-USDT-SWAP | 4.6580 | 4.7050/4.6350 | 4.4760 | res 4.7460 (ha 19 candles) | 0.07686 | 0.0096% | B/compra@4.6280 (1t/0c) | zona_mapeada_setup_B |
 | 2026-11-25 16:06 | LINK-USDT-SWAP | 8.9750 | 9.0440/8.8580 | 8.6370 | res 8.8250 (ha 14 candles) | 0.12564 | -0.0036% | A/compra@8.8250 (0t/1c) | zona_mapeada_setup_A |
+| 2026-11-25 17:06 | BTC-USDT-SWAP | 59856.2 | 60388.0/59670.0 | 59856.2 | res 59459.0 (ha 11 candles) | 768.90 | 0.0092% | A/compra@59459.0 (0t/1c) | zona_mapeada_setup_A |
+| 2026-11-25 17:06 | ETH-USDT-SWAP | 1683.7 | 1698.4/1678.7 | 1683.7 | res 1687.8 (ha 21 candles) | 25.41 | 0.0069% | — | sem_zona |
+| 2026-11-25 17:06 | SOL-USDT-SWAP | 70.29 | 71.07/69.66 | 70.29 | res 70.07 (ha 20 candles) | 1.0829 | -0.0041% | B/compra@68.68 (0t/2c) | zona_mapeada_setup_B |
+| 2026-11-25 17:06 | XRP-USDT-SWAP | 0.93870 | 0.94690/0.92770 | 0.93870 | — | 0.01310 | 0.0057% | B/venda@0.93840 (0t/0c) | zona_mapeada_setup_B |
+| 2026-11-25 17:06 | DOGE-USDT-SWAP | 0.05575 | 0.05625/0.05508 | 0.05575 | res 0.05551 (ha 21 candles) | 0.00080 | -0.0011% | — | sem_zona |
+| 2026-11-25 17:06 | ARB-USDT-SWAP | 0.11092 | 0.11279/0.11055 | 0.11092 | res 0.11093 (ha 13 candles) | 0.00191 | 0.0030% | B/compra@0.11022 (2t/0c) | zona_mapeada_setup_B |
+| 2026-11-25 17:06 | WLD-USDT-SWAP | 0.23910 | 0.24290/0.23720 | 0.23910 | — | 0.00438 | -0.0263% | B/venda@0.24120 (0t/0c) | zona_mapeada_setup_B |
+| 2026-11-25 17:06 | SUI-USDT-SWAP | 0.66190 | 0.66900/0.65420 | 0.66190 | — | 0.01093 | -0.0129% | — | invalidado_setup_B |
+| 2026-11-25 17:06 | UNI-USDT-SWAP | 4.7200 | 4.7660/4.6480 | 4.7200 | res 4.7460 (ha 20 candles) | 0.08264 | 0.0100% | B/compra@4.6280 (1t/1c) | zona_mapeada_setup_B |
+| 2026-11-25 17:06 | LINK-USDT-SWAP | 9.0750 | 9.1300/8.9700 | 9.0750 | res 8.8250 (ha 15 candles) | 0.13271 | -0.0006% | A/compra@8.8250 (0t/2c) | zona_mapeada_setup_A |
