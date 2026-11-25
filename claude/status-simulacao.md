@@ -1,4 +1,4 @@
-# Situacao atual -- Multi-Par (script gratuito, sem LLM) -- atualizado 2026-11-25 04:06 BRT
+# Situacao atual -- Multi-Par (script gratuito, sem LLM) -- atualizado 2026-11-25 05:06 BRT
 
 > Gerado por `monitor/fetch_and_check.py` via GitHub Actions, sem chamar a API do Claude. Registra fatos objetivos; a interpretacao qualitativa fica a seu criterio (ou cole este arquivo + o log numa conversa do Claude).
 
@@ -8,13 +8,13 @@
 
 | Par | Tendencia 4h | Close 1h | Funding | Zona / setup candidato | Status |
 |---|---|---|---|---|---|
-| BTC/USDT | alta | 59205.8 | 0.0067% | — | zona_expirada_setup_B |
-| ETH/USDT | alta | 1659.4 | 0.0057% | — | sem_zona |
-| SOL/USDT | alta | 68.80 | 0.0100% | — | sem_zona |
-| XRP/USDT | alta | 0.91940 | 0.0012% | — | sem_zona |
-| DOGE/USDT | alta | 0.05486 | 0.0086% | — | sem_zona |
-| ARB/USDT | alta | 0.11047 | 0.0086% | — | sem_zona |
-| WLD/USDT | alta | 0.23310 | -0.0201% | — | sem_zona |
-| SUI/USDT | lateral | 0.64470 | -0.0039% | — | sem_zona |
-| UNI/USDT | alta | 4.5980 | 0.0100% | — | zona_expirada_setup_B |
-| LINK/USDT | alta | 8.7610 | 0.0092% | — | zona_expirada_setup_B |
+| BTC/USDT | alta | 58710.8 | 0.0061% | Setup B (compra) 58620.1-58841.9 (0/3 toques, 0/8 candles) | zona_mapeada_setup_B |
+| ETH/USDT | alta | 1640.2 | 0.0038% | — | sem_zona |
+| SOL/USDT | alta | 67.77 | 0.0075% | Setup B (compra) 67.16-67.50 (0/3 toques, 0/8 candles) | zona_mapeada_setup_B |
+| XRP/USDT | lateral | 0.91400 | 0.0016% | — | sem_zona |
+| DOGE/USDT | alta | 0.05426 | 0.0076% | — | sem_zona |
+| ARB/USDT | alta | 0.10962 | 0.0100% | — | sem_zona |
+| WLD/USDT | lateral | 0.23070 | -0.0189% | Setup B (venda) 0.23118-0.23262 (0/3 toques, 0/8 candles) | zona_mapeada_setup_B |
+| SUI/USDT | lateral | 0.64010 | -0.0038% | — | sem_zona |
+| UNI/USDT | alta | 4.5510 | 0.0100% | Setup B (compra) 4.5383-4.5657 (0/3 toques, 0/8 candles) | zona_mapeada_setup_B |
+| LINK/USDT | alta | 8.7040 | 0.0078% | Setup B (compra) 8.6912-8.7288 (0/3 toques, 0/8 candles) | zona_mapeada_setup_B |
