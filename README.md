@@ -1,6 +1,6 @@
 # Painel de estratégias
 
-_Atualizado em 24/11 20:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
+_Atualizado em 24/11 21:07 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
 
 ## Precisa de você
 
@@ -10,7 +10,7 @@ _Nada pendente._
 
 | Estratégia | Abertos | Fechados | Média |
 |---|---|---|---|
-| [Desbloqueio](claude/unlock-paper.md) | 5 | 40/150 | +1.10% |
+| [Desbloqueio](claude/unlock-paper.md) | 6 | 40/150 | +1.10% |
 | [Perpétuo novo](claude/novos-paper.md) | 0 | 1/100 | +64.20% |
 | [Rompimento 48h](claude/continuacao-paper.md) · encerrado em 30/10/2026 | — | 33 | -9.12% |
 | [Monitoring Tag](claude/monitoring-paper.md) | 0 | 2/24 | +6.19% |
@@ -25,25 +25,25 @@ _Nada pendente._
 
 <sub>Desde o fechamento das 21h (Brasília).</sub>
 
-- Desbloqueio: vendeu EIGEN a 0.1145 (desbloqueio 01/12)
-- Desbloqueio: recomprou H: puro +15.34%, com hedge +9.69%
+- Desbloqueio: vendeu ZETA a 0.0259 (desbloqueio 02/12)
 
 ## Abertos agora
 
 | Estratégia | Ativo | Desde | Entrada | Agora | Resultado | Obs. |
 |---|---|---|---|---|---|---|
-| Desbloqueio | ALT | 19/11 | 0.004597 | 0.004277 | +6.96% | com hedge -0.40%; recompra 26/11 |
-| Desbloqueio | EIGEN | 24/11 | 0.1145 | 0.1084 | +5.33% | com hedge +3.01%; recompra 01/12 |
-| Desbloqueio | GUN | 23/11 | 0.001378 | 0.001316 | +4.50% | com hedge +3.18%; recompra 30/11 |
-| Desbloqueio | RESOLV | 20/11 | 0.01404 | 0.01359 | +3.21% | com hedge -2.61%; recompra 27/11 |
-| Desbloqueio | ZORA | 23/11 | 0.00434 | 0.004205 | +3.11% | com hedge +1.79%; recompra 30/11 |
+| Desbloqueio | ALT | 19/11 | 0.004597 | 0.00426 | +7.33% | com hedge -0.46%; recompra 26/11 |
+| Desbloqueio | EIGEN | 24/11 | 0.1145 | 0.1083 | +5.41% | com hedge +2.65%; recompra 01/12 |
+| Desbloqueio | GUN | 23/11 | 0.001378 | 0.00131 | +4.93% | com hedge +3.16%; recompra 30/11 |
+| Desbloqueio | ZORA | 23/11 | 0.00434 | 0.004184 | +3.59% | com hedge +1.82%; recompra 30/11 |
+| Desbloqueio | RESOLV | 20/11 | 0.01404 | 0.01354 | +3.56% | com hedge -2.68%; recompra 27/11 |
+| Desbloqueio | ZETA | 25/11 | 0.0259 | 0.02591 | -0.04% | com hedge -0.24%; recompra 02/12 |
 
 <sub>Resultado a preço de mercado, bruto (sem custo nem funding), já no lado da posição: positivo = a favor. Em negrito, movimentos de 10% ou mais. Com hedge = venda + cesta dos majors.</sub>
 
 ## Próximos eventos
 
-- 25/11 · Desbloqueio: venda prevista de ZETA
 - 26/11 · Desbloqueio: recompra de ALT
+- 26/11 · Desbloqueio: venda prevista de STO
 - 27/11 · Desbloqueio: recompra de RESOLV
 - 27/11 · Sábado: entrada da cesta (21h)
 

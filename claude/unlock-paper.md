@@ -7,7 +7,7 @@
 > venda + compra da cesta dos 20 majors. Custo 0.18% por perna e funding real.
 > **Só reavaliar com 150 trades fechados.** Antes disso é ruído.
 
-_Atualizado em 2026-11-24 (calendário de 2026-11-24)._
+_Atualizado em 2026-11-25 (calendário de 2026-11-25)._
 
 **Trades fechados:** 40 de 150 (27%)
 
@@ -24,12 +24,12 @@ _Referência do backtest (2025–2026): puro +2.9%, excesso sobre o universo +2.
 | GUN | 2026-11-30 | 6.2% | 2026-11-23 | 0.001378 |
 | ZORA | 2026-11-30 | 2.9% | 2026-11-23 | 0.00434 |
 | EIGEN | 2026-12-01 | 3.9% | 2026-11-24 | 0.1145 |
+| ZETA | 2026-12-02 | 2.6% | 2026-11-25 | 0.0259 |
 
 ## Próximas entradas (calendário atual)
 
 | Token | Desbloqueio | % da oferta | % insiders | Entrada prevista |
 |---|---|---|---|---|
-| ZETA | 2026-12-02 | 2.6% | 51% | 2026-11-25 |
 | STO | 2026-12-03 | 4.5% | 61% | 2026-11-26 |
 | WET | 2026-12-04 | 45.6% | 74% | 2026-11-27 |
 | MOVE | 2026-12-10 | 3.4% | 70% | 2026-12-03 |
