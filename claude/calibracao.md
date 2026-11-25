@@ -1,4 +1,4 @@
-# Calibracao — registro mecanico de sinais (atualizado 2026-11-25 01:06 BRT)
+# Calibracao — registro mecanico de sinais (atualizado 2026-11-25 02:06 BRT)
 
 > **Nao edite este arquivo** — ele e reescrito a cada execucao a partir da tabela `sinais_mecanicos`. Diferente de `sinais.md`, aqui nao ha nenhuma decisao sua: e TODA confirmacao mecanica detectada, inclusive as descartadas por R:R baixo, com desfecho medido por geometria de preco (OHLC de 1h contra stop/alvo sugeridos).
 >
@@ -26,11 +26,11 @@ Regra de alvo em vigor agora: **proximo** (coluna `Regra` abaixo mostra qual dec
 
 | Par | Setup | Direcao | Aceito | Regra | R:R (recente) | R:R (proximo) | Resultado | MAE | MFE | Candles | Quando |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| ETH/USDT | B | compra | nao | proximo | 1.40 | 1.40 | aberto | — | — | — | 2026-11-25 01:06 |
-| SOL/USDT | B | compra | nao | proximo | 0.84 | 0.31 | aberto | — | — | — | 2026-11-25 01:06 |
-| ARB/USDT | B | compra | sim | proximo | 4.68 | 2.45 | aberto | — | — | — | 2026-11-25 01:06 |
-| WLD/USDT | B | compra | nao | proximo | 1.05 | 1.05 | aberto | — | — | — | 2026-11-25 01:06 |
-| SUI/USDT | B | compra | nao | proximo | 0.95 | 0.82 | aberto | — | — | — | 2026-11-25 01:06 |
+| ETH/USDT | B | compra | nao | proximo | 1.40 | 1.40 | aberto | 0.641 | 0.165 | — | 2026-11-25 01:06 |
+| SOL/USDT | B | compra | nao | proximo | 0.84 | 0.31 | aberto | 0.894 | 0.098 | — | 2026-11-25 01:06 |
+| ARB/USDT | B | compra | sim | proximo | 4.68 | 2.45 | aberto | 0.498 | 0.279 | — | 2026-11-25 01:06 |
+| WLD/USDT | B | compra | nao | proximo | 1.05 | 1.05 | aberto | 0.54 | 0.318 | — | 2026-11-25 01:06 |
+| SUI/USDT | B | compra | nao | proximo | 0.95 | 0.82 | aberto | 0.559 | 0.391 | — | 2026-11-25 01:06 |
 | XRP/USDT | B | compra | nao | proximo | 1.28 | 0.01 | +0.01 | 0.39 | 0.755 | 1 | 2026-11-25 00:06 |
 | SOL/USDT | B | compra | nao | proximo | 4.13 | 1.16 | -1.00 | 1.713 | 0.184 | 3 | 2026-11-24 20:06 |
 | SOL/USDT | B | compra | nao | proximo | 4.17 | 0.05 | +0.05 | 0.376 | 0.322 | 1 | 2026-11-24 15:06 |
