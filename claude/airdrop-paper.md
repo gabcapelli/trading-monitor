@@ -6,7 +6,7 @@
 > O gatilho na abertura do spot foi escolhido depois de ver o estudo (lá era a abertura do perpétuo).
 > **Só reavaliar com 30 trades fechados.**
 
-_Atualizado em 26/11/2026 16:06 (Brasília)._
+_Atualizado em 26/11/2026 17:06 (Brasília)._
 
 **Trades fechados:** 0 de 30 (0%)
 

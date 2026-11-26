@@ -4,16 +4,6 @@
 
 | Data/Hora (BRT) | Par | Close 1h | High/Low 1h | Close 4h | Swing 1h ref | ATR 1h | Funding | Zona ativa | Status checklist |
 |---|---|---|---|---|---|---|---|---|---|
-| 2026-11-24 17:06 | BTC-USDT-SWAP | 59656.4 | 60053.7/59641.2 | 59656.4 | res 60666.0 (ha 5 candles) | 608.96 | 0.0095% | — | sem_zona |
-| 2026-11-24 17:06 | ETH-USDT-SWAP | 1673.0 | 1684.6/1672.8 | 1673.0 | res 1707.7 (ha 7 candles) | 18.13 | 0.0085% | — | sem_zona |
-| 2026-11-24 17:06 | SOL-USDT-SWAP | 68.97 | 69.56/68.96 | 68.97 | res 72.65 (ha 18 candles) | 0.84071 | -0.0022% | B/compra@69.87 (0t/1c) | zona_mapeada_setup_B |
-| 2026-11-24 17:06 | XRP-USDT-SWAP | 0.91710 | 0.92360/0.91710 | 0.91710 | res 0.96090 (ha 14 candles) | 0.01035 | 0.0030% | B/compra@0.91250 (0t/0c) | zona_mapeada_setup_B |
-| 2026-11-24 17:06 | DOGE-USDT-SWAP | 0.05511 | 0.05543/0.05508 | 0.05511 | res 0.05692 (ha 14 candles) | 0.00061 | 0.0003% | — | sem_zona |
-| 2026-11-24 17:06 | ARB-USDT-SWAP | 0.10994 | 0.11171/0.10988 | 0.10994 | res 0.11781 (ha 14 candles) | 0.00187 | 0.0023% | — | sem_zona |
-| 2026-11-24 17:06 | WLD-USDT-SWAP | 0.23290 | 0.23580/0.23280 | 0.23290 | res 0.24570 (ha 13 candles) | 0.00404 | -0.0331% | B/compra@0.23040 (0t/0c) | zona_mapeada_setup_B |
-| 2026-11-24 17:06 | SUI-USDT-SWAP | 0.64250 | 0.64830/0.64220 | 0.64250 | res 0.67960 (ha 14 candles) | 0.00891 | -0.0019% | B/compra@0.63330 (0t/4c) | zona_mapeada_setup_B |
-| 2026-11-24 17:06 | UNI-USDT-SWAP | 4.6950 | 4.7520/4.6910 | 4.6950 | res 4.9330 (ha 14 candles) | 0.06943 | 0.0100% | — | sem_zona |
-| 2026-11-24 17:06 | LINK-USDT-SWAP | 8.8160 | 8.8990/8.8150 | 8.8160 | res 9.1430 (ha 14 candles) | 0.10743 | -0.0070% | — | invalidado_setup_B |
 | 2026-11-24 18:06 | BTC-USDT-SWAP | 59747.1 | 59888.8/59445.9 | 59656.4 | res 60666.0 (ha 6 candles) | 619.49 | 0.0096% | — | sem_zona |
 | 2026-11-24 18:06 | ETH-USDT-SWAP | 1675.4 | 1681.7/1666.2 | 1673.0 | res 1707.7 (ha 8 candles) | 18.60 | 0.0089% | — | sem_zona |
 | 2026-11-24 18:06 | SOL-USDT-SWAP | 69.28 | 69.52/68.86 | 68.97 | res 72.65 (ha 19 candles) | 0.84571 | -0.0011% | B/compra@69.87 (0t/2c) | zona_mapeada_setup_B |
@@ -484,3 +474,13 @@
 | 2026-11-26 16:06 | SUI-USDT-SWAP | 0.67060 | 0.67270/0.66640 | 0.66300 | sup 0.64930 (ha 3 candles) | 0.00604 | 0.0100% | B/venda@0.66830 (0t/0c) | zona_mapeada_setup_B |
 | 2026-11-26 16:06 | UNI-USDT-SWAP | 4.6550 | 4.6710/4.6070 | 4.6200 | sup 4.5360 (ha 3 candles) | 0.05579 | 0.0071% | A/venda@4.6650 (1t/0c) | zona_mapeada_setup_A |
 | 2026-11-26 16:06 | LINK-USDT-SWAP | 9.2660 | 9.2820/9.2140 | 9.1840 | — | 0.07686 | 0.0024% | — | sem_zona |
+| 2026-11-26 17:06 | BTC-USDT-SWAP | 60690.2 | 60732.9/60433.6 | 60690.2 | sup 59886.8 (ha 4 candles) | 389.79 | 0.0025% | — | sem_zona |
+| 2026-11-26 17:06 | ETH-USDT-SWAP | 1703.8 | 1708.5/1698.6 | 1703.8 | sup 1666.7 (ha 4 candles) | 12.37 | 0.0055% | B/venda@1716.0 (1t/7c) | zona_mapeada_setup_B |
+| 2026-11-26 17:06 | SOL-USDT-SWAP | 71.25 | 71.55/71.22 | 71.25 | sup 69.74 (ha 4 candles) | 0.57214 | 0.0092% | — | sem_zona |
+| 2026-11-26 17:06 | XRP-USDT-SWAP | 0.95260 | 0.95660/0.95250 | 0.95260 | sup 0.93310 (ha 4 candles) | 0.00703 | 0.0100% | B/compra@0.95390 (2t/0c) | zona_mapeada_setup_B |
+| 2026-11-26 17:06 | DOGE-USDT-SWAP | 0.05710 | 0.05721/0.05685 | 0.05710 | — | 0.00041 | 0.0100% | B/compra@0.05738 (0t/0c) | zona_mapeada_setup_B |
+| 2026-11-26 17:06 | ARB-USDT-SWAP | 0.11354 | 0.11464/0.11352 | 0.11354 | — | 0.00132 | 0.0065% | — | descartado_rr_baixo_setup_B |
+| 2026-11-26 17:06 | WLD-USDT-SWAP | 0.24320 | 0.24480/0.24300 | 0.24320 | — | 0.00281 | -0.0111% | B/compra@0.24230 (0t/0c) | zona_mapeada_setup_B |
+| 2026-11-26 17:06 | SUI-USDT-SWAP | 0.67370 | 0.67590/0.67000 | 0.67370 | sup 0.64930 (ha 4 candles) | 0.00617 | 0.0100% | B/venda@0.66830 (0t/1c) | zona_mapeada_setup_B |
+| 2026-11-26 17:06 | UNI-USDT-SWAP | 4.6790 | 4.6910/4.6530 | 4.6790 | sup 4.5360 (ha 4 candles) | 0.05450 | 0.0055% | — | invalidado_setup_A |
+| 2026-11-26 17:06 | LINK-USDT-SWAP | 9.2640 | 9.3070/9.2500 | 9.2640 | — | 0.07771 | -0.0000% | — | sem_zona |
