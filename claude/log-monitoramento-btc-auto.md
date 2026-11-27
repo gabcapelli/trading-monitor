@@ -4,16 +4,6 @@
 
 | Data/Hora (BRT) | Par | Close 1h | High/Low 1h | Close 4h | Swing 1h ref | ATR 1h | Funding | Zona ativa | Status checklist |
 |---|---|---|---|---|---|---|---|---|---|
-| 2026-11-25 01:06 | BTC-USDT-SWAP | 59391.2 | 59639.5/59000.1 | 59391.2 | res 60072.6 (ha 5 candles) | 524.31 | 0.0037% | B/compra@60339.6 (0t/5c) | zona_mapeada_setup_B |
-| 2026-11-25 01:06 | ETH-USDT-SWAP | 1663.7 | 1670.6/1648.0 | 1663.7 | res 1687.8 (ha 5 candles) | 16.33 | 0.0068% | — | descartado_rr_baixo_setup_B |
-| 2026-11-25 01:06 | SOL-USDT-SWAP | 69.30 | 69.63/68.46 | 69.30 | res 70.07 (ha 4 candles) | 0.77286 | 0.0100% | — | descartado_rr_baixo_setup_B |
-| 2026-11-25 01:06 | XRP-USDT-SWAP | 0.92040 | 0.92320/0.91440 | 0.92040 | res 0.92720 (ha 4 candles) | 0.00851 | 0.0001% | — | sem_zona |
-| 2026-11-25 01:06 | DOGE-USDT-SWAP | 0.05461 | 0.05505/0.05436 | 0.05461 | res 0.05551 (ha 5 candles) | 0.00052 | 0.0066% | B/compra@0.05432 (2t/0c) | zona_mapeada_setup_B |
-| 2026-11-25 01:06 | ARB-USDT-SWAP | 0.10991 | 0.11027/0.10838 | 0.10991 | res 0.11781 (ha 22 candles) | 0.00156 | 0.0026% | — | confirmado_calibracao_setup_B |
-| 2026-11-25 01:06 | WLD-USDT-SWAP | 0.23310 | 0.23380/0.23030 | 0.23310 | res 0.23640 (ha 4 candles) | 0.00346 | -0.0238% | — | descartado_rr_baixo_setup_B |
-| 2026-11-25 01:06 | SUI-USDT-SWAP | 0.64360 | 0.64660/0.63720 | 0.64360 | — | 0.00754 | -0.0109% | — | descartado_rr_baixo_setup_B |
-| 2026-11-25 01:06 | UNI-USDT-SWAP | 4.6050 | 4.6380/4.5690 | 4.6050 | res 4.7460 (ha 4 candles) | 0.06250 | 0.0080% | B/compra@4.6100 (0t/0c) | zona_mapeada_setup_B |
-| 2026-11-25 01:06 | LINK-USDT-SWAP | 8.8050 | 8.8210/8.7090 | 8.8050 | res 8.8820 (ha 4 candles) | 0.09064 | 0.0049% | B/compra@8.9300 (0t/5c) | zona_mapeada_setup_B |
 | 2026-11-25 02:06 | BTC-USDT-SWAP | 59196.9 | 59391.2/58917.5 | 59391.2 | res 60072.6 (ha 6 candles) | 507.13 | 0.0052% | B/compra@60339.6 (0t/6c) | zona_mapeada_setup_B |
 | 2026-11-25 02:06 | ETH-USDT-SWAP | 1659.9 | 1666.5/1652.6 | 1663.7 | res 1687.8 (ha 6 candles) | 15.63 | 0.0057% | — | sem_zona |
 | 2026-11-25 02:06 | SOL-USDT-SWAP | 68.74 | 69.39/68.48 | 69.30 | res 70.07 (ha 5 candles) | 0.75714 | 0.0100% | — | sem_zona |
@@ -484,3 +474,13 @@
 | 2026-11-27 00:06 | SUI-USDT-SWAP | 0.67970 | 0.68630/0.67050 | 0.66810 | sup 0.66390 (ha 3 candles) | 0.00641 | 0.0091% | — | sem_zona |
 | 2026-11-27 00:06 | UNI-USDT-SWAP | 4.8240 | 4.9300/4.6850 | 4.6530 | sup 4.6190 (ha 3 candles) | 0.06764 | 0.0100% | B/venda@4.7890 (0t/0c) | zona_mapeada_setup_B |
 | 2026-11-27 00:06 | LINK-USDT-SWAP | 9.4610 | 9.5640/9.3280 | 9.2770 | — | 0.09464 | 0.0040% | — | invalidado_setup_B |
+| 2026-11-27 01:06 | BTC-USDT-SWAP | 61392.1 | 61709.2/61300.2 | 61392.1 | — | 404.32 | 0.0097% | — | sem_zona |
+| 2026-11-27 01:06 | ETH-USDT-SWAP | 1727.8 | 1733.7/1721.1 | 1727.8 | — | 13.96 | 0.0057% | B/compra@1731.5 (0t/0c) | zona_mapeada_setup_B |
+| 2026-11-27 01:06 | SOL-USDT-SWAP | 72.71 | 73.18/72.32 | 72.71 | — | 0.64714 | 0.0091% | B/venda@72.90 (0t/0c) | zona_mapeada_setup_B |
+| 2026-11-27 01:06 | XRP-USDT-SWAP | 0.96110 | 0.96690/0.95860 | 0.96110 | — | 0.00714 | 0.0099% | — | sem_zona |
+| 2026-11-27 01:06 | DOGE-USDT-SWAP | 0.05769 | 0.05802/0.05746 | 0.05769 | res 0.05721 (ha 8 candles) | 0.00046 | 0.0100% | B/compra@0.05738 (2t/0c) | zona_mapeada_setup_B |
+| 2026-11-27 01:06 | ARB-USDT-SWAP | 0.11650 | 0.11711/0.11594 | 0.11650 | — | 0.00133 | 0.0040% | B/venda@0.11698 (0t/0c) | zona_mapeada_setup_B |
+| 2026-11-27 01:06 | WLD-USDT-SWAP | 0.25000 | 0.25160/0.24790 | 0.25000 | res 0.24500 (ha 6 candles) | 0.00281 | -0.0154% | A/compra@0.24500 (0t/0c) | zona_mapeada_setup_A |
+| 2026-11-27 01:06 | SUI-USDT-SWAP | 0.68100 | 0.68520/0.67980 | 0.68100 | — | 0.00651 | 0.0086% | — | sem_zona |
+| 2026-11-27 01:06 | UNI-USDT-SWAP | 4.8380 | 4.8710/4.8140 | 4.8380 | — | 0.07043 | 0.0100% | B/venda@4.7890 (0t/1c) | zona_mapeada_setup_B |
+| 2026-11-27 01:06 | LINK-USDT-SWAP | 9.4950 | 9.5260/9.4610 | 9.4950 | res 9.4180 (ha 6 candles) | 0.09671 | 0.0002% | A/compra@9.4180 (0t/0c) | zona_mapeada_setup_A |
