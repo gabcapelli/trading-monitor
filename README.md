@@ -1,6 +1,6 @@
 # Painel de estratégias
 
-_Atualizado em 27/11 03:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
+_Atualizado em 27/11 04:06 (Brasília), a cada hora. Tudo em papel: nenhuma ordem é enviada._
 
 ## Precisa de você
 
@@ -32,12 +32,12 @@ _Nada pendente._
 
 | Estratégia | Ativo | Desde | Entrada | Agora | Resultado | Obs. |
 |---|---|---|---|---|---|---|
-| Desbloqueio | STO | 26/11 | 0.02243 | 0.02228 | +0.67% | com hedge +4.13%; recompra 03/12 |
-| Desbloqueio | ZORA | 23/11 | 0.00434 | 0.00435 | -0.23% | com hedge +3.71%; recompra 30/11 |
-| Desbloqueio | EIGEN | 24/11 | 0.1145 | 0.1151 | -0.52% | com hedge +2.36%; recompra 01/12 |
-| Desbloqueio | GUN | 23/11 | 0.001378 | 0.001389 | -0.80% | com hedge +3.14%; recompra 30/11 |
-| Desbloqueio | WET | 27/11 | 0.03654 | 0.03752 | -2.68% | com hedge +0.94%; recompra 04/12 |
-| Desbloqueio | ZETA | 25/11 | 0.0259 | 0.02974 | **-14.83%** | com hedge -9.21%; recompra 02/12 |
+| Desbloqueio | STO | 26/11 | 0.02243 | 0.02199 | +1.96% | com hedge +5.01%; recompra 03/12 |
+| Desbloqueio | ZORA | 23/11 | 0.00434 | 0.004315 | +0.58% | com hedge +4.11%; recompra 30/11 |
+| Desbloqueio | EIGEN | 24/11 | 0.1145 | 0.1153 | -0.70% | com hedge +1.78%; recompra 01/12 |
+| Desbloqueio | GUN | 23/11 | 0.001378 | 0.001388 | -0.73% | com hedge +2.81%; recompra 30/11 |
+| Desbloqueio | WET | 27/11 | 0.03654 | 0.03763 | -2.98% | com hedge +0.22%; recompra 04/12 |
+| Desbloqueio | ZETA | 25/11 | 0.0259 | 0.02978 | **-14.98%** | com hedge -9.79%; recompra 02/12 |
 
 <sub>Resultado a preço de mercado, bruto (sem custo nem funding), já no lado da posição: positivo = a favor. Em negrito, movimentos de 10% ou mais. Com hedge = venda + cesta dos majors.</sub>
 
